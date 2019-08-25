@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LeagueSandbox.GameServer.Lib</AssemblyName>
+    <RootNamespace>LeagueSandbox.GameServer.Lib</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeagueSandbox.GameServer.Networking\LeagueSandbox.GameServer.Networking.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ServerActions\" />
+  </ItemGroup>
+
+</Project>

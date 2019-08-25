@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;NU1701</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ENetSharpLeague" Version="1.1.0" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeagueSandbox.GameServer.Networking.Packets420\LeagueSandbox.GameServer.Networking.Packets420.csproj" />
+  </ItemGroup>
+
+	<Target Name="Copy" AfterTargets="CopyFilesToOutputDirectory">
+    <Message Importance="high" Text="outdir is $(TargetDir)" />
+		<Copy SourceFiles="$(PkgENetSharpLeague)\lib\native\ENet.dll" DestinationFolder="$(TargetDir)" />
+	</Target>
+</Project>
