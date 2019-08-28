@@ -8,15 +8,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
         public IMap Map { get; }
         public bool IsPaused { get; private set; }
 
-        public Game(IMap map)
+        public Game(IMap map, bool isPaused)
         {
             Map = map ?? throw new ArgumentNullException(nameof(map));
-            IsPaused = true;
+            IsPaused = isPaused;
         }
 
         public void Pause()
         {
-            if(IsPaused)
+            if (IsPaused)
                 throw new InvalidOperationException("Game is already paused");
 
             IsPaused = true;
@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
 
         public void UnPause()
         {
-            if(!IsPaused)
+            if (!IsPaused)
                 throw new InvalidOperationException("Game is not paused");
 
             IsPaused = false;

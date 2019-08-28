@@ -4,7 +4,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
 {
-    public class Stats : IStats
+    internal class Stats : IStats
     {
         public SpellSlot SpellsEnabled { get; private set; }
 
@@ -100,6 +100,57 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             Size = new Stat(1.0f, 0, 0, 0, 0);
             SpellVamp = new Stat();
             Tenacity = new Stat();
+        }
+
+        public Stats(SpellSlot spellsEnabled, bool isMagicImmune, bool isInvulnerable, bool isPhysicalImmune, bool isLifestealImmune, bool isTargetable, SpellFlags isTargetableToTeam, ActionState actionState, PrimaryAbilityResourceType parType, float attackSpeedFlat, float healthPerLevel, float manaPerLevel, float adPerLevel, float armorPerLevel, float magicResistPerLevel, float healthRegenerationPerLevel, float manaRegenerationPerLevel, float growthAttackSpeed, float[] manaCost, IStat abilityPower, IStat armor, IStat armorPenetration, IStat attackDamage, IStat attackSpeedMultiplier, IStat cooldownReduction, IStat criticalChance, IStat criticalDamage, IStat goldPerSecond, IStat healthPoints, IStat healthRegeneration, IStat lifeSteal, IStat magicResist, IStat magicPenetration, IStat manaPoints, IStat manaRegeneration, IStat moveSpeed, IStat range, IStat size, IStat spellVamp, IStat tenacity, float gold, byte level, float experience, float currentHealth, float currentMana, bool isGeneratingGold, float spellCostReduction)
+        {
+            SpellsEnabled = spellsEnabled;
+            IsMagicImmune = isMagicImmune;
+            IsInvulnerable = isInvulnerable;
+            IsPhysicalImmune = isPhysicalImmune;
+            IsLifestealImmune = isLifestealImmune;
+            IsTargetable = isTargetable;
+            IsTargetableToTeam = isTargetableToTeam;
+            ActionState = actionState;
+            ParType = parType;
+            AttackSpeedFlat = attackSpeedFlat;
+            HealthPerLevel = healthPerLevel;
+            ManaPerLevel = manaPerLevel;
+            AdPerLevel = adPerLevel;
+            ArmorPerLevel = armorPerLevel;
+            MagicResistPerLevel = magicResistPerLevel;
+            HealthRegenerationPerLevel = healthRegenerationPerLevel;
+            ManaRegenerationPerLevel = manaRegenerationPerLevel;
+            GrowthAttackSpeed = growthAttackSpeed;
+            ManaCost = manaCost;
+            AbilityPower = abilityPower;
+            Armor = armor;
+            ArmorPenetration = armorPenetration;
+            AttackDamage = attackDamage;
+            AttackSpeedMultiplier = attackSpeedMultiplier;
+            CooldownReduction = cooldownReduction;
+            CriticalChance = criticalChance;
+            CriticalDamage = criticalDamage;
+            GoldPerSecond = goldPerSecond;
+            HealthPoints = healthPoints;
+            HealthRegeneration = healthRegeneration;
+            LifeSteal = lifeSteal;
+            MagicResist = magicResist;
+            MagicPenetration = magicPenetration;
+            ManaPoints = manaPoints;
+            ManaRegeneration = manaRegeneration;
+            MoveSpeed = moveSpeed;
+            Range = range;
+            Size = size;
+            SpellVamp = spellVamp;
+            Tenacity = tenacity;
+            Gold = gold;
+            Level = level;
+            Experience = experience;
+            CurrentHealth = currentHealth;
+            CurrentMana = currentMana;
+            IsGeneratingGold = isGeneratingGold;
+            SpellCostReduction = spellCostReduction;
         }
 
         public void AddModifier(IStatsModifier modifier)

@@ -2,7 +2,7 @@
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
 {
-    public class Stat : IStat
+    internal class Stat : IStat
     {
         public float BaseBonus { get; private set; }
         public float FlatBonus { get; private set; }

@@ -4,7 +4,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
-    internal class GameObject : IGameObject
+    internal abstract class GameObject : IGameObject
     {
         public Team Team { get; }
         public Vector3 Position { get; }

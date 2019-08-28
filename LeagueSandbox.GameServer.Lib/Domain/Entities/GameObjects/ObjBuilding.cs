@@ -5,7 +5,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
-    internal class ObjBuilding : AttackableUnit, IObjBuilding
+    internal abstract class ObjBuilding : AttackableUnit, IObjBuilding
     {
         //DeathTimer
         //    ?Mesh

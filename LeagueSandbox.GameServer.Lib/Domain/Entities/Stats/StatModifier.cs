@@ -4,7 +4,7 @@ using LeagueSandbox.GameServer.Lib.Maths;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
 {
-    public class StatModifier : IStatModifier
+    internal class StatModifier : IStatModifier
     {
         public float BaseBonus { get; }
         public float PercentBaseBonus { get; }

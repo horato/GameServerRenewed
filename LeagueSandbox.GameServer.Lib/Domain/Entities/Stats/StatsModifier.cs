@@ -2,7 +2,7 @@
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
 {
-    public class StatsModifier : IStatsModifier
+    internal class StatsModifier : IStatsModifier
     {
         // Stats
         public IStatModifier HealthPoints { get; } = new StatModifier();
@@ -26,6 +26,32 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public IStatModifier MoveSpeed { get; } = new StatModifier();
         public IStatModifier GoldPerSecond { get; } = new StatModifier();
 
+        public StatsModifier()
+        {
+        }
 
+        public StatsModifier(IStatModifier healthPoints, IStatModifier healthRegeneration, IStatModifier attackDamage, IStatModifier abilityPower, IStatModifier criticalChance, IStatModifier criticalDamage, IStatModifier armor, IStatModifier magicResist, IStatModifier attackSpeed, IStatModifier armorPenetration, IStatModifier magicPenetration, IStatModifier manaPoints, IStatModifier manaRegeneration, IStatModifier lifeSteal, IStatModifier spellVamp, IStatModifier tenacity, IStatModifier size, IStatModifier range, IStatModifier moveSpeed, IStatModifier goldPerSecond)
+        {
+            HealthPoints = healthPoints;
+            HealthRegeneration = healthRegeneration;
+            AttackDamage = attackDamage;
+            AbilityPower = abilityPower;
+            CriticalChance = criticalChance;
+            CriticalDamage = criticalDamage;
+            Armor = armor;
+            MagicResist = magicResist;
+            AttackSpeed = attackSpeed;
+            ArmorPenetration = armorPenetration;
+            MagicPenetration = magicPenetration;
+            ManaPoints = manaPoints;
+            ManaRegeneration = manaRegeneration;
+            LifeSteal = lifeSteal;
+            SpellVamp = spellVamp;
+            Tenacity = tenacity;
+            Size = size;
+            Range = range;
+            MoveSpeed = moveSpeed;
+            GoldPerSecond = goldPerSecond;
+        }
     }
 }

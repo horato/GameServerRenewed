@@ -5,7 +5,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
-    internal class ObjAnimatedBuilding : ObjBuilding, IObjAnimatedBuilding
+    internal abstract class ObjAnimatedBuilding : ObjBuilding, IObjAnimatedBuilding
     {
         //AnimSkins
         //    CurrentSkin

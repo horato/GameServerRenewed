@@ -5,7 +5,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
-    internal class AttackableUnit : GameObject, IAttackableUnit
+    internal abstract class AttackableUnit : GameObject, IAttackableUnit
     {
         public IStats Stats { get; }
         public uint NetId { get; }

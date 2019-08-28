@@ -5,7 +5,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
-    internal class ObjAiBase : AttackableUnit, IObjAiBase
+    internal abstract class ObjAiBase : AttackableUnit, IObjAiBase
     {
         public string SkinName { get; }
         public int SkinId { get; }
