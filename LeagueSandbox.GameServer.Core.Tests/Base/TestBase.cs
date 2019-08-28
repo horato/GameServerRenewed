@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Networking;
 using LeagueSandbox.GameServer.Networking.Core;

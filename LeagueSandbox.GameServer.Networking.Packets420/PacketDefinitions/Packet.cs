@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using LeagueSandbox.GameServer.Networking.Core;
 
@@ -11,7 +12,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
 
         public Packet(PacketCmd cmd)
         {
-            Write((byte)cmd);
+            WriteByte((byte)cmd);
         }
 
         public byte[] GetBytes()
@@ -32,25 +33,30 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = data;
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(bool b)
+        public void WriteBool(bool b)
         {
-            Write((byte)(b ? 1u : 0u));
+            WriteByte((byte)(b ? 1u : 0u));
         }
 
-        public void Write(byte b)
+        public void WriteByte(byte b)
         {
             Bytes.Add(b);
         }
 
-        public void Write(byte[] b)
+        public void WriteSByte(sbyte b)
+        {
+            WriteByte((byte)b);
+        }
+
+        public void WriteBytes(byte[] b)
         {
             Bytes.AddRange(b);
         }
 
-        public void Write(short s)
+        public void WriteShort(short s)
         {
             var arr = new byte[2];
             for (var i = 0; i < 2; i++)
@@ -58,10 +64,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = (byte)(s >> (i * 8));
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(ushort s)
+        public void WriteUShort(ushort s)
         {
             var arr = new byte[2];
             for (var i = 0; i < 2; i++)
@@ -69,10 +75,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = (byte)(s >> (i * 8));
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(int n)
+        public void WriteInt(int n)
         {
             var arr = new byte[4];
             for (var i = 0; i < 4; i++)
@@ -80,10 +86,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = (byte)(n >> (i * 8));
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(uint n)
+        public void WriteUInt(uint n)
         {
             var arr = new byte[4];
             for (var i = 0; i < 4; i++)
@@ -91,10 +97,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = (byte)(n >> (i * 8));
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(long l)
+        public void WriteLong(long l)
         {
             var arr = new byte[8];
             for (var i = 0; i < 8; i++)
@@ -102,10 +108,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = (byte)(l >> (i * 8));
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(ulong l)
+        public void WriteULong(ulong l)
         {
             var arr = new byte[8];
             for (var i = 0; i < 8; i++)
@@ -113,33 +119,33 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
                 arr[i] = (byte)(l >> (i * 8));
             }
 
-            Write(arr);
+            WriteBytes(arr);
         }
 
-        public void Write(float f)
+        public void WriteFloat(float f)
         {
-            Write(BitConverter.GetBytes(f));
+            WriteBytes(BitConverter.GetBytes(f));
         }
 
-        public void Write(double d)
+        public void WriteDouble(double d)
         {
-            Write(BitConverter.GetBytes(d));
+            WriteBytes(BitConverter.GetBytes(d));
         }
 
-        public void Write(string s)
+        public void WriteString(string s)
         {
-            Write(Encoding.UTF8.GetBytes(s));
+            WriteBytes(Encoding.UTF8.GetBytes(s));
         }
 
-        public void WriteConstLengthString(string str, int length, bool overrideMaxLength = false)
+        public void WriteFixedString(string str, int maxLength)
         {
-            if (str.Length > length && !overrideMaxLength)
-            {
-                str = str.Substring(0, length);
-            }
+            var data = string.IsNullOrEmpty(str) ? new byte[0] : Encoding.UTF8.GetBytes(str);
+            var count = data.Length;
+            if (count >= (maxLength - 1))
+                throw new IOException("Too much data!");
 
-            Write(str);
-            Fill(0, length - str.Length);
+            WriteBytes(data);
+            Fill(0, maxLength - count);
         }
 
         //public void WriteStringHash(string str)

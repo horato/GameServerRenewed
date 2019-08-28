@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System.IO;
 using LeagueSandbox.GameServer.Networking.Core.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Attributes;

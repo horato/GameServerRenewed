@@ -1,15 +1,18 @@
-﻿using LeagueSandbox.GameServer.Core.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Lib.Config;
+using LeagueSandbox.GameServer.Lib.Config.Startup;
 
 namespace LeagueSandbox.GameServer.Host.DotNet
 {
     public class Program
     {
         private static Lib.GameServer _gameServer;
+
+        private const string HOST = "127.0.0.1";
+        private const ushort PORT = 5119;
+        private const string BLOWFISH_KEY = "17BLOhi6KZsTtldTsizvHg==";
+        private const MapType MAP_ID = MapType.FlatTestMap;
 
         public static void Main(string[] args)
         {
@@ -32,7 +35,10 @@ namespace LeagueSandbox.GameServer.Host.DotNet
             if (_gameServer != null)
                 throw new InvalidOperationException("Server is already initialized");
 
-            _gameServer = new Lib.GameServer();
+            var players = new[] { new StartupPlayer(Rank.Diamond, "Test", "Ezreal", Team.Blue, 0, SummonerSpell.Heal, SummonerSpell.Flash, 2, 0), };
+            var config = new StartupConfig(HOST, PORT, BLOWFISH_KEY, MAP_ID, players);
+
+            _gameServer = new Lib.GameServer(config);
             _gameServer.Start();
         }
 

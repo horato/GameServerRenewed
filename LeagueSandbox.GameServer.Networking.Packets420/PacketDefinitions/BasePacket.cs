@@ -4,11 +4,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
     {
         protected BasePacket(PacketCmd cmd, uint netId = 0) : base(cmd)
         {
-            Write(netId);
+            WriteUInt(netId);
             if ((short)cmd > 0xFF) // Make an extended packet instead
             {
                 Bytes[0] = (byte)PacketCmd.S2CExtended;
-                Write((short)cmd);
+                WriteShort((short)cmd);
             }
         }
     }

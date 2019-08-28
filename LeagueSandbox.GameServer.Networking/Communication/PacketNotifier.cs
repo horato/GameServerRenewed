@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ENet;
+﻿using System.Collections.Generic;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Core.Encryption;
@@ -35,6 +34,13 @@ namespace LeagueSandbox.GameServer.Networking.Communication
         {
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteNotifyQueryStatus();
+            SendPacket(targetUser, data, Channel.S2C);
+        }
+
+        public void NotifySynchVersion(ulong targetSummonerId, bool versionMatches, MapType mapId, IEnumerable<IObjAiHero> players, string version)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteSynchVersion(versionMatches, mapId, players, version);
             SendPacket(targetUser, data, Channel.S2C);
         }
 

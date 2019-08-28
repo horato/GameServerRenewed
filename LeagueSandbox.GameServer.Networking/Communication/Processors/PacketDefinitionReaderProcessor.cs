@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using ENet;
-using LeagueSandbox.GameServer.Core.Logging;
-using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Core.Enums;
 

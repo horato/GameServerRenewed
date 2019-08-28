@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Core.Encryption;
 using LeagueSandbox.GameServer.Networking.Core.Enums;
-using LeagueSandbox.GameServer.Networking.Packets420.Attributes;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S;
 using Unity;

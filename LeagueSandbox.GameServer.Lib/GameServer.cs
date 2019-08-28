@@ -1,13 +1,12 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using log4net;
 using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Core.DependencyInjection;
-using LeagueSandbox.GameServer.Core.Logging;
+using LeagueSandbox.GameServer.Lib.Config;
+using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Networking;
-using LeagueSandbox.GameServer.Networking.Packets420;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib
@@ -16,22 +15,21 @@ namespace LeagueSandbox.GameServer.Lib
     {
         private readonly IUnityContainer _container;
 
-        private const string HOST = "127.0.0.1";
-        private const ushort PORT = 5119;
-        private const string BLOWFISH_KEY = "17BLOhi6KZsTtldTsizvHg==";
+        private const string VERSION_STRING = "Version 4.20.0.315 [PUBLIC]";
 
-        public GameServer() : this(new UnityContainer())
+        public GameServer(StartupConfig config) : this(new UnityContainer(), config)
         {
         }
 
-        public GameServer(IUnityContainer container)
+        public GameServer(IUnityContainer container, StartupConfig config)
         {
             _container = container;
 
             InitializeLogger();
             InitializeServerInformationData();
             InitializeDependencyInjection();
-            InitializeNetworking();
+            InitializeGameController(config);
+            InitializeNetworking(config);
         }
 
         private void InitializeLogger()
@@ -43,7 +41,7 @@ namespace LeagueSandbox.GameServer.Lib
         private void InitializeServerInformationData()
         {
             // Might add launch time/etc in the future
-            var infoData = new ServerInformationData();
+            var infoData = new ServerInformationData(DateTime.Now, VERSION_STRING);
 
             _container.RegisterInstance<IServerInformationData>(infoData);
         }
@@ -56,21 +54,30 @@ namespace LeagueSandbox.GameServer.Lib
             _container.Install(assemblies);
         }
 
-        private void InitializeNetworking()
+        private void InitializeGameController(StartupConfig config)
         {
-            var networking = _container.Resolve<ServerNetworking>();
-            networking.Initialize(HOST, PORT, BLOWFISH_KEY);
-            _container.RegisterInstance<IServerNetworking>(networking);
+            var controller = _container.Resolve<GameController>();
+            controller.Initialize(config.Map);
+            _container.RegisterInstance<IGameController>(controller);
+        }
+
+        private void InitializeNetworking(StartupConfig config)
+        {
+            var networking = _container.Resolve<INetworkController>();
+            networking.Initialize(config.Host, config.Port, config.BlowfishKey);
+            _container.RegisterInstance<INetworkController>(networking);
         }
 
         public void Start()
         {
-            _container.Resolve<IServerNetworking>().StartNetworkLoop();
+            _container.Resolve<IGameController>().StartGameLoop();
+            _container.Resolve<INetworkController>().StartNetworkLoop();
         }
 
         public void Stop()
         {
-            _container.Resolve<IServerNetworking>().StopNetworkLoop();
+            _container.Resolve<IGameController>().StopGameLoop();
+            _container.Resolve<INetworkController>().StopNetworkLoop();
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using LeagueSandbox.GameServer.Core.Logging;
 
 namespace LeagueSandbox.GameServer.Host
@@ -29,8 +28,8 @@ namespace LeagueSandbox.GameServer.Host
 			if (_gameServer != null)
 				throw new InvalidOperationException("Server is already initialized");
 
-			_gameServer = new Lib.GameServer();
-			_gameServer.Start();
+			//_gameServer = new Lib.GameServer();
+			//_gameServer.Start();
 		}
 
 		private static void StopGameServer()

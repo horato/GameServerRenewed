@@ -1,5 +1,4 @@
-﻿using LeagueSandbox.GameServer.Networking.Core.Enums;
-using LeagueSandbox.GameServer.Networking.Packets420.Attributes;
+﻿using LeagueSandbox.GameServer.Networking.Packets420.Attributes;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 {

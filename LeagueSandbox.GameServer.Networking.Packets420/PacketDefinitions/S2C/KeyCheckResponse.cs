@@ -5,14 +5,14 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public KeyCheckResponse(ulong summonerId, int clientId)
             : base(PacketCmd.KeyCheck)
         {
-            Write((byte)0x2A);
-            Write((byte)0);
-            Write((byte)0xFF);
-            Write((uint)clientId);
-            Write((ulong)summonerId);
-            Write((uint)0);
-            Write((long)0);
-            Write((uint)0);
+            WriteByte(0x2A);
+            WriteByte(0);
+            WriteByte(0xFF);
+            WriteUInt((uint)clientId);
+            WriteULong(summonerId);
+            WriteUInt(0);
+            WriteLong(0);
+            WriteUInt(0);
         }
     }
 }

@@ -17,6 +17,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateKeyCheckRequest(keyCheckRequest);
                 case QueryStatusRequest queryStatusRequest:
                     return TranslateQueryStatusRequest(queryStatusRequest);
+                case SynchVersionRequest synchVersionRequest:
+                    return TranslateSynchVersion(synchVersionRequest);
                 case AttentionPingRequest attentionPingRequest:
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
@@ -35,7 +37,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case SellItem sellItem:
                 case SkillUpRequest skillUpRequest:
                 case SwapItemsRequest swapItemsRequest:
-                case SynchVersionRequest synchVersionRequest:
                 case UseObject useObject:
                 case ViewRequest viewRequest:
                 default:
@@ -57,6 +58,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         private GameServer.Core.RequestProcessing.Definitions.QueryStatusRequest TranslateQueryStatusRequest(QueryStatusRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.QueryStatusRequest();
+        }
+        
+        private GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest TranslateSynchVersion(SynchVersionRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest(request.NetId, (int)request.ClientId, request.Version);
         }
     }
 }
