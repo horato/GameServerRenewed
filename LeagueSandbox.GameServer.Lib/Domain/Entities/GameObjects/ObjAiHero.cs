@@ -7,12 +7,21 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class ObjAiHero : ObjAiBase, IObjAiHero
     {
+        public ulong SummonerId { get; }
+        public int ClientId { get; }
+        public bool IsBot { get; }
+        public bool IsPlayerControlled { get; }
+
         //PlayerScore
         //    ShopEnabled
         //ShopEnabled
         //    MultiKillDisplayCount
-        public ObjAiHero(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId)
+        public ObjAiHero(Team team, Vector3 position, IStats stats, uint netId, ulong summonerId, int clientId, bool isBot, bool isPlayerControlled) : base(team, position, stats, netId)
         {
+            SummonerId = summonerId;
+            ClientId = clientId;
+            IsBot = isBot;
+            IsPlayerControlled = isPlayerControlled;
         }
     }
 }

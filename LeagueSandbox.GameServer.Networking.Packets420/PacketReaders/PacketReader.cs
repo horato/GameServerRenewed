@@ -32,7 +32,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 throw new InvalidOperationException($"Packet definitions for channel {channel} not found.");
 
             var decryptedData = data;
-            if (channel != Channel.Handshake && data.Length >= 8)
+            if (channel != Channel.Default && data.Length >= 8)
                 decryptedData = _blowfishCrypter.Decipher(data);
 
             var packetType = (PacketCmd)decryptedData[0];

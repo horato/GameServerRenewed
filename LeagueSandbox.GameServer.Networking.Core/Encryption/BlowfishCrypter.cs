@@ -23,7 +23,7 @@ namespace LeagueSandbox.GameServer.Networking.Core.Encryption
             if (_blowfish == null)
                 throw new InvalidOperationException("Blowfish not initialized");
 
-            var temp = new byte[data.Length];
+            var temp = new byte[data.Length + (8 - (data.Length % 8))];
             Array.Copy(data, temp, data.Length);
 
             _blowfish.Decipher(temp, temp.Length);
@@ -36,7 +36,7 @@ namespace LeagueSandbox.GameServer.Networking.Core.Encryption
             if (_blowfish == null)
                 throw new InvalidOperationException("Blowfish not initialized");
 
-            var temp = new byte[data.Length];
+            var temp = new byte[data.Length + (8 - (data.Length % 8))];
             Array.Copy(data, temp, data.Length);
 
             _blowfish.Encipher(temp, temp.Length);

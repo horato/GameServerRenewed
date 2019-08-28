@@ -7,7 +7,7 @@ using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 {
-	[Packet(PacketCmd.ChatBoxMessage, Channel.Communication)]
+	[Packet(PacketCmd.ChatBoxMessage, Channel.Chat)]
 	internal class ChatMessage : IRequestPacketDefinition
 	{
         public PacketCmd Cmd { get; }

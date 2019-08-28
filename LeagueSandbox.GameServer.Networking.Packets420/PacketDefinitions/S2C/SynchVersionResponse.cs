@@ -13,11 +13,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public bool DradisInit { get; }
 
         public MapId MapToLoad { get; }
-        public IEnumerable<PlayerLoadInfo> PlayerInfo { get; }
+        public IList<PlayerLoadInfo> PlayerInfo { get; }
         public string VersionString { get; }
         public string MapMode { get; }
         public string PlatformID { get; }
-        public IEnumerable<string> Mutators { get; }
+        public IList<string> Mutators { get; }
         public byte MutatorsNum { get; }
         public string OrderRankedTeamName { get; }
         public string OrderRankedTeamTag { get; }
@@ -34,10 +34,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public ushort DradisTestPort { get; }
         public TipConfig TipConfig { get; }
         public ulong GameFeatures { get; }
-        public IEnumerable<uint> DisabledItems { get; }
-        public IEnumerable<bool> EnabledDradisMessages { get; }
+        public IList<uint> DisabledItems { get; }
+        public IList<bool> EnabledDradisMessages { get; }
 
-        public SynchVersionResponse(bool versionMatches, bool writeToClientFile, bool matchedGame, bool dradisInit, MapId mapToLoad, IEnumerable<PlayerLoadInfo> playerInfo, string versionString, string mapMode, string platformId, IEnumerable<string> mutators, byte mutatorsNum, string orderRankedTeamName, string orderRankedTeamTag, string chaosRankedTeamName, string chaosRankedTeamTag, string metricsServerWebAddress, string metricsServerWebPath, ushort metricsServerPort, string dradisProdAddress, string dradisProdResource, ushort dradisProdPort, string dradisTestAddress, string dradisTestResource, ushort dradisTestPort, TipConfig tipConfig, ulong gameFeatures, IEnumerable<uint> disabledItems, IEnumerable<bool> enabledDradisMessages) : base(PacketCmd.S2CSynchVersion, 0)
+        public SynchVersionResponse(bool versionMatches, bool writeToClientFile, bool matchedGame, bool dradisInit, MapId mapToLoad, IEnumerable<PlayerLoadInfo> playerInfo, string versionString, string mapMode, string platformId, IEnumerable<string> mutators, byte mutatorsNum, string orderRankedTeamName, string orderRankedTeamTag, string chaosRankedTeamName, string chaosRankedTeamTag, string metricsServerWebAddress, string metricsServerWebPath, ushort metricsServerPort, string dradisProdAddress, string dradisProdResource, ushort dradisProdPort, string dradisTestAddress, string dradisTestResource, ushort dradisTestPort, TipConfig tipConfig, ulong gameFeatures, IEnumerable<uint> disabledItems, IEnumerable<bool> enabledDradisMessages)
+            : base(PacketCmd.S2CSynchVersion, 0)
         {
             VersionMatches = versionMatches;
             WriteToClientFile = writeToClientFile;
@@ -73,13 +74,13 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
         private void WritePacket()
         {
-            if (PlayerInfo.Count() > 12)
+            if (PlayerInfo.Count > 12)
                 throw new InvalidOperationException("Max 12 players");
-            if (Mutators.Count() > 8)
+            if (Mutators.Count > 8)
                 throw new InvalidOperationException("Max 8 mutators");
-            if (DisabledItems.Count() > 64)
+            if (DisabledItems.Count > 64)
                 throw new InvalidOperationException("Max 64 disabled items");
-            if (EnabledDradisMessages.Count() > 19)
+            if (EnabledDradisMessages.Count > 19)
                 throw new InvalidOperationException("Max 19 dradis messages");
 
             byte bitfield = 0;
@@ -97,7 +98,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             WriteInt((int)MapToLoad);
             foreach (var player in PlayerInfo)
                 WritePlayerInfo(player);
-            for (var i = 0; i < 12 - PlayerInfo.Count(); i++)
+            for (var i = 0; i < 12 - PlayerInfo.Count; i++)
                 WritePlayerInfo(new PlayerLoadInfo());
 
             WriteFixedString(VersionString, 256);
@@ -105,7 +106,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             WriteFixedString(PlatformID, 32);
             foreach (var mutator in Mutators)
                 WriteFixedString(mutator, 64);
-            for (var i = 0; i < 8 - Mutators.Count(); i++)
+            for (var i = 0; i < 8 - Mutators.Count; i++)
                 WriteFixedString("", 64);
 
             WriteByte(MutatorsNum);
@@ -127,18 +128,18 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
             foreach (var disabledItem in DisabledItems)
                 WriteUInt(disabledItem);
-            for (var i = 0; i < 64 - DisabledItems.Count(); i++)
+            for (var i = 0; i < 64 - DisabledItems.Count; i++)
                 WriteUInt(0);
 
             foreach (var enabledDradisMessage in EnabledDradisMessages)
                 WriteBool(enabledDradisMessage);
-            for (var i = 0; i < 19 - EnabledDradisMessages.Count(); i++)
+            for (var i = 0; i < 19 - EnabledDradisMessages.Count; i++)
                 WriteBool(false);
         }
 
         private void WritePlayerInfo(PlayerLoadInfo info)
         {
-            WriteLong(info.SummonerId);
+            WriteULong(info.SummonerId);
             WriteUShort(info.SummonorLevel);
             WriteUInt(info.SummonorSpell1);
             WriteUInt(info.SummonorSpell2);
@@ -165,7 +166,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
     internal class PlayerLoadInfo
     {
-        public long SummonerId { get; }
+        public ulong SummonerId { get; }
         public ushort SummonorLevel { get; }
         public uint SummonorSpell1 { get; }
         public uint SummonorSpell2 { get; }
@@ -181,7 +182,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public byte AllyBadgeID { get; }
         public byte EnemyBadgeID { get; }
 
-        public PlayerLoadInfo(long summonerId, ushort summonorLevel, uint summonorSpell1, uint summonorSpell2, byte bitfield, uint teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
+        public PlayerLoadInfo(ulong summonerId, ushort summonorLevel, uint summonorSpell1, uint summonorSpell2, byte bitfield, uint teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
         {
             SummonerId = summonerId;
             SummonorLevel = summonorLevel;
@@ -201,7 +202,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
         public PlayerLoadInfo()
         {
-            SummonerId = -1;
+            unchecked
+            {
+                SummonerId = (ulong)-1;
+            }
+
             BotName = string.Empty;
             BotSkinName = string.Empty;
             EloRanking = string.Empty;

@@ -10,8 +10,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 		private byte[] _version = new byte[256]; // version string might be shorter?
 
         public PacketCmd Cmd { get; }
-		public int NetId { get; }
-		public uint ClientId { get; }
+		public uint NetId { get; }
+		public int ClientId { get; }
         public string Version
         {
             get
@@ -32,8 +32,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
             using (var reader = new BinaryReader(new MemoryStream(data)))
             {
                 Cmd = (PacketCmd)reader.ReadByte();
-                NetId = reader.ReadInt32();
-                ClientId = reader.ReadUInt32();
+                NetId = reader.ReadUInt32();
+                ClientId = reader.ReadInt32();
                 _version = reader.ReadBytes(256);
             }
         }

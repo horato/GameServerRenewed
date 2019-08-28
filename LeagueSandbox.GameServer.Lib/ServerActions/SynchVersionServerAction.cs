@@ -37,7 +37,6 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
 
             var champions = _playerController.GetAllChampions();
             _packetNotifier.NotifySynchVersion(senderSummonerId, versionMatches, _game.Map.Id, champions, serverVersion);
-
         }
     }
 }

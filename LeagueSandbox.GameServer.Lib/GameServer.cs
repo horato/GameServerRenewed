@@ -28,8 +28,16 @@ namespace LeagueSandbox.GameServer.Lib
             InitializeLogger();
             InitializeServerInformationData();
             InitializeDependencyInjection();
+            InitializePlayers(config);
             InitializeGameController(config);
             InitializeNetworking(config);
+        }
+
+        private void InitializePlayers(StartupConfig config)
+        {
+            // PlayerCache -> PlayerController
+            // ObjAiHero -> Player
+            // PlayerController returns Player
         }
 
         private void InitializeLogger()
@@ -63,7 +71,7 @@ namespace LeagueSandbox.GameServer.Lib
 
         private void InitializeNetworking(StartupConfig config)
         {
-            var networking = _container.Resolve<INetworkController>();
+            var networking = _container.Resolve<NetworkController>();
             networking.Initialize(config.Host, config.Port, config.BlowfishKey);
             _container.RegisterInstance<INetworkController>(networking);
         }

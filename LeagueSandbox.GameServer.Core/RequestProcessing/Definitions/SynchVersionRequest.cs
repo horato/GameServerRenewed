@@ -2,11 +2,11 @@
 {
     public class SynchVersionRequest : RequestDefinition
     {
-        public int SenderNetId { get; }
+        public uint SenderNetId { get; }
         public int ClientId { get; }
         public string Version { get; }
 
-        public SynchVersionRequest(int senderNetId, int clientId, string version)
+        public SynchVersionRequest(uint senderNetId, int clientId, string version)
         {
             SenderNetId = senderNetId;
             ClientId = clientId;

@@ -29,7 +29,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication.ServerActions
             var users = _usersCache.GetAllUsers();
             foreach (var user in users)
             {
-                _packetNotifier.NotifyKeyCheck(senderSummonerId, user.SummonerId, user.ClientId);
+                _packetNotifier.NotifyKeyCheck(senderSummonerId, user.SummonerId, user.ClientId, request.VersionNo, request.CheckId);
             }
         }
     }

@@ -1,13 +1,14 @@
 ﻿namespace LeagueSandbox.GameServer.Networking.Core.Enums
 {
-	public enum Channel
-	{
-		Handshake = 0,
-		C2S = 1,
-		Gameplay = 2,
-		S2C = 3,
-		LowPriority = 4,
-		Communication = 5,
-		LoadingScreen = 7
-	}
+    public enum Channel : byte
+    {
+        Default = 0x0,
+        ClientToServer = 0x1,
+        SynchClock = 0x2,
+        Broadcast = 0x3,
+        BroadcastUnreliable = 0x4,
+        Chat = 0x5,
+        QuickChat = 0x6,
+        LoadingScreen = 0x7,
+    }
 }

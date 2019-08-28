@@ -22,9 +22,10 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
 
         protected const double REFRESH_RATE = 1000.0 / 30.0; // 30 fps
 
-        public GameController(IGameFactory gameFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer)
+        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer)
         {
             _gameFactory = gameFactory;
+            _mapFactory = mapFactory;
             _gameUpdateService = gameUpdateService;
             _unityContainer = unityContainer;
         }

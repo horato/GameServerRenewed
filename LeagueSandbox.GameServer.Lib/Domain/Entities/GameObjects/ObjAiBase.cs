@@ -9,16 +9,16 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
     {
         public string SkinName { get; }
         public int SkinId { get; }
+
         //ExpGiveRadius
         //GoldGiveRadius
-        //IsBot
-        //    PlayerControlled
         //Spellbook
         //    SpellBuffs
         //DeathTimer
         //VisionRegion
-        public ObjAiBase(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId)
+        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId)
         {
+
         }
     }
 }

@@ -19,6 +19,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateQueryStatusRequest(queryStatusRequest);
                 case SynchVersionRequest synchVersionRequest:
                     return TranslateSynchVersion(synchVersionRequest);
+                case PingLoadInfoRequest pingLoadInfoRequest:
+                    return TranslatePingLoadInfoRequest(pingLoadInfoRequest);
                 case AttentionPingRequest attentionPingRequest:
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
@@ -26,13 +28,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case BuyItemRequest buyItemRequest:
                 case CastSpellRequest castSpellRequest:
                 case Click click:
-                case ClientReady clientReady:
+                //case ClientReady clientReady:
                 case CursorPositionOnWorld cursorPositionOnWorld:
                 case EmotionPacketRequest emotionPacketRequest:
                 case HeartBeat heartBeat:
                 case ChatMessage chatMessage:
                 case MovementRequest movementRequest:
-                case PingLoadInfoRequest pingLoadInfoRequest:
                 case QuestClicked questClicked:
                 case SellItem sellItem:
                 case SkillUpRequest skillUpRequest:
@@ -43,11 +44,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-
+        
         private GameServer.Core.RequestProcessing.Definitions.KeyCheckRequest TranslateKeyCheckRequest(PacketDefinitions.C2S.KeyCheckRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.KeyCheckRequest
             (
+                request.PartialKey,
                 request.ClientID,
                 request.SummonerId,
                 request.VersionNo,
@@ -62,7 +64,22 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         
         private GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest TranslateSynchVersion(SynchVersionRequest request)
         {
-            return new GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest(request.NetId, (int)request.ClientId, request.Version);
+            return new GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest(request.NetId, request.ClientId, request.Version);
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.PingLoadInfoRequest TranslatePingLoadInfoRequest(PingLoadInfoRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.PingLoadInfoRequest
+            (
+                request.SenderNetId,
+                request.ClientId,
+                request.SummonerId,
+                request.Percentage,
+                request.ETA,
+                request.Count,
+                request.Ping,
+                request.Ready
+            );
         }
     }
 }

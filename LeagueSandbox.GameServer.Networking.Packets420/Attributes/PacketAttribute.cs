@@ -18,7 +18,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Attributes
 			ChannelId = channel;
 		}
 
-		public PacketAttribute(PacketCmd packetId) : this(packetId, Channel.C2S)
+		public PacketAttribute(PacketCmd packetId) : this(packetId, Channel.ClientToServer)
 		{
 
 		}

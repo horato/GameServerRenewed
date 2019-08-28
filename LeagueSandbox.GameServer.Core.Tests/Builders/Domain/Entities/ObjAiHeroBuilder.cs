@@ -15,6 +15,10 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private Vector3 _position = new Vector3(11, 43, 2);
         private IStats _stats = new StatsBuilder().Build();
         private uint _netId = 2465355;
+        private ulong _summonerId = 5415412;
+        private int _clientId = 52;
+        private bool _isBot = true;
+        private bool _isPlayerControlled = true;
 
         public ObjAiHeroBuilder WithTeam(Team team)
         {
@@ -40,9 +44,33 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
+        public ObjAiHeroBuilder WithSummonerId(ulong summonerId)
+        {
+            _summonerId = summonerId;
+            return this;
+        }
+
+        public ObjAiHeroBuilder WithClientId(int clientId)
+        {
+            _clientId = clientId;
+            return this;
+        }
+
+        public ObjAiHeroBuilder WithIsBot(bool isBot)
+        {
+            _isBot = isBot;
+            return this;
+        }
+
+        public ObjAiHeroBuilder WithIsPlayerControlled(bool isPlayerControlled)
+        {
+            _isPlayerControlled = isPlayerControlled;
+            return this;
+        }
+
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled);
 
             return instance;
         }

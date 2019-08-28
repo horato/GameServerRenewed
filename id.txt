@@ -1,0 +1,3 @@
+ClientId int
+SummonerId ulong
+NetId uint
