@@ -13,7 +13,7 @@ namespace LeagueSandbox.GameServer.Host.DotNet
         private const string HOST = "127.0.0.1";
         private const ushort PORT = 5119;
         private const string BLOWFISH_KEY = "17BLOhi6KZsTtldTsizvHg==";
-        private const MapType MAP_ID = MapType.FlatTestMap;
+        private const MapType MAP_ID = MapType.SummonersRift;
 
         public static void Main(string[] args)
         {

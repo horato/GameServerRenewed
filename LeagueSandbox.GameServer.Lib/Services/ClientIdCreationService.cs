@@ -7,7 +7,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
 {
     internal class ClientIdCreationService : IClientIdCreationService
     {
-        private volatile int _dwStart = 0;
+        private volatile int _dwStart = -1;
 
         public int GetNewId()
         {

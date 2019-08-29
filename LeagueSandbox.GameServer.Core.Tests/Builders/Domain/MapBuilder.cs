@@ -6,7 +6,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain
 {
     internal class MapBuilder : EntityBuilderBase<Map>
     {
-        private MapType _id = MapType.ProvingGrounds;
+        private MapType _id = MapType.CrystalScar;
 
         public MapBuilder WithId(MapType id)
         {

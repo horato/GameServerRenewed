@@ -124,7 +124,7 @@
         S2CObjectSpawn = 0xBA,
         S2CHideUi = 0xBC,
         C2SSynchVersion = 0xBD,
-        C2SCharLoaded = 0xBE,
+        C2SCharSelected = 0xBE,
         S2CSetTarget2 = 0xC0,
         // Packet 0xC0 format is [Net ID 1] [Net ID 2], purpose still unknown
         S2CGameTimer = 0xC1,
