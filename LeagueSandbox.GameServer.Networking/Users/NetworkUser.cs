@@ -8,13 +8,11 @@ namespace LeagueSandbox.GameServer.Networking.Users
         private Peer _stagedPeer;
 
         public ulong SummonerId { get; }
-        public int ClientId { get; }
         public Peer Peer { get; private set; }
 
-        public NetworkUser(ulong summonerId, int clientId, Peer peer)
+        public NetworkUser(ulong summonerId, Peer peer)
         {
             SummonerId = summonerId;
-            ClientId = clientId;
             Peer = peer;
         }
 

@@ -2,7 +2,7 @@
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
 
-namespace LeagueSandbox.GameServer.Networking.Communication.ServerActions
+namespace LeagueSandbox.GameServer.Lib.ServerActions
 {
     internal class QueryStatusServerAction : ServerActionBase<QueryStatusRequest>
     {

@@ -13,5 +13,9 @@
 
         /// <summary> Indicates if this instance is currently controlled by player (= is player connected) </summary>
         bool IsPlayerControlled { get; }
+
+        /// <summary> Assigns this instance to a client </summary>
+        /// <param name="clientId"></param>
+        void EnablePlayerControl(int clientId);
     }
 }

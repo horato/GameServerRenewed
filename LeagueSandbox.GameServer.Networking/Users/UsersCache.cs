@@ -31,7 +31,7 @@ namespace LeagueSandbox.GameServer.Networking.Users
             if (UserExists(summonerId))
                 throw new InvalidOperationException($"User {summonerId} already exists");
 
-            _usersCache.Add(summonerId, new NetworkUser(summonerId, _usersCache.Count + 1, peer));
+            _usersCache.Add(summonerId, new NetworkUser(summonerId, peer));
             _newUsers.Add(summonerId, _usersCache[summonerId]);
         }
 
