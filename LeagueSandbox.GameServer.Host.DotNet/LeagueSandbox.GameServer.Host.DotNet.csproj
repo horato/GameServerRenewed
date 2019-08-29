@@ -68,4 +68,7 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)LeagueSandbox.GameServer.Networking\bin\$(ConfigurationName)\netstandard2.0\ENet.dll" "$(TargetDir)" /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

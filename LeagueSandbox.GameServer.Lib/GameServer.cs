@@ -35,9 +35,9 @@ namespace LeagueSandbox.GameServer.Lib
 
         private void InitializePlayers(StartupConfig config)
         {
-            // PlayerCache -> PlayerController
-            // ObjAiHero -> Player
-            // PlayerController returns Player
+            var controller = _container.Resolve<PlayerController>();
+            controller.InitializePlayers(config.Players);
+            _container.RegisterInstance<IPlayerController>(controller);
         }
 
         private void InitializeLogger()

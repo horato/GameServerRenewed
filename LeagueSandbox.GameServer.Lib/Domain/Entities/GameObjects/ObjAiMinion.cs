@@ -18,7 +18,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //IsWard
         //    IsLaneMinion
 
-        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId)
+        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId) : base(team, position, stats, netId, skinName, skinId)
         {
         }
     }

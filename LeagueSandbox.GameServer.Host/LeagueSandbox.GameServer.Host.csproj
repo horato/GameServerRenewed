@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)LeagueSandbox.GameServer.Networking\bin\Debug\netstandard2.0\ENet.dll&quot; &quot;$(TargetDir)&quot; /Y" />
+    <Exec Command="xcopy &quot;$(SolutionDir)LeagueSandbox.GameServer.Networking\bin\$(ConfigurationName)\netstandard2.0\ENet.dll&quot; &quot;$(TargetDir)&quot; /Y" />
   </Target>
 
   <ItemGroup>

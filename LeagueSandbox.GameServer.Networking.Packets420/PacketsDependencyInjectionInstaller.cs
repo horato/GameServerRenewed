@@ -2,6 +2,7 @@
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketReaders;
+using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420
@@ -14,6 +15,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420
 			container.RegisterType<IPacketReaderProvider, PacketReaderProvider>();
 			container.RegisterType<IRequestTranslationService, RequestTranslationService>();
 			container.RegisterType<IEnumTranslationService, EnumTranslationService>();
+			container.RegisterType<IDTOTranslationService, DTOTranslationService>();
 		}
 	}
 }

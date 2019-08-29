@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
@@ -39,7 +40,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
-        public void NotifySynchVersion(ulong targetSummonerId, bool versionMatches, MapType mapId, IEnumerable<IObjAiHero> players, string version)
+        public void NotifySynchVersion(ulong targetSummonerId, bool versionMatches, MapType mapId, IEnumerable<IPlayer> players, string version)
         {
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteSynchVersion(versionMatches, mapId, players, version);
@@ -52,7 +53,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             BroadcastPacket(data, Channel.BroadcastUnreliable);
         }
 
-        public void NotifyTeamRosterUpdate(ulong targetSummonerId, IEnumerable<IObjAiHero> players)
+        public void NotifyTeamRosterUpdate(ulong targetSummonerId, IEnumerable<IPlayer> players)
         {
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteTeamRosterUpdate(players);

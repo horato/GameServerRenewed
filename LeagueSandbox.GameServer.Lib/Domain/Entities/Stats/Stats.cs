@@ -15,7 +15,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public bool IsTargetable { get; }
         public SpellFlags IsTargetableToTeam { get; }
         public ActionState ActionState { get; private set; }
-        public PrimaryAbilityResourceType ParType { get; private set; }
+        public PrimaryAbilityResourceType ParType { get; }
 
         public float AttackSpeedFlat { get; }
         public float HealthPerLevel { get; }
@@ -58,49 +58,18 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public float CurrentHealth
         {
             get => Math.Min(HealthPoints.Total, _currentHealth);
-            set => _currentHealth = value;
+            private set => _currentHealth = value;
         }
 
         private float _currentMana;
         public float CurrentMana
         {
             get => Math.Min(ManaPoints.Total, _currentMana);
-            set => _currentMana = value;
+            private set => _currentMana = value;
         }
 
-        public bool IsGeneratingGold { get; set; } // Used to determine if the Stats update should include generating gold. Changed in Champion.h
-        public float SpellCostReduction { get; set; } //URF Buff/Lissandra's passive
-
-        public Stats()
-        {
-            SpellCostReduction = 0;
-            ManaCost = new float[64];
-            ActionState = ActionState.CanAttack | ActionState.CanCast | ActionState.CanMove | ActionState.Unknown;
-            IsTargetable = true;
-            IsTargetableToTeam = SpellFlags.TargetableToAll;
-
-            AbilityPower = new Stat();
-            Armor = new Stat();
-            ArmorPenetration = new Stat();
-            AttackDamage = new Stat();
-            AttackSpeedMultiplier = new Stat(1.0f, 0, 0, 0, 0);
-            CooldownReduction = new Stat();
-            CriticalChance = new Stat();
-            CriticalDamage = new Stat(2, 0, 0, 0, 0);
-            GoldPerSecond = new Stat();
-            HealthPoints = new Stat();
-            HealthRegeneration = new Stat();
-            LifeSteal = new Stat();
-            MagicResist = new Stat();
-            MagicPenetration = new Stat();
-            ManaPoints = new Stat();
-            ManaRegeneration = new Stat();
-            MoveSpeed = new Stat();
-            Range = new Stat();
-            Size = new Stat(1.0f, 0, 0, 0, 0);
-            SpellVamp = new Stat();
-            Tenacity = new Stat();
-        }
+        public bool IsGeneratingGold { get; }
+        public float SpellCostReduction { get; }
 
         public Stats(SpellSlot spellsEnabled, bool isMagicImmune, bool isInvulnerable, bool isPhysicalImmune, bool isLifestealImmune, bool isTargetable, SpellFlags isTargetableToTeam, ActionState actionState, PrimaryAbilityResourceType parType, float attackSpeedFlat, float healthPerLevel, float manaPerLevel, float adPerLevel, float armorPerLevel, float magicResistPerLevel, float healthRegenerationPerLevel, float manaRegenerationPerLevel, float growthAttackSpeed, float[] manaCost, IStat abilityPower, IStat armor, IStat armorPenetration, IStat attackDamage, IStat attackSpeedMultiplier, IStat cooldownReduction, IStat criticalChance, IStat criticalDamage, IStat goldPerSecond, IStat healthPoints, IStat healthRegeneration, IStat lifeSteal, IStat magicResist, IStat magicPenetration, IStat manaPoints, IStat manaRegeneration, IStat moveSpeed, IStat range, IStat size, IStat spellVamp, IStat tenacity, float gold, byte level, float experience, float currentHealth, float currentMana, bool isGeneratingGold, float spellCostReduction)
         {

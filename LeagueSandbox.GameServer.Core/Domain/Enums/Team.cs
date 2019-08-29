@@ -3,6 +3,7 @@
     public enum Team
     {
         Blue = 1,
-        Red = 2
+        Red = 2,
+        Neutral = 3
     }
 }

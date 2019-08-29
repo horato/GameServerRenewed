@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
+using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
+using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
@@ -14,10 +16,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
     public class PacketWriter : IPacketWriter
     {
         private readonly IEnumTranslationService _enumTranslationService;
+        private readonly IDTOTranslationService _dtoTranslationService;
 
         public PacketWriter(IUnityContainer unityContainer)
         {
             _enumTranslationService = unityContainer.Resolve<IEnumTranslationService>();
+            _dtoTranslationService = unityContainer.Resolve<IDTOTranslationService>();
         }
 
         public byte[] WriteKeyCheckResponse(ulong summonerId, int clientId, uint versionNo, ulong checkId)
@@ -30,7 +34,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             return new QueryStatus().GetBytes();
         }
 
-        public byte[] WriteSynchVersion(bool versionMatches, MapType mapId, IEnumerable<IObjAiHero> players, string version)
+        public byte[] WriteSynchVersion(bool versionMatches, MapType mapId, IEnumerable<IPlayer> players, string version)
         {
             return new SynchVersionResponse
             (
@@ -39,10 +43,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 false,
                 false,
                 _enumTranslationService.TranslateMapType(mapId),
-                TranslatePlayers(players),
+                players.Select(x => _dtoTranslationService.TranslatePlayerLoadInfo(x)),
                 version,
-                "CLASSIC",
-                "NA",
+                "CLASSIC", //TODO: enum
+                "NA", // TODO: enum
                 new List<string>(),
                 0,
                 string.Empty,
@@ -65,23 +69,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             ).GetBytes();
         }
 
-        private IEnumerable<PlayerLoadInfo> TranslatePlayers(IEnumerable<IObjAiHero> players)
-        {
-            if (players == null)
-                yield break;
-
-            foreach (var player in players)
-            {
-                yield return new PlayerLoadInfo();
-            }
-        }
-
         public byte[] WritePingLoadInfo(uint netId, int clientId, ulong summonerId, float loadedPercent, float eta, ushort count, ushort ping, bool isReady)
         {
             return new PingLoadInfoResponse(netId, clientId, summonerId, loadedPercent, eta, count, ping, isReady).GetBytes();
         }
 
-        public byte[] WriteTeamRosterUpdate(IEnumerable<IObjAiHero> players)
+        public byte[] WriteTeamRosterUpdate(IEnumerable<IPlayer> players)
         {
             var bluePlayers = new List<ulong>();
             var redPlayers = new List<ulong>();
@@ -93,13 +86,13 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 {
                     case Team.Blue:
                         bluePlayers.Add(player.SummonerId);
-                        if (player.IsPlayerControlled)
+                        if (player.Champion.IsPlayerControlled)
                             connectedBluePlayers++;
 
                         break;
                     case Team.Red:
                         redPlayers.Add(player.SummonerId);
-                        if (player.IsPlayerControlled)
+                        if (player.Champion.IsPlayerControlled)
                             connectedRedPlayers++;
 
                         break;

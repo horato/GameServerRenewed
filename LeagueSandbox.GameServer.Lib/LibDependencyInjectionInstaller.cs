@@ -11,8 +11,9 @@ namespace LeagueSandbox.GameServer.Lib
         public void Install(IUnityContainer container)
         {
             container.RegisterType<IGameUpdateService, GameUpdateService>();
-            container.RegisterType<IPlayerController, PlayerController>();
             container.RegisterSingleton<IGameObjectsCache, GameObjectsCache>();
+            container.RegisterSingleton<IPlayerCache, PlayerCache>();
+            container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
         }
     }
 }

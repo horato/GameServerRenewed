@@ -20,11 +20,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             PercentBonus = percentBonus;
         }
 
-        public Stat() : this(0, 0, 0, 0, 0)
-        {
-
-        }
-
         public bool ApplyStatModifier(IStatModifier statModifier)
         {
             if (!statModifier.StatModified)

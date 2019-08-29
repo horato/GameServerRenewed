@@ -140,11 +140,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         private void WritePlayerInfo(PlayerLoadInfo info)
         {
             WriteULong(info.SummonerId);
-            WriteUShort(info.SummonorLevel);
-            WriteUInt(info.SummonorSpell1);
-            WriteUInt(info.SummonorSpell2);
+            WriteUShort(info.SummonerLevel);
+            WriteUInt((uint)info.SummonerSpell1);
+            WriteUInt((uint)info.SummonerSpell2);
             WriteByte(info.Bitfield);
-            WriteUInt(info.TeamId);
+            WriteUInt((uint)info.TeamId);
             WriteFixedString(info.BotName, 64);
             WriteFixedString(info.BotSkinName, 64);
             WriteFixedString(info.EloRanking, 16);
@@ -167,12 +167,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
     internal class PlayerLoadInfo
     {
         public ulong SummonerId { get; }
-        public ushort SummonorLevel { get; }
-        public uint SummonorSpell1 { get; }
-        public uint SummonorSpell2 { get; }
+        public ushort SummonerLevel { get; }
+        public SummonerSpellIds SummonerSpell1 { get; }
+        public SummonerSpellIds SummonerSpell2 { get; }
         //TODO: change bitfield to enum or variables
         public byte Bitfield { get; }
-        public uint TeamId { get; }
+        public TeamId TeamId { get; }
         public string BotName { get; }
         public string BotSkinName { get; }
         public string EloRanking { get; }
@@ -182,12 +182,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public byte AllyBadgeID { get; }
         public byte EnemyBadgeID { get; }
 
-        public PlayerLoadInfo(ulong summonerId, ushort summonorLevel, uint summonorSpell1, uint summonorSpell2, byte bitfield, uint teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
+        public PlayerLoadInfo(ulong summonerId, ushort summonerLevel, SummonerSpellIds summonerSpell1, SummonerSpellIds summonerSpell2, byte bitfield, TeamId teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
         {
             SummonerId = summonerId;
-            SummonorLevel = summonorLevel;
-            SummonorSpell1 = summonorSpell1;
-            SummonorSpell2 = summonorSpell2;
+            SummonerLevel = summonerLevel;
+            SummonerSpell1 = summonerSpell1;
+            SummonerSpell2 = summonerSpell2;
             Bitfield = bitfield;
             TeamId = teamId;
             BotName = botName;
@@ -202,11 +202,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
         public PlayerLoadInfo()
         {
-            unchecked
-            {
-                SummonerId = (ulong)-1;
-            }
-
+            SummonerId = unchecked((ulong)-1);
             BotName = string.Empty;
             BotSkinName = string.Empty;
             EloRanking = string.Empty;

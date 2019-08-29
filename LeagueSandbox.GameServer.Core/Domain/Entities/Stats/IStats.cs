@@ -47,10 +47,10 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
         float Gold { get; }
         byte Level { get; }
         float Experience { get; }
-        float CurrentHealth { get; set; }
-        float CurrentMana { get; set; }
-        bool IsGeneratingGold { get; set; } // Used to determine if the Stats update should include generating gold. Changed in Champion.h
-        float SpellCostReduction { get; set; } //URF Buff/Lissandra's passive
+        float CurrentHealth { get; }
+        float CurrentMana { get; }
+        bool IsGeneratingGold { get; }
+        float SpellCostReduction { get; }
         void AddModifier(IStatsModifier modifier);
         void RemoveModifier(IStatsModifier modifier);
         float GetTotalAttackSpeed();

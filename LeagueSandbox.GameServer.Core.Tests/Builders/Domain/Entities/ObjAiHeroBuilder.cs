@@ -19,6 +19,8 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private int _clientId = 52;
         private bool _isBot = true;
         private bool _isPlayerControlled = true;
+        private string _skinName = "Ahri";
+        private int _skinId = 3;
 
         public ObjAiHeroBuilder WithTeam(Team team)
         {
@@ -68,9 +70,21 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
+        public ObjAiHeroBuilder WithSkinName(string skinName)
+        {
+            _skinName = skinName;
+            return this;
+        }
+
+        public ObjAiHeroBuilder WithSkinId(int skinId)
+        {
+            _skinId = skinId;
+            return this;
+        }
+
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled, _skinName, _skinId);
 
             return instance;
         }

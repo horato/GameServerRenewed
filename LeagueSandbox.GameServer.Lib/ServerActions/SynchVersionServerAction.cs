@@ -31,7 +31,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             var versionMatches = request.Version == serverVersion;
             if (!versionMatches)
             {
-                _packetNotifier.NotifySynchVersion(senderSummonerId, versionMatches, 0, new List<IObjAiHero>(), serverVersion);
+                _packetNotifier.NotifySynchVersion(senderSummonerId, versionMatches, 0, new List<IPlayer>(), serverVersion);
                 return;
             }
 

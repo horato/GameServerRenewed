@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Lib.Config;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
@@ -35,7 +36,7 @@ namespace LeagueSandbox.GameServer.Host.DotNet
             if (_gameServer != null)
                 throw new InvalidOperationException("Server is already initialized");
 
-            var players = new[] { new StartupPlayer(Rank.Diamond, "Test", "Ezreal", Team.Blue, 0, SummonerSpell.Heal, SummonerSpell.Flash, 2, 0), };
+            var players = new[] { new StartupPlayer(123412341234, 30, Rank.Diamond, "Test", "Ezreal", Team.Blue, 0, SummonerSpell.Heal, SummonerSpell.Flash, 2, 2, 0, false, new Dictionary<int, int>()), };
             var config = new StartupConfig(HOST, PORT, BLOWFISH_KEY, MAP_ID, players);
 
             _gameServer = new Lib.GameServer(config);
