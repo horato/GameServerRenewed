@@ -6,154 +6,65 @@ using LeagueSandbox.GameServer.Networking.Core;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
 {
-	internal class Packet : IPacket
+    internal class Packet : IPacket
     {
-        protected List<byte> Bytes = new List<byte>();
+        private MemoryStream _stream;
+        private BinaryWriter _writer;
 
         public Packet(PacketCmd cmd)
         {
+            _stream = new MemoryStream();
+            _writer = new BinaryWriter(_stream);
+
             WriteByte((byte)cmd);
         }
 
-        public byte[] GetBytes()
+        public byte[] GetBytes() => _stream.GetBuffer();
+        protected void WriteBool(bool b) => _writer.Write(b);
+        protected void WriteByte(byte b) => _writer.Write(b);
+        protected void WriteSByte(sbyte b) => _writer.Write(b);
+        protected void WriteBytes(byte[] b) => _writer.Write(b);
+        protected void WriteShort(short s) => _writer.Write(s);
+        protected void WriteUShort(ushort s) => _writer.Write(s);
+        protected void WriteInt(int n) => _writer.Write(n);
+        protected void WriteUInt(uint n) => _writer.Write(n);
+        protected void WriteLong(long l) => _writer.Write(l);
+        protected void WriteULong(ulong l) => _writer.Write(l);
+        protected void WriteFloat(float f) => _writer.Write(f);
+        protected void WriteDouble(double d) => _writer.Write(d);
+        protected void WriteString(string s) => WriteBytes(Encoding.UTF8.GetBytes(s));
+
+        protected void Clear()
         {
-            return Bytes.ToArray();
+            _stream = new MemoryStream();
+            _writer = new BinaryWriter(_stream);
         }
 
-        public void Fill(byte data, int length)
+        protected void WriteZero(int count)
         {
-            if (length <= 0)
-            {
-                return;
-            }
+            if (count < 0)
+                throw new InvalidOperationException("Count must be greater or equal to 0");
 
-            var arr = new byte[length];
-            for (var i = 0; i < length; ++i)
-            {
-                arr[i] = data;
-            }
-
-            WriteBytes(arr);
+            WriteBytes(new byte[count]);
         }
 
-        public void WriteBool(bool b)
-        {
-            WriteByte((byte)(b ? 1u : 0u));
-        }
-
-        public void WriteByte(byte b)
-        {
-            Bytes.Add(b);
-        }
-
-        public void WriteSByte(sbyte b)
-        {
-            WriteByte((byte)b);
-        }
-
-        public void WriteBytes(byte[] b)
-        {
-            Bytes.AddRange(b);
-        }
-
-        public void WriteShort(short s)
-        {
-            var arr = new byte[2];
-            for (var i = 0; i < 2; i++)
-            {
-                arr[i] = (byte)(s >> (i * 8));
-            }
-
-            WriteBytes(arr);
-        }
-
-        public void WriteUShort(ushort s)
-        {
-            var arr = new byte[2];
-            for (var i = 0; i < 2; i++)
-            {
-                arr[i] = (byte)(s >> (i * 8));
-            }
-
-            WriteBytes(arr);
-        }
-
-        public void WriteInt(int n)
-        {
-            var arr = new byte[4];
-            for (var i = 0; i < 4; i++)
-            {
-                arr[i] = (byte)(n >> (i * 8));
-            }
-
-            WriteBytes(arr);
-        }
-
-        public void WriteUInt(uint n)
-        {
-            var arr = new byte[4];
-            for (var i = 0; i < 4; i++)
-            {
-                arr[i] = (byte)(n >> (i * 8));
-            }
-
-            WriteBytes(arr);
-        }
-
-        public void WriteLong(long l)
-        {
-            var arr = new byte[8];
-            for (var i = 0; i < 8; i++)
-            {
-                arr[i] = (byte)(l >> (i * 8));
-            }
-
-            WriteBytes(arr);
-        }
-
-        public void WriteULong(ulong l)
-        {
-            var arr = new byte[8];
-            for (var i = 0; i < 8; i++)
-            {
-                arr[i] = (byte)(l >> (i * 8));
-            }
-
-            WriteBytes(arr);
-        }
-
-        public void WriteFloat(float f)
-        {
-            WriteBytes(BitConverter.GetBytes(f));
-        }
-
-        public void WriteDouble(double d)
-        {
-            WriteBytes(BitConverter.GetBytes(d));
-        }
-
-        public void WriteString(string s)
-        {
-            WriteBytes(Encoding.UTF8.GetBytes(s));
-        }
-
-        public void WriteFixedString(string str, int maxLength)
+        protected void WriteFixedString(string str, int maxLength)
         {
             var data = string.IsNullOrEmpty(str) ? new byte[0] : Encoding.UTF8.GetBytes(str);
             var count = data.Length;
-            if (count >= (maxLength - 1))
+            if (count > maxLength)
                 throw new IOException("Too much data!");
 
             WriteBytes(data);
-            Fill(0, maxLength - count);
+            WriteZero(maxLength - count);
         }
 
-        //public void WriteStringHash(string str)
+        //protected void WriteStringHash(string str)
         //{
         //    Write(HashFunctions.HashString(str));
         //}
 
-        //public void WriteNetId(IGameObject obj)
+        //protected void WriteNetId(IGameObject obj)
         //{
         //    if (obj == null)
         //    {
