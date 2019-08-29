@@ -21,6 +21,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateSynchVersion(synchVersionRequest);
                 case PingLoadInfoRequest pingLoadInfoRequest:
                     return TranslatePingLoadInfoRequest(pingLoadInfoRequest);
+                case JoinTeamRequest joinTeamRequest:
+                    return TranslateJoinTeamRequest(joinTeamRequest);
                 case AttentionPingRequest attentionPingRequest:
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
@@ -44,7 +46,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-        
+
         private GameServer.Core.RequestProcessing.Definitions.KeyCheckRequest TranslateKeyCheckRequest(PacketDefinitions.C2S.KeyCheckRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.KeyCheckRequest
@@ -61,7 +63,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         {
             return new GameServer.Core.RequestProcessing.Definitions.QueryStatusRequest();
         }
-        
+
         private GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest TranslateSynchVersion(SynchVersionRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.SynchVersionRequest(request.NetId, request.ClientId, request.Version);
@@ -80,6 +82,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 request.Ping,
                 request.Ready
             );
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.JoinTeamRequest TranslateJoinTeamRequest(JoinTeamRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.JoinTeamRequest(request.ClientId, request.NetTeamId);
         }
     }
 }

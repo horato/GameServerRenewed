@@ -33,11 +33,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public string DradisTestResource { get; }
         public ushort DradisTestPort { get; }
         public TipConfig TipConfig { get; }
-        public ulong GameFeatures { get; }
+        public GameFeatures GameFeatures { get; }
         public IList<uint> DisabledItems { get; }
         public IList<bool> EnabledDradisMessages { get; }
 
-        public SynchVersionResponse(bool versionMatches, bool writeToClientFile, bool matchedGame, bool dradisInit, MapId mapToLoad, IEnumerable<PlayerLoadInfo> playerInfo, string versionString, string mapMode, string platformId, IEnumerable<string> mutators, byte mutatorsNum, string orderRankedTeamName, string orderRankedTeamTag, string chaosRankedTeamName, string chaosRankedTeamTag, string metricsServerWebAddress, string metricsServerWebPath, ushort metricsServerPort, string dradisProdAddress, string dradisProdResource, ushort dradisProdPort, string dradisTestAddress, string dradisTestResource, ushort dradisTestPort, TipConfig tipConfig, ulong gameFeatures, IEnumerable<uint> disabledItems, IEnumerable<bool> enabledDradisMessages)
+        public SynchVersionResponse(bool versionMatches, bool writeToClientFile, bool matchedGame, bool dradisInit, MapId mapToLoad, IEnumerable<PlayerLoadInfo> playerInfo, string versionString, string mapMode, string platformId, IEnumerable<string> mutators, byte mutatorsNum, string orderRankedTeamName, string orderRankedTeamTag, string chaosRankedTeamName, string chaosRankedTeamTag, string metricsServerWebAddress, string metricsServerWebPath, ushort metricsServerPort, string dradisProdAddress, string dradisProdResource, ushort dradisProdPort, string dradisTestAddress, string dradisTestResource, ushort dradisTestPort, TipConfig tipConfig, GameFeatures gameFeatures, IEnumerable<uint> disabledItems, IEnumerable<bool> enabledDradisMessages)
             : base(PacketCmd.S2CSynchVersion, 0)
         {
             VersionMatches = versionMatches;
@@ -124,7 +124,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             WriteFixedString(DradisTestResource, 256);
             WriteUShort(DradisTestPort);
             WriteTipConfig(TipConfig);
-            WriteULong(GameFeatures);
+            WriteULong((ulong)GameFeatures);
 
             foreach (var disabledItem in DisabledItems)
                 WriteUInt(disabledItem);

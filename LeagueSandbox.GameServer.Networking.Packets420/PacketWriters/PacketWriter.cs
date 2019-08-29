@@ -46,7 +46,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 players.Select(x => _dtoTranslationService.TranslatePlayerLoadInfo(x)),
                 version,
                 "CLASSIC", //TODO: enum
-                "NA", // TODO: enum
+                "NA1", // TODO: enum
                 new List<string>(),
                 0,
                 string.Empty,
@@ -63,7 +63,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 string.Empty,
                 0,
                 new TipConfig(),
-                487826,
+                GameFeatures.FoundryOptions | GameFeatures.EarlyWarningForFOWMissiles | GameFeatures.NewPlayerRecommendedPages | GameFeatures.HighlightLineMissileTargets | GameFeatures.ItemUndo,
+                //487826,
                 new List<uint>(),
                 new List<bool>()
             ).GetBytes();

@@ -19,7 +19,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
             WriteByte((byte)cmd);
         }
 
-        public byte[] GetBytes() => _stream.GetBuffer();
+        public byte[] GetBytes() => _stream.ToArray();
         protected void WriteBool(bool b) => _writer.Write(b);
         protected void WriteByte(byte b) => _writer.Write(b);
         protected void WriteSByte(sbyte b) => _writer.Write(b);
