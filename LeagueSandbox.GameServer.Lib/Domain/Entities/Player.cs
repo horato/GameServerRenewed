@@ -8,7 +8,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
     internal class Player : IPlayer
     {
         public ulong SummonerId { get; }
-        public ushort SummonerLevel { get; }
+        public int SummonerLevel { get; }
         public Rank Rank { get; }
         public string Name { get; }
         public string ChampionName { get; }
@@ -22,7 +22,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
         public IDictionary<int, int> Runes { get; }
         public IObjAiHero Champion { get; }
 
-        public Player(ulong summonerId, ushort summonerLevel, Rank rank, string name, string championName, Team team, short skin, SummonerSpell summoner1, SummonerSpell summoner2, byte badgeAlly, byte badgeEnemy, int icon, IObjAiHero champion, IDictionary<int, int> runes)
+        public Player(ulong summonerId, int summonerLevel, Rank rank, string name, string championName, Team team, short skin, SummonerSpell summoner1, SummonerSpell summoner2, byte badgeAlly, byte badgeEnemy, int icon, IObjAiHero champion, IDictionary<int, int> runes)
         {
             SummonerId = summonerId;
             SummonerLevel = summonerLevel;

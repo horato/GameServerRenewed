@@ -7,7 +7,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities
     public interface IPlayer
     {
         ulong SummonerId { get; }
-        ushort SummonerLevel { get; }
+        int SummonerLevel { get; }
         Rank Rank { get; }
         string Name { get; }
         string ChampionName { get; }

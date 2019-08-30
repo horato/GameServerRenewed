@@ -148,8 +148,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 new List<uint>(), // TODO: inventory
                 new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner1) },
                 new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner2) },
-                player.Runes.Select(x => new Talent((uint)x.Key, (byte)x.Value)),
-                (byte)player.SummonerLevel,
+                player.Runes.Select(x => checked(new Talent((uint)x.Key, (byte)x.Value))),
+                checked((byte)player.SummonerLevel),
                 0 // TODO: ward skin
             ).GetBytes();
         }

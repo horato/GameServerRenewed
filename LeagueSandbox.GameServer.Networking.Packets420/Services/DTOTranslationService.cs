@@ -21,7 +21,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             return new PlayerLoadInfo
             (
                 player.SummonerId,
-                player.SummonerLevel,
+                checked((ushort)player.SummonerLevel),
                 _enumTranslationService.TranslateSummonerSpell(player.Summoner1),
                 _enumTranslationService.TranslateSummonerSpell(player.Summoner2),
                 0,
