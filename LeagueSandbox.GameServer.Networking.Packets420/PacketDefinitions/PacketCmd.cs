@@ -5,6 +5,7 @@
         KeyCheck = 0x00, // 3 bytes (partial key?), last 4 bytes
         C2SQueryStatusReq = 0x14,
         S2CQueryStatusAns = 0x88,
+        S2CPingLoadInfo = 0x95,
         C2SSynchVersion = 0xBD,
         S2CSynchVersion = 0x54, // player bitfield, order players by ClientId
         C2SRequestJoinTeam = 0x64,
@@ -16,6 +17,7 @@
         S2CCreateHero = 0x4C, // bitfield unknowns, spawn while dead (reconnect), NetNodeId, botRank, spawnPositionIndex
         S2CAvatarInfo = 0x2A, // summoner spells uint/ulong?, items
         S2CEndSpawn = 0x11,
+        S2CStartGame = 0x5C,
 
 
 
@@ -72,7 +74,6 @@
         C2SAttentionPing = 0x57,
         S2CHighlightUnit = 0x59,
         S2CDestroyProjectile = 0x5A,
-        S2CStartGame = 0x5C,
         S2CChampionDie = 0x5E,
         S2CMoveAns = 0x61,
         S2CDash = 0x64,
@@ -100,7 +101,6 @@
         C2SExit = 0x8F,
         C2SWorldSendGameNumber = 0x92, // <-- At least one of these is probably wrong
         S2CWorldSendGameNumber = 0x92, // <--
-        S2CPingLoadInfo = 0x95,
         S2CChangeCharacterVoice = 0x96,
         S2CUpdateModel = 0x97,
         S2CDisconnectedAnnouncement = 0x98,

@@ -5,24 +5,24 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 {
     internal class CreateHero : BasePacket
     {
-        private uint _netId;
-        private int _clientId;
-        private byte _netNodeId;
-        private BotSkillLevel _botSkillLevel;
-        private bool _isBlueTeam;
-        private bool _isBot;
-        private byte _botRank;
-        private byte _spawnPositionIndex;
-        private int _skinId;
-        private string _name;
-        private string _skin;
-        private float _deathDurationRemaining;
-        private float _timeSinceDeath;
-        private CreateHeroDeath _createHeroDeath;
-        private bool _unknown1; // something with scripts
-        private bool _unknown2; // something with spawn
+        private readonly uint _netId;
+        private readonly int _clientId;
+        private readonly byte _netNodeId;
+        private readonly BotSkillLevel _botSkillLevel;
+        private readonly bool _isBlueTeam;
+        private readonly bool _isBot;
+        private readonly byte _botRank;
+        private readonly byte _spawnPositionIndex;
+        private readonly int _skinId;
+        private readonly string _summonerName;
+        private readonly string _championName;
+        private readonly float _deathDurationRemaining;
+        private readonly float _timeSinceDeath;
+        private readonly CreateHeroDeath _createHeroDeath;
+        private readonly bool _unknown1; // something with scripts
+        private readonly bool _unknown2; // something with spawn
 
-        public CreateHero(uint netId, int clientId, byte netNodeId, BotSkillLevel botSkillLevel, bool isBlueTeam, bool isBot, byte botRank, byte spawnPositionIndex, int skinId, float deathDurationRemaining, float timeSinceDeath, CreateHeroDeath heroDeath, bool unknown1, bool unknown2) : base(PacketCmd.S2CCreateHero)
+        public CreateHero(uint netId, int clientId, byte netNodeId, BotSkillLevel botSkillLevel, bool isBlueTeam, bool isBot, byte botRank, byte spawnPositionIndex, int skinId, string summonerName, string championName, float deathDurationRemaining, float timeSinceDeath, CreateHeroDeath heroDeath, bool unknown1, bool unknown2) : base(PacketCmd.S2CCreateHero, netId)
         {
             _netId = netId;
             _clientId = clientId;
@@ -33,6 +33,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             _botRank = botRank;
             _spawnPositionIndex = spawnPositionIndex;
             _skinId = skinId;
+            _summonerName = summonerName;
+            _championName = championName;
             _deathDurationRemaining = deathDurationRemaining;
             _timeSinceDeath = timeSinceDeath;
             _createHeroDeath = heroDeath;
@@ -56,11 +58,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
                 teamIdBitfield |= 0x02;
             WriteByte(teamIdBitfield);
 
-            WriteByte(_botRank); 
+            WriteByte(_botRank);
             WriteByte(_spawnPositionIndex);
             WriteInt(_skinId);
-            WriteFixedString(_name, 128);
-            WriteFixedString(_skin, 40);
+            WriteFixedString(_summonerName, 128);
+            WriteFixedString(_championName, 40);
             WriteFloat(_deathDurationRemaining);
             WriteFloat(_timeSinceDeath);
             WriteUInt((uint)_createHeroDeath);

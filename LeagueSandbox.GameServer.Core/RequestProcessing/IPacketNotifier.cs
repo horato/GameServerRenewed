@@ -11,7 +11,7 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyKeyCheck(ulong senderSummonerId, ulong userSummonerId, int userClientId, uint versionNo, ulong checkId);
         void NotifyQueryStatus(ulong targetSummonerId);
         void NotifySynchVersion(ulong targetSummonerId, bool versionMatches, MapType mapId, IEnumerable<IPlayer> players, string version);
-        void NotifyPingLoadInfo(PingLoadInfoRequest request);
+        void NotifyPingLoadInfo(uint senderNetId, ulong senderSummonerId, PingLoadInfoRequest request);
         void NotifyTeamRosterUpdate(ulong targetSummonerId, IEnumerable<IPlayer> players);
         void NotifyRename(ulong targetSummonerId, ulong summonerId, int skinId, string playerName);
         void NotifyReskin(ulong targetSummonerId, ulong summonerId, int skinId, string skinName);
@@ -19,5 +19,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyCreateHero(ulong targetSummonerId, IPlayer player);
         void NotifyAvatarInfo(ulong targetSummonerId, IPlayer player);
         void NotifyEndSpawn(ulong targetSummonerId);
+        void NotifyGameStart(ulong targetSummonerId, bool enablePause, bool broadcast);
     }
 }

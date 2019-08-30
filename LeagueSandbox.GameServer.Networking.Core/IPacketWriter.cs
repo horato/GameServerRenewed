@@ -18,5 +18,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteCreateHero(IPlayer player);
         byte[] WriteAvatarInfo(IPlayer player);
         byte[] WriteEndSpawn();
+        byte[] WriteStartGame(bool enablePause);
     }
 }

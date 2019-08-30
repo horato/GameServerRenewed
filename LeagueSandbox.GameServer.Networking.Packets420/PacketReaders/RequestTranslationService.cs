@@ -25,6 +25,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateJoinTeamRequest(joinTeamRequest);
                 case CharSelectedRequest charSelectedRequest:
                     return TranslateCharSelectedRequest(charSelectedRequest);
+                case ClientReady clientReady:
+                    return TranslateClientReadyRequest(clientReady);
                 case AttentionPingRequest attentionPingRequest:
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
@@ -32,7 +34,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case BuyItemRequest buyItemRequest:
                 case CastSpellRequest castSpellRequest:
                 case Click click:
-                //case ClientReady clientReady:
                 case CursorPositionOnWorld cursorPositionOnWorld:
                 case EmotionPacketRequest emotionPacketRequest:
                 case HeartBeat heartBeat:
@@ -94,6 +95,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         private GameServer.Core.RequestProcessing.Definitions.JoinTeamRequest TranslateJoinTeamRequest(JoinTeamRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.JoinTeamRequest(request.ClientId, request.NetTeamId);
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.ClientReadyRequest TranslateClientReadyRequest(ClientReady request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.ClientReadyRequest();
         }
     }
 }

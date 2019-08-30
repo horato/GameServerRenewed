@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
@@ -47,9 +48,9 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
-        public void NotifyPingLoadInfo(PingLoadInfoRequest request)
+        public void NotifyPingLoadInfo(uint senderNetId, ulong senderSummonerId, PingLoadInfoRequest request)
         {
-            var data = _packetWriter.WritePingLoadInfo(request.SenderNetId, request.ClientId, request.SummonerId, request.Percentage, request.ETA, request.Count, request.Ping, request.Ready);
+            var data = _packetWriter.WritePingLoadInfo(senderNetId, request.ClientId, senderSummonerId, request.Percentage, request.ETA, request.Count, request.Ping, request.Ready);
             BroadcastPacket(data, Channel.BroadcastUnreliable);
         }
 
@@ -104,6 +105,20 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteEndSpawn();
             SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyGameStart(ulong targetSummonerId, bool enablePause, bool broadcast)
+        {
+            var data = _packetWriter.WriteStartGame(enablePause);
+            if (broadcast)
+            {
+                BroadcastPacket(data, Channel.Broadcast);
+            }
+            else
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
         }
 
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)

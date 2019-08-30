@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 checked((ushort)player.SummonerLevel),
                 _enumTranslationService.TranslateSummonerSpell(player.Summoner1),
                 _enumTranslationService.TranslateSummonerSpell(player.Summoner2),
-                0,
+                108,
                 _enumTranslationService.TranslateTeam(player.Champion.Team),
                 "", //TODO: Bot
                 "", //TODO: Bot

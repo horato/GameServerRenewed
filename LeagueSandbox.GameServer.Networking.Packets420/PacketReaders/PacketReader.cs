@@ -37,7 +37,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
 
             var packetType = (PacketCmd)decryptedData[0];
 
-            LoggerProvider.GetLogger().Debug($"Received {packetType}");
+            //LoggerProvider.GetLogger().Debug($"Received {packetType}");
 
             var channelPacketDefinitions = _packetDefinitionDictionary[channel];
             if (!channelPacketDefinitions.ContainsKey(packetType))

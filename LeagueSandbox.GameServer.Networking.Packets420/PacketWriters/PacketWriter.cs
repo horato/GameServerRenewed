@@ -7,6 +7,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
@@ -132,6 +133,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 0, //TODO: Bot
                 0, //TODO: SpawnIndex
                 player.Champion.SkinId,
+                player.Name,
+                player.Champion.SkinName,
                 0, //TODO Death
                 0, //TODO Death
                 CreateHeroDeath.Alive, //TODO Death
@@ -146,8 +149,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             (
                 player.Champion.NetId,
                 new List<uint>(), // TODO: inventory
-                new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner1) },
-                new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner2) },
+                new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner1), _enumTranslationService.TranslateSummonerSpell(player.Summoner2) },
                 player.Runes.Select(x => checked(new Talent((uint)x.Key, (byte)x.Value))),
                 checked((byte)player.SummonerLevel),
                 0 // TODO: ward skin
@@ -157,6 +159,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         public byte[] WriteEndSpawn()
         {
             return new EndSpawn().GetBytes();
+        }
+
+        public byte[] WriteStartGame(bool enablePause)
+        {
+            return new StartGame(enablePause).GetBytes();
         }
     }
 }

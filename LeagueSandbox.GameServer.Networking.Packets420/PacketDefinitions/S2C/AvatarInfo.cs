@@ -9,16 +9,14 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
     {
         private readonly IList<uint> _itemIDs;
         private readonly IList<SummonerSpellHash> _summonerSpellIDs;
-        private readonly IList<SummonerSpellHash> _summonerSpellIDs2;
         private readonly IList<Talent> _talents;
         private readonly byte _summonerLevel;
         private readonly byte _wardSkin;
 
-        public AvatarInfo(uint netId, IEnumerable<uint> itemIDs, IEnumerable<SummonerSpellHash> summonerSpellIDs, IEnumerable<SummonerSpellHash> summonerSpellIDs2, IEnumerable<Talent> talents, byte summonerLevel, byte wardSkin) : base(PacketCmd.S2CAvatarInfo, netId)
+        public AvatarInfo(uint netId, IEnumerable<uint> itemIDs, IEnumerable<SummonerSpellHash> summonerSpellIDs, IEnumerable<Talent> talents, byte summonerLevel, byte wardSkin) : base(PacketCmd.S2CAvatarInfo, netId)
         {
             _itemIDs = itemIDs?.ToList() ?? new List<uint>();
             _summonerSpellIDs = summonerSpellIDs?.ToList() ?? new List<SummonerSpellHash>();
-            _summonerSpellIDs2 = summonerSpellIDs2?.ToList() ?? new List<SummonerSpellHash>();
             _talents = talents?.ToList() ?? new List<Talent>();
             _summonerLevel = summonerLevel;
             _wardSkin = wardSkin;
@@ -32,8 +30,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
                 throw new InvalidOperationException("Max 30 item ids");
             if (_summonerSpellIDs.Count > 2)
                 throw new InvalidOperationException("Max 2 summoner spells");
-            if (_summonerSpellIDs2.Count > 2)
-                throw new InvalidOperationException("Max 2 summoner spells");
             if (_talents.Count > 80)
                 throw new InvalidOperationException("Max 80 talents");
 
@@ -45,11 +41,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             foreach (var summonerSpell in _summonerSpellIDs)
                 WriteUInt((uint)summonerSpell);
             for (var i = 0; i < 2 - _summonerSpellIDs.Count; i++)
-                WriteUInt(0);
-
-            foreach (var summonerSpell in _summonerSpellIDs2)
-                WriteUInt((uint)summonerSpell);
-            for (var i = 0; i < 2 - _summonerSpellIDs2.Count; i++)
                 WriteUInt(0);
 
             foreach (var talent in _talents)
