@@ -5,7 +5,6 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
-using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
 

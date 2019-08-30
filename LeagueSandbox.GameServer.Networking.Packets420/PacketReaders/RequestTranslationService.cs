@@ -23,6 +23,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslatePingLoadInfoRequest(pingLoadInfoRequest);
                 case JoinTeamRequest joinTeamRequest:
                     return TranslateJoinTeamRequest(joinTeamRequest);
+                case CharSelectedRequest charSelectedRequest:
+                    return TranslateCharSelectedRequest(charSelectedRequest);
                 case AttentionPingRequest attentionPingRequest:
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
@@ -45,6 +47,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 default:
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest TranslateCharSelectedRequest(CharSelectedRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest();
         }
 
         private GameServer.Core.RequestProcessing.Definitions.KeyCheckRequest TranslateKeyCheckRequest(PacketDefinitions.C2S.KeyCheckRequest request)

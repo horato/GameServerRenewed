@@ -37,38 +37,38 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             }
         }
 
-        public SummonerSpellIds TranslateSummonerSpell(SummonerSpell spell)
+        public SummonerSpellHash TranslateSummonerSpell(SummonerSpell spell)
         {
             switch (spell)
             {
                 case SummonerSpell.Revive:
-                    return SummonerSpellIds.Revive;
+                    return SummonerSpellHash.Revive;
                 case SummonerSpell.Smite:
-                    return SummonerSpellIds.Smite;
+                    return SummonerSpellHash.Smite;
                 case SummonerSpell.Exhaust:
-                    return SummonerSpellIds.Exhaust;
+                    return SummonerSpellHash.Exhaust;
                 case SummonerSpell.Barrier:
-                    return SummonerSpellIds.Barrier;
+                    return SummonerSpellHash.Barrier;
                 case SummonerSpell.Teleport:
-                    return SummonerSpellIds.Teleport;
+                    return SummonerSpellHash.Teleport;
                 case SummonerSpell.Ghost:
-                    return SummonerSpellIds.Ghost;
+                    return SummonerSpellHash.Ghost;
                 case SummonerSpell.Heal:
-                    return SummonerSpellIds.Heal;
+                    return SummonerSpellHash.Heal;
                 case SummonerSpell.Cleanse:
-                    return SummonerSpellIds.Cleanse;
+                    return SummonerSpellHash.Cleanse;
                 case SummonerSpell.Clarity:
-                    return SummonerSpellIds.Clarity;
+                    return SummonerSpellHash.Clarity;
                 case SummonerSpell.Ignite:
-                    return SummonerSpellIds.Ignite;
+                    return SummonerSpellHash.Ignite;
                 case SummonerSpell.Promote:
-                    return SummonerSpellIds.Promote;
+                    return SummonerSpellHash.Promote;
                 case SummonerSpell.Clair:
-                    return SummonerSpellIds.Clair;
+                    return SummonerSpellHash.Clair;
                 case SummonerSpell.Flash:
-                    return SummonerSpellIds.Flash;
+                    return SummonerSpellHash.Flash;
                 case SummonerSpell.Test:
-                    return SummonerSpellIds.Test;
+                    return SummonerSpellHash.Test;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(spell), spell, null);
             }

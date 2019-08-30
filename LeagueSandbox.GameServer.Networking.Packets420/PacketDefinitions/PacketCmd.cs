@@ -2,7 +2,24 @@
 {
     internal enum PacketCmd : short
     {
-        KeyCheck = 0x00,
+        KeyCheck = 0x00, // 3 bytes (partial key?), last 4 bytes
+        C2SQueryStatusReq = 0x14,
+        S2CQueryStatusAns = 0x88,
+        C2SSynchVersion = 0xBD,
+        S2CSynchVersion = 0x54, // player bitfield, order players by ClientId
+        C2SRequestJoinTeam = 0x64,
+        S2CTeamRosterUpdate = 0x67,
+        S2CReskinResponse = 0x65,
+        S2CRenameResponse = 0x66,
+        C2SCharSelected = 0xBE,
+        S2CStartSpawn = 0x62,
+        S2CCreateHero = 0x4C, // bitfield unknowns, spawn while dead (reconnect), NetNodeId, botRank, spawnPositionIndex
+        S2CAvatarInfo = 0x2A, // summoner spells uint/ulong?, items
+        S2CEndSpawn = 0x11,
+
+
+
+        // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
         C2SHeartBeat = 0x08,
         C2SSellItem = 0x09,
@@ -12,9 +29,7 @@
         S2CEditMessageBoxTop = 0x0D,
         S2CUnlockCamera = 0x0E,
         S2CAddXp = 0x10,
-        S2CEndSpawn = 0x11,
         S2CGameSpeed = 0x12,
-        C2SQueryStatusReq = 0x14,
         S2CSkillUp = 0x15,
         C2SPingLoadInfo = 0x16,
         S2CChangeSpell = 0x17,
@@ -28,7 +43,6 @@
         S2CFogUpdate2 = 0x23,
         S2CMoveCamera = 0x25,
         S2CSoundSettings = 0x27,
-        S2CAvatarInfo = 0x2A,
         S2CInhibitorState = 0x2B,
         S2CViewAns = 0x2C,
         C2SViewReq = 0x2E,
@@ -50,11 +64,9 @@
         S2CPlayerStats = 0x46,
         C2SAutoAttackOption = 0x47,
         C2SEmotion = 0x48,
-        S2CHeroSpawn = 0x4C,
         S2CFaceDirection = 0x50,
         S2CLeaveVision = 0x51,
         C2SClientReady = 0x52,
-        S2CSynchVersion = 0x54,
         S2CBlueTip = 0x55,
         C2SScoreboard = 0x56,
         C2SAttentionPing = 0x57,
@@ -63,14 +75,9 @@
         S2CStartGame = 0x5C,
         S2CChampionDie = 0x5E,
         S2CMoveAns = 0x61,
-        S2CStartSpawn = 0x62,
         S2CDash = 0x64,
-        C2SRequestJoinTeam = 0x64,
         S2CDamageDone = 0x65,
-        S2CReskinResponse = 0x65,
-        S2CRenameResponse = 0x66,
         S2CModifyShield = 0x66,
-        TeamRosterUpdate = 0x67,
         ChatBoxMessage = 0x68,
         S2CSetTarget = 0x6A,
         S2CSetAnimation = 0x6B,
@@ -87,7 +94,6 @@
         S2CToggleInputLockingFlag = 0x84,
         S2CSetCooldown = 0x85,
         S2CSpawnParticle = 0x87,
-        S2CQueryStatusAns = 0x88,
         S2CExplodeNexus = 0x89,            // <-- Building_Die?
         S2CInhibitorDeathAnimation = 0x89, // <--
         S2CQuest = 0x8C,
@@ -123,8 +129,6 @@
         S2CAfkWarningWindow = 0xB8,
         S2CObjectSpawn = 0xBA,
         S2CHideUi = 0xBC,
-        C2SSynchVersion = 0xBD,
-        C2SCharSelected = 0xBE,
         S2CSetTarget2 = 0xC0,
         // Packet 0xC0 format is [Net ID 1] [Net ID 2], purpose still unknown
         S2CGameTimer = 0xC1,

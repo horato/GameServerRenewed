@@ -14,5 +14,9 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteTeamRosterUpdate(IEnumerable<IPlayer> players);
         byte[] WriteRename(ulong playerId, int skinId, string playerName);
         byte[] WriteReskin(ulong summonerId, int skinId, string skinName);
+        byte[] WriteStartSpawn(byte blueBotsCount, byte redBotsCount);
+        byte[] WriteCreateHero(IPlayer player);
+        byte[] WriteAvatarInfo(IPlayer player);
+        byte[] WriteEndSpawn();
     }
 }

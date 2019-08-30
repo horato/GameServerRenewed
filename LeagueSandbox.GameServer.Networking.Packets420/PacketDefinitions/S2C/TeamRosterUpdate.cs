@@ -37,7 +37,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             WriteUInt(TeamSizeChaosCurrent);
         }
 
-        public TeamRosterUpdate(IEnumerable<ulong> orderMembers, IEnumerable<ulong> chaosMembers, uint teamSizeOrderCurrent, uint teamSizeChaosCurrent) : base(PacketCmd.TeamRosterUpdate)
+        public TeamRosterUpdate(IEnumerable<ulong> orderMembers, IEnumerable<ulong> chaosMembers, uint teamSizeOrderCurrent, uint teamSizeChaosCurrent) : base(PacketCmd.S2CTeamRosterUpdate)
         {
             OrderMembers = orderMembers?.ToList() ?? new List<ulong>();
             ChaosMembers = chaosMembers?.ToList() ?? new List<ulong>();

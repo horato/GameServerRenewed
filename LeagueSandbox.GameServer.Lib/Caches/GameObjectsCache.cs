@@ -36,7 +36,7 @@ namespace LeagueSandbox.GameServer.Lib.Caches
             return _gameObjects.Values.ToList();
         }
 
-        // TODO: I suspect this method might have performance issues because of linq queries.
+        // I suspect this method might have performance issues because of linq queries.
         // In that case refactoring will have to take place.
         // Replace this method with several FindByXXX methods and add corresponding dictionaries with different keys
         public IEnumerable<IGameObject> FindByCriteria(Func<IGameObject, bool> criteria)

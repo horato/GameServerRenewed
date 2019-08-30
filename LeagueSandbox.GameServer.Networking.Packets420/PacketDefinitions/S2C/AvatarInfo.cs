@@ -1,48 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 {
-    //internal class AvatarInfo : BasePacket
-    //{
-    //    public AvatarInfo(ClientInfo player)
-    //        : base(PacketCmd.PKT_S2C_AVATAR_INFO, player.Champion.NetId)
-    //    {
-    //        var runesRequired = 30;
-    //        foreach (var rune in player.Champion.RuneList.Runes)
-    //        {
-    //            Write((short)rune.Value);
-    //            Write((short)0x00);
-    //            runesRequired--;
-    //        }
+    internal class AvatarInfo : BasePacket
+    {
+        private readonly IList<uint> _itemIDs;
+        private readonly IList<SummonerSpellHash> _summonerSpellIDs;
+        private readonly IList<SummonerSpellHash> _summonerSpellIDs2;
+        private readonly IList<Talent> _talents;
+        private readonly byte _summonerLevel;
+        private readonly byte _wardSkin;
 
-    //        for (var i = 1; i <= runesRequired; i++)
-    //        {
-    //            Write((short)0);
-    //            Write((short)0);
-    //        }
+        public AvatarInfo(uint netId, IEnumerable<uint> itemIDs, IEnumerable<SummonerSpellHash> summonerSpellIDs, IEnumerable<SummonerSpellHash> summonerSpellIDs2, IEnumerable<Talent> talents, byte summonerLevel, byte wardSkin) : base(PacketCmd.S2CAvatarInfo, netId)
+        {
+            _itemIDs = itemIDs?.ToList() ?? new List<uint>();
+            _summonerSpellIDs = summonerSpellIDs?.ToList() ?? new List<SummonerSpellHash>();
+            _summonerSpellIDs2 = summonerSpellIDs2?.ToList() ?? new List<SummonerSpellHash>();
+            _talents = talents?.ToList() ?? new List<Talent>();
+            _summonerLevel = summonerLevel;
+            _wardSkin = wardSkin;
 
-    //        var summonerSpells = player.SummonerSkills;
-    //        WriteStringHash(summonerSpells[0]);
-    //        WriteStringHash(summonerSpells[1]);
+            WritePacket();
+        }
 
-    //        var talentsRequired = 80;
-    //        var talentsHashes = new Dictionary<int, byte>
-    //        {
-    //            { 0, 0 } // hash, level
-    //        };
+        private void WritePacket()
+        {
+            if (_itemIDs.Count > 30)
+                throw new InvalidOperationException("Max 30 item ids");
+            if (_summonerSpellIDs.Count > 2)
+                throw new InvalidOperationException("Max 2 summoner spells");
+            if (_summonerSpellIDs2.Count > 2)
+                throw new InvalidOperationException("Max 2 summoner spells");
+            if (_talents.Count > 80)
+                throw new InvalidOperationException("Max 80 talents");
 
-    //        foreach (var talent in talentsHashes)
-    //        {
-    //            Write(talent.Key); // hash
-    //            Write(talent.Value); // level
-    //            talentsRequired--;
-    //        }
+            foreach (var item in _itemIDs)
+                WriteUInt(item);
+            for (var i = 0; i < 30 - _itemIDs.Count; i++)
+                WriteUInt(0);
 
-    //        for (var i = 1; i <= talentsRequired; i++)
-    //        {
-    //            Write(0);
-    //            Write((byte)0);
-    //        }
+            foreach (var summonerSpell in _summonerSpellIDs)
+                WriteUInt((uint)summonerSpell);
+            for (var i = 0; i < 2 - _summonerSpellIDs.Count; i++)
+                WriteUInt(0);
 
-    //        Write((short)30); // avatarLevel
-    //    }
-    //}
+            foreach (var summonerSpell in _summonerSpellIDs2)
+                WriteUInt((uint)summonerSpell);
+            for (var i = 0; i < 2 - _summonerSpellIDs2.Count; i++)
+                WriteUInt(0);
+
+            foreach (var talent in _talents)
+            {
+                WriteUInt(talent.Hash);
+                WriteByte(talent.Level);
+            }
+
+            for (var i = 0; i < 80 - _talents.Count; i++)
+            {
+                WriteUInt(0);
+                WriteByte(0);
+            }
+
+            WriteByte(_summonerLevel);
+            WriteByte(_wardSkin);
+        }
+    }
+
+    internal class Talent
+    {
+        public uint Hash { get; }
+        public byte Level { get; }
+
+        public Talent(uint hash, byte level)
+        {
+            Hash = hash;
+            Level = level;
+        }
+    }
 }

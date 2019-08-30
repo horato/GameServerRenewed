@@ -15,5 +15,9 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyTeamRosterUpdate(ulong targetSummonerId, IEnumerable<IPlayer> players);
         void NotifyRename(ulong targetSummonerId, ulong summonerId, int skinId, string playerName);
         void NotifyReskin(ulong targetSummonerId, ulong summonerId, int skinId, string skinName);
+        void NotifyStartSpawn(ulong targetSummonerId, int blueBotsCount, int redBotsCount);
+        void NotifyCreateHero(ulong targetSummonerId, IPlayer player);
+        void NotifyAvatarInfo(ulong targetSummonerId, IPlayer player);
+        void NotifyEndSpawn(ulong targetSummonerId);
     }
 }

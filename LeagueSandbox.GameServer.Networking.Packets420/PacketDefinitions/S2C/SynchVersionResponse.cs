@@ -168,8 +168,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
     {
         public ulong SummonerId { get; }
         public ushort SummonerLevel { get; }
-        public SummonerSpellIds SummonerSpell1 { get; }
-        public SummonerSpellIds SummonerSpell2 { get; }
+        public SummonerSpellHash SummonerSpell1 { get; }
+        public SummonerSpellHash SummonerSpell2 { get; }
         //TODO: change bitfield to enum or variables
         public byte Bitfield { get; }
         public TeamId TeamId { get; }
@@ -182,7 +182,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public byte AllyBadgeID { get; }
         public byte EnemyBadgeID { get; }
 
-        public PlayerLoadInfo(ulong summonerId, ushort summonerLevel, SummonerSpellIds summonerSpell1, SummonerSpellIds summonerSpell2, byte bitfield, TeamId teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
+        public PlayerLoadInfo(ulong summonerId, ushort summonerLevel, SummonerSpellHash summonerSpell1, SummonerSpellHash summonerSpell2, byte bitfield, TeamId teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
         {
             SummonerId = summonerId;
             SummonerLevel = summonerLevel;

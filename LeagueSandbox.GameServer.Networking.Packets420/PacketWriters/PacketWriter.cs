@@ -47,25 +47,24 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 version,
                 "CLASSIC", //TODO: enum
                 "NA1", // TODO: enum
-                new List<string>(),
+                new List<string>(), //TODO: mutators
+                0, //TODO: mutators
+                string.Empty, //TODO: ranked teams
+                string.Empty, //TODO: ranked teams
+                string.Empty, //TODO: ranked teams
+                string.Empty, //TODO: ranked teams
+                string.Empty, //TODO: metrics?
+                string.Empty,
+                0,
+                string.Empty, //TODO: Dradis? I am curious
+                string.Empty,
                 0,
                 string.Empty,
                 string.Empty,
-                string.Empty,
-                string.Empty,
-                string.Empty,
-                string.Empty,
                 0,
-                string.Empty,
-                string.Empty,
-                0,
-                string.Empty,
-                string.Empty,
-                0,
-                new TipConfig(),
+                new TipConfig(), //TODO: Tip config
                 GameFeatures.FoundryOptions | GameFeatures.EarlyWarningForFOWMissiles | GameFeatures.NewPlayerRecommendedPages | GameFeatures.HighlightLineMissileTargets | GameFeatures.ItemUndo,
-                //487826,
-                new List<uint>(),
+                new List<uint>(), //TODO: disabled items support
                 new List<bool>()
             ).GetBytes();
         }
@@ -113,6 +112,51 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         public byte[] WriteReskin(ulong summonerId, int skinId, string skinName)
         {
             return new ReskinResponse(summonerId, skinId, skinName).GetBytes();
+        }
+
+        public byte[] WriteStartSpawn(byte blueBotsCount, byte redBotsCount)
+        {
+            return new StartSpawn(blueBotsCount, redBotsCount).GetBytes();
+        }
+
+        public byte[] WriteCreateHero(IPlayer player)
+        {
+            return new CreateHero
+            (
+                player.Champion.NetId,
+                player.Champion.ClientId,
+                0x40,  //TODO net node id
+                BotSkillLevel.Beginner,
+                player.Champion.Team == Team.Blue,
+                player.Champion.IsBot,
+                0, //TODO: Bot
+                0, //TODO: SpawnIndex
+                player.Champion.SkinId,
+                0, //TODO Death
+                0, //TODO Death
+                CreateHeroDeath.Alive, //TODO Death
+                false,  //TODO what are those
+                false  //TODO what are those
+            ).GetBytes();
+        }
+
+        public byte[] WriteAvatarInfo(IPlayer player)
+        {
+            return new AvatarInfo
+            (
+                player.Champion.NetId,
+                new List<uint>(), // TODO: inventory
+                new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner1) },
+                new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner2) },
+                player.Runes.Select(x => new Talent((uint)x.Key, (byte)x.Value)),
+                (byte)player.SummonerLevel,
+                0 // TODO: ward skin
+            ).GetBytes();
+        }
+
+        public byte[] WriteEndSpawn()
+        {
+            return new EndSpawn().GetBytes();
         }
     }
 }

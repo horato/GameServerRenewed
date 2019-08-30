@@ -1,6 +1,7 @@
 ﻿namespace LeagueSandbox.GameServer.Networking.Packets420.Enums
 {
-    public enum SummonerSpellIds : uint
+    /// <summary> Hashed strings </summary>
+    public enum SummonerSpellHash : uint
     {
         Revive = 0x05C8B3A5,
         Smite = 0x065E8695,

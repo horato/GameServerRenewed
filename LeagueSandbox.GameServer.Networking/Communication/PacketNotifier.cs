@@ -62,6 +62,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
 
         public void NotifyRename(ulong targetSummonerId, ulong summonerId, int skinId, string playerName)
         {
+            // Broadcast?
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteRename(summonerId, skinId, playerName);
             SendPacket(targetUser, data, Channel.LoadingScreen);
@@ -69,9 +70,40 @@ namespace LeagueSandbox.GameServer.Networking.Communication
 
         public void NotifyReskin(ulong targetSummonerId, ulong summonerId, int skinId, string skinName)
         {
+            // Broadcast?
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteReskin(summonerId, skinId, skinName);
             SendPacket(targetUser, data, Channel.LoadingScreen);
+        }
+
+        public void NotifyStartSpawn(ulong targetSummonerId, int blueBotsCount, int redBotsCount)
+        {
+            var blueCount = checked((byte)blueBotsCount);
+            var redCount = checked((byte)redBotsCount);
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteStartSpawn(blueCount, redCount);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyCreateHero(ulong targetSummonerId, IPlayer player)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteCreateHero(player);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyAvatarInfo(ulong targetSummonerId, IPlayer player)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteAvatarInfo(player);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyEndSpawn(ulong targetSummonerId)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteEndSpawn();
+            SendPacket(targetUser, data, Channel.Broadcast);
         }
 
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)

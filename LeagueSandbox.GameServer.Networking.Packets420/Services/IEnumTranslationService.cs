@@ -6,7 +6,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
     internal interface IEnumTranslationService
     {
         MapId TranslateMapType(MapType type);
-        SummonerSpellIds TranslateSummonerSpell(SummonerSpell spell);
+        SummonerSpellHash TranslateSummonerSpell(SummonerSpell spell);
         TeamId TranslateTeam(Team team);
         string TranslateRank(Rank rank);
     }
