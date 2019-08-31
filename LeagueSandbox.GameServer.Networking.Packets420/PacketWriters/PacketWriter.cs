@@ -86,7 +86,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             var connectedRedPlayers = 0u;
             foreach (var player in players)
             {
-                switch (player.Team)
+                switch (player.Champion.Team)
                 {
                     case Team.Blue:
                         bluePlayers.Add(player.SummonerId);
@@ -101,7 +101,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
 
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException(nameof(player.Team), player.Team, null);
+                        throw new ArgumentOutOfRangeException(nameof(player.Champion.Team), player.Champion.Team, null);
                 }
             }
 
@@ -136,7 +136,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 0, //TODO: Bot
                 0, //TODO: SpawnIndex
                 player.Champion.SkinId,
-                player.Name,
+                player.SummonerName,
                 player.Champion.SkinName,
                 0, //TODO Death
                 0, //TODO Death
@@ -152,7 +152,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             (
                 player.Champion.NetId,
                 new List<uint>(), // TODO: inventory
-                new[] { _enumTranslationService.TranslateSummonerSpell(player.Summoner1), _enumTranslationService.TranslateSummonerSpell(player.Summoner2) },
+                new[] { _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2), _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2) },
                 player.Runes.Select(x => checked(new Talent((uint)x.Key, (byte)x.Value))),
                 checked((byte)player.SummonerLevel),
                 0 // TODO: ward skin

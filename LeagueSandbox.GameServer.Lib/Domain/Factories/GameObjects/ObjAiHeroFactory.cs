@@ -28,7 +28,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             var stats = _statsFactory.CreateDefaultStats();
             var netId = _networkIdCreationService.GetNewNetId();
             //TODO: start location
-            var instance = new ObjAiHero(player.Team, new Vector3(), stats, netId, player.SummonerId, 0, player.IsBot, false, player.Champion, player.Skin);
+            var instance = new ObjAiHero(player.Team, new Vector3(), stats, netId, player.SummonerId, 0, player.IsBot, false, player.Champion, player.Skin, player.Summoner1, player.Summoner2);
 
             return SetupDependencies(instance);
         }

@@ -9,12 +9,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities
         ulong SummonerId { get; }
         int SummonerLevel { get; }
         Rank Rank { get; }
-        string Name { get; }
-        string ChampionName { get; }
-        Team Team { get; }
-        short Skin { get; }
-        SummonerSpell Summoner1 { get; }
-        SummonerSpell Summoner2 { get; }
+        string SummonerName { get; }
         byte BadgeAlly { get; }
         byte BadgeEnemy { get; }
         int Icon { get; }

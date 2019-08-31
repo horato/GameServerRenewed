@@ -25,7 +25,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             var players = _playerController.GetAllChampions().ToList();
             var senderPlayer = players.Single(x => x.SummonerId == senderSummonerId);
             _packetNotifier.NotifyTeamRosterUpdate(senderSummonerId, players);
-            _packetNotifier.NotifyRename(senderSummonerId, senderPlayer.SummonerId, senderPlayer.Champion.SkinId, senderPlayer.Name);
+            _packetNotifier.NotifyRename(senderSummonerId, senderPlayer.SummonerId, senderPlayer.Champion.SkinId, senderPlayer.SummonerName);
             _packetNotifier.NotifyReskin(senderSummonerId, senderPlayer.SummonerId, senderPlayer.Champion.SkinId, senderPlayer.Champion.SkinName);
         }
     }

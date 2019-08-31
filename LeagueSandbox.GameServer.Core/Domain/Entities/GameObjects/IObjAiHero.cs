@@ -1,4 +1,6 @@
-﻿namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
+﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+
+namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
 {
     public interface IObjAiHero : IObjAiBase
     {
@@ -17,5 +19,8 @@
         /// <summary> Assigns this instance to a client </summary>
         /// <param name="clientId"></param>
         void EnablePlayerControl(int clientId);
+
+        SummonerSpell SummonerSpell1 { get; }
+        SummonerSpell SummonerSpell2 { get; }
     }
 }
