@@ -26,5 +26,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteOnEnterLocalVisibilityClient(IAttackableUnit unit);
         byte[] WriteSynchSimTime(float simTime);
         byte[] WriteSyncMissionTime(float missionTime);
+        byte[] WriteHandleTipUpdate(string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint tipId, uint targetNetId);
     }
 }

@@ -27,6 +27,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateCharSelectedRequest(charSelectedRequest);
                 case ClientReady clientReady:
                     return TranslateClientReadyRequest(clientReady);
+                case WorldSendCameraRequest worldSendCameraRequest:
+                    return TranslateWorldSendCameraRequest(worldSendCameraRequest);
                 case AttentionPingRequest attentionPingRequest:
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
@@ -44,7 +46,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case SkillUpRequest skillUpRequest:
                 case SwapItemsRequest swapItemsRequest:
                 case UseObject useObject:
-                case ViewRequest viewRequest:
                 default:
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
@@ -100,6 +101,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         private GameServer.Core.RequestProcessing.Definitions.ClientReadyRequest TranslateClientReadyRequest(ClientReady request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.ClientReadyRequest();
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.WorldSendCameraRequest TranslateWorldSendCameraRequest(WorldSendCameraRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.WorldSendCameraRequest(request.NetId, request.CameraPosition, request.CameraDirection, request.ClientID, request.SyncID);
         }
     }
 }

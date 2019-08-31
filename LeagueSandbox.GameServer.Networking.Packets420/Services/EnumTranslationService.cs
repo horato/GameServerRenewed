@@ -1,6 +1,7 @@
 ﻿using System;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+using TipCommand = LeagueSandbox.GameServer.Networking.Packets420.Enums.TipCommand;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.Services
 {
@@ -107,6 +108,29 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     return "CHALLENGER";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(rank), rank, null);
+            }
+        }
+
+        public TipCommand TranslateTipCommand(GameServer.Core.Domain.Enums.TipCommand tipCommand)
+        {
+            switch (tipCommand)
+            {
+                case GameServer.Core.Domain.Enums.TipCommand.ActivateTip:
+                    return TipCommand.ActivateTip;
+                case GameServer.Core.Domain.Enums.TipCommand.RemoveTip:
+                    return TipCommand.RemoveTip;
+                case GameServer.Core.Domain.Enums.TipCommand.EnableTipEvents:
+                    return TipCommand.EnableTipEvents;
+                case GameServer.Core.Domain.Enums.TipCommand.DisableTipEvents:
+                    return TipCommand.DisableTipEvents;
+                case GameServer.Core.Domain.Enums.TipCommand.ActivateTipDialogue:
+                    return TipCommand.ActivateTipDialogue;
+                case GameServer.Core.Domain.Enums.TipCommand.EnableTipDialogueEvents:
+                    return TipCommand.EnableTipDialogueEvents;
+                case GameServer.Core.Domain.Enums.TipCommand.DisableTipDialogueEvents:
+                    return TipCommand.DisableTipDialogueEvents;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(tipCommand), tipCommand, null);
             }
         }
     }

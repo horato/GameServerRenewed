@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
 using LeagueSandbox.GameServer.Lib.Caches;
+using LeagueSandbox.GameServer.Lib.Services;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions
 {
@@ -15,12 +18,16 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         private readonly IPlayerCache _playerCache;
         private readonly IPacketNotifier _packetNotifier;
         private readonly IGame _game;
+        private readonly INetworkIdCreationService _networkIdCreationService;
+        private readonly IServerInformationData _informationData;
 
-        public ClientReadyServerAction(IPlayerCache playerCache, IPacketNotifier packetNotifier, IGame game)
+        public ClientReadyServerAction(IPlayerCache playerCache, IPacketNotifier packetNotifier, IGame game, INetworkIdCreationService networkIdCreationService, IServerInformationData informationData)
         {
             _playerCache = playerCache;
             _packetNotifier = packetNotifier;
             _game = game;
+            _networkIdCreationService = networkIdCreationService;
+            _informationData = informationData;
         }
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, ClientReadyRequest request)
@@ -44,21 +51,13 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                         _packetNotifier.NotifyAvatarInfo(player.SummonerId, p);
                     }
 
-                    // TODO: Shouldn't SyncVersion do this?
-                    //if (player.Item2.PlayerId == (ulong)userId && !player.Item2.IsMatchingVersion)
-                    //{
-                    //    var msg = "Your client version does not match the server. " +
-                    //              "Check the server log for more information.";
-                    //    _packetNotifier.NotifyDebugMessage(userId, msg);
-                    //}
-
                     _packetNotifier.NotifyEnterLocalVisibilityClient(players.Select(x => x.SummonerId), player.Champion);
 
-                    // TODO: send this in one place only
-                    //_packetNotifier.NotifyUpdatedStats(player.Item2.Champion, false);
-                    //_packetNotifier.NotifyBlueTip((int)player.Item2.PlayerId, "Welcome to League Sandbox!", "This is a WIP product.", "", 0, player.Item2.Champion.NetId, _game.NetworkIdManager.GetNewNetId());
-                    //_packetNotifier.NotifyBlueTip((int)player.Item2.PlayerId, "Server Build Date", ServerContext.BuildDateString, "", 0, player.Item2.Champion.NetId, _game.NetworkIdManager.GetNewNetId());
-                    //_packetNotifier.NotifyBlueTip((int)player.Item2.PlayerId, "Your Champion", "You play " + player.Item2.Champion.Model, "", 0, player.Item2.Champion.NetId, _game.NetworkIdManager.GetNewNetId());
+                    _packetNotifier.NotifyTipUpdate(player.SummonerId, "Welcome to League Sandbox!", "This is a WIP product.", "", TipCommand.ActivateTip, player.Champion.NetId, _networkIdCreationService.GetNewNetId());
+                    _packetNotifier.NotifyTipUpdate(player.SummonerId, "Server info", $"Running on version {_informationData.Version}", "", TipCommand.ActivateTip, player.Champion.NetId, _networkIdCreationService.GetNewNetId());
+                    _packetNotifier.NotifyTipUpdate(player.SummonerId, "Server info", $"Server started {_informationData.StartTime:G}", "", TipCommand.ActivateTip, player.Champion.NetId, _networkIdCreationService.GetNewNetId());
+                    _packetNotifier.NotifyTipUpdate(player.SummonerId, "Server info", $"Build date {_informationData.BuildDate:G}", "", TipCommand.ActivateTip, player.Champion.NetId, _networkIdCreationService.GetNewNetId());
+                    _packetNotifier.NotifyTipUpdate(player.SummonerId, "Your Champion", "You play " + player.Champion.SkinName, "", TipCommand.ActivateTip, player.Champion.NetId, _networkIdCreationService.GetNewNetId());
                 }
 
                 _game.UnPause();

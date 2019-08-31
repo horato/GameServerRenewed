@@ -11,6 +11,7 @@ namespace LeagueSandbox.GameServer.Lib
     {
         public DateTime StartTime { get; }
         public string Version { get; }
+        public DateTime BuildDate => System.IO.File.GetLastWriteTime(Assembly.GetExecutingAssembly().Location);
 
         public ServerInformationData(DateTime startTime, string version)
         {

@@ -27,5 +27,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
         void NotifySynchSimTime(ulong targetSummonerId, float simTime);
         void NotifySyncMissionTime(ulong targetSummonerId, float missionTime);
+        void NotifyTipUpdate(ulong targetSummonerId, string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint targetNetId, uint tipId);
     }
 }

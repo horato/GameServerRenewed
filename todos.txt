@@ -1,6 +1,3 @@
-Move summoner spells from IPlayer to IObjAiHero
-Move runes from IPlayer to IObjAiHero
-Move team from IPlayer to IObjAiHero
 GameMode enum (CLASSIC, DOMINION?)
 GamePlatform enum (NA1, EUN1, EUW, ..)
 Replace byte/short with int outside networking

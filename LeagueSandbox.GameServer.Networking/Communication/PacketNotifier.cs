@@ -181,6 +181,13 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
+        public void NotifyTipUpdate(ulong targetSummonerId, string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint targetNetId, uint tipId)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteHandleTipUpdate(tipHeader, tipText, tipImagePath, tipCommand, tipId, targetNetId);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

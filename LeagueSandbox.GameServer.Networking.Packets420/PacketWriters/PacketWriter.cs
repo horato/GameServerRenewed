@@ -14,6 +14,7 @@ using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
 using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
+using TipCommand = LeagueSandbox.GameServer.Core.Domain.Enums.TipCommand;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
 {
@@ -291,6 +292,19 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         public byte[] WriteSyncMissionTime(float missionTime)
         {
             return new SyncMissionStartTime(missionTime).GetBytes();
+        }
+
+        public byte[] WriteHandleTipUpdate(string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint tipId, uint targetNetId)
+        {
+            return new HandleTipUpdate
+            (
+                tipHeader,
+                tipText,
+                tipImagePath,
+                _enumTranslationService.TranslateTipCommand(tipCommand),
+                tipId,
+                targetNetId
+            ).GetBytes();
         }
     }
 }

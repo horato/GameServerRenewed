@@ -25,6 +25,7 @@
         S2COnEnterLocalVisibilityClient = 0xAE,
         S2CSynchSimTime = 0xC1,
         S2CSyncMissionStartTime = 0xC2,
+        C2SWorldSendCamera = 0x2E,
 
 
         // --------------- NOT DONE
@@ -52,7 +53,6 @@
         S2CSoundSettings = 0x27,
         S2CInhibitorState = 0x2B,
         S2CViewAns = 0x2C,
-        C2SViewReq = 0x2E,
         S2CChampionRespawn = 0x2F,
         S2CAddUnitFow = 0x33,
         S2CStopAutoAttack = 0x34,
@@ -74,7 +74,7 @@
         S2CFaceDirection = 0x50,
         S2CLeaveVision = 0x51,
         C2SClientReady = 0x52,
-        S2CBlueTip = 0x55,
+        S2CHandleTipUpdate = 0x55,
         C2SScoreboard = 0x56,
         C2SAttentionPing = 0x57,
         S2CHighlightUnit = 0x59,

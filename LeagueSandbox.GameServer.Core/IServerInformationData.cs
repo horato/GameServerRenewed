@@ -9,5 +9,6 @@ namespace LeagueSandbox.GameServer.Core
         IEnumerable<Assembly> GetAllApplicationAssemblies();
         DateTime StartTime { get; }
         string Version { get; }
+        DateTime BuildDate { get; }
     }
 }

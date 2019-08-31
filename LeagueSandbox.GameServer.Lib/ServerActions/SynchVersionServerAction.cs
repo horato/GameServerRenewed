@@ -2,6 +2,7 @@
 using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
@@ -31,7 +32,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             var versionMatches = request.Version == serverVersion;
             if (!versionMatches)
             {
-                _packetNotifier.NotifySynchVersion(senderSummonerId, versionMatches, 0, new List<IPlayer>(), serverVersion);
+                _packetNotifier.NotifySynchVersion(senderSummonerId, versionMatches, MapType.SummonersRift, new List<IPlayer>(), serverVersion);
                 return;
             }
 
