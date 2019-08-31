@@ -22,7 +22,7 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteCreateTurret(IObjAiTurret turret);
         byte[] WriteAddRegion(IAttackableUnit unit, uint regionNetId);
         byte[] WriteSpawnLevelProp(ILevelPropAI levelProp);
-        byte[] WriteOnEnterVisibilityClient(IObjAiBase unit);
-        byte[] WriteOnEnterLocalVisibilityClient(IObjAiBase unit);
+        byte[] WriteOnEnterVisibilityClient(IAttackableUnit unit);
+        byte[] WriteOnEnterLocalVisibilityClient(IAttackableUnit unit);
     }
 }

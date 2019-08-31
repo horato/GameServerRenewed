@@ -224,12 +224,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             ).GetBytes();
         }
 
-        public byte[] WriteOnEnterVisibilityClient(IObjAiBase unit)
+        public byte[] WriteOnEnterVisibilityClient(IAttackableUnit unit)
         {
-            var charStackDataList = new List<CharacterStackData>
-            {
-                new CharacterStackData(unit.SkinName, (uint) unit.SkinId, false, false, false, 0)
-            };
+            var charStackDataList = new List<CharacterStackData> { CreateCharacterStackData(unit) };
 
             var buffCountList = new List<KeyValuePair<byte, int>>();
             if (unit is IObjAiBase)
@@ -262,7 +259,20 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             ).GetBytes();
         }
 
-        public byte[] WriteOnEnterLocalVisibilityClient(IObjAiBase unit)
+        private CharacterStackData CreateCharacterStackData(IAttackableUnit unit)
+        {
+            var skinName = string.Empty;
+            var skinId = 0;
+            if (unit is IObjAiBase aiBase)
+            {
+                skinName = aiBase.SkinName;
+                skinId = aiBase.SkinId;
+            }
+
+            return new CharacterStackData(skinName, (uint)skinId, false, false, false, 0);
+        }
+
+        public byte[] WriteOnEnterLocalVisibilityClient(IAttackableUnit unit)
         {
             return new OnEnterLocalVisibilityClient
             (

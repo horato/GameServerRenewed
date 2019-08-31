@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
@@ -142,14 +143,9 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
-        public void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, bool broadcast)
+        public void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit)
         {
             var data = _packetWriter.WriteOnEnterVisibilityClient(unit);
-
-            var c = unit as IObjAiHero;
-            var m = unit as IObjAiMinion;
-            if (c == null && m == null)
-                return;
 
             foreach (var targetSummonerId in targetSummonerIds)
             {
@@ -157,11 +153,11 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                 SendPacket(targetUser, data, Channel.Broadcast);
             }
 
-            if (broadcast)
-                NotifyEnterLocalVisibilityClient(targetSummonerIds, (IObjAiBase)c ?? m);
+            if (targetSummonerIds.Count() > 1)
+                NotifyEnterLocalVisibilityClient(targetSummonerIds, unit);
         }
 
-        private void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit)
+        public void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit)
         {
             var data = _packetWriter.WriteOnEnterLocalVisibilityClient(unit);
             foreach (var targetSummonerId in targetSummonerIds)
@@ -177,7 +173,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             user.Peer.Send((byte)channel, data);
         }
 
-        private void BroadcastPacket(byte[] source, Channel channel, Team? team = null)
+        private void BroadcastPacket(byte[] source, Channel channel)
         {
             var users = _usersCache.GetAllUsers();
             foreach (var user in users)

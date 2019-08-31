@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using log4net;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
@@ -11,6 +12,8 @@ using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
+using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using LeagueSandbox.GameServer.Lib.Services;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions
@@ -126,43 +129,27 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                 {
                     //if (hero.IsVisibleByTeam(peerInfo.Champion.Team)) // TODO: visibility controller
                     {
-                        _packetNotifier.NotifyEnterVisibilityClient(new[] { senderSummonerId }, hero, false);
+                        _packetNotifier.NotifyEnterVisibilityClient(new[] { senderSummonerId }, hero);
                     }
                 }
-                //else if (gameObject is IObjBarracks || gameObject is IObjHQ)
-                //{
-                //    var inhibtor = (IAttackableUnit)gameObject;
-                //    _packetNotifier.NotifyStaticObjectSpawn(userId, inhibtor.NetId);
-                //    _packetNotifier.NotifyEnterLocalVisibilityClient(userId, inhibtor.NetId);
-                //}
-                //else if (gameObject is IProjectile projectile)
+                else if (gameObject is IObjBuilding)
+                {
+                    var building = (IObjBuilding)gameObject;
+                    _packetNotifier.NotifyEnterVisibilityClient(new[] { senderSummonerId }, building);
+                    _packetNotifier.NotifyEnterLocalVisibilityClient(new[] { senderSummonerId }, building);
+                }
+                //else if (gameObject is IProjectile projectile) //TODO: Spells/projectiles
                 //{
                 //    if (projectile.IsVisibleByTeam(peerInfo.Champion.Team))
                 //    {
                 //        _packetNotifier.NotifyProjectileSpawn(userId, projectile);
                 //    }
                 //}
-                //else
-                //{
-                //    _logger.Warn("Object of type: " + kv.Value.GetType() + " not handled in HandleSpawn.");
-                //}
+                else
+                {
+                    Log.Warn($"{gameObject} not handled in {nameof(CharSelectedServerAction)}.");
+                }
             }
-
-            //// TODO shop map specific?
-            //// Level props are just models, we need button-object minions to allow the client to interact with it
-            //// TODO: Generate shop NetId to avoid hard-coding
-            //if (peerInfo != null && peerInfo.Team == TeamId.TEAM_BLUE)
-            //{
-            //    // Shop (blue team)
-            //    _packetNotifier.NotifyStaticObjectSpawn(userId, 0xff10c6db);
-            //    _packetNotifier.NotifyEnterLocalVisibilityClient(userId, 0xff10c6db);
-            //}
-            //else if (peerInfo != null && peerInfo.Team == TeamId.TEAM_PURPLE)
-            //{
-            //    // Shop (purple team)
-            //    _packetNotifier.NotifyStaticObjectSpawn(userId, 0xffa6170e);
-            //    _packetNotifier.NotifyEnterLocalVisibilityClient(userId, 0xffa6170e);
-            //}
 
             _packetNotifier.NotifyEndSpawn(senderSummonerId);
         }

@@ -23,6 +23,7 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyCreateTurret(ulong targetSummonerId, IObjAiTurret turret);
         void NotifyAddRegion(ulong targetSummonerId, IAttackableUnit unit, uint regionNetId);
         void NotifySpawnLevelProp(ulong targetSummonerId, ILevelPropAI prop);
-        void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, bool broadcast);
+        void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
+        void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
     }
 }
