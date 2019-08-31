@@ -15,7 +15,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //KnownToBeActive
         //SpawnEndTime
         //SpawnFinished
-        public NeutralMinionCamp(Team team, Vector3 position, uint netId) : base(team, position)
+        public NeutralMinionCamp(Team team, Vector3 position, uint netId) : base(team, position, 0)
         {
             NetId = netId;
         }

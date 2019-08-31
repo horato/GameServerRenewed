@@ -59,6 +59,14 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
             WriteZero(maxLength - count);
         }
 
+        public void WriteSizedString(string str)
+        {
+            var data = string.IsNullOrEmpty(str) ? new byte[0] : Encoding.UTF8.GetBytes(str);
+            var count = data.Length;
+            WriteInt(count);
+            WriteBytes(data);
+        }
+
         //protected void WriteStringHash(string str)
         //{
         //    Write(HashFunctions.HashString(str));

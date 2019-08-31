@@ -16,7 +16,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //    SpellBuffs
         //DeathTimer
         //VisionRegion
-        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId) : base(team, position, stats, netId)
+        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius) : base(team, position, stats, netId, visionRadius)
         {
             SkinName = skinName;
             SkinId = skinId;

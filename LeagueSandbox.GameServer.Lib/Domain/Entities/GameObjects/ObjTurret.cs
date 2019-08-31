@@ -11,7 +11,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //RemoveDeathIconTime
         //TurretSpawned 
         //TurretDestroyed
-        public ObjTurret(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId)
+        public ObjTurret(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId, 1200)
         {
         }
     }

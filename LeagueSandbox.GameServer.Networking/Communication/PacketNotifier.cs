@@ -121,13 +121,63 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
+        public void NotifyCreateTurret(ulong targetSummonerId, IObjAiTurret turret)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteCreateTurret(turret);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyAddRegion(ulong targetSummonerId, IAttackableUnit unit, uint regionNetId)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteAddRegion(unit, regionNetId);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifySpawnLevelProp(ulong targetSummonerId, ILevelPropAI prop)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteSpawnLevelProp(prop);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, bool broadcast)
+        {
+            var data = _packetWriter.WriteOnEnterVisibilityClient(unit);
+
+            var c = unit as IObjAiHero;
+            var m = unit as IObjAiMinion;
+            if (c == null && m == null)
+                return;
+
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+
+            if (broadcast)
+                NotifyEnterLocalVisibilityClient(targetSummonerIds, (IObjAiBase)c ?? m);
+        }
+
+        private void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit)
+        {
+            var data = _packetWriter.WriteOnEnterLocalVisibilityClient(unit);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);
             user.Peer.Send((byte)channel, data);
         }
 
-        private void BroadcastPacket(byte[] source, Channel channel)
+        private void BroadcastPacket(byte[] source, Channel channel, Team? team = null)
         {
             var users = _usersCache.GetAllUsers();
             foreach (var user in users)

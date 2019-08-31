@@ -19,5 +19,10 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteAvatarInfo(IPlayer player);
         byte[] WriteEndSpawn();
         byte[] WriteStartGame(bool enablePause);
+        byte[] WriteCreateTurret(IObjAiTurret turret);
+        byte[] WriteAddRegion(IAttackableUnit unit, uint regionNetId);
+        byte[] WriteSpawnLevelProp(ILevelPropAI levelProp);
+        byte[] WriteOnEnterVisibilityClient(IObjAiBase unit);
+        byte[] WriteOnEnterLocalVisibilityClient(IObjAiBase unit);
     }
 }

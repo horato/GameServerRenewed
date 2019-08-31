@@ -11,6 +11,7 @@ using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
+using LeagueSandbox.GameServer.Lib.Services;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions
 {
@@ -21,12 +22,14 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         private readonly IPlayerCache _playerCache;
         private readonly IPacketNotifier _packetNotifier;
         private readonly IGameObjectsCache _gameObjectsCache;
+        private readonly INetworkIdCreationService _networkIdCreationService;
 
-        public CharSelectedServerAction(IPlayerCache playerCache, IPacketNotifier packetNotifier, IGameObjectsCache gameObjectsCache)
+        public CharSelectedServerAction(IPlayerCache playerCache, IPacketNotifier packetNotifier, IGameObjectsCache gameObjectsCache, INetworkIdCreationService networkIdCreationService)
         {
             _playerCache = playerCache;
             _packetNotifier = packetNotifier;
             _gameObjectsCache = gameObjectsCache;
+            _networkIdCreationService = networkIdCreationService;
         }
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, CharSelectedRequest request)
@@ -58,7 +61,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
 
             var sender = _playerCache.GetPlayer(senderSummonerId);
             _packetNotifier.NotifyStartSpawn(senderSummonerId, blueBots, redBots);
-            
+
             //TODO: inventory; Might also load this during champion creation. Blue pill is map based
             //var bluePill = _itemManager.GetItemType(_game.Map.MapProperties.BluePillId);
             //var itemInstance = peerInfo.Champion.Inventory.SetExtraItem(7, bluePill);
@@ -66,10 +69,10 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             // self-inform
             _packetNotifier.NotifyCreateHero(senderSummonerId, sender);
             _packetNotifier.NotifyAvatarInfo(senderSummonerId, sender);
-            
+
             //_packetNotifier.NotifyBuyItem(userId, peerInfo.Champion, itemInstance); //TODO: Is this necessary? CreateHero already sends items
 
-            //TODO: runes - although this could easily be applied on champion creation. In fact, this might even be bug. More reconnects = more stats.
+            //TODO: runes - although this could easily be applied on champion creation. In fact, this might even be a bug. More reconnects = more stats.
             //// Runes
             //byte runeItemSlot = 14;
             //foreach (var rune in peerInfo.Champion.RuneList.Runes)
@@ -85,63 +88,65 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             //_packetNotifier.NotifySkillUp(userId, peerInfo.Champion.NetId, 7, 1, peerInfo.Champion.SkillPoints);
             //_packetNotifier.NotifySkillUp(userId, peerInfo.Champion.NetId, 14, 1, peerInfo.Champion.SkillPoints);
 
-            //peerInfo.Champion.Stats.SetSpellEnabled(7, true);
-            //peerInfo.Champion.Stats.SetSpellEnabled(14, true);
-            //peerInfo.Champion.Stats.SetSummonerSpellEnabled(0, true);
-            //peerInfo.Champion.Stats.SetSummonerSpellEnabled(1, true);
+            //sender.Champion.Stats.SetSpellEnabled(7, true);
+            //sender.Champion.Stats.SetSpellEnabled(14, true);
+            //sender.Champion.Stats.SetSummonerSpellEnabled(0, true);
+            //sender.Champion.Stats.SetSummonerSpellEnabled(1, true);
 
-            //var objects = _gameObjectsCache.GetAllObjects();
-            //foreach (var gameObject in objects)
-            //{
-            //    if (gameObject is IObjAiTurret turret)
-            //    {
-            //        _packetNotifier.NotifyTurretSpawn(userId, turret);
+            var objects = _gameObjectsCache.GetAllObjects();
+            foreach (var gameObject in objects)
+            {
+                if (gameObject is IObjAiTurret turret)
+                {
+                    _packetNotifier.NotifyCreateTurret(senderSummonerId, turret);
 
-            //        // Fog Of War
-            //        _packetNotifier.NotifyFogUpdate2(turret, _networkIdManager.GetNewNetId());
+                    // Fog Of War
+                    _packetNotifier.NotifyAddRegion(senderSummonerId, turret, _networkIdCreationService.GetNewNetId());
 
-            //        // To suppress game HP-related errors for enemy turrets out of vision
-            //        _packetNotifier.NotifyEnterLocalVisibilityClient(turret, userId);
+                    //TODO: fishy
+                    // To suppress game HP-related errors for enemy turrets out of vision
+                    //_packetNotifier.NotifyEnterLocalVisibilityClient(turret, userId);
 
-            //        foreach (var item in turret.Inventory)
-            //        {
-            //            if (item == null)
-            //            {
-            //                continue;
-            //            }
+                    //TODO: inventory
+                    //foreach (var item in turret.Inventory)
+                    //{
+                    //    if (item == null)
+                    //    {
+                    //        continue;
+                    //    }
 
-            //            _packetNotifier.NotifyBuyItem((int)turret.NetId, turret, item as IItem);
-            //        }
-            //    }
-            //    else if (kv.Value is ILevelProp levelProp)
-            //    {
-            //        _packetNotifier.NotifyLevelPropSpawn(userId, levelProp);
-            //    }
-            //    else if (kv.Value is IChampion champion)
-            //    {
-            //        if (champion.IsVisibleByTeam(peerInfo.Champion.Team))
-            //        {
-            //            _packetNotifier.NotifyEnterVisibilityClient(champion, champion.Team, userId);
-            //        }
-            //    }
-            //    else if (kv.Value is IInhibitor || kv.Value is INexus)
-            //    {
-            //        var inhibtor = (IAttackableUnit)kv.Value;
-            //        _packetNotifier.NotifyStaticObjectSpawn(userId, inhibtor.NetId);
-            //        _packetNotifier.NotifyEnterLocalVisibilityClient(userId, inhibtor.NetId);
-            //    }
-            //    else if (kv.Value is IProjectile projectile)
-            //    {
-            //        if (projectile.IsVisibleByTeam(peerInfo.Champion.Team))
-            //        {
-            //            _packetNotifier.NotifyProjectileSpawn(userId, projectile);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        _logger.Warn("Object of type: " + kv.Value.GetType() + " not handled in HandleSpawn.");
-            //    }
-            //}
+                    //    _packetNotifier.NotifyBuyItem((int)turret.NetId, turret, item as IItem);
+                    //}
+                }
+                else if (gameObject is ILevelPropAI levelProp)
+                {
+                    _packetNotifier.NotifySpawnLevelProp(senderSummonerId, levelProp);
+                }
+                else if (gameObject is IObjAiHero hero)
+                {
+                    //if (hero.IsVisibleByTeam(peerInfo.Champion.Team)) // TODO: visibility controller
+                    {
+                        _packetNotifier.NotifyEnterVisibilityClient(new[] { senderSummonerId }, hero, false);
+                    }
+                }
+                //else if (gameObject is IObjBarracks || gameObject is IObjHQ)
+                //{
+                //    var inhibtor = (IAttackableUnit)gameObject;
+                //    _packetNotifier.NotifyStaticObjectSpawn(userId, inhibtor.NetId);
+                //    _packetNotifier.NotifyEnterLocalVisibilityClient(userId, inhibtor.NetId);
+                //}
+                //else if (gameObject is IProjectile projectile)
+                //{
+                //    if (projectile.IsVisibleByTeam(peerInfo.Champion.Team))
+                //    {
+                //        _packetNotifier.NotifyProjectileSpawn(userId, projectile);
+                //    }
+                //}
+                //else
+                //{
+                //    _logger.Warn("Object of type: " + kv.Value.GetType() + " not handled in HandleSpawn.");
+                //}
+            }
 
             //// TODO shop map specific?
             //// Level props are just models, we need button-object minions to allow the client to interact with it

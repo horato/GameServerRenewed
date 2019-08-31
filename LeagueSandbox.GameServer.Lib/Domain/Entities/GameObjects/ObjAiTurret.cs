@@ -9,7 +9,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
     {
         //SwapModelOnDeathTime
         //    SwapModelOnDeathTime
-        public ObjAiTurret(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId) : base(team, position, stats, netId, skinName, skinId)
+        public ObjAiTurret(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId) : base(team, position, stats, netId, skinName, skinId, 1200)
         {
         }
     }

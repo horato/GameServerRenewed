@@ -20,5 +20,9 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyAvatarInfo(ulong targetSummonerId, IPlayer player);
         void NotifyEndSpawn(ulong targetSummonerId);
         void NotifyGameStart(ulong targetSummonerId, bool enablePause, bool broadcast);
+        void NotifyCreateTurret(ulong targetSummonerId, IObjAiTurret turret);
+        void NotifyAddRegion(ulong targetSummonerId, IAttackableUnit unit, uint regionNetId);
+        void NotifySpawnLevelProp(ulong targetSummonerId, ILevelPropAI prop);
+        void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, bool broadcast);
     }
 }

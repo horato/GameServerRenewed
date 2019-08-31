@@ -18,7 +18,11 @@
         S2CAvatarInfo = 0x2A, // summoner spells uint/ulong?, items
         S2CEndSpawn = 0x11,
         S2CStartGame = 0x5C,
-
+        S2CCreateTurret = 0x9D,
+        S2CAddRegion = 0x23,
+        S2CSpawnLevelProp = 0xD0,
+        S2COnEnterVisibilityClient = 0xBA,
+        S2COnEnterLocalVisibilityClient = 0xAE,
 
 
         // --------------- NOT DONE
@@ -42,7 +46,6 @@
         S2CChampionDie2 = 0x1B,
         S2CEditBuff = 0x1C,
         S2CAddGold = 0x22,
-        S2CFogUpdate2 = 0x23,
         S2CMoveCamera = 0x25,
         S2CSoundSettings = 0x27,
         S2CInhibitorState = 0x2B,
@@ -105,7 +108,6 @@
         S2CUpdateModel = 0x97,
         S2CDisconnectedAnnouncement = 0x98,
         C2SCastSpell = 0x9A,
-        S2CTurretSpawn = 0x9D,
         S2CNpcHide = 0x9E, // (4.18) not sure what this became
         S2CSetItemStacks = 0x9F,
         S2CMessageBoxRight = 0xA0,
@@ -117,7 +119,6 @@
         S2CRemoveMessageBoxRight = 0xA7,
         C2SStatsConfirm = 0xA8,
         S2CEnableFow = 0xAB,
-        S2CSetHealth = 0xAE,
         C2SClick = 0xAF,
         S2CSpellAnimation = 0xB0,
         S2CEditMessageBoxRight = 0xB1,
@@ -127,7 +128,6 @@
         S2CCastSpellAns = 0xB5,
         S2CAddBuff = 0xB7,
         S2CAfkWarningWindow = 0xB8,
-        S2CObjectSpawn = 0xBA,
         S2CHideUi = 0xBC,
         S2CSetTarget2 = 0xC0,
         // Packet 0xC0 format is [Net ID 1] [Net ID 2], purpose still unknown
@@ -138,7 +138,6 @@
         S2CSurrender = 0xC9,
         C2SQuestClicked = 0xCD,
         S2CShowHpAndName = 0xCE,
-        S2CLevelPropSpawn = 0xD0,
         S2CLevelPropAnimation = 0xD1,
         S2CSetCapturePoint = 0xD3,
         S2CChangeCrystalScarNexusHp = 0xD4,

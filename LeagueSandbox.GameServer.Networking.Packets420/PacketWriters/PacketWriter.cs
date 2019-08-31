@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
+using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
 {
@@ -164,6 +167,110 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         public byte[] WriteStartGame(bool enablePause)
         {
             return new StartGame(enablePause).GetBytes();
+        }
+
+        public byte[] WriteCreateTurret(IObjAiTurret turret)
+        {
+            return new CreateTurret
+            (
+                turret.NetId,
+                NetNodeID.Spawned,
+                turret.SkinName,
+                true,
+                SpellFlags.TargetableToAll
+            ).GetBytes();
+        }
+
+        public byte[] WriteAddRegion(IAttackableUnit unit, uint regionNetId)
+        {
+            return new AddRegion
+            (
+                _enumTranslationService.TranslateTeam(unit.Team),
+                -2,
+                unit is IObjAiHero hero ? hero.ClientId : 0,
+                unit.NetId,
+                regionNetId,
+                0,
+                new Vector2(unit.Position.X, unit.Position.Y),
+                2500,
+                88.4f,
+                130,
+                1.0f,
+                0,
+                true,
+                true,
+                true,
+                unit.VisionRadius
+            ).GetBytes();
+        }
+
+        public byte[] WriteSpawnLevelProp(ILevelPropAI levelProp)
+        {
+            return new SpawnLevelProp
+            (
+                levelProp.NetId,
+                NetNodeID.Spawned,
+                levelProp.SkinId,
+                levelProp.Position,
+                levelProp.FacingDirection,
+                levelProp.PositionOffset,
+                new Vector3(1, 1, 1),
+                _enumTranslationService.TranslateTeam(levelProp.Team),
+                0,
+                0,
+                LevelPropType.LevelPropGameobject,
+                levelProp.Name,
+                levelProp.SkinName
+            ).GetBytes();
+        }
+
+        public byte[] WriteOnEnterVisibilityClient(IObjAiBase unit)
+        {
+            var charStackDataList = new List<CharacterStackData>
+            {
+                new CharacterStackData(unit.SkinName, (uint) unit.SkinId, false, false, false, 0)
+            };
+
+            var buffCountList = new List<KeyValuePair<byte, int>>();
+            if (unit is IObjAiBase)
+            {
+                //TODO: buff list
+            }
+
+            //TODO: Use MovementDataNormal instead, because currently we desync if the unit is moving
+            // TODO: Save unit waypoints in unit class so they can be used here for MovementDataNormal
+            var md = new MovementDataStop
+            (
+               0x0006E4CF, //TODO: generate real movement SyncId
+               new Vector2(unit.Position.X, unit.Position.Y),
+               new Vector2(0, 1)
+            );
+
+            return new OnEnterVisiblityClient
+            (
+                unit.NetId,
+                new List<BasePacket>(),
+                new List<ItemData>(),
+                null,
+                charStackDataList,
+                0,
+                0,
+                new Vector3(1, 0, 0),
+                buffCountList,
+                false,
+                md
+            ).GetBytes();
+        }
+
+        public byte[] WriteOnEnterLocalVisibilityClient(IObjAiBase unit)
+        {
+            return new OnEnterLocalVisibilityClient
+            (
+                unit.NetId,
+                new List<BasePacket>(),
+                unit.Stats.HealthPoints.Total,
+                unit.Stats.CurrentHealth
+            ).GetBytes();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //BarracksEnabled
         //Lane
 
-        public ObjBarracks(Team team, Vector3 position, IStats stats, uint netId) : base(team, position, stats, netId)
+        public ObjBarracks(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
         {
         }
     }

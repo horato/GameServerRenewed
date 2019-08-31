@@ -8,11 +8,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
     {
         public Team Team { get; }
         public Vector3 Position { get; }
+        public float VisionRadius { get; }
 
-        public GameObject(Team team, Vector3 position)
+        protected GameObject(Team team, Vector3 position, float visionRadius)
         {
             Team = team;
             Position = position;
+            VisionRadius = visionRadius;
         }
     }
 }

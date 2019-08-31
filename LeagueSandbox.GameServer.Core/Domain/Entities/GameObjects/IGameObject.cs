@@ -7,5 +7,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
     {
         Team Team { get; }
         Vector3 Position { get; }
+        float VisionRadius { get; }
     }
 }
