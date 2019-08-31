@@ -167,6 +167,20 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
+        public void NotifySynchSimTime(ulong targetSummonerId, float simTime)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteSynchSimTime(simTime);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifySyncMissionTime(ulong targetSummonerId, float missionTime)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteSyncMissionTime(missionTime);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

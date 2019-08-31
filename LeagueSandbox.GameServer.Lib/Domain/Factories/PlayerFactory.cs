@@ -29,7 +29,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories
                 player.BadgeEnemy,
                 player.Icon,
                 champion,
-                player.Runes);
+                player.Runes,
+                false);
 
             return SetupDependencies(instance);
         }

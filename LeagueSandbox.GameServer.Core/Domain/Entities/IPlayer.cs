@@ -15,5 +15,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities
         int Icon { get; }
         IDictionary<int, int> Runes { get; }
         IObjAiHero Champion { get; }
+        void LoadingFinished();
+        bool IsLoaded { get; }
     }
 }

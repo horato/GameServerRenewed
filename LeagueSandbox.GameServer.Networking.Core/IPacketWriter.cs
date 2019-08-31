@@ -24,5 +24,7 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteSpawnLevelProp(ILevelPropAI levelProp);
         byte[] WriteOnEnterVisibilityClient(IAttackableUnit unit);
         byte[] WriteOnEnterLocalVisibilityClient(IAttackableUnit unit);
+        byte[] WriteSynchSimTime(float simTime);
+        byte[] WriteSyncMissionTime(float missionTime);
     }
 }

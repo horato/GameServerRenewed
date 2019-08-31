@@ -23,6 +23,8 @@
         S2CSpawnLevelProp = 0xD0,
         S2COnEnterVisibilityClient = 0xBA,
         S2COnEnterLocalVisibilityClient = 0xAE,
+        S2CSynchSimTime = 0xC1,
+        S2CSyncMissionStartTime = 0xC2,
 
 
         // --------------- NOT DONE
@@ -131,8 +133,6 @@
         S2CHideUi = 0xBC,
         S2CSetTarget2 = 0xC0,
         // Packet 0xC0 format is [Net ID 1] [Net ID 2], purpose still unknown
-        S2CGameTimer = 0xC1,
-        S2CGameTimerUpdate = 0xC2,
         S2CCharStats = 0xC4,
         S2CGameEnd = 0xC6,
         S2CSurrender = 0xC9,

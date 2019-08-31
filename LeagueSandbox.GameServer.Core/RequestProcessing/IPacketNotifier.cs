@@ -25,5 +25,7 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifySpawnLevelProp(ulong targetSummonerId, ILevelPropAI prop);
         void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
         void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
+        void NotifySynchSimTime(ulong targetSummonerId, float simTime);
+        void NotifySyncMissionTime(ulong targetSummonerId, float missionTime);
     }
 }

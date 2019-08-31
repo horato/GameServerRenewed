@@ -152,7 +152,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             (
                 player.Champion.NetId,
                 new List<uint>(), // TODO: inventory
-                new[] { _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2), _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2) },
+                new[] { _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell1), _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2) },
                 player.Runes.Select(x => checked(new Talent((uint)x.Key, (byte)x.Value))),
                 checked((byte)player.SummonerLevel),
                 0 // TODO: ward skin
@@ -281,6 +281,16 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 unit.Stats.HealthPoints.Total,
                 unit.Stats.CurrentHealth
             ).GetBytes();
+        }
+
+        public byte[] WriteSynchSimTime(float simTime)
+        {
+            return new SynchSimTime(simTime).GetBytes();
+        }
+
+        public byte[] WriteSyncMissionTime(float missionTime)
+        {
+            return new SyncMissionStartTime(missionTime).GetBytes();
         }
     }
 }

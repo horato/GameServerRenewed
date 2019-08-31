@@ -60,7 +60,7 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
             {
                 if (_lastMapDurationWatch.Elapsed.TotalMilliseconds + 1.0 > REFRESH_RATE)
                 {
-                    var diff = _lastMapDurationWatch.Elapsed.TotalMilliseconds;
+                    var diff = (float)_lastMapDurationWatch.Elapsed.TotalMilliseconds;
                     _lastMapDurationWatch.Restart();
                     _gameUpdateService.UpdateGame(_game, diff);
                 }
