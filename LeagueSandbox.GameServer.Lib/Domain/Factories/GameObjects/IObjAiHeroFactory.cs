@@ -5,6 +5,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
 {
     internal interface IObjAiHeroFactory
     {
-        IObjAiHero CreateFromStartupPlayer(StartupPlayer player);
+        IObjAiHero CreateFromStartupPlayer(StartupPlayer player, int clientId);
     }
 }

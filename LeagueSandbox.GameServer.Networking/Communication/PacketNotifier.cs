@@ -50,10 +50,10 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
-        public void NotifyPingLoadInfo(uint senderNetId, ulong senderSummonerId, PingLoadInfoRequest request)
+        public void NotifyPingLoadInfo(uint senderNetId, int senderClientId, ulong senderSummonerId, PingLoadInfoRequest request)
         {
-            var data = _packetWriter.WritePingLoadInfo(senderNetId, request.ClientId, senderSummonerId, request.Percentage, request.ETA, request.Count, request.Ping, request.Ready);
-            BroadcastPacket(data, Channel.BroadcastUnreliable);
+            var data = _packetWriter.WritePingLoadInfo(senderNetId, senderClientId, senderSummonerId, request.Percentage, request.ETA, request.Count, request.Ping, request.Ready);
+            BroadcastPacket(data, Channel.Broadcast);
         }
 
         public void NotifyTeamRosterUpdate(ulong targetSummonerId, IEnumerable<IPlayer> players)

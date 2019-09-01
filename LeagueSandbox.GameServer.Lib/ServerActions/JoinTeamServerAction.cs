@@ -5,28 +5,32 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
+using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions
 {
     internal class JoinTeamServerAction : ServerActionBase<JoinTeamRequest>
     {
-        private readonly IPlayerController _playerController;
+        private readonly IPlayerCache _playerCache;
         private readonly IPacketNotifier _packetNotifier;
 
-        public JoinTeamServerAction(IPlayerController playerController, IPacketNotifier packetNotifier)
+        public JoinTeamServerAction(IPacketNotifier packetNotifier, IPlayerCache playerCache)
         {
-            _playerController = playerController;
             _packetNotifier = packetNotifier;
+            _playerCache = playerCache;
         }
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, JoinTeamRequest request)
         {
-            var players = _playerController.GetAllChampions().ToList();
-            var senderPlayer = players.Single(x => x.SummonerId == senderSummonerId);
+            var players = _playerCache.GetAllPlayers().ToList();
+
             _packetNotifier.NotifyTeamRosterUpdate(senderSummonerId, players);
-            _packetNotifier.NotifyRename(senderSummonerId, senderPlayer.SummonerId, senderPlayer.Champion.SkinId, senderPlayer.SummonerName);
-            _packetNotifier.NotifyReskin(senderSummonerId, senderPlayer.SummonerId, senderPlayer.Champion.SkinId, senderPlayer.Champion.SkinName);
+            foreach (var player in players)
+            {
+                _packetNotifier.NotifyRename(senderSummonerId, player.SummonerId, player.Champion.SkinId, player.SummonerName);
+                _packetNotifier.NotifyReskin(senderSummonerId, player.SummonerId, player.Champion.SkinId, player.Champion.SkinName);
+            }
         }
     }
 }

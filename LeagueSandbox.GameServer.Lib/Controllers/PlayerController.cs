@@ -7,6 +7,7 @@ using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
+using LeagueSandbox.GameServer.Lib.Services;
 
 namespace LeagueSandbox.GameServer.Lib.Controllers
 {
@@ -16,20 +17,22 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         private readonly IPlayerCache _playerCache;
         private readonly IPlayerFactory _playerFactory;
         private readonly IObjAiHeroFactory _objAiHeroFactory;
+        private readonly IClientIdCreationService _clientIdCreationService;
 
-        public PlayerController(IGameObjectsCache gameObjectsCache, IPlayerCache playerCache, IPlayerFactory playerFactory, IObjAiHeroFactory objAiHeroFactory)
+        public PlayerController(IGameObjectsCache gameObjectsCache, IPlayerCache playerCache, IPlayerFactory playerFactory, IObjAiHeroFactory objAiHeroFactory, IClientIdCreationService clientIdCreationService)
         {
             _gameObjectsCache = gameObjectsCache;
             _playerCache = playerCache;
             _playerFactory = playerFactory;
             _objAiHeroFactory = objAiHeroFactory;
+            _clientIdCreationService = clientIdCreationService;
         }
 
         public void InitializePlayers(IEnumerable<StartupPlayer> players)
         {
             foreach (var startupPlayer in players)
             {
-                var champion = _objAiHeroFactory.CreateFromStartupPlayer(startupPlayer);
+                var champion = _objAiHeroFactory.CreateFromStartupPlayer(startupPlayer, _clientIdCreationService.GetNewId());
                 var player = _playerFactory.CreateFromStartupPlayer(startupPlayer, champion);
                 _gameObjectsCache.Add(player.SummonerId, player.Champion);
                 _playerCache.Add(player.SummonerId, player);

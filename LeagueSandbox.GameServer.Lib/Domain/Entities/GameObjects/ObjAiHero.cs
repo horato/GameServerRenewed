@@ -32,7 +32,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
             SummonerSpell2 = summonerSpell2;
         }
 
-        public void EnablePlayerControl(int clientId)
+        public void EnablePlayerControl()
         {
             if (IsBot)
                 throw new InvalidOperationException("Bots cannot be controlled by players");
@@ -40,7 +40,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
                 throw new InvalidOperationException($"Champion {NetId} is already player controlled");
 
             IsPlayerControlled = true;
-            ClientId = clientId;
         }
     }
 }

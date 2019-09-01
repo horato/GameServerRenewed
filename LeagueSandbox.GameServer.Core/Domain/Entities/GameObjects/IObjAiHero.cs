@@ -7,7 +7,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         /// <summary> ID assigned by app that launched the client (lollauncher) </summary>
         ulong SummonerId { get; }
 
-        /// <summary> ID assigned by server upon connection (NOT NETID!) </summary>
+        /// <summary> ID assigned by server upon character creation </summary>
         int ClientId { get; }
 
         /// <summary> Indicated whether this instance is controlled by bot or player </summary>
@@ -17,8 +17,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         bool IsPlayerControlled { get; }
 
         /// <summary> Assigns this instance to a client </summary>
-        /// <param name="clientId"></param>
-        void EnablePlayerControl(int clientId);
+        void EnablePlayerControl();
 
         SummonerSpell SummonerSpell1 { get; }
         SummonerSpell SummonerSpell2 { get; }

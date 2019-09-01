@@ -14,14 +14,12 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         private readonly IBlowfishCrypter _blowfishCrypter;
         private readonly IPacketNotifier _packetNotifier;
         private readonly IPlayerCache _playerCache;
-        private readonly IClientIdCreationService _clientIdCreationService;
 
-        public KeyCheckServerAction(IBlowfishCrypter blowfishCrypter, IPacketNotifier packetNotifier, IPlayerCache playerCache, IClientIdCreationService clientIdCreationService)
+        public KeyCheckServerAction(IBlowfishCrypter blowfishCrypter, IPacketNotifier packetNotifier, IPlayerCache playerCache)
         {
             _blowfishCrypter = blowfishCrypter;
             _packetNotifier = packetNotifier;
             _playerCache = playerCache;
-            _clientIdCreationService = clientIdCreationService;
         }
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, KeyCheckRequest request)
@@ -36,8 +34,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             if (player.Champion.IsPlayerControlled)
                 throw new InvalidOperationException($"Champion {player.Champion.NetId} is already player controlled");
 
-            var clientId = _clientIdCreationService.GetNewId();
-            player.Champion.EnablePlayerControl(clientId);
+            player.Champion.EnablePlayerControl();
 
             var users = _playerCache.GetAllPlayers();
             foreach (var user in users)

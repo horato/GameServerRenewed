@@ -19,7 +19,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         protected override void ProcessRequestInternal(ulong senderSummonerId, PingLoadInfoRequest request)
         {
             var player = _playerCache.GetPlayer(senderSummonerId);
-            _packetNotifier.NotifyPingLoadInfo(player.Champion.NetId, senderSummonerId, request);
+            _packetNotifier.NotifyPingLoadInfo(player.Champion.NetId, player.Champion.ClientId, senderSummonerId, request);
         }
     }
 }

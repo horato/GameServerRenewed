@@ -23,12 +23,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             _networkIdCreationService = networkIdCreationService;
         }
 
-        public IObjAiHero CreateFromStartupPlayer(StartupPlayer player)
+        public IObjAiHero CreateFromStartupPlayer(StartupPlayer player, int clientId)
         {
             var stats = _statsFactory.CreateDefaultStats();
             var netId = _networkIdCreationService.GetNewNetId();
             //TODO: start location
-            var instance = new ObjAiHero(player.Team, new Vector3(), stats, netId, player.SummonerId, 0, player.IsBot, false, player.Champion, player.Skin, player.Summoner1, player.Summoner2);
+            var instance = new ObjAiHero(player.Team, new Vector3(), stats, netId, player.SummonerId, clientId, player.IsBot, false, player.Champion, player.Skin, player.Summoner1, player.Summoner2);
 
             return SetupDependencies(instance);
         }

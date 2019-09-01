@@ -85,7 +85,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             var redPlayers = new List<ulong>();
             var connectedBluePlayers = 0u;
             var connectedRedPlayers = 0u;
-            foreach (var player in players)
+            foreach (var player in players.OrderBy(x => x.Champion.ClientId))
             {
                 switch (player.Champion.Team)
                 {
@@ -311,12 +311,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         {
             return new MapPing
             (
-                position, 
-                targetNetId, 
-                sourceNetId, 
-                _enumTranslationService.TranslatePingCategory(pingCategory), 
+                position,
+                targetNetId,
+                sourceNetId,
+                _enumTranslationService.TranslatePingCategory(pingCategory),
                 playAudio,
-                showChat, 
+                showChat,
                 pingThrottled,
                 playVo
             ).GetBytes();
