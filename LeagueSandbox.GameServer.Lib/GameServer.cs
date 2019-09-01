@@ -4,8 +4,10 @@ using System.Reflection;
 using log4net;
 using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Core.DependencyInjection;
+using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Lib.Config;
 using LeagueSandbox.GameServer.Lib.Controllers;
+using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Networking;
 using Unity;
 
@@ -29,15 +31,9 @@ namespace LeagueSandbox.GameServer.Lib
             InitializeServerInformationData();
             InitializeDependencyInjection();
             InitializePlayers(config);
+            InitializePathing(config);
             InitializeGameController(config);
             InitializeNetworking(config);
-        }
-
-        private void InitializePlayers(StartupConfig config)
-        {
-            var controller = _container.Resolve<PlayerController>();
-            controller.InitializePlayers(config.Players);
-            _container.RegisterInstance<IPlayerController>(controller);
         }
 
         private void InitializeLogger()
@@ -48,22 +44,43 @@ namespace LeagueSandbox.GameServer.Lib
 
         private void InitializeServerInformationData()
         {
-            // Might add launch time/etc in the future
-            var infoData = new ServerInformationData(DateTime.Now, VERSION_STRING);
+            LoggerProvider.GetLogger().Info("Initializing server info");
 
+            var infoData = new ServerInformationData(DateTime.Now, VERSION_STRING);
             _container.RegisterInstance<IServerInformationData>(infoData);
         }
 
         private void InitializeDependencyInjection()
         {
-            _container.RegisterInstance<IUnityContainer>(_container);
+            LoggerProvider.GetLogger().Info("Initializing DI");
 
+            _container.RegisterInstance<IUnityContainer>(_container);
             var assemblies = _container.Resolve<IServerInformationData>().GetAllApplicationAssemblies();
             _container.Install(assemblies);
         }
 
+        private void InitializePlayers(StartupConfig config)
+        {
+            LoggerProvider.GetLogger().Info("Initializing PlayerController");
+
+            var controller = _container.Resolve<PlayerController>();
+            controller.InitializePlayers(config.Players);
+            _container.RegisterInstance<IPlayerController>(controller);
+        }
+
+        private void InitializePathing(StartupConfig config)
+        {
+            LoggerProvider.GetLogger().Info("Initializing pathing");
+
+            var service = _container.Resolve<PathingService>();
+            service.Initialize(config.Map);
+            _container.RegisterInstance<IPathingService>(service);
+        }
+
         private void InitializeGameController(StartupConfig config)
         {
+            LoggerProvider.GetLogger().Info("Initializing GameController");
+
             var controller = _container.Resolve<GameController>();
             controller.Initialize(config.Map);
             _container.RegisterInstance<IGameController>(controller);
@@ -71,6 +88,8 @@ namespace LeagueSandbox.GameServer.Lib
 
         private void InitializeNetworking(StartupConfig config)
         {
+            LoggerProvider.GetLogger().Info("Initializing networking");
+
             var networking = _container.Resolve<NetworkController>();
             networking.Initialize(config.Host, config.Port, config.BlowfishKey);
             _container.RegisterInstance<INetworkController>(networking);
@@ -78,14 +97,22 @@ namespace LeagueSandbox.GameServer.Lib
 
         public void Start()
         {
+            LoggerProvider.GetLogger().Info("Starting loops");
+
             _container.Resolve<IGameController>().StartGameLoop();
             _container.Resolve<INetworkController>().StartNetworkLoop();
+
+            LoggerProvider.GetLogger().Info("Loops started");
         }
 
         public void Stop()
         {
+            LoggerProvider.GetLogger().Info("Stopping loops");
+
             _container.Resolve<IGameController>().StopGameLoop();
             _container.Resolve<INetworkController>().StopNetworkLoop();
+
+            LoggerProvider.GetLogger().Info("Loops stopped");
         }
     }
 }

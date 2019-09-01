@@ -133,5 +133,51 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     throw new ArgumentOutOfRangeException(nameof(tipCommand), tipCommand, null);
             }
         }
+
+        public PingCategory TranslatePingCategory(Pings category)
+        {
+            switch (category)
+            {
+                case Pings.Default:
+                    return PingCategory.Default;
+                case Pings.Charge:
+                    return PingCategory.Charge;
+                case Pings.Danger:
+                    return PingCategory.Danger;
+                case Pings.Missing:
+                    return PingCategory.Missing;
+                case Pings.OnMyWay:
+                    return PingCategory.OnMyWay;
+                case Pings.GetBack:
+                    return PingCategory.GetBack;
+                case Pings.Assist:
+                    return PingCategory.Assist;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(category), category, null);
+            }
+        }
+
+        public Pings TranslatePingCategory(PingCategory category)
+        {
+            switch (category)
+            {
+                case PingCategory.Default:
+                    return Pings.Default;
+                case PingCategory.Charge:
+                    return Pings.Charge;
+                case PingCategory.Danger:
+                    return Pings.Danger;
+                case PingCategory.Missing:
+                    return Pings.Missing;
+                case PingCategory.OnMyWay:
+                    return Pings.OnMyWay;
+                case PingCategory.GetBack:
+                    return Pings.GetBack;
+                case PingCategory.Assist:
+                    return Pings.Assist;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(category), category, null);
+            }
+        }
     }
 }

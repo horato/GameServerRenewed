@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeagueSandbox.GameServer.Lib", "LeagueSandbox.GameServer.Lib\LeagueSandbox.GameServer.Lib.csproj", "{0182AC99-BFE8-48B8-B8B5-BBEBD6A3B981}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeagueSandbox.GameServer.Lib.Tests", "LeagueSandbox.GameServer.Core.Tests\LeagueSandbox.GameServer.Lib.Tests.csproj", "{7F6277AA-1433-4BD9-A57F-29DD8EB6492A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueSandbox.GameServer.Host.DotNet", "LeagueSandbox.GameServer.Host.DotNet\LeagueSandbox.GameServer.Host.DotNet.csproj", "{040D915D-DCE2-4E61-A172-FA8308606A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueSandbox.GameServer.Utils", "LeagueSandbox.GameServer.Utils\LeagueSandbox.GameServer.Utils.csproj", "{7FFB142E-5488-4F41-A4E9-C3607723D162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{040D915D-DCE2-4E61-A172-FA8308606A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{040D915D-DCE2-4E61-A172-FA8308606A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{040D915D-DCE2-4E61-A172-FA8308606A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FFB142E-5488-4F41-A4E9-C3607723D162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FFB142E-5488-4F41-A4E9-C3607723D162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FFB142E-5488-4F41-A4E9-C3607723D162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FFB142E-5488-4F41-A4E9-C3607723D162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

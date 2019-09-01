@@ -26,6 +26,8 @@
         S2CSynchSimTime = 0xC1,
         S2CSyncMissionStartTime = 0xC2,
         C2SWorldSendCamera = 0x2E,
+        C2SMapPing = 0x57,
+        S2CMapPing = 0x40,
 
 
         // --------------- NOT DONE
@@ -64,7 +66,6 @@
         S2CSpawnProjectile = 0x3B,
         S2CSwapItems = 0x3E,
         S2CLevelUp = 0x3F,
-        S2CAttentionPing = 0x40,
         S2CEmotion = 0x42,
         S2CPlaySound = 0x43,
         S2CAnnounce = 0x45,
@@ -76,7 +77,6 @@
         C2SClientReady = 0x52,
         S2CHandleTipUpdate = 0x55,
         C2SScoreboard = 0x56,
-        C2SAttentionPing = 0x57,
         S2CHighlightUnit = 0x59,
         S2CDestroyProjectile = 0x5A,
         S2CChampionDie = 0x5E,

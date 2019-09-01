@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
@@ -186,6 +187,16 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             var targetUser = _usersCache.GetUser(targetSummonerId);
             var data = _packetWriter.WriteHandleTipUpdate(tipHeader, tipText, tipImagePath, tipCommand, tipId, targetNetId);
             SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
+        public void NotifyMapPing(IEnumerable<ulong> targetSummonerIds, Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo)
+        {
+            var data = _packetWriter.WriteMapPing(position, targetNetId, sourceNetId, pingCategory, playAudio, showChat, pingThrottled, playVo);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.BroadcastUnreliable);
+            }
         }
 
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)

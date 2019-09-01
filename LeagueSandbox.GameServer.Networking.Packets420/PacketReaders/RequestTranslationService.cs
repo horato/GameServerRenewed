@@ -1,11 +1,19 @@
 ﻿using System;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S;
+using LeagueSandbox.GameServer.Networking.Packets420.Services;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
 {
     internal class RequestTranslationService : IRequestTranslationService
     {
+        private readonly IEnumTranslationService _enumTranslationService;
+
+        public RequestTranslationService(IEnumTranslationService enumTranslationService)
+        {
+            _enumTranslationService = enumTranslationService;
+        }
+
         public IRequestDefinition TranslateRequest(IRequestPacketDefinition request)
         {
             if (request == null)
@@ -29,7 +37,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateClientReadyRequest(clientReady);
                 case WorldSendCameraRequest worldSendCameraRequest:
                     return TranslateWorldSendCameraRequest(worldSendCameraRequest);
-                case AttentionPingRequest attentionPingRequest:
+                case MapPingRequest mapPingRequest:
+                    return TranslateMapPingRequest(mapPingRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
@@ -50,7 +59,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-
+        
         private GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest TranslateCharSelectedRequest(CharSelectedRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest();
@@ -106,6 +115,16 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         private GameServer.Core.RequestProcessing.Definitions.WorldSendCameraRequest TranslateWorldSendCameraRequest(WorldSendCameraRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.WorldSendCameraRequest(request.NetId, request.CameraPosition, request.CameraDirection, request.ClientID, request.SyncID);
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.MapPingRequest TranslateMapPingRequest(MapPingRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.MapPingRequest
+            (
+                request.Position,
+                request.TargetNetId,
+                _enumTranslationService.TranslatePingCategory(request.PingCategory)
+            );
         }
     }
 }

@@ -23,12 +23,10 @@ namespace LeagueSandbox.GameServer.Networking.Core.Encryption
             if (_blowfish == null)
                 throw new InvalidOperationException("Blowfish not initialized");
 
-            var temp = new byte[data.Length + (8 - (data.Length % 8))];
+            var temp = new byte[data.Length];
             Array.Copy(data, temp, data.Length);
 
-            _blowfish.Decipher(temp, temp.Length);
-
-            return temp;
+            return _blowfish.Decrypt(temp);
         }
 
         public byte[] Encipher(byte[] data)
@@ -36,19 +34,17 @@ namespace LeagueSandbox.GameServer.Networking.Core.Encryption
             if (_blowfish == null)
                 throw new InvalidOperationException("Blowfish not initialized");
 
-            var temp = new byte[data.Length + (8 - (data.Length % 8))];
+            var temp = new byte[data.Length];
             Array.Copy(data, temp, data.Length);
 
-            _blowfish.Encipher(temp, temp.Length);
-
-            return temp;
+            return _blowfish.Encrypt(temp);
         }
 
         public ulong Decipher(ulong key)
         {
             var bytes = BitConverter.GetBytes(key);
 
-            _blowfish.Decipher(bytes, bytes.Length);
+            bytes = _blowfish.Decrypt(bytes);
 
             return BitConverter.ToUInt64(bytes, 0);
         }

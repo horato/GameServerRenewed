@@ -306,5 +306,20 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 targetNetId
             ).GetBytes();
         }
+
+        public byte[] WriteMapPing(Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo)
+        {
+            return new MapPing
+            (
+                position, 
+                targetNetId, 
+                sourceNetId, 
+                _enumTranslationService.TranslatePingCategory(pingCategory), 
+                playAudio,
+                showChat, 
+                pingThrottled,
+                playVo
+            ).GetBytes();
+        }
     }
 }

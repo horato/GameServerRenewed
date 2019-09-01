@@ -11,5 +11,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
         TeamId TranslateTeam(Team team);
         string TranslateRank(Rank rank);
         TipCommand TranslateTipCommand(GameServer.Core.Domain.Enums.TipCommand tipCommand);
+        PingCategory TranslatePingCategory(Pings category);
+        Pings TranslatePingCategory(PingCategory category);
     }
 }
