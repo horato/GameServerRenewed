@@ -2,3 +2,4 @@ GameMode enum (CLASSIC, DOMINION?)
 GamePlatform enum (NA1, EUN1, EUW, ..)
 Replace byte/short with int outside networking
 team broadcast
+Reconnect
