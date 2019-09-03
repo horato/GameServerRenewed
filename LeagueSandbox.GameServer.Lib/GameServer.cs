@@ -30,10 +30,10 @@ namespace LeagueSandbox.GameServer.Lib
             InitializeLogger();
             InitializeServerInformationData();
             InitializeDependencyInjection();
-            InitializePlayers(config);
-            InitializePathing(config);
-            InitializeGameController(config);
             InitializeNetworking(config);
+            InitializePathing(config);
+            InitializePlayers(config);
+            InitializeGameController(config);
         }
 
         private void InitializeLogger()
@@ -59,13 +59,13 @@ namespace LeagueSandbox.GameServer.Lib
             _container.Install(assemblies);
         }
 
-        private void InitializePlayers(StartupConfig config)
+        private void InitializeNetworking(StartupConfig config)
         {
-            LoggerProvider.GetLogger().Info("Initializing PlayerController");
+            LoggerProvider.GetLogger().Info("Initializing networking");
 
-            var controller = _container.Resolve<PlayerController>();
-            controller.InitializePlayers(config.Players);
-            _container.RegisterInstance<IPlayerController>(controller);
+            var networking = _container.Resolve<NetworkController>();
+            networking.Initialize(config.Host, config.Port, config.BlowfishKey);
+            _container.RegisterInstance<INetworkController>(networking);
         }
 
         private void InitializePathing(StartupConfig config)
@@ -77,6 +77,15 @@ namespace LeagueSandbox.GameServer.Lib
             _container.RegisterInstance<IPathingService>(service);
         }
 
+        private void InitializePlayers(StartupConfig config)
+        {
+            LoggerProvider.GetLogger().Info("Initializing GameObjectController");
+
+            var controller = _container.Resolve<GameObjectController>();
+            controller.InitializePlayers(config.Players);
+            _container.RegisterInstance<IGameObjectController>(controller);
+        }
+
         private void InitializeGameController(StartupConfig config)
         {
             LoggerProvider.GetLogger().Info("Initializing GameController");
@@ -85,16 +94,7 @@ namespace LeagueSandbox.GameServer.Lib
             controller.Initialize(config.Map);
             _container.RegisterInstance<IGameController>(controller);
         }
-
-        private void InitializeNetworking(StartupConfig config)
-        {
-            LoggerProvider.GetLogger().Info("Initializing networking");
-
-            var networking = _container.Resolve<NetworkController>();
-            networking.Initialize(config.Host, config.Port, config.BlowfishKey);
-            _container.RegisterInstance<INetworkController>(networking);
-        }
-
+        
         public void Start()
         {
             LoggerProvider.GetLogger().Info("Starting loops");

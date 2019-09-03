@@ -199,6 +199,16 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
+        public void NotifyWaypointGroup(IEnumerable<ulong> targetSummonerIds, IEnumerable<IGameObject> gameObjects, Vector2 mapCenter)
+        {
+            var data = _packetWriter.WriteWaypointGroup(gameObjects, mapCenter);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

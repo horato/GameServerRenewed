@@ -16,7 +16,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public int SkinId { get; }
         public MovementType MovementType { get; private set; }
         public IEnumerable<Vector2> Waypoints => _waypoints;
-        public bool IsMoving => MovementType != MovementType.Stop;
+        public bool IsMoving => MovementType == MovementType.Move || MovementType == MovementType.Attackmove;
 
         //ExpGiveRadius
         //GoldGiveRadius
@@ -56,6 +56,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public void DoEmote()
         {
             //TODO: emote
+        }
+
+        public void OnMovementPointReached(Vector2 point)
+        {
+            _waypoints.Remove(point);
+
+            if (!_waypoints.Any())
+                StopMovement();
         }
     }
 }

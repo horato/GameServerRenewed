@@ -30,5 +30,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifySyncMissionTime(ulong targetSummonerId, float missionTime);
         void NotifyTipUpdate(ulong targetSummonerId, string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint targetNetId, uint tipId);
         void NotifyMapPing(IEnumerable<ulong> targetSummonerIds, Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo);
+        void NotifyWaypointGroup(IEnumerable<ulong> targetSummonerIds, IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
+using LeagueSandbox.GameServer.Lib.Maths;
 using LeagueSandbox.GameServer.Lib.Services;
 using Unity;
 
@@ -15,7 +16,8 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<IPlayerCache, PlayerCache>();
             container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
             container.RegisterSingleton<IClientIdCreationService, ClientIdCreationService>();
-            container.RegisterSingleton<ICoordinatesTranslationService, CoordinatesTranslationService>();
+            container.RegisterType<IMovementService, MovementService>();
+            container.RegisterType<ICalculationService, CalculationService>();
         }
     }
 }

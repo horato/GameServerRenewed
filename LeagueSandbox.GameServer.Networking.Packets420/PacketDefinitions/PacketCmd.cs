@@ -29,6 +29,7 @@
         C2SMapPing = 0x57,
         S2CMapPing = 0x40,
         C2SIssueOrderRequest = 0x72,
+        S2CWaypointGroup = 0x61,
 
 
         // --------------- NOT DONE
@@ -81,7 +82,6 @@
         S2CHighlightUnit = 0x59,
         S2CDestroyProjectile = 0x5A,
         S2CChampionDie = 0x5E,
-        S2CMoveAns = 0x61,
         S2CDash = 0x64,
         S2CDamageDone = 0x65,
         S2CModifyShield = 0x66,
@@ -93,7 +93,7 @@
         S2CBuyItemAns = 0x6F,
         S2CFreezeUnitAnimation = 0x71,
         S2CSetCameraPosition = 0x73,
-        C2SMoveConfirm = 0x77,
+        C2SWaypointAcc = 0x77,
         S2CRemoveBuff = 0x7B,
         C2SLockCamera = 0x81,
         C2SBuyItemReq = 0x82,

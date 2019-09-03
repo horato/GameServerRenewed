@@ -16,7 +16,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420
 			container.RegisterType<IRequestTranslationService, RequestTranslationService>();
 			container.RegisterType<IEnumTranslationService, EnumTranslationService>();
 			container.RegisterType<IDTOTranslationService, DTOTranslationService>();
-			container.RegisterType<IRequestDTOTranslationService, RequestDTOTranslationService>();
 		}
 	}
 }

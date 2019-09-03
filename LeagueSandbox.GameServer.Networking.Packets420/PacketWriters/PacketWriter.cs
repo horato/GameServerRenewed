@@ -131,7 +131,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             (
                 player.Champion.NetId,
                 player.Champion.ClientId,
-                0x40,  //TODO net node id
+                0x40, //TODO net node id
                 BotSkillLevel.Beginner,
                 player.Champion.Team == Team.Blue,
                 player.Champion.IsBot,
@@ -143,8 +143,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 0, //TODO Death
                 0, //TODO Death
                 CreateHeroDeath.Alive, //TODO Death
-                false,  //TODO what are those
-                false  //TODO what are those
+                false, //TODO what are those
+                false //TODO what are those
             ).GetBytes();
         }
 
@@ -154,9 +154,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             (
                 player.Champion.NetId,
                 new List<uint>(), // TODO: inventory
-                new[] { _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell1), _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2) },
-                player.Runes.Select(x => checked(new Talent((uint)x.Key, (byte)x.Value))),
-                checked((byte)player.SummonerLevel),
+                new[] {_enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell1), _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2)},
+                player.Runes.Select(x => checked(new Talent((uint) x.Key, (byte) x.Value))),
+                checked((byte) player.SummonerLevel),
                 0 // TODO: ward skin
             ).GetBytes();
         }
@@ -228,7 +228,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
 
         public byte[] WriteOnEnterVisibilityClient(IAttackableUnit unit)
         {
-            var charStackDataList = new List<CharacterStackData> { CreateCharacterStackData(unit) };
+            var charStackDataList = new List<CharacterStackData> {CreateCharacterStackData(unit)};
 
             var buffCountList = new List<KeyValuePair<byte, int>>();
             if (unit is IObjAiBase)
@@ -240,9 +240,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             // TODO: Save unit waypoints in unit class so they can be used here for MovementDataNormal
             var md = new MovementDataStop
             (
-               0x0006E4CF, //TODO: generate real movement SyncId
-               unit.Position.ToVector2(),
-               new Vector2(0, 1)
+                0x0006E4CF, //TODO: generate real movement SyncId
+                unit.Position.ToVector2(),
+                new Vector2(0, 1)
             );
 
             return new OnEnterVisiblityClient
@@ -271,7 +271,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 skinId = aiBase.SkinId;
             }
 
-            return new CharacterStackData(skinName, (uint)skinId, false, false, false, 0);
+            return new CharacterStackData(skinName, (uint) skinId, false, false, false, 0);
         }
 
         public byte[] WriteOnEnterLocalVisibilityClient(IAttackableUnit unit)
@@ -322,5 +322,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 playVo
             ).GetBytes();
         }
-    }
+
+        public byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapCenter)
+        {
+            var syncId = Environment.TickCount;
+            var movements = _dtoTranslationService.TranslateMovementUpdate(gameObjects, syncId, mapCenter);
+            return new WaypointGroup(syncId, movements).GetBytes();
+        }
+}
 }

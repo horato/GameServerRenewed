@@ -11,5 +11,10 @@ namespace LeagueSandbox.GameServer.Core.Extensions
         {
             return new Vector2(vector.X, vector.Y);
         }
+
+        public static Vector3 ToVector3(this Vector2 vector, float z)
+        {
+            return new Vector3(vector.X, vector.Y, z);
+        }
     }
 }

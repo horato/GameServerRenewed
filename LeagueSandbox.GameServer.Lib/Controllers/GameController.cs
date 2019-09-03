@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Services;
 using Unity;
@@ -15,6 +16,7 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         private readonly IMapFactory _mapFactory;
         private readonly IUnityContainer _unityContainer;
         private readonly IGameUpdateService _gameUpdateService;
+        private readonly IGameObjectController _gameObjectController;
         private IGame _game;
         private Thread _gameThread;
         private bool _isRunning;
@@ -22,12 +24,13 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
 
         protected const double REFRESH_RATE = 1000.0 / 30.0; // 30 fps
 
-        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer)
+        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer, IGameObjectController gameObjectController)
         {
             _gameFactory = gameFactory;
             _mapFactory = mapFactory;
             _gameUpdateService = gameUpdateService;
             _unityContainer = unityContainer;
+            _gameObjectController = gameObjectController;
         }
 
         public void Initialize(MapType mapId)
@@ -62,7 +65,22 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
                 {
                     var diff = (float)_lastMapDurationWatch.Elapsed.TotalMilliseconds;
                     _lastMapDurationWatch.Restart();
-                    _gameUpdateService.UpdateGame(_game, diff);
+
+                    if (_game.IsPaused)
+                        continue;
+
+                    try
+                    {
+                        //TODO: Could/Should we use multiple threads?
+                        _gameUpdateService.UpdateGame(_game, diff);
+                        _gameObjectController.UpdateObjects(diff);
+                        //TODO: Vision
+                        //TODO: Map - announces, minion spawns, fountain attacks?, surrender
+                    }
+                    catch (Exception e)
+                    {
+                        LoggerProvider.GetLogger().Error("An error occured during game loop", e);
+                    }
                 }
 
                 Thread.Sleep(1);

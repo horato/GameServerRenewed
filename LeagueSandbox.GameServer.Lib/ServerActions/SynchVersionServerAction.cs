@@ -15,14 +15,14 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
     {
         private readonly IServerInformationData _serverInformationData;
         private readonly IPacketNotifier _packetNotifier;
-        private readonly IPlayerController _playerController;
+        private readonly IPlayerCache _playerCache;
         private readonly IGame _game;
 
-        public SynchVersionServerAction(IServerInformationData serverInformationData, IPacketNotifier packetNotifier, IPlayerController playerController, IGame game)
+        public SynchVersionServerAction(IServerInformationData serverInformationData, IPacketNotifier packetNotifier, IPlayerCache playerCache, IGame game)
         {
             _serverInformationData = serverInformationData;
             _packetNotifier = packetNotifier;
-            _playerController = playerController;
+            _playerCache = playerCache;
             _game = game;
         }
 
@@ -36,7 +36,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                 return;
             }
 
-            var champions = _playerController.GetAllChampions();
+            var champions = _playerCache.GetAllPlayers();
             _packetNotifier.NotifySynchVersion(senderSummonerId, versionMatches, _game.Map.Id, champions, serverVersion);
         }
     }

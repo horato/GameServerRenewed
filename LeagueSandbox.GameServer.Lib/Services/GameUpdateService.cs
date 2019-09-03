@@ -4,12 +4,13 @@ namespace LeagueSandbox.GameServer.Lib.Services
 {
     internal class GameUpdateService : IGameUpdateService
     {
-        public void UpdateGame(IGame game, float milisecondDiff)
+        public void UpdateGame(IGame game, float millisecondDiff)
         {
             if (game.IsPaused)
                 return;
 
-            game.ApplyGameTimeDiff(milisecondDiff);
+            game.ApplyGameTimeDiff(millisecondDiff);
+            //TODO: Game time update
         }
     }
 }

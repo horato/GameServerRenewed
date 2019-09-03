@@ -38,14 +38,13 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                 case MovementType.Attack:
                 case MovementType.Attackmove:
                     //TODO: maybe validate client waypoints and use those?
-                    //var clientWaypoints = _coordinatesTranslationService.TranslateCompressedVectors(request.MovementData.Waypoints.OrderBy(x => x.Order).Select(x => x.Position)).ToList();
+                    //var clientWaypoints = _coordinatesTranslationService.TranslateCompressedVectorsToMapVectors(request.MovementData.Waypoints.OrderBy(x => x.Order).Select(x => x.Position)).ToList();
 
                     var currentPosition = sender.Champion.Position.ToVector2();
                     var path = _pathingService.FindPath(currentPosition, request.Position).ToList();
                     if (path.Any())
                     {
-                        var waypoints = new[] { currentPosition }.Concat(path);
-                        sender.Champion.Move(waypoints, request.OrderType);
+                        sender.Champion.Move(path, request.OrderType);
                     }
                     else
                     {

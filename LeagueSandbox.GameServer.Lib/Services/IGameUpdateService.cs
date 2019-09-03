@@ -4,6 +4,6 @@ namespace LeagueSandbox.GameServer.Lib.Services
 {
     internal interface IGameUpdateService
     {
-        void UpdateGame(IGame game, float milisecondDiff);
+        void UpdateGame(IGame game, float millisecondDiff);
     }
 }

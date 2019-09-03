@@ -5,9 +5,9 @@ using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 
 namespace LeagueSandbox.GameServer.Lib.Controllers
 {
-    internal interface IPlayerController
+    internal interface IGameObjectController
     {
         void InitializePlayers(IEnumerable<StartupPlayer> players);
-        IEnumerable<IPlayer> GetAllChampions();
+        void UpdateObjects(float millisecondsDiff);
     }
 }

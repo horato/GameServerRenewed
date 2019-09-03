@@ -67,6 +67,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
             WriteBytes(data);
         }
 
+        protected BinaryWriter GetWriter()
+        {
+            return _writer;
+        }
+
         //protected void WriteStringHash(string str)
         //{
         //    Write(HashFunctions.HashString(str));

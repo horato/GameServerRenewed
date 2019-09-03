@@ -1,44 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
+
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 {
-    //internal class MovementResponse : BasePacket
-    //{
-    //    public MovementResponse(INavGrid navGrid, IGameObject obj)
-    //        : this(navGrid, new List<IGameObject> { obj })
-    //    {
+    internal class WaypointGroup : BasePacket
+    {
+        private readonly int _syncId;
+        private readonly IList<MovementDataNormal> _movements;
 
-    //    }
+        public WaypointGroup(int syncId, IEnumerable<MovementDataNormal> movements) : base(PacketCmd.S2CWaypointGroup)
+        {
+            _syncId = syncId;
+            _movements = movements?.ToList() ?? new List<MovementDataNormal>();
 
-    //    public MovementResponse(INavGrid navGrid, List<IGameObject> actors)
-    //        : base(PacketCmd.PKT_S2C_MOVE_ANS)
-    //    {
-    //        Write(Environment.TickCount); // syncID
-    //        Write((short)actors.Count);
+            WritePacket();
+        }
 
-    //        foreach (var actor in actors)
-    //        {
-    //            var waypoints = actor.Waypoints;
-    //            var numCoords = waypoints.Count * 2;
-    //            Write((byte)numCoords);
-    //            WriteNetId(actor);
-    //            Write(Movement.EncodeWaypoints(navGrid, waypoints));
-    //        }
-    //    }
+        private void WritePacket()
+        {
+            var count = _movements.Count;
+            if (count > 0x7FFF)
+                throw new InvalidOperationException("Too many movements");
 
-    //    private Pair<bool, bool> IsAbsolute(Vector2 vec)
-    //    {
-    //        var ret = new Pair<bool, bool>();
-    //        ret.Item1 = vec.X < sbyte.MinValue || vec.X > sbyte.MaxValue;
-    //        ret.Item2 = vec.Y < sbyte.MinValue || vec.Y > sbyte.MaxValue;
+            WriteInt(_syncId);
+            WriteUShort((ushort)count);
+            foreach (var data in _movements)
+            {
+                WriteMovementData(data);
+            }
+        }
 
-    //        return ret;
-    //    }
+        private void WriteMovementData(MovementDataNormal data)
+        {
+            var waypointsSize = data.Waypoints.Count;
+            if (waypointsSize > 0x7F)
+                throw new InvalidOperationException("Too many waypoints");
 
-    //    private static void SetBitmaskValue(ref byte[] mask, int pos, bool val)
-    //    {
-    //        if (val)
-    //            mask[pos / 8] |= (byte)(1 << pos % 8);
-    //        else
-    //            mask[pos / 8] &= (byte)~(1 << pos % 8);
-    //    }
-    //}
+            byte bitfield = 0;
+            if (data.Waypoints != null)
+            {
+                bitfield |= (byte)(waypointsSize << 1);
+            }
+            if (data.HasTeleportID)
+            {
+                bitfield |= 1;
+            }
+
+            WriteByte(bitfield);
+
+            if (data.Waypoints != null)
+            {
+                WriteUInt(data.TeleportNetID);
+                if (data.HasTeleportID)
+                    WriteByte(data.TeleportID);
+
+                GetWriter().WriteCompressedWaypoints(data.Waypoints);
+            }
+        }
+    }
 }

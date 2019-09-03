@@ -9,9 +9,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
     internal class RequestTranslationService : IRequestTranslationService
     {
         private readonly IEnumTranslationService _enumTranslationService;
-        private readonly IRequestDTOTranslationService _dTOTranslationService;
+        private readonly IDTOTranslationService _dTOTranslationService;
 
-        public RequestTranslationService(IEnumTranslationService enumTranslationService, IRequestDTOTranslationService dToTranslationService)
+        public RequestTranslationService(IEnumTranslationService enumTranslationService, IDTOTranslationService dToTranslationService)
         {
             _enumTranslationService = enumTranslationService;
             _dTOTranslationService = dToTranslationService;
@@ -43,7 +43,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case MapPingRequest mapPingRequest:
                     return TranslateMapPingRequest(mapPingRequest);
                 case IssueOrderRequest issueOrderRequest:
-                    return TranslateIssureOrderRequest(issueOrderRequest);
+                    return TranslateIssueOrder(issueOrderRequest);
+                case WaypointAccRequest waypointAccRequest:
+                    return TranslateWaypointAccRequest(waypointAccRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
@@ -131,7 +133,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
             );
         }
 
-        private GameServer.Core.RequestProcessing.Definitions.IssueOrderRequest TranslateIssureOrderRequest(IssueOrderRequest request)
+        private GameServer.Core.RequestProcessing.Definitions.IssueOrderRequest TranslateIssueOrder(IssueOrderRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.IssueOrderRequest
             (
@@ -140,6 +142,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 request.TargetNetID,
                 _dTOTranslationService.TranslateMovementData(request.MovementData)
             );
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.WaypointAccRequest TranslateWaypointAccRequest(WaypointAccRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.WaypointAccRequest(request.NetId, request.SyncID, request.TeleportCount);
         }
     }
 }

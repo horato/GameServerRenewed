@@ -8,12 +8,12 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
     {
         string SkinName { get; }
         int SkinId { get; }
-        MovementType MovementType { get; }
         IEnumerable<Vector2> Waypoints { get; }
         bool IsMoving { get; }
 
         void Move(IEnumerable<Vector2> waypoints, MovementType movementType);
         void StopMovement();
         void DoEmote();
+        void OnMovementPointReached(Vector2 point);
     }
 }
