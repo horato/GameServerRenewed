@@ -15,6 +15,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<IPlayerCache, PlayerCache>();
             container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
             container.RegisterSingleton<IClientIdCreationService, ClientIdCreationService>();
+            container.RegisterSingleton<ICoordinatesTranslationService, CoordinatesTranslationService>();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+using MovementType = LeagueSandbox.GameServer.Core.Domain.Enums.MovementType;
 using TipCommand = LeagueSandbox.GameServer.Networking.Packets420.Enums.TipCommand;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.Services
@@ -177,6 +178,25 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     return Pings.Assist;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(category), category, null);
+            }
+        }
+
+        public MovementType TranslateMovementOrderType(Enums.MovementType orderType)
+        {
+            switch (orderType)
+            {
+                case Enums.MovementType.Emote:
+                    return MovementType.Emote;
+                case Enums.MovementType.Move:
+                    return MovementType.Move;
+                case Enums.MovementType.Attack:
+                    return MovementType.Attack;
+                case Enums.MovementType.Attackmove:
+                    return MovementType.Attackmove;
+                case Enums.MovementType.Stop:
+                    return MovementType.Stop;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(orderType), orderType, null);
             }
         }
     }

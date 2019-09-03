@@ -28,6 +28,7 @@
         C2SWorldSendCamera = 0x2E,
         C2SMapPing = 0x57,
         S2CMapPing = 0x40,
+        C2SIssueOrderRequest = 0x72,
 
 
         // --------------- NOT DONE
@@ -91,7 +92,6 @@
         S2CShowProjectile = 0x6E,
         S2CBuyItemAns = 0x6F,
         S2CFreezeUnitAnimation = 0x71,
-        C2SMoveReq = 0x72,
         S2CSetCameraPosition = 0x73,
         C2SMoveConfirm = 0x77,
         S2CRemoveBuff = 0x7B,

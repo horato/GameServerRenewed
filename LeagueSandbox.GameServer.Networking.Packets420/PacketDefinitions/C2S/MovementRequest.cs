@@ -1,36 +1,53 @@
 using System.IO;
+using System.Numerics;
 using LeagueSandbox.GameServer.Networking.Packets420.Attributes;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 {
-	[Packet(PacketCmd.C2SMoveReq)]
-	internal class MovementRequest : IRequestPacketDefinition
-	{
+    [Packet(PacketCmd.C2SIssueOrderRequest)]
+    internal class IssueOrderRequest : IRequestPacketDefinition
+    {
         public PacketCmd Cmd { get; }
-		public int NetIdHeader { get; }
-		public MovementType Type { get; }
-		public float X { get; }
-		public float Y { get; }
-		public uint TargetNetId { get; }
-		public byte CoordCount { get; }
-		public int NetId { get; }
-		public byte[] MoveData { get; }
+        public uint NetId { get; }
+        public MovementType OrderType { get; }
+        public Vector2 Position { get; }
+        public uint TargetNetID { get; }
+        public MovementDataNormal MovementData { get; }
 
-		public MovementRequest(byte[] data)
+        public IssueOrderRequest(byte[] data)
         {
             using (var reader = new BinaryReader(new MemoryStream(data)))
             {
                 Cmd = (PacketCmd)reader.ReadByte();
-                NetIdHeader = reader.ReadInt32();
-                Type = (MovementType)reader.ReadByte();
-                X = reader.ReadSingle();
-                Y = reader.ReadSingle();
-                TargetNetId = reader.ReadUInt32();
-                CoordCount = reader.ReadByte();
-                NetId = reader.ReadInt32();
-                MoveData = reader.ReadBytes((int)(reader.BaseStream.Length - reader.BaseStream.Position));
+                NetId = reader.ReadUInt32();
+                OrderType = (MovementType)reader.ReadByte();
+                Position = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                TargetNetID = reader.ReadUInt32();
+
+                if (reader.BaseStream.Length - reader.BaseStream.Position > 4)
+                    MovementData = ReadMovementData(reader);
             }
+        }
+
+        private MovementDataNormal ReadMovementData(BinaryReader reader)
+        {
+            var bitfield = reader.ReadByte();
+            var size = (byte)(bitfield >> 1);
+            if (size <= 0)
+                return null;
+
+            var hasTeleportID = (bitfield & 1) != 0;
+            var teleportNetID = reader.ReadUInt32();
+            byte teleportID = 0;
+            if (hasTeleportID)
+            {
+                teleportID = reader.ReadByte();
+            }
+
+            var waypoints = reader.ReadCompressedWaypoints(size);
+            return new MovementDataNormal(0, teleportNetID, hasTeleportID, teleportID, waypoints);
         }
     }
 }

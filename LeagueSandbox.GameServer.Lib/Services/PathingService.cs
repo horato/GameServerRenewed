@@ -49,9 +49,14 @@ namespace LeagueSandbox.GameServer.Lib.Services
             }
         }
 
+        #region Pathfinding
+
         /// <summary> Finds path between start and destination from map coordinates </summary>
         public IEnumerable<Vector2> FindPath(Vector2 start, Vector2 destination)
         {
+            if (_navGrid == null)
+                throw new InvalidOperationException($"{nameof(PathingService)} is not initialized");
+
             var fromNode = GetCellFromMapCoordinates(start.X, start.Y);
             var startNode = new PathfindingNode(fromNode);
 
@@ -90,7 +95,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
             // construct path, if end was not closed return null
             if (!closedList.ContainsKey(endNode.Position))
             {
-                return null;
+                return new List<Vector2>();
             }
 
             // if all good, return path
@@ -195,6 +200,16 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 return null;
 
             return _cells[cellX, cellY];
+        }
+
+        #endregion
+
+        public Vector2 GetMapCenter()
+        {
+            if (_navGrid == null)
+                throw new InvalidOperationException($"{nameof(PathingService)} is not initialized");
+
+            return _navGrid.MiddleOfMap;
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions;
@@ -192,7 +193,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 unit.NetId,
                 regionNetId,
                 0,
-                new Vector2(unit.Position.X, unit.Position.Y),
+                unit.Position.ToVector2(),
                 2500,
                 88.4f,
                 130,
@@ -240,7 +241,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             var md = new MovementDataStop
             (
                0x0006E4CF, //TODO: generate real movement SyncId
-               new Vector2(unit.Position.X, unit.Position.Y),
+               unit.Position.ToVector2(),
                new Vector2(0, 1)
             );
 

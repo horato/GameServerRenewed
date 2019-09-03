@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
@@ -8,10 +9,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
     internal class RequestTranslationService : IRequestTranslationService
     {
         private readonly IEnumTranslationService _enumTranslationService;
+        private readonly IRequestDTOTranslationService _dTOTranslationService;
 
-        public RequestTranslationService(IEnumTranslationService enumTranslationService)
+        public RequestTranslationService(IEnumTranslationService enumTranslationService, IRequestDTOTranslationService dToTranslationService)
         {
             _enumTranslationService = enumTranslationService;
+            _dTOTranslationService = dToTranslationService;
         }
 
         public IRequestDefinition TranslateRequest(IRequestPacketDefinition request)
@@ -39,6 +42,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateWorldSendCameraRequest(worldSendCameraRequest);
                 case MapPingRequest mapPingRequest:
                     return TranslateMapPingRequest(mapPingRequest);
+                case IssueOrderRequest issueOrderRequest:
+                    return TranslateIssureOrderRequest(issueOrderRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
@@ -49,7 +54,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case EmotionPacketRequest emotionPacketRequest:
                 case HeartBeat heartBeat:
                 case ChatMessage chatMessage:
-                case MovementRequest movementRequest:
                 case QuestClicked questClicked:
                 case SellItem sellItem:
                 case SkillUpRequest skillUpRequest:
@@ -59,7 +63,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-        
+
         private GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest TranslateCharSelectedRequest(CharSelectedRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest();
@@ -124,6 +128,17 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 request.Position,
                 request.TargetNetId,
                 _enumTranslationService.TranslatePingCategory(request.PingCategory)
+            );
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.IssueOrderRequest TranslateIssureOrderRequest(IssueOrderRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.IssueOrderRequest
+            (
+                _enumTranslationService.TranslateMovementOrderType(request.OrderType),
+                request.Position,
+                request.TargetNetID,
+                _dTOTranslationService.TranslateMovementData(request.MovementData)
             );
         }
     }
