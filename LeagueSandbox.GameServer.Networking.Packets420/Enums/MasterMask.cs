@@ -1,6 +1,6 @@
 ﻿namespace LeagueSandbox.GameServer.Networking.Packets420.Enums
 {
-    public enum MasterMask : uint
+    public enum MasterMask : byte
     {
         One = 0x01,
         Two = 0x02,

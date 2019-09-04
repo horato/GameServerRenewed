@@ -1,7 +1,11 @@
 ﻿using System;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+using ActionState = LeagueSandbox.GameServer.Networking.Packets420.Enums.ActionState;
 using MovementType = LeagueSandbox.GameServer.Core.Domain.Enums.MovementType;
+using PrimaryAbilityResourceType = LeagueSandbox.GameServer.Networking.Packets420.Enums.PrimaryAbilityResourceType;
+using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
+using SpellSlot = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellSlot;
 using TipCommand = LeagueSandbox.GameServer.Networking.Packets420.Enums.TipCommand;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.Services
@@ -197,6 +201,197 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     return MovementType.Stop;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(orderType), orderType, null);
+            }
+        }
+
+        public SpellSlot TranslateSpellSlotClassic(GameServer.Core.Domain.Enums.SpellSlot slot)
+        {
+            var result = default(SpellSlot);
+            if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.Q))
+            {
+                result |= SpellSlot.Spell1;
+            }
+
+            if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.W))
+            {
+                result |= SpellSlot.Spell2;
+            }
+
+            if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.E))
+            {
+                result |= SpellSlot.Spell3;
+            }
+
+            if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.R))
+            {
+                result |= SpellSlot.Ultimate;
+            }
+
+            return result;
+        }
+
+        public SummonerSpellId TranslateSpellSlotSummoner(GameServer.Core.Domain.Enums.SpellSlot slot)
+        {
+            var result = default(SummonerSpellId);
+            if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.D))
+            {
+                result |= SummonerSpellId.D;
+            }
+
+            if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.F))
+            {
+                result |= SummonerSpellId.F;
+            }
+
+            return result;
+        }
+
+        public SpellFlags TranslateSpellFlags(GameServer.Core.Domain.Enums.SpellFlags flags)
+        {
+            var result = default(SpellFlags);
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AutoCast))
+                result |= SpellFlags.AutoCast;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.InstantCast))
+                result |= SpellFlags.InstantCast;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.PersistThroughDeath))
+                result |= SpellFlags.PersistThroughDeath;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NonDispellable))
+                result |= SpellFlags.NonDispellable;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NoClick))
+                result |= SpellFlags.NoClick;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectImportantBotTargets))
+                result |= SpellFlags.AffectImportantBotTargets;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AllowWhileTaunted))
+                result |= SpellFlags.AllowWhileTaunted;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NotAffectZombie))
+                result |= SpellFlags.NotAffectZombie;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectUntargetable))
+                result |= SpellFlags.AffectUntargetable;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectEnemies))
+                result |= SpellFlags.AffectEnemies;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectFriends))
+                result |= SpellFlags.AffectFriends;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectNeutral))
+                result |= SpellFlags.AffectNeutral;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectAllSides))
+                result |= SpellFlags.AffectAllSides;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectBuildings))
+                result |= SpellFlags.AffectBuildings;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectMinions))
+                result |= SpellFlags.AffectMinions;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectHeroes))
+                result |= SpellFlags.AffectHeroes;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectTurrets))
+                result |= SpellFlags.AffectTurrets;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectAllUnitTypes))
+                result |= SpellFlags.AffectAllUnitTypes;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NotAffectSelf))
+                result |= SpellFlags.NotAffectSelf;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AlwaysSelf))
+                result |= SpellFlags.AlwaysSelf;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectDead))
+                result |= SpellFlags.AffectDead;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectNotPet))
+                result |= SpellFlags.AffectNotPet;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectBarracksOnly))
+                result |= SpellFlags.AffectBarracksOnly;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.IgnoreVisibilityCheck))
+                result |= SpellFlags.IgnoreVisibilityCheck;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NonTargetableAlly))
+                result |= SpellFlags.NonTargetableAlly;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NonTargetableEnemy))
+                result |= SpellFlags.NonTargetableEnemy;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.TargetableToAll))
+                result |= SpellFlags.TargetableToAll;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NonTargetableAll))
+                result |= SpellFlags.NonTargetableAll;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectWards))
+                result |= SpellFlags.AffectWards;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectUseable))
+                result |= SpellFlags.AffectUseable;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.IgnoreAllyMinion))
+                result |= SpellFlags.IgnoreAllyMinion;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.IgnoreEnemyMinion))
+                result |= SpellFlags.IgnoreEnemyMinion;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.IgnoreLaneMinion))
+                result |= SpellFlags.IgnoreLaneMinion;
+            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.IgnoreClones))
+                result |= SpellFlags.IgnoreClones;
+
+            return result;
+        }
+
+        public ActionState TranslateActionState(GameServer.Core.Domain.Enums.ActionState actionState)
+        {
+            var result = default(ActionState);
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.CanAttack))
+                result |= ActionState.CanAttack;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.CanCast))
+                result |= ActionState.CanCast;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.CanMove))
+                result |= ActionState.CanMove;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.CanNotMove))
+                result |= ActionState.CanNotMove;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.Stealthed))
+                result |= ActionState.Stealthed;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.RevealSpecificUnit))
+                result |= ActionState.RevealSpecificUnit;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.Taunted))
+                result |= ActionState.Taunted;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.Feared))
+                result |= ActionState.Feared;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.IsFleeing))
+                result |= ActionState.IsFleeing;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.CanNotAttack))
+                result |= ActionState.CanNotAttack;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.IsAsleep))
+                result |= ActionState.IsAsleep;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.IsNearSighted))
+                result |= ActionState.IsNearSighted;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.IsGhosted))
+                result |= ActionState.IsGhosted;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.Charmed))
+                result |= ActionState.Charmed;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.NoRender))
+                result |= ActionState.NoRender;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.ForceRenderParticles))
+                result |= ActionState.ForceRenderParticles;
+            if (actionState.HasFlag(GameServer.Core.Domain.Enums.ActionState.Unknown))
+                result |= ActionState.Unknown;
+
+            return result;
+        }
+
+        public PrimaryAbilityResourceType TranslateParType(GameServer.Core.Domain.Enums.PrimaryAbilityResourceType parType)
+        {
+            switch (parType)
+            {
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Mana:
+                    return PrimaryAbilityResourceType.Mana;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Energy:
+                    return PrimaryAbilityResourceType.Energy;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.None:
+                    return PrimaryAbilityResourceType.None;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Shield:
+                    return PrimaryAbilityResourceType.Shield;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.BattleFury:
+                    return PrimaryAbilityResourceType.BattleFury;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.DragonFury:
+                    return PrimaryAbilityResourceType.DragonFury;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Rage:
+                    return PrimaryAbilityResourceType.Rage;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Heat:
+                    return PrimaryAbilityResourceType.Heat;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Ferocity:
+                    return PrimaryAbilityResourceType.Ferocity;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.BloodWell:
+                    return PrimaryAbilityResourceType.BloodWell;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Wind:
+                    return PrimaryAbilityResourceType.Wind;
+                case GameServer.Core.Domain.Enums.PrimaryAbilityResourceType.Other:
+                    return PrimaryAbilityResourceType.Other;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(parType), parType, null);
             }
         }
     }

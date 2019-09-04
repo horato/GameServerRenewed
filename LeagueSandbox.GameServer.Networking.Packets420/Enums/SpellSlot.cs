@@ -4,7 +4,8 @@ using System.Text;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.Enums
 {
-    internal enum SpellSlot
+    [Flags]
+    internal enum SpellSlot : byte
     {
         Spell1 = 0x00,
         Spell2 = 0x01,

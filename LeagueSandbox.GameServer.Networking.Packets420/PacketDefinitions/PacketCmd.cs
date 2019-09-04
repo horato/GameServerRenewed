@@ -30,7 +30,8 @@
         S2CMapPing = 0x40,
         C2SIssueOrderRequest = 0x72,
         S2CWaypointGroup = 0x61,
-
+        OnReplication = 0xC4,
+        OnReplicationConfirm = 0xA8,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -119,7 +120,6 @@
         C2SSurrender = 0xA4,
         S2CSurrenderResult = 0xA5,
         S2CRemoveMessageBoxRight = 0xA7,
-        C2SStatsConfirm = 0xA8,
         S2CEnableFow = 0xAB,
         C2SClick = 0xAF,
         S2CSpellAnimation = 0xB0,
@@ -133,7 +133,7 @@
         S2CHideUi = 0xBC,
         S2CSetTarget2 = 0xC0,
         // Packet 0xC0 format is [Net ID 1] [Net ID 2], purpose still unknown
-        S2CCharStats = 0xC4,
+
         S2CGameEnd = 0xC6,
         S2CSurrender = 0xC9,
         C2SQuestClicked = 0xCD,

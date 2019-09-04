@@ -10,7 +10,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         public override MovementDataType Type => MovementDataType.WithSpeed;
         public SpeedParams SpeedParams { get; set; }
 
-        public MovementDataWithSpeed(int syncId, uint teleportNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints, SpeedParams speedParams) : base(syncId, teleportNetId, hasTeleportId, teleportId, waypoints)
+        public MovementDataWithSpeed(uint syncId, uint teleportNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints, SpeedParams speedParams) : base(syncId, teleportNetId, hasTeleportId, teleportId, waypoints)
         {
             SpeedParams = speedParams;
         }

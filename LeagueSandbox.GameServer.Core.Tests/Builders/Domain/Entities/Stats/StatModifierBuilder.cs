@@ -1,7 +1,7 @@
 ﻿using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
 
-namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
+namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
 {
     internal class StatModifierBuilder : EntityBuilderBase<StatModifier>
     {

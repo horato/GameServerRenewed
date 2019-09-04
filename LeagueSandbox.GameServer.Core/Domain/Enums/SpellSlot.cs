@@ -7,9 +7,9 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
     {
         Q = 1,
         W = 2,
-        E = 3,
-        R = 4,
-        D = 5,
-        F = 6
+        E = 4,
+        R = 8,
+        D = 16,
+        F = 32
     }
 }

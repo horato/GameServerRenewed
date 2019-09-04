@@ -30,5 +30,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteHandleTipUpdate(string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint tipId, uint targetNetId);
         byte[] WriteMapPing(Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo);
         byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
+        byte[] WriteReplication(IEnumerable<IAttackableUnit> gameObjects);
     }
 }

@@ -54,7 +54,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                     new StatModifier(),
                     new StatModifier(),
                     new StatModifier(),
-                    new StatModifier(150, 0, 0, 0),
+                    new StatModifier(400, 0, 0, 0),
                     new StatModifier()
                 )
             );

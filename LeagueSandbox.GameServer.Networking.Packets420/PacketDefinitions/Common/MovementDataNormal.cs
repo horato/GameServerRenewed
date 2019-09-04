@@ -14,7 +14,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         public byte TeleportID { get; set; }
         public IList<CompressedWaypoint> Waypoints { get; set; }
 
-        public MovementDataNormal(int syncId, uint teleportNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints) : base(syncId)
+        public MovementDataNormal(uint syncId, uint teleportNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints) : base(syncId)
         {
             TeleportNetID = teleportNetId;
             HasTeleportID = hasTeleportId;

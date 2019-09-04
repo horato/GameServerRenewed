@@ -11,7 +11,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         public Vector2 Position { get; set; }
         public Vector2 Forward { get; set; }
 
-        public MovementDataStop(int syncId, Vector2 position, Vector2 forward) : base(syncId)
+        public MovementDataStop(uint syncId, Vector2 position, Vector2 forward) : base(syncId)
         {
             Position = position;
             Forward = forward;

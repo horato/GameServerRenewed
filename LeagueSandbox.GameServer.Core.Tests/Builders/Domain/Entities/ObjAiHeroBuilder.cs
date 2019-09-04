@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
+using LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats;
 
 namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
 {

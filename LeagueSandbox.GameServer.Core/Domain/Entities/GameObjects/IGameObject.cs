@@ -9,6 +9,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         Vector3 Position { get; }
         float VisionRadius { get; }
         bool IsPositionChanged { get; }
+        uint NetId { get; }
 
         void SetPosition(Vector3 position);
         void OnMovementDataSent();

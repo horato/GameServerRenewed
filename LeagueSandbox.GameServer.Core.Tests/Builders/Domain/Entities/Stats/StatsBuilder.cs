@@ -1,34 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
+﻿using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
-using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
 
-namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
+namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
 {
-    internal class StatsBuilder : EntityBuilderBase<Stats>
+    internal class StatsBuilder : EntityBuilderBase<Lib.Domain.Entities.Stats.Stats>
     {
         private SpellSlot _spellsEnabled = SpellSlot.Q | SpellSlot.W | SpellSlot.E | SpellSlot.R;
+        private SpellFlags _isTargetableToTeam = SpellFlags.TargetableToAll;
+        private ActionState _actionState = ActionState.CanAttack | ActionState.CanCast;
+        private PrimaryAbilityResourceType _parType = PrimaryAbilityResourceType.Mana;
         private bool _isMagicImmune = true;
         private bool _isInvulnerable = true;
         private bool _isPhysicalImmune = true;
         private bool _isLifestealImmune = true;
         private bool _isTargetable = true;
-        private SpellFlags _isTargetableToTeam = SpellFlags.TargetableToAll;
-        private ActionState _actionState = ActionState.CanAttack | ActionState.CanCast;
-        private PrimaryAbilityResourceType _parType = PrimaryAbilityResourceType.Mana;
-        private float _attackSpeedFlat = 1.5f;
-        private float _healthPerLevel = 1.6f;
-        private float _manaPerLevel = 1.7f;
-        private float _adPerLevel = 1.8f;
-        private float _armorPerLevel = 1.9f;
-        private float _magicResistPerLevel = 2.0f;
-        private float _healthRegenerationPerLevel = 2.1f;
-        private float _manaRegenerationPerLevel = 2.2f;
-        private float _growthAttackSpeed = 2.3f;
-        private float[] _manaCost = new[] { 1f, 2f, 3f, 4f };
+        private bool _isGeneratingGold = true;
+        private float _spellCostReduction = 5.5f;
+        private float _goldTotal = 54514;
+        private IFlatStat _flatAttackSpeed = new FlatStatBuilder().Build();
+        private IFlatStat _flatHealthPoints = new FlatStatBuilder().Build();
+        private IFlatStat _flatManaPoints = new FlatStatBuilder().Build();
+        private IFlatStat _flatAttackDamange = new FlatStatBuilder().Build();
+        private IFlatStat _flatArmor = new FlatStatBuilder().Build();
+        private IFlatStat _flatMagicResist = new FlatStatBuilder().Build();
+        private IFlatStat _gold = new FlatStatBuilder().Build();
+        private IFlatStat _level = new FlatStatBuilder().Build();
+        private IFlatStat _experience = new FlatStatBuilder().Build();
         private IStat _abilityPower = new StatBuilder().Build();
         private IStat _armor = new StatBuilder().Build();
         private IStat _armorPenetration = new StatBuilder().Build();
@@ -37,7 +35,6 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private IStat _cooldownReduction = new StatBuilder().Build();
         private IStat _criticalChance = new StatBuilder().Build();
         private IStat _criticalDamage = new StatBuilder().Build();
-        private IStat _goldPerSecond = new StatBuilder().Build();
         private IStat _healthPoints = new StatBuilder().Build();
         private IStat _healthRegeneration = new StatBuilder().Build();
         private IStat _lifeSteal = new StatBuilder().Build();
@@ -50,17 +47,28 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private IStat _size = new StatBuilder().Build();
         private IStat _spellVamp = new StatBuilder().Build();
         private IStat _tenacity = new StatBuilder().Build();
-        private float _gold = 51f;
-        private byte _level = 11;
-        private float _experience = 120456;
-        private float _currentHealth = 345;
-        private float _currentMana = 32;
-        private bool _isGeneratingGold = true;
-        private float _spellCostReduction = 5.5f;
 
         public StatsBuilder WithSpellsEnabled(SpellSlot spellsEnabled)
         {
             _spellsEnabled = spellsEnabled;
+            return this;
+        }
+
+        public StatsBuilder WithIsTargetableToTeam(SpellFlags isTargetableToTeam)
+        {
+            _isTargetableToTeam = isTargetableToTeam;
+            return this;
+        }
+
+        public StatsBuilder WithActionState(ActionState actionState)
+        {
+            _actionState = actionState;
+            return this;
+        }
+
+        public StatsBuilder WithParType(PrimaryAbilityResourceType parType)
+        {
+            _parType = parType;
             return this;
         }
 
@@ -94,81 +102,75 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
-        public StatsBuilder WithIsTargetableToTeam(SpellFlags isTargetableToTeam)
+        public StatsBuilder WithIsGeneratingGold(bool isGeneratingGold)
         {
-            _isTargetableToTeam = isTargetableToTeam;
+            _isGeneratingGold = isGeneratingGold;
             return this;
         }
 
-        public StatsBuilder WithActionState(ActionState actionState)
+        public StatsBuilder WithSpellCostReduction(float spellCostReduction)
         {
-            _actionState = actionState;
+            _spellCostReduction = spellCostReduction;
             return this;
         }
 
-        public StatsBuilder WithParType(PrimaryAbilityResourceType parType)
+        public StatsBuilder WithGoldTotal(float goldTotal)
         {
-            _parType = parType;
+            _goldTotal = goldTotal;
             return this;
         }
 
-        public StatsBuilder WithAttackSpeedFlat(float attackSpeedFlat)
+        public StatsBuilder WithFlatAttackSpeed(IFlatStat flatAttackSpeed)
         {
-            _attackSpeedFlat = attackSpeedFlat;
+            _flatAttackSpeed = flatAttackSpeed;
             return this;
         }
 
-        public StatsBuilder WithHealthPerLevel(float healthPerLevel)
+        public StatsBuilder WithFlatHealthPoints(IFlatStat flatHealthPoints)
         {
-            _healthPerLevel = healthPerLevel;
+            _flatHealthPoints = flatHealthPoints;
             return this;
         }
 
-        public StatsBuilder WithManaPerLevel(float manaPerLevel)
+        public StatsBuilder WithFlatManaPoints(IFlatStat flatManaPoints)
         {
-            _manaPerLevel = manaPerLevel;
+            _flatManaPoints = flatManaPoints;
             return this;
         }
 
-        public StatsBuilder WithAdPerLevel(float adPerLevel)
+        public StatsBuilder WithFlatAttackDamange(IFlatStat flatAttackDamange)
         {
-            _adPerLevel = adPerLevel;
+            _flatAttackDamange = flatAttackDamange;
             return this;
         }
 
-        public StatsBuilder WithArmorPerLevel(float armorPerLevel)
+        public StatsBuilder WithFlatArmor(IFlatStat flatArmor)
         {
-            _armorPerLevel = armorPerLevel;
+            _flatArmor = flatArmor;
             return this;
         }
 
-        public StatsBuilder WithMagicResistPerLevel(float magicResistPerLevel)
+        public StatsBuilder WithFlatMagicResist(IFlatStat flatMagicResist)
         {
-            _magicResistPerLevel = magicResistPerLevel;
+            _flatMagicResist = flatMagicResist;
             return this;
         }
 
-        public StatsBuilder WithHealthRegenerationPerLevel(float healthRegenerationPerLevel)
+        public StatsBuilder WithGold(IFlatStat gold)
         {
-            _healthRegenerationPerLevel = healthRegenerationPerLevel;
+            _gold = gold;
             return this;
         }
 
-        public StatsBuilder WithManaRegenerationPerLevel(float manaRegenerationPerLevel)
+        public StatsBuilder WithLevel(IFlatStat level)
         {
-            _manaRegenerationPerLevel = manaRegenerationPerLevel;
+            _level = level;
             return this;
         }
 
-        public StatsBuilder WithGrowthAttackSpeed(float growthAttackSpeed)
+        public StatsBuilder WithExperience(IFlatStat experience)
         {
-            _growthAttackSpeed = growthAttackSpeed;
-            return this;
-        }
-
-        public StatsBuilder WithManaCost(float[] manaCost)
-        {
-            _manaCost = manaCost;
+            _experience = experience;
             return this;
         }
 
@@ -217,12 +219,6 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         public StatsBuilder WithCriticalDamage(IStat criticalDamage)
         {
             _criticalDamage = criticalDamage;
-            return this;
-        }
-
-        public StatsBuilder WithGoldPerSecond(IStat goldPerSecond)
-        {
-            _goldPerSecond = goldPerSecond;
             return this;
         }
 
@@ -298,55 +294,9 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
-        public StatsBuilder WithGold(float gold)
+        public override Lib.Domain.Entities.Stats.Stats Build()
         {
-            _gold = gold;
-            return this;
-        }
-
-        public StatsBuilder WithLevel(byte level)
-        {
-            _level = level;
-            return this;
-        }
-
-        public StatsBuilder WithExperience(float experience)
-        {
-            _experience = experience;
-            return this;
-        }
-
-        public StatsBuilder WithCurrentHealth(float currentHealth)
-        {
-            _currentHealth = currentHealth;
-            return this;
-        }
-
-        public StatsBuilder WithCurrentMana(float currentMana)
-        {
-            _currentMana = currentMana;
-            return this;
-        }
-
-        public StatsBuilder WithIsGeneratingGold(bool isGeneratingGold)
-        {
-            _isGeneratingGold = isGeneratingGold;
-            return this;
-        }
-
-        public StatsBuilder WithSpellCostReduction(float spellCostReduction)
-        {
-            _spellCostReduction = spellCostReduction;
-            return this;
-        }
-
-        public override Stats Build()
-        {
-            var instance = new Stats(_spellsEnabled, _isMagicImmune, _isInvulnerable, _isPhysicalImmune, _isLifestealImmune, _isTargetable, _isTargetableToTeam,
-                _actionState, _parType, _attackSpeedFlat, _healthPerLevel, _manaPerLevel, _adPerLevel, _armorPerLevel, _magicResistPerLevel, _healthRegenerationPerLevel,
-                _manaRegenerationPerLevel, _growthAttackSpeed, _manaCost, _abilityPower, _armor, _armorPenetration, _attackDamage, _attackSpeedMultiplier, _cooldownReduction,
-                _criticalChance, _criticalDamage, _goldPerSecond, _healthPoints, _healthRegeneration, _lifeSteal, _magicResist, _magicPenetration, _manaPoints, _manaRegeneration,
-                _moveSpeed, _range, _size, _spellVamp, _tenacity, _gold, _level, _experience, _currentHealth, _currentMana, _isGeneratingGold, _spellCostReduction);
+            var instance = new Lib.Domain.Entities.Stats.Stats(_spellsEnabled, _isTargetableToTeam, _actionState, _parType, _isMagicImmune, _isInvulnerable, _isPhysicalImmune, _isLifestealImmune, _isTargetable, _isGeneratingGold, _spellCostReduction, _goldTotal, _flatAttackSpeed, _flatHealthPoints, _flatManaPoints, _flatAttackDamange, _flatArmor, _flatMagicResist, _gold, _level, _experience, _abilityPower, _armor, _armorPenetration, _attackDamage, _attackSpeedMultiplier, _cooldownReduction, _criticalChance, _criticalDamage, _healthPoints, _healthRegeneration, _lifeSteal, _magicResist, _magicPenetration, _manaPoints, _manaRegeneration, _moveSpeed, _range, _size, _spellVamp, _tenacity);
 
             return instance;
         }

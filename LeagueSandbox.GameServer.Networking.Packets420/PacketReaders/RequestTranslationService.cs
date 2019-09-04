@@ -46,6 +46,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateIssueOrder(issueOrderRequest);
                 case WaypointAccRequest waypointAccRequest:
                     return TranslateWaypointAccRequest(waypointAccRequest);
+                case ReplicationConfirmRequest replicationConfirmRequest:
+                    return TranslateReplicationConfirmRequest(replicationConfirmRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
@@ -65,7 +67,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-
+        
         private GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest TranslateCharSelectedRequest(CharSelectedRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest();
@@ -147,6 +149,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         private GameServer.Core.RequestProcessing.Definitions.WaypointAccRequest TranslateWaypointAccRequest(WaypointAccRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.WaypointAccRequest(request.NetId, request.SyncID, request.TeleportCount);
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.ReplicationConfirmRequest TranslateReplicationConfirmRequest(ReplicationConfirmRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.ReplicationConfirmRequest(request.NetId, request.SyncID);
         }
     }
 }

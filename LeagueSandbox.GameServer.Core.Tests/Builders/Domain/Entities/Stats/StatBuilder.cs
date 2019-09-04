@@ -1,7 +1,7 @@
 ﻿using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
 
-namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
+namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
 {
     internal class StatBuilder : EntityBuilderBase<Stat>
     {
@@ -10,6 +10,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private float _baseValue = 3.0f;
         private float _percentBonus = 30.2f;
         private float _percentBaseBonus = 11.4f;
+        private bool _isUpdated = true;
 
         public StatBuilder WithBaseBonus(float baseBonus)
         {
@@ -41,9 +42,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
+        public StatBuilder WithIsUpdated(bool isUpdated)
+        {
+            _isUpdated = isUpdated;
+            return this;
+        }
+
         public override Stat Build()
         {
-            var instance = new Stat(_baseValue, _baseBonus, _percentBaseBonus, _flatBonus, _percentBonus);
+            var instance = new Stat(_baseValue, _baseBonus, _percentBaseBonus, _flatBonus, _percentBonus, _isUpdated);
 
             return instance;
         }

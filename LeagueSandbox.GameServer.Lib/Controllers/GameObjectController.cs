@@ -51,6 +51,7 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         public void UpdateObjects(float millisecondsDiff)
         {
             var movedObjects = new List<IGameObject>();
+            var statsUpdatedObjects = new List<IAttackableUnit>();
             var gameObjects = _gameObjectsCache.GetAllObjects();
             foreach (var gameObject in gameObjects)
             {
@@ -61,18 +62,32 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
                         movedObjects.Add(aiBase);
                 }
 
+                if (gameObject is IAttackableUnit attackableUnit)
+                {
+                    if (attackableUnit.Stats.IsStatsChanged())
+                        statsUpdatedObjects.Add(attackableUnit);
+                }
+
+                // AttackSpeedFlat = 0.625f / (1 + charData.AttackDelayOffsetPercent);
                 //TODO: Player - stats update, gold update, attack, attackmove, respawn timer, level up, death?, multikills, spells/projectiles, cc
                 //TODO: Minion - attack, move, cc
                 //TODO: Turret - attack, stat increase, hp regen
                 //TODO: Inhibitors - respawn, announces
             }
 
-            if (movedObjects.Count > 0)
+            if (movedObjects.Any())
             {
                 var mapCenter = _pathingService.GetMapCenter();
                 var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); // TODO: vision
                 _packetNotifier.NotifyWaypointGroup(targetSummonerIds, movedObjects, mapCenter);
                 movedObjects.ForEach(x => x.OnMovementDataSent());
+            }
+
+            if (statsUpdatedObjects.Any())
+            {
+                var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); // TODO: vision
+                _packetNotifier.NotifyReplication(targetSummonerIds, statsUpdatedObjects);
+                statsUpdatedObjects.ForEach(x => x.Stats.OnStatUpdateSent());
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeagueSandbox.GameServer.Core.Domain.Enums
+namespace LeagueSandbox.GameServer.Networking.Packets420.Enums
 {
     [Flags]
     public enum ActionState

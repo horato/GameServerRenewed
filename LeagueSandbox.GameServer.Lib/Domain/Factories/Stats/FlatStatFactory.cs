@@ -8,22 +8,22 @@ using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
 {
-    internal class StatFactory : EntityFactoryBase<Stat>, IStatFactory
+    internal class FlatStatFactory : EntityFactoryBase<FlatStat>, IFlatStatFactory
     {
-        public StatFactory(IUnityContainer unityContainer) : base(unityContainer)
+        public FlatStatFactory(IUnityContainer unityContainer) : base(unityContainer)
         {
         }
 
-        public IStat CreateEmpty()
+        public IFlatStat CreateEmpty()
         {
-            var instance = new Stat(0, 0, 0, 0, 0, false);
+            var instance = new FlatStat(false, 0, 0, 0);
 
             return SetupDependencies(instance);
         }
 
-        public IStat CreateNew(float baseValue, float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus)
+        public IFlatStat CreateNew(float currentValue, float bonusPerLevel, float regenerationPer5)
         {
-            var instance = new Stat(baseValue, baseBonus, percentBaseBonus, flatBonus, percentBonus, true);
+            var instance = new FlatStat(true, currentValue, bonusPerLevel, regenerationPer5);
 
             return SetupDependencies(instance);
         }

@@ -9,10 +9,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 {
     internal class WaypointGroup : BasePacket
     {
-        private readonly int _syncId;
+        private readonly uint _syncId;
         private readonly IList<MovementDataNormal> _movements;
 
-        public WaypointGroup(int syncId, IEnumerable<MovementDataNormal> movements) : base(PacketCmd.S2CWaypointGroup)
+        public WaypointGroup(uint syncId, IEnumerable<MovementDataNormal> movements) : base(PacketCmd.S2CWaypointGroup)
         {
             _syncId = syncId;
             _movements = movements?.ToList() ?? new List<MovementDataNormal>();
@@ -26,7 +26,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             if (count > 0x7FFF)
                 throw new InvalidOperationException("Too many movements");
 
-            WriteInt(_syncId);
+            WriteUInt(_syncId);
             WriteUShort((ushort)count);
             foreach (var data in _movements)
             {

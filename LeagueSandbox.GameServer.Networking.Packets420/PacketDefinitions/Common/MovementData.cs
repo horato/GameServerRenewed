@@ -7,9 +7,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
     internal abstract class MovementData
     {
         public abstract MovementDataType Type { get; }
-        public int SyncID { get; set; }
+        public uint SyncID { get; }
 
-        protected MovementData(int syncId)
+        protected MovementData(uint syncId)
         {
             SyncID = syncId;
         }

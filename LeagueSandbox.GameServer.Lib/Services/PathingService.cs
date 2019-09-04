@@ -100,7 +100,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
             // if all good, return path
             var temp = current;
-            while (temp.Parent != startNode && temp != null)
+            while (temp != null && temp.Parent != startNode)
             {
                 path.Push(temp);
                 temp = temp.Parent;

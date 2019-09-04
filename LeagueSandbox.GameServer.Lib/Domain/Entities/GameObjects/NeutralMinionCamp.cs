@@ -6,8 +6,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class NeutralMinionCamp : GameObject, INeutralMinionCamp
     {
-        public uint NetId { get; }
-
         //CampPosition
         //CampIcon
         //MinionIDs
@@ -15,9 +13,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //KnownToBeActive
         //SpawnEndTime
         //SpawnFinished
-        public NeutralMinionCamp(Team team, Vector3 position, uint netId) : base(team, position, 0)
+        public NeutralMinionCamp(Team team, Vector3 position, uint netId) : base(team, position, 0, netId)
         {
-            NetId = netId;
+
         }
     }
 }

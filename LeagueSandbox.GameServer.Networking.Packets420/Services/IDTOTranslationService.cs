@@ -12,6 +12,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
     {
         PlayerLoadInfo TranslatePlayerLoadInfo(IPlayer player);
         MovementData TranslateMovementData(MovementDataNormal movementData);
-        IEnumerable<MovementDataNormal> TranslateMovementUpdate(IEnumerable<IGameObject> gameObjects, int syncId, Vector2 mapCenter);
+        IEnumerable<MovementDataNormal> TranslateMovementUpdate(IEnumerable<IGameObject> gameObjects, uint syncId, Vector2 mapCenter);
+        IEnumerable<ReplicationData> TranslateReplicationData(IEnumerable<IAttackableUnit> gameObjects);
     }
 }

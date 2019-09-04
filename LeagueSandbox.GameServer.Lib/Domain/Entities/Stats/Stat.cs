@@ -4,6 +4,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
 {
     internal class Stat : IStat
     {
+        public bool IsUpdated { get; private set; }
+
         public float BaseBonus { get; private set; }
         public float FlatBonus { get; private set; }
         public float BaseValue { get; private set; }
@@ -11,13 +13,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public float PercentBaseBonus { get; private set; }
         public float Total => ((BaseValue + BaseBonus) * (1 + PercentBaseBonus) + FlatBonus) * (1 + PercentBonus);
 
-        public Stat(float baseValue, float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus)
+        public Stat(float baseValue, float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus, bool isUpdated)
         {
             BaseValue = baseValue;
             BaseBonus = baseBonus;
             PercentBaseBonus = percentBaseBonus;
             FlatBonus = flatBonus;
             PercentBonus = percentBonus;
+            IsUpdated = isUpdated;
         }
 
         public bool ApplyStatModifier(IStatModifier statModifier)
@@ -29,6 +32,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             PercentBaseBonus += statModifier.PercentBaseBonus;
             FlatBonus += statModifier.FlatBonus;
             PercentBonus += statModifier.PercentBonus;
+            IsUpdated = true;
 
             return true;
         }
@@ -42,8 +46,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             PercentBaseBonus -= statModifier.PercentBaseBonus;
             FlatBonus -= statModifier.FlatBonus;
             PercentBonus -= statModifier.PercentBonus;
+            IsUpdated = true;
 
             return true;
+        }
+
+        public void OnStatUpdateSent()
+        {
+            IsUpdated = false;
         }
     }
 }

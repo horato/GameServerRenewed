@@ -4,6 +4,7 @@ using System.Text;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.Enums
 {
+    [Flags]
     internal enum SpellFlags : uint
     {
         AutoCast = 0x2,

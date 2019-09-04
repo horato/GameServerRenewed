@@ -118,7 +118,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             WriteBool(_unknownIsHero);
 
             WriteByte((byte)_movementData.Type);
-            WriteInt(_movementData.SyncID);
+            WriteUInt(_movementData.SyncID);
             WriteBytes(_movementData.GetData());
         }
     }
