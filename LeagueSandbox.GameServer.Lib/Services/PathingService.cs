@@ -184,6 +184,9 @@ namespace LeagueSandbox.GameServer.Lib.Services
         /// <summary> Determines whether cell on map coordinates <param name="x">x</param> and <param name="y" >y</param> is passable. </summary>
         private bool IsWalkable(float x, float y)
         {
+            if (x < 0 || y < 0)
+                return false;
+
             var cell = GetCellFromMapCoordinates(x, y);
             if (cell == null)
                 return false;

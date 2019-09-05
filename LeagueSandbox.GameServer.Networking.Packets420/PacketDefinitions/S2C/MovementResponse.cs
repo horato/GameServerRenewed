@@ -54,7 +54,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
             if (data.Waypoints != null)
             {
-                WriteUInt(data.TeleportNetID);
+                WriteUInt(data.UnitNetId);
                 if (data.HasTeleportID)
                     WriteByte(data.TeleportID);
 

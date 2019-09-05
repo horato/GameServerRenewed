@@ -57,7 +57,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
 
             return new MovementData
             (
-                movementData.TeleportNetID,
+                movementData.UnitNetId,
                 movementData.HasTeleportID,
                 movementData.TeleportID,
                 movementData.SyncID,
@@ -78,7 +78,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 yield return new MovementDataNormal
                 (
                     syncId,
-                    0,
+                    gameObject.NetId,
                     false,
                     0,
                     TranslateGameObjectWaypoints(gameObject, mapCenter).ToList()

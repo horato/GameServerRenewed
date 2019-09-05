@@ -9,14 +9,14 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
     {
         public override MovementDataType Type => MovementDataType.Normal;
 
-        public uint TeleportNetID { get; set; }
+        public uint UnitNetId { get; set; }
         public bool HasTeleportID { get; set; }
         public byte TeleportID { get; set; }
         public IList<CompressedWaypoint> Waypoints { get; set; }
 
-        public MovementDataNormal(uint syncId, uint teleportNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints) : base(syncId)
+        public MovementDataNormal(uint syncId, uint unitNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints) : base(syncId)
         {
-            TeleportNetID = teleportNetId;
+            UnitNetId = unitNetId;
             HasTeleportID = hasTeleportId;
             TeleportID = teleportId;
             Waypoints = waypoints;
@@ -40,7 +40,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
                 writer.Write((byte)bitfield);
                 if (Waypoints != null)
                 {
-                    writer.Write((uint)TeleportNetID);
+                    writer.Write((uint)UnitNetId);
                     if (HasTeleportID)
                         writer.Write((byte)TeleportID);
 

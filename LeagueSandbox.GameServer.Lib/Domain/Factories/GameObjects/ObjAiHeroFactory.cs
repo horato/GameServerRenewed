@@ -29,7 +29,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             var stats = _statsFactory.CreateDefaultStats();
             var netId = _networkIdCreationService.GetNewNetId();
             //TODO: start location
-            var instance = new ObjAiHero(player.Team, new Vector3(33, 239, 0), stats, netId, player.SummonerId, clientId, player.IsBot, false, player.Champion, player.Skin, player.Summoner1, player.Summoner2);
+            var instance = new ObjAiHero(player.Team, new Vector3(33, 0, 239), stats, netId, player.SummonerId, clientId, player.IsBot, false, player.Champion, player.Skin, player.Summoner1, player.Summoner2);
 
             //TODO: load stats from champion file
             instance.Stats.AddModifier

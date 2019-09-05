@@ -240,7 +240,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             // TODO: Save unit waypoints in unit class so they can be used here for MovementDataNormal
             var md = new MovementDataStop
             (
-                0x0006E4CF, //TODO: generate real movement SyncId
+                (uint)Environment.TickCount,
                 unit.Position.ToVector2(),
                 new Vector2(0, 1)
             );
@@ -323,10 +323,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             ).GetBytes();
         }
 
-        public byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapCenter)
+        public byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapOffset)
         {
+            var objects = gameObjects.ToList();
             var syncId = (uint)Environment.TickCount;
-            var movements = _dtoTranslationService.TranslateMovementUpdate(gameObjects, syncId, mapCenter);
+            var movements = _dtoTranslationService.TranslateMovementUpdate(objects, syncId, mapOffset);
             return new WaypointGroup(syncId, movements).GetBytes();
         }
 

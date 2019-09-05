@@ -30,7 +30,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
             var from = currentPosition.ToVector2();
             var calculationResult = _calculationService.CalculateNewPosition(from, to, gameObject.Stats.MoveSpeed.Total, diff);
 
-            var newPosition = calculationResult.Result.ToVector3(currentPosition.Z);
+            var newPosition = calculationResult.Result.ToVector3(currentPosition.Y);
             gameObject.SetPosition(newPosition);
 
             if (!calculationResult.IsDestinationReached)

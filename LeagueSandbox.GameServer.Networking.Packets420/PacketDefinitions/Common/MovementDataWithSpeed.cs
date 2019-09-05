@@ -10,7 +10,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         public override MovementDataType Type => MovementDataType.WithSpeed;
         public SpeedParams SpeedParams { get; set; }
 
-        public MovementDataWithSpeed(uint syncId, uint teleportNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints, SpeedParams speedParams) : base(syncId, teleportNetId, hasTeleportId, teleportId, waypoints)
+        public MovementDataWithSpeed(uint syncId, uint unitNetId, bool hasTeleportId, byte teleportId, IList<CompressedWaypoint> waypoints, SpeedParams speedParams) : base(syncId, unitNetId, hasTeleportId, teleportId, waypoints)
         {
             SpeedParams = speedParams;
         }
@@ -33,7 +33,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
                 writer.Write((byte)bitfield);
                 if (Waypoints != null)
                 {
-                    writer.Write((uint)TeleportNetID);
+                    writer.Write((uint)UnitNetId);
                     if (HasTeleportID)
                         writer.Write((byte)TeleportID);
 
