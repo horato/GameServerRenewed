@@ -46,7 +46,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
                 uint secondaryIdArray = 0;
                 foreach (var fieldMask in masterMaskValuesPair.Value.Keys)
                 {
-                    primaryIdArray |= (byte)fieldMask;
+                    secondaryIdArray |= (uint)fieldMask;
                 }
 
                 WriteUInt(secondaryIdArray);
