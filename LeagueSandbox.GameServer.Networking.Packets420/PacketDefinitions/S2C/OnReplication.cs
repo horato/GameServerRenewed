@@ -33,7 +33,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         private void WriteReplicationData(ReplicationData data)
         {
             byte primaryIdArray = 0;
-            foreach (var kvp in data.Data.OrderBy(x => (byte)x.Key))
+            foreach (var kvp in data.Data)
             {
                 primaryIdArray |= (byte)kvp.Key;
             }
@@ -43,17 +43,17 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 
             foreach (var masterMaskValuesPair in data.Data.OrderBy(x => (byte)x.Key))
             {
-                var masterMask = masterMaskValuesPair.Key;
-                foreach (var fieldMaskValuePair in masterMaskValuesPair.Value)
+                uint secondaryIdArray = 0;
+                foreach (var fieldMask in masterMaskValuesPair.Value.Keys)
                 {
-                    var fieldMask = fieldMaskValuePair.Key;
-                    var statValue = fieldMaskValuePair.Value;
-                    var valueBytes = ConvertValueToByteArray(statValue);
-
-                    WriteUInt((uint)fieldMask);
-                    WriteByte((byte)valueBytes.Length);
-                    WriteBytes(valueBytes);
+                    primaryIdArray |= (byte)fieldMask;
                 }
+
+                WriteUInt(secondaryIdArray);
+
+                var values = masterMaskValuesPair.Value.OrderBy(x => (uint)x.Key).SelectMany(x => ConvertValueToByteArray(x.Value)).ToArray();
+                WriteByte((byte)values.Length);
+                WriteBytes(values);
             }
         }
 
@@ -62,30 +62,68 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             switch (value)
             {
                 case bool b:
-                    return BitConverter.GetBytes(b);
+                    return PackUInt32(b ? 1u : 0u);
                 case sbyte sb:
-                    return BitConverter.GetBytes(sb);
+                    return PackInt32(sb);
                 case byte b:
-                    return BitConverter.GetBytes(b);
+                    return PackUInt32(b);
                 case short s:
-                    return BitConverter.GetBytes(s);
+                    return PackInt32(s);
                 case ushort us:
-                    return BitConverter.GetBytes(us);
+                    return PackUInt32(us);
                 case int i:
-                    return BitConverter.GetBytes(i);
+                    return PackInt32(i);
                 case uint ui:
-                    return BitConverter.GetBytes(ui);
-                case long l:
-                    return BitConverter.GetBytes(l);
-                case ulong ul:
-                    return BitConverter.GetBytes(ul);
+                    return PackUInt32(ui);
                 case float f:
-                    return BitConverter.GetBytes(f);
-                case double d:
-                    return BitConverter.GetBytes(d);
+                    return PackFloat(f);
+                case double _:
+                case long _:
+                case ulong _:
+                    throw new InvalidOperationException("Long/ULong/Double values are not supported.");
                 default:
                     throw new ArgumentOutOfRangeException(nameof(value), value, "This stat value is not supported");
             }
+        }
+
+        private byte[] PackUInt32(uint data)
+        {
+            var result = new List<byte>();
+            var num = data;
+            while (num >= 0x80)
+            {
+                result.Add((byte)(num | 0x80));
+                num >>= 7;
+            }
+
+            result.Add((byte)num);
+            return result.ToArray();
+        }
+
+        private byte[] PackInt32(int data)
+        {
+            return PackUInt32((uint)data);
+        }
+
+        private byte[] PackFloat(float data)
+        {
+            var bytes = BitConverter.GetBytes(data);
+            if (!BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(bytes);
+            }
+
+            if (bytes[0] == 0 && bytes[1] == 0 && bytes[2] == 0 && bytes[3] == 0)
+            {
+                return new byte[] { 0xFF };
+            }
+
+            if (bytes[0] >= 0xFE)
+            {
+                return new byte[] { 0xFE }.Concat(bytes).ToArray();
+            }
+
+            return bytes;
         }
     }
 }
