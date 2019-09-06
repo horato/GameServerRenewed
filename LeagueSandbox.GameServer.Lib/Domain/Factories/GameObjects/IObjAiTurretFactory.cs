@@ -4,8 +4,8 @@ using LeagueSandbox.GameServer.Utils.MapObjects;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
 {
-    internal interface IObjTurretFactory
+    internal interface IObjAiTurretFactory
     {
-        IObjTurret CreateFromMapObject(MapObject obj);
+        IObjAiTurret CreateFromMapObject(MapObject obj);
     }
 }

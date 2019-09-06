@@ -26,7 +26,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         public ILevelPropAI CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            var instance = new LevelPropAI(obj.Team, obj.Position, stats, obj.NetId, string.Empty, 0, 1200, obj.Scale, obj.Rotation, obj.Name);
+            var instance = new LevelPropAI(obj.Team, obj.Position, stats, obj.NetId, string.Empty, 0, 1200, new Vector3(0, 0, 0), obj.Rotation, obj.Scale, obj.Name);
 
             return SetupDependencies(instance);
         }

@@ -178,8 +178,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 turret.NetId,
                 NetNodeID.Spawned,
                 turret.SkinName,
-                true,
-                SpellFlags.TargetableToAll
+                turret.Stats.IsTargetable,
+                _enumTranslationService.TranslateSpellFlags(turret.Stats.IsTargetableToTeam)
             ).GetBytes();
         }
 
@@ -216,7 +216,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 levelProp.Position,
                 levelProp.FacingDirection,
                 levelProp.PositionOffset,
-                new Vector3(1, 1, 1),
+                levelProp.Scale,
                 _enumTranslationService.TranslateTeam(levelProp.Team),
                 0,
                 0,

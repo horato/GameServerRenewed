@@ -9,12 +9,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
     {
         public Vector3 FacingDirection { get; }
         public Vector3 PositionOffset { get; }
+        public Vector3 Scale { get; }
         public string Name { get; }
 
-        public LevelPropAI(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, Vector3 facingDirection, Vector3 positionOffset, string name) : base(team, position, stats, netId, skinName, skinId, visionRadius)
+        public LevelPropAI(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, Vector3 facingDirection, Vector3 positionOffset, Vector3 scale, string name) : base(team, position, stats, netId, skinName, skinId, visionRadius)
         {
             FacingDirection = facingDirection;
             PositionOffset = positionOffset;
+            Scale = scale;
             Name = name;
         }
     }

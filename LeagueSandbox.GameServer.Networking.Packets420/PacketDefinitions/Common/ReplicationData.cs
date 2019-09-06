@@ -8,9 +8,9 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
     internal class ReplicationData
     {
         public uint UnitNetID { get; }
-        public IDictionary<MasterMask, IDictionary<FieldMask, object>> Data { get; }
+        public IDictionary<MasterMask, IDictionary<Enum, object>> Data { get; }
 
-        public ReplicationData(uint unitNetId, IDictionary<MasterMask, IDictionary<FieldMask, object>> data)
+        public ReplicationData(uint unitNetId, IDictionary<MasterMask, IDictionary<Enum, object>> data)
         {
             UnitNetID = unitNetId;
             Data = data;

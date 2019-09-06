@@ -3,7 +3,7 @@
 namespace LeagueSandbox.GameServer.Core.Domain.Enums
 {
     [Flags]
-    public enum ActionState
+    public enum ActionState : uint
     {
         CanAttack = 1 << 0,
         CanCast = 1 << 1,

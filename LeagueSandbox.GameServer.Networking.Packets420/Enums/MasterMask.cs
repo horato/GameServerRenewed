@@ -6,6 +6,7 @@
         Two = 0x02,
         Three = 0x04,
         Four = 0x08,
-        Five = 0x10
+        Five = 0x10,
+        Six = 0x20
     }
 }

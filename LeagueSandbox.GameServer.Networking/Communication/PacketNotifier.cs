@@ -212,7 +212,8 @@ namespace LeagueSandbox.GameServer.Networking.Communication
 
         public void NotifyReplication(IEnumerable<ulong> targetSummonerIds, IEnumerable<IAttackableUnit> gameObjects)
         {
-            foreach (var subSet in gameObjects.Batch(0xFE))
+            var batches = gameObjects.Where(IsReplicating).Batch(0xFF);
+            foreach (var subSet in batches)
             {
                 var data = _packetWriter.WriteReplication(subSet);
                 foreach (var targetSummonerId in targetSummonerIds)
@@ -220,6 +221,27 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                     var targetUser = _usersCache.GetUser(targetSummonerId);
                     SendPacket(targetUser, data, Channel.Broadcast);
                 }
+            }
+        }
+
+        private bool IsReplicating(IAttackableUnit unit)
+        {
+            switch (unit)
+            {
+                case IObjAiHero _:
+                case IObjAnimatedBuilding _:
+                case IObjAiTurret _:
+                case IObjAiMinion _:
+                    return true;
+                case ILevelPropAI _:
+                case IObjAiBase _:
+                case IObjBarracks _:
+                case IObjShop _:
+                case IObjSpawnPoint _:
+                case IObjBuilding _:
+                    return false;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(unit), unit, null);
             }
         }
 

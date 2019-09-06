@@ -22,7 +22,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain
             container.RegisterType<IObjShopFactory, ObjShopFactory>();
             container.RegisterType<IObjBarracksFactory, ObjBarracksFactory>();
             container.RegisterType<IObjHQFactory, ObjHQFactory>();
-            container.RegisterType<IObjTurretFactory, ObjTurretFactory>();
+            container.RegisterType<IObjAiTurretFactory, ObjAiTurretFactory>();
             container.RegisterType<ILevelPropAIFactory, LevelPropAIFactory>();
         }
     }

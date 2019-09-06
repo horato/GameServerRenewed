@@ -5,13 +5,13 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
     /// <summary> Used for Obj_Ai_Turret </summary>
     internal class CreateTurret : BasePacket
     {
-        private uint _netId;
-        private NetNodeID _netNodeId;
-        private string _name;
-        private bool _isTargetable;
-        private SpellFlags _isTargetableToTeam;
+        private readonly uint _netId;
+        private readonly NetNodeID _netNodeId;
+        private readonly string _name;
+        private readonly bool _isTargetable;
+        private readonly SpellFlags _isTargetableToTeam;
 
-        public CreateTurret(uint netId, NetNodeID netNodeId, string name, bool isTargetable, SpellFlags isTargetableToTeam) : base(PacketCmd.S2CCreateTurret)
+        public CreateTurret(uint netId, NetNodeID netNodeId, string name, bool isTargetable, SpellFlags isTargetableToTeam) : base(PacketCmd.S2CCreateTurret, netId)
         {
             _netId = netId;
             _netNodeId = netNodeId;

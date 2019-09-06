@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.Enums
 {
-    public enum FieldMask : uint
+    public enum ObjAiHeroFieldMask : uint
     {
         FM1_Gold = 1 << 0,
         FM1_Gold_Total = 1 << 1,

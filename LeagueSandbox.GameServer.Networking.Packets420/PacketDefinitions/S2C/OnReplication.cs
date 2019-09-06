@@ -46,12 +46,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
                 uint secondaryIdArray = 0;
                 foreach (var fieldMask in masterMaskValuesPair.Value.Keys)
                 {
-                    secondaryIdArray |= (uint)fieldMask;
+                    secondaryIdArray |= (uint)Convert.ToUInt32(fieldMask);
                 }
 
                 WriteUInt(secondaryIdArray);
 
-                var values = masterMaskValuesPair.Value.OrderBy(x => (uint)x.Key).SelectMany(x => ConvertValueToByteArray(x.Value)).ToArray();
+                var values = masterMaskValuesPair.Value.OrderBy(x => (uint)Convert.ToUInt32(x.Key)).SelectMany(x => ConvertValueToByteArray(x.Value)).ToArray();
                 WriteByte((byte)values.Length);
                 WriteBytes(values);
             }

@@ -6,6 +6,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
     {
         Vector3 FacingDirection { get; }
         Vector3 PositionOffset { get; }
+        Vector3 Scale { get; }
         string Name { get; }
     }
 }

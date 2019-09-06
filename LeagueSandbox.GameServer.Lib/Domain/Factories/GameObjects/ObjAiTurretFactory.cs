@@ -14,19 +14,23 @@ using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
 {
-    internal class ObjTurretFactory : EntityFactoryBase<ObjTurret>, IObjTurretFactory
+    internal class ObjAiTurretFactory : EntityFactoryBase<ObjAiTurret>, IObjAiTurretFactory
     {
         private readonly IStatsFactory _statsFactory;
 
-        public ObjTurretFactory(IUnityContainer unityContainer, IStatsFactory statsFactory) : base(unityContainer)
+        public ObjAiTurretFactory(IUnityContainer unityContainer, IStatsFactory statsFactory) : base(unityContainer)
         {
             _statsFactory = statsFactory;
         }
 
-        public IObjTurret CreateFromMapObject(MapObject obj)
+        public IObjAiTurret CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            var instance = new ObjTurret(obj.Team, obj.Position, stats, obj.NetId);
+
+            stats.HealthPoints.ApplyStatModifier(new StatModifier(200, 0, 0, 0));
+            stats.FlatHealthPoints.ApplyStatModifier(new FlatStatModifier(200, 0, 0));
+
+            var instance = new ObjAiTurret(obj.Team, obj.Position, stats, obj.NetId, obj.Name, 0);
 
             return SetupDependencies(instance);
         }
