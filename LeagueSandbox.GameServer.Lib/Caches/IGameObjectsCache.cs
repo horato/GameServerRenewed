@@ -7,9 +7,9 @@ namespace LeagueSandbox.GameServer.Lib.Caches
 {
     internal interface IGameObjectsCache
     {
-        void Add(ulong summonerId, IGameObject gameObject);
-        bool UserExists(ulong summonerId);
-        IGameObject GetObject(ulong summonerId);
+        void Add(uint netId, IGameObject gameObject);
+        bool UserExists(uint netId);
+        IGameObject GetObject(uint netId);
         IEnumerable<IGameObject> GetAllObjects();
         IEnumerable<IGameObject> FindByCriteria(Func<IGameObject, bool> criteria);
     }

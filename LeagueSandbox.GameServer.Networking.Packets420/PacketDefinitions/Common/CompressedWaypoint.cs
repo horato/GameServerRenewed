@@ -103,8 +103,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
             writer.Write(flagsBuffer);
             writer.Write((short)data[0].X);
             writer.Write((short)data[0].Y);
-
-            Console.WriteLine($"{data[0].X}:{data[0].Y}");
             for (int i = 1, flag = 0; i < size; i++)
             {
                 if (flags[flag])

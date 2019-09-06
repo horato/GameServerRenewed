@@ -3,7 +3,7 @@ using System.Linq;
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.RequestProcessing.DTOs;
 
-namespace LeagueSandbox.GameServer.Lib.Services
+namespace LeagueSandbox.GameServer.Core.Services
 {
     internal class CoordinatesTranslationService : ICoordinatesTranslationService
     {

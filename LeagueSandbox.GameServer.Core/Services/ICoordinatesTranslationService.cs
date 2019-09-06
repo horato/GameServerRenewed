@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
 using LeagueSandbox.GameServer.Core.RequestProcessing.DTOs;
 
-namespace LeagueSandbox.GameServer.Lib.Services
+namespace LeagueSandbox.GameServer.Core.Services
 {
     /// <summary>
     /// Some coordinates are translated to have 0,0 at the center of the map probably becuase of packet size.

@@ -32,7 +32,7 @@ namespace LeagueSandbox.GameServer.Lib
             InitializeDependencyInjection();
             InitializeNetworking(config);
             InitializePathing(config);
-            InitializePlayers(config);
+            InitializeGameObjects(config);
             InitializeGameController(config);
         }
 
@@ -77,12 +77,12 @@ namespace LeagueSandbox.GameServer.Lib
             _container.RegisterInstance<IPathingService>(service);
         }
 
-        private void InitializePlayers(StartupConfig config)
+        private void InitializeGameObjects(StartupConfig config)
         {
             LoggerProvider.GetLogger().Info("Initializing GameObjectController");
 
             var controller = _container.Resolve<GameObjectController>();
-            controller.InitializePlayers(config.Players);
+            controller.InitializeGameObjects(config.Players, config.Map);
             _container.RegisterInstance<IGameObjectController>(controller);
         }
 

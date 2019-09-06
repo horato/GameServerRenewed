@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using LeagueSandbox.GameServer.Core.DependencyInjection;
-using LeagueSandbox.GameServer.Lib.Services;
+using LeagueSandbox.GameServer.Core.Services;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Core

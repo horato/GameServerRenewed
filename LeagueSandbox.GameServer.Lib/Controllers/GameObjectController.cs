@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
+using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Lib.Services;
 
 namespace LeagueSandbox.GameServer.Lib.Controllers
@@ -24,8 +26,9 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         private readonly IMovementService _movementService;
         private readonly IPacketNotifier _packetNotifier;
         private readonly IPathingService _pathingService;
+        private readonly IMapObjectsProvider _mapObjectsProvider;
 
-        public GameObjectController(IGameObjectsCache gameObjectsCache, IPlayerCache playerCache, IPlayerFactory playerFactory, IObjAiHeroFactory objAiHeroFactory, IClientIdCreationService clientIdCreationService, IMovementService movementService, IPacketNotifier packetNotifier, IPathingService pathingService)
+        public GameObjectController(IGameObjectsCache gameObjectsCache, IPlayerCache playerCache, IPlayerFactory playerFactory, IObjAiHeroFactory objAiHeroFactory, IClientIdCreationService clientIdCreationService, IMovementService movementService, IPacketNotifier packetNotifier, IPathingService pathingService, IMapObjectsProvider mapObjectsProvider)
         {
             _gameObjectsCache = gameObjectsCache;
             _playerCache = playerCache;
@@ -35,16 +38,23 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
             _movementService = movementService;
             _packetNotifier = packetNotifier;
             _pathingService = pathingService;
+            _mapObjectsProvider = mapObjectsProvider;
         }
 
-        public void InitializePlayers(IEnumerable<StartupPlayer> players)
+        public void InitializeGameObjects(IEnumerable<StartupPlayer> players, MapType map)
         {
             foreach (var startupPlayer in players)
             {
                 var champion = _objAiHeroFactory.CreateFromStartupPlayer(startupPlayer, _clientIdCreationService.GetNewId());
                 var player = _playerFactory.CreateFromStartupPlayer(startupPlayer, champion);
-                _gameObjectsCache.Add(player.SummonerId, player.Champion);
+                _gameObjectsCache.Add(player.Champion.NetId, player.Champion);
                 _playerCache.Add(player.SummonerId, player);
+            }
+
+            var objects = _mapObjectsProvider.ProvideStaticGameObjectsForMap(map);
+            foreach (var gameObject in objects)
+            {
+                _gameObjectsCache.Add(gameObject.NetId, gameObject);
             }
         }
 

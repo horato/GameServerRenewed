@@ -8,7 +8,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.DTOs;
-using LeagueSandbox.GameServer.Lib.Services;
+using LeagueSandbox.GameServer.Core.Services;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;

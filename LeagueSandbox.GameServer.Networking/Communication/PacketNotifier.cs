@@ -12,6 +12,7 @@ using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Core.Encryption;
 using LeagueSandbox.GameServer.Networking.Core.Enums;
 using LeagueSandbox.GameServer.Networking.Users;
+using MoreLinq.Extensions;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Networking.Communication
@@ -211,11 +212,14 @@ namespace LeagueSandbox.GameServer.Networking.Communication
 
         public void NotifyReplication(IEnumerable<ulong> targetSummonerIds, IEnumerable<IAttackableUnit> gameObjects)
         {
-            var data = _packetWriter.WriteReplication(gameObjects);
-            foreach (var targetSummonerId in targetSummonerIds)
+            foreach (var subSet in gameObjects.Batch(0xFE))
             {
-                var targetUser = _usersCache.GetUser(targetSummonerId);
-                SendPacket(targetUser, data, Channel.Broadcast);
+                var data = _packetWriter.WriteReplication(subSet);
+                foreach (var targetSummonerId in targetSummonerIds)
+                {
+                    var targetUser = _usersCache.GetUser(targetSummonerId);
+                    SendPacket(targetUser, data, Channel.Broadcast);
+                }
             }
         }
 

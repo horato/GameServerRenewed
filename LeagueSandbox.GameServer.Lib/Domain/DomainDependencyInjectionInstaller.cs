@@ -19,6 +19,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain
             container.RegisterType<IStatModifierFactory, StatModifierFactory>();
             container.RegisterType<IFlatStatModifierFactory, FlatStatModifierFactory>();
             container.RegisterType<IObjAiHeroFactory, ObjAiHeroFactory>();
+            container.RegisterType<IObjShopFactory, ObjShopFactory>();
+            container.RegisterType<IObjBarracksFactory, ObjBarracksFactory>();
+            container.RegisterType<IObjHQFactory, ObjHQFactory>();
+            container.RegisterType<IObjTurretFactory, ObjTurretFactory>();
+            container.RegisterType<ILevelPropAIFactory, LevelPropAIFactory>();
         }
     }
 }

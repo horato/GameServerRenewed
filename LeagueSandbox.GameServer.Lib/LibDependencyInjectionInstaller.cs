@@ -2,6 +2,7 @@
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Lib.Maths;
+using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Lib.Services;
 using Unity;
 
@@ -18,6 +19,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<IClientIdCreationService, ClientIdCreationService>();
             container.RegisterType<IMovementService, MovementService>();
             container.RegisterType<ICalculationService, CalculationService>();
+            container.RegisterType<IMapObjectsProvider, MapObjectsProvider>();
         }
     }
 }

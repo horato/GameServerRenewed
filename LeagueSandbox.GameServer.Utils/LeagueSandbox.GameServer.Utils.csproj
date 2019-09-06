@@ -5,6 +5,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\Maps\10\AIPath.aimesh_ngrid" />
+    <None Remove="Data\Maps\11\AIPath.aimesh_ngrid" />
+    <None Remove="Data\Maps\12\AIPath.aimesh_ngrid" />
+    <None Remove="Data\Maps\1\AIPath.aimesh_ngrid" />
+    <None Remove="Data\Maps\1\MapObjects.json" />
+    <None Remove="Data\Maps\8\AIPath.aimesh_ngrid" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Maps\10\AIPath.aimesh_ngrid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Maps\11\AIPath.aimesh_ngrid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Maps\12\AIPath.aimesh_ngrid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Maps\1\AIPath.aimesh_ngrid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Maps\1\MapObjects.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Maps\8\AIPath.aimesh_ngrid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LeagueSandbox.GameServer.Core\LeagueSandbox.GameServer.Core.csproj" />
   </ItemGroup>
 

@@ -1,22 +1,17 @@
 ﻿using System;
 using System.IO;
 using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Utils.NavGrid
 {
     public class NavGridReader
     {
-        public static NavGrid ReadBinary(string filePath)
+        public static NavGrid ReadBinary(MapType mapId)
         {
+            var filePath = $"Data/Maps/{MapIdHelper.TranslateMapId(mapId)}/AIPath.aimesh_ngrid";
             using (var file = File.Open(filePath, FileMode.Open, FileAccess.Read))
             using (var b = new NavBinaryReader(file))
-                return ReadData(b);
-        }
-
-        public static NavGrid ReadBinary(byte[] fileBytes)
-        {
-            using (var stream = new MemoryStream(fileBytes))
-            using (var b = new NavBinaryReader(stream))
                 return ReadData(b);
         }
 

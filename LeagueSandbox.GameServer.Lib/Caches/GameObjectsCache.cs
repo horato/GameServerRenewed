@@ -8,27 +8,27 @@ namespace LeagueSandbox.GameServer.Lib.Caches
 {
     internal class GameObjectsCache : IGameObjectsCache
     {
-        private readonly IDictionary<ulong, IGameObject> _gameObjects = new ConcurrentDictionary<ulong, IGameObject>();
+        private readonly IDictionary<uint, IGameObject> _gameObjects = new ConcurrentDictionary<uint, IGameObject>();
 
-        public void Add(ulong summonerId, IGameObject gameObject)
+        public void Add(uint netId, IGameObject gameObject)
         {
-            if (UserExists(summonerId))
-                throw new InvalidOperationException($"Object {summonerId} already exists");
+            if (UserExists(netId))
+                throw new InvalidOperationException($"Object {netId} already exists");
 
-            _gameObjects.Add(summonerId, gameObject);
+            _gameObjects.Add(netId, gameObject);
         }
 
-        public bool UserExists(ulong summonerId)
+        public bool UserExists(uint netId)
         {
-            return _gameObjects.ContainsKey(summonerId);
+            return _gameObjects.ContainsKey(netId);
         }
 
-        public IGameObject GetObject(ulong summonerId)
+        public IGameObject GetObject(uint netId)
         {
-            if (!UserExists(summonerId))
-                throw new InvalidOperationException($"Object {summonerId} does not exist.");
+            if (!UserExists(netId))
+                throw new InvalidOperationException($"Object {netId} does not exist.");
 
-            return _gameObjects[summonerId];
+            return _gameObjects[netId];
         }
 
         public IEnumerable<IGameObject> GetAllObjects()
