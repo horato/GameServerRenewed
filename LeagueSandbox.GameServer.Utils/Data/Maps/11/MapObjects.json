@@ -1,0 +1,3812 @@
+[
+  {
+    "Name": "chaosShop01",
+    "Hash": 1705383694,
+    "NetId": 4289074958,
+    "SkinId": 0,
+    "Position": {
+      "X": 13744.1572,
+      "Y": 179.0213,
+      "Z": 14822.3662
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Shop",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "orderShop01",
+    "Hash": 571524827,
+    "NetId": 4279289563,
+    "SkinId": 0,
+    "Position": {
+      "X": 208.3053,
+      "Y": 136.4133,
+      "Z": 1297.36157
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Shop",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop8",
+    "Hash": 855023520,
+    "NetId": 4294352800,
+    "SkinId": 0,
+    "Position": {
+      "X": 11793.6826,
+      "Y": 43.78664,
+      "Z": 7372.605
+    },
+    "Rotation": {
+      "X": -0.7624031,
+      "Y": -145.2645,
+      "Z": 2.08630633
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard10",
+    "Hash": 4250181046,
+    "NetId": 4283735478,
+    "SkinId": 0,
+    "Position": {
+      "X": 10761.9414,
+      "Y": 262.4519,
+      "Z": 14473.7705
+    },
+    "Rotation": {
+      "X": -96.73441,
+      "Y": -67.7324142,
+      "Z": 97.87612
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Barracks_T1_L1",
+    "Hash": 3587324990,
+    "NetId": 4291968062,
+    "SkinId": 0,
+    "Position": {
+      "X": 1171.82849,
+      "Y": 91.8013458,
+      "Z": 3571.784
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -89.99999,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Barrack",
+    "SkinName": "SRUAP_OrderInhibitor",
+    "HqData": null,
+    "BarracksData": {
+      "MaxHP": 3000.0,
+      "BaseStaticHPRegen": 15.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 105.0,
+      "SelectionRadius": 197.0,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_OrderInhibitor",
+      "SkinName2": "SRUAP_OrderInhibitor_Rubble",
+      "PathfindingCollisionRadius": 187.15
+    }
+  },
+  {
+    "Name": "__NAV_C06",
+    "Hash": 1372133858,
+    "NetId": 4291369442,
+    "SkinId": 0,
+    "Position": {
+      "X": 5823.8,
+      "Y": 87.78894,
+      "Z": 5928.04736
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5005574,
+      "Y": 0.5005574,
+      "Z": 0.5005574
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop9",
+    "Hash": 1173466934,
+    "NetId": 4294029110,
+    "SkinId": 0,
+    "Position": {
+      "X": 9394.181,
+      "Y": -73.8051,
+      "Z": 6374.51
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -265.183929,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail9",
+    "Hash": 173359386,
+    "NetId": 4283777306,
+    "SkinId": 0,
+    "Position": {
+      "X": 4141.109,
+      "Y": 97.97998,
+      "Z": 2237.70825
+    },
+    "Rotation": {
+      "X": -122.420677,
+      "Y": -82.60841,
+      "Z": 122.509758
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop10",
+    "Hash": 4093456671,
+    "NetId": 4294783263,
+    "SkinId": 0,
+    "Position": {
+      "X": 11801.3936,
+      "Y": 106.382637,
+      "Z": 6318.2627
+    },
+    "Rotation": {
+      "X": -175.879089,
+      "Y": -13.7604294,
+      "Z": 176.897156
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse1",
+    "Hash": 337759067,
+    "NetId": 4280404827,
+    "SkinId": 0,
+    "Position": {
+      "X": 2213.77344,
+      "Y": 166.209991,
+      "Z": 6963.584
+    },
+    "Rotation": {
+      "X": -41.06179,
+      "Y": 71.1862,
+      "Z": -27.871542
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail7",
+    "Hash": 3991759901,
+    "NetId": 4293749789,
+    "SkinId": 0,
+    "Position": {
+      "X": 4701.505,
+      "Y": 97.24113,
+      "Z": 770.369141
+    },
+    "Rotation": {
+      "X": -177.427,
+      "Y": -6.15169144,
+      "Z": 179.900833
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_bird1",
+    "Hash": 616990007,
+    "NetId": 4291200311,
+    "SkinId": 0,
+    "Position": {
+      "X": 1507.258,
+      "Y": 413.541626,
+      "Z": -308.487244
+    },
+    "Rotation": {
+      "X": 1.433609,
+      "Y": 46.41291,
+      "Z": 6.451541
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_bird",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_03_A",
+    "Hash": 475476485,
+    "NetId": 4283904517,
+    "SkinId": 0,
+    "Position": {
+      "X": 3651.90161,
+      "Y": 91.00576,
+      "Z": 3696.424
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard8",
+    "Hash": 1087505576,
+    "NetId": 4291953832,
+    "SkinId": 0,
+    "Position": {
+      "X": 4882.003,
+      "Y": 209.627274,
+      "Z": 12030.8
+    },
+    "Rotation": {
+      "X": 7.925711,
+      "Y": 48.3444862,
+      "Z": 24.4867554
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R03",
+    "Hash": 1011295274,
+    "NetId": 4282852394,
+    "SkinId": 0,
+    "Position": {
+      "X": 4844.017,
+      "Y": 112.587433,
+      "Z": 1440.12769
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.594916165,
+      "Y": 0.594916165,
+      "Z": 0.594916165
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Barracks_T1_C1",
+    "Hash": 1380589809,
+    "NetId": 4283048177,
+    "SkinId": 0,
+    "Position": {
+      "X": 3203.02856,
+      "Y": 92.20078,
+      "Z": 3208.784
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -44.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Barrack",
+    "SkinName": "SRUAP_OrderInhibitor",
+    "HqData": null,
+    "BarracksData": {
+      "MaxHP": 3000.0,
+      "BaseStaticHPRegen": 15.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 115.0,
+      "SelectionRadius": 225.0,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_OrderInhibitor",
+      "SkinName2": "SRUAP_OrderInhibitor_Rubble",
+      "PathfindingCollisionRadius": 186.7707
+    }
+  },
+  {
+    "Name": "__NAV_R08",
+    "Hash": 2878733730,
+    "NetId": 4288019874,
+    "SkinId": 0,
+    "Position": {
+      "X": 11432.127,
+      "Y": 17.4105759,
+      "Z": 1472.95984
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R012",
+    "Hash": 4083438205,
+    "NetId": 4284764797,
+    "SkinId": 0,
+    "Position": {
+      "X": 13751.5254,
+      "Y": -7.06369257,
+      "Z": 4790.221
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C010",
+    "Hash": 4123984811,
+    "NetId": 4291756971,
+    "SkinId": 0,
+    "Position": {
+      "X": 8079.61865,
+      "Y": 147.795883,
+      "Z": 8022.976
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_C_04_A",
+    "Hash": 78107912,
+    "NetId": 4289189128,
+    "SkinId": 0,
+    "Position": {
+      "X": 9767.701,
+      "Y": 38.0,
+      "Z": 10113.6084
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard4",
+    "Hash": 1231308931,
+    "NetId": 4284762243,
+    "SkinId": 0,
+    "Position": {
+      "X": 8395.145,
+      "Y": 157.3293,
+      "Z": 10579.1543
+    },
+    "Rotation": {
+      "X": -6.70663834,
+      "Y": 29.3864613,
+      "Z": -8.965001
+    },
+    "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_L_03_A",
+    "Hash": 1144267347,
+    "NetId": 4281606739,
+    "SkinId": 0,
+    "Position": {
+      "X": 981.283447,
+      "Y": 26.8138981,
+      "Z": 10441.4541
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -39.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Barracks_T2_L1",
+    "Hash": 3345454032,
+    "NetId": 4284978128,
+    "SkinId": 0,
+    "Position": {
+      "X": 11261.665,
+      "Y": 88.54757,
+      "Z": 13676.5635
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 89.99999,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Barrack",
+    "SkinName": "SRUAP_ChaosInhibitor",
+    "HqData": null,
+    "BarracksData": {
+      "MaxHP": 5500.0,
+      "BaseStaticHPRegen": 15.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 108.0,
+      "SelectionRadius": 225.0,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_ChaosInhibitor",
+      "SkinName2": "SRUAP_ChaosInhibitor_Rubble",
+      "PathfindingCollisionRadius": 213.75
+    }
+  },
+  {
+    "Name": "__P_Chaos_Spawn_Barracks__C01",
+    "Hash": 2042233064,
+    "NetId": 4290380008,
+    "SkinId": 0,
+    "Position": {
+      "X": 12776.2646,
+      "Y": 110.785263,
+      "Z": 12784.752
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "BarrackSpawn",
+    "SkinName": "ChaosBarracks_Wizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail4",
+    "Hash": 1961115047,
+    "NetId": 4293148071,
+    "SkinId": 0,
+    "Position": {
+      "X": 5958.451,
+      "Y": 140.5533,
+      "Z": 4784.142
+    },
+    "Rotation": {
+      "X": -177.756287,
+      "Y": -78.3541641,
+      "Z": 178.486664
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__P_Order_Spawn_Barracks__L01",
+    "Hash": 1122711116,
+    "NetId": 4293604940,
+    "SkinId": 0,
+    "Position": {
+      "X": 1109.416,
+      "Y": 124.578812,
+      "Z": 2091.56738
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "BarrackSpawn",
+    "SkinName": "OrderBarracks_Wizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L03",
+    "Hash": 721398352,
+    "NetId": 4294945360,
+    "SkinId": 0,
+    "Position": {
+      "X": 1382.25513,
+      "Y": 92.2903442,
+      "Z": 4910.18066
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.590027869,
+      "Y": 0.590027869,
+      "Z": 0.590027869
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_04_A",
+    "Hash": 2184423334,
+    "NetId": 4281575334,
+    "SkinId": 0,
+    "Position": {
+      "X": 5048.07031,
+      "Y": 43.5184021,
+      "Z": 4812.89355
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -3.99999976,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L05",
+    "Hash": 3281784677,
+    "NetId": 4288417637,
+    "SkinId": 0,
+    "Position": {
+      "X": 1207.79456,
+      "Y": 13.0808363,
+      "Z": 7787.871
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5986108,
+      "Y": 0.5986108,
+      "Z": 0.5986108
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_bird",
+    "Hash": 2102190564,
+    "NetId": 4283228644,
+    "SkinId": 0,
+    "Position": {
+      "X": 12418.9229,
+      "Y": 141.626678,
+      "Z": 4051.25659
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -199.928558,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_bird",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_C_03_A",
+    "Hash": 2596487339,
+    "NetId": 4290986155,
+    "SkinId": 0,
+    "Position": {
+      "X": 11134.8145,
+      "Y": 88.0,
+      "Z": 11207.9385
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_R_01_A",
+    "Hash": 2624065917,
+    "NetId": 4285010301,
+    "SkinId": 0,
+    "Position": {
+      "X": 13624.748,
+      "Y": 88.0,
+      "Z": 10572.7715
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -44.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse6",
+    "Hash": 2319802104,
+    "NetId": 4282736376,
+    "SkinId": 0,
+    "Position": {
+      "X": 2054.26562,
+      "Y": 50.50199,
+      "Z": 5703.99561
+    },
+    "Rotation": {
+      "X": -11.7857981,
+      "Y": -191.391266,
+      "Z": 3.62709856
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Barracks_T2_R1",
+    "Hash": 321301519,
+    "NetId": 4280724495,
+    "SkinId": 0,
+    "Position": {
+      "X": 13604.6006,
+      "Y": 89.49743,
+      "Z": 11316.0107
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Barrack",
+    "SkinName": "SRUAP_ChaosInhibitor",
+    "HqData": null,
+    "BarracksData": {
+      "MaxHP": 5500.0,
+      "BaseStaticHPRegen": 15.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 108.0,
+      "SelectionRadius": 225.0,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_ChaosInhibitor",
+      "SkinName2": "SRUAP_ChaosInhibitor_Rubble",
+      "PathfindingCollisionRadius": 213.75
+    }
+  },
+  {
+    "Name": "Turret_T2_C_02_A",
+    "Hash": 3989073981,
+    "NetId": 4291063869,
+    "SkinId": 0,
+    "Position": {
+      "X": 12611.1816,
+      "Y": 88.0,
+      "Z": 13084.1113
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 15.999999,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail6",
+    "Hash": 2599050379,
+    "NetId": 4293549195,
+    "SkinId": 0,
+    "Position": {
+      "X": 10269.665,
+      "Y": 74.85492,
+      "Z": 3351.23682
+    },
+    "Rotation": {
+      "X": -22.3326569,
+      "Y": -106.370239,
+      "Z": 18.6251011
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_bird2",
+    "Hash": 3184514189,
+    "NetId": 4291810445,
+    "SkinId": 0,
+    "Position": {
+      "X": 147.655014,
+      "Y": 453.44928,
+      "Z": 8168.21436
+    },
+    "Rotation": {
+      "X": -8.918667,
+      "Y": 76.5572357,
+      "Z": -7.190923
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_bird",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Barracks_T2_C1",
+    "Hash": 1090490143,
+    "NetId": 4294938399,
+    "SkinId": 0,
+    "Position": {
+      "X": 11598.124,
+      "Y": 89.44798,
+      "Z": 11667.8125
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 44.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Barrack",
+    "SkinName": "SRUAP_ChaosInhibitor",
+    "HqData": null,
+    "BarracksData": {
+      "MaxHP": 5500.0,
+      "BaseStaticHPRegen": 15.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 108.0,
+      "SelectionRadius": 225.0,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_ChaosInhibitor",
+      "SkinName2": "SRUAP_ChaosInhibitor_Rubble",
+      "PathfindingCollisionRadius": 213.75
+    }
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse11",
+    "Hash": 2138129920,
+    "NetId": 4285613568,
+    "SkinId": 0,
+    "Position": {
+      "X": 4220.001,
+      "Y": 43.72308,
+      "Z": 4499.094
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -38.21672,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__P_Order_Spawn_Barracks__R01",
+    "Hash": 1414772790,
+    "NetId": 4283676726,
+    "SkinId": 0,
+    "Position": {
+      "X": 2034.091,
+      "Y": 128.749725,
+      "Z": 1171.08264
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "BarrackSpawn",
+    "SkinName": "OrderBarracks_Wizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_bird5",
+    "Hash": 598425902,
+    "NetId": 4289413422,
+    "SkinId": 0,
+    "Position": {
+      "X": 8080.158,
+      "Y": 468.228943,
+      "Z": 198.32753
+    },
+    "Rotation": {
+      "X": 22.96237,
+      "Y": 52.5498466,
+      "Z": 16.6868343
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_bird",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R015",
+    "Hash": 1828767710,
+    "NetId": 4278241246,
+    "SkinId": 0,
+    "Position": {
+      "X": 13696.6465,
+      "Y": -13.9852295,
+      "Z": 8608.403
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R07",
+    "Hash": 992665651,
+    "NetId": 4280999987,
+    "SkinId": 0,
+    "Position": {
+      "X": 10506.543,
+      "Y": 17.4105759,
+      "Z": 1301.828
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R016",
+    "Hash": 4094269028,
+    "NetId": 4278818404,
+    "SkinId": 0,
+    "Position": {
+      "X": 13364.1387,
+      "Y": 89.4616547,
+      "Z": 10040.18
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C08",
+    "Hash": 3060872421,
+    "NetId": 4285609189,
+    "SkinId": 0,
+    "Position": {
+      "X": 6764.715,
+      "Y": 41.8125,
+      "Z": 6864.42
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L08",
+    "Hash": 3173872600,
+    "NetId": 4281168856,
+    "SkinId": 0,
+    "Position": {
+      "X": 1508.61084,
+      "Y": 10.0528564,
+      "Z": 11601.3574
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse9",
+    "Hash": 452608873,
+    "NetId": 4294591337,
+    "SkinId": 0,
+    "Position": {
+      "X": 1984.29089,
+      "Y": 94.60245,
+      "Z": 4133.518
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -158.052078,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_L_03_A",
+    "Hash": 3265286397,
+    "NetId": 4288696573,
+    "SkinId": 0,
+    "Position": {
+      "X": 4318.30371,
+      "Y": 38.0,
+      "Z": 13875.8
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 44.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard3",
+    "Hash": 3607158048,
+    "NetId": 4278246688,
+    "SkinId": 0,
+    "Position": {
+      "X": 6678.113,
+      "Y": 224.0654,
+      "Z": 11199.31
+    },
+    "Rotation": {
+      "X": -165.3242,
+      "Y": -29.7299976,
+      "Z": 171.876541
+    },
+    "Scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_01_A",
+    "Hash": 4065940265,
+    "NetId": 4284044073,
+    "SkinId": 0,
+    "Position": {
+      "X": 1748.26111,
+      "Y": 88.54814,
+      "Z": 2270.70679
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop3",
+    "Hash": 2770617896,
+    "NetId": 4280567336,
+    "SkinId": 0,
+    "Position": {
+      "X": 10567.4766,
+      "Y": 50.95081,
+      "Z": 9201.183
+    },
+    "Rotation": {
+      "X": -175.72757,
+      "Y": 5.59060335,
+      "Z": -179.365723
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop11",
+    "Hash": 2230976905,
+    "NetId": 4294574473,
+    "SkinId": 0,
+    "Position": {
+      "X": 14301.7051,
+      "Y": 92.15693,
+      "Z": 11051.7188
+    },
+    "Rotation": {
+      "X": -179.55954,
+      "Y": 3.12055516,
+      "Z": -179.985779
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_OrderTurretShrine_A",
+    "Hash": 1452407551,
+    "NetId": 4287757055,
+    "SkinId": 0,
+    "Position": {
+      "X": 105.928459,
+      "Y": 33.3438,
+      "Z": 134.494034
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -4.88599968,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.890430331,
+      "Y": 0.890430331,
+      "Z": 0.890430331
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L04",
+    "Hash": 3030073331,
+    "NetId": 4288364531,
+    "SkinId": 0,
+    "Position": {
+      "X": 1170.48718,
+      "Y": 16.242384,
+      "Z": 6715.997
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.647738,
+      "Y": 0.647738,
+      "Z": 0.647738
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse3",
+    "Hash": 4197427831,
+    "NetId": 4281313911,
+    "SkinId": 0,
+    "Position": {
+      "X": 3803.94629,
+      "Y": 45.4187,
+      "Z": 6503.979
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -170.5758,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C03",
+    "Hash": 564391277,
+    "NetId": 4288933229,
+    "SkinId": 0,
+    "Position": {
+      "X": 3856.27319,
+      "Y": 107.70459,
+      "Z": 4170.232
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5858895,
+      "Y": 0.5858895,
+      "Z": 0.5858895
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse10",
+    "Hash": 141981334,
+    "NetId": 4285953686,
+    "SkinId": 0,
+    "Position": {
+      "X": 1888.70227,
+      "Y": 95.0979156,
+      "Z": 4102.505
+    },
+    "Rotation": {
+      "X": -179.672989,
+      "Y": 61.95893,
+      "Z": 178.329575
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_R_02_A",
+    "Hash": 2213884521,
+    "NetId": 4294259305,
+    "SkinId": 0,
+    "Position": {
+      "X": 6919.156,
+      "Y": 43.3200836,
+      "Z": 1483.59863
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 45.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse4",
+    "Hash": 1682653140,
+    "NetId": 4283121620,
+    "SkinId": 0,
+    "Position": {
+      "X": 4882.856,
+      "Y": 46.1818047,
+      "Z": 6505.08057
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -142.632,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R02",
+    "Hash": 1262490812,
+    "NetId": 4282389692,
+    "SkinId": 0,
+    "Position": {
+      "X": 3471.7627,
+      "Y": 114.160118,
+      "Z": 1589.28552
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5107234,
+      "Y": 0.5107234,
+      "Z": 0.5107234
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L017",
+    "Hash": 868779614,
+    "NetId": 4291331678,
+    "SkinId": 0,
+    "Position": {
+      "X": 11348.6,
+      "Y": 145.4955,
+      "Z": 13344.2764
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L015",
+    "Hash": 3720800114,
+    "NetId": 4291225458,
+    "SkinId": 0,
+    "Position": {
+      "X": 8113.48242,
+      "Y": 10.0528564,
+      "Z": 13665.7529
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.520667553,
+      "Y": 0.520667553,
+      "Z": 0.520667553
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop7",
+    "Hash": 2722726449,
+    "NetId": 4283007537,
+    "SkinId": 0,
+    "Position": {
+      "X": 12898.9561,
+      "Y": 43.9240456,
+      "Z": 5151.044
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -111.284355,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_R_03_A",
+    "Hash": 1919316049,
+    "NetId": 4284903505,
+    "SkinId": 0,
+    "Position": {
+      "X": 13866.2432,
+      "Y": 38.0,
+      "Z": 4505.22363
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -43.6142349,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R013",
+    "Hash": 2221105899,
+    "NetId": 4284703467,
+    "SkinId": 0,
+    "Position": {
+      "X": 13741.6094,
+      "Y": -7.06369257,
+      "Z": 5811.374
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard7",
+    "Hash": 3496810809,
+    "NetId": 4285339961,
+    "SkinId": 0,
+    "Position": {
+      "X": 7299.199,
+      "Y": 180.299591,
+      "Z": 9521.847
+    },
+    "Rotation": {
+      "X": -74.57303,
+      "Y": -77.9923859,
+      "Z": 84.01626
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R05",
+    "Hash": 3575939359,
+    "NetId": 4280582431,
+    "SkinId": 0,
+    "Position": {
+      "X": 7975.36035,
+      "Y": -30.397522,
+      "Z": 1230.8573
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.6348525,
+      "Y": 0.6348525,
+      "Z": 0.6348525
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C05",
+    "Hash": 3368044632,
+    "NetId": 4290791512,
+    "SkinId": 0,
+    "Position": {
+      "X": 5375.71826,
+      "Y": 58.4993172,
+      "Z": 5589.086
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.576285958,
+      "Y": 0.576285958,
+      "Z": 0.576285958
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L016",
+    "Hash": 1154463432,
+    "NetId": 4291802824,
+    "SkinId": 0,
+    "Position": {
+      "X": 9889.14551,
+      "Y": 91.53825,
+      "Z": 13447.1328
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5749619,
+      "Y": 0.5749619,
+      "Z": 0.5749619
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__P_Chaos_Spawn_Barracks__L01",
+    "Hash": 1927694293,
+    "NetId": 4293281749,
+    "SkinId": 0,
+    "Position": {
+      "X": 12800.6123,
+      "Y": 128.458374,
+      "Z": 13745.3584
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "BarrackSpawn",
+    "SkinName": "ChaosBarracks_Wizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C04",
+    "Hash": 3217520846,
+    "NetId": 4291262670,
+    "SkinId": 0,
+    "Position": {
+      "X": 4874.66064,
+      "Y": 43.7194977,
+      "Z": 5141.459
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5425779,
+      "Y": 0.5425779,
+      "Z": 0.5425779
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard1",
+    "Hash": 957266956,
+    "NetId": 4279155724,
+    "SkinId": 0,
+    "Position": {
+      "X": 7079.77148,
+      "Y": 232.645142,
+      "Z": 12051.4639
+    },
+    "Rotation": {
+      "X": -14.7439775,
+      "Y": 66.61549,
+      "Z": -15.2307177
+    },
+    "Scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_storekeepersouth",
+    "Hash": 807660421,
+    "NetId": 4280544133,
+    "SkinId": 0,
+    "Position": {
+      "X": 40.03181,
+      "Y": 162.709732,
+      "Z": 1112.40247
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -135.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_storekeepersouth",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_L_02_A",
+    "Hash": 3047645291,
+    "NetId": 4289159275,
+    "SkinId": 0,
+    "Position": {
+      "X": 7943.152,
+      "Y": 38.0,
+      "Z": 13411.7988
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 39.9004364,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail",
+    "Hash": 1518685585,
+    "NetId": 4286926225,
+    "SkinId": 0,
+    "Position": {
+      "X": 5559.50439,
+      "Y": 101.428749,
+      "Z": 3932.0105
+    },
+    "Rotation": {
+      "X": -162.439728,
+      "Y": 80.55253,
+      "Z": -160.88298
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L09",
+    "Hash": 3391767374,
+    "NetId": 4280959822,
+    "SkinId": 0,
+    "Position": {
+      "X": 1968.444,
+      "Y": 10.0528564,
+      "Z": 12459.8086
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_R_03_A",
+    "Hash": 4109501183,
+    "NetId": 4294050559,
+    "SkinId": 0,
+    "Position": {
+      "X": 10504.2461,
+      "Y": 41.3395157,
+      "Z": 1029.71692
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 45.2209129,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R06",
+    "Hash": 1278070949,
+    "NetId": 4281192613,
+    "SkinId": 0,
+    "Position": {
+      "X": 8870.221,
+      "Y": 9.070922,
+      "Z": 1212.7854
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.638399541,
+      "Y": 0.638399541,
+      "Z": 0.638399541
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R011",
+    "Hash": 1785529287,
+    "NetId": 4285334471,
+    "SkinId": 0,
+    "Position": {
+      "X": 13529.3311,
+      "Y": -7.06369257,
+      "Z": 3694.87451
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_bird4",
+    "Hash": 1420587448,
+    "NetId": 4289491384,
+    "SkinId": 0,
+    "Position": {
+      "X": 14391.0771,
+      "Y": 375.6806,
+      "Z": 3836.75049
+    },
+    "Rotation": {
+      "X": -168.118881,
+      "Y": -51.9056854,
+      "Z": 169.53096
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_bird",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop6",
+    "Hash": 3578704551,
+    "NetId": 4283347623,
+    "SkinId": 0,
+    "Position": {
+      "X": 11746.374,
+      "Y": 43.98136,
+      "Z": 9005.245
+    },
+    "Rotation": {
+      "X": -176.563538,
+      "Y": 21.18202,
+      "Z": 179.999985
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_02_A",
+    "Hash": 1800405651,
+    "NetId": 4283433619,
+    "SkinId": 0,
+    "Position": {
+      "X": 2177.64,
+      "Y": 89.56031,
+      "Z": 1807.62976
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C015",
+    "Hash": 2242246436,
+    "NetId": 4289066788,
+    "SkinId": 0,
+    "Position": {
+      "X": 10822.9482,
+      "Y": 147.795883,
+      "Z": 10646.958
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse8",
+    "Hash": 1845326847,
+    "NetId": 4294800383,
+    "SkinId": 0,
+    "Position": {
+      "X": 2998.508,
+      "Y": 100.930077,
+      "Z": 8743.376
+    },
+    "Rotation": {
+      "X": -2.58048415,
+      "Y": 30.51813,
+      "Z": -8.916169
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_06_A",
+    "Hash": 1815987850,
+    "NetId": 4282238602,
+    "SkinId": 0,
+    "Position": {
+      "X": 1169.96191,
+      "Y": 87.65078,
+      "Z": 4287.44336
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -47.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_storeKeeperNorth",
+    "Hash": 2340393167,
+    "NetId": 4286550223,
+    "SkinId": 0,
+    "Position": {
+      "X": 13727.2129,
+      "Y": 144.670212,
+      "Z": 14592.5068
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -237.510269,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.6,
+      "Y": 1.6,
+      "Z": 1.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_storeKeeperNorth",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L011",
+    "Hash": 3668648811,
+    "NetId": 4289405803,
+    "SkinId": 0,
+    "Position": {
+      "X": 3486.23633,
+      "Y": 10.0528564,
+      "Z": 13473.1709
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L07",
+    "Hash": 764571209,
+    "NetId": 4287786569,
+    "SkinId": 0,
+    "Position": {
+      "X": 1285.23193,
+      "Y": 11.2067184,
+      "Z": 10423.6016
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.6402082,
+      "Y": 0.6402082,
+      "Z": 0.6402082
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop12",
+    "Hash": 502485043,
+    "NetId": 4294135859,
+    "SkinId": 0,
+    "Position": {
+      "X": 12425.7773,
+      "Y": 94.93915,
+      "Z": 10906.083
+    },
+    "Rotation": {
+      "X": -15.8322077,
+      "Y": -151.330856,
+      "Z": 3.55376148
+    },
+    "Scale": {
+      "X": 0.4,
+      "Y": 0.4,
+      "Z": 0.4
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop13",
+    "Hash": 1794400421,
+    "NetId": 4294205605,
+    "SkinId": 0,
+    "Position": {
+      "X": 14100.4326,
+      "Y": 46.98303,
+      "Z": 6161.51025
+    },
+    "Rotation": {
+      "X": 179.883743,
+      "Y": 51.7883949,
+      "Z": 179.285934
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L010",
+    "Hash": 2913735677,
+    "NetId": 4289467389,
+    "SkinId": 0,
+    "Position": {
+      "X": 2720.78687,
+      "Y": 10.0528564,
+      "Z": 13100.2969
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R017",
+    "Hash": 2198775538,
+    "NetId": 4279150322,
+    "SkinId": 0,
+    "Position": {
+      "X": 13253.0566,
+      "Y": 95.24609,
+      "Z": 11334.0508
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse",
+    "Hash": 805135371,
+    "NetId": 4294796299,
+    "SkinId": 0,
+    "Position": {
+      "X": 5194.13574,
+      "Y": 123.468628,
+      "Z": 7012.206
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -118.724548,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L013",
+    "Hash": 883245639,
+    "NetId": 4289020487,
+    "SkinId": 0,
+    "Position": {
+      "X": 5504.224,
+      "Y": 10.0528564,
+      "Z": 13608.0771
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__Spawn_T2",
+    "Hash": 335339351,
+    "NetId": 4294762327,
+    "SkinId": 0,
+    "Position": {
+      "X": 14340.4189,
+      "Y": 179.669449,
+      "Z": 14391.0752
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "NexusSpawn",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L012",
+    "Hash": 1134719697,
+    "NetId": 4288836305,
+    "SkinId": 0,
+    "Position": {
+      "X": 4359.07861,
+      "Y": 10.0528564,
+      "Z": 13597.9111
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.663782537,
+      "Y": 0.663782537,
+      "Z": 0.663782537
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse5",
+    "Hash": 323751746,
+    "NetId": 4283174722,
+    "SkinId": 0,
+    "Position": {
+      "X": 2909.064,
+      "Y": 47.40145,
+      "Z": 7627.799
+    },
+    "Rotation": {
+      "X": -179.289246,
+      "Y": 52.3270035,
+      "Z": 177.968689
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "HQ_T2",
+    "Hash": 2901421071,
+    "NetId": 4293929999,
+    "SkinId": 0,
+    "Position": {
+      "X": 13243.1621,
+      "Y": 91.52677,
+      "Z": 13235.0479
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Nexus",
+    "SkinName": "SRUAP_ChaosNexus",
+    "HqData": {
+      "MaxHp": 5500.0,
+      "BaseStaticHPRegen": 20.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 117.0,
+      "SelectionRadius": 397.2222,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_ChaosNexus",
+      "SkinName2": "Sruap_Chaosnexus_Rubble",
+      "CollisionRadius": 319.4445,
+      "CollisionHeight": 0.0,
+      "PathfindingCollisionRadius": 352.7778
+    },
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse2",
+    "Hash": 2368248545,
+    "NetId": 4280851169,
+    "SkinId": 0,
+    "Position": {
+      "X": 2894.07959,
+      "Y": 44.892128,
+      "Z": 5653.99561
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -116.540878,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_C_05_A",
+    "Hash": 1939924382,
+    "NetId": 4288734622,
+    "SkinId": 0,
+    "Position": {
+      "X": 8955.434,
+      "Y": 38.0,
+      "Z": 8510.48
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 3.41865444,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail1",
+    "Hash": 76466472,
+    "NetId": 4287547688,
+    "SkinId": 0,
+    "Position": {
+      "X": 6533.019,
+      "Y": 199.941223,
+      "Z": 2319.84644
+    },
+    "Rotation": {
+      "X": 4.04101372,
+      "Y": -20.57683,
+      "Z": 8.526711
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L02",
+    "Hash": 1576573638,
+    "NetId": 4294482630,
+    "SkinId": 0,
+    "Position": {
+      "X": 1508.93042,
+      "Y": 133.053085,
+      "Z": 3597.09619
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.484844863,
+      "Y": 0.484844863,
+      "Z": 0.484844863
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_07_A",
+    "Hash": 456848924,
+    "NetId": 4282054172,
+    "SkinId": 0,
+    "Position": {
+      "X": 4281.712,
+      "Y": 86.3551559,
+      "Z": 1253.56873
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 49.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__P_Order_Spawn_Barracks__C01",
+    "Hash": 1236758897,
+    "NetId": 4290212209,
+    "SkinId": 0,
+    "Position": {
+      "X": 2008.12622,
+      "Y": 119.270592,
+      "Z": 2079.59937
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "BarrackSpawn",
+    "SkinName": "OrderBarracks_Wizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop5",
+    "Hash": 1279779613,
+    "NetId": 4282901277,
+    "SkinId": 0,
+    "Position": {
+      "X": 9452.197,
+      "Y": 214.451431,
+      "Z": 7685.849
+    },
+    "Rotation": {
+      "X": -1.90198743,
+      "Y": -153.918289,
+      "Z": 2.83302
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard",
+    "Hash": 40222452,
+    "NetId": 4284858100,
+    "SkinId": 0,
+    "Position": {
+      "X": 8090.797,
+      "Y": 186.208588,
+      "Z": 11305.5283
+    },
+    "Rotation": {
+      "X": -21.2200031,
+      "Y": -67.87017,
+      "Z": 6.75890064
+    },
+    "Scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R010",
+    "Hash": 493499217,
+    "NetId": 4285150033,
+    "SkinId": 0,
+    "Position": {
+      "X": 13001.4072,
+      "Y": -3.99002743,
+      "Z": 2628.15015
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C09",
+    "Hash": 3245737075,
+    "NetId": 4285924467,
+    "SkinId": 0,
+    "Position": {
+      "X": 7408.699,
+      "Y": 51.8637161,
+      "Z": 7405.615
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_C_05_A",
+    "Hash": 4113864496,
+    "NetId": 4281636656,
+    "SkinId": 0,
+    "Position": {
+      "X": 5846.09668,
+      "Y": 44.09913,
+      "Z": 6396.75049
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 1.99999988,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_ChaosTurretShrine_A",
+    "Hash": 3980110729,
+    "NetId": 4282100617,
+    "SkinId": 0,
+    "Position": {
+      "X": 14576.36,
+      "Y": 466.959717,
+      "Z": 14693.8271
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T1_L_02_A",
+    "Hash": 858985157,
+    "NetId": 4281537221,
+    "SkinId": 0,
+    "Position": {
+      "X": 1512.892,
+      "Y": 42.0639229,
+      "Z": 6699.57
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -43.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_L_01_A",
+    "Hash": 749613521,
+    "NetId": 4289606097,
+    "SkinId": 0,
+    "Position": {
+      "X": 10481.0908,
+      "Y": 88.0,
+      "Z": 13650.5352
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 48.11771,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_R_02_A",
+    "Hash": 90259655,
+    "NetId": 4284563655,
+    "SkinId": 0,
+    "Position": {
+      "X": 13327.417,
+      "Y": 38.0,
+      "Z": 8226.276
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -44.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Turret_T2_C_01_A",
+    "Hash": 1959600519,
+    "NetId": 4291633543,
+    "SkinId": 0,
+    "Position": {
+      "X": 13052.915,
+      "Y": 88.0,
+      "Z": 12612.3809
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -13.999999,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "Turret",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail8",
+    "Hash": 2102555020,
+    "NetId": 4283593100,
+    "SkinId": 0,
+    "Position": {
+      "X": 392.391724,
+      "Y": 122.834961,
+      "Z": 1311.946
+    },
+    "Rotation": {
+      "X": 176.785126,
+      "Y": 88.51321,
+      "Z": 167.404068
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "Barracks_T1_R1",
+    "Hash": 26412001,
+    "NetId": 4287824865,
+    "SkinId": 0,
+    "Position": {
+      "X": 3452.52856,
+      "Y": 89.93602,
+      "Z": 1236.884
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Barrack",
+    "SkinName": "SRUAP_OrderInhibitor",
+    "HqData": null,
+    "BarracksData": {
+      "MaxHP": 3000.0,
+      "BaseStaticHPRegen": 15.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 103.0,
+      "SelectionRadius": 219.4444,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_OrderInhibitor",
+      "SkinName2": "SRUAP_OrderInhibitor_Rubble",
+      "PathfindingCollisionRadius": 185.4683
+    }
+  },
+  {
+    "Name": "__P_Chaos_Spawn_Barracks__R01",
+    "Hash": 1683933615,
+    "NetId": 4284402095,
+    "SkinId": 0,
+    "Position": {
+      "X": 13719.458,
+      "Y": 119.217133,
+      "Z": 12845.7041
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Red",
+    "ObjectType": "BarrackSpawn",
+    "SkinName": "ChaosBarracks_Wizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard2",
+    "Hash": 2684874166,
+    "NetId": 4278709686,
+    "SkinId": 0,
+    "Position": {
+      "X": 9426.1875,
+      "Y": 134.335052,
+      "Z": 10994.0977
+    },
+    "Rotation": {
+      "X": 84.66563,
+      "Y": 62.7881279,
+      "Z": 88.71596
+    },
+    "Scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L06",
+    "Hash": 1519738591,
+    "NetId": 4287979231,
+    "SkinId": 0,
+    "Position": {
+      "X": 1229.66418,
+      "Y": 0.697092354,
+      "Z": 9072.834
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5783438,
+      "Y": 0.5783438,
+      "Z": 0.5783438
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard11",
+    "Hash": 2320739616,
+    "NetId": 4283673888,
+    "SkinId": 0,
+    "Position": {
+      "X": 9966.531,
+      "Y": 255.327957,
+      "Z": 12602.9717
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": -20.6469955
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard6",
+    "Hash": 2808752559,
+    "NetId": 4285147567,
+    "SkinId": 0,
+    "Position": {
+      "X": 9018.509,
+      "Y": 106.865089,
+      "Z": 12353.6455
+    },
+    "Rotation": {
+      "X": -0.3097325,
+      "Y": -153.594345,
+      "Z": 1.01543915
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_SRU_AntlerMouse7",
+    "Hash": 4248989294,
+    "NetId": 4282543726,
+    "SkinId": 0,
+    "Position": {
+      "X": 2347.906,
+      "Y": 182.994858,
+      "Z": 10639.1
+    },
+    "Rotation": {
+      "X": -173.234436,
+      "Y": 65.05644,
+      "Z": -175.339417
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "SRU_AntlerMouse",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__Spawn_T1",
+    "Hash": 2331348717,
+    "NetId": 4294282989,
+    "SkinId": 0,
+    "Position": {
+      "X": 394.768921,
+      "Y": 171.372147,
+      "Z": 461.570953
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "NexusSpawn",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R09",
+    "Hash": 3700608308,
+    "NetId": 4287810868,
+    "SkinId": 0,
+    "Position": {
+      "X": 12294.4111,
+      "Y": -3.99002743,
+      "Z": 1913.18555
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_dragon_prop1",
+    "Hash": 56432125,
+    "NetId": 4284290557,
+    "SkinId": 0,
+    "Position": {
+      "X": -4157.40967,
+      "Y": -5639.86963,
+      "Z": 2518.217
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 1.31099522,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_dragon_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R04",
+    "Hash": 2720248201,
+    "NetId": 4280529289,
+    "SkinId": 0,
+    "Position": {
+      "X": 6925.19971,
+      "Y": -7.540228,
+      "Z": 1163.12048
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.654415131,
+      "Y": 0.654415131,
+      "Z": 0.654415131
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_R014",
+    "Hash": 436729672,
+    "NetId": 4278712136,
+    "SkinId": 0,
+    "Position": {
+      "X": 13710.5156,
+      "Y": -13.9852295,
+      "Z": 7177.168
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.681055546,
+      "Y": 0.681055546,
+      "Z": 0.681055546
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail5",
+    "Hash": 65211697,
+    "NetId": 4293070129,
+    "SkinId": 0,
+    "Position": {
+      "X": 6417.55,
+      "Y": 46.2902641,
+      "Z": 3235.403
+    },
+    "Rotation": {
+      "X": -178.056824,
+      "Y": 59.6056137,
+      "Z": 179.999985
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "HQ_T1",
+    "Hash": 905543093,
+    "NetId": 4294540725,
+    "SkinId": 0,
+    "Position": {
+      "X": 1551.35352,
+      "Y": 86.3504,
+      "Z": 1659.627
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": -44.9999962,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Blue",
+    "ObjectType": "Nexus",
+    "SkinName": "SRUAP_OrderNexus",
+    "HqData": {
+      "MaxHp": 5500.0,
+      "BaseStaticHPRegen": 20.0,
+      "Armor": 0.0,
+      "MaxMP": 0.0,
+      "SelectionHeight": 117.0,
+      "SelectionRadius": 397.2222,
+      "PerceptionBubbleRadius": 1350.0,
+      "SkinName1": "SRUAP_OrderNexus",
+      "SkinName2": "Sruap_Ordernexus_Rubble",
+      "CollisionRadius": 319.4445,
+      "CollisionHeight": 0.0,
+      "PathfindingCollisionRadius": 352.7778
+    },
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C011",
+    "Hash": 2194158397,
+    "NetId": 4291310397,
+    "SkinId": 0,
+    "Position": {
+      "X": 8618.293,
+      "Y": 147.795883,
+      "Z": 8647.033
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_snail3",
+    "Hash": 3934300164,
+    "NetId": 4286621700,
+    "SkinId": 0,
+    "Position": {
+      "X": 9426.731,
+      "Y": 206.123276,
+      "Z": 2943.642
+    },
+    "Rotation": {
+      "X": -40.7681847,
+      "Y": -93.64982,
+      "Z": 12.2092371
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_snail",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard9",
+    "Hash": 936719422,
+    "NetId": 4292162622,
+    "SkinId": 0,
+    "Position": {
+      "X": 10844.376,
+      "Y": 168.558167,
+      "Z": 12488.7793
+    },
+    "Rotation": {
+      "X": -14.24151,
+      "Y": 9.904963,
+      "Z": 27.8041821
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C016",
+    "Hash": 481076894,
+    "NetId": 4289504926,
+    "SkinId": 0,
+    "Position": {
+      "X": 11808.2393,
+      "Y": 147.795883,
+      "Z": 11479.001
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.4014511,
+      "Y": 0.4014511,
+      "Z": 0.4014511
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C013",
+    "Hash": 1824936465,
+    "NetId": 4291187217,
+    "SkinId": 0,
+    "Position": {
+      "X": 9625.553,
+      "Y": 147.795883,
+      "Z": 9543.4
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C014",
+    "Hash": 4070754226,
+    "NetId": 4288858034,
+    "SkinId": 0,
+    "Position": {
+      "X": 10193.2275,
+      "Y": 147.795883,
+      "Z": 10035.7168
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C02",
+    "Hash": 1453645307,
+    "NetId": 4288994811,
+    "SkinId": 0,
+    "Position": {
+      "X": 2952.61353,
+      "Y": 146.129242,
+      "Z": 3474.72559
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.566906333,
+      "Y": 0.566906333,
+      "Z": 0.566906333
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_gromp_prop",
+    "Hash": 563688242,
+    "NetId": 4288230194,
+    "SkinId": 0,
+    "Position": {
+      "X": 9942.157,
+      "Y": 45.9148,
+      "Z": 8358.395
+    },
+    "Rotation": {
+      "X": -179.202728,
+      "Y": -8.776432,
+      "Z": -179.90715
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_gromp_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_dragon_prop",
+    "Hash": 3835527573,
+    "NetId": 4288512405,
+    "SkinId": 0,
+    "Position": {
+      "X": -7058.438,
+      "Y": -10384.6631,
+      "Z": 25191.99
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 87.2096939,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_dragon_prop",
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__LevelSize_",
+    "Hash": 53219026,
+    "NetId": 4281077458,
+    "SkinId": 0,
+    "Position": {
+      "X": 605.2097,
+      "Y": -3515.97266,
+      "Z": 232.389816
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 1.0189,
+      "Y": 1.0189,
+      "Z": 1.0189
+    },
+    "Team": 0,
+    "ObjectType": "LevelSize",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_L014",
+    "Hash": 2864830436,
+    "NetId": 4290893796,
+    "SkinId": 0,
+    "Position": {
+      "X": 6668.63232,
+      "Y": 10.0528564,
+      "Z": 13647.6152
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5037729,
+      "Y": 0.5037729,
+      "Z": 0.5037729
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C07",
+    "Hash": 651045236,
+    "NetId": 4291701108,
+    "SkinId": 0,
+    "Position": {
+      "X": 6270.211,
+      "Y": 31.0264244,
+      "Z": 6366.78467
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "__NAV_C012",
+    "Hash": 465658503,
+    "NetId": 4290863751,
+    "SkinId": 0,
+    "Position": {
+      "X": 9149.958,
+      "Y": 147.795883,
+      "Z": 9105.284
+    },
+    "Rotation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "Scale": {
+      "X": 0.5139856,
+      "Y": 0.5139856,
+      "Z": 0.5139856
+    },
+    "Team": 0,
+    "ObjectType": "NavPoint",
+    "SkinName": null,
+    "HqData": null,
+    "BarracksData": null
+  },
+  {
+    "Name": "LevelProp_sru_lizard12",
+    "Hash": 324730010,
+    "NetId": 4284152986,
+    "SkinId": 0,
+    "Position": {
+      "X": 7564.231,
+      "Y": 367.14328,
+      "Z": 14262.3643
+    },
+    "Rotation": {
+      "X": -78.48996,
+      "Y": -78.23854,
+      "Z": 78.18267
+    },
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "Team": "Neutral",
+    "ObjectType": "LevelProp",
+    "SkinName": "sru_lizard",
+    "HqData": null,
+    "BarracksData": null
+  }
+]
