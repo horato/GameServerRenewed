@@ -32,7 +32,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public bool IsManaCostChanged { get; private set; }
 
         public SpellSlot SpellsEnabled { get; private set; }
-        public SpellFlags IsTargetableToTeam { get; }
+        public SpellFlags IsTargetableToTeam { get; private set; }
         public ActionState ActionState { get; private set; }
         public PrimaryAbilityResourceType ParType { get; }
 
@@ -40,7 +40,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public bool IsInvulnerable { get; }
         public bool IsPhysicalImmune { get; }
         public bool IsLifestealImmune { get; }
-        public bool IsTargetable { get; }
+        public bool IsTargetable { get; private set; }
         public bool IsGeneratingGold { get; }
         public float SpellCostReduction { get; }
         public float GoldTotal { get; private set; }
@@ -424,6 +424,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
                 return true;
 
             return false;
+        }
+
+        public void UpdateTargetability(bool isTargetable, SpellFlags isTargetableToTeam)
+        {
+            IsTargetable = isTargetable;
+            IsTargetableToTeam = isTargetableToTeam;
+
+            IsTargetableIsModified = true;
+            IsTargetableToTeamModified = true;
         }
     }
 }

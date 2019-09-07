@@ -11,15 +11,15 @@ namespace LeagueSandbox.GameServer.Lib.Providers
     internal class MapObjectsProvider : IMapObjectsProvider
     {
         private readonly IObjShopFactory _shopFactory;
-        private readonly IObjBarracksFactory _barracksFactory;
+        private readonly IObjBarracksDampenerFactory _barracksDampenerFactory;
         private readonly IObjHQFactory _hqFactory;
         private readonly IObjAiTurretFactory _turretFactory;
         private readonly ILevelPropAIFactory _levelPropAiFactory;
 
-        public MapObjectsProvider(IObjShopFactory shopFactory, IObjBarracksFactory barracksFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory)
+        public MapObjectsProvider(IObjShopFactory shopFactory, IObjBarracksDampenerFactory barracksDampenerFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory)
         {
             _shopFactory = shopFactory;
-            _barracksFactory = barracksFactory;
+            _barracksDampenerFactory = barracksDampenerFactory;
             _hqFactory = hqFactory;
             _turretFactory = turretFactory;
             _levelPropAiFactory = levelPropAiFactory;
@@ -42,7 +42,7 @@ namespace LeagueSandbox.GameServer.Lib.Providers
                     case ObjectType.InfoPoint:
                         break;
                     case ObjectType.Barrack:
-                        var barrackInstance = _barracksFactory.CreateFromMapObject(mapObject);
+                        var barrackInstance = _barracksDampenerFactory.CreateFromMapObject(mapObject);
                         result.Add(barrackInstance);
                         break;
                     case ObjectType.Nexus:
@@ -50,9 +50,8 @@ namespace LeagueSandbox.GameServer.Lib.Providers
                         result.Add(hqInstance);
                         break;
                     case ObjectType.Turret:
-                        // TODO: turrets
-                        //var turretInstance = _turretFactory.CreateFromMapObject(mapObject);
-                        //result.Add(turretInstance);
+                        var turretInstance = _turretFactory.CreateFromMapObject(mapObject);
+                        result.Add(turretInstance);
                         break;
                     case ObjectType.Shop:
                         var shopInstance = _shopFactory.CreateFromMapObject(mapObject);

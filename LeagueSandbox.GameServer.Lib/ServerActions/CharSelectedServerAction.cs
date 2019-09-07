@@ -102,13 +102,8 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                 if (gameObject is IObjAiTurret turret)
                 {
                     _packetNotifier.NotifyCreateTurret(senderSummonerId, turret);
-
-                    // Fog Of War
                     _packetNotifier.NotifyAddRegion(senderSummonerId, turret, _networkIdCreationService.GetNewNetId());
-
-                    //TODO: fishy
-                    //To suppress game HP-related errors for enemy turrets out of vision
-                    //_packetNotifier.NotifyEnterLocalVisibilityClient(new[] { senderSummonerId }, turret);
+                    _packetNotifier.NotifyEnterLocalVisibilityClient(new[] { senderSummonerId }, turret);
 
                     //TODO: inventory
                     //foreach (var item in turret.Inventory)

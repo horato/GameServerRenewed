@@ -5,7 +5,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
-    internal class ObjBarracks : ObjBuilding, IObjBarracks
+    internal class ObjBarracksDampener : ObjAnimatedBuilding, IObjBarracksDampener
     {
         //waveTimer
         //waveCounts
@@ -22,9 +22,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //SuperMinionSpawnTime
         //SuperMinionsEnabled
         //BarracksEnabled
-        //Lane
+        //state enum _DampenerState
 
-        public ObjBarracks(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        public ObjBarracksDampener(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
         {
         }
     }

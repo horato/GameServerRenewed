@@ -72,5 +72,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
         void SetManaCost(SpellSlot slot, float value);
         void OnStatUpdateSent();
         bool IsStatsChanged();
+        void UpdateTargetability(bool isTargetable, SpellFlags isTargetableToTeam);
     }
 }

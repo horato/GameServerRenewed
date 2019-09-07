@@ -4,8 +4,8 @@ using LeagueSandbox.GameServer.Utils.MapObjects;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
 {
-    internal interface IObjBarracksFactory
+    internal interface IObjBarracksDampenerFactory
     {
-        IObjBarracks CreateFromMapObject(MapObject obj);
+        IObjBarracksDampener CreateFromMapObject(MapObject obj);
     }
 }

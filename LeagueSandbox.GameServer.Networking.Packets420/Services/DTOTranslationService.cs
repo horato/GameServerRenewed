@@ -129,7 +129,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                         break;
                     case ILevelPropAI _:
                     case IObjAiBase _:
-                    case IObjBarracks _:
                     case IObjShop _:
                     case IObjSpawnPoint _:
                     case IObjBuilding _:

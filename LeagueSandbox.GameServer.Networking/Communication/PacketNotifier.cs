@@ -235,7 +235,6 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                     return true;
                 case ILevelPropAI _:
                 case IObjAiBase _:
-                case IObjBarracks _:
                 case IObjShop _:
                 case IObjSpawnPoint _:
                 case IObjBuilding _:

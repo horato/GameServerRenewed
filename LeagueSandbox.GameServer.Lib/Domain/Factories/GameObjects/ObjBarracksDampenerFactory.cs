@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
@@ -14,19 +15,20 @@ using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
 {
-    internal class ObjBarracksFactory : EntityFactoryBase<ObjBarracks>, IObjBarracksFactory
+    internal class ObjBarracksDampenerFactory : EntityFactoryBase<ObjBarracksDampener>, IObjBarracksDampenerFactory
     {
         private readonly IStatsFactory _statsFactory;
 
-        public ObjBarracksFactory(IUnityContainer unityContainer, IStatsFactory statsFactory) : base(unityContainer)
+        public ObjBarracksDampenerFactory(IUnityContainer unityContainer, IStatsFactory statsFactory) : base(unityContainer)
         {
             _statsFactory = statsFactory;
         }
 
-        public IObjBarracks CreateFromMapObject(MapObject obj)
+        public IObjBarracksDampener CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            var instance = new ObjBarracks(obj.Team, obj.Position, stats, obj.NetId, 1700);
+            stats.UpdateTargetability(false, SpellFlags.NonTargetableAll);
+            var instance = new ObjBarracksDampener(obj.Team, obj.Position, stats, obj.NetId, 1700);
 
             return SetupDependencies(instance);
         }
