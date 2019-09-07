@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
@@ -58,9 +59,8 @@ namespace LeagueSandbox.GameServer.Lib.Providers
                         result.Add(shopInstance);
                         break;
                     case ObjectType.LevelProp:
-                        //TODO: skin name
-                        //var propInstance = _levelPropAiFactory.CreateFromMapObject(mapObject);
-                        //result.Add(propInstance);
+                        var propInstance = _levelPropAiFactory.CreateFromMapObject(mapObject);
+                        result.Add(propInstance);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException(nameof(mapObject.ObjectType), mapObject.ObjectType, null);

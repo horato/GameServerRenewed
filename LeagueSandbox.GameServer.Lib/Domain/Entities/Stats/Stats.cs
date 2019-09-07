@@ -48,7 +48,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public IFlatStat FlatAttackSpeed { get; }
         public IFlatStat FlatHealthPoints { get; }
         public IFlatStat FlatManaPoints { get; }
-        public IFlatStat FlatAttackDamange { get; }
+        public IFlatStat FlatAttackDamage { get; }
         public IFlatStat FlatArmor { get; }
         public IFlatStat FlatMagicResist { get; }
         public IFlatStat Gold { get; }
@@ -112,7 +112,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             FlatAttackSpeed = flatAttackSpeed;
             FlatHealthPoints = flatHealthPoints;
             FlatManaPoints = flatManaPoints;
-            FlatAttackDamange = flatAttackDamange;
+            FlatAttackDamage = flatAttackDamange;
             FlatArmor = flatArmor;
             FlatMagicResist = flatMagicResist;
             Gold = gold;
@@ -311,7 +311,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             FlatAttackSpeed.OnStatUpdateSent();
             FlatHealthPoints.OnStatUpdateSent();
             FlatManaPoints.OnStatUpdateSent();
-            FlatAttackDamange.OnStatUpdateSent();
+            FlatAttackDamage.OnStatUpdateSent();
             FlatArmor.OnStatUpdateSent();
             FlatMagicResist.OnStatUpdateSent();
             Gold.OnStatUpdateSent();
@@ -369,7 +369,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
                 return true;
             if (FlatManaPoints.IsUpdated)
                 return true;
-            if (FlatAttackDamange.IsUpdated)
+            if (FlatAttackDamage.IsUpdated)
                 return true;
             if (FlatArmor.IsUpdated)
                 return true;

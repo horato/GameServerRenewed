@@ -27,7 +27,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         public IObjBarracksDampener CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            stats.UpdateTargetability(false, SpellFlags.NonTargetableAll);
+
+            stats.Armor.ApplyStatModifier(new StatModifier(obj.BarracksData.Armor, 0, 0, 0));
+            stats.FlatHealthPoints.ApplyStatModifier(new FlatStatModifier(0, 0, obj.BarracksData.BaseStaticHPRegen));
+            stats.HealthPoints.ApplyStatModifier(new StatModifier(obj.BarracksData.MaxHP, 0, 0, 0));
+            stats.ManaPoints.ApplyStatModifier(new StatModifier(obj.BarracksData.MaxMP, 0, 0, 0));
+            stats.UpdateTargetability(false, SpellFlags.NonTargetableEnemy);
+
             var instance = new ObjBarracksDampener(obj.Team, obj.Position, stats, obj.NetId, 1700);
 
             return SetupDependencies(instance);

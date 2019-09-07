@@ -342,7 +342,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 mm3.Add(ObjAiHeroFieldMask.FM3_ManaRegenerationBonusPercent, stats.FlatManaPoints.CurrentValue);
             }
 
-            if (stats.FlatAttackDamange.IsUpdated)
+            if (stats.FlatAttackDamage.IsUpdated)
             {
                 // Nothing
             }

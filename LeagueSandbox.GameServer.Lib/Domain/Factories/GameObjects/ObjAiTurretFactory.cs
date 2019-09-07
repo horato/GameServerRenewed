@@ -20,6 +20,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
     {
         private readonly IStatsFactory _statsFactory;
         private readonly INetworkIdCreationService _networkIdCreationService;
+
         public ObjAiTurretFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService) : base(unityContainer)
         {
             _statsFactory = statsFactory;
@@ -29,9 +30,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         public IObjAiTurret CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            stats.UpdateTargetability(false, SpellFlags.NonTargetableAll);
+            stats.UpdateTargetability(true, SpellFlags.NonTargetableEnemy);
 
-            var instance = new ObjAiTurret(obj.Team, obj.Position, stats, _networkIdCreationService.GetNewNetId(), $"{obj.Name}_A", 0);
+            var instance = new ObjAiTurret(obj.Team, obj.Position, stats, _networkIdCreationService.GetNewNetId(), obj.Name, obj.SkinId);
 
             return SetupDependencies(instance);
         }

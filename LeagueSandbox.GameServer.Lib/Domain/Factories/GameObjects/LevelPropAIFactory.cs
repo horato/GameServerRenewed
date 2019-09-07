@@ -17,16 +17,18 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
     internal class LevelPropAIFactory : EntityFactoryBase<LevelPropAI>, ILevelPropAIFactory
     {
         private readonly IStatsFactory _statsFactory;
+        private readonly INetworkIdCreationService _networkIdCreationService;
 
-        public LevelPropAIFactory(IUnityContainer unityContainer, IStatsFactory statsFactory) : base(unityContainer)
+        public LevelPropAIFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService) : base(unityContainer)
         {
             _statsFactory = statsFactory;
+            _networkIdCreationService = networkIdCreationService;
         }
 
         public ILevelPropAI CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            var instance = new LevelPropAI(obj.Team, obj.Position, stats, obj.NetId, string.Empty, 0, 1200, new Vector3(0, 0, 0), obj.Rotation, obj.Scale, obj.Name);
+            var instance = new LevelPropAI(obj.Team, obj.Position, stats, _networkIdCreationService.GetNewNetId(), obj.SkinName, obj.SkinId, 1200, new Vector3(0, 0, 0), obj.Rotation, obj.Scale, obj.Name);
 
             return SetupDependencies(instance);
         }
