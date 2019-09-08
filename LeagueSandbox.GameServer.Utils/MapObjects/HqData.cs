@@ -1,7 +1,16 @@
-﻿namespace LeagueSandbox.GameServer.Utils.MapObjects
+﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace LeagueSandbox.GameServer.Utils.MapObjects
 {
     public class HqData
     {
+        public uint NetId { get; }
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Team Team { get; }
+
         public float MaxHp { get; }
         public float BaseStaticHPRegen { get; }
         public float Armor { get; }
@@ -15,8 +24,10 @@
         public float CollisionHeight { get; }
         public float PathfindingCollisionRadius { get; }
 
-        public HqData(float maxHp, float baseStaticHpRegen, float armor, float maxMp, float selectionHeight, float selectionRadius, float perceptionBubbleRadius, string skinName1, string skinName2, float collisionRadius, float collisionHeight, float pathfindingCollisionRadius)
+        public HqData(uint netId, Team team, float maxHp, float baseStaticHpRegen, float armor, float maxMp, float selectionHeight, float selectionRadius, float perceptionBubbleRadius, string skinName1, string skinName2, float collisionRadius, float collisionHeight, float pathfindingCollisionRadius)
         {
+            NetId = netId;
+            Team = team;
             MaxHp = maxHp;
             BaseStaticHPRegen = baseStaticHpRegen;
             Armor = armor;

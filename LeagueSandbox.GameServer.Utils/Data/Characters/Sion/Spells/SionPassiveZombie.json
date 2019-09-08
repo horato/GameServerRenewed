@@ -1,0 +1,11 @@
+{
+  "Values": {
+    "BuffData": {
+      "AlternateName": "SionPassiveZombie",
+      "DisplayName": "SionPassiveZombie",
+      "DynamicTooltip": "game_buff_tooltip_SionPassiveZombie",
+      "Sound_VOEventCategory": "OrderConfirmation"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

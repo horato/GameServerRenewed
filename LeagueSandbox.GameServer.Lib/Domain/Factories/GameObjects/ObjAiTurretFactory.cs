@@ -30,9 +30,20 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         public IObjAiTurret CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
+            
             stats.UpdateTargetability(true, SpellFlags.NonTargetableEnemy);
 
-            var instance = new ObjAiTurret(obj.Team, obj.Position, stats, _networkIdCreationService.GetNewNetId(), obj.Name, obj.SkinId);
+            var instance = new ObjAiTurret
+            (
+                obj.TurretData.Team,
+                obj.Position,
+                stats,
+                _networkIdCreationService.GetNewNetId(),
+                obj.TurretData.SkinName,
+                obj.SkinId,
+                obj.TurretData.Lane,
+                obj.TurretData.Position
+            );
 
             return SetupDependencies(instance);
         }

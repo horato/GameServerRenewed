@@ -7,10 +7,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class ObjAiTurret : ObjAiBase, IObjAiTurret
     {
-        //SwapModelOnDeathTime
-        //    SwapModelOnDeathTime
-        public ObjAiTurret(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId) : base(team, position, stats, netId, skinName, skinId, 1200)
+        public Lane Lane { get; }
+        public TurretPosition TurretPosition { get; }
+
+        public ObjAiTurret(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, Lane lane, TurretPosition turretPosition) : base(team, position, stats, netId, skinName, skinId, 1200)
         {
+            Lane = lane;
+            TurretPosition = turretPosition;
         }
     }
 }

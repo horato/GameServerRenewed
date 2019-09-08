@@ -1,0 +1,11 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_ViPassiveMarker"
+    },
+    "SpellData": {
+      "FloatVarsDecimals1": 0
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

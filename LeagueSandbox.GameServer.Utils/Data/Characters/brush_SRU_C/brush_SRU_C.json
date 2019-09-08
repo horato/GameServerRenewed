@@ -1,0 +1,13 @@
+{
+  "Values": {
+    "Interaction": {
+      "DoubleSided": 1,
+      "IdleAnim": "Distance",
+      "RandomizeIdleAnimPhase": 1
+    },
+    "Package": {
+      "FallbackPackage": "brush_SRU_A"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

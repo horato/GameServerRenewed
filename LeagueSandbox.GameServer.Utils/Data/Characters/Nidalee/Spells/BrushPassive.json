@@ -1,0 +1,9 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_BrushPassive",
+      "InventoryIcon": "Nidalee_Passive.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

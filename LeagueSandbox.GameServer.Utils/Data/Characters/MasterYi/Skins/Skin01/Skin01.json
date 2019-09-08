@@ -1,0 +1,15 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "BaseMasterYi.blnd",
+      "ChampionSkinID": 11001,
+      "ChampionSkinName": "AssassinMasterYi",
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "MasterYi_assassin.skn",
+      "Skeleton": "MasterYi_assassin.skl",
+      "SkinScale": 1.5499999523162842,
+      "Texture": "AssassinMasterYi.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

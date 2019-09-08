@@ -1,8 +1,6 @@
 [
   {
-    "Name": "Turret_T1_C_02_A",
-    "Hash": 1800405651,
-    "NetId": 4283433619,
+    "Name": "Turret_T1_C_02",
     "SkinId": 0,
     "Position": {
       "X": 1768.19165,
@@ -19,16 +17,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_02_A",
+      "CharacterName": "OrderTurretAngel",
+      "Team": "Blue",
+      "Position": "Nexus",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_C_01_A",
-    "Hash": 4065940265,
-    "NetId": 4284044073,
+    "Name": "Turret_T1_C_01",
     "SkinId": 0,
     "Position": {
       "X": 1341.63257,
@@ -45,16 +48,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_01_A",
+      "CharacterName": "OrderTurretAngel",
+      "Team": "Blue",
+      "Position": "Nexus",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_C_07_A",
-    "Hash": 456848924,
-    "NetId": 4282054172,
+    "Name": "Turret_T1_C_07",
     "SkinId": 0,
     "Position": {
       "X": 3747.25513,
@@ -71,16 +79,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_07_A",
+      "CharacterName": "OrderTurretDragon",
+      "Team": "Blue",
+      "Position": "Inihibitor",
+      "Lane": "Top"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_C_03_A",
-    "Hash": 475476485,
-    "NetId": 4283904517,
+    "Name": "Turret_T1_C_03",
     "SkinId": 0,
     "Position": {
       "X": 3233.99414,
@@ -97,16 +110,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_03_A",
+      "CharacterName": "OrderTurretDragon",
+      "Team": "Blue",
+      "Position": "Inihibitor",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_C_06_A",
-    "Hash": 1815987850,
-    "NetId": 4282238602,
+    "Name": "Turret_T1_C_06",
     "SkinId": 0,
     "Position": {
       "X": 802.8104,
@@ -123,16 +141,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_06_A",
+      "CharacterName": "OrderTurretDragon",
+      "Team": "Blue",
+      "Position": "Inihibitor",
+      "Lane": "Bottom"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_L_02_A",
-    "Hash": 858985157,
-    "NetId": 4281537221,
+    "Name": "Turret_T1_L_02",
     "SkinId": 0,
     "Position": {
       "X": 1106.26343,
@@ -149,16 +172,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_L_02_A",
+      "CharacterName": "OrderTurretNormal2",
+      "Team": "Blue",
+      "Position": "Inner",
+      "Lane": "Bottom"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_L_03_A",
-    "Hash": 1144267347,
-    "NetId": 4281606739,
+    "Name": "Turret_T1_L_03",
     "SkinId": 0,
     "Position": {
       "X": 574.655,
@@ -175,16 +203,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_L_03_A",
+      "CharacterName": "OrderTurretNormal",
+      "Team": "Blue",
+      "Position": "Outer",
+      "Lane": "Bottom"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_R_02_A",
-    "Hash": 2213884521,
-    "NetId": 4294259305,
+    "Name": "Turret_T1_R_02",
     "SkinId": 0,
     "Position": {
       "X": 6512.52734,
@@ -201,16 +234,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_R_02_A",
+      "CharacterName": "OrderTurretNormal2",
+      "Team": "Blue",
+      "Position": "Inner",
+      "Lane": "Top"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_R_03_A",
-    "Hash": 4109501183,
-    "NetId": 4294050559,
+    "Name": "Turret_T1_R_03",
     "SkinId": 0,
     "Position": {
       "X": 10097.6182,
@@ -227,16 +265,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_R_03_A",
+      "CharacterName": "OrderTurretNormal",
+      "Team": "Blue",
+      "Position": "Outer",
+      "Lane": "Top"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_C_04_A",
-    "Hash": 2184423334,
-    "NetId": 4281575334,
+    "Name": "Turret_T1_C_04",
     "SkinId": 0,
     "Position": {
       "X": 4656.99756,
@@ -253,16 +296,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_04_A",
+      "CharacterName": "OrderTurretNormal2",
+      "Team": "Blue",
+      "Position": "Inner",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T1_C_05_A",
-    "Hash": 4113864496,
-    "NetId": 4281636656,
+    "Name": "Turret_T1_C_05",
     "SkinId": 0,
     "Position": {
       "X": 5448.357,
@@ -279,16 +327,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T1_C_05_A",
+      "CharacterName": "OrderTurretNormal",
+      "Team": "Blue",
+      "Position": "Outer",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_C_05_A",
-    "Hash": 1939924382,
-    "NetId": 4288734622,
+    "Name": "Turret_T2_C_05",
     "SkinId": 0,
     "Position": {
       "X": 8548.805,
@@ -305,16 +358,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_C_05_A",
+      "CharacterName": "ChaosTurretWorm",
+      "Team": "Red",
+      "Position": "Outer",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_C_04_A",
-    "Hash": 78107912,
-    "NetId": 4289189128,
+    "Name": "Turret_T2_C_04",
     "SkinId": 0,
     "Position": {
       "X": 9361.072,
@@ -331,16 +389,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_C_04_A",
+      "CharacterName": "ChaosTurretWorm2",
+      "Team": "Red",
+      "Position": "Inner",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_R_03_A",
-    "Hash": 1919316049,
-    "NetId": 4284903505,
+    "Name": "Turret_T2_R_03",
     "SkinId": 0,
     "Position": {
       "X": 13459.6143,
@@ -357,16 +420,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_R_03_A",
+      "CharacterName": "ChaosTurretWorm",
+      "Team": "Red",
+      "Position": "Outer",
+      "Lane": "Top"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_R_02_A",
-    "Hash": 90259655,
-    "NetId": 4284563655,
+    "Name": "Turret_T2_R_02",
     "SkinId": 0,
     "Position": {
       "X": 12920.7891,
@@ -383,16 +451,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_R_02_A",
+      "CharacterName": "ChaosTurretWorm2",
+      "Team": "Red",
+      "Position": "Inner",
+      "Lane": "Top"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_L_02_A",
-    "Hash": 3047645291,
-    "NetId": 4289159275,
+    "Name": "Turret_T2_L_02",
     "SkinId": 0,
     "Position": {
       "X": 7536.52344,
@@ -409,16 +482,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_L_02_A",
+      "CharacterName": "ChaosTurretWorm2",
+      "Team": "Red",
+      "Position": "Inner",
+      "Lane": "Bottom"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_L_03_A",
-    "Hash": 3265286397,
-    "NetId": 4288696573,
+    "Name": "Turret_T2_L_03",
     "SkinId": 0,
     "Position": {
       "X": 3911.67529,
@@ -435,16 +513,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_L_03_A",
+      "CharacterName": "ChaosTurretWorm",
+      "Team": "Red",
+      "Position": "Outer",
+      "Lane": "Bottom"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_L_01_A",
-    "Hash": 749613521,
-    "NetId": 4289606097,
+    "Name": "Turret_T2_L_01",
     "SkinId": 0,
     "Position": {
       "X": 10261.9,
@@ -461,16 +544,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_L_01_A",
+      "CharacterName": "ChaosTurretGiant",
+      "Team": "Red",
+      "Position": "Inihibitor",
+      "Lane": "Bottom"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_C_02_A",
-    "Hash": 3989073981,
-    "NetId": 4291063869,
+    "Name": "Turret_T2_C_02",
     "SkinId": 0,
     "Position": {
       "X": 12118.1465,
@@ -487,16 +575,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_C_02_A",
+      "CharacterName": "ChaosTurretNormal",
+      "Team": "Red",
+      "Position": "Nexus",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_C_01_A",
-    "Hash": 1959600519,
-    "NetId": 4291633543,
+    "Name": "Turret_T2_C_01",
     "SkinId": 0,
     "Position": {
       "X": 12662.4883,
@@ -513,16 +606,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_C_01_A",
+      "CharacterName": "ChaosTurretNormal",
+      "Team": "Red",
+      "Position": "Nexus",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_C_03_A",
-    "Hash": 2596487339,
-    "NetId": 4290986155,
+    "Name": "Turret_T2_C_03",
     "SkinId": 0,
     "Position": {
       "X": 10743.5811,
@@ -539,16 +637,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_C_03_A",
+      "CharacterName": "ChaosTurretGiant",
+      "Team": "Red",
+      "Position": "Inihibitor",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_T2_R_01_A",
-    "Hash": 2624065917,
-    "NetId": 4285010301,
+    "Name": "Turret_T2_R_01",
     "SkinId": 0,
     "Position": {
       "X": 13205.8252,
@@ -565,16 +668,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_T2_R_01_A",
+      "CharacterName": "ChaosTurretGiant",
+      "Team": "Red",
+      "Position": "Inihibitor",
+      "Lane": "Top"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "HQ_T1",
-    "Hash": 905543093,
-    "NetId": 4294540725,
     "SkinId": 0,
     "Position": {
       "X": 1131.728,
@@ -591,10 +699,10 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Nexus",
-    "SkinName": "OrderNexus",
     "HqData": {
+      "NetId": 4294540725,
+      "Team": "Blue",
       "MaxHp": 5500.0,
       "BaseStaticHPRegen": 20.0,
       "Armor": 0.0,
@@ -608,12 +716,13 @@
       "CollisionHeight": 0.0,
       "PathfindingCollisionRadius": 352.7778
     },
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "HQ_T2",
-    "Hash": 2901421071,
-    "NetId": 4293929999,
     "SkinId": 0,
     "Position": {
       "X": 12760.9062,
@@ -630,10 +739,10 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Nexus",
-    "SkinName": "ChaosNexus",
     "HqData": {
+      "NetId": 4293929999,
+      "Team": "Red",
       "MaxHp": 5500.0,
       "BaseStaticHPRegen": 20.0,
       "Armor": 0.0,
@@ -647,12 +756,13 @@
       "CollisionHeight": 0.0,
       "PathfindingCollisionRadius": 352.7778
     },
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "Barracks_T1_R1",
-    "Hash": 26412001,
-    "NetId": 4287824865,
     "SkinId": 0,
     "Position": {
       "X": 3045.516,
@@ -669,11 +779,13 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Barrack",
-    "SkinName": "OrderInhibitor",
     "HqData": null,
     "BarracksData": {
+      "Name": "Barracks_T1_R1",
+      "NetId": 4287824865,
+      "Lane": "Bottom",
+      "Team": "Blue",
       "MaxHP": 3000.0,
       "BaseStaticHPRegen": 15.0,
       "Armor": 0.0,
@@ -684,12 +796,13 @@
       "SkinName1": "OrderInhibitor",
       "SkinName2": "OrderInhibitor_D",
       "PathfindingCollisionRadius": 185.4683
-    }
+    },
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "Barracks_T1_C1",
-    "Hash": 1380589809,
-    "NetId": 4283048177,
     "SkinId": 0,
     "Position": {
       "X": 2797.134,
@@ -706,11 +819,13 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Barrack",
-    "SkinName": "OrderInhibitor",
     "HqData": null,
     "BarracksData": {
+      "Name": "Barracks_T1_C1",
+      "NetId": 4283048177,
+      "Lane": "Middle",
+      "Team": "Blue",
       "MaxHP": 3000.0,
       "BaseStaticHPRegen": 15.0,
       "Armor": 0.0,
@@ -721,12 +836,13 @@
       "SkinName1": "OrderInhibitor",
       "SkinName2": "OrderInhibitor_D",
       "PathfindingCollisionRadius": 186.7707
-    }
+    },
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "Barracks_T1_L1",
-    "Hash": 3587324990,
-    "NetId": 4291968062,
     "SkinId": 0,
     "Position": {
       "X": 848.6174,
@@ -743,11 +859,13 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Barrack",
-    "SkinName": "OrderInhibitor",
     "HqData": null,
     "BarracksData": {
+      "Name": "Barracks_T1_L1",
+      "NetId": 4291968062,
+      "Lane": "Top",
+      "Team": "Blue",
       "MaxHP": 3000.0,
       "BaseStaticHPRegen": 15.0,
       "Armor": 0.0,
@@ -758,12 +876,13 @@
       "SkinName1": "OrderInhibitor",
       "SkinName2": "OrderInhibitor_D",
       "PathfindingCollisionRadius": 187.15
-    }
+    },
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "Barracks_T2_C1",
-    "Hash": 1090490143,
-    "NetId": 4294938399,
     "SkinId": 0,
     "Position": {
       "X": 11247.9385,
@@ -780,11 +899,13 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Barrack",
-    "SkinName": "ChaosInhibitor",
     "HqData": null,
     "BarracksData": {
+      "Name": "Barracks_T2_C1",
+      "NetId": 4294938399,
+      "Lane": "Middle",
+      "Team": "Red",
       "MaxHP": 5500.0,
       "BaseStaticHPRegen": 15.0,
       "Armor": 0.0,
@@ -795,12 +916,13 @@
       "SkinName1": "ChaosInhibitor",
       "SkinName2": "ChaosInhibitor_D",
       "PathfindingCollisionRadius": 213.75
-    }
+    },
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "Barracks_T2_R1",
-    "Hash": 321301519,
-    "NetId": 4280724495,
     "SkinId": 0,
     "Position": {
       "X": 13218.1152,
@@ -817,11 +939,13 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Barrack",
-    "SkinName": "ChaosInhibitor",
     "HqData": null,
     "BarracksData": {
+      "Name": "Barracks_T2_R1",
+      "NetId": 4280724495,
+      "Lane": "Bottom",
+      "Team": "Red",
       "MaxHP": 5500.0,
       "BaseStaticHPRegen": 15.0,
       "Armor": 0.0,
@@ -832,12 +956,13 @@
       "SkinName1": "ChaosInhibitor",
       "SkinName2": "ChaosInhibitor_D",
       "PathfindingCollisionRadius": 213.75
-    }
+    },
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "Barracks_T2_L1",
-    "Hash": 3345454032,
-    "NetId": 4284978128,
     "SkinId": 0,
     "Position": {
       "X": 10968.1533,
@@ -854,11 +979,13 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Barrack",
-    "SkinName": "ChaosInhibitor",
     "HqData": null,
     "BarracksData": {
+      "Name": "Barracks_T2_L1",
+      "NetId": 4284978128,
+      "Lane": "Top",
+      "Team": "Red",
       "MaxHP": 5500.0,
       "BaseStaticHPRegen": 15.0,
       "Armor": 0.0,
@@ -869,12 +996,13 @@
       "SkinName1": "ChaosInhibitor",
       "SkinName2": "ChaosInhibitor_D",
       "PathfindingCollisionRadius": 213.75
-    }
+    },
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_OrderTurretShrine_A",
-    "Hash": 1452407551,
-    "NetId": 4287757055,
+    "Name": "Turret_OrderTurretShrine",
     "SkinId": 0,
     "Position": {
       "X": -236.0471,
@@ -891,16 +1019,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_OrderTurretShrine_A",
+      "CharacterName": "OrderTurretShrine",
+      "Team": "Blue",
+      "Position": "Fountain",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
-    "Name": "Turret_ChaosTurretShrine_A",
-    "Hash": 3980110729,
-    "NetId": 4282100617,
+    "Name": "Turret_ChaosTurretShrine",
     "SkinId": 0,
     "Position": {
       "X": 14157.0254,
@@ -917,16 +1050,21 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Turret",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": {
+      "SkinName": "Turret_ChaosTurretShrine_A",
+      "CharacterName": "ChaosTurretShrine",
+      "Team": "Red",
+      "Position": "Fountain",
+      "Lane": "Middle"
+    },
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "chaosShop01",
-    "Hash": 1705383694,
-    "NetId": 4289074958,
     "SkinId": 0,
     "Position": {
       "X": 13337.5293,
@@ -943,16 +1081,18 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "Shop",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": {
+      "Team": "Red",
+      "NetId": 4289074958
+    }
   },
   {
     "Name": "orderShop01",
-    "Hash": 571524827,
-    "NetId": 4279289563,
     "SkinId": 0,
     "Position": {
       "X": -198.3232,
@@ -969,16 +1109,18 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "Shop",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": {
+      "Team": "Blue",
+      "NetId": 4279289563
+    }
   },
   {
     "Name": "LevelProp_ShopMale",
-    "Hash": 4081858691,
-    "NetId": 4283185283,
     "SkinId": 0,
     "Position": {
       "X": 10847.332,
@@ -995,16 +1137,19 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Neutral",
     "ObjectType": "LevelProp",
-    "SkinName": "ShopMale",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": {
+      "Name": "LevelProp_ShopMale",
+      "SkinName": "ShopMale",
+      "NetId": 4283185283
+    },
+    "ShopData": null
   },
   {
     "Name": "LevelProp_ShopMale1",
-    "Hash": 4154355989,
-    "NetId": 4288573717,
     "SkinId": 0,
     "Position": {
       "X": 3852.18579,
@@ -1021,16 +1166,19 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Neutral",
     "ObjectType": "LevelProp",
-    "SkinName": "ShopMale",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": {
+      "Name": "LevelProp_ShopMale1",
+      "SkinName": "ShopMale",
+      "NetId": 4288573717
+    },
+    "ShopData": null
   },
   {
     "Name": "LevelProp_Yonkey",
-    "Hash": 3601440810,
-    "NetId": 4289306666,
     "SkinId": 0,
     "Position": {
       "X": 12465.7344,
@@ -1047,16 +1195,19 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Neutral",
     "ObjectType": "LevelProp",
-    "SkinName": "Yonkey",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": {
+      "Name": "LevelProp_Yonkey",
+      "SkinName": "Yonkey",
+      "NetId": 4289306666
+    },
+    "ShopData": null
   },
   {
     "Name": "LevelProp_Yonkey1",
-    "Hash": 1488031681,
-    "NetId": 4289826753,
     "SkinId": 0,
     "Position": {
       "X": -76.0552,
@@ -1073,16 +1224,19 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Neutral",
     "ObjectType": "LevelProp",
-    "SkinName": "Yonkey",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": {
+      "Name": "LevelProp_Yonkey1",
+      "SkinName": "Yonkey",
+      "NetId": 4289826753
+    },
+    "ShopData": null
   },
   {
     "Name": "__LevelSize_",
-    "Hash": 53219026,
-    "NetId": 4281077458,
     "SkinId": 0,
     "Position": {
       "X": 7003.634,
@@ -1099,16 +1253,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": 0,
     "ObjectType": "LevelSize",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C010",
-    "Hash": 4123984811,
-    "NetId": 4291756971,
     "SkinId": 0,
     "Position": {
       "X": 7672.98975,
@@ -1125,16 +1278,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C011",
-    "Hash": 2194158397,
-    "NetId": 4291310397,
     "SkinId": 0,
     "Position": {
       "X": 8270.953,
@@ -1151,16 +1303,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C012",
-    "Hash": 465658503,
-    "NetId": 4290863751,
     "SkinId": 0,
     "Position": {
       "X": 8743.328,
@@ -1177,16 +1328,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C013",
-    "Hash": 1824936465,
-    "NetId": 4291187217,
     "SkinId": 0,
     "Position": {
       "X": 9218.924,
@@ -1203,16 +1353,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C014",
-    "Hash": 4070754226,
-    "NetId": 4288858034,
     "SkinId": 0,
     "Position": {
       "X": 9727.374,
@@ -1229,16 +1378,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C015",
-    "Hash": 2242246436,
-    "NetId": 4289066788,
     "SkinId": 0,
     "Position": {
       "X": 10234.6875,
@@ -1255,16 +1403,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C016",
-    "Hash": 481076894,
-    "NetId": 4289504926,
     "SkinId": 0,
     "Position": {
       "X": 10917.0449,
@@ -1281,16 +1428,15 @@
       "Y": 0.4015,
       "Z": 0.4015
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C02",
-    "Hash": 1453645307,
-    "NetId": 4288994811,
     "SkinId": 0,
     "Position": {
       "X": 3276.21045,
@@ -1307,16 +1453,15 @@
       "Y": 0.566899955,
       "Z": 0.566899955
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C03",
-    "Hash": 564391277,
-    "NetId": 4288933229,
     "SkinId": 0,
     "Position": {
       "X": 4011.32275,
@@ -1333,16 +1478,15 @@
       "Y": 0.585899949,
       "Z": 0.585899949
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C04",
-    "Hash": 3217520846,
-    "NetId": 4291262670,
     "SkinId": 0,
     "Position": {
       "X": 4554.09375,
@@ -1359,16 +1503,15 @@
       "Y": 0.5426,
       "Z": 0.5426
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C05",
-    "Hash": 3368044632,
-    "NetId": 4290791512,
     "SkinId": 0,
     "Position": {
       "X": 4969.09,
@@ -1385,16 +1528,15 @@
       "Y": 0.576299965,
       "Z": 0.576299965
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C06",
-    "Hash": 1372133858,
-    "NetId": 4291369442,
     "SkinId": 0,
     "Position": {
       "X": 5309.495,
@@ -1411,16 +1553,15 @@
       "Y": 0.5006,
       "Z": 0.5006
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C07",
-    "Hash": 651045236,
-    "NetId": 4291701108,
     "SkinId": 0,
     "Position": {
       "X": 5795.80127,
@@ -1437,16 +1578,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C08",
-    "Hash": 3060872421,
-    "NetId": 4285609189,
     "SkinId": 0,
     "Position": {
       "X": 6307.08154,
@@ -1463,16 +1603,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_C09",
-    "Hash": 3245737075,
-    "NetId": 4285924467,
     "SkinId": 0,
     "Position": {
       "X": 6934.052,
@@ -1489,16 +1628,15 @@
       "Y": 0.514,
       "Z": 0.514
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L010",
-    "Hash": 2913735677,
-    "NetId": 4289467389,
     "SkinId": 0,
     "Position": {
       "X": 2314.15869,
@@ -1515,16 +1653,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L011",
-    "Hash": 3668648811,
-    "NetId": 4289405803,
     "SkinId": 0,
     "Position": {
       "X": 3079.60815,
@@ -1541,16 +1678,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L012",
-    "Hash": 1134719697,
-    "NetId": 4288836305,
     "SkinId": 0,
     "Position": {
       "X": 3952.45,
@@ -1567,16 +1703,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L013",
-    "Hash": 883245639,
-    "NetId": 4289020487,
     "SkinId": 0,
     "Position": {
       "X": 5097.595,
@@ -1593,16 +1728,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L014",
-    "Hash": 2864830436,
-    "NetId": 4290893796,
     "SkinId": 0,
     "Position": {
       "X": 6262.004,
@@ -1619,16 +1753,15 @@
       "Y": 0.503800035,
       "Z": 0.503800035
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L015",
-    "Hash": 3720800114,
-    "NetId": 4291225458,
     "SkinId": 0,
     "Position": {
       "X": 7526.359,
@@ -1645,16 +1778,15 @@
       "Y": 0.5207,
       "Z": 0.5207
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L016",
-    "Hash": 1154463432,
-    "NetId": 4291802824,
     "SkinId": 0,
     "Position": {
       "X": 8680.717,
@@ -1671,16 +1803,15 @@
       "Y": 0.575,
       "Z": 0.575
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L017",
-    "Hash": 868779614,
-    "NetId": 4291331678,
     "SkinId": 0,
     "Position": {
       "X": 9882.198,
@@ -1697,16 +1828,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L02",
-    "Hash": 1576573638,
-    "NetId": 4294482630,
     "SkinId": 0,
     "Position": {
       "X": 1076.66382,
@@ -1723,16 +1853,15 @@
       "Y": 0.484800041,
       "Z": 0.484800041
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L03",
-    "Hash": 721398352,
-    "NetId": 4294945360,
     "SkinId": 0,
     "Position": {
       "X": 824.0358,
@@ -1749,16 +1878,15 @@
       "Y": 0.590000033,
       "Z": 0.590000033
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L04",
-    "Hash": 3030073331,
-    "NetId": 4288364531,
     "SkinId": 0,
     "Position": {
       "X": 814.869141,
@@ -1775,16 +1903,15 @@
       "Y": 0.6477001,
       "Z": 0.6477001
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L05",
-    "Hash": 3281784677,
-    "NetId": 4288417637,
     "SkinId": 0,
     "Position": {
       "X": 801.166,
@@ -1801,16 +1928,15 @@
       "Y": 0.59860003,
       "Z": 0.59860003
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L06",
-    "Hash": 1519738591,
-    "NetId": 4287979231,
     "SkinId": 0,
     "Position": {
       "X": 823.0357,
@@ -1827,16 +1953,15 @@
       "Y": 0.5783,
       "Z": 0.5783
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L07",
-    "Hash": 764571209,
-    "NetId": 4287786569,
     "SkinId": 0,
     "Position": {
       "X": 878.603455,
@@ -1853,16 +1978,15 @@
       "Y": 0.6402,
       "Z": 0.6402
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L08",
-    "Hash": 3173872600,
-    "NetId": 4281168856,
     "SkinId": 0,
     "Position": {
       "X": 1101.98218,
@@ -1879,16 +2003,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_L09",
-    "Hash": 3391767374,
-    "NetId": 4280959822,
     "SkinId": 0,
     "Position": {
       "X": 1561.81555,
@@ -1905,16 +2028,15 @@
       "Y": 0.663800061,
       "Z": 0.663800061
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R010",
-    "Hash": 493499217,
-    "NetId": 4285150033,
     "SkinId": 0,
     "Position": {
       "X": 12594.7793,
@@ -1931,16 +2053,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R011",
-    "Hash": 1785529287,
-    "NetId": 4285334471,
     "SkinId": 0,
     "Position": {
       "X": 13122.7021,
@@ -1957,16 +2078,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R012",
-    "Hash": 4083438205,
-    "NetId": 4284764797,
     "SkinId": 0,
     "Position": {
       "X": 13344.8955,
@@ -1983,16 +2103,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R013",
-    "Hash": 2221105899,
-    "NetId": 4284703467,
     "SkinId": 0,
     "Position": {
       "X": 13334.9814,
@@ -2009,16 +2128,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R014",
-    "Hash": 436729672,
-    "NetId": 4278712136,
     "SkinId": 0,
     "Position": {
       "X": 13303.8867,
@@ -2035,16 +2153,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R015",
-    "Hash": 1828767710,
-    "NetId": 4278241246,
     "SkinId": 0,
     "Position": {
       "X": 13258.4346,
@@ -2061,16 +2178,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R016",
-    "Hash": 4094269028,
-    "NetId": 4278818404,
     "SkinId": 0,
     "Position": {
       "X": 13231.2422,
@@ -2087,16 +2203,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R017",
-    "Hash": 2198775538,
-    "NetId": 4279150322,
     "SkinId": 0,
     "Position": {
       "X": 12854.2734,
@@ -2113,16 +2228,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R02",
-    "Hash": 1262490812,
-    "NetId": 4282389692,
     "SkinId": 0,
     "Position": {
       "X": 4059.57861,
@@ -2139,16 +2253,15 @@
       "Y": 0.5107,
       "Z": 0.5107
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R03",
-    "Hash": 1011295274,
-    "NetId": 4282852394,
     "SkinId": 0,
     "Position": {
       "X": 5321.31641,
@@ -2165,16 +2278,15 @@
       "Y": 0.5949,
       "Z": 0.5949
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R04",
-    "Hash": 2720248201,
-    "NetId": 4280529289,
     "SkinId": 0,
     "Position": {
       "X": 6509.74658,
@@ -2191,16 +2303,15 @@
       "Y": 0.654400051,
       "Z": 0.654400051
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R05",
-    "Hash": 3575939359,
-    "NetId": 4280582431,
     "SkinId": 0,
     "Position": {
       "X": 7568.732,
@@ -2217,16 +2328,15 @@
       "Y": 0.6349,
       "Z": 0.6349
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R06",
-    "Hash": 1278070949,
-    "NetId": 4281192613,
     "SkinId": 0,
     "Position": {
       "X": 8845.957,
@@ -2243,16 +2353,15 @@
       "Y": 0.6384,
       "Z": 0.6384
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R07",
-    "Hash": 992665651,
-    "NetId": 4280999987,
     "SkinId": 0,
     "Position": {
       "X": 10099.915,
@@ -2269,16 +2378,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R08",
-    "Hash": 2878733730,
-    "NetId": 4288019874,
     "SkinId": 0,
     "Position": {
       "X": 11025.498,
@@ -2295,16 +2403,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__NAV_R09",
-    "Hash": 3700608308,
-    "NetId": 4287810868,
     "SkinId": 0,
     "Position": {
       "X": 11887.7822,
@@ -2321,16 +2428,15 @@
       "Y": 0.6811,
       "Z": 0.6811
     },
-    "Team": 0,
     "ObjectType": "NavPoint",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__P_Chaos_Spawn_Barracks__C01",
-    "Hash": 2042233064,
-    "NetId": 4290380008,
     "SkinId": 0,
     "Position": {
       "X": 12511.7734,
@@ -2347,16 +2453,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "BarrackSpawn",
-    "SkinName": "ChaosBarracks_Wizard",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__P_Chaos_Spawn_Barracks__L01",
-    "Hash": 1927694293,
-    "NetId": 4293281749,
     "SkinId": 0,
     "Position": {
       "X": 12451.0527,
@@ -2373,16 +2478,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "BarrackSpawn",
-    "SkinName": "ChaosBarracks_Wizard",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__P_Chaos_Spawn_Barracks__R01",
-    "Hash": 1683933615,
-    "NetId": 4284402095,
     "SkinId": 0,
     "Position": {
       "X": 13062.4971,
@@ -2399,16 +2503,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "BarrackSpawn",
-    "SkinName": "ChaosBarracks_Wizard",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__P_Order_Spawn_Barracks__C01",
-    "Hash": 1236758897,
-    "NetId": 4290212209,
     "SkinId": 0,
     "Position": {
       "X": 1418.37122,
@@ -2425,16 +2528,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "BarrackSpawn",
-    "SkinName": "OrderBarracks_Wizard",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__P_Order_Spawn_Barracks__L01",
-    "Hash": 1122711116,
-    "NetId": 4293604940,
     "SkinId": 0,
     "Position": {
       "X": 917.7307,
@@ -2451,16 +2553,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "BarrackSpawn",
-    "SkinName": "OrderBarracks_Wizard",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__P_Order_Spawn_Barracks__R01",
-    "Hash": 1414772790,
-    "NetId": 4283676726,
     "SkinId": 0,
     "Position": {
       "X": 1487.08984,
@@ -2477,16 +2578,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "BarrackSpawn",
-    "SkinName": "OrderBarracks_Wizard",
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__Spawn_T1",
-    "Hash": 2331348717,
-    "NetId": 4294282989,
     "SkinId": 0,
     "Position": {
       "X": 25.9028,
@@ -2503,16 +2603,15 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Blue",
     "ObjectType": "NexusSpawn",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   },
   {
     "Name": "__Spawn_T2",
-    "Hash": 335339351,
-    "NetId": 4294762327,
     "SkinId": 0,
     "Position": {
       "X": 13933.79,
@@ -2529,10 +2628,11 @@
       "Y": 1.0,
       "Z": 1.0
     },
-    "Team": "Red",
     "ObjectType": "NexusSpawn",
-    "SkinName": null,
     "HqData": null,
-    "BarracksData": null
+    "BarracksData": null,
+    "TurretData": null,
+    "LevelPropData": null,
+    "ShopData": null
   }
 ]

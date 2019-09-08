@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
@@ -28,7 +29,20 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         public ILevelPropAI CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            var instance = new LevelPropAI(obj.Team, obj.Position, stats, _networkIdCreationService.GetNewNetId(), obj.SkinName, obj.SkinId, 1200, obj.Rotation, new Vector3(0, 0, 0), obj.Scale, obj.Name);
+            var instance = new LevelPropAI
+            (
+                Team.Neutral,
+                obj.Position,
+                stats,
+                _networkIdCreationService.GetNewNetId(), 
+                obj.LevelPropData.SkinName,
+                obj.SkinId,
+                1200,
+                obj.Rotation, 
+                new Vector3(0, 0, 0), 
+                obj.Scale,
+                obj.LevelPropData.Name
+            );
 
             return SetupDependencies(instance);
         }

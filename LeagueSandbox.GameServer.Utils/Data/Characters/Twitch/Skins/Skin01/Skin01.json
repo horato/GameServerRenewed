@@ -1,0 +1,26 @@
+{
+  "Values": {
+    "ContextualAction": {
+      "RuleConfigFile": "Twitch_Base.cac"
+    },
+    "MeshSkin": {
+      "Animations": "TwitchBase.blnd",
+      "ChampionSkinID": 29001,
+      "ChampionSkinName": "KingpinTwitch",
+      "MaterialOverride0SubMesh": "Twitch_cheese_Mat",
+      "MaterialOverride0Texture": "twitch_cheese_TX_CM.dds",
+      "OverrideBoundingBox": [
+        140.0,
+        160.0,
+        140.0
+      ],
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "Twitch_kingpin.skn",
+      "Skeleton": "Twitch_kingpin.skl",
+      "SkinScale": 1.0,
+      "SubmeshesToHide": "Twitch_Cheese_Mat",
+      "Texture": "twitch_kingpin_TX_CM.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

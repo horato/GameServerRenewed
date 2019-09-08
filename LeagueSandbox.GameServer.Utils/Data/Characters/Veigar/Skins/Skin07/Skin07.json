@@ -1,0 +1,20 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "BadSantaVeigar.blnd",
+      "ChampionSkinID": 45007,
+      "ChampionSkinName": "BadSantaVeigar",
+      "OverrideBoundingBox": [
+        80.0,
+        100.0,
+        80.0
+      ],
+      "SelfIllumination": 0.75,
+      "SimpleSkin": "veigar_badSanta.skn",
+      "Skeleton": "veigar_badSanta.skl",
+      "SkinScale": 1.8,
+      "Texture": "Veigar_badSanta_TX_CM.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

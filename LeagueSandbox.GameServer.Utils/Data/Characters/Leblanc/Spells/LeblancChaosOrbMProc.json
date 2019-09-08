@@ -1,0 +1,11 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_LeblancChaosOrbMProc"
+    },
+    "SpellData": {
+      "AlternateName": "LeblancChaosOrbM"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

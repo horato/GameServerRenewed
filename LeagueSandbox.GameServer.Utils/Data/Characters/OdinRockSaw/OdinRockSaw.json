@@ -1,0 +1,16 @@
+{
+  "Values": {
+    "Data": {
+      "AssetCategory": "obj",
+      "PathfindingCollisionRadius": 44.20000076293945
+    },
+    "MeshSkin": {
+      "Animations": "OdinRockSawBase.blnd",
+      "ChampionSkinName": "OdinRockSawBase",
+      "SimpleSkin": "OdinRockSaw.skn",
+      "Skeleton": "OdinRockSaw.skl",
+      "Texture": "OdinRockSaw_DM.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

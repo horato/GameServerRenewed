@@ -1,0 +1,10 @@
+{
+  "Values": {
+    "SpellData": {
+      "DynamicExtended": "game_spell_levelup_PounceEnabler",
+      "DynamicTooltip": "game_spell_tooltip_PounceEnabler",
+      "Version": 1
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

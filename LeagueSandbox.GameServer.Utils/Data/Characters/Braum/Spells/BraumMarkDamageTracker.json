@@ -1,0 +1,12 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_BraumMarkDamageTracker",
+      "FloatVarsDecimals1": 1,
+      "FloatVarsDecimals2": 2,
+      "FloatVarsDecimals3": 0,
+      "FloatVarsDecimals5": 0
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

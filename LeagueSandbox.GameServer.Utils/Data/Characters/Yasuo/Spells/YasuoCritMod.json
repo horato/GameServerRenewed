@@ -1,0 +1,12 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_RumbleDangerZone"
+    },
+    "SpellData": {
+      "CastFrame": 0,
+      "UseAnimatorFramerate": 0
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

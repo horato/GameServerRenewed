@@ -35,7 +35,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             
             stats.UpdateTargetability(false, SpellFlags.NonTargetableEnemy);
 
-            var instance = new ObjHQ(obj.Team, obj.Position, stats, obj.NetId, 1700);
+            var instance = new ObjHQ
+            (
+                obj.HqData.Team, 
+                obj.Position, 
+                stats,
+                obj.HqData.NetId, 
+                1700);
 
             return SetupDependencies(instance);
         }

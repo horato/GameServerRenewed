@@ -1,0 +1,17 @@
+{
+  "Values": {
+    "Data": {
+      "Significance": 0.2
+    },
+    "MeshSkin": {
+      "Animations": "Nidalee_SpearBase.manifest",
+      "ChampionSkinName": "Nidalee_SpearBase",
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "Nidalee_Spear.skn",
+      "Skeleton": "Nidalee_Spear.skl",
+      "SkinScale": 3.2,
+      "Texture": "Nidalee_Spear.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

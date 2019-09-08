@@ -34,7 +34,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             stats.ManaPoints.ApplyStatModifier(new StatModifier(obj.BarracksData.MaxMP, 0, 0, 0));
             stats.UpdateTargetability(false, SpellFlags.NonTargetableEnemy);
 
-            var instance = new ObjBarracksDampener(obj.Team, obj.Position, stats, obj.NetId, 1700);
+            var instance = new ObjBarracksDampener
+            (
+                obj.BarracksData.Team, 
+                obj.Position, 
+                stats,
+                obj.BarracksData.NetId,
+                1700,
+                obj.BarracksData.Lane
+            );
 
             return SetupDependencies(instance);
         }

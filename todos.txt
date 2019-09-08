@@ -4,3 +4,4 @@ Replace byte/short with int outside networking
 team broadcast
 Reconnect
 Should game object implement interfaces like ICanMove, ICanCast, etc? Or is casting to IObjAiBase enough/correct?
+Introduce separated enums for json & core

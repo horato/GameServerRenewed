@@ -1,0 +1,20 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "FossilKogMaw.blnd",
+      "ChampionSkinID": 96007,
+      "ChampionSkinName": "FossilKogMaw",
+      "OverrideBoundingBox": [
+        262.79998779296875,
+        281.3999938964844,
+        262.79998779296875
+      ],
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "kogMaw_fossil.skn",
+      "Skeleton": "kogMaw_fossil.skl",
+      "SkinScale": 0.7000000000000001,
+      "Texture": "kogmaw_fossil_TX_CM.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

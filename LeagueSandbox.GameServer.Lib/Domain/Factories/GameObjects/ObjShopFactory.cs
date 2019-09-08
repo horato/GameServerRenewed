@@ -26,7 +26,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         public IObjShop CreateFromMapObject(MapObject obj)
         {
             var stats = _statsFactory.CreateDefaultStats();
-            var instance = new ObjShop(obj.Team, obj.Position, stats, obj.NetId, 1700);
+            var instance = new ObjShop
+            (
+                obj.ShopData.Team, 
+                obj.Position, 
+                stats, 
+                obj.ShopData.NetId,
+                1700);
 
             return SetupDependencies(instance);
         }

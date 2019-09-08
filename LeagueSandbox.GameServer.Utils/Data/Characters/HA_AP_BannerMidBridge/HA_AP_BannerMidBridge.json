@@ -1,0 +1,12 @@
+{
+  "Values": {
+    "IdleParticles": {
+      "NumberOfParticles": 0,
+      "Particle1": ""
+    },
+    "MeshSkin": {
+      "CastShadows": 0
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

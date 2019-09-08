@@ -1,0 +1,15 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "ShopKeeperBase.blnd",
+      "ChampionSkinName": "ShopKeeperBase",
+      "GlowFactor": 0.2,
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "ShopKeeper.skn",
+      "Skeleton": "ShopKeeper.skl",
+      "SkinScale": 1.5499999523162842,
+      "Texture": "shop_trol_character.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

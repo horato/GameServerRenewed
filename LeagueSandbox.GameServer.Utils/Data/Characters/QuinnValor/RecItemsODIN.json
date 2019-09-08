@@ -1,0 +1,23 @@
+{
+  "Values": {
+    "ItemSet1": {
+      "SetName": "Set1",
+      "RecItem1": 1063,
+      "RecItem2": 3111,
+      "RecItem3": 3027,
+      "RecItem4": 3116,
+      "RecItem5": 3136,
+      "RecItem6": 3157
+    },
+    "ItemSet2": {
+      "SetName": "Set2",
+      "RecItem1": 1063,
+      "RecItem2": 3111,
+      "RecItem3": 3027,
+      "RecItem4": 3116,
+      "RecItem5": 3136,
+      "RecItem6": 3157
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

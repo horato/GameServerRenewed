@@ -1,0 +1,28 @@
+{
+  "Values": {
+    "ContextualAction": {
+      "RuleConfigFile": "Twitch_Base.cac"
+    },
+    "MeshSkin": {
+      "Animations": "TwitchBase.blnd",
+      "ChampionSkinID": 29003,
+      "ChampionSkinName": "IronMaskTwitch",
+      "MaterialOverride0SubMesh": "Twitch_cheese_Mat",
+      "MaterialOverride0Texture": "twitch_cheese_TX_CM.dds",
+      "OverrideBoundingBox": [
+        140.0,
+        160.0,
+        140.0
+      ],
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "twitch_medieval.skn",
+      "Skeleton": "twitch_medieval.skl",
+      "SkinScale": 1.0,
+      "SubmeshesToHide": "Twitch_Cheese_Mat",
+      "Texture": "twitch_medieval_TX_CM.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {
+    "1598226273": "2014-11-04"
+  }
+}

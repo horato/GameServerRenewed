@@ -1,0 +1,10 @@
+{
+  "Values": {
+    "SpellData": {
+      "DynamicExtended": "game_spell_levelup_SwipeBlocker",
+      "DynamicTooltip": "game_spell_tooltip_SwipeBlocker",
+      "Version": 1
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

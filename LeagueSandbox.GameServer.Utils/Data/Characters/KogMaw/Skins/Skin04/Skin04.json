@@ -1,0 +1,23 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "ReindeerKogMaw.blnd",
+      "ChampionSkinID": 96004,
+      "ChampionSkinName": "ReindeerKogMaw",
+      "OverrideBoundingBox": [
+        283.0,
+        303.0,
+        283.0
+      ],
+      "SelfIllumination": 0.7000000000000001,
+      "SimpleSkin": "KogMaw_reindeer.skn",
+      "Skeleton": "KogMaw_reindeer.skl",
+      "SkinScale": 0.6499999761581421,
+      "Texture": "kogmaw_rudolph_TX_CM.dds",
+      "UsesSkinVO": 1
+    }
+  },
+  "UNKNOWN_HASHES": {
+    "1598226273": "2013-07-31"
+  }
+}

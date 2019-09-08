@@ -1,0 +1,14 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "ThreshLantern.blnd",
+      "ChampionSkinName": "ThreshUndersea",
+      "SelfIllumination": 0.75,
+      "SimpleSkin": "ThreshLanternUndersea.skn",
+      "Skeleton": "ThreshLanternUndersea.skl",
+      "SkinScale": 1.0,
+      "Texture": "ThreshLantern_Undersea_TX_CM.DDS"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

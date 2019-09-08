@@ -1,0 +1,14 @@
+{
+  "Values": {
+    "IdleParticles": {
+      "GameplayCollisionRadius": 88.4000015258789
+    },
+    "Info": {
+      "IconSquare": "OrderLaneTower_Icon.dds"
+    },
+    "Package": {
+      "FallbackPackage": "HA_AP_OrderTurret"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

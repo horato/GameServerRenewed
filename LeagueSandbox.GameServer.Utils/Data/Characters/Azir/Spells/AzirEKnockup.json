@@ -1,0 +1,11 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_"
+    },
+    "SpellData": {
+      "AlternateName": "AzirE"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

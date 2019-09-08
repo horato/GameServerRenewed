@@ -1,0 +1,20 @@
+{
+  "Values": {
+    "MeshSkin": {
+      "Animations": "DapperVeigar.blnd",
+      "ChampionSkinID": 45006,
+      "ChampionSkinName": "DapperVeigar",
+      "OverrideBoundingBox": [
+        80.0,
+        100.0,
+        80.0
+      ],
+      "SelfIllumination": 0.75,
+      "SimpleSkin": "veigar_dapper.skn",
+      "Skeleton": "veigar_dapper.skl",
+      "SkinScale": 1.8,
+      "Texture": "veigar_dapper_TX_CM.dds"
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

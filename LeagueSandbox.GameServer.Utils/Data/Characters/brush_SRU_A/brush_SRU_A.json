@@ -1,0 +1,10 @@
+{
+  "Values": {
+    "Interaction": {
+      "DoubleSided": 1,
+      "IdleAnim": "Distance",
+      "RandomizeIdleAnimPhase": 1
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

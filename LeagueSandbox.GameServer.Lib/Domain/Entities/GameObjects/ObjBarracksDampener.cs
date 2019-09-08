@@ -7,6 +7,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class ObjBarracksDampener : ObjAnimatedBuilding, IObjBarracksDampener
     {
+        public Lane Lane { get; }
+
         //waveTimer
         //waveCounts
         //curSpawnNum    
@@ -24,8 +26,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //BarracksEnabled
         //state enum _DampenerState
 
-        public ObjBarracksDampener(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        public ObjBarracksDampener(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, Lane lane) : base(team, position, stats, netId, visionRadius)
         {
+            Lane = lane;
         }
     }
 }
