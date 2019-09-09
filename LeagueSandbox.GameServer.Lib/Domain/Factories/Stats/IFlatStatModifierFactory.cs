@@ -7,6 +7,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
 {
     internal interface IFlatStatModifierFactory
     {
-        FlatStatModifier CreateNew(float value, float bonusPerLevel, float regenerationPer5);
+        FlatStatModifier CreateNew(float value, float bonusPerLevel, float regenerationPer5, float regenerationBonusPerLevel);
     }
 }

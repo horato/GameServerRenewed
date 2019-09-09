@@ -6,5 +6,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
         float BonusPerLevel { get; }
         float RegenerationPer5 { get; }
         bool StatModified { get; }
+        float RegenerationBonusPerLevel { get; }
     }
 }

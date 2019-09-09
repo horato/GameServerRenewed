@@ -1,5 +1,6 @@
 ﻿namespace LeagueSandbox.GameServer.Core.Domain.Enums
 {
+    /// <summary> Do not change. Used in json. </summary>
     public enum PrimaryAbilityResourceType
     {
         Mana = 1,
@@ -13,6 +14,7 @@
         Ferocity = 9,
         BloodWell = 10,
         Wind = 11,
-        Other = 12
+        Other = 12,
+        GnarFury = 12
     }
 }

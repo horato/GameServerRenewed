@@ -237,7 +237,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             if (stats.ManaRegeneration.IsUpdated)
             {
                 mm2.Add(ObjAiHeroFieldMask.FM2_ManaRegenerationTotal, stats.ManaRegeneration.Total);
-                mm3.Add(ObjAiHeroFieldMask.FM3_ManaRegenerationBonusPercent, stats.ManaRegeneration.PercentBonus);
             }
 
             if (stats.MoveSpeed.IsUpdated)

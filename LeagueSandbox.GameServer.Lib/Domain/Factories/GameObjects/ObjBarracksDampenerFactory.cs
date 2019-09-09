@@ -29,15 +29,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             var stats = _statsFactory.CreateDefaultStats();
 
             stats.Armor.ApplyStatModifier(new StatModifier(obj.BarracksData.Armor, 0, 0, 0));
-            stats.FlatHealthPoints.ApplyStatModifier(new FlatStatModifier(0, 0, obj.BarracksData.BaseStaticHPRegen));
+            stats.FlatHealthPoints.ApplyStatModifier(new FlatStatModifier(0, 0, obj.BarracksData.BaseStaticHPRegen, 0));
             stats.HealthPoints.ApplyStatModifier(new StatModifier(obj.BarracksData.MaxHP, 0, 0, 0));
             stats.ManaPoints.ApplyStatModifier(new StatModifier(obj.BarracksData.MaxMP, 0, 0, 0));
             stats.UpdateTargetability(false, SpellFlags.NonTargetableEnemy);
 
             var instance = new ObjBarracksDampener
             (
-                obj.BarracksData.Team, 
-                obj.Position, 
+                obj.BarracksData.Team,
+                obj.Position,
                 stats,
                 obj.BarracksData.NetId,
                 1700,

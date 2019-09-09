@@ -33,8 +33,10 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
         IFlatStat FlatHealthPoints { get; }
         IFlatStat FlatManaPoints { get; }
         IFlatStat FlatAttackDamage { get; }
+        IFlatStat FlatSpellDamage { get; }
         IFlatStat FlatArmor { get; }
         IFlatStat FlatMagicResist { get; }
+        IFlatStat FlatCritChance { get; }
         IFlatStat Gold { get; }
         IFlatStat Level { get; }
         IFlatStat Experience { get; }

@@ -22,8 +22,10 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
         private IFlatStat _flatHealthPoints = new FlatStatBuilder().Build();
         private IFlatStat _flatManaPoints = new FlatStatBuilder().Build();
         private IFlatStat _flatAttackDamange = new FlatStatBuilder().Build();
+        private IFlatStat _flatSpellDamage = new FlatStatBuilder().Build();
         private IFlatStat _flatArmor = new FlatStatBuilder().Build();
         private IFlatStat _flatMagicResist = new FlatStatBuilder().Build();
+        private IFlatStat _flatCritChance = new FlatStatBuilder().Build();
         private IFlatStat _gold = new FlatStatBuilder().Build();
         private IFlatStat _level = new FlatStatBuilder().Build();
         private IFlatStat _experience = new FlatStatBuilder().Build();
@@ -144,6 +146,12 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
             return this;
         }
 
+        public StatsBuilder WithFlatSpellDamange(IFlatStat flatSpellDamage)
+        {
+            _flatSpellDamage = flatSpellDamage;
+            return this;
+        }
+
         public StatsBuilder WithFlatArmor(IFlatStat flatArmor)
         {
             _flatArmor = flatArmor;
@@ -153,6 +161,12 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
         public StatsBuilder WithFlatMagicResist(IFlatStat flatMagicResist)
         {
             _flatMagicResist = flatMagicResist;
+            return this;
+        }
+
+        public StatsBuilder WithFlatCritChance(IFlatStat flatCritChance)
+        {
+            _flatCritChance = flatCritChance;
             return this;
         }
 
@@ -296,7 +310,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
 
         public override Lib.Domain.Entities.Stats.Stats Build()
         {
-            var instance = new Lib.Domain.Entities.Stats.Stats(_spellsEnabled, _isTargetableToTeam, _actionState, _parType, _isMagicImmune, _isInvulnerable, _isPhysicalImmune, _isLifestealImmune, _isTargetable, _isGeneratingGold, _spellCostReduction, _goldTotal, _flatAttackSpeed, _flatHealthPoints, _flatManaPoints, _flatAttackDamange, _flatArmor, _flatMagicResist, _gold, _level, _experience, _abilityPower, _armor, _armorPenetration, _attackDamage, _attackSpeedMultiplier, _cooldownReduction, _criticalChance, _criticalDamage, _healthPoints, _healthRegeneration, _lifeSteal, _magicResist, _magicPenetration, _manaPoints, _manaRegeneration, _moveSpeed, _range, _size, _spellVamp, _tenacity);
+            var instance = new Lib.Domain.Entities.Stats.Stats(_spellsEnabled, _isTargetableToTeam, _actionState, _parType, _isMagicImmune, _isInvulnerable, _isPhysicalImmune, _isLifestealImmune, _isTargetable, _isGeneratingGold, _spellCostReduction, _goldTotal, _flatAttackSpeed, _flatHealthPoints, _flatManaPoints, _flatAttackDamange, _flatSpellDamage, _flatArmor, _flatMagicResist, _flatCritChance, _gold, _level, _experience, _abilityPower, _armor, _armorPenetration, _attackDamage, _attackSpeedMultiplier, _cooldownReduction, _criticalChance, _criticalDamage, _healthPoints, _healthRegeneration, _lifeSteal, _magicResist, _magicPenetration, _manaPoints, _manaRegeneration, _moveSpeed, _range, _size, _spellVamp, _tenacity);
 
             return instance;
         }

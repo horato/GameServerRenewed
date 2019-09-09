@@ -16,14 +16,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
 
         public IFlatStat CreateEmpty()
         {
-            var instance = new FlatStat(false, 0, 0, 0);
+            var instance = new FlatStat(false, 0, 0, 0, 0);
 
             return SetupDependencies(instance);
         }
 
-        public IFlatStat CreateNew(float currentValue, float bonusPerLevel, float regenerationPer5)
+        public IFlatStat CreateNew(float currentValue, float bonusPerLevel, float regenerationPer5, float regenerationBonusPerLevel)
         {
-            var instance = new FlatStat(true, currentValue, bonusPerLevel, regenerationPer5);
+            var instance = new FlatStat(true, currentValue, bonusPerLevel, regenerationPer5, regenerationBonusPerLevel);
 
             return SetupDependencies(instance);
         }

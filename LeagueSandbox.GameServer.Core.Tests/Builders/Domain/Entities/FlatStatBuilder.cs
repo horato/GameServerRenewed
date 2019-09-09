@@ -12,6 +12,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private float _currentValue = 245;
         private float _bonusPerLevel = 1.7f;
         private float _regenerationPer5 = 14.4f;
+        private float _regenerationBonusPerLevel = 1.8f;
 
         public FlatStatBuilder WithIsUpdated(bool isUpdated)
         {
@@ -37,9 +38,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
+        public FlatStatBuilder WithRegenerationBonusPerLevel(float regenerationBonusPerLevel)
+        {
+            _regenerationBonusPerLevel = regenerationBonusPerLevel;
+            return this;
+        }
+
         public override FlatStat Build()
         {
-            var instance = new FlatStat(_isUpdated, _currentValue, _bonusPerLevel, _regenerationPer5);
+            var instance = new FlatStat(_isUpdated, _currentValue, _bonusPerLevel, _regenerationPer5, _regenerationBonusPerLevel);
 
             return instance;
         }

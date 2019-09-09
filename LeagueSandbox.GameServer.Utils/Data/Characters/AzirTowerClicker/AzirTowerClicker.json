@@ -25,7 +25,7 @@
       "CritPerLevel": 0,
       "DamagePerLevel": 0,
       "EnemyTooltip": "game_character_enemyTooltip_ThreshLantern",
-      "ExpGivenOnDeath": "0.0F",
+      "ExpGivenOnDeath": "0.0",
       "FriendlyTooltip": "game_character_enemyTooltip_ThreshLantern",
       "GoldGivenOnDeath": 0,
       "HoverIndicatorRadius": 300,

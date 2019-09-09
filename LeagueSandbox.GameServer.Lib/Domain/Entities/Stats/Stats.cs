@@ -8,6 +8,7 @@ using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
 {
+    /// <summary> TODO: This might need re-doing </summary>
     internal class Stats : IStats, INeedDependencies
     {
         private IFlatStatModifierFactory _flatStatModifierFactory;
@@ -49,8 +50,10 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public IFlatStat FlatHealthPoints { get; }
         public IFlatStat FlatManaPoints { get; }
         public IFlatStat FlatAttackDamage { get; }
+        public IFlatStat FlatSpellDamage { get; }
         public IFlatStat FlatArmor { get; }
         public IFlatStat FlatMagicResist { get; }
+        public IFlatStat FlatCritChance { get; }
         public IFlatStat Gold { get; }
         public IFlatStat Level { get; }
         public IFlatStat Experience { get; }
@@ -76,7 +79,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public IStat SpellVamp { get; }
         public IStat Tenacity { get; }
 
-        public Stats(SpellSlot spellsEnabled, SpellFlags isTargetableToTeam, ActionState actionState, PrimaryAbilityResourceType parType, bool isMagicImmune, bool isInvulnerable, bool isPhysicalImmune, bool isLifestealImmune, bool isTargetable, bool isGeneratingGold, float spellCostReduction, float goldTotal, IFlatStat flatAttackSpeed, IFlatStat flatHealthPoints, IFlatStat flatManaPoints, IFlatStat flatAttackDamange, IFlatStat flatArmor, IFlatStat flatMagicResist, IFlatStat gold, IFlatStat level, IFlatStat experience, IStat abilityPower, IStat armor, IStat armorPenetration, IStat attackDamage, IStat attackSpeedMultiplier, IStat cooldownReduction, IStat criticalChance, IStat criticalDamage, IStat healthPoints, IStat healthRegeneration, IStat lifeSteal, IStat magicResist, IStat magicPenetration, IStat manaPoints, IStat manaRegeneration, IStat moveSpeed, IStat range, IStat size, IStat spellVamp, IStat tenacity)
+        public Stats(SpellSlot spellsEnabled, SpellFlags isTargetableToTeam, ActionState actionState, PrimaryAbilityResourceType parType, bool isMagicImmune, bool isInvulnerable, bool isPhysicalImmune, bool isLifestealImmune, bool isTargetable, bool isGeneratingGold, float spellCostReduction, float goldTotal, IFlatStat flatAttackSpeed, IFlatStat flatHealthPoints, IFlatStat flatManaPoints, IFlatStat flatAttackDamange, IFlatStat flatSpellDamage, IFlatStat flatArmor, IFlatStat flatMagicResist, IFlatStat flatCritChance, IFlatStat gold, IFlatStat level, IFlatStat experience, IStat abilityPower, IStat armor, IStat armorPenetration, IStat attackDamage, IStat attackSpeedMultiplier, IStat cooldownReduction, IStat criticalChance, IStat criticalDamage, IStat healthPoints, IStat healthRegeneration, IStat lifeSteal, IStat magicResist, IStat magicPenetration, IStat manaPoints, IStat manaRegeneration, IStat moveSpeed, IStat range, IStat size, IStat spellVamp, IStat tenacity)
         {
             SpellsEnabled = spellsEnabled;
             SpellsModified = true;
@@ -113,8 +116,10 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             FlatHealthPoints = flatHealthPoints;
             FlatManaPoints = flatManaPoints;
             FlatAttackDamage = flatAttackDamange;
+            FlatSpellDamage = flatSpellDamage;
             FlatArmor = flatArmor;
             FlatMagicResist = flatMagicResist;
+            FlatCritChance = flatCritChance;
             Gold = gold;
             Level = level;
             Experience = experience;
@@ -244,7 +249,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         {
             GoldTotal += amount;
 
-            var modifier = _flatStatModifierFactory.CreateNew(amount, 0, 0);
+            var modifier = _flatStatModifierFactory.CreateNew(amount, 0, 0, 0);
             Gold.ApplyStatModifier(modifier);
         }
 

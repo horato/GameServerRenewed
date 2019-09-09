@@ -20,6 +20,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterType<IMovementService, MovementService>();
             container.RegisterType<ICalculationService, CalculationService>();
             container.RegisterType<IMapObjectsProvider, MapObjectsProvider>();
+            container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
         }
     }
 }

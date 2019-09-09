@@ -9,13 +9,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public float CurrentValue { get; private set; }
         public float BonusPerLevel { get; private set; }
         public float RegenerationPer5 { get; private set; }
+        public float RegenerationBonusPerLevel { get; private set; }
 
-        public FlatStat(bool isUpdated, float currentValue, float bonusPerLevel, float regenerationPer5)
+        public FlatStat(bool isUpdated, float currentValue, float bonusPerLevel, float regenerationPer5, float regenerationBonusPerLevel)
         {
             IsUpdated = isUpdated;
             CurrentValue = currentValue;
             BonusPerLevel = bonusPerLevel;
             RegenerationPer5 = regenerationPer5;
+            RegenerationBonusPerLevel = regenerationBonusPerLevel;
         }
 
         public bool ApplyStatModifier(IFlatStatModifier statModifier)
@@ -26,6 +28,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             CurrentValue += statModifier.Value;
             BonusPerLevel += statModifier.BonusPerLevel;
             RegenerationPer5 += statModifier.RegenerationPer5;
+            RegenerationBonusPerLevel += statModifier.RegenerationBonusPerLevel;
             IsUpdated = true;
 
             return true;
@@ -39,6 +42,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             CurrentValue -= statModifier.Value;
             BonusPerLevel -= statModifier.BonusPerLevel;
             RegenerationPer5 -= statModifier.RegenerationPer5;
+            RegenerationBonusPerLevel -= statModifier.RegenerationBonusPerLevel;
             IsUpdated = true;
 
             return true;

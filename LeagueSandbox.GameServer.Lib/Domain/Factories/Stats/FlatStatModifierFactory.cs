@@ -10,9 +10,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
         {
         }
 
-        public FlatStatModifier CreateNew(float value, float bonusPerLevel, float regenerationPer5)
+        public FlatStatModifier CreateNew(float value, float bonusPerLevel, float regenerationPer5, float regenerationBonusPerLevel)
         {
-            var instance = new FlatStatModifier(value, bonusPerLevel, regenerationPer5);
+            var instance = new FlatStatModifier(value, bonusPerLevel, regenerationPer5, regenerationBonusPerLevel);
 
             return SetupDependencies(instance);
         }
