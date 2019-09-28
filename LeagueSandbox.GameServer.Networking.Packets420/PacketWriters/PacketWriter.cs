@@ -358,5 +358,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 definition.Cooldown
             ).GetBytes();
         }
+
+        public byte[] WriteSkillUp(IObjAiBase owner, ISpell spell)
+        {
+            var slot = _enumTranslationService.TranslateSpellSlot(spell.Slot);
+            return new SkillUpResponse(owner.NetId, slot, checked((byte)spell.Level), checked((byte)owner.SpellBook.SkillPoints)).GetBytes();
+        }
     }
 }

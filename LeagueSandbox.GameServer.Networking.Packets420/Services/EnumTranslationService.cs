@@ -378,5 +378,34 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     throw new ArgumentOutOfRangeException(nameof(spellSlot), spellSlot, null);
             }
         }
+
+        public GameServer.Core.Domain.Enums.SpellSlot TranslateSpellSlot(SpellSlot slot)
+        {
+            switch (slot)
+            {
+                case SpellSlot.Spell1:
+                    return GameServer.Core.Domain.Enums.SpellSlot.Q;
+                case SpellSlot.Spell2:
+                    return GameServer.Core.Domain.Enums.SpellSlot.W;
+                case SpellSlot.Spell3:
+                    return GameServer.Core.Domain.Enums.SpellSlot.E;
+                case SpellSlot.Ultimate:
+                    return GameServer.Core.Domain.Enums.SpellSlot.R;
+                case SpellSlot.Summoner1:
+                    return GameServer.Core.Domain.Enums.SpellSlot.D;
+                case SpellSlot.Summoner2:
+                    return GameServer.Core.Domain.Enums.SpellSlot.F;
+                case SpellSlot.Trinket:
+                case SpellSlot.BluePill:
+                case SpellSlot.ExtraItem2:
+                case SpellSlot.TemporaryItemSlotStart:
+                case SpellSlot.Respawn:
+                case SpellSlot.Use:
+                case SpellSlot.Passive:
+                case SpellSlot.Slotless:
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(slot), slot, null);
+            }
+        }
     }
 }

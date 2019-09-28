@@ -93,8 +93,6 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
 
             //sender.Champion.Stats.SetSpellEnabled(7, true);
             //sender.Champion.Stats.SetSpellEnabled(14, true);
-            //sender.Champion.Stats.SetSummonerSpellEnabled(0, true);
-            //sender.Champion.Stats.SetSummonerSpellEnabled(1, true);
 
             var objects = _gameObjectsCache.GetAllObjects();
             foreach (var gameObject in objects)

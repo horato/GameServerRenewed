@@ -34,5 +34,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyWaypointGroup(IEnumerable<ulong> targetSummonerIds, IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
         void NotifyReplication(IEnumerable<ulong> targetSummonerIds, IEnumerable<IAttackableUnit> gameObjects);
         void NotifySetCooldown(ulong targetSummonerId, IObjAiBase owner, ISpellInstance spell);
+        void NotifySkillUp(ulong targetSummonerId, IObjAiBase owner, ISpell spell);
     }
 }

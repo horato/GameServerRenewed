@@ -16,28 +16,31 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
         {
         }
 
-        public ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap)
+        public ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, int maxLevel, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap)
         {
-            var instance = new Spell(slot, level, castTime, spellName, SpellState.Ready, cooldownRemaining, cooldownPerLevelMap, manaCostPerLevelMap, castRangePerLevelMap, channelDurationPerLevelMap);
+            var instance = new Spell(slot, level, castTime, spellName, maxLevel, SpellState.Ready, cooldownRemaining, cooldownPerLevelMap, manaCostPerLevelMap, castRangePerLevelMap, channelDurationPerLevelMap);
 
             return SetupDependencies(instance);
         }
 
-        public ISpell CreateFromSpellData(SpellSlot slot, string spellName, SpellData data)
+        public ISpell CreateFromSpellData(SpellSlot slot, string spellName, int maxLevel, SpellData data)
         {
             var cooldownMap = CreateCooldownMap(data);
             var manaCostMap = CreateManaCostMap(data);
             var castRangeMap = CreateCastRangeMap(data);
             var channelDurationMap = CreateChannelDurationMap(data);
 
-            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap);
+            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, maxLevel, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap);
 
             return SetupDependencies(instance);
         }
 
-        public ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, SpellData data)
+        public ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, int maxLevel, SpellData data)
         {
-            return CreateFromSpellData(slot, spell.ToSpellName(), data);
+            var instance = CreateFromSpellData(slot, spell.ToSpellName(), maxLevel, data);
+            instance.SetLevel(1);
+
+            return instance;
         }
 
         private IDictionary<int, float> CreateCooldownMap(SpellData data)

@@ -11,6 +11,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private int _level = 2;
         private float _castTime = 2f;
         private string _spellName = "SPELL_Q";
+        private int _maxLevel = 4;
         private SpellState _state = SpellState.Cooldown;
         private float _cooldownRemaining = 8.5f;
         private IDictionary<int, float> _cooldownPerLevelMap = new Dictionary<int, float> { { 2, 15f } };
@@ -60,6 +61,12 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
+        public SpellBuilder WithMaxLevel(int maxLevel)
+        {
+            _maxLevel = maxLevel;
+            return this;
+        }
+
         public SpellBuilder WithState(SpellState state)
         {
             _state = state;
@@ -74,7 +81,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
 
         public override Spell Build()
         {
-            var instance = new Spell(_slot, _level, _castTime, _spellName, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap);
+            var instance = new Spell(_slot, _level, _castTime, _spellName, _maxLevel, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap);
 
             return instance;
         }

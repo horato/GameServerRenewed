@@ -24,5 +24,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
         ActionState TranslateActionState(GameServer.Core.Domain.Enums.ActionState actionState);
         PrimaryAbilityResourceType TranslateParType(GameServer.Core.Domain.Enums.PrimaryAbilityResourceType parType);
         SpellSlot TranslateSpellSlot(GameServer.Core.Domain.Enums.SpellSlot spellSlot);
+        GameServer.Core.Domain.Enums.SpellSlot TranslateSpellSlot(SpellSlot requestSlot);
     }
 }

@@ -109,7 +109,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
 
         [JsonConverter(typeof(IntBoolConverter))]
         public bool IsImportantBotTarget { get; }
-        
+
         [JsonConverter(typeof(StringBoolConverter))]
         public bool IsMelee { get; }
 
@@ -274,7 +274,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
             Map10_ArmorPerLevel = map10ArmorPerLevel;
             Map10_BaseMP = map10BaseMp;
             Map8_BaseMP = map8BaseMp;
-            MaxLevels = maxLevels;
+            MaxLevels = maxLevels ?? new[] { 5, 5, 5, 3 };
             MoveSpeed = moveSpeed;
             MPPerLevel = mpPerLevel;
             MPRegenPerLevel = mpRegenPerLevel;

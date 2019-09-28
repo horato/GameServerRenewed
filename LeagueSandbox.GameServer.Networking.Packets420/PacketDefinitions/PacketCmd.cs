@@ -34,6 +34,7 @@
         OnReplicationConfirm = 0xA8,
         S2CMissileReplication = 0x3B,
         S2CSetCooldown = 0x85,
+        S2CSUpgradeSpell = 0x15,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -46,7 +47,6 @@
         S2CUnlockCamera = 0x0E,
         S2CAddXp = 0x10,
         S2CGameSpeed = 0x12,
-        S2CSkillUp = 0x15,
         C2SPingLoadInfo = 0x16,
         S2CChangeSpell = 0x17,
         S2CFloatingText = 0x18,

@@ -43,22 +43,24 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             var spellBook = _spellBookFactory.CreateFromCharacterData(player.Champion, data);
 
             var summonerSpell1Data = _spellDataProvider.ProvideSummonerSpellData(player.Summoner1);
-            var summoner1 = _spellFactory.CreateSummonerSpell(SpellSlot.D, player.Summoner1, summonerSpell1Data);
+            var summoner1 = _spellFactory.CreateSummonerSpell(SpellSlot.D, player.Summoner1, 1, summonerSpell1Data);
             spellBook.AddSpell(summoner1);
+            stats.SetSpellEnabled(SpellSlot.D, true);
 
             var summonerSpell2Data = _spellDataProvider.ProvideSummonerSpellData(player.Summoner2);
-            var summoner2 = _spellFactory.CreateSummonerSpell(SpellSlot.F, player.Summoner2, summonerSpell2Data);
+            var summoner2 = _spellFactory.CreateSummonerSpell(SpellSlot.F, player.Summoner2, 1, summonerSpell2Data);
             spellBook.AddSpell(summoner2);
+            stats.SetSpellEnabled(SpellSlot.F, true);
 
             //TODO: start location
             var instance = new ObjAiHero
             (
                 player.Team,
-                new Vector3(33, 0, 239), 
-                stats, 
-                netId, 
+                new Vector3(33, 0, 239),
+                stats,
+                netId,
                 player.SummonerId,
-                clientId, 
+                clientId,
                 player.IsBot,
                 false,
                 player.Champion,

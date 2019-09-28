@@ -20,14 +20,16 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public float CastRange { get; private set; }
         public float ChannelDuration { get; private set; }
         public string SpellName { get; }
+        public int MaxLevel { get; }
         public SpellState State { get; private set; }
         public float CooldownRemaining { get; private set; }
 
-        public Spell(SpellSlot slot, int level, float castTime, string spellName, SpellState state, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap)
+        public Spell(SpellSlot slot, int level, float castTime, string spellName, int maxLevel, SpellState state, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap)
         {
             Slot = slot;
             CastTime = castTime;
             SpellName = spellName;
+            MaxLevel = maxLevel;
             State = state;
             CooldownRemaining = cooldownRemaining;
             _cooldownPerLevelMap = cooldownPerLevelMap ?? new Dictionary<int, float>();
@@ -40,6 +42,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 
         public void SetLevel(int level)
         {
+            if (level > MaxLevel)
+                throw new InvalidOperationException($"Spell {SpellName} has max {MaxLevel} level. Cannot set {level}");
             if (!_cooldownPerLevelMap.ContainsKey(level))
                 throw new InvalidOperationException($"Spell {SpellName} doesn't contain cooldown data for level {level}");
             if (!_manaCostPerLevelMap.ContainsKey(level))

@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 
         public ISpellBook CreateEmpty()
         {
-            var instance = new SpellBook(null, new List<ISpell>());
+            var instance = new SpellBook(null, 0, new List<ISpell>());
 
             return SetupDependencies(instance);
         }
@@ -35,32 +35,36 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             if (!string.IsNullOrWhiteSpace(data.Spell1))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell1);
-                var spell = _spellFactory.CreateFromSpellData(SpellSlot.Q, data.Spell1, spellData);
+                var maxLevel = data.MaxLevels[0];
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.Q, data.Spell1, maxLevel, spellData);
                 spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.Spell2))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell2);
-                var spell = _spellFactory.CreateFromSpellData(SpellSlot.W, data.Spell2, spellData);
+                var maxLevel = data.MaxLevels[1];
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.W, data.Spell2, maxLevel, spellData);
                 spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.Spell3))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell3);
-                var spell = _spellFactory.CreateFromSpellData(SpellSlot.E, data.Spell3, spellData);
+                var maxLevel = data.MaxLevels[2];
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.E, data.Spell3, maxLevel, spellData);
                 spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.Spell4))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell4);
-                var spell = _spellFactory.CreateFromSpellData(SpellSlot.R, data.Spell4, spellData);
+                var maxLevel = data.MaxLevels[3];
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.R, data.Spell4, maxLevel, spellData);
                 spells.Add(spell);
             }
 
-            var instance = new SpellBook(null, spells);
+            var instance = new SpellBook(null, 1, spells);
             return SetupDependencies(instance);
         }
     }

@@ -33,5 +33,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
         byte[] WriteReplication(IEnumerable<IAttackableUnit> gameObjects);
         byte[] WriteSetCooldown(IObjAiBase owner, ISpellInstance spell);
+        byte[] WriteSkillUp(IObjAiBase owner, ISpell spell);
     }
 }

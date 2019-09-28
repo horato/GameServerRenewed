@@ -1,5 +1,6 @@
 using System.IO;
 using LeagueSandbox.GameServer.Networking.Packets420.Attributes;
+using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 {
@@ -8,7 +9,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 	{
         public PacketCmd Cmd { get; }
 		public uint NetId { get; }
-		public byte Skill { get; }
+		public SpellSlot Slot { get; }
 
 		public SkillUpRequest(byte[] data)
         {
@@ -16,7 +17,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
             {
                 Cmd = (PacketCmd)reader.ReadByte();
                 NetId = reader.ReadUInt32();
-                Skill = reader.ReadByte();
+                Slot = (SpellSlot)reader.ReadByte();
             }
         }
     }

@@ -12,10 +12,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         private readonly IDictionary<SpellSlot, ISpell> _spells = new ConcurrentDictionary<SpellSlot, ISpell>();
 
         public ISpellInstance CurrentSpell { get; private set; }
+        public int SkillPoints { get; private set; }
 
-        public SpellBook(ISpellInstance currentSpell, IEnumerable<ISpell> spells)
+        public SpellBook(ISpellInstance currentSpell, int skillPoints, IEnumerable<ISpell> spells)
         {
             CurrentSpell = currentSpell;
+            SkillPoints = skillPoints;
             spells.ForEach(AddSpell);
         }
 
@@ -38,6 +40,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public IEnumerable<ISpell> GetAllSpells()
         {
             return _spells.Values;
+        }
+
+        public void SkillPointUsed()
+        {
+            if (SkillPoints < 1)
+                throw new InvalidOperationException("Used non-existent skill point");
+
+            SkillPoints--;
         }
     }
 }

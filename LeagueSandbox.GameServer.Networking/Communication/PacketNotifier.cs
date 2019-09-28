@@ -252,6 +252,13 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
+        public void NotifySkillUp(ulong targetSummonerId, IObjAiBase owner, ISpell spell)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteSkillUp(owner, spell);
+            SendPacket(targetUser, data, Channel.Broadcast);
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);
