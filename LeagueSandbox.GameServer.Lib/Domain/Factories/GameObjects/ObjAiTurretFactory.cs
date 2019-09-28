@@ -9,6 +9,7 @@ using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Lib.Services;
@@ -22,19 +23,23 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         private readonly IStatsFactory _statsFactory;
         private readonly INetworkIdCreationService _networkIdCreationService;
         private readonly ICharacterDataProvider _characterDataProvider;
+        private readonly ISpellBookFactory _spellBookFactory;
 
-        public ObjAiTurretFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService, ICharacterDataProvider characterDataProvider) : base(unityContainer)
+        public ObjAiTurretFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService, ICharacterDataProvider characterDataProvider, ISpellBookFactory spellBookFactory) : base(unityContainer)
         {
             _statsFactory = statsFactory;
             _networkIdCreationService = networkIdCreationService;
             _characterDataProvider = characterDataProvider;
+            _spellBookFactory = spellBookFactory;
         }
 
         public IObjAiTurret CreateFromMapObject(MapObject obj)
         {
             var data = _characterDataProvider.ProvideCharacterData(obj.TurretData.CharacterName);
             var stats = _statsFactory.CreateFromCharacterData(data);
-            
+            var spellBook = _spellBookFactory.CreateFromCharacterData(obj.TurretData.CharacterName, data);
+
+            //TODO: Move to controller
             stats.UpdateTargetability(true, SpellFlags.NonTargetableEnemy);
 
             var instance = new ObjAiTurret
@@ -46,7 +51,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.TurretData.SkinName,
                 obj.SkinId,
                 obj.TurretData.Lane,
-                obj.TurretData.Position
+                obj.TurretData.Position,
+                spellBook
             );
 
             return SetupDependencies(instance);

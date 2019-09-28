@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
@@ -10,6 +11,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         int SkinId { get; }
         IEnumerable<Vector2> Waypoints { get; }
         bool IsMoving { get; }
+        ISpellBook SpellBook { get; }
 
         void Move(IEnumerable<Vector2> waypoints, MovementType movementType);
         void StopMovement();

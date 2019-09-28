@@ -32,6 +32,7 @@
         S2CWaypointGroup = 0x61,
         OnReplication = 0xC4,
         OnReplicationConfirm = 0xA8,
+        S2CMissileReplication = 0x3B,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -66,7 +67,6 @@
         S2CDestroyObject = 0x38,
         C2SSkillUp = 0x39,
         C2SUseObject = 0x3A,
-        S2CSpawnProjectile = 0x3B,
         S2CSwapItems = 0x3E,
         S2CLevelUp = 0x3F,
         S2CEmotion = 0x42,

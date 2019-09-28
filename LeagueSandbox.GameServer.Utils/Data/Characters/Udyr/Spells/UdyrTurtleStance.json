@@ -93,7 +93,7 @@
       "ManaCost5": 35.0,
       "MissileBoneName": "",
       "MissileEffect": "",
-      "MissileSpeed": "",
+      "MissileSpeed": 0,
       "ParticleStartOffset": [
         0.0,
         0.0,

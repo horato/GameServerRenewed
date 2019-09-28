@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -16,7 +17,8 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Support
             var sb = new StringBuilder();
             var types = new Type[]
             {
-                //typeof(Stats),
+                //typeof(SpellBook),
+                //typeof(Spell),
             };
 
             foreach (var type in types)

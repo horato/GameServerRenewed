@@ -1,6 +1,7 @@
 ﻿using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using Unity;
 
@@ -24,6 +25,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain
             container.RegisterType<IObjHQFactory, ObjHQFactory>();
             container.RegisterType<IObjAiTurretFactory, ObjAiTurretFactory>();
             container.RegisterType<ILevelPropAIFactory, LevelPropAIFactory>();
+            container.RegisterType<ISpellBookFactory, SpellBookFactory>();
+            container.RegisterType<ISpellFactory, SpellFactory>();
         }
     }
 }

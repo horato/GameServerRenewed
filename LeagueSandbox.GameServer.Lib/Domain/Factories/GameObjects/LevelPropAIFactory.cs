@@ -8,6 +8,7 @@ using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Utils.MapObjects;
@@ -19,11 +20,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
     {
         private readonly IStatsFactory _statsFactory;
         private readonly INetworkIdCreationService _networkIdCreationService;
+        private readonly ISpellBookFactory _spellBookFactory;
 
-        public LevelPropAIFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService) : base(unityContainer)
+        public LevelPropAIFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService, ISpellBookFactory spellBookFactory) : base(unityContainer)
         {
             _statsFactory = statsFactory;
             _networkIdCreationService = networkIdCreationService;
+            _spellBookFactory = spellBookFactory;
         }
 
         public ILevelPropAI CreateFromMapObject(MapObject obj)
@@ -41,7 +44,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.Rotation, 
                 new Vector3(0, 0, 0), 
                 obj.Scale,
-                obj.LevelPropData.Name
+                obj.LevelPropData.Name,
+                _spellBookFactory.CreateEmpty()
             );
 
             return SetupDependencies(instance);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 
@@ -17,17 +18,18 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public MovementType MovementType { get; private set; }
         public IEnumerable<Vector2> Waypoints => _waypoints;
         public bool IsMoving => MovementType == MovementType.Move || MovementType == MovementType.Attackmove;
+        public ISpellBook SpellBook { get; }
 
         //ExpGiveRadius
         //GoldGiveRadius
-        //Spellbook
         //    SpellBuffs
         //DeathTimer
         //VisionRegion
-        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook) : base(team, position, stats, netId, visionRadius)
         {
             SkinName = skinName;
             SkinId = skinId;
+            SpellBook = spellBook;
             MovementType = MovementType.Stop;
         }
 

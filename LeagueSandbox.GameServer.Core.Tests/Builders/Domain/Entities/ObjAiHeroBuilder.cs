@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
+using LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats;
 
 namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
@@ -24,6 +26,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private int _skinId = 3;
         private SummonerSpell _summonerSpell1 = SummonerSpell.Revive;
         private SummonerSpell _summonerSpell2 = SummonerSpell.Teleport;
+        private ISpellBook _spellBook = new SpellBookBuilder().Build();
 
         public ObjAiHeroBuilder WithTeam(Team team)
         {
@@ -99,7 +102,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
 
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled, _skinName, _skinId, _summonerSpell1, _summonerSpell2);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled, _skinName, _skinId, _summonerSpell1, _summonerSpell2, _spellBook);
 
             return instance;
         }

@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
         public static IDictionary<string, CharacterData> ReadAll()
         {
             var result = new Dictionary<string, CharacterData>();
-            var charNames = Directory.EnumerateDirectories("Data/Characters/").Select(x => x.Split('/').Last());
+            var charNames = Directory.EnumerateDirectories("Data/Characters/").Select(Path.GetFileNameWithoutExtension);
             foreach (var charName in charNames)
             {
                 var data = ReadData(charName);

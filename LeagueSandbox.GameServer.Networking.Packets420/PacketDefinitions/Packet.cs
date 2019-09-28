@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Networking.Core;
 
@@ -33,6 +34,13 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
         protected void WriteFloat(float f) => _writer.Write(f);
         protected void WriteDouble(double d) => _writer.Write(d);
         protected void WriteString(string s) => WriteBytes(Encoding.UTF8.GetBytes(s));
+
+        protected void WriteVector3(Vector3 v)
+        {
+            _writer.Write((float)v.X);
+            _writer.Write((float)v.Y);
+            _writer.Write((float)v.Z);
+        }
 
         protected void Clear()
         {
@@ -75,18 +83,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
         //protected void WriteStringHash(string str)
         //{
         //    Write(HashFunctions.HashString(str));
-        //}
-
-        //protected void WriteNetId(IGameObject obj)
-        //{
-        //    if (obj == null)
-        //    {
-        //        Write(0u);
-        //    }
-        //    else
-        //    {
-        //        Write(obj.NetId);
-        //    }
         //}
     }
 }

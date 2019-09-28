@@ -54,12 +54,5 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
             WriteFixedString(_propName, 64);
             WriteFixedString(_skinName, 64);
         }
-
-        private void WriteVector3(Vector3 vector)
-        {
-            WriteFloat(vector.X);
-            WriteFloat(vector.Y);
-            WriteFloat(vector.Z);
-        }
     }
 }
