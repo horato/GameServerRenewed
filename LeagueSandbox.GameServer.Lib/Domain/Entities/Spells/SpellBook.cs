@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
@@ -8,10 +9,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 {
     internal class SpellBook : ISpellBook
     {
-        private readonly IDictionary<SpellSlot, ISpell> _spells = new Dictionary<SpellSlot, ISpell>();
+        private readonly IDictionary<SpellSlot, ISpell> _spells = new ConcurrentDictionary<SpellSlot, ISpell>();
 
-        public SpellBook(IEnumerable<ISpell> spells)
+        public ISpellInstance CurrentSpell { get; private set; }
+
+        public SpellBook(ISpellInstance currentSpell, IEnumerable<ISpell> spells)
         {
+            CurrentSpell = currentSpell;
             spells.ForEach(AddSpell);
         }
 
@@ -29,6 +33,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
                 throw new InvalidOperationException($"Spell already exists in slot {spell.Slot}");
 
             _spells.Add(spell.Slot, spell);
+        }
+
+        public IEnumerable<ISpell> GetAllSpells()
+        {
+            return _spells.Values;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 
@@ -32,5 +33,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyMapPing(IEnumerable<ulong> targetSummonerIds, Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo);
         void NotifyWaypointGroup(IEnumerable<ulong> targetSummonerIds, IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
         void NotifyReplication(IEnumerable<ulong> targetSummonerIds, IEnumerable<IAttackableUnit> gameObjects);
+        void NotifySetCooldown(ulong targetSummonerId, IObjAiBase owner, ISpellInstance spell);
     }
 }

@@ -33,6 +33,7 @@
         OnReplication = 0xC4,
         OnReplicationConfirm = 0xA8,
         S2CMissileReplication = 0x3B,
+        S2CSetCooldown = 0x85,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -99,7 +100,6 @@
         C2SLockCamera = 0x81,
         C2SBuyItemReq = 0x82,
         S2CToggleInputLockingFlag = 0x84,
-        S2CSetCooldown = 0x85,
         S2CSpawnParticle = 0x87,
         S2CExplodeNexus = 0x89,            // <-- Building_Die?
         S2CInhibitorDeathAnimation = 0x89, // <--

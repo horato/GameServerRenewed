@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 
         public ISpellBook CreateEmpty()
         {
-            var instance = new SpellBook(new List<ISpell>());
+            var instance = new SpellBook(null, new List<ISpell>());
 
             return SetupDependencies(instance);
         }
@@ -60,7 +60,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 spells.Add(spell);
             }
 
-            var instance = new SpellBook(spells);
+            var instance = new SpellBook(null, spells);
             return SetupDependencies(instance);
         }
     }

@@ -16,9 +16,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
         {
         }
 
-        public ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, float cooldownRemaining, float castTimeRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap)
+        public ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap)
         {
-            var instance = new Spell(slot, level, castTime, spellName, cooldownRemaining, castTimeRemaining, cooldownPerLevelMap, manaCostPerLevelMap, castRangePerLevelMap);
+            var instance = new Spell(slot, level, castTime, spellName, SpellState.Ready, cooldownRemaining, cooldownPerLevelMap, manaCostPerLevelMap, castRangePerLevelMap, channelDurationPerLevelMap);
 
             return SetupDependencies(instance);
         }
@@ -28,8 +28,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             var cooldownMap = CreateCooldownMap(data);
             var manaCostMap = CreateManaCostMap(data);
             var castRangeMap = CreateCastRangeMap(data);
+            var channelDurationMap = CreateChannelDurationMap(data);
 
-            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, 0, 0, cooldownMap, manaCostMap, castRangeMap);
+            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap);
 
             return SetupDependencies(instance);
         }
@@ -82,6 +83,22 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 { 4, data.CastRange4 },
                 { 5, data.CastRange5 },
                 { 6, data.CastRange6 }
+            };
+
+            return map;
+        }
+
+        private IDictionary<int, float> CreateChannelDurationMap(SpellData data)
+        {
+            var map = new Dictionary<int, float>
+            {
+                { 0, data.ChannelDuration },
+                { 1, data.ChannelDuration1 },
+                { 2, data.ChannelDuration2 },
+                { 3, data.ChannelDuration3 },
+                { 4, data.ChannelDuration4 },
+                { 5, data.ChannelDuration5 },
+                { 6, data.ChannelDuration6 }
             };
 
             return map;

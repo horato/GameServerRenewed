@@ -267,11 +267,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
 
             if (stats.SpellsModified)
             {
-                var enabledSpells = _enumTranslationService.TranslateSpellSlotClassic(stats.SpellsEnabled);
+                var enabledSpells = _enumTranslationService.TranslateSpellSlotForStatsUpdate(stats.SpellsEnabled);
                 mm1.Add(ObjAiHeroFieldMask.FM1_Spells_Enabled_Lower, (uint)enabledSpells);
                 mm1.Add(ObjAiHeroFieldMask.FM1_Spells_Enabled_Upper, (uint)enabledSpells >> 32); //?
 
-                var enabledSummonerSpells = _enumTranslationService.TranslateSpellSlotSummoner(stats.SpellsEnabled);
+                var enabledSummonerSpells = _enumTranslationService.TranslateSpellSlotSummonerForStatsUpdate(stats.SpellsEnabled);
                 mm1.Add(ObjAiHeroFieldMask.FM1_SummonerSpells_Enabled_Lower, (uint)enabledSummonerSpells);
                 mm1.Add(ObjAiHeroFieldMask.FM1_SummonerSpells_Enabled_Upper, (uint)enabledSummonerSpells >> 32); //?
             }

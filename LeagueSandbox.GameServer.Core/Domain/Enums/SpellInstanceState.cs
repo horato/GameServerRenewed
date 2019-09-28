@@ -4,9 +4,10 @@ using System.Text;
 
 namespace LeagueSandbox.GameServer.Core.Domain.Enums
 {
-    public enum SpellState
+    public enum SpellInstanceState
     {
-        Ready = 1,
-        Cooldown = 2
+        Casting = 1,
+        Channeling = 2,
+        Finished = 3
     }
 }

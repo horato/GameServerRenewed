@@ -13,10 +13,10 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private string _spellName = "SPELL_Q";
         private SpellState _state = SpellState.Cooldown;
         private float _cooldownRemaining = 8.5f;
-        private float _castTimeRemaining = 4f;
         private IDictionary<int, float> _cooldownPerLevelMap = new Dictionary<int, float> { { 2, 15f } };
         private IDictionary<int, float> _manaCostPerLevelMap = new Dictionary<int, float> { { 2, 12.5f } };
         private IDictionary<int, float> _castRangePerLevelMap = new Dictionary<int, float> { { 2, 540f } };
+        private IDictionary<int, float> _channelDurationPerLevelMap = new Dictionary<int, float> { { 2, 2f } };
 
         public SpellBuilder WithSlot(SpellSlot slot)
         {
@@ -72,16 +72,9 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
-        public SpellBuilder WithCastTimeRemaining(float castTimeRemaining)
-        {
-            _castTimeRemaining = castTimeRemaining;
-            return this;
-        }
-
-
         public override Spell Build()
         {
-            var instance = new Spell(_slot, _level, _castTime, _spellName, _cooldownRemaining, _castTimeRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap);
+            var instance = new Spell(_slot, _level, _castTime, _spellName, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap);
 
             return instance;
         }

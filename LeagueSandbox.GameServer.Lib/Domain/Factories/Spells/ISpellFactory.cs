@@ -7,7 +7,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 {
     internal interface ISpellFactory
     {
-        ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, float cooldownRemaining, float castTimeRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap);
+        ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap);
         ISpell CreateFromSpellData(SpellSlot slot, string spellName, SpellData data);
         ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, SpellData data);
     }

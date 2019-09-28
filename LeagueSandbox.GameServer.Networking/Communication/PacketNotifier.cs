@@ -5,6 +5,7 @@ using System.Linq;
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
@@ -242,6 +243,13 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                 default:
                     throw new ArgumentOutOfRangeException(nameof(unit), unit, null);
             }
+        }
+
+        public void NotifySetCooldown(ulong targetSummonerId, IObjAiBase owner, ISpellInstance spell)
+        {
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            var data = _packetWriter.WriteSetCooldown(owner, spell);
+            SendPacket(targetUser, data, Channel.Broadcast);
         }
 
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)

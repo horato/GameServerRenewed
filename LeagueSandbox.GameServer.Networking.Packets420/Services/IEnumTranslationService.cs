@@ -18,10 +18,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
         PingCategory TranslatePingCategory(Pings category);
         Pings TranslatePingCategory(PingCategory category);
         MovementType TranslateMovementOrderType(Enums.MovementType orderType);
-        SpellSlot TranslateSpellSlotClassic(GameServer.Core.Domain.Enums.SpellSlot spellSlot);
-        SummonerSpellId TranslateSpellSlotSummoner(GameServer.Core.Domain.Enums.SpellSlot spellSlot);
+        uint TranslateSpellSlotForStatsUpdate(GameServer.Core.Domain.Enums.SpellSlot slot);
+        uint TranslateSpellSlotSummonerForStatsUpdate(GameServer.Core.Domain.Enums.SpellSlot spellSlot);
         SpellFlags TranslateSpellFlags(GameServer.Core.Domain.Enums.SpellFlags flags);
         ActionState TranslateActionState(GameServer.Core.Domain.Enums.ActionState actionState);
         PrimaryAbilityResourceType TranslateParType(GameServer.Core.Domain.Enums.PrimaryAbilityResourceType parType);
+        SpellSlot TranslateSpellSlot(GameServer.Core.Domain.Enums.SpellSlot spellSlot);
     }
 }

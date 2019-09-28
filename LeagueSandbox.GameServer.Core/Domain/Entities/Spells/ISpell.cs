@@ -10,10 +10,12 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         float Cooldown { get; }
         float ManaCost { get; }
         float CastRange { get; }
+        float ChannelDuration { get; }
         string SpellName { get; }
         SpellState State { get; }
-
         float CooldownRemaining { get; }
-        float CastTimeRemaining { get; }
+
+        void UpdateCooldownRemaining(float cooldownRemaining);
+        void UpdateState(SpellState state);
     }
 }

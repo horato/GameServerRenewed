@@ -18,16 +18,16 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<IPlayerCache, PlayerCache>();
             container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
             container.RegisterSingleton<IClientIdCreationService, ClientIdCreationService>();
-            container.RegisterType<IMovementService, MovementService>();
             container.RegisterType<ICalculationService, CalculationService>();
             container.RegisterType<IMapObjectsProvider, MapObjectsProvider>();
             container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
             container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
 
+            RegisterGameObjectUpdateServices(container);
             RegisterUpdateServices(container);
         }
 
-        private void RegisterUpdateServices(IUnityContainer container)
+        private void RegisterGameObjectUpdateServices(IUnityContainer container)
         {
             container.RegisterType<IGameUpdateService, GameUpdateService>();
             container.RegisterType<IAttackableUnitUpdateService, AttackableUnitUpdateService>();
@@ -44,6 +44,12 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterType<IObjShopUpdateService, ObjShopUpdateService>();
             container.RegisterType<IObjSpawnPointUpdateService, ObjSpawnPointUpdateService>();
             container.RegisterType<IObjTurretUpdateService, ObjTurretUpdateService>();
+        }
+
+        private void RegisterUpdateServices(IUnityContainer container)
+        {
+            container.RegisterType<IMovementService, MovementService>();
+            container.RegisterType<ISpellbookUpdateService, SpellbookUpdateService>();
         }
     }
 }

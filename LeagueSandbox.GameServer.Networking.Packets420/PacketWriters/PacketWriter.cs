@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Networking.Core;
@@ -341,6 +342,21 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             var syncId = (uint)Environment.TickCount;
             var replicationData = _dtoTranslationService.TranslateReplicationData(gameObjects).ToList();
             return new OnReplication(syncId, replicationData).GetBytes();
+        }
+
+        public byte[] WriteSetCooldown(IObjAiBase owner, ISpellInstance spell)
+        {
+            var definition = spell.Definition;
+            var slot = _enumTranslationService.TranslateSpellSlot(definition.Slot);
+            return new SetCooldown
+            (
+                owner.NetId,
+                slot,
+                true,
+                slot == Enums.SpellSlot.Summoner1 || slot == Enums.SpellSlot.Summoner2,
+                definition.CooldownRemaining,
+                definition.Cooldown
+            ).GetBytes();
         }
     }
 }

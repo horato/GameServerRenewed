@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
 
@@ -8,7 +9,14 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
 {
     internal class SpellBookBuilder : EntityBuilderBase<SpellBook>
     {
+        private ISpellInstance _currentSpell;
         private IEnumerable<Spell> _spells = new List<Spell>();
+
+        public SpellBookBuilder WithCurrentSpell(ISpellInstance currentSpell)
+        {
+            _currentSpell = currentSpell;
+            return this;
+        }
 
         public SpellBookBuilder WithSpells(IEnumerable<Spell> spells)
         {
@@ -18,7 +26,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
 
         public override SpellBook Build()
         {
-            var instance = new SpellBook(_spells);
+            var instance = new SpellBook(_currentSpell, _spells);
 
             return instance;
         }

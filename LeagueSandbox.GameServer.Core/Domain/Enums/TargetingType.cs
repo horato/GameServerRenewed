@@ -4,6 +4,7 @@ using System.Text;
 
 namespace LeagueSandbox.GameServer.Core.Domain.Enums
 {
+    /// <summary> Do not edit. Used in json. </summary>
     public enum TargetingType
     {
         Self = 0,

@@ -167,43 +167,43 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             }
         }
 
-        public SpellSlot TranslateSpellSlotClassic(GameServer.Core.Domain.Enums.SpellSlot slot)
+        public uint TranslateSpellSlotForStatsUpdate(GameServer.Core.Domain.Enums.SpellSlot slot)
         {
-            var result = default(SpellSlot);
+            var result = 0u;
             if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.Q))
             {
-                result |= SpellSlot.Spell1;
+                result |= 1 << (int)SpellSlot.Spell1;
             }
 
             if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.W))
             {
-                result |= SpellSlot.Spell2;
+                result |= 1 << (int)SpellSlot.Spell2;
             }
 
             if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.E))
             {
-                result |= SpellSlot.Spell3;
+                result |= 1 << (int)SpellSlot.Spell3;
             }
 
             if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.R))
             {
-                result |= SpellSlot.Ultimate;
+                result |= 1 << (int)SpellSlot.Ultimate;
             }
 
             return result;
         }
 
-        public SummonerSpellId TranslateSpellSlotSummoner(GameServer.Core.Domain.Enums.SpellSlot slot)
+        public uint TranslateSpellSlotSummonerForStatsUpdate(GameServer.Core.Domain.Enums.SpellSlot slot)
         {
-            var result = default(SummonerSpellId);
+            var result = 0u;
             if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.D))
             {
-                result |= SummonerSpellId.D;
+                result |= 1 << (int)SpellSlot.Summoner1;
             }
 
             if (slot.HasFlag(GameServer.Core.Domain.Enums.SpellSlot.F))
             {
-                result |= SummonerSpellId.F;
+                result |= 1 << (int)SpellSlot.Summoner2;
             }
 
             return result;
@@ -355,6 +355,27 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     return PrimaryAbilityResourceType.Other;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(parType), parType, null);
+            }
+        }
+
+        public SpellSlot TranslateSpellSlot(GameServer.Core.Domain.Enums.SpellSlot spellSlot)
+        {
+            switch(spellSlot)
+            {
+                case GameServer.Core.Domain.Enums.SpellSlot.Q:
+                    return SpellSlot.Spell1;
+                case GameServer.Core.Domain.Enums.SpellSlot.W:
+                    return SpellSlot.Spell2;
+                case GameServer.Core.Domain.Enums.SpellSlot.E:
+                    return SpellSlot.Spell3;
+                case GameServer.Core.Domain.Enums.SpellSlot.R:
+                    return SpellSlot.Ultimate;
+                case GameServer.Core.Domain.Enums.SpellSlot.D:
+                    return SpellSlot.Summoner1;
+                case GameServer.Core.Domain.Enums.SpellSlot.F:
+                    return SpellSlot.Summoner2;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(spellSlot), spellSlot, null);
             }
         }
     }

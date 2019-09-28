@@ -2,6 +2,7 @@
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Core
@@ -31,5 +32,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteMapPing(Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo);
         byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
         byte[] WriteReplication(IEnumerable<IAttackableUnit> gameObjects);
+        byte[] WriteSetCooldown(IObjAiBase owner, ISpellInstance spell);
     }
 }
