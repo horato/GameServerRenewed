@@ -24,8 +24,6 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private bool _isPlayerControlled = true;
         private string _skinName = "Ahri";
         private int _skinId = 3;
-        private SummonerSpell _summonerSpell1 = SummonerSpell.Revive;
-        private SummonerSpell _summonerSpell2 = SummonerSpell.Teleport;
         private ISpellBook _spellBook = new SpellBookBuilder().Build();
 
         public ObjAiHeroBuilder WithTeam(Team team)
@@ -88,21 +86,9 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
-        public ObjAiHeroBuilder WithSummonerSpell1(SummonerSpell spell)
-        {
-            _summonerSpell1 = spell;
-            return this;
-        }
-
-        public ObjAiHeroBuilder WithSummonerSpell2(SummonerSpell spell)
-        {
-            _summonerSpell2 = spell;
-            return this;
-        }
-
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled, _skinName, _skinId, _summonerSpell1, _summonerSpell2, _spellBook);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled, _skinName, _skinId, _spellBook);
 
             return instance;
         }

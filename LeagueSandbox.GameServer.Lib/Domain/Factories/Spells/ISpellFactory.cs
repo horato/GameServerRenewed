@@ -9,5 +9,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
     {
         ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, float cooldownRemaining, float castTimeRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap);
         ISpell CreateFromSpellData(SpellSlot slot, string spellName, SpellData data);
+        ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, SpellData data);
     }
 }

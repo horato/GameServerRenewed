@@ -1,0 +1,9 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_LichBane",
+      "ShowInTrackerUI": 1
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

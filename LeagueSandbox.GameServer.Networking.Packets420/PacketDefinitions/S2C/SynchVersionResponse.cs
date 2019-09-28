@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LeagueSandbox.GameServer.Core.Hashing;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
 
@@ -142,8 +143,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         {
             WriteULong(info.SummonerId);
             WriteUShort(info.SummonerLevel);
-            WriteUInt((uint)info.SummonerSpell1);
-            WriteUInt((uint)info.SummonerSpell2);
+            WriteUInt(ElfHash.CalculateSpellNameHash(info.SummonerSpell1));
+            WriteUInt(ElfHash.CalculateSpellNameHash(info.SummonerSpell2));
             WriteByte(info.Bitfield);
             WriteUInt((uint)info.TeamId);
             WriteFixedString(info.BotName, 64);
@@ -169,8 +170,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
     {
         public ulong SummonerId { get; }
         public ushort SummonerLevel { get; }
-        public SummonerSpellHash SummonerSpell1 { get; }
-        public SummonerSpellHash SummonerSpell2 { get; }
+        public string SummonerSpell1 { get; }
+        public string SummonerSpell2 { get; }
         //TODO: change bitfield to enum or variables
         public byte Bitfield { get; }
         public TeamId TeamId { get; }
@@ -183,7 +184,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
         public byte AllyBadgeID { get; }
         public byte EnemyBadgeID { get; }
 
-        public PlayerLoadInfo(ulong summonerId, ushort summonerLevel, SummonerSpellHash summonerSpell1, SummonerSpellHash summonerSpell2, byte bitfield, TeamId teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
+        public PlayerLoadInfo(ulong summonerId, ushort summonerLevel, string summonerSpell1, string summonerSpell2, byte bitfield, TeamId teamId, string botName, string botSkinName, string eloRanking, int botSkinId, int botDifficulty, int profileIconId, byte allyBadgeId, byte enemyBadgeId)
         {
             SummonerId = summonerId;
             SummonerLevel = summonerLevel;

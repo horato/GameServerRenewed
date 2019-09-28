@@ -43,43 +43,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             }
         }
 
-        public SummonerSpellHash TranslateSummonerSpell(SummonerSpell spell)
-        {
-            switch (spell)
-            {
-                case SummonerSpell.Revive:
-                    return SummonerSpellHash.Revive;
-                case SummonerSpell.Smite:
-                    return SummonerSpellHash.Smite;
-                case SummonerSpell.Exhaust:
-                    return SummonerSpellHash.Exhaust;
-                case SummonerSpell.Barrier:
-                    return SummonerSpellHash.Barrier;
-                case SummonerSpell.Teleport:
-                    return SummonerSpellHash.Teleport;
-                case SummonerSpell.Ghost:
-                    return SummonerSpellHash.Ghost;
-                case SummonerSpell.Heal:
-                    return SummonerSpellHash.Heal;
-                case SummonerSpell.Cleanse:
-                    return SummonerSpellHash.Cleanse;
-                case SummonerSpell.Clarity:
-                    return SummonerSpellHash.Clarity;
-                case SummonerSpell.Ignite:
-                    return SummonerSpellHash.Ignite;
-                case SummonerSpell.Promote:
-                    return SummonerSpellHash.Promote;
-                case SummonerSpell.Clair:
-                    return SummonerSpellHash.Clair;
-                case SummonerSpell.Flash:
-                    return SummonerSpellHash.Flash;
-                case SummonerSpell.Test:
-                    return SummonerSpellHash.Test;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(spell), spell, null);
-            }
-        }
-
         public TeamId TranslateTeam(Team team)
         {
             switch (team)

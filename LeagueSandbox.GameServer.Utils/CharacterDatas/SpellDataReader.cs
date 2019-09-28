@@ -10,9 +10,22 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
 {
     public static class SpellDataReader
     {
-        public static SpellData ReadData(string characterName, string spellName)
+        public const string GlobalPackage = "GLOBAL";
+
+        public static SpellData ReadDataPackage(string characterName, string spellName)
         {
             var filePath = $"Data/Characters/{characterName}/Spells/{spellName}.json";
+            var json = File.ReadAllText(filePath);
+            var token = (JToken)JsonConvert.DeserializeObject(json);
+            if (token?["Values"]?["SpellData"] == null)
+                return null;
+
+            return new JsonSerializer().Deserialize<SpellData>(token["Values"]["SpellData"].CreateReader());
+        }
+
+        public static SpellData ReadDataGlobal(string spellName)
+        {
+            var filePath = $"Data/Spells/{spellName}.json";
             var json = File.ReadAllText(filePath);
             var token = (JToken)JsonConvert.DeserializeObject(json);
             if (token?["Values"]?["SpellData"] == null)
@@ -39,12 +52,24 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
                 var spellNames = Directory.EnumerateFiles($"Data/Characters/{charName}/Spells", "*.json").Select(Path.GetFileNameWithoutExtension);
                 foreach (var spellName in spellNames)
                 {
-                    var data = ReadData(charName, spellName);
+                    var data = ReadDataPackage(charName, spellName);
                     if (data == null)
                         continue;
 
                     charSpells.Add(spellName, data);
                 }
+            }
+
+            result.Add(GlobalPackage, new Dictionary<string, SpellData>());
+            var globalSpells = result[GlobalPackage];
+            var globalSpellNames = Directory.EnumerateFiles($"Data/Spells", "*.json").Select(Path.GetFileNameWithoutExtension);
+            foreach (var spellName in globalSpellNames)
+            {
+                var data = ReadDataGlobal(spellName);
+                if (data == null)
+                    continue;
+
+                globalSpells.Add(spellName, data);
             }
 
             return result;

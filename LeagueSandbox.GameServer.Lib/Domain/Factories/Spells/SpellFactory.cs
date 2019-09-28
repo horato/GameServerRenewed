@@ -34,6 +34,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return SetupDependencies(instance);
         }
 
+        public ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, SpellData data)
+        {
+            return CreateFromSpellData(slot, spell.ToSpellName(), data);
+        }
+
         private IDictionary<int, float> CreateCooldownMap(SpellData data)
         {
             var map = new Dictionary<int, float>

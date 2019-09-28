@@ -15,6 +15,7 @@ using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
 using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
+using SpellSlot = LeagueSandbox.GameServer.Core.Domain.Enums.SpellSlot;
 using TipCommand = LeagueSandbox.GameServer.Core.Domain.Enums.TipCommand;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
@@ -154,7 +155,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             (
                 player.Champion.NetId,
                 new List<uint>(), // TODO: inventory
-                new[] { _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell1), _enumTranslationService.TranslateSummonerSpell(player.Champion.SummonerSpell2) },
+                new[]
+                {
+                    player.Champion.SpellBook.GetSpell(SpellSlot.D).SpellName,
+                    player.Champion.SpellBook.GetSpell(SpellSlot.F).SpellName
+                },
                 player.Runes.Select(x => checked(new Talent((uint)x.Key, (byte)x.Value))),
                 checked((byte)player.SummonerLevel),
                 0 // TODO: ward skin

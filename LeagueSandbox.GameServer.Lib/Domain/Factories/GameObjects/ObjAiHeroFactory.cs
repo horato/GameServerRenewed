@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
@@ -21,13 +22,17 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         private readonly INetworkIdCreationService _networkIdCreationService;
         private readonly ICharacterDataProvider _characterDataProvider;
         private readonly ISpellBookFactory _spellBookFactory;
+        private readonly ISpellFactory _spellFactory;
+        private readonly ISpellDataProvider _spellDataProvider;
 
-        public ObjAiHeroFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService, ICharacterDataProvider characterDataProvider, ISpellDataProvider spellDataProvider, ISpellBookFactory spellBookFactory) : base(unityContainer)
+        public ObjAiHeroFactory(IUnityContainer unityContainer, IStatsFactory statsFactory, INetworkIdCreationService networkIdCreationService, ICharacterDataProvider characterDataProvider, ISpellDataProvider spellDataProvider, ISpellBookFactory spellBookFactory, ISpellFactory spellFactory) : base(unityContainer)
         {
             _statsFactory = statsFactory;
             _networkIdCreationService = networkIdCreationService;
             _characterDataProvider = characterDataProvider;
+            _spellDataProvider = spellDataProvider;
             _spellBookFactory = spellBookFactory;
+            _spellFactory = spellFactory;
         }
 
         public IObjAiHero CreateFromStartupPlayer(StartupPlayer player, int clientId)
@@ -36,6 +41,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             var stats = _statsFactory.CreateFromCharacterData(data);
             var netId = _networkIdCreationService.GetNewNetId();
             var spellBook = _spellBookFactory.CreateFromCharacterData(player.Champion, data);
+
+            var summonerSpell1Data = _spellDataProvider.ProvideSummonerSpellData(player.Summoner1);
+            var summoner1 = _spellFactory.CreateSummonerSpell(SpellSlot.D, player.Summoner1, summonerSpell1Data);
+            spellBook.AddSpell(summoner1);
+
+            var summonerSpell2Data = _spellDataProvider.ProvideSummonerSpellData(player.Summoner2);
+            var summoner2 = _spellFactory.CreateSummonerSpell(SpellSlot.F, player.Summoner2, summonerSpell2Data);
+            spellBook.AddSpell(summoner2);
 
             //TODO: start location
             var instance = new ObjAiHero
@@ -50,8 +63,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 false,
                 player.Champion,
                 player.Skin,
-                player.Summoner1, 
-                player.Summoner2,
                 spellBook
             );
 

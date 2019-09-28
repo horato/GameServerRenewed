@@ -1,0 +1,12 @@
+{
+  "Values": {
+    "BuffData": {
+      "DynamicTooltip": "game_buff_tooltip_SwainDampeningFieldMana"
+    },
+    "SpellData": {
+      "FloatVarsDecimals1": 0,
+      "FloatVarsDecimals2": 0
+    }
+  },
+  "UNKNOWN_HASHES": {}
+}

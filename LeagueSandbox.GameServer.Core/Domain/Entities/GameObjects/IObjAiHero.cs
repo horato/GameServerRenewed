@@ -18,8 +18,5 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
 
         /// <summary> Assigns this instance to a client </summary>
         void EnablePlayerControl();
-
-        SummonerSpell SummonerSpell1 { get; }
-        SummonerSpell SummonerSpell2 { get; }
     }
 }
