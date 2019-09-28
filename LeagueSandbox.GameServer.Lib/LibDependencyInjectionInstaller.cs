@@ -1,9 +1,11 @@
 ﻿using LeagueSandbox.GameServer.Core.DependencyInjection;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Lib.Maths;
 using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Lib.Services;
+using LeagueSandbox.GameServer.Lib.Services.Update;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib
@@ -12,7 +14,6 @@ namespace LeagueSandbox.GameServer.Lib
     {
         public void Install(IUnityContainer container)
         {
-            container.RegisterType<IGameUpdateService, GameUpdateService>();
             container.RegisterSingleton<IGameObjectsCache, GameObjectsCache>();
             container.RegisterSingleton<IPlayerCache, PlayerCache>();
             container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
@@ -22,6 +23,27 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterType<IMapObjectsProvider, MapObjectsProvider>();
             container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
             container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
+
+            RegisterUpdateServices(container);
+        }
+
+        private void RegisterUpdateServices(IUnityContainer container)
+        {
+            container.RegisterType<IGameUpdateService, GameUpdateService>();
+            container.RegisterType<IAttackableUnitUpdateService, AttackableUnitUpdateService>();
+            container.RegisterType<IGameObjectUpdateService, GameObjectUpdateService>();
+            container.RegisterType<ILevelPropAiUpdateService, LevelPropAiUpdateService>();
+            container.RegisterType<INeutralMinionCampUpdateService, NeutralMinionCampUpdateService>();
+            container.RegisterType<IObjAiBaseUpdateService, ObjAiBaseUpdateService>();
+            container.RegisterType<IObjAiHeroUpdateService, ObjAiHeroUpdateService>();
+            container.RegisterType<IObjAiMinionUpdateService, ObjAiMinionUpdateService>();
+            container.RegisterType<IObjAnimatedBuildingUpdateService, ObjAnimatedBuildingUpdateService>();
+            container.RegisterType<IObjBarracksDampenerUpdateService, ObjBarracksDampenerUpdateService>();
+            container.RegisterType<IObjBuildingUpdateService, ObjBuildingUpdateService>();
+            container.RegisterType<IObjHqUpdateService, ObjHqUpdateService>();
+            container.RegisterType<IObjShopUpdateService, ObjShopUpdateService>();
+            container.RegisterType<IObjSpawnPointUpdateService, ObjSpawnPointUpdateService>();
+            container.RegisterType<IObjTurretUpdateService, ObjTurretUpdateService>();
         }
     }
 }
