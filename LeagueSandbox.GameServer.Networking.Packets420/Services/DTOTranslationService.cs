@@ -237,6 +237,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             if (stats.ManaRegeneration.IsUpdated)
             {
                 mm2.Add(ObjAiHeroFieldMask.FM2_ManaRegenerationTotal, stats.ManaRegeneration.Total);
+                mm3.Add(ObjAiHeroFieldMask.FM3_ManaRegenerationBonusPercent, stats.ManaRegeneration.PercentBonus);
             }
 
             if (stats.MoveSpeed.IsUpdated)
@@ -338,7 +339,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
 
             if (stats.FlatManaPoints.IsUpdated)
             {
-                mm3.Add(ObjAiHeroFieldMask.FM3_ManaRegenerationBonusPercent, stats.FlatManaPoints.CurrentValue);
+                mm4.Add(ObjAiHeroFieldMask.FM4_ManaCurrent, stats.FlatManaPoints.CurrentValue);
             }
 
             if (stats.FlatAttackDamage.IsUpdated)

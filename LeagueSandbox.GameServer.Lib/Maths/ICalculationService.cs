@@ -11,7 +11,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
     {
         PositionCalculationResult CalculateNewPosition(Vector2 from, Vector2 to, float movementSpeed, float millisecondDiff);
         float CalculateManaCost(ISpell spell, IObjAiHero champion);
-        float CalculateNewManaAfterSpellCast(IObjAiHero champion, float manaCost);
+        float CalculateManaDifferenceAfterSpellCast(IObjAiHero champion, float manaCost);
         float CalculateDistance(IObjAiHero champion, IAttackableUnit targetUnit);
     }
 }

@@ -72,8 +72,8 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                 return;
 
             // Consume mana
-            var newMana = _calculationService.CalculateNewManaAfterSpellCast(champion, manaCost);
-            var modifier = _flatStatModifierFactory.CreateValueModifier(newMana);
+            var manaDiff = _calculationService.CalculateManaDifferenceAfterSpellCast(champion, manaCost);
+            var modifier = _flatStatModifierFactory.CreateValueModifier(manaDiff);
             champion.Stats.FlatManaPoints.ApplyStatModifier(modifier);
 
             // Cast

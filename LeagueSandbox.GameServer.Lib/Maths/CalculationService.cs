@@ -31,7 +31,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
             return spell.ManaCost * (1 - champion.Stats.SpellCostReduction);
         }
 
-        public float CalculateNewManaAfterSpellCast(IObjAiHero champion, float manaCost)
+        public float CalculateManaDifferenceAfterSpellCast(IObjAiHero champion, float manaCost)
         {
             var stats = champion.Stats;
             var newMana = stats.FlatManaPoints.CurrentValue - manaCost;
@@ -40,7 +40,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
             else if (newMana > stats.ManaPoints.Total)
                 newMana = stats.ManaPoints.Total;
 
-            return newMana;
+            return newMana - stats.FlatManaPoints.CurrentValue;
         }
 
         public float CalculateDistance(IObjAiHero champion, IAttackableUnit targetUnit)
