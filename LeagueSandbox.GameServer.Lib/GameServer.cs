@@ -7,8 +7,10 @@ using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Lib.Config;
 using LeagueSandbox.GameServer.Lib.Controllers;
+using LeagueSandbox.GameServer.Lib.Scripting;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Networking;
+using LeagueSandbox.GameServer.Scripts;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib
@@ -30,6 +32,7 @@ namespace LeagueSandbox.GameServer.Lib
             InitializeLogger();
             InitializeServerInformationData();
             InitializeDependencyInjection();
+            InitializeScripts();
             InitializeNetworking(config);
             InitializePathing(config);
             InitializeGameObjects(config);
@@ -57,6 +60,15 @@ namespace LeagueSandbox.GameServer.Lib
             _container.RegisterInstance<IUnityContainer>(_container);
             var assemblies = _container.Resolve<IServerInformationData>().GetAllApplicationAssemblies();
             _container.Install(assemblies);
+        }
+
+        private void InitializeScripts()
+        {
+            LoggerProvider.GetLogger().Info("Initializing scripts");
+
+            var engine = _container.Resolve<IScriptEngine>();
+            var scriptsProjectName = ScriptsAssemblyDefiningType.Assembly.GetName().Name;
+            engine.LoadScripts($"../../../../{scriptsProjectName}");
         }
 
         private void InitializeNetworking(StartupConfig config)
@@ -94,7 +106,7 @@ namespace LeagueSandbox.GameServer.Lib
             controller.Initialize(config.Map);
             _container.RegisterInstance<IGameController>(controller);
         }
-        
+
         public void Start()
         {
             LoggerProvider.GetLogger().Info("Starting loops");

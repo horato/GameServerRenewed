@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Services;
+using LeagueSandbox.GameServer.Lib.Services.Update;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Controllers

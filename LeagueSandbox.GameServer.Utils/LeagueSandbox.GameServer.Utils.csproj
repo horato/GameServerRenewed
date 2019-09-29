@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Data\**\*.json" CopyToOutputDirectory="Always" />
-    <Content Include="Data\**\*.aimesh_ngrid" CopyToOutputDirectory="Always" />
+    <Content Include="Data\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Data\**\*.aimesh_ngrid" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>

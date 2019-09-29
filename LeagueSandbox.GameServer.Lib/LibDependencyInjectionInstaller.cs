@@ -4,7 +4,9 @@ using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Lib.Maths;
 using LeagueSandbox.GameServer.Lib.Providers;
+using LeagueSandbox.GameServer.Lib.Scripting;
 using LeagueSandbox.GameServer.Lib.Services;
+using LeagueSandbox.GameServer.Lib.Services.Compilation;
 using LeagueSandbox.GameServer.Lib.Services.Update;
 using Unity;
 
@@ -22,6 +24,8 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterType<IMapObjectsProvider, MapObjectsProvider>();
             container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
             container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
+            container.RegisterSingleton<IScriptEngine, ScriptEngine>();
+            container.RegisterType<ICompilationService, CompilationService>();
 
             RegisterGameObjectUpdateServices(container);
             RegisterUpdateServices(container);

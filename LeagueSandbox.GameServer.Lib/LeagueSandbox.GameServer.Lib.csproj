@@ -13,11 +13,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeagueSandbox.GameServer.Networking\LeagueSandbox.GameServer.Networking.csproj" />
+    <ProjectReference Include="..\LeagueSandbox.GameServer.Scripts\LeagueSandbox.GameServer.Scripts.csproj" />
     <ProjectReference Include="..\LeagueSandbox.GameServer.Utils\LeagueSandbox.GameServer.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.3.1" />
     <PackageReference Include="OptimizedPriorityQueue" Version="4.2.0" />
+    <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
   </ItemGroup>
 
 </Project>

@@ -16,6 +16,16 @@
   </Target>
 
   <ItemGroup>
+    <None Remove="Log4net.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LeagueSandbox.GameServer.Lib\LeagueSandbox.GameServer.Lib.csproj" />
   </ItemGroup>
 

@@ -1,6 +1,6 @@
 ﻿using LeagueSandbox.GameServer.Core.Domain.Entities;
 
-namespace LeagueSandbox.GameServer.Lib.Services
+namespace LeagueSandbox.GameServer.Lib.Services.Update
 {
     internal class GameUpdateService : IGameUpdateService
     {

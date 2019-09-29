@@ -9,15 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ENetSharpLeague" Version="1.1.0" GeneratePathProperty="true" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\LeagueSandbox.GameServer.ENetCS\LeagueSandbox.GameServer.ENetCS.csproj" />
     <ProjectReference Include="..\LeagueSandbox.GameServer.Networking.Packets420\LeagueSandbox.GameServer.Networking.Packets420.csproj" />
   </ItemGroup>
 
 	<Target Name="Copy" AfterTargets="CopyFilesToOutputDirectory">
     <Message Importance="high" Text="outdir is $(TargetDir)" />
-		<Copy SourceFiles="$(PkgENetSharpLeague)\lib\native\ENet.dll" DestinationFolder="$(TargetDir)" />
+		<!--<Copy SourceFiles="$(PkgENetSharpLeague)\lib\native\ENet.dll" DestinationFolder="$(TargetDir)" />-->
 	</Target>
 </Project>
