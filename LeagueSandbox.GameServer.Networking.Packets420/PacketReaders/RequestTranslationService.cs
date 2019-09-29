@@ -50,11 +50,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateReplicationConfirmRequest(replicationConfirmRequest);
                 case SkillUpRequest skillUpRequest:
                     return TranslateSkillUpRequest(skillUpRequest);
+                case CastSpellRequest castSpellRequest:
+                    return TranslateCastSpellRequest(castSpellRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
                 case BuyItemRequest buyItemRequest:
-                case CastSpellRequest castSpellRequest:
                 case Click click:
                 case CursorPositionOnWorld cursorPositionOnWorld:
                 case EmotionPacketRequest emotionPacketRequest:
@@ -68,7 +69,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-
+        
         private GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest TranslateCharSelectedRequest(CharSelectedRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest();
@@ -160,7 +161,21 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
         private GameServer.Core.RequestProcessing.Definitions.SkillUpRequest TranslateSkillUpRequest(SkillUpRequest request)
         {
             var slot = _enumTranslationService.TranslateSpellSlot(request.Slot);
-            return new GameServer.Core.RequestProcessing.Definitions.SkillUpRequest(request.NetId, slot);
+            return new GameServer.Core.RequestProcessing.Definitions.SkillUpRequest(request.NetId, slot, request.IsEvolve);
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.CastSpellRequest TranslateCastSpellRequest(CastSpellRequest request)
+        {
+           return new GameServer.Core.RequestProcessing.Definitions.CastSpellRequest
+           (
+               request.NetId,
+               _enumTranslationService.TranslateSpellSlot(request.Slot),
+               request.IsSummonerSpellBook,
+               request.IsHudClickCast,
+               request.Position,
+               request.EndPosition,
+               request.TargetNetID
+           );
         }
     }
 }

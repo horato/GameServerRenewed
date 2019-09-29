@@ -16,21 +16,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
         {
         }
 
-        public ISpell CreateNew(SpellSlot slot, int level, float castTime, string spellName, int maxLevel, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap)
-        {
-            var instance = new Spell(slot, level, castTime, spellName, maxLevel, SpellState.Ready, cooldownRemaining, cooldownPerLevelMap, manaCostPerLevelMap, castRangePerLevelMap, channelDurationPerLevelMap);
-
-            return SetupDependencies(instance);
-        }
-
         public ISpell CreateFromSpellData(SpellSlot slot, string spellName, int maxLevel, SpellData data)
         {
             var cooldownMap = CreateCooldownMap(data);
             var manaCostMap = CreateManaCostMap(data);
             var castRangeMap = CreateCastRangeMap(data);
             var channelDurationMap = CreateChannelDurationMap(data);
+            var ammoRechargeTimeMap = CreateAmmoRechargeTimeMap(data);
 
-            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, maxLevel, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap);
+            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, maxLevel, data.AmmoUsed, data.TargettingType, data.Flags, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap, ammoRechargeTimeMap);
 
             return SetupDependencies(instance);
         }
@@ -102,6 +96,22 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 { 4, data.ChannelDuration4 },
                 { 5, data.ChannelDuration5 },
                 { 6, data.ChannelDuration6 }
+            };
+
+            return map;
+        }
+
+        private IDictionary<int, float> CreateAmmoRechargeTimeMap(SpellData data)
+        {
+            var map = new Dictionary<int, float>
+            {
+                { 0, data.AmmoRechargeTime },
+                { 1, data.AmmoRechargeTime1 },
+                { 2, data.AmmoRechargeTime2 },
+                { 3, data.AmmoRechargeTime3 },
+                { 4, data.AmmoRechargeTime4 },
+                { 5, data.AmmoRechargeTime5 },
+                { 6, data.AmmoRechargeTime6 }
             };
 
             return map;

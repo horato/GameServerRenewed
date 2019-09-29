@@ -8,6 +8,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
+using LeagueSandbox.GameServer.Core.Hashing;
 using LeagueSandbox.GameServer.Networking.Core;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions;
@@ -363,6 +364,51 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         {
             var slot = _enumTranslationService.TranslateSpellSlot(spell.Slot);
             return new SkillUpResponse(owner.NetId, slot, checked((byte)spell.Level), checked((byte)owner.SpellBook.SkillPoints)).GetBytes();
+        }
+
+        public byte[] WriteCastSpellAns(IObjAiBase caster, ISpellInstance spell, float manaCost)
+        {
+            return new CastSpellAns
+            (
+                caster.NetId,
+                Environment.TickCount,
+                false, // TODO: what this does
+                CreateCastInfo(caster, spell, manaCost)
+            ).GetBytes();
+        }
+
+        private CastInfo CreateCastInfo(IObjAiBase caster, ISpellInstance spell, float manaCost)
+        {
+            var slot = _enumTranslationService.TranslateSpellSlot(spell.Definition.Slot);
+            return new CastInfo
+            (
+                ElfHash.CalculateSpellNameHash(spell.Definition.SpellName),
+                spell.InstanceNetId,
+                checked((byte)spell.Definition.Level),
+                caster.Stats.AttackSpeedMultiplier.Total,
+                caster.NetId,
+                caster.NetId,
+                ElfHash.CalculateSpellNameHash(caster.SkinName),
+                spell.FutureProjectileNetId,
+                spell.StartPosition.ToVector3(0), // TODO: take these from navgrid?
+                spell.EndPosition.ToVector3(0), // TODO: take these from navgrid?
+                new List<Target>(), // TODO: what are these? 
+                spell.Definition.CastTime,
+                0,
+                spell.Definition.CastTime,
+                spell.Definition.Cooldown,
+                0, //TODO: game time?
+                false, // TODO: auto attack
+                false, // TODO: auto attack
+                spell.Definition.ChannelDuration > 0, //TODO: force cast?
+                false,
+                spell.Definition.TargetingType == TargetingType.Target,
+                slot,
+                manaCost,
+                caster.Position, 
+                spell.Definition.AmmoUsed,
+                spell.Definition.AmmoRechargeTime
+            );
         }
     }
 }

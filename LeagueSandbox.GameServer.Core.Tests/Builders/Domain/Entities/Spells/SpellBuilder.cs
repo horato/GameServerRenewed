@@ -14,10 +14,14 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private int _maxLevel = 4;
         private SpellState _state = SpellState.Cooldown;
         private float _cooldownRemaining = 8.5f;
+        private int _ammoUsed = 5;
+        private TargetingType _targetingType = TargetingType.Cone;
+        private SpellFlags _spellFlags = SpellFlags.InstantCast;
         private IDictionary<int, float> _cooldownPerLevelMap = new Dictionary<int, float> { { 2, 15f } };
         private IDictionary<int, float> _manaCostPerLevelMap = new Dictionary<int, float> { { 2, 12.5f } };
         private IDictionary<int, float> _castRangePerLevelMap = new Dictionary<int, float> { { 2, 540f } };
         private IDictionary<int, float> _channelDurationPerLevelMap = new Dictionary<int, float> { { 2, 2f } };
+        private IDictionary<int, float> _ammoRechargeTimePerLevelMap = new Dictionary<int, float> { { 2, 2f } };
 
         public SpellBuilder WithSlot(SpellSlot slot)
         {
@@ -55,6 +59,12 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
+        public SpellBuilder WithAmmoRechargeTime(IDictionary<int, float> ammoRechargeTimePerLevelMap)
+        {
+            _ammoRechargeTimePerLevelMap = ammoRechargeTimePerLevelMap ?? new Dictionary<int, float>();
+            return this;
+        }
+
         public SpellBuilder WithSpellName(string spellName)
         {
             _spellName = spellName;
@@ -79,9 +89,27 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
+        public SpellBuilder WithAmmoUsed(int ammoUsed)
+        {
+            _ammoUsed = ammoUsed;
+            return this;
+        }
+
+        public SpellBuilder WithTargetingType(TargetingType targetingType)
+        {
+            _targetingType = targetingType;
+            return this;
+        }
+
+        public SpellBuilder WithSpellFlags(SpellFlags spellFlags)
+        {
+            _spellFlags = spellFlags;
+            return this;
+        }
+
         public override Spell Build()
         {
-            var instance = new Spell(_slot, _level, _castTime, _spellName, _maxLevel, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap);
+            var instance = new Spell(_slot, _level, _castTime, _spellName, _maxLevel, _ammoUsed, _targetingType, _spellFlags, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap, _ammoRechargeTimePerLevelMap);
 
             return instance;
         }

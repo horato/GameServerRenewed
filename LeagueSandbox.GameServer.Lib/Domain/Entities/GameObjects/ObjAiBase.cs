@@ -67,5 +67,16 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
             if (!_waypoints.Any())
                 StopMovement();
         }
+
+        public bool CanCast()
+        {
+            return Stats.GetActionState(ActionState.CanCast)
+                   && !Stats.GetActionState(ActionState.Taunted)
+                   && !Stats.GetActionState(ActionState.Feared)
+                   && !Stats.GetActionState(ActionState.IsFleeing)
+                   && !Stats.GetActionState(ActionState.IsAsleep)
+                   && !Stats.GetActionState(ActionState.Charmed)
+                   && !SpellBook.IsCastingSpell();
+        }
     }
 }

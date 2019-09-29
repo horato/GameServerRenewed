@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using MoreLinq;
@@ -48,6 +50,27 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
                 throw new InvalidOperationException("Used non-existent skill point");
 
             SkillPoints--;
+        }
+
+        public bool IsCastingSpell()
+        {
+            return CurrentSpell != null;
+        }
+
+        public void BeginCasting(ISpellInstance spell)
+        {
+            if (IsCastingSpell())
+                throw new InvalidOperationException("A spell is already being cast");
+
+            CurrentSpell = spell;
+        }
+
+        public void CastingFinished()
+        {
+            if(!IsCastingSpell())
+                throw new InvalidOperationException("Nothing is being casted");
+
+            CurrentSpell = null;
         }
     }
 }

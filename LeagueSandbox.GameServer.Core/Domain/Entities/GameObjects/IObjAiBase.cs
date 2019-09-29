@@ -17,5 +17,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         void StopMovement();
         void DoEmote();
         void OnMovementPointReached(Vector2 point);
+        bool CanCast();
     }
 }

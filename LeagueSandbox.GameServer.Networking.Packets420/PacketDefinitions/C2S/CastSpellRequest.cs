@@ -1,35 +1,38 @@
 using System.IO;
+using System.Numerics;
 using LeagueSandbox.GameServer.Networking.Packets420.Attributes;
+using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
 {
-	[Packet(PacketCmd.C2SCastSpell)]
-	internal class CastSpellRequest : IRequestPacketDefinition
-	{
-		public PacketCmd Cmd { get; }
-		public int NetId { get; }
-		public byte SpellSlotType { get; } // 4.18 [deprecated? . 2 first(highest) bits: 10 - ability or item, 01 - summoner spell]
-		public byte SpellSlot { get; } // 0-3 [0-1 if spellSlotType has summoner spell bits set]
-		public float X { get; } // Initial point
-		public float Y { get; } // (e.g. Viktor E laser starting point)
-		public float X2 { get; } // Final point
-		public float Y2 { get; } // (e.g. Viktor E laser final point)
-		public uint TargetNetId { get; } // If 0, use coordinates, else use target net id
+    [Packet(PacketCmd.C2SCastSpellRequest)]
+    internal class CastSpellRequest : IRequestPacketDefinition
+    {
+        public PacketCmd Cmd { get; }
+        public uint NetId { get; }
+        public SpellSlot Slot { get; set; }
+        public bool IsSummonerSpellBook { get; set; }
+        public bool IsHudClickCast { get; set; }
+        public Vector2 Position { get; set; }
+        public Vector2 EndPosition { get; set; }
+        public uint TargetNetID { get; set; }
 
-		public CastSpellRequest(byte[] data)
-		{
-			using (var reader = new BinaryReader(new MemoryStream(data)))
-			{
-				Cmd = (PacketCmd)reader.ReadByte();
-				NetId = reader.ReadInt32();
-				SpellSlotType = reader.ReadByte();
-				SpellSlot = reader.ReadByte();
-				X = reader.ReadSingle();
-				Y = reader.ReadSingle();
-				X2 = reader.ReadSingle();
-				Y2 = reader.ReadSingle();
-				TargetNetId = reader.ReadUInt32();
-			}
-		}
-	}
+        public CastSpellRequest(byte[] data)
+        {
+            using (var reader = new BinaryReader(new MemoryStream(data)))
+            {
+                Cmd = (PacketCmd)reader.ReadByte();
+                NetId = reader.ReadUInt32();
+
+                var bitfield = reader.ReadByte();
+                IsSummonerSpellBook = (bitfield & 0x01) != 0;
+                IsHudClickCast = (bitfield & 0x02) != 0;
+
+                Slot = (SpellSlot)reader.ReadByte();
+                Position = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                EndPosition = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                TargetNetID = reader.ReadUInt32();
+            }
+        }
+    }
 }

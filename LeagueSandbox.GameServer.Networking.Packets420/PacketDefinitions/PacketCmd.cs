@@ -35,6 +35,8 @@
         S2CMissileReplication = 0x3B,
         S2CSetCooldown = 0x85,
         S2CSUpgradeSpell = 0x15,
+        C2SCastSpellRequest = 0x9A,
+        S2CCastSpellAns = 0xB5,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -110,7 +112,6 @@
         S2CChangeCharacterVoice = 0x96,
         S2CUpdateModel = 0x97,
         S2CDisconnectedAnnouncement = 0x98,
-        C2SCastSpell = 0x9A,
         S2CNpcHide = 0x9E, // (4.18) not sure what this became
         S2CSetItemStacks = 0x9F,
         S2CMessageBoxRight = 0xA0,
@@ -127,7 +128,6 @@
         S2CSetModelTransparency = 0xB2,
         S2CBasicTutorialMessageWindow = 0xB3,
         S2CRemoveHighlightUnit = 0xB4,
-        S2CCastSpellAns = 0xB5,
         S2CAddBuff = 0xB7,
         S2CAfkWarningWindow = 0xB8,
         S2CHideUi = 0xBC,

@@ -34,5 +34,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteReplication(IEnumerable<IAttackableUnit> gameObjects);
         byte[] WriteSetCooldown(IObjAiBase owner, ISpellInstance spell);
         byte[] WriteSkillUp(IObjAiBase owner, ISpell spell);
+        byte[] WriteCastSpellAns(IObjAiBase caster, ISpellInstance spell, float manaCost);
     }
 }

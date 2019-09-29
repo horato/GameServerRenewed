@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common
 {
-    public class CastInfo
+    internal class CastInfo
     {
         public uint SpellHash { get; }
         public uint SpellNetID { get; }
@@ -18,7 +20,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         public uint MissileNetID { get; }
         public Vector3 TargetPosition { get; }
         public Vector3 TargetPositionEnd { get; }
-        public List<Target> Targets { get; } = new List<Target>();
+        public IList<Target> Targets { get; }
         public float DesignerCastTime { get; }
         public float ExtraCastTime { get; }
         public float DesignerTotalTime { get; }
@@ -29,13 +31,13 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         public bool IsForceCastingOrChannel { get; }
         public bool IsOverrideCastPosition { get; }
         public bool IsClickCasted { get; }
-        public byte SpellSlot { get; }
+        public SpellSlot SpellSlot { get; }
         public float ManaCost { get; }
         public Vector3 SpellCastLaunchPosition { get; }
         public int AmmoUsed { get; }
         public float AmmoRechargeTime { get; }
 
-        public CastInfo(uint spellHash, uint spellNetId, byte spellLevel, float attackSpeedModifier, uint casterNetId, uint spellChainOwnerNetId, uint packageHash, uint missileNetId, Vector3 targetPosition, Vector3 targetPositionEnd, float designerCastTime, float extraCastTime, float designerTotalTime, float cooldown, float startCastTime, bool isAutoAttack, bool isSecondAutoAttack, bool isForceCastingOrChannel, bool isOverrideCastPosition, bool isClickCasted, byte spellSlot, float manaCost, Vector3 spellCastLaunchPosition, int ammoUsed, float ammoRechargeTime)
+        public CastInfo(uint spellHash, uint spellNetId, byte spellLevel, float attackSpeedModifier, uint casterNetId, uint spellChainOwnerNetId, uint packageHash, uint missileNetId, Vector3 targetPosition, Vector3 targetPositionEnd, IEnumerable<Target> targets, float designerCastTime, float extraCastTime, float designerTotalTime, float cooldown, float startCastTime, bool isAutoAttack, bool isSecondAutoAttack, bool isForceCastingOrChannel, bool isOverrideCastPosition, bool isClickCasted, SpellSlot spellSlot, float manaCost, Vector3 spellCastLaunchPosition, int ammoUsed, float ammoRechargeTime)
         {
             SpellHash = spellHash;
             SpellNetID = spellNetId;
@@ -47,6 +49,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
             MissileNetID = missileNetId;
             TargetPosition = targetPosition;
             TargetPositionEnd = targetPositionEnd;
+            Targets = targets.ToList();
             DesignerCastTime = designerCastTime;
             ExtraCastTime = extraCastTime;
             DesignerTotalTime = designerTotalTime;
@@ -65,7 +68,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
         }
     }
 
-    public static class CastInfoExtension
+    internal static class CastInfoExtension
     {
         public static void WriteCastInfo(this BinaryWriter writerOrg, CastInfo data)
         {
@@ -90,7 +93,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Commo
                 var targetCount = data.Targets.Count;
                 if (targetCount > 32)
                 {
-                    throw new IOException("CastInfo targets > 32!!!");
+                    throw new InvalidOperationException("CastInfo targets > 32");
                 }
                 writer.Write((byte)targetCount);
                 foreach (var target in data.Targets)

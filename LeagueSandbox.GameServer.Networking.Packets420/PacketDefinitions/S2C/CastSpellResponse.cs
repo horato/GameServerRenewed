@@ -1,40 +1,34 @@
+using System;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
+using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
+
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 {
-    //internal class CastSpellResponse : BasePacket
-    //{
-    //    public CastSpellResponse(INavGrid navGrid, ISpell s, float x, float y, float xDragEnd, float yDragEnd, uint futureProjNetId, uint spellNetId)
-    //        : base(PacketCmd.PKT_S2C_CAST_SPELL_ANS, s.Owner.NetId)
-    //    {
-    //        Write(Environment.TickCount); // syncID
-    //        Write((byte)0); // Unk
-    //        Write((short)0x66); // Buffer size from here
-    //        Write((int)s.GetId()); // Spell hash, for example hash("EzrealMysticShot")
-    //        Write((uint)spellNetId); // Spell net ID
-    //        Write((byte)(s.Level - 1));
-    //        Write(1.0f); // attackSpeedMod
-    //        WriteNetId(s.Owner);
-    //        WriteNetId(s.Owner);
-    //        Write((int)s.Owner.GetChampionHash());
-    //        Write((uint)futureProjNetId); // The projectile ID that will be spawned
-    //        Write((float)x);
-    //        Write((float)navGrid.GetHeightAtLocation(x, y));
-    //        Write((float)y);
-    //        Write((float)xDragEnd);
-    //        Write((float)navGrid.GetHeightAtLocation(xDragEnd, yDragEnd));
-    //        Write((float)yDragEnd);
-    //        Write((byte)0); // numTargets (if >0, what follows is a list of {uint32 targetNetId, uint8 hitResult})
-    //        Write((float)s.SpellData.GetCastTime()); // designerCastTime
-    //        Write(0.0f); // extraTimeForCast
-    //        Write((float)s.SpellData.GetCastTime() /*+ s.ChannelTime*/); // designerTotalTime
-    //        Write((float)s.GetCooldown());
-    //        Write(0.0f); // startCastTime
-    //        Write((byte)0); // flags (isAutoAttack, secondAttack, forceCastingOrChannelling, mShouldOverrideCastPosition)
-    //        Write((byte)s.Slot);
-    //        Write((float)s.SpellData.ManaCost[s.Level]);
-    //        Write((float)s.Owner.X);
-    //        Write((float)s.Owner.GetZ());
-    //        Write((float)s.Owner.Y);
-    //        Write((long)1); // Unk
-    //    }
-    //}
+    internal class CastSpellAns : BasePacket
+    {
+        public int CasterPositionSyncID { get; set; }
+        public bool Unknown1 { get; set; } //if this is false CasterPositionSyncID is used ?
+        public CastInfo CastInfo { get; set; }
+
+        public CastSpellAns(uint netId, int casterPositionSyncId, bool unknown1, CastInfo castInfo) : base(PacketCmd.S2CCastSpellAns, netId)
+        {
+            CasterPositionSyncID = casterPositionSyncId;
+            Unknown1 = unknown1;
+            CastInfo = castInfo;
+
+            WritePacket();
+        }
+
+        private void WritePacket()
+        {
+            WriteInt(CasterPositionSyncID);
+
+            byte bitfield = 0;
+            if (Unknown1)
+                bitfield |= 1;
+
+            WriteByte(bitfield);
+            GetWriter().WriteCastInfo(CastInfo);
+        }
+    }
 }

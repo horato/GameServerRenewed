@@ -10,14 +10,18 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.C2S
         public PacketCmd Cmd { get; }
 		public uint NetId { get; }
 		public SpellSlot Slot { get; }
+        public bool IsEvolve { get; }
 
-		public SkillUpRequest(byte[] data)
+        public SkillUpRequest(byte[] data)
         {
             using (var reader = new BinaryReader(new MemoryStream(data)))
             {
                 Cmd = (PacketCmd)reader.ReadByte();
                 NetId = reader.ReadUInt32();
                 Slot = (SpellSlot)reader.ReadByte();
+
+                var bitfield = reader.ReadByte();
+                IsEvolve = (bitfield & 1) != 0;
             }
         }
     }

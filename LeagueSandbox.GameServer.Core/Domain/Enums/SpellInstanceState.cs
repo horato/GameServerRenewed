@@ -6,8 +6,9 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
 {
     public enum SpellInstanceState
     {
-        Casting = 1,
-        Channeling = 2,
-        Finished = 3
+        PreparingToCast = 1,
+        Casting = 2,
+        Channeling = 3,
+        Finished = 4
     }
 }

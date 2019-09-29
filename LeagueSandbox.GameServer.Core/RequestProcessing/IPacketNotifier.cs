@@ -35,5 +35,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyReplication(IEnumerable<ulong> targetSummonerIds, IEnumerable<IAttackableUnit> gameObjects);
         void NotifySetCooldown(ulong targetSummonerId, IObjAiBase owner, ISpellInstance spell);
         void NotifySkillUp(ulong targetSummonerId, IObjAiBase owner, ISpell spell);
+        void NotifyCastSpellAns(IEnumerable<ulong> targetSummonerIds, IObjAiBase caster, ISpellInstance spell, float manaCost);
     }
 }

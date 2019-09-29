@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
@@ -13,5 +15,8 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         void AddSpell(ISpell spell);
         IEnumerable<ISpell> GetAllSpells();
         void SkillPointUsed();
+        bool IsCastingSpell();
+        void BeginCasting(ISpellInstance spell);
+        void CastingFinished();
     }
 }

@@ -19,7 +19,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Support
             {
                 //typeof(SpellBook),
                 //typeof(Spell),
-                //typeof(SpellInstance),
+                typeof(SpellInstance),
             };
 
             foreach (var type in types)

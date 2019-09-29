@@ -21,6 +21,10 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, SkillUpRequest request)
         {
+            // TODO: Implement evolve (kazix, ...)
+            if (request.IsEvolve)
+                throw new NotImplementedException("Evolve is not implemented yet");
+
             var player = _playerCache.GetPlayer(senderSummonerId);
             var champion = player.Champion;
             var spellBook = champion.SpellBook;

@@ -41,16 +41,12 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
         private void UpdateCooldown(ISpell spell, float millisecondsDiff)
         {
-            var newCooldownRemaining = spell.CooldownRemaining - (millisecondsDiff / 1000.0f);
-            if (newCooldownRemaining > 0)
-            {
-                spell.UpdateCooldownRemaining(newCooldownRemaining);
-            }
-            else
-            {
-                spell.UpdateCooldownRemaining(0);
-                spell.UpdateState(SpellState.Ready);
-            }
+            var secondsDiff = millisecondsDiff / 1000.0f;
+            spell.CooldownProgress(secondsDiff);
+            if (spell.CooldownRemaining > 0)
+                return;
+
+            spell.CooldownFinished();
         }
 
         private void UpdateSpellInstance(IObjAiBase obj, float millisecondsDiff)
@@ -61,6 +57,9 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
             switch (spell.State)
             {
+                case SpellInstanceState.PreparingToCast:
+                    PrepareToCast(obj, spell, millisecondsDiff);
+                    break;
                 case SpellInstanceState.Casting:
                     UpdateCastTime(obj, spell, millisecondsDiff);
                     break;
@@ -74,33 +73,36 @@ namespace LeagueSandbox.GameServer.Lib.Services
             }
         }
 
+        private void PrepareToCast(IObjAiBase obj, ISpellInstance spell, float millisecondsDiff)
+        {
+            if (obj.IsMoving)
+                obj.StopMovement();
+
+            spell.CastingStart();
+        }
+
         private void UpdateCastTime(IObjAiBase obj, ISpellInstance spell, float millisecondsDiff)
         {
-            var newCastTime = spell.CastTimeRemaining - (millisecondsDiff / 1000.0f);
-            if (newCastTime > 0)
+            var secondsDiff = millisecondsDiff / 1000.0f;
+            spell.CastingProgress(secondsDiff);
+            if (spell.CastTimeRemaining > 0 && !spell.Definition.HasFlag(SpellFlags.InstantCast))
+                return;
+
+            if (spell.Definition.ChannelDuration > 0)
             {
-                spell.UpdateCastTimeRemaining(newCastTime);
+                spell.ChannelingStart();
             }
             else
             {
-                spell.UpdateCastTimeRemaining(0);
-
-                if (spell.Definition.ChannelDuration > 0)
-                {
-                    spell.UpdateState(SpellInstanceState.Channeling);
-                    spell.UpdateChannelTimeRemaining(spell.Definition.ChannelDuration);
-                }
-                else
-                {
-                    FinishCasting(obj, spell);
-                }
+                FinishCasting(obj, spell);
             }
         }
 
         private void UpdateChannelTime(IObjAiBase obj, ISpellInstance spell, float millisecondsDiff)
         {
-            var newChannelDuration = spell.ChannelTimeRemaining - (millisecondsDiff / 1000.0f);
-            if (newChannelDuration > 0)
+            var secondsDiff = (millisecondsDiff / 1000.0f);
+            spell.ChannelingProgress(secondsDiff);
+            if (spell.ChannelTimeRemaining > 0)
                 return;
 
             FinishCasting(obj, spell);
@@ -108,19 +110,13 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
         private void FinishCasting(IObjAiBase obj, ISpellInstance spell)
         {
-            spell.UpdateState(SpellInstanceState.Finished);
+            spell.CastingFinished();
+            obj.SpellBook.CastingFinished();
+            spell.Definition.StartCooldown();
 
-            spell.Definition.UpdateState(SpellState.Cooldown);
-            spell.Definition.UpdateCooldownRemaining(GetCooldown(spell));
-
+            //TODO: cdr?
             if (obj is IObjAiHero hero)
                 _packetNotifier.NotifySetCooldown(hero.SummonerId, obj, spell);
-        }
-
-        private float GetCooldown(ISpellInstance spell)
-        {
-            //TODO: option to turn off cooldowns globally
-            return spell.Definition.Cooldown;
         }
     }
 }

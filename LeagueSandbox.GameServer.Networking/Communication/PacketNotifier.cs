@@ -259,6 +259,16 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
+        public void NotifyCastSpellAns(IEnumerable<ulong> targetSummonerIds, IObjAiBase caster, ISpellInstance spell, float manaCost)
+        {
+            var data = _packetWriter.WriteCastSpellAns(caster, spell, manaCost);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

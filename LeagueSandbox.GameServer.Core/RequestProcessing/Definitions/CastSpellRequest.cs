@@ -1,28 +1,28 @@
 using System.IO;
+using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Core.RequestProcessing.Definitions
 {
-    internal class CastSpellRequest : RequestDefinition
+    public class CastSpellRequest : RequestDefinition
     {
-        public int NetId { get; }
-        public byte SpellSlotType { get; }
-        public byte SpellSlot { get; }
-        public float X { get; }
-        public float Y { get; }
-        public float X2 { get; }
-        public float Y2 { get; }
-        public uint TargetNetId { get; }
+        public uint NetId { get; }
+        public SpellSlot Slot { get; set; }
+        public bool IsSummonerSpellBook { get; set; }
+        public bool IsHudClickCast { get; set; }
+        public Vector2 Position { get; set; }
+        public Vector2 EndPosition { get; set; }
+        public uint TargetNetID { get; set; }
 
-        public CastSpellRequest(int netId, byte spellSlotType, byte spellSlot, float x, float y, float x2, float y2, uint targetNetId)
+        public CastSpellRequest(uint netId, SpellSlot slot, bool isSummonerSpellBook, bool isHudClickCast, Vector2 position, Vector2 endPosition, uint targetNetId)
         {
             NetId = netId;
-            SpellSlotType = spellSlotType;
-            SpellSlot = spellSlot;
-            X = x;
-            Y = y;
-            X2 = x2;
-            Y2 = y2;
-            TargetNetId = targetNetId;
+            Slot = slot;
+            IsSummonerSpellBook = isSummonerSpellBook;
+            IsHudClickCast = isHudClickCast;
+            Position = position;
+            EndPosition = endPosition;
+            TargetNetID = targetNetId;
         }
     }
 }
