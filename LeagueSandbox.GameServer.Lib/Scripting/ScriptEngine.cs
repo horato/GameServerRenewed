@@ -46,7 +46,7 @@ namespace LeagueSandbox.GameServer.Lib.Scripting
             Parallel.ForEach(scriptFiles, x =>
             {
                 var content = File.ReadAllText(x);
-                result.Add(new SourceFile(x, Path.GetFileName(x), content));
+                result.Add(new SourceFile(Path.GetFullPath(x), Path.GetFileName(x), content));
             });
 
             return result;

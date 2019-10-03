@@ -97,7 +97,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
 
             foreach (var player in players)
             {
-                var gameTime = _game.GameTimeElapsed;
+                var gameTime = _game.GameTimeElapsedMilliseconds;
                 _packetNotifier.NotifySynchSimTime(player.SummonerId, gameTime);
                 _packetNotifier.NotifySyncMissionTime(player.SummonerId, gameTime);
             }

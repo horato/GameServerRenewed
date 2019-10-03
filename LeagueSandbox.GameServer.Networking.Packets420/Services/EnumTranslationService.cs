@@ -360,7 +360,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
 
         public SpellSlot TranslateSpellSlot(GameServer.Core.Domain.Enums.SpellSlot spellSlot)
         {
-            switch(spellSlot)
+            switch (spellSlot)
             {
                 case GameServer.Core.Domain.Enums.SpellSlot.Q:
                     return SpellSlot.Spell1;
@@ -374,6 +374,21 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     return SpellSlot.Summoner1;
                 case GameServer.Core.Domain.Enums.SpellSlot.F:
                     return SpellSlot.Summoner2;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell1:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell2:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell3:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell4:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell5:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell6:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell7:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell8:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell9:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell10:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell11:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell12:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell13:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell14:
+                    return SpellSlot.Slotless;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(spellSlot), spellSlot, null);
             }

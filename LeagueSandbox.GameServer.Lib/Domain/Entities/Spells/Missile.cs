@@ -19,7 +19,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public Vector3 Velocity { get; }
         public Vector3 StartPoint { get; }
         public Vector3 EndPoint { get; }
-        public float CreatedAtGameTime { get; }
+        public float CreatedAtGameTimeMilliseconds { get; }
         public float Speed { get; }
         public float LifePercentage { get; }
         public float TimedSpeedDelta { get; }
@@ -35,7 +35,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
             Velocity = velocity;
             StartPoint = startPoint;
             EndPoint = endPoint;
-            CreatedAtGameTime = createdAtGameTime;
+            CreatedAtGameTimeMilliseconds = createdAtGameTime;
             Speed = speed;
             LifePercentage = lifePercentage;
             TimedSpeedDelta = timedSpeedDelta;

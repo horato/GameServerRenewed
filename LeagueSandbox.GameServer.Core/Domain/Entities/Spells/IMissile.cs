@@ -14,7 +14,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         Vector3 Velocity { get; }
         Vector3 StartPoint { get; }
         Vector3 EndPoint { get; }
-        float CreatedAtGameTime { get; }
+        float CreatedAtGameTimeMilliseconds { get; }
         float Speed { get; }
         float LifePercentage { get; }
         float TimedSpeedDelta { get; }

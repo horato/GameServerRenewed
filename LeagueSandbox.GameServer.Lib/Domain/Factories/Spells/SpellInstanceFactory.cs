@@ -32,7 +32,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 targetPosition,
                 targetEndPosition,
                 targetUnit,
-                _networkIdCreationService.GetNewNetId(),
+                spell.CastType == CastType.Instant ? 0 : _networkIdCreationService.GetNewNetId(),
                 _networkIdCreationService.GetNewNetId(),
                 actualManaCost
             );

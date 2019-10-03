@@ -375,7 +375,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 caster.NetId,
                 Environment.TickCount,
                 false, // TODO: what this does
-                _dtoTranslationService.TranslateCastInfo(caster, spell, null, null)
+                _dtoTranslationService.TranslateCastInfo(caster, spell)
             ).GetBytes();
         }
 
@@ -391,13 +391,13 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 missile.StartPoint,
                 missile.EndPoint,
                 missile.Caster.Position,
-                _game.Value.GameTimeElapsed - missile.CreatedAtGameTime,
+                0,//(_game.Value.GameTimeElapsedMilliseconds - missile.CreatedAtGameTimeMilliseconds) / 1000, TODO: whats this
                 missile.Speed,
                 missile.LifePercentage,
                 missile.TimedSpeedDelta,
                 missile.TimedSpeedDeltaTime,
-                true, //TODO: bounce?
-                _dtoTranslationService.TranslateCastInfo(missile.Caster, missile.Spell, "EzrealMysticShotMissile", missile.NetId)
+                false, //TODO: bounce?
+                _dtoTranslationService.TranslateCastInfo(missile.Caster, missile.Spell)
             ).GetBytes();
         }
     }

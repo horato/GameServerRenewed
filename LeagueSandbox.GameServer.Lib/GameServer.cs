@@ -68,7 +68,7 @@ namespace LeagueSandbox.GameServer.Lib
 
             var provider = _container.Resolve<SpellScriptProvider>();
             var scriptsProjectName = ScriptsAssemblyDefiningType.Assembly.GetName().Name;
-            provider.Initialize($"../../../../{scriptsProjectName}");
+            provider.Initialize($"../../../../{scriptsProjectName}"); //TODO: configurable
             _container.RegisterInstance<ISpellScriptProvider>(provider);
         }
 

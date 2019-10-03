@@ -47,7 +47,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 velocity,
                 start,
                 destination,
-                _game.Value.GameTimeElapsed,
+                _game.Value.GameTimeElapsedMilliseconds,
                 spellData.MissileSpeed,
                 1f, //TODO: ?
                 1f, // TODO: what is this

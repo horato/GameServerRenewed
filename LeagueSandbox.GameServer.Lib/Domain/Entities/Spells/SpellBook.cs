@@ -14,17 +14,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
     internal class SpellBook : ISpellBook
     {
         private readonly IDictionary<SpellSlot, ISpell> _spells = new ConcurrentDictionary<SpellSlot, ISpell>();
-        private readonly IDictionary<ExtraSpellNumber, string> _extraSpells;
 
         public ISpellInstance CurrentSpell { get; private set; }
         public int SkillPoints { get; private set; }
 
-        public SpellBook(ISpellInstance currentSpell, int skillPoints, IEnumerable<ISpell> spells, IDictionary<ExtraSpellNumber, string> extraSpells)
+        public SpellBook(ISpellInstance currentSpell, int skillPoints, IEnumerable<ISpell> spells)
         {
             CurrentSpell = currentSpell;
             SkillPoints = skillPoints;
             spells.ForEach(AddSpell);
-            _extraSpells = new ReadOnlyDictionary<ExtraSpellNumber, string>(extraSpells);
         }
 
         public ISpell GetSpell(SpellSlot slot)
@@ -47,15 +45,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         {
             return _spells.Values;
         }
-
-        public string GetExtraSpell(ExtraSpellNumber number)
-        {
-            if(!_extraSpells.ContainsKey(number))
-                throw new InvalidOperationException($"Extra spell {number} doesn't exist");
-
-            return _extraSpells[number];
-        }
-
+        
         public void SkillPointUsed()
         {
             if (SkillPoints < 1)

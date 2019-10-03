@@ -5,7 +5,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -53,7 +53,7 @@ namespace LeagueSandbox.GameServer.Lib.Services.Compilation
             // This can be cached for faster script reloading
             Parallel.ForEach(files, x =>
             {
-                var tree = CSharpSyntaxTree.ParseText(x.Content, _parseOptions, x.FileFullPath, Encoding.Unicode);
+                var tree = CSharpSyntaxTree.ParseText(x.Content, _parseOptions, x.FileFullPath, Encoding.UTF8);
 
                 result.Add(tree);
             });
@@ -82,6 +82,10 @@ namespace LeagueSandbox.GameServer.Lib.Services.Compilation
 
         private static IEnumerable<MetadataReference> GetMetadataReferences(IEnumerable<string> externalReferences)
         {
+            var runtimeAssemblyDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location);
+            if (string.IsNullOrWhiteSpace(runtimeAssemblyDirectory))
+                throw new InvalidOperationException("Runtime assembly directory not found");
+
             var references = new List<MetadataReference>
             {
                 MetadataReference.CreateFromFile(typeof(object).Assembly.Location), //mscorlib.dll
@@ -89,6 +93,14 @@ namespace LeagueSandbox.GameServer.Lib.Services.Compilation
                 MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location), //System.Core.dll
                 MetadataReference.CreateFromFile(typeof(DataTable).Assembly.Location), //System.Data.dll
                 MetadataReference.CreateFromFile(typeof(XmlDocument).Assembly.Location), //System.Xml.dll
+                MetadataReference.CreateFromFile(typeof(Vector2).Assembly.Location), //System.Numerics.Vectors.dll
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Runtime.dll")),
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "mscorlib.dll")),
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.dll")),
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "netstandard.dll")),
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Core.dll")),
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Linq.Expressions.dll")),
+                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Linq.dll"))
             };
 
             if (externalReferences != null)

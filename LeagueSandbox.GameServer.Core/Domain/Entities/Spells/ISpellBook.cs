@@ -14,7 +14,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         ISpell GetSpell(SpellSlot slot);
         void AddSpell(ISpell spell);
         IEnumerable<ISpell> GetAllSpells();
-        string GetExtraSpell(ExtraSpellNumber number);
         void SkillPointUsed();
         bool IsCastingSpell();
         void BeginCasting(ISpellInstance spell);

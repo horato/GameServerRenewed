@@ -13,7 +13,6 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private ISpellInstance _currentSpell;
         private int _skillPoints = 21;
         private IEnumerable<Spell> _spells = new List<Spell>();
-        private IDictionary<ExtraSpellNumber, string> _extraSpells = new Dictionary<ExtraSpellNumber, string>();
 
         public SpellBookBuilder WithCurrentSpell(ISpellInstance currentSpell)
         {
@@ -33,15 +32,9 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
-        public SpellBookBuilder WithExtraSpells(IDictionary<ExtraSpellNumber,string> extraSpells)
-        {
-            _extraSpells = extraSpells ?? new Dictionary<ExtraSpellNumber, string>();
-            return this;
-        }
-
         public override SpellBook Build()
         {
-            var instance = new SpellBook(_currentSpell, _skillPoints, _spells, _extraSpells);
+            var instance = new SpellBook(_currentSpell, _skillPoints, _spells);
 
             return instance;
         }

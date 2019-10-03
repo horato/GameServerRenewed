@@ -1,5 +1,6 @@
 ﻿using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Services;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Lib.Maths;
@@ -26,6 +27,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
             container.RegisterSingleton<IScriptEngine, ScriptEngine>();
             container.RegisterType<ICompilationService, CompilationService>();
+            container.RegisterType<ISpellCastHelperService, SpellCastHelperService>();
 
             RegisterGameObjectUpdateServices(container);
             RegisterUpdateServices(container);

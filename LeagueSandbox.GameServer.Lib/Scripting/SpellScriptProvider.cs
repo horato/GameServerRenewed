@@ -32,6 +32,12 @@ namespace LeagueSandbox.GameServer.Lib.Scripting
             _spellScriptsCache = _scriptEngine.GetAllScripts().Where(x => typeof(ISpellScript).IsAssignableFrom(x)).Where(x => !x.IsAbstract && !x.IsInterface).ToDictionary(x => x.FullName);
         }
 
+        public bool SpellScriptExists(string championModel, string spellName)
+        {
+            var typeName = string.Format(SPELL_SCRIPT_TYPE_NAME, championModel, spellName);
+            return _spellScriptsCache.ContainsKey(typeName);
+        }
+
         public ISpellScript ProvideSpellScript(string championModel, string spellName)
         {
             var typeName = string.Format(SPELL_SCRIPT_TYPE_NAME, championModel, spellName);

@@ -8,6 +8,6 @@ namespace LeagueSandbox.GameServer.Core.Scripting
 {
     public interface ISpellScript
     {
-        void OnCastFinished(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData);
+        void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData);
     }
 }

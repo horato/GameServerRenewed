@@ -25,14 +25,14 @@ namespace LeagueSandbox.GameServer.Lib.Maths
             return new PositionCalculationResult(newPosition, destinationReached);
         }
 
-        public float CalculateManaCost(ISpell spell, IObjAiHero champion)
+        public float CalculateManaCost(ISpell spell, IAttackableUnit unit)
         {
-            return spell.ManaCost * (1 - champion.Stats.SpellCostReduction);
+            return spell.ManaCost * (1 - unit.Stats.SpellCostReduction);
         }
 
-        public float CalculateManaDifferenceAfterSpellCast(IObjAiHero champion, float manaCost)
+        public float CalculateManaDifferenceAfterSpellCast(IAttackableUnit unit, float manaCost)
         {
-            var stats = champion.Stats;
+            var stats = unit.Stats;
             var newMana = stats.FlatManaPoints.CurrentValue - manaCost;
             if (newMana < 0)
                 newMana = 0;
@@ -42,9 +42,9 @@ namespace LeagueSandbox.GameServer.Lib.Maths
             return newMana - stats.FlatManaPoints.CurrentValue;
         }
 
-        public float CalculateDistance(IObjAiHero champion, IAttackableUnit targetUnit)
+        public float CalculateDistance(IGameObject from, IGameObject to)
         {
-            return GetDistance(champion.Position.ToVector2(), targetUnit.Position.ToVector2());
+            return GetDistance(from.Position.ToVector2(), to.Position.ToVector2());
         }
 
         public Vector2 CalculateDirection(Vector2 start, Vector2 destination)

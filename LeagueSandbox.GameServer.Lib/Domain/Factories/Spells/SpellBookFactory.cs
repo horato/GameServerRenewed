@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 
         public ISpellBook CreateEmpty()
         {
-            var instance = new SpellBook(null, 0, new List<ISpell>(), new Dictionary<ExtraSpellNumber, string>());
+            var instance = new SpellBook(null, 0, new List<ISpell>());
 
             return SetupDependencies(instance);
         }
@@ -64,85 +64,110 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 spells.Add(spell);
             }
 
-            var extraSpells = CreateExtraSpellsDictionary(data);
-            var instance = new SpellBook(null, 1, spells, extraSpells);
+            AddExtraSpells(characterName, data, spells);
+            var instance = new SpellBook(null, 1, spells);
             return SetupDependencies(instance);
         }
 
-        private IDictionary<ExtraSpellNumber, string> CreateExtraSpellsDictionary(CharacterData data)
+        private void AddExtraSpells(string characterName, CharacterData data, IList<ISpell> spells)
         {
-            var result = new Dictionary<ExtraSpellNumber, string>();
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell1))
             {
-                result.Add(ExtraSpellNumber.Spell1, data.ExtraSpell1);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell1);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell1, data.ExtraSpell1, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell2))
             {
-                result.Add(ExtraSpellNumber.Spell2, data.ExtraSpell2);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell2);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell2, data.ExtraSpell2, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell3))
             {
-                result.Add(ExtraSpellNumber.Spell3, data.ExtraSpell3);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell3);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell3, data.ExtraSpell3, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell4))
             {
-                result.Add(ExtraSpellNumber.Spell4, data.ExtraSpell4);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell4);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell4, data.ExtraSpell4, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell5))
             {
-                result.Add(ExtraSpellNumber.Spell5, data.ExtraSpell5);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell5);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell5, data.ExtraSpell5, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell6))
             {
-                result.Add(ExtraSpellNumber.Spell6, data.ExtraSpell6);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell6);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell6, data.ExtraSpell6, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell7))
             {
-                result.Add(ExtraSpellNumber.Spell7, data.ExtraSpell7);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell7);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell7, data.ExtraSpell7, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell8))
             {
-                result.Add(ExtraSpellNumber.Spell8, data.ExtraSpell8);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell8);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell8, data.ExtraSpell8, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell9))
             {
-                result.Add(ExtraSpellNumber.Spell9, data.ExtraSpell9);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell9);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell9, data.ExtraSpell9, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell10))
             {
-                result.Add(ExtraSpellNumber.Spell10, data.ExtraSpell10);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell10);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell10, data.ExtraSpell10, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell11))
             {
-                result.Add(ExtraSpellNumber.Spell11, data.ExtraSpell11);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell11);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell11, data.ExtraSpell11, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell12))
             {
-                result.Add(ExtraSpellNumber.Spell12, data.ExtraSpell12);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell12);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell12, data.ExtraSpell12, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell13))
             {
-                result.Add(ExtraSpellNumber.Spell13, data.ExtraSpell13);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell13);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell13, data.ExtraSpell13, 0, spellData);
+                spells.Add(spell);
             }
 
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell14))
             {
-                result.Add(ExtraSpellNumber.Spell14, data.ExtraSpell14);
+                var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.ExtraSpell14);
+                var spell = _spellFactory.CreateFromSpellData(SpellSlot.ExtraSpell14, data.ExtraSpell14, 0, spellData);
+                spells.Add(spell);
             }
-
-            return result;
         }
     }
 }

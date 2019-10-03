@@ -4,7 +4,7 @@
     {
         IMap Map { get; }
         bool IsPaused { get; }
-        float GameTimeElapsed { get; }
+        float GameTimeElapsedMilliseconds { get; }
 
         void Pause();
         void UnPause();

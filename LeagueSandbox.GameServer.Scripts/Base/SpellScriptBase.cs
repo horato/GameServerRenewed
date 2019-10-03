@@ -5,19 +5,28 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Scripting;
+using LeagueSandbox.GameServer.Core.Services;
 
 namespace LeagueSandbox.GameServer.Scripts.Base
 {
     public abstract class SpellScriptBase : ISpellScript
     {
-        public virtual void OnCastFinished(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData)
+        private readonly ISpellCastHelperService _spellCastHelperService;
+
+        protected SpellScriptBase(ISpellCastHelperService spellCastHelperService)
         {
-            
+            _spellCastHelperService = spellCastHelperService;
         }
 
-        protected void CastSpell(string spellName, Vector2 targetPosition, Vector2 targetPositionEnd, IAttackableUnit target)
+        public virtual void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData)
         {
 
+        }
+
+        protected void CastSpell(IObjAiBase caster, ISpell spell, IAttackableUnit target, Vector2 targetPosition, Vector2 targetPositionEnd)
+        {
+            _spellCastHelperService.CastSpell(spell, target, caster, targetPosition, targetPositionEnd);
+            //_spellCastHelperService.CastSpell(caster, spell, originalSpellInstance);
         }
     }
 }

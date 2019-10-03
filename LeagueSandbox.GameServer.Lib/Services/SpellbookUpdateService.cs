@@ -146,6 +146,10 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 case CastType.CircleMissile:
                 case CastType.ScriptedMissile:
                     CreateMissile(obj, spell, spellData);
+
+                    if (!_spellScriptProvider.SpellScriptExists(obj.SkinName, spell.Definition.SpellName))
+                        return;
+
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -154,7 +158,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
             var script = _spellScriptProvider.ProvideSpellScript(obj.SkinName, spell.Definition.SpellName);
             script.OnCastFinished(obj, spell, spellData);
         }
-        
+
         private void CreateMissile(IObjAiBase obj, ISpellInstance spell, SpellData spellData)
         {
             // TODO: create a missile

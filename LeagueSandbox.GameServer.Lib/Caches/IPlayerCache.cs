@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
-using LeagueSandbox.GameServer.Lib.Domain.Entities;
 
 namespace LeagueSandbox.GameServer.Lib.Caches
 {

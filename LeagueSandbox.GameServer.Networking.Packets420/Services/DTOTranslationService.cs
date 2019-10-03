@@ -701,19 +701,19 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             return result;
         }
 
-        public CastInfo TranslateCastInfo(IObjAiBase caster, ISpellInstance spell, string spellName, uint? projectileNetId)
+        public CastInfo TranslateCastInfo(IObjAiBase caster, ISpellInstance spell)
         {
             var slot = _enumTranslationService.TranslateSpellSlot(spell.Definition.Slot);
             return new CastInfo
             (
-                ElfHash.CalculateSpellNameHash(spellName ?? spell.Definition.SpellName),
+                ElfHash.CalculateSpellNameHash(spell.Definition.SpellName),
                 spell.InstanceNetId,
-                checked((byte)(spell.Definition.Level - 1)),
+                checked((byte)(spell.Definition.Level)),
                 caster.Stats.AttackSpeedMultiplier.Total,
                 caster.NetId,
                 caster.NetId,
                 SdbmHash.HashCharacterName(caster.SkinName, caster.SkinId),
-                projectileNetId ?? spell.FutureProjectileNetId,
+                spell.FutureProjectileNetId,
                 spell.TargetPosition.ToVector3(0), // TODO: take these from navgrid?
                 spell.TargetEndPosition.ToVector3(0), // TODO: take these from navgrid?
                 spell.Target != null ? new List<Target> { new Target(spell.Target.NetId, HitResult.Normal) } : new List<Target>(), //TODO: hit result
