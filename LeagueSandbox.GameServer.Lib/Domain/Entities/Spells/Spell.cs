@@ -25,11 +25,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public int AmmoUsed { get; }
         public float AmmoRechargeTime { get; private set; }
         public TargetingType TargetingType { get; }
+        public CastType CastType { get; }
         public SpellFlags Flags { get; }
         public SpellState State { get; private set; }
         public float CooldownRemaining { get; private set; }
 
-        public Spell(SpellSlot slot, int level, float castTime, string spellName, int maxLevel, int ammoUsed, TargetingType targetingType, SpellFlags flags, SpellState state, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap, IDictionary<int, float> ammoRechargeTimePerLevelMap)
+        public Spell(SpellSlot slot, int level, float castTime, string spellName, int maxLevel, int ammoUsed, TargetingType targetingType, CastType castType, SpellFlags flags, SpellState state, float cooldownRemaining, IDictionary<int, float> cooldownPerLevelMap, IDictionary<int, float> manaCostPerLevelMap, IDictionary<int, float> castRangePerLevelMap, IDictionary<int, float> channelDurationPerLevelMap, IDictionary<int, float> ammoRechargeTimePerLevelMap)
         {
             Slot = slot;
             CastTime = castTime;
@@ -37,6 +38,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
             MaxLevel = maxLevel;
             AmmoUsed = ammoUsed;
             TargetingType = targetingType;
+            CastType = castType;
             Flags = flags;
             State = state;
             CooldownRemaining = cooldownRemaining;
@@ -101,13 +103,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 
         public void CooldownFinished()
         {
-            if(State != SpellState.Cooldown)
+            if (State != SpellState.Cooldown)
                 throw new InvalidOperationException("Invalid state. Cannot finish cooldown.");
 
             CooldownRemaining = 0;
             State = SpellState.Ready;
         }
-        
+
         private float GetCooldown()
         {
             //TODO: option to turn off cooldowns globally

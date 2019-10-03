@@ -1,4 +1,4 @@
-﻿using ENet;
+﻿using LeagueSandbox.GameServer.ENetCS;
 using LeagueSandbox.GameServer.Networking.Core.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Communication

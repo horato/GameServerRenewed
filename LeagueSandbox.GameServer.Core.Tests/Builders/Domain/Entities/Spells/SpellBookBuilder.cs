@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Lib.Tests.Base;
 
@@ -12,6 +13,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private ISpellInstance _currentSpell;
         private int _skillPoints = 21;
         private IEnumerable<Spell> _spells = new List<Spell>();
+        private IDictionary<ExtraSpellNumber, string> _extraSpells = new Dictionary<ExtraSpellNumber, string>();
 
         public SpellBookBuilder WithCurrentSpell(ISpellInstance currentSpell)
         {
@@ -31,9 +33,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
+        public SpellBookBuilder WithExtraSpells(IDictionary<ExtraSpellNumber,string> extraSpells)
+        {
+            _extraSpells = extraSpells ?? new Dictionary<ExtraSpellNumber, string>();
+            return this;
+        }
+
         public override SpellBook Build()
         {
-            var instance = new SpellBook(_currentSpell, _skillPoints, _spells);
+            var instance = new SpellBook(_currentSpell, _skillPoints, _spells, _extraSpells);
 
             return instance;
         }

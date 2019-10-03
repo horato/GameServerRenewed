@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Utils.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -13,7 +14,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
     /// TODO: Remove public setters once the bug in json deserializer is fixed
     /// https://github.com/JamesNK/Newtonsoft.Json/issues/2176
     /// </summary>
-    public class SpellData
+    public class SpellData : ISpellData
     {
         public string AfterEffectName { get; set; }
         public int AIBlockLevel { get; set; }
@@ -794,6 +795,16 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
             X3 = x3;
             X4 = x4;
             X5 = x5;
+        }
+
+        public float GetSpellCastTime()
+        {
+            if (Flags.HasFlag(SpellFlags.InstantCast))
+                return 0;
+            if (SpellCastTime > 0)
+                return SpellCastTime; //TODO: needs check
+
+            return (1.0f + DelayCastOffsetPercent) / 2.0f;
         }
     }
 }

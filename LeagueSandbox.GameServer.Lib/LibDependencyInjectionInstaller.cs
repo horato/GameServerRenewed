@@ -34,6 +34,7 @@ namespace LeagueSandbox.GameServer.Lib
         private void RegisterGameObjectUpdateServices(IUnityContainer container)
         {
             container.RegisterType<IGameUpdateService, GameUpdateService>();
+            container.RegisterType<IMissileUpdateService, MissileUpdateService>();
             container.RegisterType<IAttackableUnitUpdateService, AttackableUnitUpdateService>();
             container.RegisterType<IGameObjectUpdateService, GameObjectUpdateService>();
             container.RegisterType<ILevelPropAiUpdateService, LevelPropAiUpdateService>();

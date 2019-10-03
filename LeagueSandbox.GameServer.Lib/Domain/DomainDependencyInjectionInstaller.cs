@@ -29,6 +29,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain
             container.RegisterType<ISpellFactory, SpellFactory>();
             container.RegisterType<ISpellInstanceFactory, SpellInstanceFactory>();
             container.RegisterType<IParticleFactory, ParticleFactory>();
+            container.RegisterType<IMissileFactory, MissileFactory>();
         }
     }
 }

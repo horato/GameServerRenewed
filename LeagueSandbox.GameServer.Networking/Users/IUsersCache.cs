@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ENet;
+using LeagueSandbox.GameServer.ENetCS;
 
 namespace LeagueSandbox.GameServer.Networking.Users
 {

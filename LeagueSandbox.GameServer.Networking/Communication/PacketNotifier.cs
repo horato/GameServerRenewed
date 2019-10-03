@@ -259,9 +259,19 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
-        public void NotifyCastSpellAns(IEnumerable<ulong> targetSummonerIds, IObjAiBase caster, ISpellInstance spell, float manaCost)
+        public void NotifyCastSpellAns(IEnumerable<ulong> targetSummonerIds, IObjAiBase caster, ISpellInstance spell)
         {
-            var data = _packetWriter.WriteCastSpellAns(caster, spell, manaCost);
+            var data = _packetWriter.WriteCastSpellAns(caster, spell);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
+        public void NotifyMissileReplication(IEnumerable<ulong> targetSummonerIds, IMissile missile)
+        {
+            var data = _packetWriter.WriteMissileReplication(missile);
             foreach (var targetSummonerId in targetSummonerIds)
             {
                 var targetUser = _usersCache.GetUser(targetSummonerId);

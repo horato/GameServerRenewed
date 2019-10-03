@@ -39,7 +39,7 @@ namespace LeagueSandbox.GameServer.Host
 
             var players = new[]
             {
-                new StartupPlayer(123412341234, 30, Rank.Diamond, "Test1", "Ahri", Team.Blue, 0, SummonerSpell.Heal, SummonerSpell.Flash, 2, 2, 0, false, new Dictionary<int, int>()),
+                new StartupPlayer(123412341234, 30, Rank.Diamond, "Test1", "Ezreal", Team.Blue, 0, SummonerSpell.Heal, SummonerSpell.Flash, 2, 2, 0, false, new Dictionary<int, int>()),
             };
             var config = new StartupConfig(HOST, PORT, BLOWFISH_KEY, MAP_ID, players);
 

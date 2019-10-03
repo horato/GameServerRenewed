@@ -11,8 +11,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
     {
         public PositionCalculationResult CalculateNewPosition(Vector2 from, Vector2 to, float movementSpeed, float millisecondDiff)
         {
-            var goingTo = to - from;
-            var direction = Vector2.Normalize(goingTo);
+            var direction = CalculateDirection(from, to);
             if (float.IsNaN(direction.X) || float.IsNaN(direction.Y))
                 throw new InvalidOperationException($"Invalid vector {direction.X}:{direction.Y}");
 
@@ -46,6 +45,23 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         public float CalculateDistance(IObjAiHero champion, IAttackableUnit targetUnit)
         {
             return GetDistance(champion.Position.ToVector2(), targetUnit.Position.ToVector2());
+        }
+
+        public Vector2 CalculateDirection(Vector2 start, Vector2 destination)
+        {
+            var direction = destination - start;
+            return Vector2.Normalize(direction);
+        }
+
+        public Vector3 CalculateDirection(Vector3 start, Vector3 destination)
+        {
+            var direction = destination - start;
+            return Vector3.Normalize(direction);
+        }
+
+        public Vector3 CalculateVelocity(Vector3 previousLocation, Vector3 currentLocation, float timeDelta)
+        {
+            return (currentLocation - previousLocation) / timeDelta;
         }
 
         private float GetDistance(Vector2 from, Vector2 to)

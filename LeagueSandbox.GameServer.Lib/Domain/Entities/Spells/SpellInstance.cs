@@ -14,23 +14,25 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public SpellInstanceState State { get; private set; }
         public float CastTimeRemaining { get; private set; }
         public float ChannelTimeRemaining { get; private set; }
-        public Vector2 StartPosition { get; }
-        public Vector2 EndPosition { get; }
+        public Vector2 TargetPosition { get; }
+        public Vector2 TargetEndPosition { get; }
         public IAttackableUnit Target { get; }
         public uint FutureProjectileNetId { get; }
         public uint InstanceNetId { get; }
+        public float ActualManaCost { get; }
 
-        public SpellInstance(ISpell definition, SpellInstanceState state, float castTimeRemaining, float channelTimeRemaining, Vector2 position, Vector2 endPosition, IAttackableUnit targetUnit, uint futureProjectileNetId, uint instanceNetId)
+        public SpellInstance(ISpell definition, SpellInstanceState state, float castTimeRemaining, float channelTimeRemaining, Vector2 targetPosition, Vector2 targetEndPosition, IAttackableUnit targetUnit, uint futureProjectileNetId, uint instanceNetId, float actualManaCost)
         {
             Definition = definition;
             State = state;
             CastTimeRemaining = castTimeRemaining;
             ChannelTimeRemaining = channelTimeRemaining;
-            StartPosition = position;
-            EndPosition = endPosition;
+            TargetPosition = targetPosition;
+            TargetEndPosition = targetEndPosition;
             Target = targetUnit;
             FutureProjectileNetId = futureProjectileNetId;
             InstanceNetId = instanceNetId;
+            ActualManaCost = actualManaCost;
         }
 
         public void CastingStart()

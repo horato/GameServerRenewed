@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 
         public ISpellBook CreateEmpty()
         {
-            var instance = new SpellBook(null, 0, new List<ISpell>());
+            var instance = new SpellBook(null, 0, new List<ISpell>(), new Dictionary<ExtraSpellNumber, string>());
 
             return SetupDependencies(instance);
         }
@@ -64,8 +64,85 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 spells.Add(spell);
             }
 
-            var instance = new SpellBook(null, 1, spells);
+            var extraSpells = CreateExtraSpellsDictionary(data);
+            var instance = new SpellBook(null, 1, spells, extraSpells);
             return SetupDependencies(instance);
+        }
+
+        private IDictionary<ExtraSpellNumber, string> CreateExtraSpellsDictionary(CharacterData data)
+        {
+            var result = new Dictionary<ExtraSpellNumber, string>();
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell1))
+            {
+                result.Add(ExtraSpellNumber.Spell1, data.ExtraSpell1);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell2))
+            {
+                result.Add(ExtraSpellNumber.Spell2, data.ExtraSpell2);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell3))
+            {
+                result.Add(ExtraSpellNumber.Spell3, data.ExtraSpell3);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell4))
+            {
+                result.Add(ExtraSpellNumber.Spell4, data.ExtraSpell4);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell5))
+            {
+                result.Add(ExtraSpellNumber.Spell5, data.ExtraSpell5);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell6))
+            {
+                result.Add(ExtraSpellNumber.Spell6, data.ExtraSpell6);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell7))
+            {
+                result.Add(ExtraSpellNumber.Spell7, data.ExtraSpell7);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell8))
+            {
+                result.Add(ExtraSpellNumber.Spell8, data.ExtraSpell8);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell9))
+            {
+                result.Add(ExtraSpellNumber.Spell9, data.ExtraSpell9);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell10))
+            {
+                result.Add(ExtraSpellNumber.Spell10, data.ExtraSpell10);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell11))
+            {
+                result.Add(ExtraSpellNumber.Spell11, data.ExtraSpell11);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell12))
+            {
+                result.Add(ExtraSpellNumber.Spell12, data.ExtraSpell12);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell13))
+            {
+                result.Add(ExtraSpellNumber.Spell13, data.ExtraSpell13);
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ExtraSpell14))
+            {
+                result.Add(ExtraSpellNumber.Spell14, data.ExtraSpell14);
+            }
+
+            return result;
         }
     }
 }

@@ -6,8 +6,11 @@ using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
+using LeagueSandbox.GameServer.Core.Hashing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.DTOs;
 using LeagueSandbox.GameServer.Core.Services;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
@@ -696,6 +699,40 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 result.Add(MasterMask.Six, mm6);
 
             return result;
+        }
+
+        public CastInfo TranslateCastInfo(IObjAiBase caster, ISpellInstance spell, string spellName, uint? projectileNetId)
+        {
+            var slot = _enumTranslationService.TranslateSpellSlot(spell.Definition.Slot);
+            return new CastInfo
+            (
+                ElfHash.CalculateSpellNameHash(spellName ?? spell.Definition.SpellName),
+                spell.InstanceNetId,
+                checked((byte)(spell.Definition.Level - 1)),
+                caster.Stats.AttackSpeedMultiplier.Total,
+                caster.NetId,
+                caster.NetId,
+                SdbmHash.HashCharacterName(caster.SkinName, caster.SkinId),
+                projectileNetId ?? spell.FutureProjectileNetId,
+                spell.TargetPosition.ToVector3(0), // TODO: take these from navgrid?
+                spell.TargetEndPosition.ToVector3(0), // TODO: take these from navgrid?
+                spell.Target != null ? new List<Target> { new Target(spell.Target.NetId, HitResult.Normal) } : new List<Target>(), //TODO: hit result
+                spell.Definition.CastTime,
+                0,
+                spell.Definition.CastTime,
+                spell.Definition.Cooldown,
+                0, //TODO: game time?
+                false, // TODO: auto attack
+                false, // TODO: auto attack
+                spell.Definition.ChannelDuration > 0, //TODO: force cast?
+                false,
+                spell.Definition.TargetingType == TargetingType.Target,
+                slot,
+                spell.ActualManaCost,
+                caster.Position,
+                spell.Definition.AmmoUsed,
+                spell.Definition.AmmoRechargeTime
+            );
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
-using ENet;
 using LeagueSandbox.GameServer.Core.Logging;
+using LeagueSandbox.GameServer.ENetCS;
 using LeagueSandbox.GameServer.Networking.Core.Enums;
 
 namespace LeagueSandbox.GameServer.Networking.Communication.Processors

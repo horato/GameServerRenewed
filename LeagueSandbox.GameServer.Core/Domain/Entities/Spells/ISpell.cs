@@ -16,6 +16,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         float AmmoRechargeTime { get; }
         int MaxLevel { get; }
         TargetingType TargetingType { get; }
+        CastType CastType { get; }
         SpellFlags Flags { get; }
         SpellState State { get; }
         float CooldownRemaining { get; }

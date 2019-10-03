@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeagueSandbox.GameServer.Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeagueSandbox.GameServer.Utils", "LeagueSandbox.GameServer.Utils\LeagueSandbox.GameServer.Utils.csproj", "{7FFB142E-5488-4F41-A4E9-C3607723D162}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueSandbox.GameServer.Scripts", "LeagueSandbox.GameServer.Scripts\LeagueSandbox.GameServer.Scripts.csproj", "{96099C62-E3C3-4977-99BB-A6A7707EF728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeagueSandbox.GameServer.Scripts", "LeagueSandbox.GameServer.Scripts\LeagueSandbox.GameServer.Scripts.csproj", "{96099C62-E3C3-4977-99BB-A6A7707EF728}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeagueSandbox.GameServer.ENetCS", "LeagueSandbox.GameServer.ENetCS\LeagueSandbox.GameServer.ENetCS.csproj", "{62F31FDB-A475-4060-80D2-E6EE6AF53F98}"
 EndProject

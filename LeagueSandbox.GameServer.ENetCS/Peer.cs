@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace ENet
+namespace LeagueSandbox.GameServer.ENetCS
 {
     public unsafe class Peer
     {

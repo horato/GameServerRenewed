@@ -7,3 +7,4 @@ Should game object implement interfaces like ICanMove, ICanCast, etc? Or is cast
 Introduce separated enums for json & core
 Stats load post processing
 Add more descriptive exception messages (context)
+Custom character+spell jsons, the current ones are a bunch of bs

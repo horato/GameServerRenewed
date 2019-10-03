@@ -1,5 +1,5 @@
-﻿using ENet;
-using LeagueSandbox.GameServer.Core.RequestProcessing;
+﻿using LeagueSandbox.GameServer.Core.RequestProcessing;
+using LeagueSandbox.GameServer.ENetCS;
 
 namespace LeagueSandbox.GameServer.Networking.Communication.Processors
 {

@@ -12,5 +12,6 @@ namespace LeagueSandbox.GameServer.Lib.Caches
         IGameObject GetObject(uint netId);
         IEnumerable<IGameObject> GetAllObjects();
         IEnumerable<IGameObject> FindByCriteria(Func<IGameObject, bool> criteria);
+        void Remove(uint netId);
     }
 }

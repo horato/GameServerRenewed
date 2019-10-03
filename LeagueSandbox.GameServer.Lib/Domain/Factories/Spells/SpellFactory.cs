@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             var channelDurationMap = CreateChannelDurationMap(data);
             var ammoRechargeTimeMap = CreateAmmoRechargeTimeMap(data);
 
-            var instance = new Spell(slot, 0, data.SpellCastTime, spellName, maxLevel, data.AmmoUsed, data.TargettingType, data.Flags, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap, ammoRechargeTimeMap);
+            var instance = new Spell(slot, 0, data.GetSpellCastTime(), spellName, maxLevel, data.AmmoUsed, data.TargettingType, data.CastType, data.Flags, SpellState.Ready, 0, cooldownMap, manaCostMap, castRangeMap, channelDurationMap, ammoRechargeTimeMap);
 
             return SetupDependencies(instance);
         }

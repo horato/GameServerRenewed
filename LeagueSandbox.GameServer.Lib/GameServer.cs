@@ -66,9 +66,10 @@ namespace LeagueSandbox.GameServer.Lib
         {
             LoggerProvider.GetLogger().Info("Initializing scripts");
 
-            var engine = _container.Resolve<IScriptEngine>();
+            var provider = _container.Resolve<SpellScriptProvider>();
             var scriptsProjectName = ScriptsAssemblyDefiningType.Assembly.GetName().Name;
-            engine.LoadScripts($"../../../../{scriptsProjectName}");
+            provider.Initialize($"../../../../{scriptsProjectName}");
+            _container.RegisterInstance<ISpellScriptProvider>(provider);
         }
 
         private void InitializeNetworking(StartupConfig config)

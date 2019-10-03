@@ -21,7 +21,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             _networkIdCreationService = networkIdCreationService;
         }
 
-        public ISpellInstance CreateNew(ISpell spell, Vector2 position, Vector2 endPosition, IAttackableUnit targetUnit)
+        public ISpellInstance CreateNew(ISpell spell, Vector2 targetPosition, Vector2 targetEndPosition, IAttackableUnit targetUnit, float actualManaCost)
         {
             var instance = new SpellInstance
             (
@@ -29,11 +29,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 SpellInstanceState.PreparingToCast,
                 spell.CastTime,
                 0,
-                position, 
-                endPosition,
+                targetPosition,
+                targetEndPosition,
                 targetUnit,
                 _networkIdCreationService.GetNewNetId(),
-                _networkIdCreationService.GetNewNetId()
+                _networkIdCreationService.GetNewNetId(),
+                actualManaCost
             );
 
             return SetupDependencies(instance);

@@ -17,6 +17,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private int _ammoUsed = 5;
         private TargetingType _targetingType = TargetingType.Cone;
         private SpellFlags _spellFlags = SpellFlags.InstantCast;
+        private CastType _castType = CastType.CircleMissile;
         private IDictionary<int, float> _cooldownPerLevelMap = new Dictionary<int, float> { { 2, 15f } };
         private IDictionary<int, float> _manaCostPerLevelMap = new Dictionary<int, float> { { 2, 12.5f } };
         private IDictionary<int, float> _castRangePerLevelMap = new Dictionary<int, float> { { 2, 540f } };
@@ -107,9 +108,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
+        public SpellBuilder WithCastType(CastType castType)
+        {
+            _castType = castType;
+            return this;
+        }
+
         public override Spell Build()
         {
-            var instance = new Spell(_slot, _level, _castTime, _spellName, _maxLevel, _ammoUsed, _targetingType, _spellFlags, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap, _ammoRechargeTimePerLevelMap);
+            var instance = new Spell(_slot, _level, _castTime, _spellName, _maxLevel, _ammoUsed, _targetingType, _castType, _spellFlags, _state, _cooldownRemaining, _cooldownPerLevelMap, _manaCostPerLevelMap, _castRangePerLevelMap, _channelDurationPerLevelMap, _ammoRechargeTimePerLevelMap);
 
             return instance;
         }

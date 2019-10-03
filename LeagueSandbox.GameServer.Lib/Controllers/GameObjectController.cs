@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Lib.Caches;
@@ -29,6 +30,7 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
 
         private readonly IAttackableUnitUpdateService _attackableUnitUpdateService;
         private readonly IGameObjectUpdateService _gameObjectUpdateService;
+        private readonly IMissileUpdateService _missileUpdateService;
         private readonly ILevelPropAiUpdateService _levelPropAiUpdateService;
         private readonly INeutralMinionCampUpdateService _minionCampUpdateService;
         private readonly IObjAiBaseUpdateService _aiBaseUpdateService;
@@ -42,9 +44,10 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         private readonly IObjSpawnPointUpdateService _objSpawnPointUpdateService;
         private readonly IObjTurretUpdateService _objTurretUpdateService;
 
-        public GameObjectController(IGameObjectsCache gameObjectsCache, IPlayerCache playerCache, IPlayerFactory playerFactory, IObjAiHeroFactory objAiHeroFactory, IClientIdCreationService clientIdCreationService, IPacketNotifier packetNotifier, IPathingService pathingService, IMapObjectsProvider mapObjectsProvider, IAttackableUnitUpdateService attackableUnitUpdateService, IGameObjectUpdateService gameObjectUpdateService, ILevelPropAiUpdateService levelPropAiUpdateService, INeutralMinionCampUpdateService minionCampUpdateService, IObjAiBaseUpdateService aiBaseUpdateService, IObjAiHeroUpdateService aiHeroUpdateService, IObjAiMinionUpdateService aiMinionUpdateService, IObjAnimatedBuildingUpdateService animatedBuildingUpdateService, IObjBarracksDampenerUpdateService barracksDampenerUpdateService, IObjBuildingUpdateService buildingUpdateService, IObjHqUpdateService hqUpdateService, IObjShopUpdateService objShopUpdateService, IObjSpawnPointUpdateService objSpawnPointUpdateService, IObjTurretUpdateService objTurretUpdateService)
+        public GameObjectController(IGameObjectsCache gameObjectsCache, IMissileUpdateService missileUpdateService, IPlayerCache playerCache, IPlayerFactory playerFactory, IObjAiHeroFactory objAiHeroFactory, IClientIdCreationService clientIdCreationService, IPacketNotifier packetNotifier, IPathingService pathingService, IMapObjectsProvider mapObjectsProvider, IAttackableUnitUpdateService attackableUnitUpdateService, IGameObjectUpdateService gameObjectUpdateService, ILevelPropAiUpdateService levelPropAiUpdateService, INeutralMinionCampUpdateService minionCampUpdateService, IObjAiBaseUpdateService aiBaseUpdateService, IObjAiHeroUpdateService aiHeroUpdateService, IObjAiMinionUpdateService aiMinionUpdateService, IObjAnimatedBuildingUpdateService animatedBuildingUpdateService, IObjBarracksDampenerUpdateService barracksDampenerUpdateService, IObjBuildingUpdateService buildingUpdateService, IObjHqUpdateService hqUpdateService, IObjShopUpdateService objShopUpdateService, IObjSpawnPointUpdateService objSpawnPointUpdateService, IObjTurretUpdateService objTurretUpdateService)
         {
             _gameObjectsCache = gameObjectsCache;
+            _missileUpdateService = missileUpdateService;
             _playerCache = playerCache;
             _playerFactory = playerFactory;
             _objAiHeroFactory = objAiHeroFactory;
@@ -103,6 +106,11 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
                 if (gameObject is IGameObject obj)
                 {
                     _gameObjectUpdateService.Update(obj, millisecondsDiff);
+                }
+
+                if (gameObject is IMissile missile)
+                {
+                    _missileUpdateService.Update(missile, millisecondsDiff);
                 }
 
                 if (gameObject is IAttackableUnit attackableUnit)

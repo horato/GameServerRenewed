@@ -21,6 +21,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
         private IAttackableUnit _targetUnit = new ObjAiHeroBuilder().Build();
         private uint _futureProjectileNetId = 0xFF445455;
         private uint _instanceNetId = 0xFF445456;
+        private float _actualManaCost = 214.47f;
 
         public SpellInstanceBuilder WithDefinition(ISpell definition)
         {
@@ -76,9 +77,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Spells
             return this;
         }
 
+        public SpellInstanceBuilder WithActualManaCost(float actualManaCost)
+        {
+            _actualManaCost = actualManaCost;
+            return this;
+        }
+
         public override SpellInstance Build()
         {
-            var instance = new SpellInstance(_definition, _state, _castTimeRemaining, _channelTimeRemaining, _position, _endPosition, _targetUnit, _futureProjectileNetId, _instanceNetId);
+            var instance = new SpellInstance(_definition, _state, _castTimeRemaining, _channelTimeRemaining, _position, _endPosition, _targetUnit, _futureProjectileNetId, _instanceNetId, _actualManaCost);
 
             return instance;
         }

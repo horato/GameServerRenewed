@@ -6,6 +6,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 {
     internal interface ISpellInstanceFactory
     {
-        ISpellInstance CreateNew(ISpell spell, Vector2 position, Vector2 endPosition, IAttackableUnit targetUnit);
+        ISpellInstance CreateNew(ISpell spell, Vector2 targetPosition, Vector2 targetEndPosition, IAttackableUnit targetUnit, float actualManaCost);
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
@@ -12,15 +14,17 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
     internal class SpellBook : ISpellBook
     {
         private readonly IDictionary<SpellSlot, ISpell> _spells = new ConcurrentDictionary<SpellSlot, ISpell>();
+        private readonly IDictionary<ExtraSpellNumber, string> _extraSpells;
 
         public ISpellInstance CurrentSpell { get; private set; }
         public int SkillPoints { get; private set; }
 
-        public SpellBook(ISpellInstance currentSpell, int skillPoints, IEnumerable<ISpell> spells)
+        public SpellBook(ISpellInstance currentSpell, int skillPoints, IEnumerable<ISpell> spells, IDictionary<ExtraSpellNumber, string> extraSpells)
         {
             CurrentSpell = currentSpell;
             SkillPoints = skillPoints;
             spells.ForEach(AddSpell);
+            _extraSpells = new ReadOnlyDictionary<ExtraSpellNumber, string>(extraSpells);
         }
 
         public ISpell GetSpell(SpellSlot slot)
@@ -42,6 +46,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public IEnumerable<ISpell> GetAllSpells()
         {
             return _spells.Values;
+        }
+
+        public string GetExtraSpell(ExtraSpellNumber number)
+        {
+            if(!_extraSpells.ContainsKey(number))
+                throw new InvalidOperationException($"Extra spell {number} doesn't exist");
+
+            return _extraSpells[number];
         }
 
         public void SkillPointUsed()
@@ -67,7 +79,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 
         public void CastingFinished()
         {
-            if(!IsCastingSpell())
+            if (!IsCastingSpell())
                 throw new InvalidOperationException("Nothing is being casted");
 
             CurrentSpell = null;

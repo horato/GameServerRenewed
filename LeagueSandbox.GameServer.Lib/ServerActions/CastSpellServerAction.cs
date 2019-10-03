@@ -77,12 +77,12 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
             champion.Stats.FlatManaPoints.ApplyStatModifier(modifier);
 
             // Cast
-            var spellInstance = _spellInstanceFactory.CreateNew(spell, request.Position, request.EndPosition, targetUnit);
+            var spellInstance = _spellInstanceFactory.CreateNew(spell, request.Position, request.EndPosition, targetUnit, manaCost);
             champion.SpellBook.BeginCasting(spellInstance);
 
             // Response
             var summonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId);
-            _packetNotifier.NotifyCastSpellAns(summonerIds, champion, spellInstance, manaCost);
+            _packetNotifier.NotifyCastSpellAns(summonerIds, champion, spellInstance);
         }
     }
 }

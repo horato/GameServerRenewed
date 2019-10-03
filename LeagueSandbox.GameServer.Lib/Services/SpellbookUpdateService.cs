@@ -1,23 +1,38 @@
 ﻿using System;
+using System.Linq;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
+using LeagueSandbox.GameServer.Lib.Caches;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
+using LeagueSandbox.GameServer.Lib.Providers;
+using LeagueSandbox.GameServer.Lib.Scripting;
+using LeagueSandbox.GameServer.Utils.CharacterDatas;
 
 namespace LeagueSandbox.GameServer.Lib.Services
 {
     internal class SpellbookUpdateService : ISpellbookUpdateService
     {
         private readonly IPacketNotifier _packetNotifier;
+        private readonly IMissileFactory _missileFactory;
+        private readonly IGameObjectsCache _gameObjectsCache;
+        private readonly ISpellScriptProvider _spellScriptProvider;
+        private readonly ISpellDataProvider _spellDataProvider;
 
-        public SpellbookUpdateService(IPacketNotifier packetNotifier)
+        public SpellbookUpdateService(IPacketNotifier packetNotifier, IMissileFactory missileFactory, IGameObjectsCache gameObjectsCache, ISpellScriptProvider spellScriptProvider, ISpellDataProvider spellDataProvider)
         {
             _packetNotifier = packetNotifier;
+            _missileFactory = missileFactory;
+            _gameObjectsCache = gameObjectsCache;
+            _spellScriptProvider = spellScriptProvider;
+            _spellDataProvider = spellDataProvider;
         }
 
         public void UpdateSpellbook(IObjAiBase obj, float millisecondsDiff)
         {
             UpdateSpells(obj, millisecondsDiff);
+            //TODO: Move to spell instance update service?
             UpdateSpellInstance(obj, millisecondsDiff);
         }
 
@@ -117,6 +132,34 @@ namespace LeagueSandbox.GameServer.Lib.Services
             //TODO: cdr?
             if (obj is IObjAiHero hero)
                 _packetNotifier.NotifySetCooldown(hero.SummonerId, obj, spell);
+
+            var spellData = _spellDataProvider.ProvideCharacterSpellData(obj.SkinName, spell.Definition.SpellName);
+            switch (spell.Definition.CastType)
+            {
+                case CastType.Instant:
+                    // wrapper or an actual no missile spell
+                    // nothing to do here yet
+                    break;
+                case CastType.Missile:
+                case CastType.ChainMissile:
+                case CastType.ArcMissile:
+                case CastType.CircleMissile:
+                case CastType.ScriptedMissile:
+                    CreateMissile(obj, spell, spellData);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            var script = _spellScriptProvider.ProvideSpellScript(obj.SkinName, spell.Definition.SpellName);
+            script.OnCastFinished(obj, spell, spellData);
+        }
+        
+        private void CreateMissile(IObjAiBase obj, ISpellInstance spell, SpellData spellData)
+        {
+            // TODO: create a missile
+            var missile = _missileFactory.CreateNew(obj, spell, spellData);
+            _gameObjectsCache.Add(missile.NetId, missile);
         }
     }
 }

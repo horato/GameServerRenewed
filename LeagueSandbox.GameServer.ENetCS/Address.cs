@@ -6,7 +6,7 @@ using System.Text;
 
 #endregion
 
-namespace ENet
+namespace LeagueSandbox.GameServer.ENetCS
 {
     public unsafe struct Address : IEquatable<Address>
     {

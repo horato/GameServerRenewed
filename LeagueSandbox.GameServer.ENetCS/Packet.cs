@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace ENet
+namespace LeagueSandbox.GameServer.ENetCS
 {
     public unsafe struct Packet : IDisposable
     {

@@ -1,4 +1,4 @@
-﻿namespace ENet
+﻿namespace LeagueSandbox.GameServer.ENetCS
 {
     public static class Library
     {

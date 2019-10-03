@@ -13,5 +13,8 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         float CalculateManaCost(ISpell spell, IObjAiHero champion);
         float CalculateManaDifferenceAfterSpellCast(IObjAiHero champion, float manaCost);
         float CalculateDistance(IObjAiHero champion, IAttackableUnit targetUnit);
+        Vector2 CalculateDirection(Vector2 start, Vector2 destination);
+        Vector3 CalculateDirection(Vector3 start, Vector3 destination);
+        Vector3 CalculateVelocity(Vector3 previousLocation, Vector3 currentLocation, float timeDelta);
     }
 }

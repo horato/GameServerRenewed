@@ -43,5 +43,14 @@ namespace LeagueSandbox.GameServer.Lib.Caches
         {
             return _gameObjects.Values.Where(criteria);
         }
+
+        public void Remove(uint netId)
+        {
+            var obj = GetObject(netId);
+            if (obj is IObjAiHero)
+                throw new InvalidOperationException("Player objects cannot be removed.");
+
+            _gameObjects.Remove(netId);
+        }
     }
 }

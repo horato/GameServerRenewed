@@ -28,7 +28,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             if (data.HaveHitBone)
                 boneName = data.HitBoneName;
 
-            var instance = new Particle(Team.Neutral, target.Position, 0, netId, source, target, data.AfterEffectName, boneName, 1);
+            var instance = new Particle(source.Team, target.Position, 0, netId, source, target, data.AfterEffectName, boneName, 1);
 
             return SetupDependencies(instance);
         }

@@ -1,11 +1,13 @@
-﻿namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common
+﻿using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+
+namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common
 {
     public class Target
     {
         public uint UnitNetID { get; }
-        public byte HitResult { get; }
+        public HitResult HitResult { get; }
 
-        public Target(uint unitNetId, byte hitResult)
+        public Target(uint unitNetId, HitResult hitResult)
         {
             UnitNetID = unitNetId;
             HitResult = hitResult;

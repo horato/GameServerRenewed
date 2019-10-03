@@ -57,5 +57,10 @@ namespace LeagueSandbox.GameServer.Lib.Scripting
             //return $"LeagueScripts_{Guid.NewGuid():N}";
             return ScriptsAssemblyDefiningType.Assembly.GetName().Name;
         }
+
+        public IEnumerable<Type> GetAllScripts()
+        {
+            return _assembly.Assembly.GetExportedTypes();
+        }
     }
 }

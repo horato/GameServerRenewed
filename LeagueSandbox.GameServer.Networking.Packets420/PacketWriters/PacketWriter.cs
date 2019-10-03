@@ -26,9 +26,11 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
     {
         private readonly IEnumTranslationService _enumTranslationService;
         private readonly IDTOTranslationService _dtoTranslationService;
+        private readonly Lazy<IGame> _game;
 
-        public PacketWriter(IUnityContainer unityContainer)
+        public PacketWriter(IUnityContainer unityContainer, Lazy<IGame> game)
         {
+            _game = game;
             _enumTranslationService = unityContainer.Resolve<IEnumTranslationService>();
             _dtoTranslationService = unityContainer.Resolve<IDTOTranslationService>();
         }
@@ -366,49 +368,37 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             return new SkillUpResponse(owner.NetId, slot, checked((byte)spell.Level), checked((byte)owner.SpellBook.SkillPoints)).GetBytes();
         }
 
-        public byte[] WriteCastSpellAns(IObjAiBase caster, ISpellInstance spell, float manaCost)
+        public byte[] WriteCastSpellAns(IObjAiBase caster, ISpellInstance spell)
         {
             return new CastSpellAns
             (
                 caster.NetId,
                 Environment.TickCount,
                 false, // TODO: what this does
-                CreateCastInfo(caster, spell, manaCost)
+                _dtoTranslationService.TranslateCastInfo(caster, spell, null, null)
             ).GetBytes();
         }
 
-        private CastInfo CreateCastInfo(IObjAiBase caster, ISpellInstance spell, float manaCost)
+        public byte[] WriteMissileReplication(IMissile missile)
         {
-            var slot = _enumTranslationService.TranslateSpellSlot(spell.Definition.Slot);
-            return new CastInfo
+            return new MissileReplication
             (
-                ElfHash.CalculateSpellNameHash(spell.Definition.SpellName),
-                spell.InstanceNetId,
-                checked((byte)spell.Definition.Level),
-                caster.Stats.AttackSpeedMultiplier.Total,
-                caster.NetId,
-                caster.NetId,
-                ElfHash.CalculateSpellNameHash(caster.SkinName),
-                spell.FutureProjectileNetId,
-                spell.StartPosition.ToVector3(0), // TODO: take these from navgrid?
-                spell.EndPosition.ToVector3(0), // TODO: take these from navgrid?
-                new List<Target>(), // TODO: what are these? 
-                spell.Definition.CastTime,
-                0,
-                spell.Definition.CastTime,
-                spell.Definition.Cooldown,
-                0, //TODO: game time?
-                false, // TODO: auto attack
-                false, // TODO: auto attack
-                spell.Definition.ChannelDuration > 0, //TODO: force cast?
-                false,
-                spell.Definition.TargetingType == TargetingType.Target,
-                slot,
-                manaCost,
-                caster.Position, 
-                spell.Definition.AmmoUsed,
-                spell.Definition.AmmoRechargeTime
-            );
+                missile.NetId,
+                missile.Position,
+                missile.Caster.Position,
+                missile.Direction,
+                missile.Velocity,
+                missile.StartPoint,
+                missile.EndPoint,
+                missile.Caster.Position,
+                _game.Value.GameTimeElapsed - missile.CreatedAtGameTime,
+                missile.Speed,
+                missile.LifePercentage,
+                missile.TimedSpeedDelta,
+                missile.TimedSpeedDeltaTime,
+                true, //TODO: bounce?
+                _dtoTranslationService.TranslateCastInfo(missile.Caster, missile.Spell, "EzrealMysticShotMissile", missile.NetId)
+            ).GetBytes();
         }
     }
 }

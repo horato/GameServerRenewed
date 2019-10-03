@@ -1,7 +1,7 @@
 ﻿using System;
-using ENet;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
+using LeagueSandbox.GameServer.ENetCS;
 using LeagueSandbox.GameServer.Networking.Users;
 
 namespace LeagueSandbox.GameServer.Networking.Communication.Processors
