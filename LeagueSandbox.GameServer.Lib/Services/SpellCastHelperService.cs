@@ -61,9 +61,43 @@ namespace LeagueSandbox.GameServer.Lib.Services
             var spellInstance = _spellInstanceFactory.CreateNew(spell, targetPosition, targetPositionEnd, targetUnit, manaCost);
             caster.SpellBook.BeginCasting(spellInstance);
 
+            if (!ShouldNotifySpellCast(spellInstance.Definition.Slot))
+                return;
+
             // Response
             var summonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId);
             _packetNotifier.NotifyCastSpellAns(summonerIds, caster, spellInstance);
+        }
+
+        private bool ShouldNotifySpellCast(SpellSlot slot)
+        {
+            switch (slot)
+            {
+                case SpellSlot.Q:
+                case SpellSlot.W:
+                case SpellSlot.E:
+                case SpellSlot.R:
+                case SpellSlot.D:
+                case SpellSlot.F:
+                    return true;
+                case SpellSlot.ExtraSpell1:
+                case SpellSlot.ExtraSpell2:
+                case SpellSlot.ExtraSpell3:
+                case SpellSlot.ExtraSpell4:
+                case SpellSlot.ExtraSpell5:
+                case SpellSlot.ExtraSpell6:
+                case SpellSlot.ExtraSpell7:
+                case SpellSlot.ExtraSpell8:
+                case SpellSlot.ExtraSpell9:
+                case SpellSlot.ExtraSpell10:
+                case SpellSlot.ExtraSpell11:
+                case SpellSlot.ExtraSpell12:
+                case SpellSlot.ExtraSpell13:
+                case SpellSlot.ExtraSpell14:
+                    return false;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }

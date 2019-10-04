@@ -130,7 +130,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
             spell.Definition.StartCooldown();
 
             //TODO: cdr?
-            if (obj is IObjAiHero hero)
+            if (obj is IObjAiHero hero && spell.Definition.CooldownRemaining > 0)
                 _packetNotifier.NotifySetCooldown(hero.SummonerId, obj, spell);
 
             var spellData = _spellDataProvider.ProvideCharacterSpellData(obj.SkinName, spell.Definition.SpellName);
