@@ -9,7 +9,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
     {
         //AnimSkins
         //    CurrentSkin
-        protected ObjAnimatedBuilding(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        protected ObjAnimatedBuilding(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
         }
     }

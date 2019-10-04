@@ -279,6 +279,16 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
+        public void NotifyDestroyMissile(IEnumerable<ulong> targetSummonerIds, IMissile missile)
+        {
+            var data = _packetWriter.WriteDestroyMissile(missile);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

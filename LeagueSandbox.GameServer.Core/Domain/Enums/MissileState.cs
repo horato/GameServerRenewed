@@ -8,6 +8,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
     {
         Created = 1,
         Traveling = 2,
-        Arrived = 3
+        Arrived = 3,
+        Terminated = 4
     }
 }

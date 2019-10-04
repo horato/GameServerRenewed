@@ -58,14 +58,15 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 player.Team,
                 new Vector3(33, 0, 239),
                 stats,
-                netId,
+                netId, 
+                player.Champion,
+                player.Skin,
+                spellBook,
+                data.GameplayCollisionRadius,
                 player.SummonerId,
                 clientId,
                 player.IsBot,
-                false,
-                player.Champion,
-                player.Skin,
-                spellBook
+                false
             );
 
             return SetupDependencies(instance);

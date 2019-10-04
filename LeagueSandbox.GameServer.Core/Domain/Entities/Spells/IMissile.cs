@@ -19,7 +19,10 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         float LifePercentage { get; }
         float TimedSpeedDelta { get; }
         float TimedSpeedDeltaTime { get; }
-        void MissileLaunched();
+        bool DestroyOnHit { get; }
+
+        void Launched();
         void DestinationReached();
+        void Terminated();
     }
 }

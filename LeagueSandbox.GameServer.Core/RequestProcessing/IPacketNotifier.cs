@@ -37,5 +37,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifySkillUp(ulong targetSummonerId, IObjAiBase owner, ISpell spell);
         void NotifyCastSpellAns(IEnumerable<ulong> targetSummonerIds, IObjAiBase caster, ISpellInstance spell);
         void NotifyMissileReplication(IEnumerable<ulong> targetSummonerIds, IMissile missile);
+        void NotifyDestroyMissile(IEnumerable<ulong> targetSummonerIds, IMissile missile);
     }
 }

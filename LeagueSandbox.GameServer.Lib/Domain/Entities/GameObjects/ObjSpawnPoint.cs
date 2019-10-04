@@ -7,7 +7,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class ObjSpawnPoint : ObjBuilding, IObjSpawnPoint
     {
-        public ObjSpawnPoint(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        public ObjSpawnPoint(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
         }
     }

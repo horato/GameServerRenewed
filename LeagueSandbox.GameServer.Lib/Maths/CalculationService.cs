@@ -3,6 +3,7 @@ using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Extensions;
+using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Maths.DTO;
 
 namespace LeagueSandbox.GameServer.Lib.Maths
@@ -62,6 +63,19 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         public Vector3 CalculateVelocity(Vector3 previousLocation, Vector3 currentLocation, float timeDelta)
         {
             return (currentLocation - previousLocation) / timeDelta;
+        }
+
+        public bool CalculateCollision(IGameObject obj1, IGameObject obj2)
+        {
+            var position1 = obj1.Position.ToVector2();
+            var position2 = obj2.Position.ToVector2();
+            return GetDistanceSqr(position1, position2) < (obj1.CollisionRadius + obj2.CollisionRadius) * (obj1.CollisionRadius + obj2.CollisionRadius);
+        }
+
+        public Vector2 CalculateDestination(Vector2 from, Vector2 to, float distance)
+        {
+            var direction = CalculateDirection(from, to);
+            return from + (direction * distance);
         }
 
         private float GetDistance(Vector2 from, Vector2 to)

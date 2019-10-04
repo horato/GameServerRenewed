@@ -37,6 +37,7 @@
         S2CSUpgradeSpell = 0x15,
         C2SCastSpellRequest = 0x9A,
         S2CCastSpellAns = 0xB5,
+        S2CDestroyClientMissile = 0x5A,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -84,7 +85,6 @@
         S2CHandleTipUpdate = 0x55,
         C2SScoreboard = 0x56,
         S2CHighlightUnit = 0x59,
-        S2CDestroyProjectile = 0x5A,
         S2CChampionDie = 0x5E,
         S2CDash = 0x64,
         S2CDamageDone = 0x65,

@@ -12,7 +12,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 
         //TimeOfDeath
 
-        protected AttackableUnit(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, visionRadius, netId)
+        protected AttackableUnit(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius) : base(team, position, visionRadius, collisionRadius, netId)
         {
             Stats = stats;
 

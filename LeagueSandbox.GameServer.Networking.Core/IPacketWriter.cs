@@ -36,5 +36,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteSkillUp(IObjAiBase owner, ISpell spell);
         byte[] WriteCastSpellAns(IObjAiBase caster, ISpellInstance spell);
         byte[] WriteMissileReplication(IMissile missile);
+        byte[] WriteDestroyMissile(IMissile missile);
     }
 }

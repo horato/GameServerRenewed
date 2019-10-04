@@ -41,7 +41,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.Position, 
                 stats,
                 obj.HqData.NetId, 
-                1700);
+                1700,
+                obj.HqData.CollisionRadius);
 
             return SetupDependencies(instance);
         }

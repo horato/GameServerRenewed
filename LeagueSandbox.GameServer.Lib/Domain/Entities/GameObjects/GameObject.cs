@@ -9,14 +9,16 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public Team Team { get; }
         public Vector3 Position { get; private set; }
         public float VisionRadius { get; }
+        public float CollisionRadius { get; }
         public bool IsPositionChanged { get; private set; }
         public uint NetId { get; }
 
-        protected GameObject(Team team, Vector3 position, float visionRadius, uint netId)
+        protected GameObject(Team team, Vector3 position, float visionRadius, float collisionRadius, uint netId)
         {
             Team = team;
             Position = position;
             VisionRadius = visionRadius;
+            CollisionRadius = collisionRadius;
             NetId = netId;
         }
 

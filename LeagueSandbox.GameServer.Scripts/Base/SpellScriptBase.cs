@@ -28,6 +28,11 @@ namespace LeagueSandbox.GameServer.Scripts.Base
             
         }
 
+        public virtual void OnMissileCollision(IMissile missile, IEnumerable<IGameObject> colliders)
+        {
+            
+        }
+
         protected void CastSpell(IObjAiBase caster, ISpell spell, IAttackableUnit target, Vector2 targetPosition, Vector2 targetPositionEnd)
         {
             _spellCastHelperService.CastSpell(spell, target, caster, targetPosition, targetPositionEnd);

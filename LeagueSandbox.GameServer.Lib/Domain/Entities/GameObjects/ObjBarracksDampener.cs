@@ -26,7 +26,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //BarracksEnabled
         //state enum _DampenerState
 
-        public ObjBarracksDampener(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, Lane lane) : base(team, position, stats, netId, visionRadius)
+        public ObjBarracksDampener(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius, Lane lane) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
             Lane = lane;
         }

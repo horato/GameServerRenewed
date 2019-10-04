@@ -8,7 +8,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
     internal class ObjShop : ObjBuilding, IObjShop
     {
         //VOSkinName
-        public ObjShop(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        public ObjShop(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
         }
     }

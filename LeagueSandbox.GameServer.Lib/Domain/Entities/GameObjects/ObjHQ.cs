@@ -7,7 +7,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class ObjHQ : ObjAnimatedBuilding, IObjHQ
     {
-        public ObjHQ(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        public ObjHQ(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
         }
     }

@@ -3,6 +3,7 @@ using System.Numerics;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
+using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Maths.DTO;
 
 namespace LeagueSandbox.GameServer.Lib.Maths
@@ -16,5 +17,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         Vector2 CalculateDirection(Vector2 start, Vector2 destination);
         Vector3 CalculateDirection(Vector3 start, Vector3 destination);
         Vector3 CalculateVelocity(Vector3 previousLocation, Vector3 currentLocation, float timeDelta);
+        bool CalculateCollision(IGameObject obj1, IGameObject obj2);
+        Vector2 CalculateDestination(Vector2 from, Vector2 to, float distance);
     }
 }

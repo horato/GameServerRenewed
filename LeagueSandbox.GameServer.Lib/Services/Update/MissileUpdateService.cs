@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
@@ -17,14 +18,16 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
         private readonly IGameObjectsCache _gameObjectsCache;
         private readonly IMovementService _movementService;
         private readonly ISpellScriptProvider _spellScriptProvider;
+        private readonly ICollisionService _collisionService;
 
-        public MissileUpdateService(IPacketNotifier packetNotifier, IPlayerCache playerCache, IGameObjectsCache gameObjectsCache, IMovementService movementService, ISpellScriptProvider spellScriptProvider)
+        public MissileUpdateService(IPacketNotifier packetNotifier, IPlayerCache playerCache, IGameObjectsCache gameObjectsCache, IMovementService movementService, ISpellScriptProvider spellScriptProvider, ICollisionService collisionService)
         {
             _packetNotifier = packetNotifier;
             _playerCache = playerCache;
             _gameObjectsCache = gameObjectsCache;
             _movementService = movementService;
             _spellScriptProvider = spellScriptProvider;
+            _collisionService = collisionService;
         }
 
         public void Update(IMissile missile, float millisecondsDiff)
@@ -38,7 +41,8 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
                     MissileTraveling(missile, millisecondsDiff);
                     break;
                 case MissileState.Arrived:
-                    MissileArrived(missile);
+                case MissileState.Terminated:
+                    MissileFinished(missile);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -47,7 +51,7 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void LaunchMissile(IMissile missile)
         {
-            missile.MissileLaunched();
+            missile.Launched();
 
             var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); // TODO: vision
             _packetNotifier.NotifyMissileReplication(targetSummonerIds, missile);
@@ -55,7 +59,16 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void MissileTraveling(IMissile missile, float millisecondsDiff)
         {
-            //TODO: collision
+            var colliders = _collisionService.FindAttackableObjectsCollidingWith(missile);
+            if (colliders.Any())
+            {
+                MissileCollided(missile, colliders);
+                if (missile.DestroyOnHit)
+                {
+                    missile.Terminated();
+                    return;
+                }
+            }
 
             var to = missile.EndPoint.ToVector2();
             var destinationReached = _movementService.MoveObject(missile, to, missile.Speed, millisecondsDiff);
@@ -63,14 +76,26 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
                 missile.DestinationReached();
         }
 
-        private void MissileArrived(IMissile missile)
+        private void MissileCollided(IMissile missile, IEnumerable<IGameObject> colliders)
         {
-            if (_spellScriptProvider.SpellScriptExists(missile.Caster.SkinName, missile.Spell.Definition.SpellName))
+            if (!_spellScriptProvider.SpellScriptExists(missile.Caster.SkinName, missile.Spell.Definition.SpellName))
+                return;
+
+            var script = _spellScriptProvider.ProvideSpellScript(missile.Caster.SkinName, missile.Spell.Definition.SpellName);
+            var actualColliders = missile.DestroyOnHit ? new[] { colliders.First() } : colliders; // To prevent single target skillshots to hit multiple targets
+            script.OnMissileCollision(missile, actualColliders);
+        }
+
+        private void MissileFinished(IMissile missile)
+        {
+            if (missile.MissileState == MissileState.Arrived && _spellScriptProvider.SpellScriptExists(missile.Caster.SkinName, missile.Spell.Definition.SpellName))
             {
                 var script = _spellScriptProvider.ProvideSpellScript(missile.Caster.SkinName, missile.Spell.Definition.SpellName);
                 script.OnMissileDestinationReached(missile);
             }
 
+            var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); // TODO: vision
+            _packetNotifier.NotifyDestroyMissile(targetSummonerIds, missile);
             _gameObjectsCache.Remove(missile.NetId);
         }
     }

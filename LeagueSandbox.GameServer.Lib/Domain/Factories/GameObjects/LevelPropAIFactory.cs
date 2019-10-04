@@ -41,11 +41,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.LevelPropData.SkinName,
                 obj.SkinId,
                 1200,
+                _spellBookFactory.CreateEmpty(),
+                0,
                 obj.Rotation, 
                 new Vector3(0, 0, 0), 
                 obj.Scale,
-                obj.LevelPropData.Name,
-                _spellBookFactory.CreateEmpty()
+                obj.LevelPropData.Name
             );
 
             return SetupDependencies(instance);

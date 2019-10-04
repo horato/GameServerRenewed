@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
 
 namespace LeagueSandbox.GameServer.Lib.Providers
 {
     internal class SpellDataProvider : ISpellDataProvider
     {
-        private readonly IDictionary<string, IDictionary<string, SpellData>> _characterSpellDataCache;
+        private readonly IDictionary<string, IDictionary<string, ISpellData>> _characterSpellDataCache;
 
         public SpellDataProvider()
         {
             _characterSpellDataCache = SpellDataReader.ReadAll();
         }
 
-        public SpellData ProvideCharacterSpellData(string characterName, string spellName)
+        public ISpellData ProvideCharacterSpellData(string characterName, string spellName)
         {
             if (TryFindSpellDataInCharacterPackage(characterName, spellName, out var data))
                 return data;
@@ -26,7 +27,7 @@ namespace LeagueSandbox.GameServer.Lib.Providers
             throw new InvalidOperationException($"Data for spell {spellName} of character {characterName} not found");
         }
 
-        private bool TryFindSpellDataInCharacterPackage(string characterName, string spellName, out SpellData spellData)
+        private bool TryFindSpellDataInCharacterPackage(string characterName, string spellName, out ISpellData spellData)
         {
             spellData = null;
             if (!_characterSpellDataCache.ContainsKey(characterName))
@@ -38,7 +39,7 @@ namespace LeagueSandbox.GameServer.Lib.Providers
             return true;
         }
 
-        private bool TryFindSpellDataInGlobalPackage(string spellName, out SpellData spellData)
+        private bool TryFindSpellDataInGlobalPackage(string spellName, out ISpellData spellData)
         {
             spellData = null;
             if (!_characterSpellDataCache.ContainsKey(SpellDataReader.GlobalPackage))
@@ -50,7 +51,7 @@ namespace LeagueSandbox.GameServer.Lib.Providers
             return true;
         }
 
-        public SpellData ProvideSummonerSpellData(SummonerSpell spell)
+        public ISpellData ProvideSummonerSpellData(SummonerSpell spell)
         {
             return ProvideCharacterSpellData(SpellDataReader.GlobalPackage, spell.ToSpellName());
         }

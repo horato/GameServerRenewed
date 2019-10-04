@@ -25,6 +25,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private string _skinName = "Ahri";
         private int _skinId = 3;
         private ISpellBook _spellBook = new SpellBookBuilder().Build();
+        private float _collisionRadius = 40;
 
         public ObjAiHeroBuilder WithTeam(Team team)
         {
@@ -86,9 +87,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
+        public ObjAiHeroBuilder WithCollisionRadius(float collisionRadius)
+        {
+            _collisionRadius = collisionRadius;
+            return this;
+        }
+
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId, _summonerId, _clientId, _isBot, _isPlayerControlled, _skinName, _skinId, _spellBook);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _skinName, _skinId, _spellBook, _collisionRadius, _summonerId, _clientId, _isBot, _isPlayerControlled);
 
             return instance;
         }

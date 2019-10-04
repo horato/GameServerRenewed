@@ -32,7 +32,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.Position, 
                 stats, 
                 obj.ShopData.NetId,
-                1700);
+                1700,
+                0);
 
             return SetupDependencies(instance);
         }

@@ -24,8 +24,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public float LifePercentage { get; }
         public float TimedSpeedDelta { get; }
         public float TimedSpeedDeltaTime { get; }
+        public bool DestroyOnHit { get; }
 
-        public Missile(Team team, Vector3 position, float visionRadius, uint netId, IObjAiBase caster, IAttackableUnit target, ISpellInstance spell, MissileState missileState, Vector3 direction, Vector3 velocity, Vector3 startPoint, Vector3 endPoint, float createdAtGameTime, float speed, float lifePercentage, float timedSpeedDelta, float timedSpeedDeltaTime) : base(team, position, visionRadius, netId)
+        public Missile(Team team, Vector3 position, float visionRadius, uint netId, float collisionRadius, IObjAiBase caster, IAttackableUnit target, ISpellInstance spell, MissileState missileState, Vector3 direction, Vector3 velocity, Vector3 startPoint, Vector3 endPoint, float createdAtGameTime, float speed, float lifePercentage, float timedSpeedDelta, float timedSpeedDeltaTime, bool destroyOnHit) : base(team, position, visionRadius, collisionRadius, netId)
         {
             Caster = caster;
             Target = target;
@@ -40,9 +41,10 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
             LifePercentage = lifePercentage;
             TimedSpeedDelta = timedSpeedDelta;
             TimedSpeedDeltaTime = timedSpeedDeltaTime;
+            DestroyOnHit = destroyOnHit;
         }
 
-        public void MissileLaunched()
+        public void Launched()
         {
             if (MissileState != MissileState.Created)
                 throw new InvalidOperationException("Failed to advance missile state. Invalid state.");
@@ -56,6 +58,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
                 throw new InvalidOperationException("Failed to advance missile state. Invalid state.");
 
             MissileState = MissileState.Arrived;
+        }
+
+        public void Terminated()
+        {
+            if (MissileState != MissileState.Traveling)
+                throw new InvalidOperationException("Failed to advance missile state. Invalid state.");
+
+            MissileState = MissileState.Terminated;
         }
     }
 }

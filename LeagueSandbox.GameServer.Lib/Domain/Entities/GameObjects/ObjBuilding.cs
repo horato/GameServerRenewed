@@ -10,7 +10,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //DeathTimer
         //    ?Mesh
         //HealthRegenEnabled
-        protected ObjBuilding(Team team, Vector3 position, IStats stats, uint netId, float visionRadius) : base(team, position, stats, netId, visionRadius)
+        protected ObjBuilding(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
         }
     }

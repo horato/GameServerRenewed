@@ -14,7 +14,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public string BoneName { get; }
         public float Size { get; }
 
-        public Particle(Team team, Vector3 position, float visionRadius, uint netId, IObjAiBase source, IGameObject target, string name, string boneName, float size) : base(team, position, visionRadius, netId)
+        public Particle(Team team, Vector3 position, float visionRadius, uint netId, float collisionRadius, IObjAiBase source, IGameObject target, string name, string boneName, float size) : base(team, position, visionRadius, collisionRadius, netId)
         {
             Source = source;
             Target = target;

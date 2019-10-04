@@ -50,9 +50,10 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 _networkIdCreationService.GetNewNetId(),
                 obj.TurretData.SkinName,
                 obj.SkinId,
+                spellBook,
+                data.GameplayCollisionRadius,
                 obj.TurretData.Lane,
-                obj.TurretData.Position,
-                spellBook
+                obj.TurretData.Position
             );
 
             return SetupDependencies(instance);

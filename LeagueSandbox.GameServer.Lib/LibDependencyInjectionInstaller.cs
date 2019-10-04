@@ -28,6 +28,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<IScriptEngine, ScriptEngine>();
             container.RegisterType<ICompilationService, CompilationService>();
             container.RegisterType<ISpellCastHelperService, SpellCastHelperService>();
+            container.RegisterType<ICollisionService, CollisionService>();
 
             RegisterGameObjectUpdateServices(container);
             RegisterUpdateServices(container);

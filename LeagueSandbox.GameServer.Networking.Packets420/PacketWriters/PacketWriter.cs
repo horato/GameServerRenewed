@@ -400,5 +400,10 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 _dtoTranslationService.TranslateCastInfo(missile.Caster, missile.Spell)
             ).GetBytes();
         }
+
+        public byte[] WriteDestroyMissile(IMissile missile)
+        {
+            return new DestroyClientMissile(missile.NetId).GetBytes();
+        }
     }
 }

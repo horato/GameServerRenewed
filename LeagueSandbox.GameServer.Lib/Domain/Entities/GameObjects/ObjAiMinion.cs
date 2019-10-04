@@ -19,7 +19,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //IsWard
         //    IsLaneMinion
 
-        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook) : base(team, position, stats, netId, skinName, skinId, 1200, spellBook)
+        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius) : base(team, position, stats, netId, skinName, skinId, 1200, spellBook, collisionRadius)
         {
         }
     }

@@ -10,5 +10,6 @@ namespace LeagueSandbox.GameServer.Core.Scripting
     {
         void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData);
         void OnMissileDestinationReached(IMissile missile);
+        void OnMissileCollision(IMissile missile, IEnumerable<IGameObject> actualColliders);
     }
 }

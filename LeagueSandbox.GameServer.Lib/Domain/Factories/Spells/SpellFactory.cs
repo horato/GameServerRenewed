@@ -4,6 +4,7 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
+using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
 using Unity;
@@ -16,7 +17,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
         {
         }
 
-        public ISpell CreateFromSpellData(SpellSlot slot, string spellName, int maxLevel, SpellData data)
+        public ISpell CreateFromSpellData(SpellSlot slot, string spellName, int maxLevel, ISpellData data)
         {
             var cooldownMap = CreateCooldownMap(data);
             var manaCostMap = CreateManaCostMap(data);
@@ -29,7 +30,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return SetupDependencies(instance);
         }
 
-        public ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, int maxLevel, SpellData data)
+        public ISpell CreateSummonerSpell(SpellSlot slot, SummonerSpell spell, int maxLevel, ISpellData data)
         {
             var instance = CreateFromSpellData(slot, spell.ToSpellName(), maxLevel, data);
             instance.SetLevel(1);
@@ -37,7 +38,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return instance;
         }
 
-        private IDictionary<int, float> CreateCooldownMap(SpellData data)
+        private IDictionary<int, float> CreateCooldownMap(ISpellData data)
         {
             var map = new Dictionary<int, float>
             {
@@ -53,7 +54,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return map;
         }
 
-        private IDictionary<int, float> CreateManaCostMap(SpellData data)
+        private IDictionary<int, float> CreateManaCostMap(ISpellData data)
         {
             var map = new Dictionary<int, float>
             {
@@ -69,7 +70,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return map;
         }
 
-        private IDictionary<int, float> CreateCastRangeMap(SpellData data)
+        private IDictionary<int, float> CreateCastRangeMap(ISpellData data)
         {
             var map = new Dictionary<int, float>
             {
@@ -85,7 +86,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return map;
         }
 
-        private IDictionary<int, float> CreateChannelDurationMap(SpellData data)
+        private IDictionary<int, float> CreateChannelDurationMap(ISpellData data)
         {
             var map = new Dictionary<int, float>
             {
@@ -101,7 +102,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return map;
         }
 
-        private IDictionary<int, float> CreateAmmoRechargeTimeMap(SpellData data)
+        private IDictionary<int, float> CreateAmmoRechargeTimeMap(ISpellData data)
         {
             var map = new Dictionary<int, float>
             {

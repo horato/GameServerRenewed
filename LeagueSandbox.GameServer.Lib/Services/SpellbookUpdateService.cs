@@ -4,6 +4,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
+using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
 using LeagueSandbox.GameServer.Lib.Providers;
@@ -159,9 +160,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
             script.OnCastFinished(obj, spell, spellData);
         }
 
-        private void CreateMissile(IObjAiBase obj, ISpellInstance spell, SpellData spellData)
+        private void CreateMissile(IObjAiBase obj, ISpellInstance spell, ISpellData spellData)
         {
-            // TODO: create a missile
             var missile = _missileFactory.CreateNew(obj, spell, spellData);
             _gameObjectsCache.Add(missile.NetId, missile);
         }

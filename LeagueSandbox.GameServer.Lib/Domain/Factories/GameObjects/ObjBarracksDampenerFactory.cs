@@ -41,6 +41,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 stats,
                 obj.BarracksData.NetId,
                 1700,
+                obj.BarracksData.PathfindingCollisionRadius,
                 obj.BarracksData.Lane
             );
 

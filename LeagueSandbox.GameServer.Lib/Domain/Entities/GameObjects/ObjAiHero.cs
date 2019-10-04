@@ -18,8 +18,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //    ShopEnabled
         //ShopEnabled
         //    MultiKillDisplayCount
-        public ObjAiHero(Team team, Vector3 position, IStats stats, uint netId, ulong summonerId, int clientId, bool isBot, bool isPlayerControlled, string skinName, int skinId, ISpellBook spellBook)
-            : base(team, position, stats, netId, skinName, skinId, 1200, spellBook)
+        public ObjAiHero(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, ISpellBook spellBook, float collisionRadius, ulong summonerId, int clientId, bool isBot, bool isPlayerControlled)
+            : base(team, position, stats, netId, skinName, skinId, 1200, spellBook, collisionRadius)
         {
             SummonerId = summonerId;
             ClientId = clientId;
