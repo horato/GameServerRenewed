@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
+using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Logging;
@@ -18,20 +19,21 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         private readonly IUnityContainer _unityContainer;
         private readonly IGameUpdateService _gameUpdateService;
         private readonly IGameObjectController _gameObjectController;
+        private readonly IServerInformationData _serverInformationData;
         private IGame _game;
         private Thread _gameThread;
         private bool _isRunning;
-        private Stopwatch _lastMapDurationWatch;
+        private Stopwatch _refreshRateWatch;
 
-        protected const double REFRESH_RATE = 1000.0 / 30.0; // 30 fps
 
-        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer, IGameObjectController gameObjectController)
+        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer, IGameObjectController gameObjectController, IServerInformationData serverInformationData)
         {
             _gameFactory = gameFactory;
             _mapFactory = mapFactory;
             _gameUpdateService = gameUpdateService;
             _unityContainer = unityContainer;
             _gameObjectController = gameObjectController;
+            _serverInformationData = serverInformationData;
         }
 
         public void Initialize(MapType mapId)
@@ -58,33 +60,35 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
 
         private void DoGameLoop()
         {
-            _lastMapDurationWatch = new Stopwatch();
-            _lastMapDurationWatch.Start();
+            _refreshRateWatch = new Stopwatch();
+            _refreshRateWatch.Start();
             while (_isRunning)
             {
-                if (_lastMapDurationWatch.Elapsed.TotalMilliseconds + 1.0 > REFRESH_RATE)
-                {
-                    var diff = (float)_lastMapDurationWatch.Elapsed.TotalMilliseconds;
-                    _lastMapDurationWatch.Restart();
+                var diff = (float)_refreshRateWatch.Elapsed.TotalMilliseconds;
+                _refreshRateWatch.Restart();
 
-                    if (_game.IsPaused)
-                        continue;
+                if (!_game.IsPaused)
+                    ProcessGameUpdate(diff);
 
-                    try
-                    {
-                        //TODO: Could/Should we use multiple threads?
-                        _gameUpdateService.UpdateGame(_game, diff);
-                        _gameObjectController.UpdateObjects(diff);
-                        //TODO: Vision
-                        //TODO: Map - announces, minion spawns, fountain attacks?, surrender
-                    }
-                    catch (Exception e)
-                    {
-                        LoggerProvider.GetLogger().Error("An error occured during game loop", e);
-                    }
-                }
+                var remainingRefreshTime = _serverInformationData.RefreshRate - _refreshRateWatch.Elapsed;
+                if (remainingRefreshTime.TotalMilliseconds > 0)
+                    Thread.Sleep(remainingRefreshTime);
+            }
+        }
 
-                Thread.Sleep(1);
+        private void ProcessGameUpdate(float diff)
+        {
+            try
+            {
+                //TODO: Could/Should we use multiple threads?
+                _gameUpdateService.UpdateGame(_game, diff);
+                _gameObjectController.UpdateObjects(diff);
+                //TODO: Vision
+                //TODO: Map - announces, minion spawns, fountain attacks?, surrender
+            }
+            catch (Exception e)
+            {
+                LoggerProvider.GetLogger().Error("An error occured during game loop", e);
             }
         }
 

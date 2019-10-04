@@ -10,5 +10,6 @@ namespace LeagueSandbox.GameServer.Core
         DateTime StartTime { get; }
         string Version { get; }
         DateTime BuildDate { get; }
+        TimeSpan RefreshRate { get; }
     }
 }

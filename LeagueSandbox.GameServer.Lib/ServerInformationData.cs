@@ -12,11 +12,13 @@ namespace LeagueSandbox.GameServer.Lib
         public DateTime StartTime { get; }
         public string Version { get; }
         public DateTime BuildDate => System.IO.File.GetLastWriteTime(Assembly.GetExecutingAssembly().Location);
+        public TimeSpan RefreshRate { get; }
 
-        public ServerInformationData(DateTime startTime, string version)
+        public ServerInformationData(DateTime startTime, string version, TimeSpan refreshRate)
         {
             StartTime = startTime;
             Version = version;
+            RefreshRate = refreshRate;
         }
 
         public IEnumerable<Assembly> GetAllApplicationAssemblies()

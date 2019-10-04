@@ -49,7 +49,8 @@ namespace LeagueSandbox.GameServer.Lib
         {
             LoggerProvider.GetLogger().Info("Initializing server info");
 
-            var infoData = new ServerInformationData(DateTime.Now, VERSION_STRING);
+            var refreshRate = TimeSpan.FromMilliseconds(1000.0 / 60.0); // 60 fps
+            var infoData = new ServerInformationData(DateTime.Now, VERSION_STRING, refreshRate);
             _container.RegisterInstance<IServerInformationData>(infoData);
         }
 

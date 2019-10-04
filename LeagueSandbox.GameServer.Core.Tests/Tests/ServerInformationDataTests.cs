@@ -14,7 +14,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Tests
             var startTime = DateTime.Now;
             var version = "TEST_VERSION";
 
-            var instance = new ServerInformationData(startTime, version);
+            var instance = new ServerInformationData(startTime, version, TimeSpan.FromSeconds(0.5));
 
             Assert.AreEqual(startTime, instance.StartTime);
             Assert.AreEqual(version, instance.Version);
