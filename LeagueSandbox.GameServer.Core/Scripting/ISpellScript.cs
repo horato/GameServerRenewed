@@ -9,5 +9,6 @@ namespace LeagueSandbox.GameServer.Core.Scripting
     public interface ISpellScript
     {
         void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData);
+        void OnMissileDestinationReached(IMissile missile);
     }
 }

@@ -49,5 +49,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 
             MissileState = MissileState.Traveling;
         }
+
+        public void DestinationReached()
+        {
+            if (MissileState != MissileState.Traveling)
+                throw new InvalidOperationException("Failed to advance missile state. Invalid state.");
+
+            MissileState = MissileState.Arrived;
+        }
     }
 }

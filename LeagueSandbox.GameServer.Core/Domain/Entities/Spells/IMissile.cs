@@ -20,5 +20,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         float TimedSpeedDelta { get; }
         float TimedSpeedDeltaTime { get; }
         void MissileLaunched();
+        void DestinationReached();
     }
 }

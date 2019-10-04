@@ -23,10 +23,14 @@ namespace LeagueSandbox.GameServer.Scripts.Base
 
         }
 
+        public virtual void OnMissileDestinationReached(IMissile missile)
+        {
+            
+        }
+
         protected void CastSpell(IObjAiBase caster, ISpell spell, IAttackableUnit target, Vector2 targetPosition, Vector2 targetPositionEnd)
         {
             _spellCastHelperService.CastSpell(spell, target, caster, targetPosition, targetPositionEnd);
-            //_spellCastHelperService.CastSpell(caster, spell, originalSpellInstance);
         }
     }
 }
