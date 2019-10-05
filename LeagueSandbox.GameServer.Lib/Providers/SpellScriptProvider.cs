@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Scripts;
+using LeagueSandbox.GameServer.Utils.Providers;
+using LeagueSandbox.GameServer.Utils.Scripting;
 using Unity;
 
-namespace LeagueSandbox.GameServer.Lib.Scripting
+namespace LeagueSandbox.GameServer.Lib.Providers
 {
     internal class SpellScriptProvider : ISpellScriptProvider
     {
@@ -24,11 +26,11 @@ namespace LeagueSandbox.GameServer.Lib.Scripting
         {
             _scriptEngine = scriptEngine;
             _unityContainer = unityContainer;
+            Initialize();
         }
 
-        public void Initialize(string path)
+        private void Initialize()
         {
-            _scriptEngine.LoadScripts(path);
             _spellScriptsCache = _scriptEngine.GetAllScripts().Where(x => typeof(ISpellScript).IsAssignableFrom(x)).Where(x => !x.IsAbstract && !x.IsInterface).ToDictionary(x => x.FullName);
         }
 

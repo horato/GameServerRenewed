@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Text;
-using LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs;
+﻿using System.IO;
+using LeagueSandbox.GameServer.Core.Compilation.DTOs;
 
-namespace LeagueSandbox.GameServer.Lib.Services.Compilation
+namespace LeagueSandbox.GameServer.Utils.Scripting
 {
     internal static class TemporaryAssemblyLoader
     {

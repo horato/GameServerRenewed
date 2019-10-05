@@ -1,6 +1,6 @@
-﻿namespace LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs
+﻿namespace LeagueSandbox.GameServer.Core.Compilation.DTOs
 {
-    internal class SourceFile
+    public class SourceFile
     {
         public string FileFullPath { get; }
         public string FileName { get; }

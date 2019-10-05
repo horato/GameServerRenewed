@@ -4,6 +4,7 @@ using System.Reflection;
 using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Networking;
 using LeagueSandbox.GameServer.Networking.Packets420;
+using LeagueSandbox.GameServer.Utils;
 
 namespace LeagueSandbox.GameServer.Lib
 {
@@ -27,6 +28,7 @@ namespace LeagueSandbox.GameServer.Lib
             yield return LibAssemblyDefiningType.Assembly;
             yield return NetworkingAssemblyDefiningType.Assembly;
             yield return PacketsAssemblyDefiningType.Assembly;
+            yield return UtilsAssemblyDefiningType.Assembly;
         }
     }
 }

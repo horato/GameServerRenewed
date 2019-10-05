@@ -7,10 +7,11 @@ using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Lib.Config;
 using LeagueSandbox.GameServer.Lib.Controllers;
-using LeagueSandbox.GameServer.Lib.Scripting;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Networking;
 using LeagueSandbox.GameServer.Scripts;
+using LeagueSandbox.GameServer.Utils.Providers;
+using LeagueSandbox.GameServer.Utils.Scripting;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib
@@ -67,10 +68,9 @@ namespace LeagueSandbox.GameServer.Lib
         {
             LoggerProvider.GetLogger().Info("Initializing scripts");
 
-            var provider = _container.Resolve<SpellScriptProvider>();
             var scriptsProjectName = ScriptsAssemblyDefiningType.Assembly.GetName().Name;
-            provider.Initialize($"../../../../{scriptsProjectName}"); //TODO: configurable
-            _container.RegisterInstance<ISpellScriptProvider>(provider);
+            var engine = _container.Resolve<IScriptEngine>();
+            engine.LoadScripts($"../../../../{scriptsProjectName}", scriptsProjectName); //TODO: configurable
         }
 
         private void InitializeNetworking(StartupConfig config)

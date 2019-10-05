@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Compilation;
 using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Core.Services;
 using Unity;
@@ -12,6 +13,7 @@ namespace LeagueSandbox.GameServer.Core
         public void Install(IUnityContainer container)
         {
             container.RegisterType<ICoordinatesTranslationService, CoordinatesTranslationService>();
+            container.RegisterType<ICompilationService, CompilationService>();
         }
     }
 }

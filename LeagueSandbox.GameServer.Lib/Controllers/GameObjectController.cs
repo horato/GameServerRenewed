@@ -11,9 +11,9 @@ using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
-using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Lib.Services.Update;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.Controllers
 {

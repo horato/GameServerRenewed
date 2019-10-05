@@ -7,6 +7,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Utils.Map.ExpCurve;
 using LeagueSandbox.GameServer.Utils.Map.MapObjects;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.Providers
 {

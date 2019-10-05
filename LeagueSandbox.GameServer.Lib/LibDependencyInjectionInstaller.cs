@@ -5,10 +5,9 @@ using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Lib.Maths;
 using LeagueSandbox.GameServer.Lib.Providers;
-using LeagueSandbox.GameServer.Lib.Scripting;
 using LeagueSandbox.GameServer.Lib.Services;
-using LeagueSandbox.GameServer.Lib.Services.Compilation;
 using LeagueSandbox.GameServer.Lib.Services.Update;
+using LeagueSandbox.GameServer.Utils.Providers;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib
@@ -22,16 +21,12 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
             container.RegisterSingleton<IClientIdCreationService, ClientIdCreationService>();
             container.RegisterType<ICalculationService, CalculationService>();
-            container.RegisterType<IMapDataProvider, MapDataProvider>();
-            container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
-            container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
-            container.RegisterSingleton<IScriptEngine, ScriptEngine>();
-            container.RegisterType<ICompilationService, CompilationService>();
             container.RegisterType<ISpellCastHelperService, SpellCastHelperService>();
             container.RegisterType<ICollisionService, CollisionService>();
-
+            
             RegisterGameObjectUpdateServices(container);
             RegisterUpdateServices(container);
+            RegisterProviders(container);
         }
 
         private void RegisterGameObjectUpdateServices(IUnityContainer container)
@@ -59,6 +54,15 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterType<IMovementService, MovementService>();
             container.RegisterType<ISpellbookUpdateService, SpellbookUpdateService>();
             container.RegisterType<IStatsUpdateService, StatsUpdateService>();
+        }
+
+        private void RegisterProviders(IUnityContainer container)
+        {
+            container.RegisterType<IMapDataProvider, MapDataProvider>();
+            container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
+            container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
+            container.RegisterSingleton<ISpellScriptProvider, SpellScriptProvider>();
+            container.RegisterSingleton<IMapScriptProvider, MapScriptProvider>();
         }
     }
 }

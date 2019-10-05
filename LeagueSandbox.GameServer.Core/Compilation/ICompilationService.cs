@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs;
+using LeagueSandbox.GameServer.Core.Compilation.DTOs;
 
-namespace LeagueSandbox.GameServer.Lib.Services.Compilation
+namespace LeagueSandbox.GameServer.Core.Compilation
 {
-    internal interface ICompilationService
+    public interface ICompilationService
     {
         AssemblyStream CompileInMemory(IEnumerable<SourceFile> files, string assemblyName, IEnumerable<string> externalReferences);
     }

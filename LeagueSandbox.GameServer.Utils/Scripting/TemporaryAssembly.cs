@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
 
-namespace LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs
+namespace LeagueSandbox.GameServer.Utils.Scripting
 {
     internal class TemporaryAssembly
     {

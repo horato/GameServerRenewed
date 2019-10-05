@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs;
+using LeagueSandbox.GameServer.Core.Compilation.DTOs;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace LeagueSandbox.GameServer.Lib.Services.Compilation
+namespace LeagueSandbox.GameServer.Core.Compilation
 {
     internal class CompilationService : ICompilationService
     {
@@ -82,26 +77,12 @@ namespace LeagueSandbox.GameServer.Lib.Services.Compilation
 
         private static IEnumerable<MetadataReference> GetMetadataReferences(IEnumerable<string> externalReferences)
         {
-            var runtimeAssemblyDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location);
-            if (string.IsNullOrWhiteSpace(runtimeAssemblyDirectory))
-                throw new InvalidOperationException("Runtime assembly directory not found");
-
-            var references = new List<MetadataReference>
+            var references= new List<MetadataReference>();
+            var assemblies = (string)AppContext.GetData("TRUSTED_PLATFORM_ASSEMBLIES");
+            foreach (var assembly in assemblies.Split(Path.PathSeparator))
             {
-                MetadataReference.CreateFromFile(typeof(object).Assembly.Location), //mscorlib.dll
-                MetadataReference.CreateFromFile(typeof(Cookie).Assembly.Location), //System.dll
-                MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location), //System.Core.dll
-                MetadataReference.CreateFromFile(typeof(DataTable).Assembly.Location), //System.Data.dll
-                MetadataReference.CreateFromFile(typeof(XmlDocument).Assembly.Location), //System.Xml.dll
-                MetadataReference.CreateFromFile(typeof(Vector2).Assembly.Location), //System.Numerics.Vectors.dll
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Runtime.dll")),
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "mscorlib.dll")),
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.dll")),
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "netstandard.dll")),
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Core.dll")),
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Linq.Expressions.dll")),
-                MetadataReference.CreateFromFile(Path.Combine(runtimeAssemblyDirectory, "System.Linq.dll"))
-            };
+                references.Add(MetadataReference.CreateFromFile(assembly));
+            }
 
             if (externalReferences != null)
             {

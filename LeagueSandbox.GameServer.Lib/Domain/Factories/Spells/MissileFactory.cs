@@ -8,7 +8,6 @@ using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Lib.Maths;
-using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
 using Unity;
 

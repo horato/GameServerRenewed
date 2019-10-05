@@ -7,9 +7,8 @@ using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
-using LeagueSandbox.GameServer.Lib.Providers;
-using LeagueSandbox.GameServer.Lib.Scripting;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.Services
 {

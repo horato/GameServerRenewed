@@ -5,8 +5,8 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
-using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
+using LeagueSandbox.GameServer.Utils.Providers;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells

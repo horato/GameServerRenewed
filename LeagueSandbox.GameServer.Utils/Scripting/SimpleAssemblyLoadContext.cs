@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.Loader;
-using System.Text;
 
-namespace LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs
+namespace LeagueSandbox.GameServer.Utils.Scripting
 {
     internal class SimpleAssemblyLoadContext : AssemblyLoadContext
     {

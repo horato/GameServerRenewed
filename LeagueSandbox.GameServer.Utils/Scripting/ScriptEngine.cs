@@ -3,14 +3,12 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using LeagueSandbox.GameServer.Core;
-using LeagueSandbox.GameServer.Lib.Services.Compilation;
-using LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs;
-using LeagueSandbox.GameServer.Scripts;
+using LeagueSandbox.GameServer.Core.Compilation;
+using LeagueSandbox.GameServer.Core.Compilation.DTOs;
 
-namespace LeagueSandbox.GameServer.Lib.Scripting
+namespace LeagueSandbox.GameServer.Utils.Scripting
 {
     internal class ScriptEngine : IScriptEngine
     {
@@ -23,14 +21,20 @@ namespace LeagueSandbox.GameServer.Lib.Scripting
             _compilationService = compilationService;
         }
 
-        public void LoadScripts(string path)
+        public void LoadScripts(string path, string assemblyName)
         {
             _assembly?.Context.Unload();
 
             var files = GetFilesFromPath(path);
-            _assemblyName = GenerateAssemblyName();
+            _assemblyName = assemblyName;
 
-            var stream = _compilationService.CompileInMemory(files, _assemblyName, new[] { CoreAssemblyDefiningType.Assembly.Location });
+            var externalReferences = new[]
+            {
+                CoreAssemblyDefiningType.Assembly.Location,
+                UtilsAssemblyDefiningType.Assembly.Location
+            };
+
+            var stream = _compilationService.CompileInMemory(files, _assemblyName, externalReferences);
             _assembly = TemporaryAssemblyLoader.LoadAssembly(stream);
         }
 
@@ -50,12 +54,6 @@ namespace LeagueSandbox.GameServer.Lib.Scripting
             });
 
             return result;
-        }
-
-        private string GenerateAssemblyName()
-        {
-            //return $"LeagueScripts_{Guid.NewGuid():N}";
-            return ScriptsAssemblyDefiningType.Assembly.GetName().Name;
         }
 
         public IEnumerable<Type> GetAllScripts()

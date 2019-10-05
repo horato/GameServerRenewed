@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Scripting;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Entities
 {
@@ -13,11 +14,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
         public MapType Id { get; }
         public int MaxLevel { get; }
         public float MaxExp { get; }
+        public IMapScript MapScript { get; }
 
-        public Map(MapType id, IDictionary<int, float> expCurveDictionary)
+        public Map(MapType id, IDictionary<int, float> expCurveDictionary, IMapScript mapScript)
         {
             Id = id;
             _expCurveDictionary = expCurveDictionary;
+            MapScript = mapScript;
             MaxLevel = expCurveDictionary.Keys.Max();
             MaxExp = expCurveDictionary.Values.Max();
         }

@@ -13,7 +13,6 @@ using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using LeagueSandbox.GameServer.Lib.Maths;
-using LeagueSandbox.GameServer.Lib.Providers;
 using LeagueSandbox.GameServer.Lib.Services;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions

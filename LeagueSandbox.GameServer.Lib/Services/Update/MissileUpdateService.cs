@@ -7,7 +7,7 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Lib.Caches;
-using LeagueSandbox.GameServer.Lib.Scripting;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.Services.Update
 {

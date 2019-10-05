@@ -5,6 +5,7 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.Providers
 {

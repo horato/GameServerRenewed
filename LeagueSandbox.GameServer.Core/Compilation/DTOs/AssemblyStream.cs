@@ -1,6 +1,6 @@
-﻿namespace LeagueSandbox.GameServer.Lib.Services.Compilation.DTOs
+﻿namespace LeagueSandbox.GameServer.Core.Compilation.DTOs
 {
-    internal class AssemblyStream
+    public class AssemblyStream
     {
         public byte[] AssemblyBytes { get; }
         public byte[] DebuggingInformationBytes { get; }

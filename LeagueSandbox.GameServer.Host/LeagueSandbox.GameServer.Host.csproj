@@ -11,10 +11,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)LeagueSandbox.GameServer.Networking\bin\$(ConfigurationName)\netstandard2.0\ENet.dll&quot; &quot;$(TargetDir)&quot; /Y" />
-  </Target>
-
   <ItemGroup>
     <None Remove="Log4net.config" />
   </ItemGroup>
