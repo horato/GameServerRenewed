@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace LeagueSandbox.GameServer.Utils.MapObjects
+namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
     public class TurretData
     {

@@ -10,7 +10,7 @@ using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using LeagueSandbox.GameServer.Lib.Services;
-using LeagueSandbox.GameServer.Utils.MapObjects;
+using LeagueSandbox.GameServer.Utils.Map.MapObjects;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
@@ -28,10 +28,10 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
         {
             var stats = _statsFactory.CreateDefaultStats();
 
-            stats.Armor.ApplyStatModifier(new StatModifier(obj.HqData.Armor, 0, 0, 0));
-            stats.HealthRegeneration.ApplyStatModifier(new StatModifier(obj.HqData.BaseStaticHPRegen, 0, 0, 0));
-            stats.HealthPoints.ApplyStatModifier(new StatModifier(obj.HqData.MaxHp, 0, 0, 0));
-            stats.ManaPoints.ApplyStatModifier(new StatModifier(obj.HqData.MaxMP, 0, 0, 0));
+            stats.Armor.ApplyStatModifier(new StatModifier(obj.HqData.Armor, 0, 0, 0, 0));
+            stats.HealthRegeneration.ApplyStatModifier(new StatModifier(obj.HqData.BaseStaticHPRegen, 0, 0, 0, 0));
+            stats.HealthPoints.ApplyStatModifier(new StatModifier(obj.HqData.MaxHp, 0, 0, 0, 0));
+            stats.ManaPoints.ApplyStatModifier(new StatModifier(obj.HqData.MaxMP, 0, 0, 0, 0));
             
             stats.UpdateTargetability(false, SpellFlags.NonTargetableEnemy);
 

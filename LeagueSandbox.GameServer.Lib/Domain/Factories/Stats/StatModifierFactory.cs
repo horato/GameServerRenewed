@@ -10,9 +10,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
         {
         }
 
-        public StatModifier CreateNew(float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus)
+        public StatModifier CreateNew(float baseValue, float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus)
         {
-            var instance = new StatModifier(baseBonus, percentBaseBonus, flatBonus, percentBonus);
+            var instance = new StatModifier(baseValue, baseBonus, percentBaseBonus, flatBonus, percentBonus);
 
             return SetupDependencies(instance);
         }

@@ -19,5 +19,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         Vector3 CalculateVelocity(Vector3 previousLocation, Vector3 currentLocation, float timeDelta);
         bool CalculateCollision(IGameObject obj1, IGameObject obj2);
         Vector2 CalculateDestination(Vector2 from, Vector2 to, float distance);
+        float CalculateStatDifference(float currentValue, float newValue, float maxValue, float minValue);
+        float CalculateStatDifferenceForLevelUp(float baseValue, float bonusPerLevel, float levelDifference);
     }
 }

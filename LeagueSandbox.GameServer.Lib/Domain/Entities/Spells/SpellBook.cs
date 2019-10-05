@@ -45,7 +45,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         {
             return _spells.Values;
         }
-        
+
         public void SkillPointUsed()
         {
             if (SkillPoints < 1)
@@ -73,6 +73,17 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
                 throw new InvalidOperationException("Nothing is being casted");
 
             CurrentSpell = null;
+        }
+
+        public void ChangeLevel(int level)
+        {
+            var skillPointsUsed = GetUsedSkillPoints();
+            SkillPoints = Math.Max(0, level - skillPointsUsed);
+        }
+
+        private int GetUsedSkillPoints()
+        {
+            return GetAllSpells().Where(x => x.Slot.IsClassicSpell()).Sum(x => x.Level);
         }
     }
 }

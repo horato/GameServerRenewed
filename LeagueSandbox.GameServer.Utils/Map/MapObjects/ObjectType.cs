@@ -1,4 +1,4 @@
-﻿namespace LeagueSandbox.GameServer.Utils.MapObjects
+﻿namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
     public enum ObjectType
     {

@@ -2,16 +2,20 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace LeagueSandbox.GameServer.Utils.MapObjects
+namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
-    public class HqData
+    public class BarracksData
     {
+        public string Name { get; }
         public uint NetId { get; }
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Lane Lane { get; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         public Team Team { get; }
 
-        public float MaxHp { get; }
+        public float MaxHP { get; }
         public float BaseStaticHPRegen { get; }
         public float Armor { get; }
         public float MaxMP { get; }
@@ -20,15 +24,15 @@ namespace LeagueSandbox.GameServer.Utils.MapObjects
         public float PerceptionBubbleRadius { get; }
         public string SkinName1 { get; }
         public string SkinName2 { get; }
-        public float CollisionRadius { get; }
-        public float CollisionHeight { get; }
         public float PathfindingCollisionRadius { get; }
 
-        public HqData(uint netId, Team team, float maxHp, float baseStaticHpRegen, float armor, float maxMp, float selectionHeight, float selectionRadius, float perceptionBubbleRadius, string skinName1, string skinName2, float collisionRadius, float collisionHeight, float pathfindingCollisionRadius)
+        public BarracksData(string name, uint netId, Lane lane, Team team, float maxHp, float baseStaticHpRegen, float armor, float maxMp, float selectionHeight, float selectionRadius, float perceptionBubbleRadius, string skinName1, string skinName2, float pathfindingCollisionRadius)
         {
+            Name = name;
             NetId = netId;
+            Lane = lane;
             Team = team;
-            MaxHp = maxHp;
+            MaxHP = maxHp;
             BaseStaticHPRegen = baseStaticHpRegen;
             Armor = armor;
             MaxMP = maxMp;
@@ -37,8 +41,6 @@ namespace LeagueSandbox.GameServer.Utils.MapObjects
             PerceptionBubbleRadius = perceptionBubbleRadius;
             SkinName1 = skinName1;
             SkinName2 = skinName2;
-            CollisionRadius = collisionRadius;
-            CollisionHeight = collisionHeight;
             PathfindingCollisionRadius = pathfindingCollisionRadius;
         }
     }

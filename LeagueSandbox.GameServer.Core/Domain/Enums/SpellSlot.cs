@@ -26,4 +26,38 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
         ExtraSpell13 = 1 << 18,
         ExtraSpell14 = 1 << 19,
     }
+
+    public static class SpellSlotExtensions
+    {
+        public static bool IsClassicSpell(this SpellSlot slot)
+        {
+            switch (slot)
+            {
+                case SpellSlot.Q:
+                case SpellSlot.W:
+                case SpellSlot.E:
+                case SpellSlot.R:
+                    return true;
+                case SpellSlot.D:
+                case SpellSlot.F:
+                case SpellSlot.ExtraSpell1:
+                case SpellSlot.ExtraSpell2:
+                case SpellSlot.ExtraSpell3:
+                case SpellSlot.ExtraSpell4:
+                case SpellSlot.ExtraSpell5:
+                case SpellSlot.ExtraSpell6:
+                case SpellSlot.ExtraSpell7:
+                case SpellSlot.ExtraSpell8:
+                case SpellSlot.ExtraSpell9:
+                case SpellSlot.ExtraSpell10:
+                case SpellSlot.ExtraSpell11:
+                case SpellSlot.ExtraSpell12:
+                case SpellSlot.ExtraSpell13:
+                case SpellSlot.ExtraSpell14:
+                    return false;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(slot), slot, null);
+            }
+        }
+    }
 }

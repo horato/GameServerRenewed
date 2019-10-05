@@ -22,7 +22,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterSingleton<INetworkIdCreationService, NetworkIdCreationService>();
             container.RegisterSingleton<IClientIdCreationService, ClientIdCreationService>();
             container.RegisterType<ICalculationService, CalculationService>();
-            container.RegisterType<IMapObjectsProvider, MapObjectsProvider>();
+            container.RegisterType<IMapDataProvider, MapDataProvider>();
             container.RegisterSingleton<ICharacterDataProvider, CharacterDataProvider>();
             container.RegisterSingleton<ISpellDataProvider, SpellDataProvider>();
             container.RegisterSingleton<IScriptEngine, ScriptEngine>();
@@ -58,6 +58,7 @@ namespace LeagueSandbox.GameServer.Lib
         {
             container.RegisterType<IMovementService, MovementService>();
             container.RegisterType<ISpellbookUpdateService, SpellbookUpdateService>();
+            container.RegisterType<IStatsUpdateService, StatsUpdateService>();
         }
     }
 }

@@ -38,6 +38,7 @@
         C2SCastSpellRequest = 0x9A,
         S2CCastSpellAns = 0xB5,
         S2CDestroyClientMissile = 0x5A,
+        S2CLevelUp = 0x3F,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -72,7 +73,6 @@
         C2SSkillUp = 0x39,
         C2SUseObject = 0x3A,
         S2CSwapItems = 0x3E,
-        S2CLevelUp = 0x3F,
         S2CEmotion = 0x42,
         S2CPlaySound = 0x43,
         S2CAnnounce = 0x45,

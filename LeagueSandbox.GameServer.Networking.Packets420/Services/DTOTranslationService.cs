@@ -368,7 +368,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
 
             if (stats.Level.IsUpdated)
             {
-                mm4.Add(ObjAiHeroFieldMask.FM4_ChampionLevel, stats.Level.CurrentValue);
+                mm4.Add(ObjAiHeroFieldMask.FM4_ChampionLevel, (int)stats.Level.CurrentValue);
             }
 
             if (stats.Experience.IsUpdated)

@@ -22,6 +22,7 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         protected override void ProcessRequestInternal(ulong senderSummonerId, SkillUpRequest request)
         {
             // TODO: Implement evolve (kazix, ...)
+            // TODO: Add skillup logic (ult only 6+, etc)
             if (request.IsEvolve)
                 throw new NotImplementedException("Evolve is not implemented yet");
 

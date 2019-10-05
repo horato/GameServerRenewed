@@ -5,10 +5,17 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
 {
     internal class StatModifierBuilder : EntityBuilderBase<StatModifier>
     {
+        private float _baseValue = 1.5f;
         private float _baseBonus = 3.4f;
         private float _percentBaseBonus = 3.5f;
         private float _flatBonus = 3.6f;
         private float _percentBonus = 3.7f;
+
+        public StatModifierBuilder WithBaseValue(float baseValue)
+        {
+            _baseValue = baseValue;
+            return this;
+        }
 
         public StatModifierBuilder WithBaseBonus(float baseBonus)
         {
@@ -36,7 +43,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities.Stats
 
         public override StatModifier Build()
         {
-            var instance = new StatModifier(_baseBonus, _percentBaseBonus, _flatBonus, _percentBonus);
+            var instance = new StatModifier(_baseValue, _baseBonus, _percentBaseBonus, _flatBonus, _percentBonus);
 
             return instance;
         }

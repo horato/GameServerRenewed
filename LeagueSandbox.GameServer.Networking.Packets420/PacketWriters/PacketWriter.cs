@@ -405,5 +405,15 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
         {
             return new DestroyClientMissile(missile.NetId).GetBytes();
         }
+
+        public byte[] WriteLevelUp(IObjAiHero hero)
+        {
+            return new LevelUp
+            (
+                hero.NetId,
+                checked((byte)hero.Stats.Level.CurrentValue),
+                checked((byte)hero.SpellBook.SkillPoints)
+            ).GetBytes();
+        }
     }
 }

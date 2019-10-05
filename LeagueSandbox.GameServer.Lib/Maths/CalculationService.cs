@@ -5,6 +5,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Maths.DTO;
+using Unity.Storage;
 
 namespace LeagueSandbox.GameServer.Lib.Maths
 {
@@ -34,13 +35,9 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         public float CalculateManaDifferenceAfterSpellCast(IAttackableUnit unit, float manaCost)
         {
             var stats = unit.Stats;
-            var newMana = stats.FlatManaPoints.CurrentValue - manaCost;
-            if (newMana < 0)
-                newMana = 0;
-            else if (newMana > stats.ManaPoints.Total)
-                newMana = stats.ManaPoints.Total;
-
-            return newMana - stats.FlatManaPoints.CurrentValue;
+            var currentMana = stats.FlatManaPoints.CurrentValue;
+            var newMana = currentMana - manaCost;
+            return CalculateStatDifference(currentMana, newMana, stats.ManaPoints.Total, 0);
         }
 
         public float CalculateDistance(IGameObject from, IGameObject to)
@@ -76,6 +73,23 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         {
             var direction = CalculateDirection(from, to);
             return from + (direction * distance);
+        }
+
+        public float CalculateStatDifference(float currentValue, float newValue, float maxValue, float minValue)
+        {
+            var tempValue = newValue;
+            if (tempValue > maxValue)
+                tempValue = maxValue;
+            else if (tempValue < minValue)
+                tempValue = minValue;
+
+            return tempValue - currentValue;
+        }
+
+        public float CalculateStatDifferenceForLevelUp(float baseValue, float bonusPerLevel, float levelDifference)
+        {
+            var newValue = baseValue + (bonusPerLevel * levelDifference);
+            return CalculateStatDifference(baseValue, newValue, float.MaxValue, float.MinValue);
         }
 
         private float GetDistance(Vector2 from, Vector2 to)

@@ -7,6 +7,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
 {
     internal interface IStatModifierFactory
     {
-        StatModifier CreateNew(float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus);
+        StatModifier CreateNew(float baseValue, float baseBonus, float percentBaseBonus, float flatBonus, float percentBonus);
     }
 }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using Newtonsoft.Json;
 
-namespace LeagueSandbox.GameServer.Utils.MapObjects
+namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
     public static class MapObjectsReader
     {

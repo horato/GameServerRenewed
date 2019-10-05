@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeagueSandbox.GameServer.Utils.MapObjects
+﻿namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
     public class LevelPropData
     {

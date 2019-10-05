@@ -18,5 +18,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         bool IsCastingSpell();
         void BeginCasting(ISpellInstance spell);
         void CastingFinished();
+        void ChangeLevel(int level);
     }
 }

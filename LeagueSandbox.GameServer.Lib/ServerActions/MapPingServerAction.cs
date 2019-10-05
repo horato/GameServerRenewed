@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
 using LeagueSandbox.GameServer.Lib.Caches;
+using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions
 {

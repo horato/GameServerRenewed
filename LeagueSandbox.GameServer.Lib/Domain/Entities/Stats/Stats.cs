@@ -202,49 +202,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             return FlatAttackSpeed.CurrentValue * AttackSpeedMultiplier.Total;
         }
 
-        //public void Update(float diff)
-        //{
-        //    if (HealthRegeneration.Total > 0 && CurrentHealth < HealthPoints.Total && CurrentHealth > 0)
-        //    {
-        //        var newHealth = CurrentHealth + HealthRegeneration.Total * diff * 0.001f;
-        //        newHealth = Math.Min(HealthPoints.Total, newHealth);
-        //        CurrentHealth = newHealth;
-        //    }
-
-        //    if (IsGeneratingGold && GoldPerSecond.Total > 0)
-        //    {
-        //        var newGold = Gold + GoldPerSecond.Total * (diff * 0.001f);
-        //        Gold = newGold;
-        //    }
-
-        //    if ((byte)ParType > 1)
-        //    {
-        //        return;
-        //    }
-
-        //    if (ManaRegeneration.Total > 0 && CurrentMana < ManaPoints.Total)
-        //    {
-        //        var newMana = CurrentMana + ManaRegeneration.Total * diff * 0.001f;
-        //        newMana = Math.Min(ManaPoints.Total, newMana);
-        //        CurrentMana = newMana;
-        //    }
-        //}
-
-        //public void LevelUp()
-        //{
-        //    Level++;
-
-        //    HealthPoints.BaseValue += HealthPerLevel;
-        //    CurrentHealth = HealthPoints.Total / (HealthPoints.Total - HealthPerLevel) * CurrentHealth;
-        //    ManaPoints.BaseValue = ManaPoints.Total + ManaPerLevel;
-        //    CurrentMana = ManaPoints.Total / (ManaPoints.Total - ManaPerLevel) * CurrentMana;
-        //    AttackDamage.BaseValue = AttackDamage.BaseValue + AdPerLevel;
-        //    Armor.BaseValue = Armor.BaseValue + ArmorPerLevel;
-        //    MagicResist.BaseValue = MagicResist.Total + MagicResistPerLevel;
-        //    HealthRegeneration.BaseValue = HealthRegeneration.BaseValue + HealthRegenerationPerLevel;
-        //    ManaRegeneration.BaseValue = ManaRegeneration.BaseValue + ManaRegenerationPerLevel;
-        //}
-
         public void AddGold(float amount)
         {
             GoldTotal += amount;

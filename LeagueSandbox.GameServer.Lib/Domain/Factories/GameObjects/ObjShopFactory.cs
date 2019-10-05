@@ -9,7 +9,7 @@ using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
 using LeagueSandbox.GameServer.Lib.Services;
-using LeagueSandbox.GameServer.Utils.MapObjects;
+using LeagueSandbox.GameServer.Utils.Map.MapObjects;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects

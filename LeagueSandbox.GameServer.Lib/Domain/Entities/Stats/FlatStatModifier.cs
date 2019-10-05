@@ -11,10 +11,10 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
         public float RegenerationPer5 { get; private set; }
         public float RegenerationBonusPerLevel { get; }
 
-        public bool StatModified => Math.Abs(Value) > MathConstants.COMPARE_EPSILON ||
-                                    Math.Abs(BonusPerLevel) > MathConstants.COMPARE_EPSILON ||
-                                    Math.Abs(RegenerationPer5) > MathConstants.COMPARE_EPSILON ||
-                                    Math.Abs(RegenerationBonusPerLevel) > MathConstants.COMPARE_EPSILON;
+        public bool StatModified => Math.Abs(Value) > 0 ||
+                                    Math.Abs(BonusPerLevel) > 0 ||
+                                    Math.Abs(RegenerationPer5) > 0 ||
+                                    Math.Abs(RegenerationBonusPerLevel) > 0;
 
 
         public FlatStatModifier(float value, float bonusPerLevel, float regenerationPer5, float regenerationBonusPerLevel)

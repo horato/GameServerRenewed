@@ -5,11 +5,12 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
-using LeagueSandbox.GameServer.Utils.MapObjects;
+using LeagueSandbox.GameServer.Utils.Map.ExpCurve;
+using LeagueSandbox.GameServer.Utils.Map.MapObjects;
 
 namespace LeagueSandbox.GameServer.Lib.Providers
 {
-    internal class MapObjectsProvider : IMapObjectsProvider
+    internal class MapDataProvider : IMapDataProvider
     {
         private readonly IObjShopFactory _shopFactory;
         private readonly IObjBarracksDampenerFactory _barracksDampenerFactory;
@@ -17,7 +18,7 @@ namespace LeagueSandbox.GameServer.Lib.Providers
         private readonly IObjAiTurretFactory _turretFactory;
         private readonly ILevelPropAIFactory _levelPropAiFactory;
 
-        public MapObjectsProvider(IObjShopFactory shopFactory, IObjBarracksDampenerFactory barracksDampenerFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory)
+        public MapDataProvider(IObjShopFactory shopFactory, IObjBarracksDampenerFactory barracksDampenerFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory)
         {
             _shopFactory = shopFactory;
             _barracksDampenerFactory = barracksDampenerFactory;
@@ -68,6 +69,11 @@ namespace LeagueSandbox.GameServer.Lib.Providers
             }
 
             return result;
+        }
+
+        public ExpCurve ProvideExpCurve(MapType mapType)
+        {
+           return ExpCurveReader.ReadExpCurve(mapType);
         }
     }
 }
