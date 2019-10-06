@@ -1,10 +1,11 @@
 ﻿using System.Numerics;
+using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
-    public class MapObject
+    public class MapObject : IMapObject
     {
         public string Name { get; }
         public int SkinId { get; }
@@ -15,11 +16,11 @@ namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
         [JsonConverter(typeof(StringEnumConverter))]
         public ObjectType ObjectType { get; }
 
-        public HqData HqData { get; }
-        public BarracksData BarracksData { get; }
-        public TurretData TurretData { get; }
-        public LevelPropData LevelPropData { get; }
-        public ShopData ShopData { get; }
+        public IHqData HqData { get; }
+        public IBarracksData BarracksData { get; }
+        public ITurretData TurretData { get; }
+        public ILevelPropData LevelPropData { get; }
+        public IShopData ShopData { get; }
 
         public MapObject(string name, int skinId, Vector3 position, Vector3 rotation, Vector3 scale, ObjectType objectType, HqData hqData, BarracksData barracksData, TurretData turretData, LevelPropData levelPropData, ShopData shopData)
         {

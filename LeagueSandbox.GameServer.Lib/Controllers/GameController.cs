@@ -5,9 +5,11 @@ using LeagueSandbox.GameServer.Core;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Logging;
+using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Lib.Services.Update;
+using LeagueSandbox.GameServer.Utils.Providers;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Controllers
@@ -20,13 +22,15 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
         private readonly IGameUpdateService _gameUpdateService;
         private readonly IGameObjectController _gameObjectController;
         private readonly IServerInformationData _serverInformationData;
+        private readonly IMapScriptProvider _mapScriptProvider;
+        private readonly IGameObjectsCache _gameObjectsCache;
         private IGame _game;
         private Thread _gameThread;
         private bool _isRunning;
         private Stopwatch _refreshRateWatch;
 
 
-        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer, IGameObjectController gameObjectController, IServerInformationData serverInformationData)
+        public GameController(IGameFactory gameFactory, IMapFactory mapFactory, IGameUpdateService gameUpdateService, IUnityContainer unityContainer, IGameObjectController gameObjectController, IServerInformationData serverInformationData, IMapScriptProvider mapScriptProvider, IGameObjectsCache gameObjectsCache)
         {
             _gameFactory = gameFactory;
             _mapFactory = mapFactory;
@@ -34,6 +38,8 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
             _unityContainer = unityContainer;
             _gameObjectController = gameObjectController;
             _serverInformationData = serverInformationData;
+            _mapScriptProvider = mapScriptProvider;
+            _gameObjectsCache = gameObjectsCache;
         }
 
         public void Initialize(MapType mapId)
@@ -41,11 +47,19 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
             if (_game != null)
                 throw new InvalidOperationException("GameController is already initialized");
 
-            var map = _mapFactory.CreateNew(mapId);
+            var mapScript = _mapScriptProvider.ProvideMapScript(mapId);
+            var data = mapScript.Initialize();
+
+            var map = _mapFactory.CreateFromMapInitializationData(data);
             _unityContainer.RegisterInstance<IMap>(map);
 
             _game = _gameFactory.CreateNew(map);
             _unityContainer.RegisterInstance<IGame>(_game);
+
+            foreach (var gameObject in data.InitialGameObjects)
+            {
+                _gameObjectsCache.Add(gameObject.NetId, gameObject);
+            }
         }
 
         public void StartGameLoop()

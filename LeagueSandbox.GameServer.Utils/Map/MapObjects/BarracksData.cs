@@ -1,10 +1,11 @@
 ﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
-    public class BarracksData
+    public class BarracksData : IBarracksData
     {
         public string Name { get; }
         public uint NetId { get; }

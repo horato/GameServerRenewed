@@ -1,10 +1,11 @@
 ﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
-    public class TurretData
+    public class TurretData : ITurretData
     {
         public string SkinName { get; }
         public string CharacterName { get; }

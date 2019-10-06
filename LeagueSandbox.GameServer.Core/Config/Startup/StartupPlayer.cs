@@ -1,7 +1,7 @@
-﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 
-namespace LeagueSandbox.GameServer.Lib.Config.Startup
+namespace LeagueSandbox.GameServer.Core.Config.Startup
 {
     /// <summary> Represents a future player that will connect to the game. </summary>
     public class StartupPlayer

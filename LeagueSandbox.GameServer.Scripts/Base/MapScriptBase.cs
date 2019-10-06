@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Domain.Factories.ExpCurve;
+using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
+using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Core.Scripting.DTO;
 using LeagueSandbox.GameServer.Utils.Map.ExpCurve;
+using LeagueSandbox.GameServer.Utils.Map.MapObjects;
 using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Scripts.Base
@@ -13,23 +19,36 @@ namespace LeagueSandbox.GameServer.Scripts.Base
     public abstract class MapScriptBase : IMapScript
     {
         private readonly IMapDataProvider _mapDataProvider;
+        private readonly IObjShopFactory _shopFactory;
+        private readonly IObjBarracksDampenerFactory _barracksDampenerFactory;
+        private readonly IObjHQFactory _hqFactory;
+        private readonly IObjAiTurretFactory _turretFactory;
+        private readonly ILevelPropAIFactory _levelPropAiFactory;
 
         public abstract MapType MapType { get; }
 
-        protected MapScriptBase(IMapDataProvider mapDataProvider)
+        protected MapScriptBase(IMapDataProvider mapDataProvider, IObjShopFactory shopFactory, IObjBarracksDampenerFactory barracksDampenerFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory)
         {
             _mapDataProvider = mapDataProvider;
+            _shopFactory = shopFactory;
+            _barracksDampenerFactory = barracksDampenerFactory;
+            _hqFactory = hqFactory;
+            _turretFactory = turretFactory;
+            _levelPropAiFactory = levelPropAiFactory;
         }
-        
+
         public virtual MapInitializationData Initialize()
         {
             var expCurve = _mapDataProvider.ProvideExpCurve(MapType);
             var expCurveDictionary = CreateExpCurveDictionary(expCurve);
 
-            return new MapInitializationData(expCurveDictionary);
+            var mapObjects = _mapDataProvider.ProvideStaticGameObjectsForMap(MapType);
+            var gameObjects = CreateGameObjectsFromMapObjects(mapObjects);
+
+            return new MapInitializationData(expCurveDictionary, gameObjects, MapType, this);
         }
 
-        private IDictionary<int, float> CreateExpCurveDictionary(ExpCurve expCurve)
+        private IDictionary<int, float> CreateExpCurveDictionary(IExpCurve expCurve)
         {
             var result = new Dictionary<int, float>
             {
@@ -66,6 +85,49 @@ namespace LeagueSandbox.GameServer.Scripts.Base
 
             result.Where(x => Math.Abs(x.Value) < float.Epsilon).ToList().ForEach(x => result.Remove(x.Key));
             result.Add(1, 0);
+
+            return result;
+        }
+
+        private IEnumerable<IGameObject> CreateGameObjectsFromMapObjects(IEnumerable<MapObject> objects)
+        {
+            var result = new List<IGameObject>();
+            foreach (var mapObject in objects)
+            {
+                switch (mapObject.ObjectType)
+                {
+                    case ObjectType.BarrackSpawn:
+                    case ObjectType.NexusSpawn: //TODO: create a spawn point?
+                    case ObjectType.LevelSize:
+                    case ObjectType.AnimatedBuilding:
+                    case ObjectType.Lake:
+                    case ObjectType.NavPoint:
+                    case ObjectType.InfoPoint:
+                        break;
+                    case ObjectType.Barrack:
+                        var barrackInstance = _barracksDampenerFactory.CreateFromMapObject(mapObject);
+                        result.Add(barrackInstance);
+                        break;
+                    case ObjectType.Nexus:
+                        var hqInstance = _hqFactory.CreateFromMapObject(mapObject);
+                        result.Add(hqInstance);
+                        break;
+                    case ObjectType.Turret:
+                        var turretInstance = _turretFactory.CreateFromMapObject(mapObject);
+                        result.Add(turretInstance);
+                        break;
+                    case ObjectType.Shop:
+                        var shopInstance = _shopFactory.CreateFromMapObject(mapObject);
+                        result.Add(shopInstance);
+                        break;
+                    case ObjectType.LevelProp:
+                        var propInstance = _levelPropAiFactory.CreateFromMapObject(mapObject);
+                        result.Add(propInstance);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(mapObject.ObjectType), mapObject.ObjectType, null);
+                }
+            }
 
             return result;
         }

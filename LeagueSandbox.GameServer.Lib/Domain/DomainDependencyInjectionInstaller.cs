@@ -1,4 +1,5 @@
 ﻿using LeagueSandbox.GameServer.Core.DependencyInjection;
+using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;

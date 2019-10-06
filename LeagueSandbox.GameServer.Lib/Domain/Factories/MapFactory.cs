@@ -4,6 +4,8 @@ using System.Linq;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Core.Scripting;
+using LeagueSandbox.GameServer.Core.Scripting.DTO;
+using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Lib.Domain.Entities;
 using LeagueSandbox.GameServer.Utils.Map.ExpCurve;
 using LeagueSandbox.GameServer.Utils.Providers;
@@ -14,19 +16,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories
 {
     internal class MapFactory : EntityFactoryBase<Map>, IMapFactory
     {
-        private readonly IMapScriptProvider _mapScriptProvider;
-
-        public MapFactory(IUnityContainer unityContainer, IMapScriptProvider mapScriptProvider) : base(unityContainer)
+        public MapFactory(IUnityContainer unityContainer) : base(unityContainer)
         {
-            _mapScriptProvider = mapScriptProvider;
+
         }
 
-        public Map CreateNew(MapType mapId)
+        public Map CreateFromMapInitializationData(MapInitializationData data)
         {
-            var mapScript = _mapScriptProvider.ProvideMapScript(mapId);
-            var data = mapScript.Initialize();
-
-            var instance = new Map(mapId, data.ExpCurve, mapScript);
+            var instance = new Map(data.MapType, data.ExpCurve, data.MapScript);
 
             return SetupDependencies(instance);
         }

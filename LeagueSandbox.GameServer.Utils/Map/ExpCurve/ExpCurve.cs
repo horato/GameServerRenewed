@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Domain.Factories.ExpCurve;
 
 namespace LeagueSandbox.GameServer.Utils.Map.ExpCurve
 {
-    public class ExpCurve
+    public class ExpCurve : IExpCurve
     {
         public float Level2 { get; }
         public float Level3 { get; }

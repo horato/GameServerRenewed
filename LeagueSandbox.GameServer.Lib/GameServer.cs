@@ -3,9 +3,9 @@ using System.IO;
 using System.Reflection;
 using log4net;
 using LeagueSandbox.GameServer.Core;
+using LeagueSandbox.GameServer.Core.Config;
 using LeagueSandbox.GameServer.Core.DependencyInjection;
 using LeagueSandbox.GameServer.Core.Logging;
-using LeagueSandbox.GameServer.Lib.Config;
 using LeagueSandbox.GameServer.Lib.Controllers;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Networking;
@@ -96,7 +96,7 @@ namespace LeagueSandbox.GameServer.Lib
             LoggerProvider.GetLogger().Info("Initializing GameObjectController");
 
             var controller = _container.Resolve<GameObjectController>();
-            controller.InitializeGameObjects(config.Players, config.Map);
+            controller.InitializeChampions(config.Players);
             _container.RegisterInstance<IGameObjectController>(controller);
         }
 

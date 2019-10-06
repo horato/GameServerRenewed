@@ -1,6 +1,8 @@
-﻿namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
+﻿using LeagueSandbox.GameServer.Core.Map.MapObjects;
+
+namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
 {
-    public class LevelPropData
+    public class LevelPropData : ILevelPropData
     {
         public string Name { get; }
         public string SkinName { get; }

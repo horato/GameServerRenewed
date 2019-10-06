@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using LeagueSandbox.GameServer.Core.Config;
+using LeagueSandbox.GameServer.Core.Config.Startup;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Hashing;
 using LeagueSandbox.GameServer.Core.Logging;
-using LeagueSandbox.GameServer.Lib.Config;
-using LeagueSandbox.GameServer.Lib.Config.Startup;
 
 namespace LeagueSandbox.GameServer.Host
 {

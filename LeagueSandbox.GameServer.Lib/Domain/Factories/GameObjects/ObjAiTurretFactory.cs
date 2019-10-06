@@ -6,7 +6,8 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
-using LeagueSandbox.GameServer.Lib.Config.Startup;
+using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
+using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
@@ -33,7 +34,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
             _spellBookFactory = spellBookFactory;
         }
 
-        public IObjAiTurret CreateFromMapObject(MapObject obj)
+        public IObjAiTurret CreateFromMapObject(IMapObject obj)
         {
             var data = _characterDataProvider.ProvideCharacterData(obj.TurretData.CharacterName);
             var stats = _statsFactory.CreateFromCharacterData(data);

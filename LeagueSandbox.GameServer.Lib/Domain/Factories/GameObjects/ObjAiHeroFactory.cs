@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Config.Startup;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
-using LeagueSandbox.GameServer.Lib.Config.Startup;
+using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;

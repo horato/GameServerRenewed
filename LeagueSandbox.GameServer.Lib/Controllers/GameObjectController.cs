@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Config.Startup;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Lib.Caches;
-using LeagueSandbox.GameServer.Lib.Config.Startup;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
-using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Lib.Services;
 using LeagueSandbox.GameServer.Lib.Services.Update;
 using LeagueSandbox.GameServer.Utils.Providers;
@@ -71,7 +71,7 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
             _objTurretUpdateService = objTurretUpdateService;
         }
 
-        public void InitializeGameObjects(IEnumerable<StartupPlayer> players, MapType map)
+        public void InitializeChampions(IEnumerable<StartupPlayer> players)
         {
             foreach (var startupPlayer in players)
             {
@@ -79,12 +79,6 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
                 var player = _playerFactory.CreateFromStartupPlayer(startupPlayer, champion);
                 _gameObjectsCache.Add(player.Champion.NetId, player.Champion);
                 _playerCache.Add(player.SummonerId, player);
-            }
-
-            var objects = _mapDataProvider.ProvideStaticGameObjectsForMap(map);
-            foreach (var gameObject in objects)
-            {
-                _gameObjectsCache.Add(gameObject.NetId, gameObject);
             }
         }
 
