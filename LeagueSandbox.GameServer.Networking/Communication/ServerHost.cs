@@ -12,7 +12,6 @@ namespace LeagueSandbox.GameServer.Networking.Communication
     {
         private readonly IPacketHandler _packetHandler;
         private readonly IServerInformationData _serverInformationData;
-        private Stopwatch _refreshRateWatch;
         private Host _server;
 
         private const int PEER_MTU = 996;
@@ -34,12 +33,8 @@ namespace LeagueSandbox.GameServer.Networking.Communication
 
         public void NetLoop()
         {
-            _refreshRateWatch = new Stopwatch();
-            _refreshRateWatch.Start();
-            while (_server.Service(0, out var enetEvent) > 0)
+            while (_server.Service((int)_serverInformationData.RefreshRate.TotalMilliseconds, out var enetEvent) > 0)
             {
-                _refreshRateWatch.Restart();
-
                 switch (enetEvent.Type)
                 {
                     case EventType.Connect:
@@ -58,10 +53,6 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                         _packetHandler.HandleDisconnect(enetEvent.Peer);
                         break;
                 }
-
-                var remainingRefreshTime = _serverInformationData.RefreshRate - _refreshRateWatch.Elapsed;
-                if (remainingRefreshTime.TotalMilliseconds > 0)
-                    Thread.Sleep(remainingRefreshTime);
             }
         }
     }
