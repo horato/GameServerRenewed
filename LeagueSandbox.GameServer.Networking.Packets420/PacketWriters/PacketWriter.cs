@@ -16,7 +16,7 @@ using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.Common;
 using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
-using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
+using ChatType = LeagueSandbox.GameServer.Core.Domain.Enums.ChatType;
 using SpellSlot = LeagueSandbox.GameServer.Core.Domain.Enums.SpellSlot;
 using TipCommand = LeagueSandbox.GameServer.Core.Domain.Enums.TipCommand;
 
@@ -452,6 +452,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 timeRttLastOverheadMilliseconds / 1000,
                 timeConvergenceMilliseconds / 1000
             ).GetBytes();
+        }
+
+        public byte[] WriteChatMessage(int clientId, uint netId, bool localized, ChatType chatType, string @params, string message)
+        {
+            var packetChatType = _enumTranslationService.TranslateChatType(chatType);
+            return new ChatResponse(clientId, netId, localized, packetChatType, @params, message).GetBytes();
         }
     }
 }

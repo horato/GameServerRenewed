@@ -54,6 +54,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateCastSpellRequest(castSpellRequest);
                 case SynchSimTimeRequest synchSimTimeRequest:
                     return TranslateSynchSimTimeRequest(synchSimTimeRequest);
+                case ChatRequest chatRequest:
+                    return TranslateChat(chatRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
@@ -61,7 +63,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case Click click:
                 case CursorPositionOnWorld cursorPositionOnWorld:
                 case EmotionPacketRequest emotionPacketRequest:
-                case ChatMessage chatMessage:
                 case QuestClicked questClicked:
                 case SellItem sellItem:
                 case SwapItemsRequest swapItemsRequest:
@@ -186,6 +187,20 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 request.SenderNetId,
                 request.TimeLastServerSeconds * 1000,
                 request.TimeLastClientSeconds * 1000
+            );
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.ChatRequest TranslateChat(ChatRequest request)
+        {
+            var chatType = _enumTranslationService.TranslateChatType(request.ChatType);
+            return new GameServer.Core.RequestProcessing.Definitions.ChatRequest
+            (
+                request.ClientID,
+                request.NetID,
+                request.Localized,
+                chatType,
+                request.Params,
+                request.Message
             );
         }
     }

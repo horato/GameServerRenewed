@@ -316,6 +316,16 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.SynchClock);
         }
 
+        public void WriteChatMessage(IEnumerable<ulong> targetSummonerIds, int clientId, uint netId, bool localized, ChatType chatType, string @params, string message)
+        {
+            var data = _packetWriter.WriteChatMessage(clientId, netId, localized, chatType, @params, message);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Chat);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

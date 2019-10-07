@@ -41,5 +41,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyLevelUp(IEnumerable<ulong> targetSummonerIds, IObjAiHero hero);
         void NotifyMinionSpawn(IEnumerable<ulong> targetSummonerIds, IObjAiMinion minion);
         void NotifySynchSimTimeFinal(ulong targetSummonerId, uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds);
+        void WriteChatMessage(IEnumerable<ulong> targetSummonerIds, int clientId, uint netId, bool localized, ChatType chatType, string @params, string message);
     }
 }

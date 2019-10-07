@@ -42,6 +42,7 @@
         S2CSpawnMinion = 0x7C,
         C2SSynchSimTime = 0x08,
         S2CSyncSimTimeFinal = 0x76,
+        Chat = 0x68,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -91,7 +92,6 @@
         S2CDash = 0x64,
         S2CDamageDone = 0x65,
         S2CModifyShield = 0x66,
-        ChatBoxMessage = 0x68,
         S2CSetTarget = 0x6A,
         S2CSetAnimation = 0x6B,
         C2SBlueTipClicked = 0x6D,

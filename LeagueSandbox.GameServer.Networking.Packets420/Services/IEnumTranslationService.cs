@@ -1,6 +1,7 @@
 ﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using ActionState = LeagueSandbox.GameServer.Networking.Packets420.Enums.ActionState;
+using ChatType = LeagueSandbox.GameServer.Core.Domain.Enums.ChatType;
 using MovementType = LeagueSandbox.GameServer.Core.Domain.Enums.MovementType;
 using PrimaryAbilityResourceType = LeagueSandbox.GameServer.Networking.Packets420.Enums.PrimaryAbilityResourceType;
 using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
@@ -25,5 +26,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
         PrimaryAbilityResourceType TranslateParType(GameServer.Core.Domain.Enums.PrimaryAbilityResourceType parType);
         SpellSlot TranslateSpellSlot(GameServer.Core.Domain.Enums.SpellSlot spellSlot);
         GameServer.Core.Domain.Enums.SpellSlot TranslateSpellSlot(SpellSlot requestSlot);
+        ChatType TranslateChatType(Enums.ChatType chatType);
+        Enums.ChatType TranslateChatType(ChatType chatType);
     }
 }

@@ -2,6 +2,7 @@
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using ActionState = LeagueSandbox.GameServer.Networking.Packets420.Enums.ActionState;
+using ChatType = LeagueSandbox.GameServer.Core.Domain.Enums.ChatType;
 using MovementType = LeagueSandbox.GameServer.Core.Domain.Enums.MovementType;
 using PrimaryAbilityResourceType = LeagueSandbox.GameServer.Networking.Packets420.Enums.PrimaryAbilityResourceType;
 using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
@@ -420,6 +421,32 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 case SpellSlot.Slotless:
                 default:
                     throw new ArgumentOutOfRangeException(nameof(slot), slot, null);
+            }
+        }
+
+        public ChatType TranslateChatType(Enums.ChatType chatType)
+        {
+            switch (chatType)
+            {
+                case Enums.ChatType.All:
+                    return ChatType.All;
+                case Enums.ChatType.Team:
+                    return ChatType.Team;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(chatType), chatType, null);
+            }
+        }
+
+        public Enums.ChatType TranslateChatType(ChatType chatType)
+        {
+            switch (chatType)
+            {
+                case ChatType.All:
+                    return Enums.ChatType.All;
+                case ChatType.Team:
+                    return Enums.ChatType.Team;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(chatType), chatType, null);
             }
         }
     }
