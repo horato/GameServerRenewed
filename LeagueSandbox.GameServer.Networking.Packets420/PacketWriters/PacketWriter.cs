@@ -294,14 +294,14 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             ).GetBytes();
         }
 
-        public byte[] WriteSynchSimTime(float simTime)
+        public byte[] WriteSynchSimTime(float simTimeMilliseconds)
         {
-            return new SynchSimTime(simTime).GetBytes();
+            return new SynchSimTime(simTimeMilliseconds / 1000).GetBytes();
         }
 
-        public byte[] WriteSyncMissionTime(float missionTime)
+        public byte[] WriteSyncMissionTime(float missionTimeMilliseconds)
         {
-            return new SyncMissionStartTime(missionTime).GetBytes();
+            return new SyncMissionStartTime(missionTimeMilliseconds / 1000).GetBytes();
         }
 
         public byte[] WriteHandleTipUpdate(string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint tipId, uint targetNetId)
@@ -440,6 +440,17 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 minion.SkinName,
                 checked((ushort)minion.Stats.Level.CurrentValue),
                 0 // TODO: What is this good for
+            ).GetBytes();
+        }
+
+        public byte[] WriteSynchSimTimeFinal(uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds)
+        {
+            return new SynchSimTimeFinal
+            (
+                netId,
+                timeLastClientMilliseconds / 1000,
+                timeRttLastOverheadMilliseconds / 1000,
+                timeConvergenceMilliseconds / 1000
             ).GetBytes();
         }
     }

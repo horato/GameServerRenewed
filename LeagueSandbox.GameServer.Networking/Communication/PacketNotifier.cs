@@ -170,17 +170,17 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
-        public void NotifySynchSimTime(ulong targetSummonerId, float simTime)
+        public void NotifySynchSimTime(ulong targetSummonerId, float simTimeMilliseconds)
         {
             var targetUser = _usersCache.GetUser(targetSummonerId);
-            var data = _packetWriter.WriteSynchSimTime(simTime);
+            var data = _packetWriter.WriteSynchSimTime(simTimeMilliseconds);
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
-        public void NotifySyncMissionTime(ulong targetSummonerId, float missionTime)
+        public void NotifySyncMissionTime(ulong targetSummonerId, float missionTimeMilliseconds)
         {
             var targetUser = _usersCache.GetUser(targetSummonerId);
-            var data = _packetWriter.WriteSyncMissionTime(missionTime);
+            var data = _packetWriter.WriteSyncMissionTime(missionTimeMilliseconds);
             SendPacket(targetUser, data, Channel.Broadcast);
         }
 
@@ -307,6 +307,13 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                 var targetUser = _usersCache.GetUser(targetSummonerId);
                 SendPacket(targetUser, data, Channel.Broadcast);
             }
+        }
+
+        public void NotifySynchSimTimeFinal(ulong targetSummonerId, uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds)
+        {
+            var data = _packetWriter.WriteSynchSimTimeFinal(netId, timeLastClientMilliseconds, timeRttLastOverheadMilliseconds, timeConvergenceMilliseconds);
+            var targetUser = _usersCache.GetUser(targetSummonerId);
+            SendPacket(targetUser, data, Channel.SynchClock);
         }
 
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)

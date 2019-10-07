@@ -40,10 +40,11 @@
         S2CDestroyClientMissile = 0x5A,
         S2CLevelUp = 0x3F,
         S2CSpawnMinion = 0x7C,
-        
+        C2SSynchSimTime = 0x08,
+        S2CSyncSimTimeFinal = 0x76,
+
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
-        C2SHeartBeat = 0x08,
         C2SSellItem = 0x09,
         UnpauseGame = 0x0A,
         S2CRemoveItem = 0x0B,

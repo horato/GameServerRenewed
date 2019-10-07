@@ -27,8 +27,8 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifySpawnLevelProp(ulong targetSummonerId, ILevelPropAI prop);
         void NotifyEnterVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
         void NotifyEnterLocalVisibilityClient(IEnumerable<ulong> targetSummonerIds, IAttackableUnit unit);
-        void NotifySynchSimTime(ulong targetSummonerId, float simTime);
-        void NotifySyncMissionTime(ulong targetSummonerId, float missionTime);
+        void NotifySynchSimTime(ulong targetSummonerId, float simTimeMilliseconds);
+        void NotifySyncMissionTime(ulong targetSummonerId, float missionTimeMilliseconds);
         void NotifyTipUpdate(ulong targetSummonerId, string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint targetNetId, uint tipId);
         void NotifyMapPing(IEnumerable<ulong> targetSummonerIds, Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo);
         void NotifyWaypointGroup(IEnumerable<ulong> targetSummonerIds, IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
@@ -40,5 +40,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyDestroyMissile(IEnumerable<ulong> targetSummonerIds, IMissile missile);
         void NotifyLevelUp(IEnumerable<ulong> targetSummonerIds, IObjAiHero hero);
         void NotifyMinionSpawn(IEnumerable<ulong> targetSummonerIds, IObjAiMinion minion);
+        void NotifySynchSimTimeFinal(ulong targetSummonerId, uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds);
     }
 }

@@ -52,6 +52,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     return TranslateSkillUpRequest(skillUpRequest);
                 case CastSpellRequest castSpellRequest:
                     return TranslateCastSpellRequest(castSpellRequest);
+                case SynchSimTimeRequest synchSimTimeRequest:
+                    return TranslateSynchSimTimeRequest(synchSimTimeRequest);
                 case AutoAttackOption autoAttackOption:
                 case BasicTutorialMessageWindowClicked basicTutorialMessageWindowClicked:
                 case BlueTipClicked blueTipClicked:
@@ -59,7 +61,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                 case Click click:
                 case CursorPositionOnWorld cursorPositionOnWorld:
                 case EmotionPacketRequest emotionPacketRequest:
-                case HeartBeat heartBeat:
                 case ChatMessage chatMessage:
                 case QuestClicked questClicked:
                 case SellItem sellItem:
@@ -69,7 +70,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
                     throw new ArgumentOutOfRangeException(nameof(request), request, "Unknown packet request type.");
             }
         }
-        
+
         private GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest TranslateCharSelectedRequest(CharSelectedRequest request)
         {
             return new GameServer.Core.RequestProcessing.Definitions.CharSelectedRequest();
@@ -166,16 +167,26 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketReaders
 
         private GameServer.Core.RequestProcessing.Definitions.CastSpellRequest TranslateCastSpellRequest(CastSpellRequest request)
         {
-           return new GameServer.Core.RequestProcessing.Definitions.CastSpellRequest
-           (
-               request.NetId,
-               _enumTranslationService.TranslateSpellSlot(request.Slot),
-               request.IsSummonerSpellBook,
-               request.IsHudClickCast,
-               request.Position,
-               request.EndPosition,
-               request.TargetNetID
-           );
+            return new GameServer.Core.RequestProcessing.Definitions.CastSpellRequest
+            (
+                request.NetId,
+                _enumTranslationService.TranslateSpellSlot(request.Slot),
+                request.IsSummonerSpellBook,
+                request.IsHudClickCast,
+                request.Position,
+                request.EndPosition,
+                request.TargetNetID
+            );
+        }
+
+        private GameServer.Core.RequestProcessing.Definitions.SynchSimTimeRequest TranslateSynchSimTimeRequest(SynchSimTimeRequest request)
+        {
+            return new GameServer.Core.RequestProcessing.Definitions.SynchSimTimeRequest
+            (
+                request.SenderNetId,
+                request.TimeLastServerSeconds * 1000,
+                request.TimeLastClientSeconds * 1000
+            );
         }
     }
 }

@@ -26,8 +26,8 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteSpawnLevelProp(ILevelPropAI levelProp);
         byte[] WriteOnEnterVisibilityClient(IAttackableUnit unit);
         byte[] WriteOnEnterLocalVisibilityClient(IAttackableUnit unit);
-        byte[] WriteSynchSimTime(float simTime);
-        byte[] WriteSyncMissionTime(float missionTime);
+        byte[] WriteSynchSimTime(float simTimeMilliseconds);
+        byte[] WriteSyncMissionTime(float missionTimeMilliseconds);
         byte[] WriteHandleTipUpdate(string tipHeader, string tipText, string tipImagePath, TipCommand tipCommand, uint tipId, uint targetNetId);
         byte[] WriteMapPing(Vector2 position, uint targetNetId, uint sourceNetId, PingCategory pingCategory, bool playAudio, bool showChat, bool pingThrottled, bool playVo);
         byte[] WriteWaypointGroup(IEnumerable<IGameObject> gameObjects, Vector2 mapCenter);
@@ -39,5 +39,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteDestroyMissile(IMissile missile);
         byte[] WriteLevelUp(IObjAiHero hero);
         byte[] WriteMinionSpawn(IObjAiMinion minion);
+        byte[] WriteSynchSimTimeFinal(uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds);
     }
 }
