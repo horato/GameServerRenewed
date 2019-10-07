@@ -28,7 +28,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_C_01",
@@ -59,7 +61,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_C_07",
@@ -90,7 +94,9 @@
       "Lane": "Top"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_C_03",
@@ -121,7 +127,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_C_06",
@@ -152,7 +160,9 @@
       "Lane": "Bottom"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_L_02",
@@ -183,7 +193,9 @@
       "Lane": "Bottom"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_L_03",
@@ -214,7 +226,9 @@
       "Lane": "Bottom"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_R_02",
@@ -245,7 +259,9 @@
       "Lane": "Top"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_R_03",
@@ -276,7 +292,9 @@
       "Lane": "Top"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_C_04",
@@ -307,7 +325,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T1_C_05",
@@ -338,7 +358,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_C_05",
@@ -369,7 +391,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_C_04",
@@ -400,7 +424,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_R_03",
@@ -431,7 +457,9 @@
       "Lane": "Top"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_R_02",
@@ -462,7 +490,9 @@
       "Lane": "Top"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_L_02",
@@ -493,7 +523,9 @@
       "Lane": "Bottom"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_L_03",
@@ -524,7 +556,9 @@
       "Lane": "Bottom"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_L_01",
@@ -555,7 +589,9 @@
       "Lane": "Bottom"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_C_02",
@@ -586,7 +622,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_C_01",
@@ -617,7 +655,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_C_03",
@@ -648,7 +688,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_T2_R_01",
@@ -679,7 +721,9 @@
       "Lane": "Top"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "HQ_T1",
@@ -719,7 +763,9 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "HQ_T2",
@@ -759,7 +805,9 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Barracks_T1_R1",
@@ -799,7 +847,9 @@
     },
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Barracks_T1_C1",
@@ -839,7 +889,9 @@
     },
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Barracks_T1_L1",
@@ -879,7 +931,9 @@
     },
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Barracks_T2_C1",
@@ -919,7 +973,9 @@
     },
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Barracks_T2_R1",
@@ -959,7 +1015,9 @@
     },
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Barracks_T2_L1",
@@ -999,7 +1057,9 @@
     },
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_OrderTurretShrine",
@@ -1030,7 +1090,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "Turret_ChaosTurretShrine",
@@ -1061,7 +1123,9 @@
       "Lane": "Middle"
     },
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "chaosShop01",
@@ -1089,7 +1153,9 @@
     "ShopData": {
       "Team": "Red",
       "NetId": 4289074958
-    }
+    },
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "orderShop01",
@@ -1117,7 +1183,9 @@
     "ShopData": {
       "Team": "Blue",
       "NetId": 4279289563
-    }
+    },
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "LevelProp_ShopMale",
@@ -1146,7 +1214,9 @@
       "SkinName": "ShopMale",
       "NetId": 4283185283
     },
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "LevelProp_ShopMale1",
@@ -1175,7 +1245,9 @@
       "SkinName": "ShopMale",
       "NetId": 4288573717
     },
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "LevelProp_Yonkey",
@@ -1204,7 +1276,9 @@
       "SkinName": "Yonkey",
       "NetId": 4289306666
     },
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "LevelProp_Yonkey1",
@@ -1233,7 +1307,9 @@
       "SkinName": "Yonkey",
       "NetId": 4289826753
     },
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "__LevelSize_",
@@ -1258,7 +1334,9 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C010",
@@ -1283,7 +1361,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 10
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C011",
@@ -1308,7 +1391,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 11
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C012",
@@ -1333,7 +1421,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 12
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C013",
@@ -1358,7 +1451,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 13
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C014",
@@ -1383,7 +1481,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 14
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C015",
@@ -1408,7 +1511,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 15
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C016",
@@ -1433,7 +1541,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 16
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C02",
@@ -1458,7 +1571,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 2
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C03",
@@ -1483,7 +1601,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 3
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C04",
@@ -1508,7 +1631,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 4
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C05",
@@ -1533,7 +1661,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 5
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C06",
@@ -1558,7 +1691,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 6
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C07",
@@ -1583,7 +1721,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 7
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C08",
@@ -1608,7 +1751,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 8
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_C09",
@@ -1633,7 +1781,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Middle",
+      "Order": 9
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L010",
@@ -1658,7 +1811,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 10
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L011",
@@ -1683,7 +1841,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 11
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L012",
@@ -1708,7 +1871,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 12
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L013",
@@ -1733,7 +1901,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 13
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L014",
@@ -1758,7 +1931,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 14
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L015",
@@ -1783,7 +1961,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 15
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L016",
@@ -1808,7 +1991,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 16
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L017",
@@ -1833,7 +2021,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 17
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L02",
@@ -1858,7 +2051,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 2
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L03",
@@ -1883,7 +2081,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 3
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L04",
@@ -1908,7 +2111,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 4
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L05",
@@ -1933,7 +2141,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 5
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L06",
@@ -1958,7 +2171,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 6
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L07",
@@ -1983,7 +2201,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 7
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L08",
@@ -2008,7 +2231,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 8
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_L09",
@@ -2033,7 +2261,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Top",
+      "Order": 9
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R010",
@@ -2058,7 +2291,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 10
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R011",
@@ -2083,7 +2321,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 11
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R012",
@@ -2108,7 +2351,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 12
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R013",
@@ -2133,7 +2381,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 13
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R014",
@@ -2158,7 +2411,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 14
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R015",
@@ -2183,7 +2441,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 15
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R016",
@@ -2208,7 +2471,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 16
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R017",
@@ -2233,7 +2501,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 17
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R02",
@@ -2258,7 +2531,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 2
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R03",
@@ -2283,7 +2561,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 3
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R04",
@@ -2308,7 +2591,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 4
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R05",
@@ -2333,7 +2621,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 5
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R06",
@@ -2358,7 +2651,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 6
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R07",
@@ -2383,7 +2681,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 7
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R08",
@@ -2408,7 +2711,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 8
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__NAV_R09",
@@ -2433,7 +2741,12 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": {
+      "Lane": "Bottom",
+      "Order": 9
+    },
+    "BarrackSpawnData": null
   },
   {
     "Name": "__P_Chaos_Spawn_Barracks__C01",
@@ -2458,7 +2771,13 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": {
+      "Lane": "Middle",
+      "Team": "Red",
+      "Order": 1
+    }
   },
   {
     "Name": "__P_Chaos_Spawn_Barracks__L01",
@@ -2483,7 +2802,13 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": {
+      "Lane": "Top",
+      "Team": "Red",
+      "Order": 1
+    }
   },
   {
     "Name": "__P_Chaos_Spawn_Barracks__R01",
@@ -2508,7 +2833,13 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": {
+      "Lane": "Bottom",
+      "Team": "Red",
+      "Order": 1
+    }
   },
   {
     "Name": "__P_Order_Spawn_Barracks__C01",
@@ -2533,7 +2864,13 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": {
+      "Lane": "Middle",
+      "Team": "Blue",
+      "Order": 1
+    }
   },
   {
     "Name": "__P_Order_Spawn_Barracks__L01",
@@ -2558,7 +2895,13 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": {
+      "Lane": "Top",
+      "Team": "Blue",
+      "Order": 1
+    }
   },
   {
     "Name": "__P_Order_Spawn_Barracks__R01",
@@ -2583,7 +2926,13 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": {
+      "Lane": "Bottom",
+      "Team": "Blue",
+      "Order": 1
+    }
   },
   {
     "Name": "__Spawn_T1",
@@ -2608,7 +2957,9 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   },
   {
     "Name": "__Spawn_T2",
@@ -2633,6 +2984,8 @@
     "BarracksData": null,
     "TurretData": null,
     "LevelPropData": null,
-    "ShopData": null
+    "ShopData": null,
+    "NavPointData": null,
+    "BarrackSpawnData": null
   }
 ]

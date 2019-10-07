@@ -21,8 +21,10 @@ namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
         public ITurretData TurretData { get; }
         public ILevelPropData LevelPropData { get; }
         public IShopData ShopData { get; }
+        public INavPointData NavPointData { get; }
+        public IBarrackSpawnData BarrackSpawnData { get; }
 
-        public MapObject(string name, int skinId, Vector3 position, Vector3 rotation, Vector3 scale, ObjectType objectType, HqData hqData, BarracksData barracksData, TurretData turretData, LevelPropData levelPropData, ShopData shopData)
+        public MapObject(string name, int skinId, Vector3 position, Vector3 rotation, Vector3 scale, ObjectType objectType, HqData hqData, BarracksData barracksData, TurretData turretData, LevelPropData levelPropData, ShopData shopData, NavPointData navPointData, BarrackSpawnData barrackSpawnData)
         {
             Name = name;
             SkinId = skinId;
@@ -35,6 +37,8 @@ namespace LeagueSandbox.GameServer.Utils.Map.MapObjects
             TurretData = turretData;
             LevelPropData = levelPropData;
             ShopData = shopData;
+            NavPointData = navPointData;
+            BarrackSpawnData = barrackSpawnData;
         }
     }
 }

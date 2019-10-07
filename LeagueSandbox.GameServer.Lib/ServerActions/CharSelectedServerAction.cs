@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Caches;
 using log4net;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;

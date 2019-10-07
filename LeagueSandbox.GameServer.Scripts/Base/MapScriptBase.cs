@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Caches;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories.ExpCurve;
 using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
+using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Core.Scripting.DTO;
+using LeagueSandbox.GameServer.Scripts.Base.DTOs;
 using LeagueSandbox.GameServer.Utils.Map.ExpCurve;
 using LeagueSandbox.GameServer.Utils.Map.MapObjects;
 using LeagueSandbox.GameServer.Utils.Providers;
@@ -24,10 +27,12 @@ namespace LeagueSandbox.GameServer.Scripts.Base
         private readonly IObjHQFactory _hqFactory;
         private readonly IObjAiTurretFactory _turretFactory;
         private readonly ILevelPropAIFactory _levelPropAiFactory;
+        private readonly IGameObjectsCache _gameObjectsCache;
+        private readonly IObjAiMinionFactory _minionFactory;
 
         public abstract MapType MapType { get; }
 
-        protected MapScriptBase(IMapDataProvider mapDataProvider, IObjShopFactory shopFactory, IObjBarracksDampenerFactory barracksDampenerFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory)
+        protected MapScriptBase(IMapDataProvider mapDataProvider, IObjShopFactory shopFactory, IObjBarracksDampenerFactory barracksDampenerFactory, IObjHQFactory hqFactory, IObjAiTurretFactory turretFactory, ILevelPropAIFactory levelPropAiFactory, IGameObjectsCache gameObjectsCache, IObjAiMinionFactory minionFactory)
         {
             _mapDataProvider = mapDataProvider;
             _shopFactory = shopFactory;
@@ -35,18 +40,82 @@ namespace LeagueSandbox.GameServer.Scripts.Base
             _hqFactory = hqFactory;
             _turretFactory = turretFactory;
             _levelPropAiFactory = levelPropAiFactory;
+            _gameObjectsCache = gameObjectsCache;
+            _minionFactory = minionFactory;
         }
 
-        public virtual MapInitializationData Initialize()
+        public MapInitializationData Initialize()
         {
+            InitializeMapObjects();
+
             var expCurve = _mapDataProvider.ProvideExpCurve(MapType);
             var expCurveDictionary = CreateExpCurveDictionary(expCurve);
-
-            var mapObjects = _mapDataProvider.ProvideStaticGameObjectsForMap(MapType);
-            var gameObjects = CreateGameObjectsFromMapObjects(mapObjects);
-
-            return new MapInitializationData(expCurveDictionary, gameObjects, MapType, this);
+            return new MapInitializationData(expCurveDictionary, MapType, this);
         }
+
+        #region Static game objects
+
+        private void InitializeMapObjects()
+        {
+            var mapObjects = _mapDataProvider.ProvideStaticGameObjectsForMap(MapType);
+            CreateGameObjectsFromMapObjects(mapObjects);
+        }
+
+        private void CreateGameObjectsFromMapObjects(IEnumerable<MapObject> objects)
+        {
+            var spawnSettings = CreateMapSpawnSettings();
+            foreach (var mapObject in objects)
+            {
+                IGameObject gameObject;
+                switch (mapObject.ObjectType)
+                {
+                    case ObjectType.BarrackSpawn:
+                    case ObjectType.NexusSpawn: //TODO: create a spawn point?
+                    case ObjectType.LevelSize:
+                    case ObjectType.AnimatedBuilding:
+                    case ObjectType.Lake:
+                    case ObjectType.NavPoint:
+                    case ObjectType.InfoPoint:
+                        continue;
+                    case ObjectType.Barrack:
+                        gameObject = CreateBarrack(objects, mapObject, spawnSettings);
+                        break;
+                    case ObjectType.Nexus:
+                        gameObject = _hqFactory.CreateFromMapObject(mapObject);
+                        break;
+                    case ObjectType.Turret:
+                        gameObject = _turretFactory.CreateFromMapObject(mapObject);
+                        break;
+                    case ObjectType.Shop:
+                        gameObject = _shopFactory.CreateFromMapObject(mapObject);
+                        break;
+                    case ObjectType.LevelProp:
+                        gameObject = _levelPropAiFactory.CreateFromMapObject(mapObject);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(mapObject.ObjectType), mapObject.ObjectType, null);
+                }
+
+                _gameObjectsCache.Add(gameObject.NetId, gameObject);
+            }
+        }
+
+        private IGameObject CreateBarrack(IEnumerable<MapObject> objects, IMapObject mapObject, MapSpawnSettings spawnSettings)
+        {
+            var laneNavPoints = objects.Where(x => x.ObjectType == ObjectType.NavPoint).Where(x => x.NavPointData.Lane == mapObject.BarracksData.Lane).OrderBy(x => x.NavPointData.Order).AsEnumerable();
+            if (mapObject.BarracksData.Team == Team.Red)
+                laneNavPoints = laneNavPoints.Reverse();
+
+            var idx = 0;
+            var navPoints = laneNavPoints.ToDictionary(x => idx++, x => x.Position.ToVector2());
+
+            var spawnPoint = objects.Where(x => x.ObjectType == ObjectType.BarrackSpawn).Single(x => x.BarrackSpawnData.Team == mapObject.BarracksData.Team && x.BarrackSpawnData.Lane == mapObject.BarracksData.Lane).Position.ToVector2();
+            return _barracksDampenerFactory.CreateFromMapObject(mapObject, navPoints, spawnPoint, spawnSettings);
+        }
+
+        #endregion
+
+        #region Exp curve
 
         private IDictionary<int, float> CreateExpCurveDictionary(IExpCurve expCurve)
         {
@@ -89,47 +158,19 @@ namespace LeagueSandbox.GameServer.Scripts.Base
             return result;
         }
 
-        private IEnumerable<IGameObject> CreateGameObjectsFromMapObjects(IEnumerable<MapObject> objects)
-        {
-            var result = new List<IGameObject>();
-            foreach (var mapObject in objects)
-            {
-                switch (mapObject.ObjectType)
-                {
-                    case ObjectType.BarrackSpawn:
-                    case ObjectType.NexusSpawn: //TODO: create a spawn point?
-                    case ObjectType.LevelSize:
-                    case ObjectType.AnimatedBuilding:
-                    case ObjectType.Lake:
-                    case ObjectType.NavPoint:
-                    case ObjectType.InfoPoint:
-                        break;
-                    case ObjectType.Barrack:
-                        var barrackInstance = _barracksDampenerFactory.CreateFromMapObject(mapObject);
-                        result.Add(barrackInstance);
-                        break;
-                    case ObjectType.Nexus:
-                        var hqInstance = _hqFactory.CreateFromMapObject(mapObject);
-                        result.Add(hqInstance);
-                        break;
-                    case ObjectType.Turret:
-                        var turretInstance = _turretFactory.CreateFromMapObject(mapObject);
-                        result.Add(turretInstance);
-                        break;
-                    case ObjectType.Shop:
-                        var shopInstance = _shopFactory.CreateFromMapObject(mapObject);
-                        result.Add(shopInstance);
-                        break;
-                    case ObjectType.LevelProp:
-                        var propInstance = _levelPropAiFactory.CreateFromMapObject(mapObject);
-                        result.Add(propInstance);
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException(nameof(mapObject.ObjectType), mapObject.ObjectType, null);
-                }
-            }
+        #endregion
 
-            return result;
+        public virtual MinionSpawnResult SpawnMinion(int minionNumber, IObjBarracksDampener barrack)
+        {
+            var minionInfo = GetMinionSpawnInfo(barrack.Lane, barrack.Team, barrack.WavesCount, minionNumber);
+            if (minionInfo == null)
+                return new MinionSpawnResult(null, false);
+
+            var minion = _minionFactory.CreateFromMinionInfo(barrack, minionInfo.Name, minionInfo.Info);
+            return new MinionSpawnResult(minion, true);
         }
+
+        protected abstract MapSpawnSettings CreateMapSpawnSettings();
+        private protected abstract NamedMinionInfo GetMinionSpawnInfo(Lane lane, Team team, int waveNumber, int minionNumber);
     }
 }

@@ -299,6 +299,16 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
+        public void NotifyMinionSpawn(IEnumerable<ulong> targetSummonerIds, IObjAiMinion minion)
+        {
+            var data = _packetWriter.WriteMinionSpawn(minion);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

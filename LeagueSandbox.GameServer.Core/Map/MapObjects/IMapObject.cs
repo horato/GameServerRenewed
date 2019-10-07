@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using LeagueSandbox.GameServer.Utils.Map.MapObjects;
 
 namespace LeagueSandbox.GameServer.Core.Map.MapObjects
 {
@@ -15,5 +16,7 @@ namespace LeagueSandbox.GameServer.Core.Map.MapObjects
         ITurretData TurretData { get; }
         ILevelPropData LevelPropData { get; }
         IShopData ShopData { get; }
+        INavPointData NavPointData { get; }
+        IBarrackSpawnData BarrackSpawnData { get; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 using LeagueSandbox.GameServer.Core;
+using LeagueSandbox.GameServer.Core.Caches;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Logging;
@@ -55,11 +56,6 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
 
             _game = _gameFactory.CreateNew(map);
             _unityContainer.RegisterInstance<IGame>(_game);
-
-            foreach (var gameObject in data.InitialGameObjects)
-            {
-                _gameObjectsCache.Add(gameObject.NetId, gameObject);
-            }
         }
 
         public void StartGameLoop()

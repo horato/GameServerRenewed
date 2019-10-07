@@ -38,5 +38,6 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteMissileReplication(IMissile missile);
         byte[] WriteDestroyMissile(IMissile missile);
         byte[] WriteLevelUp(IObjAiHero hero);
+        byte[] WriteMinionSpawn(IObjAiMinion minion);
     }
 }

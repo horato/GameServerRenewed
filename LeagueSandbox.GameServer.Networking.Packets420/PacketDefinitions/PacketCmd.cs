@@ -39,7 +39,8 @@
         S2CCastSpellAns = 0xB5,
         S2CDestroyClientMissile = 0x5A,
         S2CLevelUp = 0x3F,
-
+        S2CSpawnMinion = 0x7C,
+        
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
         C2SHeartBeat = 0x08,

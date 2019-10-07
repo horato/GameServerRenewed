@@ -39,5 +39,6 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyMissileReplication(IEnumerable<ulong> targetSummonerIds, IMissile missile);
         void NotifyDestroyMissile(IEnumerable<ulong> targetSummonerIds, IMissile missile);
         void NotifyLevelUp(IEnumerable<ulong> targetSummonerIds, IObjAiHero hero);
+        void NotifyMinionSpawn(IEnumerable<ulong> targetSummonerIds, IObjAiMinion minion);
     }
 }

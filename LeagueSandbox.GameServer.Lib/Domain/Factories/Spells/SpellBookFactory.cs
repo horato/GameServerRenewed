@@ -35,7 +35,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             if (!string.IsNullOrWhiteSpace(data.Spell1))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell1);
-                var maxLevel = data.MaxLevels[0];
+                var maxLevel = data.MaxLevels.Length > 0 ? data.MaxLevels[0] : 0;
                 var spell = _spellFactory.CreateFromSpellData(SpellSlot.Q, data.Spell1, maxLevel, spellData);
                 spells.Add(spell);
             }
@@ -43,7 +43,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             if (!string.IsNullOrWhiteSpace(data.Spell2))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell2);
-                var maxLevel = data.MaxLevels[1];
+                var maxLevel = data.MaxLevels.Length > 1 ? data.MaxLevels[1] : 0;
                 var spell = _spellFactory.CreateFromSpellData(SpellSlot.W, data.Spell2, maxLevel, spellData);
                 spells.Add(spell);
             }
@@ -51,7 +51,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             if (!string.IsNullOrWhiteSpace(data.Spell3))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell3);
-                var maxLevel = data.MaxLevels[2];
+                var maxLevel = data.MaxLevels.Length > 2 ? data.MaxLevels[2] : 0;
                 var spell = _spellFactory.CreateFromSpellData(SpellSlot.E, data.Spell3, maxLevel, spellData);
                 spells.Add(spell);
             }
@@ -59,7 +59,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             if (!string.IsNullOrWhiteSpace(data.Spell4))
             {
                 var spellData = _spellDataProvider.ProvideCharacterSpellData(characterName, data.Spell4);
-                var maxLevel = data.MaxLevels[3];
+                var maxLevel = data.MaxLevels.Length > 3 ? data.MaxLevels[3] : 0;
                 var spell = _spellFactory.CreateFromSpellData(SpellSlot.R, data.Spell4, maxLevel, spellData);
                 spells.Add(spell);
             }

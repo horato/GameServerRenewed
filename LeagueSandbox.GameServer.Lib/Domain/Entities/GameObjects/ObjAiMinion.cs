@@ -1,4 +1,7 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
@@ -8,6 +11,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 {
     internal class ObjAiMinion : ObjAiBase, IObjAiMinion
     {
+        public MinionActionState MinionState { get; private set; }
+        public IDictionary<int, Vector2> MinionWaypoints { get; }
+        public int CurrentWaypoint { get; private set; }
+        public int MaxWaypoint { get; }
+
         //MinionRoamState
         //    CampNumber
         //LeashCounter
@@ -19,8 +27,41 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //IsWard
         //    IsLaneMinion
 
-        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius) : base(team, position, stats, netId, skinName, skinId, 1200, spellBook, collisionRadius)
+        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints) : base(team, position, stats, netId, skinName, skinId, visionRadius, spellBook, collisionRadius)
         {
+            MinionState = minionState;
+            MinionWaypoints = minionWaypoints;
+            MaxWaypoint = minionWaypoints.Keys.Max();
+        }
+
+        public void SpawnCompleted()
+        {
+            if (MinionState != MinionActionState.Spawned)
+                throw new InvalidOperationException("Wrong minion state");
+
+            MinionState = MinionActionState.Moving;
+            CurrentWaypoint = MinionWaypoints.Keys.Min();
+        }
+
+        public void WaypointReached()
+        {
+            if (MinionState != MinionActionState.Moving)
+                throw new InvalidOperationException("Wrong minion state");
+
+            CurrentWaypoint += 1;
+        }
+
+        public bool HasMoreWaypoints()
+        {
+            return CurrentWaypoint < MaxWaypoint;
+        }
+
+        public void DestinationReached()
+        {
+            if(MinionState != MinionActionState.Moving)
+                throw new InvalidOperationException("Wrong minion state");
+
+            MinionState = MinionActionState.DestinationReached;
         }
     }
 }

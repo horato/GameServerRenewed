@@ -4,6 +4,7 @@ using System.Text;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
+using LeagueSandbox.GameServer.Core.Map.MapObjects;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;
 using Unity;
 
@@ -116,6 +117,58 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
                 _statFactory.CreateNew(data.BaseStaticMPRegen, 0, 0, 0, 0),
                 _statFactory.CreateNew(data.MoveSpeed, 0, 0, 0, 0),
                 _statFactory.CreateNew(data.AttackRange, 0, 0, 0, 0),
+                _statFactory.CreateNew(1.0f, 0, 0, 0, 0),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty()
+            );
+
+            return SetupDependencies(instance);
+        }
+
+        public IStats CreateFromBarrackData(IBarracksData data)
+        {
+            var instance = new Entities.Stats.Stats
+            (
+                0,
+                SpellFlags.TargetableToAll,
+                ActionState.CanAttack | ActionState.CanCast | ActionState.CanMove | ActionState.Unknown,
+                PrimaryAbilityResourceType.Mana,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                0,
+                0,
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateNew(0, 0, data.BaseStaticHPRegen, 0),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _flatStatFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateNew(data.Armor, 0, 0, 0, 0),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateNew(1.0f, 0, 0, 0, 0),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateNew(2.0f, 0, 0, 0, 0),
+                _statFactory.CreateNew(data.MaxHP, 0, 0, 0, 0),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateNew(data.MaxMP, 0, 0, 0, 0),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
+                _statFactory.CreateEmpty(),
                 _statFactory.CreateNew(1.0f, 0, 0, 0, 0),
                 _statFactory.CreateEmpty(),
                 _statFactory.CreateEmpty()

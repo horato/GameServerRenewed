@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 
-namespace LeagueSandbox.GameServer.Lib.Caches
+namespace LeagueSandbox.GameServer.Core.Caches
 {
-    internal interface IGameObjectsCache
+    public interface IGameObjectsCache
     {
         void Add(uint netId, IGameObject gameObject);
         bool UserExists(uint netId);

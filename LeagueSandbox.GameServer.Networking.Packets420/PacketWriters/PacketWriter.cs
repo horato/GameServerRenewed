@@ -415,5 +415,32 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 checked((byte)hero.SpellBook.SkillPoints)
             ).GetBytes();
         }
+
+        public byte[] WriteMinionSpawn(IObjAiMinion minion)
+        {
+            var team = _enumTranslationService.TranslateTeam(minion.Team);
+            var isTargetableToTeam = _enumTranslationService.TranslateSpellFlags(minion.Stats.IsTargetableToTeam);
+            return new SpawnMinion
+            (
+                minion.NetId,
+                0, // Probably for wards or player spawned minions
+                NetNodeID.Spawned,
+                minion.Position,
+                minion.SkinId,
+                0, // TODO: what's this
+                team,
+                false,
+                false, //TODO: ward
+                true, //TODO: ward/junglecamp
+                false,
+                minion.Stats.IsTargetable,
+                isTargetableToTeam,
+                minion.VisionRadius,
+                "", // TODO: miniom name
+                minion.SkinName,
+                checked((ushort)minion.Stats.Level.CurrentValue),
+                0 // TODO: What is this good for
+            ).GetBytes();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using LeagueSandbox.GameServer.Core.DependencyInjection;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Factories.GameObjects;
 using LeagueSandbox.GameServer.Lib.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects;
@@ -31,6 +32,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain
             container.RegisterType<ISpellInstanceFactory, SpellInstanceFactory>();
             container.RegisterType<IParticleFactory, ParticleFactory>();
             container.RegisterType<IMissileFactory, MissileFactory>();
+            container.RegisterType<IObjAiMinionFactory, ObjAiMinionFactory>();
         }
     }
 }
