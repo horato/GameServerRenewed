@@ -74,7 +74,7 @@ namespace LeagueSandbox.GameServer.Lib.Controllers
             _refreshRateWatch.Start();
             while (_isRunning)
             {
-                var diff = (float)_refreshRateWatch.Elapsed.TotalMilliseconds;
+                var diff = (float)_refreshRateWatch.Elapsed.TotalMilliseconds * _game.SimSpeed;
                 _refreshRateWatch.Restart();
 
                 if (!_game.IsPaused)

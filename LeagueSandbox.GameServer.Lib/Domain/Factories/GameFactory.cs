@@ -14,7 +14,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories
 
         public IGame CreateNew(IMap map)
         {
-            var instance = new Game(map, true, 0);
+            var instance = new Game(map, true, 0, 1);
 
             return SetupDependencies(instance);
         }

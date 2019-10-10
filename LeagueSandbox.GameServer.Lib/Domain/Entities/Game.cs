@@ -8,12 +8,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
         public IMap Map { get; }
         public bool IsPaused { get; private set; }
         public float GameTimeElapsedMilliseconds { get; private set; }
+        public float SimSpeed { get; private set; }
 
-        public Game(IMap map, bool isPaused, float gameTimeElapsed)
+        public Game(IMap map, bool isPaused, float gameTimeElapsed, float simSpeed)
         {
             Map = map ?? throw new ArgumentNullException(nameof(map));
             IsPaused = isPaused;
             GameTimeElapsedMilliseconds = gameTimeElapsed;
+            SimSpeed = simSpeed;
         }
 
         public void Pause()
@@ -38,6 +40,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities
                 throw new InvalidOperationException("Cannot apply time diff while paused");
 
             GameTimeElapsedMilliseconds += diff;
+        }
+
+        public void SetSimSpeed(float simSpeed)
+        {
+            SimSpeed = simSpeed;
         }
     }
 }
