@@ -8,6 +8,8 @@ namespace LeagueSandbox.GameServer.Core.Scripting
 {
     public interface ISpellScript
     {
+        bool IsMissileDestroyedOnHit { get; }
+
         void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData);
         void OnMissileDestinationReached(IMissile missile);
         void OnMissileCollision(IMissile missile, IEnumerable<IGameObject> actualColliders);

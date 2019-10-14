@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             _game = game;
         }
 
-        public IMissile CreateNew(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData)
+        public IMissile CreateNew(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData, bool isMissileDestroyedOnHit)
         {
             var start = objAiBase.Position;
             var destination = _calculationService.CalculateDestination(start.ToVector2(), spell.TargetPosition, spell.Definition.CastRange).ToVector3(start.Y);
@@ -51,7 +51,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 1f, //TODO: ?
                 1f, // TODO: what is this
                 1f, // TODO: what is this
-                false //TODO: destroy on hit
+                isMissileDestroyedOnHit
             );
 
             return SetupDependencies(instance);

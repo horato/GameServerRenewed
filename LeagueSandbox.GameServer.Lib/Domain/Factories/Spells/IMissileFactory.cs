@@ -10,6 +10,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
 {
     interface IMissileFactory
     {
-        IMissile CreateNew(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData);
+        IMissile CreateNew(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData, bool isMissileDestroyedOnHit);
     }
 }

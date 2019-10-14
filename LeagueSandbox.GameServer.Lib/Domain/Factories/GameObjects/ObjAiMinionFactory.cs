@@ -51,7 +51,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 spellBook,
                 charData.GameplayCollisionRadius,
                 MinionActionState.Spawned,
-                barrack.MinionWaypoints
+                barrack.MinionWaypoints,
+                true
             );
             
             return SetupDependencies(instance);

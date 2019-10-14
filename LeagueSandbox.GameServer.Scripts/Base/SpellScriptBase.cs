@@ -13,11 +13,13 @@ namespace LeagueSandbox.GameServer.Scripts.Base
     {
         private readonly ISpellCastHelperService _spellCastHelperService;
 
+        public virtual bool IsMissileDestroyedOnHit { get; } = false;
+
         protected SpellScriptBase(ISpellCastHelperService spellCastHelperService)
         {
             _spellCastHelperService = spellCastHelperService;
         }
-
+        
         public virtual void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData)
         {
 

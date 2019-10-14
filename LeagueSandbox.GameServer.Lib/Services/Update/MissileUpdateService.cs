@@ -60,7 +60,9 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void MissileTraveling(IMissile missile, float millisecondsDiff)
         {
-            var colliders = _collisionService.FindAttackableObjectsCollidingWith(missile);
+            var colliders = _collisionService.FindAttackableObjectsCollidingWith(missile).ToList();
+            colliders.RemoveAll(x => !IsValidTarget(x, missile));
+
             if (colliders.Any())
             {
                 MissileCollided(missile, colliders);
@@ -75,6 +77,37 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
             var destinationReached = _movementService.MoveObject(missile, to, missile.Speed, millisecondsDiff);
             if (destinationReached)
                 missile.DestinationReached();
+        }
+
+        private bool IsValidTarget(IGameObject unit, IMissile missile)
+        {
+            var caster = missile.Caster;
+            var spellDefinition = missile.Spell.Definition;
+            if (unit.Team == caster.Team && !spellDefinition.HasFlag(SpellFlags.AffectFriends))
+                return false;
+            if (unit.Team == Team.Neutral && !spellDefinition.HasFlag(SpellFlags.AffectNeutral))
+                return false;
+            if (unit.Team != caster.Team && unit.Team != Team.Neutral && !spellDefinition.HasFlag(SpellFlags.AffectEnemies))
+                return false;
+            //if (unit.IsDead && !spellDefinition.HasFlag(SpellFlags.AffectDead)) TODO: is dead
+            //    return false;
+
+            switch (unit)
+            {
+                case IObjAiMinion minion when minion.IsLaneMinion && spellDefinition.HasFlag(SpellFlags.AffectMinions):
+                    return true;
+                case IObjAiMinion minion when !minion.IsLaneMinion && spellDefinition.HasFlag(SpellFlags.AffectUseable):
+                    return true;
+                case IObjAiTurret _ when spellDefinition.HasFlag(SpellFlags.AffectTurrets):
+                    return true;
+                case IObjBarracksDampener _ when spellDefinition.HasFlag(SpellFlags.AffectBuildings):
+                case IObjHQ _ when spellDefinition.HasFlag(SpellFlags.AffectBuildings):
+                    return true;
+                case IObjAiHero _ when spellDefinition.HasFlag(SpellFlags.AffectHeroes):
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         private void MissileCollided(IMissile missile, IEnumerable<IGameObject> colliders)

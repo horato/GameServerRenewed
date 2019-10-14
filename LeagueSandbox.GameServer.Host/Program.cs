@@ -19,8 +19,6 @@ namespace LeagueSandbox.GameServer.Host
 
         public static void Main(string[] args)
         {
-            var ssss= SdbmHash.HashString("HPPerLevel") ;
-
             Console.WriteLine("Starting server");
             LaunchGameServer();
             Console.WriteLine("Server started.");

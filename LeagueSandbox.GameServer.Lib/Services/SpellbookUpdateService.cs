@@ -135,6 +135,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 _packetNotifier.NotifySetCooldown(hero.SummonerId, obj, spell);
 
             var spellData = _spellDataProvider.ProvideCharacterSpellData(obj.SkinName, spell.Definition.SpellName);
+            var script = _spellScriptProvider.ProvideSpellScript(obj.SkinName, spell.Definition.SpellName);
             switch (spell.Definition.CastType)
             {
                 case CastType.Instant:
@@ -146,23 +147,18 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 case CastType.ArcMissile:
                 case CastType.CircleMissile:
                 case CastType.ScriptedMissile:
-                    CreateMissile(obj, spell, spellData);
-
-                    if (!_spellScriptProvider.SpellScriptExists(obj.SkinName, spell.Definition.SpellName))
-                        return;
-
+                    CreateMissile(obj, spell, spellData, script.IsMissileDestroyedOnHit);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
 
-            var script = _spellScriptProvider.ProvideSpellScript(obj.SkinName, spell.Definition.SpellName);
             script.OnCastFinished(obj, spell, spellData);
         }
 
-        private void CreateMissile(IObjAiBase obj, ISpellInstance spell, ISpellData spellData)
+        private void CreateMissile(IObjAiBase obj, ISpellInstance spell, ISpellData spellData, bool isMissileDestroyedOnHit)
         {
-            var missile = _missileFactory.CreateNew(obj, spell, spellData);
+            var missile = _missileFactory.CreateNew(obj, spell, spellData, isMissileDestroyedOnHit);
             _gameObjectsCache.Add(missile.NetId, missile);
         }
     }

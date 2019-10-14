@@ -15,6 +15,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public IDictionary<int, Vector2> MinionWaypoints { get; }
         public int CurrentWaypoint { get; private set; }
         public int MaxWaypoint { get; }
+        public bool IsLaneMinion { get; }
 
         //MinionRoamState
         //    CampNumber
@@ -25,13 +26,13 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //BarrackSpawn
         //    MinionFlags
         //IsWard
-        //    IsLaneMinion
 
-        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints) : base(team, position, stats, netId, skinName, skinId, visionRadius, spellBook, collisionRadius)
+        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints, bool isLaneMinion) : base(team, position, stats, netId, skinName, skinId, visionRadius, spellBook, collisionRadius)
         {
             MinionState = minionState;
             MinionWaypoints = minionWaypoints;
             MaxWaypoint = minionWaypoints.Keys.Max();
+            IsLaneMinion = isLaneMinion;
         }
 
         public void SpawnCompleted()

@@ -10,6 +10,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         IDictionary<int, Vector2> MinionWaypoints { get; }
         int CurrentWaypoint { get; }
         int MaxWaypoint { get; }
+        bool IsLaneMinion { get; }
 
         void SpawnCompleted();
         void WaypointReached();

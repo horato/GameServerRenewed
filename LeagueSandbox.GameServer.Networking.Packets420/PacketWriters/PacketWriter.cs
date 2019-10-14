@@ -431,7 +431,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 team,
                 false,
                 false, //TODO: ward
-                true, //TODO: ward/junglecamp
+                minion.IsLaneMinion,
                 false,
                 minion.Stats.IsTargetable,
                 isTargetableToTeam,
