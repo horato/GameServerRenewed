@@ -43,13 +43,15 @@
         C2SSynchSimTime = 0x08,
         S2CSyncSimTimeFinal = 0x76,
         Chat = 0x68,
+        S2CAutoAttackPos = 0x1A,
+        S2CAutoAttack = 0x0C,
+        S2CUnitSetLookAt = 0x10F,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
         C2SSellItem = 0x09,
         UnpauseGame = 0x0A,
         S2CRemoveItem = 0x0B,
-        S2CNextAutoAttack = 0x0C,
         S2CEditMessageBoxTop = 0x0D,
         S2CUnlockCamera = 0x0E,
         S2CAddXp = 0x10,
@@ -59,7 +61,6 @@
         S2CFloatingText = 0x18,
         S2CFloatingTextWithValue = 0x19,
         C2SSwapItems = 0x20,
-        S2CBeginAutoAttack = 0x1A,
         S2CChampionDie2 = 0x1B,
         S2CEditBuff = 0x1C,
         S2CAddGold = 0x22,
@@ -157,7 +158,6 @@
         S2CBatch = 0xFF,
 
         S2CSurrenderState = 0x10E,
-        S2COnAttack = 0x10F,
         S2CChampionDeathTimer = 0x117,
         S2CSetSpellActiveState = 0x118,
         S2CResourceType = 0x119,

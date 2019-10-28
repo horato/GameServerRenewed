@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Caches;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
@@ -18,12 +20,14 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         private readonly IPlayerCache _playerCache;
         private readonly ICoordinatesTranslationService _coordinatesTranslationService;
         private readonly IPathingService _pathingService;
+        private readonly IGameObjectsCache _gameObjectsCache;
 
-        public IssueOrderServerAction(IPlayerCache playerCache, ICoordinatesTranslationService coordinatesTranslationService, IPathingService pathingService)
+        public IssueOrderServerAction(IPlayerCache playerCache, ICoordinatesTranslationService coordinatesTranslationService, IPathingService pathingService, IGameObjectsCache gameObjectsCache)
         {
             _playerCache = playerCache;
             _coordinatesTranslationService = coordinatesTranslationService;
             _pathingService = pathingService;
+            _gameObjectsCache = gameObjectsCache;
         }
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, IssueOrderRequest request)
@@ -45,7 +49,18 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                     var path = _pathingService.FindPath(currentPosition, request.Position).ToList();
                     if (path.Any())
                     {
-                        sender.Champion.Move(path, request.OrderType);
+                        if (request.OrderType == MovementType.Attack)
+                        {
+                            var target = _gameObjectsCache.GetObject(request.TargetNetID);
+                            if (!(target is IAttackableUnit attackableUnit))
+                                throw new InvalidOperationException($"{request.TargetNetID} is not attackable");
+
+                            sender.Champion.Attack(attackableUnit, path, request.OrderType);
+                        }
+                        else
+                        {
+                            sender.Champion.Move(path, request.OrderType);
+                        }
                     }
                     else
                     {
@@ -57,10 +72,11 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
 
                     break;
                 case MovementType.Stop:
-                    if (!sender.Champion.IsMoving)
-                        break;
+                    if (sender.Champion.IsAttacking)
+                        sender.Champion.StopAttack();
+                    if (sender.Champion.IsMoving)
+                        sender.Champion.StopMovement();
 
-                    sender.Champion.StopMovement();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(request.OrderType), request.OrderType, null);

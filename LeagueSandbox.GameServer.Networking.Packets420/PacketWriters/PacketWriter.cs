@@ -459,5 +459,37 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             var packetChatType = _enumTranslationService.TranslateChatType(chatType);
             return new ChatResponse(clientId, netId, localized, packetChatType, @params, message).GetBytes();
         }
+
+        public byte[] WriteAutoAttackStart(IObjAiBase gameObject, uint projectileNetId)
+        {
+            var basicAttackData = _dtoTranslationService.TranslateBasicAttackData(gameObject, projectileNetId);
+            return new AutoAttackPos
+            (
+                gameObject.NetId,
+                basicAttackData,
+                gameObject.Position.ToVector2()
+            ).GetBytes();
+        }
+
+        public byte[] WriteAutoAttack(IObjAiBase gameObject, uint projectileNetId)
+        {
+            var basicAttackData = _dtoTranslationService.TranslateBasicAttackData(gameObject, projectileNetId);
+            return new AutoAttack
+            (
+                gameObject.NetId,
+                basicAttackData
+            ).GetBytes();
+        }
+
+        public byte[] WriteUnitSetLookAt(IObjAiBase unit, IAttackableUnit target)
+        {
+            return new UnitSetLookAt
+            (
+                unit.NetId,
+                LookAtType.Unit,
+                target.Position,
+                target.NetId
+            ).GetBytes();
+        }
     }
 }

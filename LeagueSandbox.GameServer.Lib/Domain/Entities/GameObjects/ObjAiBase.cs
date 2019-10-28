@@ -18,18 +18,28 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public MovementType MovementType { get; private set; }
         public IEnumerable<Vector2> Waypoints => _waypoints;
         public bool IsMoving => MovementType == MovementType.Move || MovementType == MovementType.Attackmove;
+        public bool IsAttacking => MovementType == MovementType.Attack;
         public ISpellBook SpellBook { get; }
+        public IAttackableUnit AttackTarget { get; private set; }
+        public AutoAttackState AutoAttackState { get; private set; }
+        public float CurrentAutoAttackCooldown { get; private set; }
+        public float CurrentAutoAttackDelay { get; private set; }
+        public bool IsMelee { get; }
+        public float AutoAttackCastTime { get; }
+        public uint AutoAttackProjectileId { get; private set; }
 
         //ExpGiveRadius
         //GoldGiveRadius
         //    SpellBuffs
         //DeathTimer
         //VisionRegion
-        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius) : base(team, position, stats, netId, visionRadius, collisionRadius)
+        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius, string skinName, int skinId, ISpellBook spellBook, bool isMelee, float autoAttackCastTime) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
             SkinName = skinName;
             SkinId = skinId;
             SpellBook = spellBook;
+            IsMelee = isMelee;
+            AutoAttackCastTime = autoAttackCastTime;
             MovementType = MovementType.Stop;
         }
 
@@ -48,11 +58,81 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 
         public void StopMovement()
         {
-            if (!IsMoving)
+            if (!IsMoving && !IsAttacking)
                 throw new InvalidOperationException("Movement is already stopped");
 
             _waypoints = new List<Vector2>();
             MovementType = MovementType.Stop;
+        }
+
+        public void Attack(IAttackableUnit target, IEnumerable<Vector2> path, MovementType movementType)
+        {
+            if (movementType != MovementType.Attack)
+                throw new InvalidOperationException("Invalid order type. Attack expected.");
+            if (AttackTarget != null && AttackTarget == target && AutoAttackState != AutoAttackState.Finished)
+                return;
+
+            AttackTarget = target ?? throw new ArgumentNullException(nameof(target));
+            AutoAttackState = AutoAttackState.Preparing;
+            Move(path, movementType);
+        }
+
+        public void StopAttack()
+        {
+            if (!IsAttacking)
+                throw new InvalidOperationException("Attack is already stopped");
+
+            AttackTarget = null;
+            AutoAttackState = AutoAttackState.Finished;
+
+            if (IsMoving)
+                StopMovement();
+        }
+
+        public void AttackDelayProgress(float millisecondsDiff)
+        {
+            if (CurrentAutoAttackDelay > millisecondsDiff)
+                CurrentAutoAttackDelay -= millisecondsDiff;
+            else if (CurrentAutoAttackDelay > 0)
+                CurrentAutoAttackDelay = 0;
+        }
+
+        public void AttackCooldownProgress(float millisecondsDiff)
+        {
+            if (CurrentAutoAttackCooldown > millisecondsDiff)
+                CurrentAutoAttackCooldown -= millisecondsDiff;
+            else if (CurrentAutoAttackCooldown > 0)
+                CurrentAutoAttackCooldown = 0;
+        }
+
+        public void Attacking(uint autoAttackProjectileId)
+        {
+            if (AutoAttackState != AutoAttackState.Preparing)
+                throw new InvalidOperationException("Invalid attack state.");
+
+            AutoAttackState = AutoAttackState.Attacking;
+            CurrentAutoAttackDelay = AutoAttackCastTime / Stats.AttackSpeedMultiplier.Total;
+            CurrentAutoAttackCooldown = 0;
+            AutoAttackProjectileId = autoAttackProjectileId;
+        }
+
+        public void WindingUp()
+        {
+            if (AutoAttackState != AutoAttackState.Attacking)
+                throw new InvalidOperationException("Invalid attack state.");
+
+            AutoAttackState = AutoAttackState.Windup;
+            CurrentAutoAttackDelay = 0;
+            CurrentAutoAttackCooldown = 1.0f / Stats.GetTotalAttackSpeed();
+            AutoAttackProjectileId = 0;
+        }
+
+        public void AttackFinished()
+        {
+            if (AutoAttackState != AutoAttackState.Windup)
+                throw new InvalidOperationException("Invalid attack state.");
+
+            AutoAttackState = AutoAttackState.Finished;
         }
 
         public void DoEmote()

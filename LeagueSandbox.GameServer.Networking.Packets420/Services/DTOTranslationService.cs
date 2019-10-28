@@ -734,5 +734,17 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 spell.Definition.AmmoRechargeTime
             );
         }
+
+        public BasicAttackData TranslateBasicAttackData(IObjAiBase gameObject, uint projectileNetId)
+        {
+            return new BasicAttackData
+            (
+                gameObject.AttackTarget.NetId,
+                gameObject.AttackTarget.Position,
+                0, //TODO: ?
+                projectileNetId,
+                BasicAttackSlot.NormalSlot1 //TODO: crit
+            );
+        }
     }
 }

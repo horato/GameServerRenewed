@@ -53,6 +53,7 @@ namespace LeagueSandbox.GameServer.Lib
         private void RegisterUpdateServices(IUnityContainer container)
         {
             container.RegisterType<IMovementService, MovementService>();
+            container.RegisterType<IAttackService, AttackService>();
             container.RegisterType<ISpellbookUpdateService, SpellbookUpdateService>();
             container.RegisterType<IStatsUpdateService, StatsUpdateService>();
         }

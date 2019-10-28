@@ -26,6 +26,8 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private int _skinId = 3;
         private ISpellBook _spellBook = new SpellBookBuilder().Build();
         private float _collisionRadius = 40;
+        private bool _isMelee;
+        private float _autoAttackCastTime;
 
         public ObjAiHeroBuilder WithTeam(Team team)
         {
@@ -93,9 +95,21 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
+        public ObjAiHeroBuilder WithIsMelee(bool isMelee)
+        {
+            _isMelee = isMelee;
+            return this;
+        }
+
+        public ObjAiHeroBuilder WithAutoAttackCastTime(float autoAttackCastTime)
+        {
+            _autoAttackCastTime = autoAttackCastTime;
+            return this;
+        }
+
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId, _skinName, _skinId, _spellBook, _collisionRadius, _summonerId, _clientId, _isBot, _isPlayerControlled);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _skinName, _skinId, _spellBook, _collisionRadius, _summonerId, _clientId, _isBot, _isPlayerControlled, _isMelee, _autoAttackCastTime);
 
             return instance;
         }

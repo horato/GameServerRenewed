@@ -1,4 +1,6 @@
-﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+﻿using System.Collections.Generic;
+using System.Numerics;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
 {

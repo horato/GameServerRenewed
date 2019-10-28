@@ -27,7 +27,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //    MinionFlags
         //IsWard
 
-        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints, bool isLaneMinion) : base(team, position, stats, netId, skinName, skinId, visionRadius, spellBook, collisionRadius)
+        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints, bool isLaneMinion, bool isMelee, float autoAttackCastTime) : base(team, position, stats, netId, visionRadius, collisionRadius, skinName, skinId, spellBook, isMelee, autoAttackCastTime)
         {
             MinionState = minionState;
             MinionWaypoints = minionWaypoints;
@@ -59,7 +59,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
 
         public void DestinationReached()
         {
-            if(MinionState != MinionActionState.Moving)
+            if (MinionState != MinionActionState.Moving)
                 throw new InvalidOperationException("Wrong minion state");
 
             MinionState = MinionActionState.DestinationReached;

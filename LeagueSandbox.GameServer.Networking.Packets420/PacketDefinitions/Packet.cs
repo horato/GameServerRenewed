@@ -42,6 +42,12 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions
             _writer.Write((float)v.Z);
         }
 
+        protected void WriteVector2(Vector2 v)
+        {
+            _writer.Write((float)v.X);
+            _writer.Write((float)v.Y);
+        }
+
         protected void Clear()
         {
             _stream = new MemoryStream();

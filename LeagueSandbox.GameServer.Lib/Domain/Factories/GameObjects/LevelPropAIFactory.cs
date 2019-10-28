@@ -47,7 +47,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.Rotation, 
                 new Vector3(0, 0, 0), 
                 obj.Scale,
-                obj.LevelPropData.Name
+                obj.LevelPropData.Name,
+                true,
+                0
             );
 
             return SetupDependencies(instance);

@@ -54,7 +54,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 spellBook,
                 data.GameplayCollisionRadius,
                 obj.TurretData.Lane,
-                obj.TurretData.Position
+                obj.TurretData.Position,
+                data.IsMelee,
+                data.AttackCastTime
             );
 
             return SetupDependencies(instance);

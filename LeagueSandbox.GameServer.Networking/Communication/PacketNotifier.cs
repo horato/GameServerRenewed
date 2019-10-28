@@ -326,6 +326,36 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             }
         }
 
+        public void NotifyAutoAttackStart(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId)
+        {
+            var data = _packetWriter.WriteAutoAttackStart(gameObject, projectileNetId);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+        
+        public void NotifyAutoAttack(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId)
+        {
+            var data = _packetWriter.WriteAutoAttack(gameObject, projectileNetId);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
+        public void NotifyUnitSetLookAt(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, IAttackableUnit target)
+        {
+            var data = _packetWriter.WriteUnitSetLookAt(unit, target);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
         public void SendPacket(NetworkUser user, byte[] source, Channel channel)
         {
             var data = EncryptIfNeeded(source);

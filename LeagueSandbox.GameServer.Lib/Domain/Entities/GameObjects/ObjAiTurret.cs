@@ -11,7 +11,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public Lane Lane { get; }
         public TurretPosition TurretPosition { get; }
 
-        public ObjAiTurret(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, ISpellBook spellBook, float collisionRadius, Lane lane, TurretPosition turretPosition) : base(team, position, stats, netId, skinName, skinId, 1200, spellBook, collisionRadius)
+        public ObjAiTurret(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, ISpellBook spellBook, float collisionRadius, Lane lane, TurretPosition turretPosition, bool isMelee, float autoAttackCastTime) : base(team, position, stats, netId, 1200, collisionRadius, skinName, skinId, spellBook, isMelee, autoAttackCastTime)
         {
             Lane = lane;
             TurretPosition = turretPosition;

@@ -16,5 +16,6 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
         IEnumerable<MovementDataNormal> TranslateMovementUpdate(IEnumerable<IGameObject> gameObjects, uint syncId, Vector2 mapCenter);
         IEnumerable<ReplicationData> TranslateReplicationData(IEnumerable<IAttackableUnit> gameObjects);
         CastInfo TranslateCastInfo(IObjAiBase caster, ISpellInstance spell);
+        BasicAttackData TranslateBasicAttackData(IObjAiBase gameObject, uint projectileNetId);
     }
 }

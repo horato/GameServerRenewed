@@ -52,7 +52,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 charData.GameplayCollisionRadius,
                 MinionActionState.Spawned,
                 barrack.MinionWaypoints,
-                true
+                true,
+                charData.IsMelee,
+                charData.AttackCastTime
             );
             
             return SetupDependencies(instance);

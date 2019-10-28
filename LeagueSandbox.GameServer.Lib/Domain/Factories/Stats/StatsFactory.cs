@@ -89,7 +89,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
                 false,
                 0,
                 0,
-                _flatStatFactory.CreateNew(data.AttackSpeed, data.AttackSpeedPerLevel, 0, 0),
+                _flatStatFactory.CreateNew(0.625f / (1 + data.AttackDelayOffsetPercent), data.AttackSpeedPerLevel / 100, 0, 0),
                 _flatStatFactory.CreateNew(data.BaseHP, data.HPPerLevel, data.BaseStaticHPRegen, data.HPRegenPerLevel),
                 _flatStatFactory.CreateNew(data.BaseMP, data.MPPerLevel, data.BaseStaticMPRegen, data.MPRegenPerLevel),
                 _flatStatFactory.CreateNew(data.BaseDamage, data.DamagePerLevel, 0, 0),

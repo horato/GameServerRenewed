@@ -44,6 +44,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
             if (Math.Abs(level - stats.Level.CurrentValue) < float.Epsilon)
                 return;
 
+            //TODO: Shouldn't these be baseBonus instead of baseValue?
+
             // Change level
             var levelDifference = _calculationService.CalculateStatDifference(stats.Level.CurrentValue, level, _map.Value.MaxLevel, 1);
             var levelModifier = _flatStatModifierFactory.CreateValueModifier(levelDifference);
@@ -85,9 +87,9 @@ namespace LeagueSandbox.GameServer.Lib.Services
             stats.ManaRegeneration.ApplyStatModifier(baseModifier);
 
             // Change base AS
-            baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.FlatAttackSpeed.CurrentValue, stats.FlatAttackSpeed.BonusPerLevel, levelDifference);
-            var asModifier = _flatStatModifierFactory.CreateValueModifier(baseDifference);
-            stats.FlatAttackSpeed.ApplyStatModifier(asModifier);
+            baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.AttackSpeedMultiplier.BaseValue, stats.FlatAttackSpeed.BonusPerLevel, levelDifference);
+            var asModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
+            stats.AttackSpeedMultiplier.ApplyStatModifier(asModifier);
 
             // TODO: current hp/mp
             //    CurrentHealth = HealthPoints.Total / (HealthPoints.Total - HealthPerLevel) * CurrentHealth;
@@ -99,8 +101,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
             var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); //TODO: vision
             _packetNotifier.NotifyLevelUp(targetSummonerIds, hero);
         }
-    }       
-    
+    }
+
     //public void Update(float diff)
     //{
     //    if (HealthRegeneration.Total > 0 && CurrentHealth < HealthPoints.Total && CurrentHealth > 0)

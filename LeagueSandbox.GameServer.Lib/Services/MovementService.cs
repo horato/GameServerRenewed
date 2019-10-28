@@ -3,6 +3,7 @@ using System.Numerics;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Lib.Maths;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.Services
 {
@@ -17,13 +18,24 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
         public void MoveObject(IObjAiBase gameObject, float millisecondsDiff)
         {
-            if (!gameObject.IsMoving)
+            if (!IsMoving(gameObject))
                 return;
 
             var to = gameObject.Waypoints.First();
             Move(gameObject, millisecondsDiff, to);
         }
-        
+
+        private bool IsMoving(IObjAiBase gameObject)
+        {
+            if (gameObject.IsMoving)
+                return true;
+            if (!gameObject.IsAttacking)
+                return false;
+
+            var distance = _calculationService.CalculateDistance(gameObject, gameObject.AttackTarget);
+            return distance > gameObject.Stats.Range.Total;
+        }
+
         private void Move(IObjAiBase gameObject, float diff, Vector2 to)
         {
             var movementSpeed = gameObject.Stats.MoveSpeed.Total;
