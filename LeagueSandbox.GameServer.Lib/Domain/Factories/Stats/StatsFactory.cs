@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Core.Map.MapObjects;
-using LeagueSandbox.GameServer.Utils.CharacterDatas;
 using Unity;
 
 namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
@@ -73,7 +73,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Stats
             return SetupDependencies(instance);
         }
 
-        public IStats CreateFromCharacterData(CharacterData data)
+        public IStats CreateFromCharacterData(ICharacterData data)
         {
             var instance = new Entities.Stats.Stats
             (

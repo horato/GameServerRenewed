@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
 using LeagueSandbox.GameServer.Lib.Domain.Entities.Spells;
-using LeagueSandbox.GameServer.Utils.CharacterDatas;
 using LeagueSandbox.GameServer.Utils.Providers;
 using Unity;
 
@@ -29,7 +29,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return SetupDependencies(instance);
         }
 
-        public ISpellBook CreateFromCharacterData(string characterName, CharacterData data)
+        public ISpellBook CreateFromCharacterData(string characterName, ICharacterData data)
         {
             var spells = new List<ISpell>();
             if (!string.IsNullOrWhiteSpace(data.Spell1))
@@ -69,7 +69,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             return SetupDependencies(instance);
         }
 
-        private void AddExtraSpells(string characterName, CharacterData data, IList<ISpell> spells)
+        private void AddExtraSpells(string characterName, ICharacterData data, IList<ISpell> spells)
         {
             if (!string.IsNullOrWhiteSpace(data.ExtraSpell1))
             {

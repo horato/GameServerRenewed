@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
-using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Utils.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;

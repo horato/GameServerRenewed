@@ -1,6 +1,6 @@
 ﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
 
-namespace LeagueSandbox.GameServer.Core.Scripting
+namespace LeagueSandbox.GameServer.Core.Data
 {
     public interface ISpellData
     {

@@ -1,9 +1,9 @@
-﻿using LeagueSandbox.GameServer.Utils.CharacterDatas;
+﻿using LeagueSandbox.GameServer.Core.Data;
 
 namespace LeagueSandbox.GameServer.Utils.Providers
 {
     public interface ICharacterDataProvider
     {
-        CharacterData ProvideCharacterData(string characterName);
+        ICharacterData ProvideCharacterData(string characterName);
     }
 }

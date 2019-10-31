@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Utils.CharacterDatas;

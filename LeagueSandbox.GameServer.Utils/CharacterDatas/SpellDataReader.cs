@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using LeagueSandbox.GameServer.Core.Scripting;
+using LeagueSandbox.GameServer.Core.Data;
 using Newtonsoft.Json.Linq;
 
 namespace LeagueSandbox.GameServer.Utils.CharacterDatas
@@ -13,7 +13,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
     {
         public const string GlobalPackage = "GLOBAL";
 
-        public static SpellData ReadDataPackage(string characterName, string spellName)
+        public static ISpellData ReadDataPackage(string characterName, string spellName)
         {
             var filePath = $"Data/Characters/{characterName}/Spells/{spellName}.json";
             var json = File.ReadAllText(filePath);
@@ -24,7 +24,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
             return new JsonSerializer().Deserialize<SpellData>(token["Values"]["SpellData"].CreateReader());
         }
 
-        public static SpellData ReadDataGlobal(string spellName)
+        public static ISpellData ReadDataGlobal(string spellName)
         {
             var filePath = $"Data/Spells/{spellName}.json";
             var json = File.ReadAllText(filePath);

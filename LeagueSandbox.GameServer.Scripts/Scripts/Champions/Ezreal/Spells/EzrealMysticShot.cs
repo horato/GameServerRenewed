@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
-using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Core.Services;
 using LeagueSandbox.GameServer.Scripts.Base;
 

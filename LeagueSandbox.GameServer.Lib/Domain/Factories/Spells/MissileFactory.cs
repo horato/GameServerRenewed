@@ -1,4 +1,5 @@
 ﻿using System;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;

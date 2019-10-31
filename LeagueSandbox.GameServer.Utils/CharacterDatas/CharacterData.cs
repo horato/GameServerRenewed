@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Utils.JsonConverters;
 using Newtonsoft.Json;
@@ -8,7 +9,7 @@ using Newtonsoft.Json.Converters;
 
 namespace LeagueSandbox.GameServer.Utils.CharacterDatas
 {
-    public class CharacterData
+    public class CharacterData : ICharacterData
     {
         public float AbilityPowerIncPerLevel { get; }
         public float AcquisitionRange { get; }
