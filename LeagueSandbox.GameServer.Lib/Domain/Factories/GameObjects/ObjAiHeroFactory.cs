@@ -62,13 +62,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 player.Champion,
                 player.Skin,
                 spellBook,
-                data.GameplayCollisionRadius,
                 player.SummonerId,
                 clientId,
                 player.IsBot,
                 false,
-                data.IsMelee,
-                (1.6f * (1.0f + data.AttackDelayOffsetPercent)) * (0.3f + data.AttackDelayCastOffsetPercent) //TODO: remove this
+                data
             );
 
             return SetupDependencies(instance);

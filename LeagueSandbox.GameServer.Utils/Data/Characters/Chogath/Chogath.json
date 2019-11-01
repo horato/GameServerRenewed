@@ -1,204 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Chogath",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 28.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.08100000023841858,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 125,
-      "AttackRank": 3,
-      "AttackSpeedPerLevel": 1.440000057220459,
-      "BaseCritChance": 0,
-      "BaseDamage": 61.15599822998047,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 574.4000244140625,
-      "BaseMP": 272.20001220703125,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.785599946975708,
-      "BaseStaticMPRegen": 1.4412000179290771,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 31,
-      "ChasingAttackRangePercent": 0.5,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 1,
-      "CS_hard": 1,
-      "DamagePerLevel": 4.2,
-      "DefenseRank": 7,
-      "DifficultyRank": 5,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "ChogathBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "ChogathCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": 0,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "VorpalSpikesMissle",
-      "ExtraSpell2": "VorpalSpikesMissle2",
-      "ExtraSpell3": "VorpalSpikesMissle3",
-      "ExtraSpell4": "VorpalSpikesMissle4",
-      "ExtraSpell5": "VorpalSpikesMissle5",
-      "ExtraSpell6": "VorpalSpikesMissle6",
-      "GameplayCollisionRadius": 80,
-      "HPPerLevel": 80,
-      "HPRegenPerLevel": 0.17000000178813934,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 1.5,
-      "Lore1": "game_character_lore_Chogath",
-      "MagicRank": 7,
-      "MoveSpeed": 345,
-      "MPPerLevel": 40,
-      "MPRegenPerLevel": 0.09000000357627869,
-      "Name": "game_character_displayname_Chogath",
-      "PassLev1Desc1": "game_character_passiveDescription_Chogath",
-      "Passive1Icon": "GreenTerror_TailSpike.dds",
-      "Passive1LuaName": "Carnivore",
-      "Passive1Name": "game_character_passiveName_Chogath",
-      "PathfindingCollisionRadius": 50,
-      "PostAttackMoveDelay": 0,
-      "Roles": "TANK,NIGHTMARE",
-      "SearchTags": "tank",
-      "SelectionHeight": 150,
-      "SelectionRadius": 130,
-      "Spell1": "Rupture",
-      "Spell1Desc": "Cho'Gath causes an area to explode with spikes, launching enemies into the air and slowing their move and attack speeds.",
-      "Spell1DisplayName": "Rupture",
-      "Spell2": "FeralScream",
-      "Spell2Desc": "Cho'Gath lets out a terrible scream, dealing damage to enemies in a cone and silencing them.",
-      "Spell2DisplayName": "Feral Scream",
-      "Spell3": "VorpalSpikes",
-      "Spell3Desc": "Enemies that attack Cho'Gath are damaged and slowed slightly.",
-      "Spell3DisplayName": "Vorpal Spikes",
-      "Spell4": "Feast",
-      "Spell4Desc": "Cho'Gath consumes a unit in one gulp.  He gains a size level each time he kills a unit in this way, gaining health, ability power, and he can Feast on higher health units.",
-      "Spell4DisplayName": "Feast",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "SR_easy": 1,
-      "SR_medium": 1,
-      "SR_hard": 1,
-      "Tips1": "game_character_tips_Chogath",
-      "Tips2": "game_character_opposing_tips_Chogath",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "GreenTerrorBasicAttack"
+  "Name": "Chogath",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 31,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 574.4,
+  "BasePAR": 272.2,
+  "HPPerLevel": 80.0,
+  "PARPerLevel": 40.0,
+  "HPRegenPerLevel": 0.17,
+  "PARRegenPerLevel": 0.09,
+  "BaseStaticHPRegen": 1.7856,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.4412,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 61.156,
+  "PhysicalDamagePerLevel": 4.2,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 28.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.014400001,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 150.0,
+  "OverrideCollisionRadius": 130.0,
+  "PathfindingCollisionRadius": 50.0,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "Rupture",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 2
+    "W": {
+      "Name": "FeralScream",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "GreenTerror_Circle.dds",
-      "IconSquare": "GreenTerror_Square.dds"
+    "E": {
+      "Name": "VorpalSpikes",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "Chogath.blnd",
-      "ChampionSkinID": 31000,
-      "ChampionSkinName": "Chogath",
-      "OverrideBoundingBox": [
-        130.0,
-        230.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Chogath.skn",
-      "Skeleton": "Chogath.skl",
-      "SkinScale": 0.8,
-      "Texture": "GreenTerror.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "Chogath.blnd",
-      "ChampionSkinID": 31001,
-      "ChampionSkinName": "NightmareChogath",
-      "OverrideBoundingBox": [
-        130.0,
-        230.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Chogath.skn",
-      "Skeleton": "Chogath.skl",
-      "SkinScale": 0.8,
-      "Texture": "GreenTerror_alt.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "Chogath.blnd",
-      "ChampionSkinID": 31002,
-      "ChampionSkinName": "DandyChogath",
-      "OverrideBoundingBox": [
-        130.0,
-        230.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "chogath_Dandy.skn",
-      "Skeleton": "chogath_Dandy.skl",
-      "SkinScale": 0.8,
-      "Texture": "chogath_Dandy_TX_CM.dds",
-      "UsesSkinVO": 1
-    },
-    "MeshSkin3": {
-      "Animations": "Chogath.blnd",
-      "ChampionSkinID": 31003,
-      "ChampionSkinName": "AbyssChogath",
-      "OverrideBoundingBox": [
-        130.0,
-        230.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Chogath_abyss.skn",
-      "Skeleton": "Chogath_abyss.skl",
-      "SkinScale": 0.8,
-      "Texture": "Chogath_abyss_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "DinosaurChogath.blnd",
-      "ChampionSkinID": 31004,
-      "ChampionSkinName": "DinosaurChogath",
-      "OverrideBoundingBox": [
-        130.0,
-        230.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Chogath_dinosaur.skn",
-      "Skeleton": "Chogath_dinosaur.skl",
-      "SkinScale": 0.8,
-      "Texture": "chogath_dinosaur_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "BattlecastChogath.blnd",
-      "ChampionSkinID": 31005,
-      "ChampionSkinName": "BattlecastChogath",
-      "OverrideBoundingBox": [
-        130.0,
-        230.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Chogath_battlecast.skn",
-      "Skeleton": "Chogath_battlecast.skl",
-      "SkinScale": 0.6000000000000001,
-      "Texture": "chogath_battlecast_TX_CM.dds",
-      "UsesSkinVO": 1
+    "R": {
+      "Name": "Feast",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "113008000": 8,
-    "121269505": 13,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": "mage",
-    "3319269524": 1,
-    "4015135009": 1
+  "ExtraSpells": {
+    "ExtraSpell1": "VorpalSpikesMissle",
+    "ExtraSpell2": "VorpalSpikesMissle2",
+    "ExtraSpell3": "VorpalSpikesMissle3",
+    "ExtraSpell4": "VorpalSpikesMissle4",
+    "ExtraSpell5": "VorpalSpikesMissle5",
+    "ExtraSpell6": "VorpalSpikesMissle6",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "ChogathBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "ChogathBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "ChogathBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "ChogathBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "ChogathBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "ChogathBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "ChogathBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "ChogathBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "ChogathBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "ChogathCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "ChogathCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "ChogathCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "ChogathCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "ChogathCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "ChogathCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "ChogathCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "ChogathCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "ChogathCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.081,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

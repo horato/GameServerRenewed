@@ -1,96 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Blue_Minion_Basic",
-      "Armor": 0,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": 0.11670000106096268,
-      "AttackDelayOffsetPercent": -0.5,
-      "AttackRange": 110,
-      "AttackSpeed": 1.6,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 12.0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 455,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0,
-      "BaseStaticMPRegen": 0,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "DeathTime": 2.5,
-      "EnemyTooltip": "game_character_enemyTooltip_Blue_Minion_Basic",
-      "ExpGivenOnDeath": 77.0,
-      "BaseAttack_Probability": 0.4,
-      "ExtraAttack1": "Blue_Minion_BasicBasicAttack2",
-      "ExtraAttack2": "Blue_Minion_BasicBasicAttack3",
-      "ExtraAttack1_Probability": 0.30000000000000004,
-      "ExtraAttack2_Probability": 0.30000000000000004,
-      "FriendlyTooltip": "game_character_friendlyTooltip_Blue_Minion_Basic",
-      "GameplayCollisionRadius": 48.0,
-      "GoldGivenOnDeath": 20.0,
-      "HPPerLevel": 0,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "LocalExpGivenOnDeath": 0,
-      "LocalGoldGivenOnDeath": 0,
-      "Metadata": "class:minion",
-      "MoveSpeed": 325,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_Blue_Minion_Basic",
-      "PathfindingCollisionRadius": 35.74369812011719,
-      "PerceptionBubbleRadius": 1200,
-      "SelectionHeight": 75.0,
-      "SelectionRadius": 115.0,
-      "Significance": 0.4,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "TowerTargetingPriorityBoost": 1,
-      "UnitTags": "Minion | Minion_Lane",
-      "WeaponMaterial": "Blue_Minion_BasicBasicAttack"
+  "Name": "Blue_Minion_Basic",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 455.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 12.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 0.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 325.0,
+  "AttackRange": 110.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 1.0,
+  "DeathTime": 2.5,
+  "GoldGivenOnDeath": 20.0,
+  "ExpGivenOnDeath": 77.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1200.0,
+  "Significance": 0.4,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 75.0,
+  "OverrideCollisionRadius": 115.0,
+  "PathfindingCollisionRadius": 35.7437,
+  "GameplayCollisionRadius": 48.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "BlueMelee_Circle.dds",
-      "IconSquare": "BlueMelee_Square.dds"
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "Blue_Minion_BasicBase.blnd",
-      "ChampionSkinName": "Blue_Minion_BasicBase",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Blue_Minion_Basic.skn",
-      "Skeleton": "Blue_Minion_Basic.skl",
-      "SkinScale": 0.9,
-      "Texture": "Blue_Minion_Basic.dds"
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin1": {
-      "Animations": "MeshSkin1.blnd",
-      "ChampionSkinName": "MeshSkin1",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Blue_Minion_Harrowing.skn",
-      "Skeleton": "Blue_Minion_Harrowing.skl",
-      "SkinScale": 0.9,
-      "Texture": "blueminion_basic_bathead_minions_TX_CM_v01.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "MeshSkin2.blnd",
-      "ChampionSkinName": "MeshSkin2",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Blue_Minion_Snowdown.skn",
-      "Skeleton": "Blue_Minion_Snowdown.skl",
-      "SkinScale": 0.9,
-      "Texture": "blueminion_basic_raindeer_TX_CM_v01.dds"
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "2818610673": 60.0
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "Blue_Minion_BasicBasicAttack",
+      "Probability": 0.4,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "Blue_Minion_BasicBasicAttack2",
+      "Probability": 0.3,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "Blue_Minion_BasicBasicAttack3",
+      "Probability": 0.3,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "Blue_Minion_BasicBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "Blue_Minion_BasicBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "Blue_Minion_BasicBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "Blue_Minion_BasicBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "Blue_Minion_BasicBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "Blue_Minion_BasicBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "Blue_Minion_BasicCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "Blue_Minion_BasicCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "Blue_Minion_BasicCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "Blue_Minion_BasicCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "Blue_Minion_BasicCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "Blue_Minion_BasicCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "Blue_Minion_BasicCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "Blue_Minion_BasicCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "Blue_Minion_BasicCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.5,
+      "DelayCastOffsetPercent": 0.1167,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

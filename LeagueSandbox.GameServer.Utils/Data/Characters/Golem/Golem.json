@@ -1,75 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Golem",
-      "AcquisitionRange": 300,
-      "Armor": 12,
-      "ArmorMaterial": "Stone",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": 0.10999999940395355,
-      "AttackDelayOffsetPercent": 0.019999999552965164,
-      "AttackRange": 150,
-      "AttackSpeed": 1.5,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 60,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 1200,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0,
-      "BaseStaticMPRegen": 0,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "EnemyTooltip": "game_character_enemyTooltip_Golem",
-      "ExperienceRadius": 400.0,
-      "ExpGivenOnDeath": 140.0,
-      "GameplayCollisionRadius": 80.0,
-      "GoldGivenOnDeath": 55.0,
-      "HPPerLevel": 0,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MonsterDataTableId": 1,
-      "MoveSpeed": 285,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_Golem",
-      "PathfindingCollisionRadius": 24.57469940185547,
-      "SelectionHeight": 120,
-      "SelectionRadius": 155,
-      "Significance": 0.5,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "SpellBlock": -10,
-      "UnitTags": "Monster | Monster_Large",
-      "WeaponMaterial": "GolemBasicAttack"
+  "Name": "Golem",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 1,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 1200.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 60.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 12.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": -10.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 285.0,
+  "AttackRange": 150.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 300.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 55.0,
+  "ExpGivenOnDeath": 140.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 400.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.5,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 120.0,
+  "OverrideCollisionRadius": 155.0,
+  "PathfindingCollisionRadius": 24.5747,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 0,
-      "Particle1": "Golem_idle.troy spine_b"
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Golem_Circle.dds",
-      "IconSquare": "Golem_Square.dds"
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "Golem.blnd",
-      "ChampionSkinName": "Golem",
-      "EmissiveTexture": "Golem_Diffuse_Cmask.dds",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Golem.skn",
-      "Skeleton": "Golem.skl",
-      "SkinScale": 1.1,
-      "Texture": "Golem.dds"
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "2818610673": 50.0
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "GolemBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "GolemBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "GolemBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "GolemBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "GolemBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "GolemBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "GolemBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "GolemBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "GolemBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "GolemCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "GolemCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "GolemCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "GolemCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "GolemCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "GolemCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "GolemCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "GolemCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "GolemCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

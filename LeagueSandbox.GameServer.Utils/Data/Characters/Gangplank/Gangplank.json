@@ -1,113 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Gangplank",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 26.04400062561035,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.3000000000000003,
-      "AttackDelayCastOffsetPercent": -0.110980903,
-      "AttackDelayOffsetPercent": -0.03999999910593033,
-      "AttackRange": 125,
-      "AttackRank": 7,
-      "AttackSpeedPerLevel": 2.75,
-      "BaseCritChance": 0,
-      "BaseDamage": 59.040000915527344,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 631.0800170898438,
-      "BaseMP": 282.20001220703125,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.1019999980926514,
-      "BaseStaticMPRegen": 1.5351999998092651,
-      "ChampionId": 41,
-      "Classification": "Strong",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3,
-      "DefenseRank": 6,
-      "DifficultyRank": 3,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "GangplankBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "GangplankCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.110980903,
-      "CritAttack_AttackDelayOffsetPercent": -0.03999999910593033,
-      "ExtraSpell1": "CannonBarrageBall",
-      "ExtraSpell2": "ScurvyStrike",
-      "HPPerLevel": 81,
-      "HPRegenPerLevel": 0.15000000596046448,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 1.5,
-      "Lore1": "game_character_lore_Gangplank",
-      "MagicRank": 4,
-      "MoveSpeed": 345,
-      "MPPerLevel": 40,
-      "MPRegenPerLevel": 0.14000000059604645,
-      "Name": "game_character_displayname_Gangplank",
-      "Passive1": 1,
-      "Passive1Desc": "game_character_passiveDescription_Gangplank",
-      "PassLev1Desc1": "game_character_passiveDescription_Gangplank",
-      "PassLev1Desc2": "game_character_passiveDescription_Gangplank",
-      "PassLev1Desc3": "game_character_passiveDescription_Gangplank",
-      "PassLev1Desc4": "game_character_passiveDescription_Gangplank",
-      "Passive1Icon": "Pirate_GrogSoakedBlade.dds",
-      "Passive1Level1": 1,
-      "Passive1Level2": 9,
-      "Passive1Level3": 17,
-      "Passive1Effect1": 0.2,
-      "Passive1Effect2": 0.4,
-      "Passive1Effect3": 0.6000000000000001,
-      "Passive1LuaName": "Scurvy",
-      "Passive1Name": "game_character_passiveName_Gangplank",
-      "Passive1NumEffects": 1,
-      "Passive2": 10,
-      "Passive2NumEffects": 0,
-      "Passive3": 0,
-      "Passive3NumEffects": 0,
-      "Passive4": 0,
-      "Passive4NumEffects": 0,
-      "PathfindingCollisionRadius": 35,
-      "SearchTags": "fighter",
-      "SelectionHeight": 145,
-      "SelectionRadius": 85,
-      "Spell1": "Parley",
-      "Spell1DisplayName": "Parley",
-      "Spell2": "RemoveScurvy",
-      "Spell2DisplayName": "RaiseMorale",
-      "Spell3": "RaiseMorale",
-      "Spell3DisplayName": "Scurvy",
-      "Spell4": "CannonBarrage",
-      "Spell4DisplayName": "CannonBarrage",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Gangplank",
-      "Tips2": "game_character_opposing_tips_Gangplank",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "PirateBasicAttack"
+  "Name": "Gangplank",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 41,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 631.08,
+  "BasePAR": 282.2,
+  "HPPerLevel": 81.0,
+  "PARPerLevel": 40.0,
+  "HPRegenPerLevel": 0.15,
+  "PARRegenPerLevel": 0.14,
+  "BaseStaticHPRegen": 1.102,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.5352,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 59.04,
+  "PhysicalDamagePerLevel": 3.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 26.044,
+  "ArmorPerLevel": 3.3,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.0275,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 145.0,
+  "OverrideCollisionRadius": 85.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "Parley",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 4,
-      "Particle1": "ghostgangplank.troy head",
-      "Particle2": "ghostgangplank.troy spine",
-      "Particle3": "ghostgangplank.troy L_foot",
-      "Particle4": "ghostgangplank.troy R_foot"
+    "W": {
+      "Name": "RemoveScurvy",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Pirate_Circle.dds",
-      "IconSquare": "Pirate_Square.dds"
+    "E": {
+      "Name": "RaiseMorale",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "CannonBarrage",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1054,
-    "137792515": 14,
-    "113008000": 0,
-    "121269505": 0,
-    "129531010": 0,
-    "510504319": 0,
-    "2500095475": "support"
+  "ExtraSpells": {
+    "ExtraSpell1": "CannonBarrageBall",
+    "ExtraSpell2": "ScurvyStrike",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "GangplankBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "GangplankBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "GangplankBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "GangplankBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "GangplankBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "GangplankBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "GangplankBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "GangplankBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "GangplankBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "GangplankCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "GangplankCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "GangplankCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "GangplankCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "GangplankCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "GangplankCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "GangplankCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "GangplankCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "GangplankCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

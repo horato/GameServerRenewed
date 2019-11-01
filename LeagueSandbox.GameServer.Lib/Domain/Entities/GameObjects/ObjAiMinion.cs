@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
@@ -27,7 +28,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //    MinionFlags
         //IsWard
 
-        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, float visionRadius, ISpellBook spellBook, float collisionRadius, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints, bool isLaneMinion, bool isMelee, float autoAttackCastTime) : base(team, position, stats, netId, visionRadius, collisionRadius, skinName, skinId, spellBook, isMelee, autoAttackCastTime)
+        public ObjAiMinion(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, ISpellBook spellBook, MinionActionState minionState, IDictionary<int, Vector2> minionWaypoints, bool isLaneMinion, ICharacterData characterData) : base(team, position, stats, netId, characterData.PerceptionBubbleRadius, characterData.GameplayCollisionRadius, skinName, skinId, spellBook, characterData)
         {
             MinionState = minionState;
             MinionWaypoints = minionWaypoints;

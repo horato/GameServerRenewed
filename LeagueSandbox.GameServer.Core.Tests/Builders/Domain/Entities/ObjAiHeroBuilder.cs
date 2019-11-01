@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
@@ -25,9 +26,7 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
         private string _skinName = "Ahri";
         private int _skinId = 3;
         private ISpellBook _spellBook = new SpellBookBuilder().Build();
-        private float _collisionRadius = 40;
-        private bool _isMelee;
-        private float _autoAttackCastTime;
+        private ICharacterData _characterData; //TODO: builder?
 
         public ObjAiHeroBuilder WithTeam(Team team)
         {
@@ -89,27 +88,15 @@ namespace LeagueSandbox.GameServer.Lib.Tests.Builders.Domain.Entities
             return this;
         }
 
-        public ObjAiHeroBuilder WithCollisionRadius(float collisionRadius)
+        public ObjAiHeroBuilder WithCharacterData(ICharacterData characterData)
         {
-            _collisionRadius = collisionRadius;
-            return this;
-        }
-
-        public ObjAiHeroBuilder WithIsMelee(bool isMelee)
-        {
-            _isMelee = isMelee;
-            return this;
-        }
-
-        public ObjAiHeroBuilder WithAutoAttackCastTime(float autoAttackCastTime)
-        {
-            _autoAttackCastTime = autoAttackCastTime;
+            _characterData = characterData;
             return this;
         }
 
         public override ObjAiHero Build()
         {
-            var instance = new ObjAiHero(_team, _position, _stats, _netId, _skinName, _skinId, _spellBook, _collisionRadius, _summonerId, _clientId, _isBot, _isPlayerControlled, _isMelee, _autoAttackCastTime);
+            var instance = new ObjAiHero(_team, _position, _stats, _netId, _skinName, _skinId, _spellBook, _summonerId, _clientId, _isBot, _isPlayerControlled, _characterData);
 
             return instance;
         }

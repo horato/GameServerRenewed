@@ -1,196 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_TwistedFate",
-      "PlatformEnabled": 1,
-      "Armor": 20.54199981689453,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.1500000953674316,
-      "AttackDelayCastOffsetPercent": -0.055964382,
-      "AttackDelayOffsetPercent": -0.03999999910593033,
-      "AttackRange": 525,
-      "AttackRank": 6,
-      "AttackSpeedPerLevel": 3.2200000286102295,
-      "BaseCritChance": 0,
-      "BaseDamage": 49.95399856567383,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 521.760009765625,
-      "BaseMP": 265.8399963378906,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.1016000509262085,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "ChampionId": 4,
-      "ChasingAttackRangePercent": 0.8,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.3000000000000003,
-      "DefenseRank": 2,
-      "DifficultyRank": 9,
-      "BaseAttack_Probability": 0.25,
-      "ExtraAttack1": "TwistedFateBasicAttack2",
-      "ExtraAttack1_Probability": 0.25,
-      "ExtraAttack2_Probability": 0.25,
-      "ExtraAttack3_Probability": 0.25,
-      "CritAttack": "TwistedFateCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.055964382,
-      "CritAttack_AttackDelayOffsetPercent": -0.03999999910593033,
-      "ExtraSpell1": "BlueCardAttack",
-      "ExtraSpell2": "RedCardAttack",
-      "ExtraSpell3": "GoldCardAttack",
-      "ExtraSpell4": "BlueCardPreAttack",
-      "ExtraSpell5": "RedCardPreAttack",
-      "ExtraSpell6": "GoldCardPreAttack",
-      "ExtraSpell7": "SealFateMissile",
-      "HPPerLevel": 82,
-      "HPRegenPerLevel": 0.11999999731779099,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 3,
-      "Lore1": "game_character_lore_TwistedFate",
-      "MagicRank": 6,
-      "MoveSpeed": 330,
-      "MPPerLevel": 38,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_TwistedFate",
-      "Passive1Desc": "Increases all friendly Champions' critical strike chance",
-      "PassLev1Desc1": "game_character_passiveDescription_TwistedFate",
-      "PassLev1Desc2": "Adds +10% Attack Rate.",
-      "PassLev1Desc3": "Adds +15% Attack Rate.",
-      "PassLev1Desc4": "Adds +20% Attack Rate.",
-      "Passive1Icon": "Cardmaster_SealFate.dds",
-      "Passive1LuaName": "Second Sight",
-      "Passive1Name": "game_character_passiveName_TwistedFate",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0.2,
-      "SearchTags": "mage",
-      "SelectionHeight": 140,
-      "SelectionRadius": 110,
-      "Spell1": "WildCards",
-      "Spell1Desc": "Fires 3 cards in a cone pattern, dealing damage to enemies they hit.",
-      "Spell1DisplayName": "Wild Cards",
-      "Spell2": "PickACard",
-      "Spell2Desc": "Twisted Fate's attacks can deal extra damage, extra AoE damage with slow, or lots of extra AoE damage with stun!",
-      "Spell2DisplayName": "Pick a Card",
-      "Spell3": "CardmasterStack",
-      "Spell3Desc": "Teleports Twisted Fate to target distant location.",
-      "Spell3DisplayName": "Gate",
-      "Spell4": "Destiny",
-      "Spell4Desc": "Reveals all enemy Champions and slows their movement speed for a short duration.",
-      "Spell4DisplayName": "Destiny",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_TwistedFate",
-      "Tips2": "game_character_opposing_tips_TwistedFate",
-      "UnitTags": "Champion"
+  "Name": "TwistedFate",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.2,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 4,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 521.76,
+  "BasePAR": 265.84,
+  "HPPerLevel": 82.0,
+  "PARPerLevel": 38.0,
+  "HPRegenPerLevel": 0.12,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 1.1016,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 49.954,
+  "PhysicalDamagePerLevel": 3.3,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 20.542,
+  "ArmorPerLevel": 3.15,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 330.0,
+  "AttackRange": 525.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0322,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 140.0,
+  "OverrideCollisionRadius": 110.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "WildCards",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "TwistedFate_Undwerworld_idle.troy L_Hand"
+    "W": {
+      "Name": "PickACard",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "TwistedFate_Circle_0.dds",
-      "IconSquare": "TwistedFate_Square_0.dds"
+    "E": {
+      "Name": "CardmasterStack",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "BaseTwistedFate.blnd",
-      "ChampionSkinID": 4000,
-      "ChampionSkinName": "BaseTwistedFate",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate2012.skn",
-      "Skeleton": "TwistedFate2012.skl",
-      "SkinScale": 1,
-      "Texture": "Twistedfate_base_2012_CM.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "BaseTwistedFate.blnd",
-      "ChampionSkinID": 4001,
-      "ChampionSkinName": "PAXCardmaster",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_pax.skn",
-      "Skeleton": "TwistedFate_pax.skl",
-      "SkinScale": 1,
-      "Texture": "twistedfate_pax_TX_CM.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "BaseTwistedFate.blnd",
-      "ChampionSkinID": 4002,
-      "ChampionSkinName": "JackOfHeartsCardmaster",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "twistedfate_jackofhearts.skn",
-      "Skeleton": "twistedfate_jackofhearts.skl",
-      "SkinScale": 1,
-      "Texture": "twistedfate_jackofhearts_TX_CM.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "MagnificentTwistedFate.blnd",
-      "ChampionSkinID": 4003,
-      "ChampionSkinName": "MagnificentTwistedFate",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_magnificent_2012.skn",
-      "Skeleton": "TwistedFate_magnificent_2012.skl",
-      "SkinScale": 1,
-      "Texture": "MagnificentTwistedfate_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "BaseTwistedFate.blnd",
-      "ChampionSkinID": 4004,
-      "ChampionSkinName": "TangoCardmaster",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_tango.skn",
-      "Skeleton": "TwistedFate_tango.skl",
-      "SkinScale": 1,
-      "Texture": "twistedfate_tango_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "BaseTwistedFate.blnd",
-      "ChampionSkinID": 4005,
-      "ChampionSkinName": "CowboyTwistedFate",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_cowboy.skn",
-      "Skeleton": "TwistedFate_cowboy.skl",
-      "SkinScale": 1,
-      "Texture": "twistedfate_highnoon_TX_CM.dds"
-    },
-    "MeshSkin6": {
-      "Animations": "MusketeerTwistedFate.blnd",
-      "ChampionSkinID": 4006,
-      "ChampionSkinName": "MusketeerTwistedFate",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_musketeer.skn",
-      "Skeleton": "TwistedFate_musketeer.skl",
-      "SkinScale": 1,
-      "Texture": "twistedfate_musketeer_TX_CM.dds"
-    },
-    "MeshSkin7": {
-      "Animations": "UnderworldTwistedFate.blnd",
-      "ChampionSkinID": 4007,
-      "ChampionSkinName": "UnderworldTwistedFate",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_underworld.skn",
-      "Skeleton": "TwistedFate_underworld.skl",
-      "SkinScale": 1,
-      "Texture": "Twistedfate_underworld_TX_CM.dds"
-    },
-    "MeshSkin8": {
-      "Animations": "BaseTwistedFate.blnd",
-      "ChampionSkinID": 4008,
-      "ChampionSkinName": "TwistedFateSkin08",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TwistedFate_skin08.skn",
-      "Skeleton": "TwistedFate_skin08.skl",
-      "SkinScale": 1,
-      "Texture": "TwistedFate_skin08_TX_CM.dds"
+    "R": {
+      "Name": "Destiny",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "121269505": 16,
-    "113008000": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": ""
+  "ExtraSpells": {
+    "ExtraSpell1": "BlueCardAttack",
+    "ExtraSpell2": "RedCardAttack",
+    "ExtraSpell3": "GoldCardAttack",
+    "ExtraSpell4": "BlueCardPreAttack",
+    "ExtraSpell5": "RedCardPreAttack",
+    "ExtraSpell6": "GoldCardPreAttack",
+    "ExtraSpell7": "SealFateMissile",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "TwistedFateBasicAttack",
+      "Probability": 0.25,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "TwistedFateBasicAttack2",
+      "Probability": 0.25,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "TwistedFateBasicAttack2",
+      "Probability": 0.25,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "TwistedFateBasicAttack3",
+      "Probability": 0.25,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "TwistedFateBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "TwistedFateBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "TwistedFateBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "TwistedFateBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "TwistedFateBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "TwistedFateCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "TwistedFateCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "TwistedFateCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "TwistedFateCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "TwistedFateCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "TwistedFateCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "TwistedFateCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "TwistedFateCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "TwistedFateCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
@@ -24,8 +25,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         public AutoAttackState AutoAttackState { get; private set; }
         public float CurrentAutoAttackCooldown { get; private set; }
         public float CurrentAutoAttackDelay { get; private set; }
-        public bool IsMelee { get; }
-        public float AutoAttackCastTime { get; }
+        public ICharacterData CharacterData { get; }
         public uint AutoAttackProjectileId { get; private set; }
 
         //ExpGiveRadius
@@ -33,13 +33,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //    SpellBuffs
         //DeathTimer
         //VisionRegion
-        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius, string skinName, int skinId, ISpellBook spellBook, bool isMelee, float autoAttackCastTime) : base(team, position, stats, netId, visionRadius, collisionRadius)
+        protected ObjAiBase(Team team, Vector3 position, IStats stats, uint netId, float visionRadius, float collisionRadius, string skinName, int skinId, ISpellBook spellBook, ICharacterData characterData) : base(team, position, stats, netId, visionRadius, collisionRadius)
         {
             SkinName = skinName;
             SkinId = skinId;
             SpellBook = spellBook;
-            IsMelee = isMelee;
-            AutoAttackCastTime = autoAttackCastTime;
+            CharacterData = characterData;
             MovementType = MovementType.Stop;
         }
 
@@ -109,9 +108,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         {
             if (AutoAttackState != AutoAttackState.Preparing)
                 throw new InvalidOperationException("Invalid attack state.");
+            if(!CharacterData.AttacksData.ContainsKey(AttackSlot.BaseAttack))
+                throw new InvalidOperationException("Data for BaseAttack slot are missing"); //TODO: validate this on data load?
 
             AutoAttackState = AutoAttackState.Attacking;
-            CurrentAutoAttackDelay = AutoAttackCastTime / Stats.AttackSpeedMultiplier.Total;
+            CurrentAutoAttackDelay = CharacterData.AttacksData[AttackSlot.BaseAttack].CastDelay(Stats.AttackSpeedMultiplier.Total);
             CurrentAutoAttackCooldown = 0;
             AutoAttackProjectileId = autoAttackProjectileId;
         }
@@ -120,10 +121,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         {
             if (AutoAttackState != AutoAttackState.Attacking)
                 throw new InvalidOperationException("Invalid attack state.");
+            if (!CharacterData.AttacksData.ContainsKey(AttackSlot.BaseAttack))
+                throw new InvalidOperationException("Data for BaseAttack slot are missing"); //TODO: validate this on data load?
 
             AutoAttackState = AutoAttackState.Windup;
             CurrentAutoAttackDelay = 0;
-            CurrentAutoAttackCooldown = 1.0f / Stats.GetTotalAttackSpeed();
+            CurrentAutoAttackCooldown = CharacterData.AttacksData[AttackSlot.BaseAttack].Delay(Stats.AttackSpeedMultiplier.Total);
             AutoAttackProjectileId = 0;
         }
 

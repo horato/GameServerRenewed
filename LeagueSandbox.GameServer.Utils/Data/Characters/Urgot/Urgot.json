@@ -1,114 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Urgot",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 550,
-      "Armor": 24.54400062561035,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.3000000000000003,
-      "AttackDelayCastOffsetPercent": -0.171134021,
-      "AttackDelayOffsetPercent": -0.029999999329447746,
-      "AttackRange": 425,
-      "AttackRank": 8,
-      "AttackSpeedPerLevel": 2.9000000000000004,
-      "BaseCritChance": 0,
-      "BaseDamage": 52.04800033569336,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 586.52001953125,
-      "BaseMP": 312.3999938964844,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.3015999794006348,
-      "BaseStaticMPRegen": 1.718400001525879,
-      "ChampionId": 6,
-      "ChasingAttackRangePercent": 0.8,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.6,
-      "DefenseRank": 5,
-      "DifficultyRank": 8,
-      "BaseAttack_Probability": 0.8500000238418579,
-      "ExtraAttack1": "UrgotBasicAttack2",
-      "ExtraAttack1_Probability": 0.15000000596046448,
-      "CritAttack": "UrgotCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.171134021,
-      "CritAttack_AttackDelayOffsetPercent": -0.029999999329447746,
-      "ExtraSpell1": "UrgotHeatseekingLineMissile",
-      "ExtraSpell2": "UrgotHeatseekingHomeMissile",
-      "ExtraSpell3": "UrgotPlasmaGrenadeBoom",
-      "ExtraSpell4": "UrgotSwapDef",
-      "ExtraSpell5": "UrgotSwapExecute",
-      "ExtraSpell6": "UrgotSwapMissile",
-      "GameplayCollisionRadius": 80,
-      "HPPerLevel": 89,
-      "HPRegenPerLevel": 0.11999999731779099,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "Lore1": "game_character_lore_Urgot",
-      "MagicRank": 3,
-      "MoveSpeed": 335,
-      "MPPerLevel": 55,
-      "MPRegenPerLevel": 0.12999999523162842,
-      "Name": "game_character_displayname_Urgot",
-      "Passive1Desc": "Reduces damage of attack targets",
-      "PassLev1Desc1": "game_character_passiveDescription_Urgot",
-      "Passive1Icon": "Urgot_Passive.dds",
-      "Passive1LuaName": "UrgotEntropyPassive",
-      "Passive1Name": "game_character_passiveName_Urgot",
-      "PathfindingCollisionRadius": 50,
-      "PostAttackMoveDelay": -0.029999999329447746,
-      "SearchTags": "marksman",
-      "SelectionHeight": 155.55560302734375,
-      "SelectionRadius": 136.11109924316406,
-      "Spell1": "UrgotHeatseekingMissile",
-      "Spell1Desc": "Deals damage to target unit and blinds it, giving it a chance to miss with attacks.",
-      "Spell1DisplayName": "Blinding Dart",
-      "Spell2": "UrgotTerrorCapacitorActive2",
-      "Spell2Desc": "While on, Teemo's movement speed is increased.",
-      "Spell2DisplayName": "Move Quick",
-      "Spell3": "UrgotPlasmaGrenade",
-      "Spell3Desc": "Each of Teemo's attacks will poison the target, dealing damage each second for 5 seconds.",
-      "Spell3DisplayName": "Toxic Shot",
-      "Spell4": "UrgotSwap2",
-      "Spell4Desc": "Plants a trap.  When an enemy champion triggers this trap, it deals damage in an area and slows nearby units.",
-      "Spell4DisplayName": "Noxious Trap",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_Urgot",
-      "Tips2": "game_character_opposing_tips_Urgot",
-      "UnitTags": "Champion"
+  "Name": "Urgot",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": -0.03,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 6,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 586.52,
+  "BasePAR": 312.4,
+  "HPPerLevel": 89.0,
+  "PARPerLevel": 55.0,
+  "HPRegenPerLevel": 0.12,
+  "PARRegenPerLevel": 0.13,
+  "BaseStaticHPRegen": 1.3016,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.7184,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 52.048,
+  "PhysicalDamagePerLevel": 3.6,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.544,
+  "ArmorPerLevel": 3.3,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 425.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 550.0,
+  "AttackSpeedPerLevel": 0.029000001,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 155.5556,
+  "OverrideCollisionRadius": 136.1111,
+  "PathfindingCollisionRadius": 50.0,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "UrgotHeatseekingMissile",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.4000000059604645
+    "W": {
+      "Name": "UrgotTerrorCapacitorActive2",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 7,
-      "Particle1": "UrgotIdle.troy L_Screw_d L_Screw_b",
-      "Particle2": "UrgotIdle.troy L_Screw_b R_Screw_b",
-      "Particle3": "UrgotIdle.troy R_Screw_b R_Screw_d",
-      "Particle4": "Urgot_Mech_Idle.troy\tMufflerTopL",
-      "Particle5": "Urgot_Mech_Idle.troy  MufflerTopR",
-      "Particle6": "Urgot_Battlecast_Canister_Glow.troy CanisterTip",
-      "Particle7": "Urgot_Battlecast_Canister_Glow2.troy Canister2"
+    "E": {
+      "Name": "UrgotPlasmaGrenade",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Urgot_Circle.dds",
-      "IconSquare": "Urgot_Square.dds"
+    "R": {
+      "Name": "UrgotSwap2",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1054,
-    "137792515": 12,
-    "113008000": 0,
-    "121269505": 0,
-    "129531010": 0,
-    "510504319": 0,
-    "2500095475": "fighter"
+  "ExtraSpells": {
+    "ExtraSpell1": "UrgotHeatseekingLineMissile",
+    "ExtraSpell2": "UrgotHeatseekingHomeMissile",
+    "ExtraSpell3": "UrgotPlasmaGrenadeBoom",
+    "ExtraSpell4": "UrgotSwapDef",
+    "ExtraSpell5": "UrgotSwapExecute",
+    "ExtraSpell6": "UrgotSwapMissile",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "UrgotBasicAttack",
+      "Probability": 0.85,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "UrgotBasicAttack2",
+      "Probability": 0.15,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "UrgotBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "UrgotBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "UrgotBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "UrgotBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "UrgotBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "UrgotBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "UrgotBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "UrgotCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "UrgotCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "UrgotCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "UrgotCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "UrgotCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "UrgotCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "UrgotCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "UrgotCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "UrgotCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

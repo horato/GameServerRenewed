@@ -64,7 +64,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
 
         void AddModifier(IStatsModifier modifier);
         void RemoveModifier(IStatsModifier modifier);
-        float GetTotalAttackSpeed();
         void AddGold(float amount);
         bool GetSpellEnabled(SpellSlot slot);
         void SetSpellEnabled(SpellSlot slot, bool enabled);

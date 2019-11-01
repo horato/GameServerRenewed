@@ -1,146 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_ZyraGraspingPlant",
-      "AcquisitionRange": 600,
-      "Armor": 0,
-      "ArmorMaterial": "Metal",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": -0.12455999851226807,
-      "AttackDelayOffsetPercent": -0.21899999678134918,
-      "AttackRange": 175,
-      "AttackRank": 6,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 6,
-      "BaseMP": 0,
-      "BaseStaticHPRegen": 0,
-      "BaseStaticMPRegen": 0,
-      "ChasingAttackRangePercent": 0,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "DefenseRank": 8,
-      "DifficultyRank": 5,
-      "ExpGivenOnDeath": 0,
-      "BaseAttack_Probability": 0.6000000000000001,
-      "ExtraAttack1": "JarvanIVBasicAttack2",
-      "ExtraAttack1_Probability": 0.2,
-      "ExtraAttack2_Probability": 0.2,
-      "CritAttack": "JarvanIVCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.12455999851226807,
-      "CritAttack_AttackDelayOffsetPercent": -0.05000000074505806,
-      "ExtraSpell1": "JarvanIVMartialCadenceAttack",
-      "ExtraSpell2": "JarvanIVCataclysmAttack",
-      "GameplayCollisionRadius": 20.0,
-      "GoldGivenOnDeath": 5,
-      "HPPerLevel": 0,
-      "HPRegenPerLevel": 0,
-      "IsImportantBotTarget": 1,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "Lore1": "game_character_lore_ZyraGraspingPlant",
-      "MagicRank": 3,
-      "MoveSpeed": 0,
-      "MPPerLevel": 0,
-      "MPRegenPerLevel": 0,
-      "Name": "game_character_displayname_ZyraGraspingPlant",
-      "NoAutoAttack": 1,
-      "Passive1Desc": "Master Yi's attacks have a chance to strike his target a second time.",
-      "PassLev1Desc1": "game_character_passiveDescription_ZyraGraspingPlant",
-      "PassLev1Desc2": "+40% Mana Point regeneration.",
-      "PassLev1Desc3": "+60% Mana Point regeneration.",
-      "PassLev1Desc4": "+80% Mana Point regeneration.",
-      "Passive1Icon": "JarvanIV_MartialCadence.dds",
-      "Passive1LuaName": "JarvanIVMartialCadence",
-      "Passive1Name": "game_character_passiveName_ZyraGraspingPlant",
-      "PathfindingCollisionRadius": 8.5,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter,melee",
-      "SelectionHeight": 80,
-      "SelectionRadius": 80,
-      "Significance": 0.30000000000000004,
-      "Spell1": "ZyraGraspingPlantAttack",
-      "Spell1Desc": "Master Yi slashes through the battlefield, this deals damage and has a chance to slay minions instantly.",
-      "Spell1DisplayName": "Alpha Strike",
-      "Spell2": "ZyraGraspingPlantAttack2",
-      "Spell2Desc": "Master Yi meditates, restoring health each second.",
-      "Spell2DisplayName": "Meditate",
-      "Spell3": "ZyraGraspingPlantAttackFire",
-      "Spell3Desc": "Permamently increases Master Yi's damage, additionally he can activate it to triple it's effect for a short period, at the cost of the passive benefit for a period of time.",
-      "Spell3DisplayName": "Wuju Style",
-      "Spell4": "ZyraGraspingPlantAttack2Fire",
-      "Spell4Desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
-      "Spell4DisplayName": "Highlander",
-      "SpellBlock": 0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_ZyraGraspingPlant",
-      "Tips2": "game_character_opposing_tips_ZyraGraspingPlant",
-      "TowerTargetingPriorityBoost": 10,
-      "UnitTags": "Minion | Minion_Summon",
-      "WeaponMaterial": "JarvanIVBasicAttack"
-    },
-    "DefaultAnimations": {
-      "Animation1": "Buffbones",
-      "NumberOfAnimations": 1
-    },
-    "HealthBar": {
-      "HPPerTick": 2,
-      "WorldOffset": [
-        0.0,
-        -0.7,
-        0.0
+  "Name": "ZyraGraspingPlant",
+  "Flags": 8398152,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.0,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 6.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 0.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 0.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 0.0,
+  "AttackRange": 175.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 10.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 5.0,
+  "ExpGivenOnDeath": 0.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.3,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 80.0,
+  "OverrideCollisionRadius": 80.0,
+  "PathfindingCollisionRadius": 8.5,
+  "GameplayCollisionRadius": 20.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "ZyraGraspingPlantAttack",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
       ]
     },
-    "Info": {
-      "IconCircle": "JarvanIV_Circle_0.dds",
-      "IconSquare": "ZyraGraspingPlant_Square.dds"
+    "W": {
+      "Name": "ZyraGraspingPlantAttack2",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "ZyraGraspingPlantBase.blnd",
-      "ChampionSkinName": "ZyraGraspingPlantBase",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Zyra_Plant_Thorn.skn",
-      "Skeleton": "Zyra_Plant_Thorn.skl",
-      "SkinScale": 1.2000000000000002,
-      "Texture": "Zyra_Plants_base_TX_CM.dds"
+    "E": {
+      "Name": "ZyraGraspingPlantAttackFire",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin1": {
-      "Animations": "ZyraGraspingPlantBase.blnd",
-      "ChampionSkinName": "ZyraGraspingPlantHellvine",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Zyra_HellvinePlant_Thorn.skn",
-      "Skeleton": "Zyra_HellvinePlant_Thorn.skl",
-      "SkinScale": 1.2000000000000002,
-      "Texture": "Zyra_Plants_hellvine_TX_CM.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "ZyraGraspingPlantSkin02.blnd",
-      "BrushAlphaOverride": 0.6000000000000001,
-      "ChampionSkinName": "ZyraGraspingPlantSkin02",
-      "HPPerTick": 2,
-      "OverrideBoundingBox": [
-        100.0,
-        200.0,
-        100.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Zyra_Skin02_Thorn.skn",
-      "Skeleton": "Zyra_Skin02_Thorn.skl",
-      "SkinScale": 1,
-      "Texture": "zyra_skin02_slowPlant_TX_CM.dds",
-      "WorldOffset": [
-        0.0,
-        -0.25,
-        0.0
+    "R": {
+      "Name": "ZyraGraspingPlantAttack2Fire",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
       ]
     }
   },
-  "UNKNOWN_HASHES": {}
+  "ExtraSpells": {
+    "ExtraSpell1": "JarvanIVMartialCadenceAttack",
+    "ExtraSpell2": "JarvanIVCataclysmAttack",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "ZyraGraspingPlantBasicAttack",
+      "Probability": 0.6,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "JarvanIVBasicAttack2",
+      "Probability": 0.2,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "ZyraGraspingPlantBasicAttack2",
+      "Probability": 0.2,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "ZyraGraspingPlantBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "ZyraGraspingPlantBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "ZyraGraspingPlantBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "ZyraGraspingPlantBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "ZyraGraspingPlantBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "ZyraGraspingPlantBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "JarvanIVCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "ZyraGraspingPlantCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "ZyraGraspingPlantCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "ZyraGraspingPlantCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "ZyraGraspingPlantCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "ZyraGraspingPlantCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "ZyraGraspingPlantCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "ZyraGraspingPlantCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "ZyraGraspingPlantCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.219,
+      "DelayCastOffsetPercent": -0.12456,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
+  }
 }

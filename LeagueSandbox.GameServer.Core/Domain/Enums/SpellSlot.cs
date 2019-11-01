@@ -25,6 +25,8 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
         ExtraSpell12 = 1 << 17,
         ExtraSpell13 = 1 << 18,
         ExtraSpell14 = 1 << 19,
+        ExtraSpell15 = 1 << 20,
+        ExtraSpell16 = 1 << 21,
     }
 
     public static class SpellSlotExtensions

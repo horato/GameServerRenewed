@@ -17,22 +17,14 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
         {
             var filePath = $"Data/Characters/{characterName}/Spells/{spellName}.json";
             var json = File.ReadAllText(filePath);
-            var token = (JToken)JsonConvert.DeserializeObject(json);
-            if (token?["Values"]?["SpellData"] == null)
-                return null;
-
-            return new JsonSerializer().Deserialize<SpellData>(token["Values"]["SpellData"].CreateReader());
+            return JsonConvert.DeserializeObject<SpellData>(json);
         }
 
         public static ISpellData ReadDataGlobal(string spellName)
         {
             var filePath = $"Data/Spells/{spellName}.json";
             var json = File.ReadAllText(filePath);
-            var token = (JToken)JsonConvert.DeserializeObject(json);
-            if (token?["Values"]?["SpellData"] == null)
-                return null;
-
-            return new JsonSerializer().Deserialize<SpellData>(token["Values"]["SpellData"].CreateReader());
+            return JsonConvert.DeserializeObject<SpellData>(json);
         }
 
         /// <summary> CharName-SpellName-Spell </summary>

@@ -1,133 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Elise",
-      "AcquisitionRange": 600,
-      "Armor": 22.128000259399414,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.3499999046325684,
-      "AttackDelayCastOffsetPercent": -0.09099999815225601,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 125,
-      "AttackRank": 1,
-      "AttackSpeedPerLevel": 1.75,
-      "BaseCritChance": 0,
-      "BaseDamage": 50.540000915527344,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 529.4000244140625,
-      "BaseMP": 324.0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.1416000127792358,
-      "BaseStaticMPRegen": 1.5784000158309937,
-      "ChampionId": 60,
-      "ChasingAttackRangePercent": 0.8,
-      "Classification": "Arcane",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3,
-      "DefenseRank": 6,
-      "DifficultyRank": 9,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "EliseSpiderBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "ExtraAttack2_Probability": 0,
-      "ExtraAttack3_Probability": 0,
-      "CritAttack": "EliseSpiderCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.09099999815225601,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "EliseSpiderQCast",
-      "HPPerLevel": 80,
-      "HPRegenPerLevel": 0.11999999731779099,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 4.5,
-      "Lore1": "game_character_lore_Elise",
-      "MagicRank": 8,
-      "MaxLevels": [
-        5.0,
-        5.0,
-        5.0,
-        4.0
-      ],
-      "MoveSpeed": 345,
-      "MPPerLevel": 50,
-      "MPRegenPerLevel": 0.12999999523162842,
-      "Name": "game_character_displayname_Elise",
-      "Passive1Desc": "Increases the Health regeneration rate of nearby allied champions.",
-      "PassLev1Desc1": "game_character_passiveDescription_Morgana",
-      "PassLev1Desc2": "+40% Mana Point regeneration.",
-      "PassLev1Desc3": "+60% Mana Point regeneration.",
-      "PassLev1Desc4": "+80% Mana Point regeneration.",
-      "Passive1Icon": "ElisePassive.dds",
-      "Passive1LuaName": "ElisePassive",
-      "Passive1Name": "game_character_passiveName_Elise",
-      "PathfindingCollisionRadius": 35,
-      "SearchTags": "mage,jungler,ranged",
-      "SelectionHeight": 150,
-      "SelectionRadius": 145,
-      "Spell1": "EliseSpiderQCast",
-      "Spell1Desc": "Morgana Hex channels evil energy into her target, dealing damage over time and slowing its move speed.",
-      "Spell1DisplayName": "Dark Binding",
-      "SpellsUpLevels1": [
+  "Name": "EliseSpider",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 60,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 529.4,
+  "BasePAR": 324.0,
+  "HPPerLevel": 80.0,
+  "PARPerLevel": 50.0,
+  "HPRegenPerLevel": 0.12,
+  "PARRegenPerLevel": 0.13,
+  "BaseStaticHPRegen": 1.1416,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.5784,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 50.54,
+  "PhysicalDamagePerLevel": 3.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 22.128,
+  "ArmorPerLevel": 3.35,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.0175,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 150.0,
+  "OverrideCollisionRadius": 145.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "EliseSpiderQCast",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell2": "EliseSpiderW",
-      "Spell2Desc": "Infects an area with desecrated soil, causing enemy units who stand on it to be damaged over time, and allied units to gain armor.",
-      "Spell2DisplayName": "Tormented Soil",
-      "SpellsUpLevels2": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell3": "EliseSpiderEInitial",
-      "Spell3Desc": "Makes an allied unit magic and debuff immune for a short time, cooldown is lower if she targets an ally.",
-      "Spell3DisplayName": "Black Shield",
-      "SpellsUpLevels3": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell4": "EliseRSpider",
-      "Spell4Desc": "Latches chains of energy onto nearby enemy champions dealing damage and stunning them, and if they move too far from Morgana Hex, they are dealt additional damage and stunned again.",
-      "Spell4DisplayName": "Soul Shackles",
-      "SpellsUpLevels4": [
-        1.0,
-        6.0,
-        11.0,
-        16.0
-      ],
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_Elise",
-      "Tips2": "game_character_opposing_tips_Elise",
-      "UnitTags": "Champion"
+        1,
+        1,
+        1
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "Elise_LotusFlower_spider_tail_idle.troy Tail3"
+    "W": {
+      "Name": "EliseSpiderW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
     },
-    "Info": {
-      "IconCircle": "Elise_Circle.dds",
-      "IconSquare": "Elise_Square.dds"
+    "E": {
+      "Name": "EliseSpiderEInitial",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
     },
-    "Package": {
-      "FallbackPackage": "Elise"
+    "R": {
+      "Name": "EliseRSpider",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "2628302185": "Elise"
+  "ExtraSpells": {
+    "ExtraSpell1": "EliseSpiderQCast",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "EliseSpiderBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "EliseSpiderBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "EliseSpiderBasicAttack2",
+      "Probability": 0.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "EliseSpiderBasicAttack3",
+      "Probability": 0.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "EliseSpiderBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "EliseSpiderBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "EliseSpiderBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "EliseSpiderBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "EliseSpiderBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "EliseSpiderCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "EliseSpiderCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "EliseSpiderCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "EliseSpiderCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "EliseSpiderCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "EliseSpiderCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "EliseSpiderCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "EliseSpiderCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "EliseSpiderCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.091,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

@@ -1,161 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Fiora",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 24.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.080701754,
-      "AttackDelayOffsetPercent": -0.07000000029802322,
-      "AttackRange": 125,
-      "AttackRank": 10,
-      "AttackSpeedPerLevel": 3,
-      "BaseCritChance": 0,
-      "BaseDamage": 59.875999450683594,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 592.7999877929688,
-      "BaseMP": 287.20001220703125,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.3688000440597534,
-      "BaseStaticMPRegen": 1.5180000066757202,
-      "ChampionId": 114,
-      "ChasingAttackRangePercent": 0.5,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.2,
-      "DefenseRank": 4,
-      "DifficultyRank": 3,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "FioraBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "FioraCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.080701754,
-      "CritAttack_AttackDelayOffsetPercent": -0.07000000029802322,
-      "ExtraSpell1": "FioraQLunge",
-      "ExtraSpell2": "FioraDanceStrike",
-      "ExtraSpell3": "FioraFlurryDummy",
-      "ExtraSpell4": "FioraRiposteMissile",
-      "ExtraSpell5": "FioraRiposteMissileTower",
-      "ExtraSpell6": "FioraRiposteMissileTowerChs",
-      "ExtraSpell7": "FioraRiposteMissileTowerDom",
-      "ExtraSpell8": "FioraBasicAttack2",
-      "ExtraSpell9": "FioraBasicAttackFast",
-      "HPPerLevel": 85,
-      "HPRegenPerLevel": 0.1599999964237213,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 1,
-      "Lore1": "game_character_lore_Fiora",
-      "MagicRank": 2,
-      "MoveSpeed": 350,
-      "MPPerLevel": 40,
-      "MPRegenPerLevel": 0.1,
-      "Name": "game_character_displayname_Fiora",
-      "PassLev1Desc1": "game_character_passiveDescription_Fiora",
-      "Passive1Icon": "Fiora_Duelist.dds",
-      "Passive1LuaName": "FioraDuelist",
-      "Passive1Name": "game_character_passiveName_Fiora",
-      "PathfindingCollisionRadius": 35,
-      "SearchTags": "fighter",
-      "SelectionHeight": 138.88890075683594,
-      "SelectionRadius": 100,
-      "Spell1": "FioraQ",
-      "Spell1Desc": "Evelynn becomes Stealthed, becoming invisible to enemies.  If she attacks enemy she will stun it.",
-      "Spell1DisplayName": "Shadow Walk",
-      "Spell2": "FioraRiposte",
-      "Spell2Desc": "Deals damage to target enemy and if used from behind, reduces his armor.",
-      "Spell2DisplayName": "Ravage",
-      "Spell3": "FioraFlurry",
-      "Spell3Desc": "Strikes a random nearby enemy.",
-      "Spell3DisplayName": "Hate Spike",
-      "Spell4": "FioraDance",
-      "Spell4Desc": "When a nearby enemy champion dies, Evelynn gains move and attack speed.  If she was the killer, she is also healed.",
-      "Spell4DisplayName": "Malice and Spite",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Fiora",
-      "Tips2": "game_character_opposing_tips_Fiora",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "FioraBasicAttack"
+  "Name": "Fiora",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 114,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 592.8,
+  "BasePAR": 287.2,
+  "HPPerLevel": 85.0,
+  "PARPerLevel": 40.0,
+  "HPRegenPerLevel": 0.16,
+  "PARRegenPerLevel": 0.1,
+  "BaseStaticHPRegen": 1.3688,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.518,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 59.876,
+  "PhysicalDamagePerLevel": 3.2,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 350.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.03,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 138.8889,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "FioraQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.4000000059604645
+    "W": {
+      "Name": "FioraRiposte",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Fiora_Circle_0.dds",
-      "IconSquare": "Fiora_Square_0.dds"
+    "E": {
+      "Name": "FioraFlurry",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "Fiora.blnd",
-      "ChampionSkinID": 114000,
-      "ChampionSkinName": "Fiora",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Fiora.skn",
-      "Skeleton": "Fiora.skl",
-      "SkinScale": 1.2000000000000002,
-      "Texture": "fiora_base_TX_CM.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "Fiora.blnd",
-      "ChampionSkinID": 114001,
-      "ChampionSkinName": "FioraMusketeer",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Fiora_musketeer.skn",
-      "Skeleton": "Fiora_musketeer.skl",
-      "SkinScale": 1.2000000000000002,
-      "Texture": "fiora_musketeer_TX_CM.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "Fiora.blnd",
-      "ChampionSkinID": 114002,
-      "ChampionSkinName": "FioraArmored",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Fiora_zorro.skn",
-      "Skeleton": "Fiora_zorro.skl",
-      "SkinScale": 1.2000000000000002,
-      "Texture": "fiora_zorro_TX_CM.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "FioraSchoolTeacher.blnd",
-      "ChampionSkinID": 114003,
-      "ChampionSkinName": "FioraSchoolTeacher",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "fiora_schoolteacher.skn",
-      "Skeleton": "fiora_schoolteacher.skl",
-      "SkinScale": 1.2000000000000002,
-      "Texture": "fiora_schoolteacher_TX_CM.dds"
-    },
-    "Sounds": {
-      "Attack1": "Evelynn-Attack1-NORM_01.wav",
-      "Attack2": "Evelynn-Attack2-NORM_01.wav",
-      "Attack3": "Evelynn-Attack3-NORM_01.wav",
-      "Attack4": "Evelynn-Attack4-NORM_01.wav",
-      "Click1": "Evelynn-Click1-NORM_01.wav",
-      "Click2": "Evelynn-Click2-NORM_01.wav",
-      "Click3": "Evelynn-Click3-NORM_01.wav",
-      "Click4": "Evelynn-Click4-NORM_01.wav",
-      "Death": "Evelynn-Death1-NORM_01.wav",
-      "Move1": "Evelynn-Move1-NORM_01.wav",
-      "Move2": "Evelynn-Move2-NORM_01.wav",
-      "Move3": "Evelynn-Move3-NORM_01.wav",
-      "Move4": "Evelynn-Move4-NORM_01.wav",
-      "Ready": "Evelynn-Ready1-NORM_01.wav",
-      "Special1": "Evelynn-Special1-NORM_01.wav"
+    "R": {
+      "Name": "FioraDance",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "113008000": 0,
-    "121269505": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": "assassin"
+  "ExtraSpells": {
+    "ExtraSpell1": "FioraQLunge",
+    "ExtraSpell2": "FioraDanceStrike",
+    "ExtraSpell3": "FioraFlurryDummy",
+    "ExtraSpell4": "FioraRiposteMissile",
+    "ExtraSpell5": "FioraRiposteMissileTower",
+    "ExtraSpell6": "FioraRiposteMissileTowerChs",
+    "ExtraSpell7": "FioraRiposteMissileTowerDom",
+    "ExtraSpell8": "FioraBasicAttack2",
+    "ExtraSpell9": "FioraBasicAttackFast",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "FioraBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "FioraBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "FioraBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "FioraBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "FioraBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "FioraBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "FioraBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "FioraBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "FioraBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "FioraCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "FioraCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "FioraCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "FioraCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "FioraCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "FioraCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "FioraCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "FioraCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "FioraCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.07,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

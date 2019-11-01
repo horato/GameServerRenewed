@@ -28,17 +28,16 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
         public IMissile CreateNew(IObjAiBase objAiBase, ISpellInstance spell, ISpellData spellData, bool isMissileDestroyedOnHit)
         {
             var start = objAiBase.Position;
+            var castData = (ICastDataMissile)spellData.CastData;
             var destination = _calculationService.CalculateDestination(start.ToVector2(), spell.TargetPosition, spell.Definition.CastRange).ToVector3(start.Y);
             var direction = _calculationService.CalculateDirection(start, destination);
-            var velocity = _calculationService.CalculateVelocity(start, destination, spellData.MissileSpeed);
+            var velocity = _calculationService.CalculateVelocity(start, destination, castData.Speed);
 
             var instance = new Missile
             (
                 objAiBase.Team,
                 start,
-                spellData.MissilePerceptionBubbleRadius,
                 spell.FutureProjectileNetId,
-                spellData.LineWidth,
                 objAiBase,
                 spell.Target,
                 spell,
@@ -48,11 +47,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
                 start,
                 destination,
                 _game.Value.GameTimeElapsedMilliseconds,
-                spellData.MissileSpeed,
                 1f, //TODO: ?
                 1f, // TODO: what is this
                 1f, // TODO: what is this
-                isMissileDestroyedOnHit
+                isMissileDestroyedOnHit,
+                spellData
             );
 
             return SetupDependencies(instance);

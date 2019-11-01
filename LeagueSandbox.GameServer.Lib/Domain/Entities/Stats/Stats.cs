@@ -197,11 +197,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Stats
             Tenacity.RemoveStatModifier(modifier.Tenacity);
         }
 
-        public float GetTotalAttackSpeed()
-        {
-            return FlatAttackSpeed.CurrentValue * AttackSpeedMultiplier.Total;
-        }
-
         public void AddGold(float amount)
         {
             GoldTotal += amount;

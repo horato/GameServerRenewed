@@ -1,95 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Shaco",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 400,
-      "Armor": 24.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.078496169,
-      "AttackDelayOffsetPercent": -0.10000000149011612,
-      "AttackRange": 125,
-      "AttackRank": 8,
-      "AttackSpeedPerLevel": 3,
-      "BaseCritChance": 0,
-      "BaseDamage": 57.58000183105469,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 582.1199951171875,
-      "BaseMP": 297.20001220703125,
-      "BaseStaticHPRegen": 1.6748000383377075,
-      "BaseStaticMPRegen": 1.4312000274658203,
-      "ChampionId": 35,
-      "ChasingAttackRangePercent": 0.5,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.5,
-      "DefenseRank": 4,
-      "DifficultyRank": 9,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "ShacoBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "ShacoCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.078496169,
-      "CritAttack_AttackDelayOffsetPercent": -0.10000000149011612,
-      "ExtraSpell1": "Hallucinate",
-      "HPPerLevel": 84,
-      "HPRegenPerLevel": 0.10999999940395355,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_Shaco",
-      "Lore2": "As time passed, she became the cause of much trouble in Jugo. People became afraid of Annie because of the sudden fires that erupted when the little girl was in a bad mood. Several years later, she threw a temper tantrum over a dropped teddy bear, and completely incinerated her parents and her home. She has since drifted aimlessly from town to town, sometimes becoming angry over a trivial matter at which point great fire storms erupt leaving only a crying orphan girl in their wake. When the darkness inside of her felt the first call of Chaos, it discovered befitting and truly sinister use for the Dark Child.",
-      "MagicRank": 6,
-      "MoveSpeed": 350,
-      "MPPerLevel": 40,
-      "MPRegenPerLevel": 0.09000000357627869,
-      "Name": "game_character_displayname_Shaco",
-      "Passive1Desc": "game_character_passiveDescription_Shaco",
-      "PassLev1Desc1": "game_character_passiveDescription_Shaco",
-      "PassLev1Desc2": "+40% Mana Point regeneration.",
-      "PassLev1Desc3": "+60% Mana Point regeneration.",
-      "PassLev1Desc4": "+80% Mana Point regeneration.",
-      "Passive1Icon": "Jester_CarefulStrikes.dds",
-      "Passive1LuaName": "Backstab",
-      "Passive1Name": "game_character_passiveName_Shaco",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "assassin",
-      "SelectionHeight": 180,
-      "SelectionRadius": 135,
-      "Spell1": "Deceive",
-      "Spell1Desc": "Shaco summons a Jack in the Box at target location, which will damage nearby enemies and wait in hiding for enemies to come near.",
-      "Spell1DisplayName": "Jack-In-The-Box",
-      "Spell2": "JackInTheBox",
-      "Spell2Desc": "Shaco creates an illusion of himself nearby, which will explode on death.",
-      "Spell2DisplayName": "Deceive",
-      "Spell3": "TwoShivPoison",
-      "Spell3Desc": "Shaco's attacks cause the target to miss and move more slowly.  He can toss his daggers to deal intense damage, and slow and give a miss chance.",
-      "Spell3DisplayName": "Two-Shiv Mastery",
-      "Spell4": "HallucinateFull",
-      "Spell4Desc": "Shaco cloaks himself, and continually recloaks himself but drains mana.",
-      "Spell4DisplayName": "Hallucinate",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Shaco",
-      "Tips2": "game_character_opposing_tips_Shaco",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "JesterBasicAttack"
+  "Name": "Shaco",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 35,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 582.12,
+  "BasePAR": 297.2,
+  "HPPerLevel": 84.0,
+  "PARPerLevel": 40.0,
+  "HPRegenPerLevel": 0.11,
+  "PARRegenPerLevel": 0.09,
+  "BaseStaticHPRegen": 1.6748,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.4312,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 57.58,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 350.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 400.0,
+  "AttackSpeedPerLevel": 0.03,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 180.0,
+  "OverrideCollisionRadius": 135.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "Deceive",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Jester_Circle.dds",
-      "IconSquare": "Jester_Square.dds"
+    "W": {
+      "Name": "JackInTheBox",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "E": {
+      "Name": "TwoShivPoison",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "HallucinateFull",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "121269505": 5,
-    "129531010": 14,
-    "113008000": 0,
-    "137792515": 0,
-    "510504319": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "Hallucinate",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "ShacoBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "ShacoBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "ShacoBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "ShacoBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "ShacoBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "ShacoBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "ShacoBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "ShacoBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "ShacoBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "ShacoCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "ShacoCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "ShacoCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "ShacoCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "ShacoCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "ShacoCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "ShacoCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "ShacoCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "ShacoCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

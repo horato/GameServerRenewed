@@ -1,155 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Kennen",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 550,
-      "Armor": 24.3,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.75,
-      "AttackDelayCastOffsetPercent": -0.10000000149011612,
-      "AttackDelayOffsetPercent": -0.09470000118017197,
-      "AttackRange": 550,
-      "AttackRank": 6,
-      "AttackSpeedPerLevel": 3.4000000000000004,
-      "BaseCritChance": 0,
-      "BaseDamage": 50.54399871826172,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 535.719970703125,
-      "BaseMP": 200.0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.118399977684021,
-      "BaseStaticMPRegen": 10.0,
-      "ChampionId": 85,
-      "ChasingAttackRangePercent": 0.8,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.3000000000000003,
-      "DefenseRank": 4,
-      "DifficultyRank": 4,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "KennenBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "KennenCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.10000000149011612,
-      "CritAttack_AttackDelayOffsetPercent": -0.09470000118017197,
-      "ExtraSpell1": "KennenShurikenHurl1",
-      "ExtraSpell2": "KennenMegaProc",
-      "GameplayCollisionRadius": 55,
-      "HPPerLevel": 79,
-      "HPRegenPerLevel": 0.12999999523162842,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "Lore1": "game_character_lore_Kennen",
-      "MagicRank": 7,
-      "Metadata": "faction:Bandle,race:Yordle,gender:male",
-      "MoveSpeed": 335,
-      "MPPerLevel": 0,
-      "MPRegenPerLevel": 0,
-      "Name": "game_character_displayname_Kennen",
-      "PARType": "Energy",
-      "Passive1Desc": "Kennen's abilities add a Mark of the Storm debuff to oponents they hit.  Upon receiving 3 stacks, an opponent is stunned and receives damage.",
-      "PassLev1Desc1": "game_character_passiveDescription_Kennen",
-      "Passive1Icon": "Kennen_MarkOfStorm.dds",
-      "Passive1LuaName": "KennenMarkOfStorm.lua",
-      "Passive1Name": "game_character_passiveName_Kennen",
-      "PathfindingCollisionRadius": 30,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "mage",
-      "SelectionHeight": 177.77780151367188,
-      "SelectionRadius": 100,
-      "Spell1": "KennenShurikenHurlMissile1",
-      "Spell2": "KennenBringTheLight",
-      "Spell3": "KennenLightningRush",
-      "Spell4": "KennenShurikenStorm",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_Kennen",
-      "Tips2": "game_character_opposing_tips_Kennen",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "KennenBasicAttack"
+  "Name": "Kennen",
+  "Flags": 8398080,
+  "PARType": 2,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 85,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 535.72,
+  "BasePAR": 200.0,
+  "HPPerLevel": 79.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.13,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 1.1184,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 10.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 50.544,
+  "PhysicalDamagePerLevel": 3.3,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.3,
+  "ArmorPerLevel": 3.75,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 550.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 550.0,
+  "AttackSpeedPerLevel": 0.034,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 177.7778,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 30.0,
+  "GameplayCollisionRadius": 55.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "KennenShurikenHurlMissile1",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.4000000059604645
+    "W": {
+      "Name": "KennenBringTheLight",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Kennen_Circle.dds",
-      "IconSquare": "Kennen_Square.dds"
+    "E": {
+      "Name": "KennenLightningRush",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "KennenBase.blnd",
-      "ChampionSkinID": 85000,
-      "ChampionSkinName": "KennenBase",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Kennen.skn",
-      "Skeleton": "Kennen.skl",
-      "SkinScale": 1,
-      "Texture": "Kennen.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "KennenBase.blnd",
-      "ChampionSkinID": 85001,
-      "ChampionSkinName": "RedKennen",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Kennen.skn",
-      "Skeleton": "Kennen.skl",
-      "SkinScale": 0.949999988079071,
-      "Texture": "Kennen_red.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "KennenBase.blnd",
-      "ChampionSkinID": 85002,
-      "ChampionSkinName": "BlueKennen",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Kennen.skn",
-      "Skeleton": "Kennen.skl",
-      "SkinScale": 0.949999988079071,
-      "Texture": "Kennen_blue.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "KarateKennen.blnd",
-      "ChampionSkinID": 85003,
-      "ChampionSkinName": "KarateKennen",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Kennen_Karate.skn",
-      "Skeleton": "Kennen_Karate.skl",
-      "SkinScale": 0.949999988079071,
-      "Texture": "kennen_karate_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "DrKennen.blnd",
-      "ChampionSkinID": 85004,
-      "ChampionSkinName": "DrKennen",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Kennen_dr.skn",
-      "Skeleton": "Kennen_dr.skl",
-      "SkinScale": 0.949999988079071,
-      "Texture": "kennen_dr_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "ArcticKennen.blnd",
-      "ChampionSkinID": 85005,
-      "ChampionSkinName": "ArcticKennen",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Kennen_arctic.skn",
-      "Skeleton": "Kennen_arctic.skl",
-      "SkinScale": 0.949999988079071,
-      "Texture": "kennen_arctic_TX_CM.dds"
+    "R": {
+      "Name": "KennenShurikenStorm",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1054,
-    "113008000": 0,
-    "121269505": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": "marksman"
+  "ExtraSpells": {
+    "ExtraSpell1": "KennenShurikenHurl1",
+    "ExtraSpell2": "KennenMegaProc",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "KennenBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "KennenBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "KennenBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "KennenBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "KennenBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "KennenBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "KennenBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "KennenBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "KennenBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "KennenCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "KennenCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "KennenCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "KennenCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "KennenCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "KennenCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "KennenCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "KennenCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "KennenCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0947,
+      "DelayCastOffsetPercent": -0.1,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

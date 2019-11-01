@@ -1,119 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Nasus",
-      "PlatformEnabled": 0,
-      "AcquisitionRange": 350,
-      "Armor": 24.8799991607666,
-      "ArmorMaterial": "Metal",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.098603652,
-      "AttackDelayOffsetPercent": -0.019999999552965164,
-      "AttackRange": 125,
-      "AttackRank": 7,
-      "AttackSpeedPerLevel": 3.4800000190734863,
-      "BaseCritChance": 0,
-      "BaseDamage": 59.18000030517578,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 561.2000122070312,
-      "BaseMP": 275.6000061035156,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.80239999294281,
-      "BaseStaticMPRegen": 1.4880000352859497,
-      "BotEnabled": 0,
-      "BotEnabledMM": 0,
-      "ChampionId": 75,
-      "ChasingAttackRangePercent": 0.5,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 0,
-      "CS_hard": 0,
-      "DamagePerLevel": 3.5,
-      "DefenseRank": 5,
-      "DifficultyRank": 2,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "NasusBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "NasusCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.098603652,
-      "CritAttack_AttackDelayOffsetPercent": -0.02,
-      "ExtraSpell1": "NasusQAttack",
-      "GameplayCollisionRadius": 80.0,
-      "HPPerLevel": 90,
-      "HPRegenPerLevel": 0.18000000715255737,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 2,
-      "Lore1": "game_character_lore_Nasus",
-      "MagicRank": 6,
-      "MoveSpeed": 350,
-      "MPPerLevel": 45,
-      "MPRegenPerLevel": 0.1,
-      "Name": "game_character_displayname_Nasus",
-      "Passive1Desc": "Singed gains additional Health for every point of Mana he has.",
-      "PassLev1Desc1": "game_character_passiveDescription_Nasus",
-      "PassLev1Desc2": "Magic damage done to Singed is reduced by 10%.",
-      "Passive1Icon": "Nasus_Passive.dds",
-      "Passive1LuaName": "NasusPassive",
-      "Passive1Name": "game_character_passiveName_Nasus",
-      "PathfindingCollisionRadius": 50,
-      "PostAttackMoveDelay": 0,
-      "Roles": "BRAWLER",
-      "SearchTags": "fighter",
-      "SelectionHeight": 170,
-      "SelectionRadius": 135,
-      "Spell1": "NasusQ",
-      "Spell2": "NasusW",
-      "Spell3": "NasusE",
-      "Spell4": "NasusR",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "SR_easy": 0,
-      "SR_medium": 0,
-      "Tips1": "game_character_tips_Nasus",
-      "Tips2": "game_character_opposing_tips_Nasus",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "NasusBasicAttack"
+  "Name": "NasusUlt",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 75,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 561.2,
+  "BasePAR": 275.6,
+  "HPPerLevel": 90.0,
+  "PARPerLevel": 45.0,
+  "HPRegenPerLevel": 0.18,
+  "PARRegenPerLevel": 0.1,
+  "BaseStaticHPRegen": 1.8024,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.488,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 59.18,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 350.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 350.0,
+  "AttackSpeedPerLevel": 0.0348,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 170.0,
+  "OverrideCollisionRadius": 135.0,
+  "PathfindingCollisionRadius": 50.0,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "NasusQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "Idle1_BOOMBOX",
-      "NumberOfAnimations": 1
+    "W": {
+      "Name": "NasusW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Nasus_Circle.dds",
-      "IconSquare": "Nasus_Square.dds"
+    "E": {
+      "Name": "NasusE",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Package": {
-      "FallbackPackage": "Nasus"
-    },
-    "Sounds": {
-      "Attack1": "Singe_K-Attack1.wav",
-      "Attack2": "Singe_K-Attack2.wav",
-      "Attack3": "Singe_K-Attack3.wav",
-      "Attack4": "Singe_K-Attack4.wav",
-      "Click1": "Singe_K-Click1.wav",
-      "Click2": "Singe_K-Click2.wav",
-      "Click3": "Singe_K-Click3.wav",
-      "Click4": "Singe_K-Click4.wav",
-      "Death": "Singe_K-Death1.wav",
-      "Move1": "Singe_K-Move1.wav",
-      "Move2": "Singe_K-Move2.wav",
-      "Move3": "Singe_K-Move3.wav",
-      "Move4": "Singe_K-Move4.wav",
-      "Ready": "Singe_K-Ready1.wav",
-      "Special1": "Singe_K-Special1.wav",
-      "Special2": "Singe_K-Special2.wav"
+    "R": {
+      "Name": "NasusR",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "1530282403": "SummonerHeal",
-    "1530282404": "SummonerTeleport",
-    "2500095475": "tank",
-    "3319269524": 0,
-    "4015135009": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "NasusQAttack",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "NasusUltBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "NasusBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "NasusUltBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "NasusUltBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "NasusUltBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "NasusUltBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "NasusUltBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "NasusUltBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "NasusUltBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "NasusCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "NasusUltCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "NasusUltCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "NasusUltCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "NasusUltCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "NasusUltCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "NasusUltCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "NasusUltCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "NasusUltCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

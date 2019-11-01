@@ -73,7 +73,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 gameObject.StopMovement();
 
             var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); //TODO: vision
-            var projectileNetId = gameObject.IsMelee ? 0 : _networkIdCreationService.GetNewNetId();
+            var projectileNetId = gameObject.CharacterData.Flags.HasFlag(CharDataFlags.Melee) ? 0 : _networkIdCreationService.GetNewNetId();
 
             // TODO: next aa
             if (true)

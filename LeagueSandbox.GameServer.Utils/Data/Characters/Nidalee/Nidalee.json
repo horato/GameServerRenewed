@@ -1,185 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Nidalee",
-      "PlatformEnabled": 1,
-      "Armor": 22.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.087414966,
-      "AttackDelayOffsetPercent": -0.019999999552965164,
-      "AttackRange": 525,
-      "AttackRank": 5,
-      "AttackSpeedPerLevel": 3.2200000286102295,
-      "BaseCritChance": 0,
-      "BaseDamage": 47.880001068115234,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 541.2000122070312,
-      "BaseMP": 295.6000061035156,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.2015999555587769,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 76,
-      "ChasingAttackRangePercent": 0.8,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 1,
-      "CS_hard": 1,
-      "DamagePerLevel": 3.5,
-      "DefenseRank": 4,
-      "DifficultyRank": 8,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "NidaleeBasicAttack2",
-      "ExtraAttack2": "Nidalee_CougarBasicAttack",
-      "ExtraAttack3": "Nidalee_CougarBasicAttack2",
-      "ExtraAttack1_AttackDelayCastOffsetPercent": -0.087414966,
-      "ExtraAttack2_AttackDelayCastOffsetPercent": -0.087414966,
-      "ExtraAttack3_AttackDelayCastOffsetPercent": -0.087414966,
-      "ExtraAttack1_AttackDelayOffsetPercent": -0.019999999552965164,
-      "ExtraAttack2_AttackDelayOffsetPercent": -0.019999999552965164,
-      "ExtraAttack3_AttackDelayOffsetPercent": -0.019999999552965164,
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "NidaleeCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.087414966,
-      "CritAttack_AttackDelayOffsetPercent": -0.019999999552965164,
-      "ExtraCritAttack1": "Nidalee_CougarCritAttack",
-      "ExtraSpell1": "Nidalee_CougarTakedownAttack",
-      "HPPerLevel": 90,
-      "HPRegenPerLevel": 0.11999999731779099,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 3,
-      "Lore1": "game_character_lore_Nidalee",
-      "MagicRank": 7,
-      "MaxLevels": [
-        5.0,
-        5.0,
-        5.0,
-        4.0
-      ],
-      "MoveSpeed": 335,
-      "MPPerLevel": 45,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_Nidalee",
-      "OutlineBBoxExpansion": 50.0,
-      "Passive1Desc": "Increases all friendly Champions' critical strike chance",
-      "PassLev1Desc1": "game_character_passiveDescription_Nidalee",
-      "PassLev1Desc2": "Adds +10% Attack Rate.",
-      "PassLev1Desc3": "Adds +15% Attack Rate.",
-      "PassLev1Desc4": "Adds +20% Attack Rate.",
-      "Passive1Icon": "Nidalee_Passive.dds",
-      "Passive1LuaName": "NidaleePassiveHunt",
-      "Passive1Name": "game_character_passiveName_Nidalee",
-      "PassiveSpell": "NidaleePassiveHunt",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "Roles": "ATTACKER",
-      "SearchTags": "assassin",
-      "SelectionHeight": 155,
-      "SelectionRadius": 110,
-      "Spell1": "JavelinToss",
-      "Spell1Desc": "Fires 3 cards in a cone pattern, dealing damage to enemies they hit.",
-      "Spell1DisplayName": "Wild Cards",
-      "SpellsUpLevels1": [
+  "Name": "Nidalee",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 76,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 541.2,
+  "BasePAR": 295.6,
+  "HPPerLevel": 90.0,
+  "PARPerLevel": 45.0,
+  "HPRegenPerLevel": 0.12,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 1.2016,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 47.88,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 22.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 525.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0322,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 155.0,
+  "OverrideCollisionRadius": 110.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "JavelinToss",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell2": "Bushwhack",
-      "Spell2Desc": "Twisted Fate's attacks can deal extra damage, extra AoE damage with slow, or lots of extra AoE damage with stun!",
-      "Spell2DisplayName": "Pick a Card",
-      "SpellsUpLevels2": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell3": "PrimalSurge",
-      "Spell3Desc": "Teleports Twisted Fate to target distant location.",
-      "Spell3DisplayName": "Gate",
-      "SpellsUpLevels3": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell4": "AspectOfTheCougar",
-      "Spell4Desc": "Reveals all enemy Champions and slows their movement speed for a short duration.",
-      "Spell4DisplayName": "Destiny",
-      "SpellsUpLevels4": [
-        1.0,
-        6.0,
-        11.0,
-        16.0
-      ],
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "SR_easy": 0,
-      "SR_medium": 1,
-      "Tips1": "game_character_tips_Nidalee",
-      "Tips2": "game_character_opposing_tips_Nidalee",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "NidaleeBasicAttack"
+        1,
+        1,
+        1
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "Idle1_Blades",
-      "Animation2": "RAW_nidalee_2012_idle_enter",
-      "NumberOfAnimations": 2
+    "W": {
+      "Name": "Bushwhack",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": 0.3
+    "E": {
+      "Name": "PrimalSurge",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "Nidalee_Skin06_idle1.troy Buffbone_Cstm_Weapon_1"
-    },
-    "Info": {
-      "IconCircle": "Nidalee_Circle.dds",
-      "IconSquare": "Nidalee_Square.dds"
-    },
-    "Sounds": {
-      "Attack1": "Cardmaster_Attack1.wav",
-      "Attack2": "Cardmaster_Attack2.wav",
-      "Attack3": "Cardmaster_Attack3.wav",
-      "Attack4": "Cardmaster_Attack4.wav",
-      "Click1": "Cardmaster_Click1.wav",
-      "Click2": "Cardmaster_Click2.wav",
-      "Click3": "Cardmaster_Click3.wav",
-      "Click4": "Cardmaster_Click4.wav",
-      "Death": "Cardmaster_Death.wav",
-      "Move1": "Cardmaster_Move1.wav",
-      "Move2": "Cardmaster_Move2.wav",
-      "Move3": "Cardmaster_Move3.wav",
-      "Move4": "Cardmaster_Move4.wav",
-      "Ready": "Cardmaster_Ready2.wav"
+    "R": {
+      "Name": "AspectOfTheCougar",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "510504319": 1,
-    "354521387": "Spell",
-    "602060832": "Nidalee_Cougar",
-    "2074622752": "Takedown",
-    "2074622753": "Pounce",
-    "2074622754": "Swipe",
-    "2074622755": "AspectOfTheCougar",
-    "2500095475": "fighter",
-    "3309724546": "Nidalee_Cougar",
-    "3319269524": 1,
-    "4015135009": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "Nidalee_CougarTakedownAttack",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "NidaleeBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "NidaleeBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "Nidalee_CougarBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "Nidalee_CougarBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "NidaleeBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "NidaleeBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "NidaleeBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "NidaleeBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "NidaleeBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "NidaleeCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "Nidalee_CougarCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "NidaleeCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "NidaleeCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "NidaleeCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "NidaleeCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "NidaleeCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "NidaleeCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "NidaleeCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

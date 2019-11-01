@@ -1,69 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_redDragon",
-      "Armor": 15,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": 0.3118000030517578,
-      "AttackDelayOffsetPercent": -0.05000000074505806,
-      "AttackRange": 650,
-      "AttackSpeed": 1.5,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 85.0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0.001500000013038516,
-      "BaseFactorMPRegen": 0.003000000026077032,
-      "BaseHP": 1350,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0.5,
-      "BaseStaticMPRegen": 0.5,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "EnemyTooltip": "game_character_enemyTooltip_redDragon",
-      "ExpGivenOnDeath": 0,
-      "GameplayCollisionRadius": 100.0,
-      "GlobalExpGivenOnDeath": 0,
-      "GlobalGoldGivenOnDeath": 75,
-      "HPPerLevel": 0,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MoveSpeed": 330,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_redDragon",
-      "PathfindingCollisionRadius": 35,
-      "SelectionHeight": 150,
-      "SelectionRadius": 175,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "SpellBlock": 0
+  "Name": "redDragon",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 1350.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.5,
+  "BaseFactorHPRegen": 0.0015,
+  "BaseStaticPARRegen": 0.5,
+  "BaseFactorPARRegen": 0.003,
+  "BasePhysicalDamage": 85.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 15.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 330.0,
+  "AttackRange": 650.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 0.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 75.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 150.0,
+  "OverrideCollisionRadius": 175.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 100.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "Dragon_Smoke.troy mouth"
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Dragon_Circle.dds",
-      "IconSquare": "Dragon_Square.dds"
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "redDragonBase.blnd",
-      "ChampionSkinName": "redDragonBase",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "redDragon.skn",
-      "Skeleton": "redDragon.skl",
-      "SkinScale": 2.0,
-      "Texture": "redDragon.dds"
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "2818610673": 50.0
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "redDragonBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "redDragonBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "redDragonBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "redDragonBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "redDragonBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "redDragonBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "redDragonBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "redDragonBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "redDragonBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "redDragonCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "redDragonCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "redDragonCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "redDragonCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "redDragonCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "redDragonCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "redDragonCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "redDragonCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "redDragonCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.3118,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

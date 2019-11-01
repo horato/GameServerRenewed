@@ -52,11 +52,9 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 obj.TurretData.SkinName,
                 obj.SkinId,
                 spellBook,
-                data.GameplayCollisionRadius,
                 obj.TurretData.Lane,
                 obj.TurretData.Position,
-                data.IsMelee,
-                data.AttackCastTime
+                data
             );
 
             return SetupDependencies(instance);

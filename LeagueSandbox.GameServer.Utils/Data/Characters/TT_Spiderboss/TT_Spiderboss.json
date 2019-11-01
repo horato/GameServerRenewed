@@ -1,88 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_TTSpiderboss",
-      "AcquisitionRange": 1200,
-      "Armor": 75,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": 0.314035088,
-      "AttackDelayOffsetPercent": -0.05000000074505806,
-      "AttackRange": 1200,
-      "AttackSpeed": 1.5,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 100.0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 3200,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0,
-      "BaseStaticMPRegen": 0,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "DisableAggroIndicator": 1,
-      "EnemyTooltip": "game_character_enemyTooltip_TTSpiderboss",
-      "ExperienceRadius": 2000.0,
-      "ExpGivenOnDeath": 400.0,
-      "GameplayCollisionRadius": 200.0,
-      "GlobalExpGivenOnDeath": 0,
-      "GlobalGoldGivenOnDeath": 190.0,
-      "GoldGivenOnDeath": 25.0,
-      "HPPerLevel": 0,
-      "IsEpic": "Yes",
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MoveSpeed": 0,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_TTSpiderboss",
-      "PathfindingCollisionRadius": 200,
-      "SelectionHeight": 150,
-      "SelectionRadius": 155,
-      "ShouldFaceTarget": 0,
-      "Significance": 1,
-      "SkipDrawOutline": 1,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "TT_SpiderbossVortex",
-      "Spell2": "TT_SpiderbossAttack3",
-      "Spell3": "TT_SpiderbossAttack2",
-      "Spell4": "TT_SpiderbossAttack",
-      "SpellBlock": 45,
-      "UnitTags": "Monster | Monster_Epic"
-    },
-    "DefaultAnimations": {
-      "Animation1": "buffbone_anim",
-      "NumberOfAnimations": 1
-    },
-    "HealthBar": {
-      "HPPerTick": 1000,
-      "Scale": 2.0,
-      "WorldOffset": [
-        0.0,
-        -0.6499999761581421,
-        0.0
+  "Name": "TT_Spiderboss",
+  "Flags": 8399873,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 3200.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 100.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 75.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 45.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 0.0,
+  "AttackRange": 1200.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 1200.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 400.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 2000.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 190.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 1.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 150.0,
+  "OverrideCollisionRadius": 155.0,
+  "PathfindingCollisionRadius": 200.0,
+  "GameplayCollisionRadius": 200.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "TT_SpiderbossVortex",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
       ]
     },
-    "Info": {
-      "IconCircle": "TT_Spider_Circle.dds",
-      "IconSquare": "TT_Spider_Square.dds"
+    "W": {
+      "Name": "TT_SpiderbossAttack3",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "tt_spiderboss.blnd",
-      "ChampionSkinName": "TT_Spiderboss",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "TT_Spiderboss.skn",
-      "Skeleton": "TT_Spiderboss.skl",
-      "SkinScale": 0.8,
-      "Texture": "TT_Spiderboss_TX_CM.dds"
+    "E": {
+      "Name": "TT_SpiderbossAttack2",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "TT_SpiderbossAttack",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "593637254": 1,
-    "2818610673": 50.0
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "TT_SpiderbossBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "TT_SpiderbossBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "TT_SpiderbossBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "TT_SpiderbossBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "TT_SpiderbossBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "TT_SpiderbossBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "TT_SpiderbossBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "TT_SpiderbossBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "TT_SpiderbossBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "TT_SpiderbossCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "TT_SpiderbossCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "TT_SpiderbossCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "TT_SpiderbossCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "TT_SpiderbossCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "TT_SpiderbossCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "TT_SpiderbossCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "TT_SpiderbossCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "TT_SpiderbossCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

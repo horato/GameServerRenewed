@@ -1,183 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Pantheon",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 27.652000427246094,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.9000000000000004,
-      "AttackDelayCastOffsetPercent": -0.09687499701976776,
-      "AttackDelayOffsetPercent": -0.07999999821186066,
-      "AttackRange": 150,
-      "AttackRank": 9,
-      "AttackSpeedPerLevel": 2.950000047683716,
-      "BaseCritChance": 0,
-      "BaseDamage": 55.571998596191406,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 579.1599731445312,
-      "BaseMP": 267.1199951171875,
-      "BaseStaticHPRegen": 1.5684000253677368,
-      "BaseStaticMPRegen": 1.4711999893188477,
-      "ChampionId": 80,
-      "ChasingAttackRangePercent": 0.30000000000000004,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 2.9000000000000004,
-      "DefenseRank": 4,
-      "DifficultyRank": 4,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "PantheonBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "PantheonCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.09687499701976776,
-      "CritAttack_AttackDelayOffsetPercent": -0.07999999821186066,
-      "ExtraSpell1": "PantheonEChannel",
-      "ExtraSpell2": "PantheonRFall",
-      "HPPerLevel": 87,
-      "HPRegenPerLevel": 0.12999999523162842,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "Lore1": "game_character_lore_Pantheon",
-      "MagicRank": 3,
-      "MoveSpeed": 355,
-      "MPPerLevel": 34,
-      "MPRegenPerLevel": 0.09000000357627869,
-      "Name": "game_character_displayname_Pantheon",
-      "Passive1Desc": "Master Yi's attacks have a chance to strike his target a second time.",
-      "PassLev1Desc1": "game_character_passiveDescription_Pantheon",
-      "PassLev1Desc2": "+40% Mana Point regeneration.",
-      "PassLev1Desc3": "+60% Mana Point regeneration.",
-      "PassLev1Desc4": "+80% Mana Point regeneration.",
-      "Passive1Icon": "Pantheon_AOZ.dds",
-      "Passive1LuaName": "Pantheon Aegis",
-      "Passive1Name": "game_character_passiveName_Pantheon",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter",
-      "SelectionHeight": 175,
-      "SelectionRadius": 125,
-      "Spell1": "PantheonQ",
-      "Spell1Desc": "Master Yi slashes through the battlefield, this deals damage and has a chance to slay minions instantly.",
-      "Spell1DisplayName": "Alpha Strike",
-      "Spell2": "PantheonW",
-      "Spell2Desc": "Master Yi meditates, restoring health each second.",
-      "Spell2DisplayName": "Meditate",
-      "Spell3": "PantheonE",
-      "Spell3Desc": "Permamently increases Master Yi's damage, additionally he can activate it to triple it's effect for a short period, at the cost of the passive benefit for a period of time.",
-      "Spell3DisplayName": "Wuju Style",
-      "Spell4": "PantheonRJump",
-      "Spell4Desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
-      "Spell4DisplayName": "Highlander",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Pantheon",
-      "Tips2": "game_character_opposing_tips_Pantheon",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "PantheonBasicAttack",
-      "WeaponMaterial2": "PantheonBasicAttack2"
+  "Name": "Pantheon",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.3,
+  "ChampionId": 80,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 579.16,
+  "BasePAR": 267.12,
+  "HPPerLevel": 87.0,
+  "PARPerLevel": 34.0,
+  "HPRegenPerLevel": 0.13,
+  "PARRegenPerLevel": 0.09,
+  "BaseStaticHPRegen": 1.5684,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.4712,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 55.572,
+  "PhysicalDamagePerLevel": 2.9,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 27.652,
+  "ArmorPerLevel": 3.9,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 355.0,
+  "AttackRange": 150.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.0295,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 175.0,
+  "OverrideCollisionRadius": 125.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "PantheonQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.4000000059604645
+    "W": {
+      "Name": "PantheonW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Pantheon_Circle_0.dds",
-      "IconSquare": "Pantheon_Square_0.dds"
+    "E": {
+      "Name": "PantheonE",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "BasePantheon.blnd",
-      "ChampionSkinID": 80000,
-      "ChampionSkinName": "BasePantheon",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Pantheon.skn",
-      "Skeleton": "Pantheon.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "pantheon.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "BasePantheon.blnd",
-      "ChampionSkinID": 80001,
-      "ChampionSkinName": "MyrmidonPantheon",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Pantheon.skn",
-      "Skeleton": "Pantheon.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "Golden_Pantheon.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "BasePantheon.blnd",
-      "ChampionSkinID": 80002,
-      "ChampionSkinName": "RuthlessPantheon",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Pantheon_Ruthless.skn",
-      "Skeleton": "Pantheon_Ruthless.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "Pantheon_Ruthless.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "BasePantheon.blnd",
-      "ChampionSkinID": 80003,
-      "ChampionSkinName": "PerseusPantheon",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Pantheon_Perseus.skn",
-      "Skeleton": "Pantheon_Perseus.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "pantheon_perseus_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "BasePantheon.blnd",
-      "ChampionSkinID": 80004,
-      "ChampionSkinName": "MetalPantheon",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Pantheon_Metal.skn",
-      "Skeleton": "Pantheon_Metal.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "pantheon_metal_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "BasePantheon.blnd",
-      "ChampionSkinID": 80005,
-      "ChampionSkinName": "DacianKnightPantheon",
-      "OverrideBoundingBox": [
-        110.0,
-        210.0,
-        110.0
-      ],
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "pantheon_dacianKnight.skn",
-      "Skeleton": "pantheon_dacianKnight.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "pantheon_dacianknight_TX_CM.dds"
-    },
-    "MeshSkin6": {
-      "Animations": "PantheonSkin06.blnd",
-      "ChampionSkinID": 80006,
-      "ChampionSkinName": "PantheonSkin06",
-      "OverrideBoundingBox": [
-        130.0,
-        270.0,
-        130.0
-      ],
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Pantheon_skin06.skn",
-      "Skeleton": "Pantheon_skin06.skl",
-      "SkinScale": 1.1200000047683716,
-      "Texture": "pantheon_Skin06_TX_CM.dds"
+    "R": {
+      "Name": "PantheonRJump",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "121269505": 16,
-    "137792515": 14,
-    "510504319": 1,
-    "113008000": 0,
-    "129531010": 0,
-    "2500095475": "assassin"
+  "ExtraSpells": {
+    "ExtraSpell1": "PantheonEChannel",
+    "ExtraSpell2": "PantheonRFall",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "PantheonBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "PantheonBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "PantheonBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "PantheonBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "PantheonBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "PantheonBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "PantheonBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "PantheonBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "PantheonBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "PantheonCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "PantheonCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "PantheonCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "PantheonCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "PantheonCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "PantheonCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "PantheonCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "PantheonCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "PantheonCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": -0.096875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

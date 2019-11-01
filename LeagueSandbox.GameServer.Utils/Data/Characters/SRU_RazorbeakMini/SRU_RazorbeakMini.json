@@ -1,59 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_SRURazorbeakMini",
-      "Armor": 5,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 0,
-      "AttackCastTime": 0.4,
-      "AttackRange": 125,
-      "AttackTotalTime": 1.5,
-      "BaseCritChance": 0,
-      "BaseDamage": 20,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 250,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0,
-      "BaseStaticMPRegen": 0,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "EnemyTooltip": "game_character_enemyTooltip_S2015_SRURazorbeakMini",
-      "ExperienceRadius": 400.0,
-      "ExpGivenOnDeath": 20.0,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1_Probability": 0.5,
-      "GameplayCollisionRadius": 50.0,
-      "GoldGivenOnDeath": 12.0,
-      "HPPerLevel": 0,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MonsterDataTableId": 1,
-      "MoveSpeed": 350,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_SRURazorbeakMini",
-      "PathfindingCollisionRadius": 31.52079963684082,
-      "SelectionHeight": 100.0,
-      "SelectionRadius": 80,
-      "Significance": 0.4,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "UnitTags": "Monster"
+  "Name": "SRU_RazorbeakMini",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 1,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 250.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 20.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 5.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 350.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 12.0,
+  "ExpGivenOnDeath": 20.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 400.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.4,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 100.0,
+  "OverrideCollisionRadius": 80.0,
+  "PathfindingCollisionRadius": 31.5208,
+  "GameplayCollisionRadius": 50.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "Scale": 0.8
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "RazorbeakMini_Circle.dds",
-      "IconSquare": "RazorbeakMini_Square.dds"
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {}
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "SRU_RazorbeakMiniBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "SRU_RazorbeakMiniBasicAttack1",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "SRU_RazorbeakMiniBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "SRU_RazorbeakMiniBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "SRU_RazorbeakMiniBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "SRU_RazorbeakMiniBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "SRU_RazorbeakMiniBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "SRU_RazorbeakMiniBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "SRU_RazorbeakMiniBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "SRU_RazorbeakMiniCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "SRU_RazorbeakMiniCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "SRU_RazorbeakMiniCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "SRU_RazorbeakMiniCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "SRU_RazorbeakMiniCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "SRU_RazorbeakMiniCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "SRU_RazorbeakMiniCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "SRU_RazorbeakMiniCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "SRU_RazorbeakMiniCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0625,
+      "DelayCastOffsetPercent": -0.03333333,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
+  }
 }

@@ -1,67 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Lizard",
-      "Armor": 10,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": 0.2070000022649765,
-      "AttackDelayOffsetPercent": -0.019999999552965164,
-      "AttackRange": 100,
-      "AttackSpeed": 1.5,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 35.0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0.001500000013038516,
-      "BaseFactorMPRegen": 0.001500000013038516,
-      "BaseHP": 500,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0.5,
-      "BaseStaticMPRegen": 0.5,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "EnemyTooltip": "game_character_enemyTooltip_Lizard",
-      "ExpGivenOnDeath": 0,
-      "GameplayCollisionRadius": 50.0,
-      "GoldGivenOnDeath": 22.0,
-      "HPPerLevel": 0,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MoveSpeed": 330,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_Lizard",
-      "PathfindingCollisionRadius": 31.52079963684082,
-      "SelectionHeight": 100,
-      "SelectionRadius": 125,
-      "Significance": 0.4,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "SpellBlock": 0,
-      "UnitTags": "Monster",
-      "WeaponMaterial": "LizardBasicAttack"
+  "Name": "Lizard",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 500.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.5,
+  "BaseFactorHPRegen": 0.0015,
+  "BaseStaticPARRegen": 0.5,
+  "BaseFactorPARRegen": 0.0015,
+  "BasePhysicalDamage": 35.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 10.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 330.0,
+  "AttackRange": 100.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 22.0,
+  "ExpGivenOnDeath": 0.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.4,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 100.0,
+  "OverrideCollisionRadius": 125.0,
+  "PathfindingCollisionRadius": 31.5208,
+  "GameplayCollisionRadius": 50.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Lizard_Circle.dds",
-      "IconSquare": "Lizard_Square.dds"
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "LizardBase.blnd",
-      "ChampionSkinName": "LizardBase",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "Lizard.skn",
-      "Skeleton": "Lizard.skl",
-      "SkinScale": 1.25,
-      "Texture": "Lizard.dds"
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "2818610673": 50.0
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "LizardBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "LizardBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "LizardBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "LizardBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "LizardBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "LizardBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "LizardBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "LizardBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "LizardBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "LizardCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "LizardCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "LizardCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "LizardCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "LizardCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "LizardCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "LizardCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "LizardCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "LizardCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.02,
+      "DelayCastOffsetPercent": 0.207,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

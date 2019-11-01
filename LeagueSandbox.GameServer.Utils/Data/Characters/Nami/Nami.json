@@ -1,134 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Nami",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 19.719999313354492,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 4,
-      "AttackDelayCastOffsetPercent": -0.11999999731779099,
-      "AttackDelayOffsetPercent": -0.029999999329447746,
-      "AttackRange": 550,
-      "AttackRank": 4,
-      "AttackSpeedPerLevel": 2.609999895095825,
-      "BaseCritChance": 0,
-      "BaseDamage": 51.20800018310547,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 489.32000732421875,
-      "BaseMP": 377.239990234375,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.0848000049591064,
-      "BaseStaticMPRegen": 1.8,
-      "ChampionId": 267,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.1,
-      "DefenseRank": 3,
-      "DifficultyRank": 5,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "NamiBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "NamiCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.11999999731779099,
-      "CritAttack_AttackDelayOffsetPercent": -0.029999999329447746,
-      "ExtraSpell1": "NamiRMissile",
-      "ExtraSpell2": "NamiQDummyMissile",
-      "ExtraSpell3": "NamiWAlly",
-      "ExtraSpell4": "NamiWMissileEnemy",
-      "ExtraSpell5": "NamiWMissileAlly",
-      "ExtraSpell6": "NamiQMissile",
-      "ExtraSpell7": "NamiWEnemy",
-      "HPPerLevel": 74,
-      "HPRegenPerLevel": 0.10999999940395355,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 3,
-      "Lore1": "game_character_lore_Nami",
-      "MagicRank": 7,
-      "MoveSpeed": 335,
-      "MPPerLevel": 43,
-      "MPRegenPerLevel": 0.07999999821186066,
-      "Name": "game_character_displayname_Nami",
-      "Passive1": 0,
-      "Passive1Desc": "",
-      "PassLev1Desc1": "game_character_passiveDescription_Nami",
-      "Passive1Icon": "NamiPassive.dds",
-      "Passive1Level1": 0,
-      "Passive1Level2": 0,
-      "Passive1Level3": 0,
-      "Passive1Level4": 0,
-      "Passive1Effect1": -1,
-      "Passive1Effect2": -1,
-      "Passive1Effect3": -1,
-      "Passive1Effect4": -1,
-      "Passive1LuaName": "NamiPassive",
-      "Passive1Name": "game_character_passiveName_Nami",
-      "Passive1NumEffects": 0,
-      "Passive2": 0,
-      "Passive2Level1": 0,
-      "Passive2Level2": 0,
-      "Passive2Level3": 0,
-      "Passive2Level4": 0,
-      "Passive2Effect1": -1,
-      "Passive2Effect2": -1,
-      "Passive2Effect3": -1,
-      "Passive2Effect4": -1,
-      "Passive2NumEffects": 0,
-      "Passive3": 0,
-      "Passive3NumEffects": 0,
-      "Passive4": 0,
-      "Passive4NumEffects": 0,
-      "PathfindingCollisionRadius": 35,
-      "SearchTags": "support",
-      "SelectionHeight": 180,
-      "SelectionRadius": 125,
-      "Spell1": "NamiQ",
-      "Spell1Desc": "Needs text",
-      "Spell1DisplayName": "NamiQ",
-      "Spell2": "NamiW",
-      "Spell2Desc": "Needs text",
-      "Spell2DisplayName": "NamiW",
-      "Spell3": "NamiE",
-      "Spell3Desc": "Needs text",
-      "Spell3DisplayName": "NamiE",
-      "Spell4": "NamiR",
-      "Spell4Desc": "Needs text",
-      "Spell4DisplayName": "NamiR",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_Nami",
-      "Tips2": "game_character_opposing_tips_Nami",
-      "UnitTags": "Champion"
+  "Name": "Nami",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 267,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 489.32,
+  "BasePAR": 377.24,
+  "HPPerLevel": 74.0,
+  "PARPerLevel": 43.0,
+  "HPRegenPerLevel": 0.11,
+  "PARRegenPerLevel": 0.08,
+  "BaseStaticHPRegen": 1.0848,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.8,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 51.208,
+  "PhysicalDamagePerLevel": 3.1,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 19.72,
+  "ArmorPerLevel": 4.0,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 550.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.026099999,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 180.0,
+  "OverrideCollisionRadius": 125.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "NamiQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "idle_waves",
-      "NumberOfAnimations": 1
+    "W": {
+      "Name": "NamiW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": 1
+    "E": {
+      "Name": "NamiE",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 2,
-      "Particle1": "Nami_Base_Z_Water_Pool.troy C_BUFFBONE_GLB_LAYOUT_LOC",
-      "Particle2": "Nami_Skin02_idle.troy Buffbone_Cstm_Weapon_3"
-    },
-    "Info": {
-      "IconCircle": "Nami_Circle.dds",
-      "IconSquare": "Nami_Square.dds"
+    "R": {
+      "Name": "NamiR",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "113008000": 16,
-    "137792515": 8,
-    "121269505": 0,
-    "129531010": 0,
-    "510504319": 0,
-    "2500095475": "mage"
+  "ExtraSpells": {
+    "ExtraSpell1": "NamiRMissile",
+    "ExtraSpell2": "NamiQDummyMissile",
+    "ExtraSpell3": "NamiWAlly",
+    "ExtraSpell4": "NamiWMissileEnemy",
+    "ExtraSpell5": "NamiWMissileAlly",
+    "ExtraSpell6": "NamiQMissile",
+    "ExtraSpell7": "NamiWEnemy",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "NamiBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "NamiBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "NamiBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "NamiBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "NamiBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "NamiBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "NamiBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "NamiBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "NamiBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "NamiCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "NamiCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "NamiCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "NamiCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "NamiCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "NamiCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "NamiCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "NamiCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "NamiCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.03,
+      "DelayCastOffsetPercent": -0.12,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

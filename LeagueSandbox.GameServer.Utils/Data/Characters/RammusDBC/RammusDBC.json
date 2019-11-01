@@ -1,161 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Rammus",
-      "AcquisitionRange": 600,
-      "Armor": 31.384000778198242,
-      "ArmorMaterial": "Metal",
-      "ArmorPerLevel": 3.8000000000000003,
-      "AttackDelayCastOffsetPercent": -0.070833333,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 125,
-      "AttackSpeedPerLevel": 2.2149999141693115,
-      "BaseCritChance": 0,
-      "BaseDamage": 55.880001068115234,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 564.47998046875,
-      "BaseMP": 310.44000244140625,
-      "BaseStaticHPRegen": 1.5848000049591064,
-      "BaseStaticMPRegen": 1.5679999589920044,
-      "Classification": "Strong",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.5,
-      "ExtraSpell1": "ArmordilloRelentlessAssaultAttack",
-      "HPPerLevel": 86,
-      "HPRegenPerLevel": 0.10999999940395355,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_Rammus",
-      "Lore2": "As time passed, she became the cause of much trouble in Jugo. People became afraid of Annie because of the sudden fires that erupted when the little girl was in a bad mood. Several years later, she threw a temper tantrum over a dropped teddy bear, and completely incinerated her parents and her home. She has since drifted aimlessly from town to town, sometimes becoming angry over a trivial matter at which point great fire storms erupt leaving only a crying orphan girl in their wake. When the darkness inside of her felt the first call of Chaos, it discovered befitting and truly sinister use for the Dark Child.",
-      "MoveSpeed": 335,
-      "MPPerLevel": 33,
-      "MPRegenPerLevel": 0.1,
-      "Name": "game_character_displayname_Rammus",
-      "Passive1Desc": "Rammus shell becomes deadlier increasing his damage by 20% of his armor.",
-      "PassLev1Desc1": "game_character_passiveDescription_RammusDBC",
-      "Passive1Icon": "Armordillo_ScavengeArmor.dds",
-      "Passive1Level1": 1,
-      "Passive1Level2": 7,
-      "Passive1Level3": 13,
-      "Passive1Effect1": 0.2,
-      "Passive1Effect2": 0.4,
-      "Passive1Effect3": 0.6,
-      "Passive1Effect4": 0.8,
-      "Passive1LuaName": "Spiked Shell",
-      "Passive1Name": "game_character_passiveName_RammusDBC",
-      "Passive2Level3": 18,
-      "Passive2Level4": -1,
-      "Passive2Effect1": -1,
-      "Passive2Effect2": -1,
-      "Passive2Effect3": -1,
-      "Passive2Effect4": -1,
-      "PathfindingCollisionRadius": 35,
-      "SelectionHeight": 120,
-      "SelectionRadius": 120,
-      "Spell1": "PowerBall",
-      "Spell2": "DefensiveBallCurlCancel",
-      "Spell3": "PuncturingTaunt",
-      "Spell4": "Tremors2",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Rammus",
-      "Tips2": "game_character_opposing_tips_Rammus",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "ArmordilloBasicAttack"
+  "Name": "RammusDBC",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 564.48,
+  "BasePAR": 310.44,
+  "HPPerLevel": 86.0,
+  "PARPerLevel": 33.0,
+  "HPRegenPerLevel": 0.11,
+  "PARRegenPerLevel": 0.1,
+  "BaseStaticHPRegen": 1.5848,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.568,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 55.88,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 31.384,
+  "ArmorPerLevel": 3.8,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.022149999,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 120.0,
+  "OverrideCollisionRadius": 120.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "PowerBall",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.10000000149011612
+    "W": {
+      "Name": "DefensiveBallCurlCancel",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Armordillo_Circle.dds",
-      "IconSquare": "Armordillo_Square.dds"
+    "E": {
+      "Name": "PuncturingTaunt",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "RammusDBCBase.blnd",
-      "ChampionSkinID": 33001,
-      "ChampionSkinName": "RammusDBCBase",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "RammusDBC.skn",
-      "Skeleton": "RammusDBC.skl",
-      "SkinScale": 1.5,
-      "Texture": "Armordillo.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "RammusDBCBase.blnd",
-      "ChampionSkinID": 33001,
-      "ChampionSkinName": "KingRammus",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "RammusDBC.skn",
-      "Skeleton": "RammusDBC.skl",
-      "SkinScale": 1.5,
-      "Texture": "Armordillo_Alt.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "RammusDBCBase.blnd",
-      "ChampionSkinID": 33002,
-      "ChampionSkinName": "DarkMetalRammus",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "RammusDBC.skn",
-      "Skeleton": "RammusDBC.skl",
-      "SkinScale": 1.5,
-      "Texture": "Rammus_DarkMetal_CM_TX.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "RammusDBCBase.blnd",
-      "ChampionSkinID": 33003,
-      "ChampionSkinName": "MoltenRammus",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "RammusDBC.skn",
-      "Skeleton": "RammusDBC.skl",
-      "SkinScale": 1.5,
-      "Texture": "Rammus_FieryMolten_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "RammusDBCBase.blnd",
-      "ChampionSkinID": 33004,
-      "ChampionSkinName": "FrozenRammus",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Rammus_frozen.skn",
-      "Skeleton": "Rammus_frozen.skl",
-      "SkinScale": 1.5,
-      "Texture": "Rammus_Frozen_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "RammusDBCBase.blnd",
-      "ChampionSkinID": 33005,
-      "ChampionSkinName": "NinjaRammus",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Rammus_ninja.skn",
-      "Skeleton": "Rammus_ninja.skl",
-      "SkinScale": 1.5,
-      "Texture": "Rammus_Ninja_TX_CM.dds"
-    },
-    "MeshSkin6": {
-      "Animations": "RoboRammus.blnd",
-      "ChampionSkinID": 33006,
-      "ChampionSkinName": "RoboRammus",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Rammus_Metal_DBC.skn",
-      "Skeleton": "Rammus_Metal_DBC.skl",
-      "SkinScale": 1.5,
-      "Texture": "Rammus_metal_TX_CM_.dds"
-    },
-    "Package": {
-      "FallbackPackage": "Rammus"
-    },
-    "RecItems": {
-      "RecItem1": 1054,
-      "RecItem2": 3047,
-      "RecItem3": 3105,
-      "RecItem4": 3075,
-      "RecItem5": 3068,
-      "RecItem6": 3026
+    "R": {
+      "Name": "Tremors2",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {}
+  "ExtraSpells": {
+    "ExtraSpell1": "ArmordilloRelentlessAssaultAttack",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "RammusDBCBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "RammusDBCBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "RammusDBCBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "RammusDBCBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "RammusDBCBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "RammusDBCBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "RammusDBCBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "RammusDBCBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "RammusDBCBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "RammusDBCCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "RammusDBCCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "RammusDBCCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "RammusDBCCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "RammusDBCCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "RammusDBCCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "RammusDBCCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "RammusDBCCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "RammusDBCCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
+  }
 }

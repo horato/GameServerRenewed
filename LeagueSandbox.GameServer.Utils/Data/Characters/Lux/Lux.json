@@ -1,173 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Lux",
-      "PlatformEnabled": 1,
-      "AbilityPowerIncPerLevel": 0,
-      "AcquisitionRange": 625,
-      "Armor": 18.719999313354492,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 4,
-      "AttackDelayCastOffsetPercent": -0.14374999701976776,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 550,
-      "AttackRank": 2,
-      "AttackSpeedPerLevel": 1.3600000143051147,
-      "BaseAbilityPower": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 53.54399871826172,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 477.7200012207031,
-      "BaseMP": 334.0,
-      "BaseStaticHPRegen": 1.0848000049591064,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 99,
-      "ChasingAttackRangePercent": 0.8,
-      "Classification": "Arcane",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 0,
-      "CS_hard": 0,
-      "DamagePerLevel": 3.3000000000000003,
-      "DefenseRank": 4,
-      "DifficultyRank": 5,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "LuxBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "LuxCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.14374999701976776,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "LuxLightstrikeToggle",
-      "ExtraSpell2": "LuxLightBindingMis",
-      "ExtraSpell3": "LuxMaliceCannonMis",
-      "ExtraSpell4": "LuxPrismaticWaveMissile",
-      "ExtraSpell5": "LuxLightBindingDummy",
-      "FireworksEnabled": 1,
-      "HPPerLevel": 79,
-      "HPRegenPerLevel": 0.10999999940395355,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_Lux",
-      "MagicRank": 9,
-      "MoveSpeed": 330,
-      "MPPerLevel": 50,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_Lux",
-      "PassLev1Desc1": "game_character_passiveDescription_Lux",
-      "Passive1Icon": "LuxIlluminatingFraulein.dds",
-      "Passive1LuaName": "LuxIlluminationPassive",
-      "Passive1Name": "game_character_passiveName_Lux",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "Roles": "SUPPORT,NIGHTMARE,NIGHTMARE_MID",
-      "SearchTags": "mage",
-      "SelectionHeight": 85,
-      "SelectionRadius": 100,
-      "Spell1": "LuxLightBinding",
-      "Spell2": "LuxPrismaticWave",
-      "Spell3": "LuxLightStrikeKugel",
-      "Spell4": "LuxMaliceCannon",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "SR_easy": 1,
-      "SR_medium": 1,
-      "SR_hard": 1,
-      "Tips1": "game_character_tips_Lux",
-      "Tips2": "game_character_opposing_tips_Lux",
-      "UnitTags": "Champion"
+  "Name": "Lux",
+  "Flags": 8414464,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 99,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 477.72,
+  "BasePAR": 334.0,
+  "HPPerLevel": 79.0,
+  "PARPerLevel": 50.0,
+  "HPRegenPerLevel": 0.11,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 1.0848,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 53.544,
+  "PhysicalDamagePerLevel": 3.3,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 18.72,
+  "ArmorPerLevel": 4.0,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 330.0,
+  "AttackRange": 550.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 625.0,
+  "AttackSpeedPerLevel": 0.0136,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 85.0,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "LuxLightBinding",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.6000000238418579
+    "W": {
+      "Name": "LuxPrismaticWave",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 4,
-      "Particle1": "Lux_weapon_idle.troy BUFFBONE_CSTM_WEAPON_2",
-      "Particle2": "Lux_weapon_idle.troy BUFFBONE_CSTM_WEAPON_4",
-      "Particle3": "Lux_weapon_idle_steel_legion.troy Buffbone_Cstm_T_Weapon_2",
-      "Particle4": "Lux_weapon_idle_steel_legion.troy Buffbone_Cstm_B_Weapon_2"
+    "E": {
+      "Name": "LuxLightStrikeKugel",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Lux_Circle_0.dds",
-      "IconSquare": "Lux_Square_0.dds"
-    },
-    "MeshSkin": {
-      "Animations": "BaseLux.blnd",
-      "ChampionSkinID": 99000,
-      "ChampionSkinName": "BaseLux",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Lux.skn",
-      "Skeleton": "Lux.skl",
-      "SkinScale": 1.5,
-      "Texture": "lux_base_CM_TX.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "BaseLux.blnd",
-      "ChampionSkinID": 99001,
-      "ChampionSkinName": "WitchLux",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "lux_witch.skn",
-      "Skeleton": "lux_witch.skl",
-      "SkinScale": 1.5,
-      "Texture": "lux_witch_TX_CM.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "BaseLux.blnd",
-      "ChampionSkinID": 99002,
-      "ChampionSkinName": "SpellthiefLux",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "lux_spellthief.skn",
-      "Skeleton": "lux_spellthief.skl",
-      "SkinScale": 1.5,
-      "Texture": "lux_spellthief_TX_CM.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "BaseLux.blnd",
-      "AttributeFlags": 1,
-      "ChampionSkinID": 99003,
-      "ChampionSkinName": "CommandoLux",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "lux_commando.skn",
-      "Skeleton": "lux_commando.skl",
-      "SkinScale": 1.5,
-      "Texture": "lux_commando_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "BaseLux.blnd",
-      "ChampionSkinID": 99004,
-      "ChampionSkinName": "ImperialLux",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "lux_Imperial.skn",
-      "Skeleton": "lux_Imperial.skl",
-      "SkinScale": 1.5,
-      "Texture": "lux_Imperial_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "SteelLegionLux.blnd",
-      "ChampionSkinID": 99005,
-      "ChampionSkinName": "SteelLegionLux",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "lux_steellegion.skn",
-      "Skeleton": "lux_steellegion.skl",
-      "SkinScale": 1.5,
-      "Texture": "lux_steellegion_TX_CM.dds"
+    "R": {
+      "Name": "LuxMaliceCannon",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "113008000": 15,
-    "129531010": 14,
-    "121269505": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": "support",
-    "3319269524": 1,
-    "4015135009": 1
+  "ExtraSpells": {
+    "ExtraSpell1": "LuxLightstrikeToggle",
+    "ExtraSpell2": "LuxLightBindingMis",
+    "ExtraSpell3": "LuxMaliceCannonMis",
+    "ExtraSpell4": "LuxPrismaticWaveMissile",
+    "ExtraSpell5": "LuxLightBindingDummy",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "LuxBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "LuxBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "LuxBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "LuxBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "LuxBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "LuxBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "LuxBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "LuxBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "LuxBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "LuxCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "LuxCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "LuxCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "LuxCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "LuxCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "LuxCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "LuxCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "LuxCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "LuxCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.14375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

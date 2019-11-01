@@ -1,182 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Akali",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 400,
-      "Armor": 26.3799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.080701754,
-      "AttackDelayOffsetPercent": -0.10000000149011612,
-      "AttackRange": 125,
-      "AttackRank": 5,
-      "AttackSpeedPerLevel": 3.1,
-      "BaseCritChance": 0,
-      "BaseDamage": 58.375999450683594,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 587.7999877929688,
-      "BaseMP": 200.0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.6684000492095947,
-      "BaseStaticMPRegen": 10.0,
-      "ChampionId": 84,
-      "ChasingAttackRangePercent": 0.5,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.2,
-      "DefenseRank": 3,
-      "DifficultyRank": 7,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "AkaliBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "AkaliCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.080701754,
-      "CritAttack_AttackDelayOffsetPercent": -0.05000000074505806,
-      "HPPerLevel": 85,
-      "HPRegenPerLevel": 0.12999999523162842,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 1,
-      "Lore1": "game_character_lore_Akali",
-      "MagicRank": 8,
-      "MoveSpeed": 350,
-      "MPPerLevel": 0,
-      "MPRegenPerLevel": 0,
-      "Name": "game_character_displayname_Akali",
-      "PARType": "Energy",
-      "PassLev1Desc1": "game_character_passiveDescription_Akali",
-      "Passive1Icon": "AkaliTwinDisciplines.dds",
-      "Passive1LuaName": "AkaliTwinDisciplines",
-      "Passive1Name": "game_character_passiveName_Akali",
-      "PathfindingCollisionRadius": 35,
-      "SearchTags": "assassin",
-      "SelectionHeight": 138.88890075683594,
-      "SelectionRadius": 100,
-      "Spell1": "AkaliMota",
-      "Spell1Desc": "Evelynn becomes Stealthed, becoming invisible to enemies.  If she attacks enemy she will stun it.",
-      "Spell1DisplayName": "Shadow Walk",
-      "Spell2": "AkaliSmokeBomb",
-      "Spell2Desc": "Deals damage to target enemy and if used from behind, reduces his armor.",
-      "Spell2DisplayName": "Ravage",
-      "Spell3": "AkaliShadowSwipe",
-      "Spell3Desc": "Strikes a random nearby enemy.",
-      "Spell3DisplayName": "Hate Spike",
-      "Spell4": "AkaliShadowDance",
-      "Spell4Desc": "When a nearby enemy champion dies, Evelynn gains move and attack speed.  If she was the killer, she is also healed.",
-      "Spell4DisplayName": "Malice and Spite",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Akali",
-      "Tips2": "game_character_opposing_tips_Akali",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "AkaliBasicAttack",
-      "WeaponMaterial3": "AkaliBasicAttack"
+  "Name": "Akali",
+  "Flags": 8398088,
+  "PARType": 2,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 84,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 587.8,
+  "BasePAR": 200.0,
+  "HPPerLevel": 85.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.13,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 1.6684,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 10.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 58.376,
+  "PhysicalDamagePerLevel": 3.2,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 26.38,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 350.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 400.0,
+  "AttackSpeedPerLevel": 0.031,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 138.8889,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "AkaliMota",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Akali_Circle_0.dds",
-      "IconSquare": "Akali_Square_0.dds"
+    "W": {
+      "Name": "AkaliSmokeBomb",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84000,
-      "ChampionSkinName": "Akali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali.skn",
-      "Skeleton": "Akali.skl",
-      "SkinScale": 1.3,
-      "Texture": "akali.dds"
+    "E": {
+      "Name": "AkaliShadowSwipe",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin1": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84001,
-      "ChampionSkinName": "YellowAkali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali.skn",
-      "Skeleton": "Akali.skl",
-      "SkinScale": 1.3,
-      "Texture": "Akali_Yellow_TX_CM.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84002,
-      "ChampionSkinName": "CrimsonAkali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali.skn",
-      "Skeleton": "Akali.skl",
-      "SkinScale": 1.3,
-      "Texture": "Akali_Red_TX_CM.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84003,
-      "ChampionSkinName": "SoccerAkali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali_soccer.skn",
-      "Skeleton": "Akali_soccer.skl",
-      "SkinScale": 1.3,
-      "Texture": "Akali_Soccer_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84004,
-      "ChampionSkinName": "NurseAkali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali_nurse.skn",
-      "Skeleton": "Akali_nurse.skl",
-      "SkinScale": 1.3,
-      "Texture": "Akali_nurse_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84005,
-      "ChampionSkinName": "OniAkali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali_oni.skn",
-      "Skeleton": "Akali_oni.skl",
-      "SkinScale": 1.3,
-      "Texture": "Akali_oni_TX_CM.dds"
-    },
-    "MeshSkin6": {
-      "Animations": "Akali.blnd",
-      "ChampionSkinID": 84006,
-      "ChampionSkinName": "mercenaryAkali",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Akali_mercenary.skn",
-      "Skeleton": "Akali_mercenary.skl",
-      "SkinScale": 1.3,
-      "Texture": "Akali_mercenary_TX_CM.dds"
-    },
-    "Sounds": {
-      "Attack1": "Evelynn-Attack1-NORM_01.wav",
-      "Attack2": "Evelynn-Attack2-NORM_01.wav",
-      "Attack3": "Evelynn-Attack3-NORM_01.wav",
-      "Attack4": "Evelynn-Attack4-NORM_01.wav",
-      "Click1": "Evelynn-Click1-NORM_01.wav",
-      "Click2": "Evelynn-Click2-NORM_01.wav",
-      "Click3": "Evelynn-Click3-NORM_01.wav",
-      "Click4": "Evelynn-Click4-NORM_01.wav",
-      "Death": "Evelynn-Death1-NORM_01.wav",
-      "Move1": "Evelynn-Move1-NORM_01.wav",
-      "Move2": "Evelynn-Move2-NORM_01.wav",
-      "Move3": "Evelynn-Move3-NORM_01.wav",
-      "Move4": "Evelynn-Move4-NORM_01.wav",
-      "Ready": "Evelynn-Ready1-NORM_01.wav",
-      "Special1": "Evelynn-Special1-NORM_01.wav"
+    "R": {
+      "Name": "AkaliShadowDance",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1054,
-    "121269505": 14,
-    "113008000": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2043159165": "AkaliCritAttack",
-    "2500095475": "",
-    "2811665729": "AkaliCritAttack",
-    "3975031488": "2013-07-31"
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "AkaliBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "AkaliBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "AkaliBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "AkaliBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "AkaliBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "AkaliBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "AkaliBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "AkaliBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "AkaliBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "AkaliCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "AkaliCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "AkaliCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "AkaliCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "AkaliCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "AkaliCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "AkaliCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "AkaliCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "AkaliCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

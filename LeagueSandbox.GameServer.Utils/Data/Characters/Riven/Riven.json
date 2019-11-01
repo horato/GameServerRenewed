@@ -1,105 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Riven",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 24.375999450683594,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.2,
-      "AttackDelayCastOffsetPercent": -0.133333333,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 125,
-      "AttackRank": 8,
-      "AttackSpeedPerLevel": 3.5,
-      "BaseCritChance": 0,
-      "BaseDamage": 56.040000915527344,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 558.47998046875,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0.6679999828338623,
-      "BaseStaticMPRegen": 0,
-      "ChampionId": 92,
-      "ChasingAttackRangePercent": 0.75,
-      "Classification": "Strong",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3,
-      "DefenseRank": 5,
-      "DifficultyRank": 8,
-      "BaseAttack_Probability": 0.3400000035762787,
-      "ExtraAttack1": "RivenBasicAttack2",
-      "ExtraAttack2": "RivenBasicAttack3",
-      "ExtraAttack1_Probability": 0.33000001311302185,
-      "ExtraAttack2_Probability": 0.33000001311302185,
-      "CritAttack": "RivenCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.133333333,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "RivenLightsaberMissile",
-      "ExtraSpell2": "RivenIzunaBlade",
-      "ExtraSpell3": "RivenIzunaBlade",
-      "ExtraSpell4": "RivenLightsaberMissileSide",
-      "ExtraSpell5": "RivenTriCleave",
-      "ExtraSpell6": "RivenLightsaberMissile",
-      "HPPerLevel": 86,
-      "HPRegenPerLevel": 0.1,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 2,
-      "Lore1": "game_character_lore_Riven",
-      "MagicRank": 1,
-      "MoveSpeed": 345,
-      "MPPerLevel": 0,
-      "MPRegenPerLevel": 0,
-      "Name": "game_character_displayname_Riven",
-      "PARType": "None",
-      "PassLev1Desc1": "game_character_passiveDescription_Riven",
-      "Passive1Icon": "RivenRunicBlades.dds",
-      "Passive1Level1": 1,
-      "Passive1Level2": 4,
-      "Passive1Level3": 7,
-      "Passive1LuaName": "RivenPassive",
-      "Passive1Name": "game_character_passiveName_Riven",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter",
-      "SelectionHeight": 150,
-      "SelectionRadius": 130,
-      "Spell1": "RivenTriCleave",
-      "Spell2": "RivenMartyr",
-      "Spell3": "RivenFeint",
-      "Spell4": "RivenFengShuiEngine",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Riven",
-      "Tips2": "game_character_opposing_tips_Riven",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "RivenBasicAttack"
+  "Name": "Riven",
+  "Flags": 8398088,
+  "PARType": 3,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.75,
+  "ChampionId": 92,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 558.48,
+  "BasePAR": 0.0,
+  "HPPerLevel": 86.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.1,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.668,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 56.04,
+  "PhysicalDamagePerLevel": 3.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.376,
+  "ArmorPerLevel": 3.2,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.035,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 150.0,
+  "OverrideCollisionRadius": 130.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "RivenTriCleave",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "Weapon_Snap",
-      "NumberOfAnimations": 1
+    "W": {
+      "Name": "RivenMartyr",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.6000000238418579
+    "E": {
+      "Name": "RivenFeint",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Riven_Circle.dds",
-      "IconSquare": "Riven_Square.dds"
+    "R": {
+      "Name": "RivenFengShuiEngine",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "121269505": 16,
-    "113008000": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": "assassin"
+  "ExtraSpells": {
+    "ExtraSpell1": "RivenLightsaberMissile",
+    "ExtraSpell2": "RivenIzunaBlade",
+    "ExtraSpell3": "RivenIzunaBlade",
+    "ExtraSpell4": "RivenLightsaberMissileSide",
+    "ExtraSpell5": "RivenTriCleave",
+    "ExtraSpell6": "RivenLightsaberMissile",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "RivenBasicAttack",
+      "Probability": 0.34,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "RivenBasicAttack2",
+      "Probability": 0.33,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "RivenBasicAttack3",
+      "Probability": 0.33,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "RivenBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "RivenBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "RivenBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "RivenBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "RivenBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "RivenBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "RivenCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "RivenCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "RivenCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "RivenCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "RivenCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "RivenCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "RivenCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "RivenCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "RivenCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

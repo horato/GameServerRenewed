@@ -1,131 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Gragas",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 26.04800033569336,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.6,
-      "AttackDelayCastOffsetPercent": -0.05000000074505806,
-      "AttackDelayOffsetPercent": -0.03999999910593033,
-      "AttackRange": 125,
-      "AttackRank": 4,
-      "AttackSpeedPerLevel": 2.049999952316284,
-      "BaseCritChance": 0,
-      "BaseDamage": 61.380001068115234,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 583.52001953125,
-      "BaseMP": 299.9599914550781,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.7355999946594238,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "ChampionId": 79,
-      "ChasingAttackRangePercent": 0.5,
-      "Classification": "Strong",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.5,
-      "DefenseRank": 7,
-      "DifficultyRank": 5,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "GragasBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "GragasCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.05000000074505806,
-      "CritAttack_AttackDelayOffsetPercent": -0.03999999910593033,
-      "CriticalAttack": "MinotaurCriticalAttack",
-      "ExtraSpell1": "GragasQMissile",
-      "ExtraSpell2": "GragasRBoom",
-      "ExtraSpell3": "GragasWAttack",
-      "GameplayCollisionRadius": 80,
-      "HPPerLevel": 89,
-      "HPRegenPerLevel": 0.17000000178813934,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 3,
-      "Lore1": "game_character_lore_Gragas",
-      "MagicRank": 6,
-      "MoveSpeed": 330,
-      "MPPerLevel": 47,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_Gragas",
-      "Passive1Desc": "Alistar recieves less damage from Turrets.",
-      "PassLev1Desc1": "game_character_passiveDescription_Gragas",
-      "PassLev1Desc2": "Adds +400 Hit Points.",
-      "PassLev1Desc3": "Adds +600 Hit Points.",
-      "Passive1Icon": "GragasPassiveHeal.dds",
-      "Passive1Level1": 10,
-      "Passive1Level2": 10,
-      "Passive1Level3": 10,
-      "Passive1LuaName": "GragasPassive",
-      "Passive1Name": "game_character_passiveName_Gragas",
-      "PathfindingCollisionRadius": 50,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter",
-      "SelectionHeight": 185,
-      "SelectionRadius": 155,
-      "Spell1": "GragasQ",
-      "Spell1Desc": "Alistar smashes the ground, dealing damage and tossing all nearby enemies into the air, stunning them for the duration.",
-      "Spell1DisplayName": "Pulverize",
-      "Spell2": "GragasW",
-      "Spell2Desc": "Drunken Rage",
-      "Spell2DisplayName": "DrunkenRage",
-      "Spell3": "GragasE",
-      "Spell3Desc": "Barrel Roll",
-      "Spell3DisplayName": "BarrelRoll",
-      "Spell4": "GragasR",
-      "Spell4Desc": "Alistar lets out a wild roar, removing all debuffs, temporarily increasing his health, and becoming Spell Immune for a duration.",
-      "Spell4DisplayName": "Unbreakable Will",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Gragas",
-      "Tips2": "game_character_opposing_tips_Gragas",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "GragasBasicAttack"
+  "Name": "Gragas",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 79,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 583.52,
+  "BasePAR": 299.96,
+  "HPPerLevel": 89.0,
+  "PARPerLevel": 47.0,
+  "HPRegenPerLevel": 0.17,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 1.7356,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 61.38,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 26.048,
+  "ArmorPerLevel": 3.6,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 330.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.020499999,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "MinotaurCriticalAttack",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 185.0,
+  "OverrideCollisionRadius": 155.0,
+  "PathfindingCollisionRadius": 50.0,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "GragasQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "Buffbones_Additive",
-      "NumberOfAnimations": 1
+    "W": {
+      "Name": "GragasW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.6000000238418579
+    "E": {
+      "Name": "GragasE",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "Gragas_Skin04_Idle_Smoke.troy BUFFBONE_CSTM_CIG"
-    },
-    "Info": {
-      "IconCircle": "Gragas_Circle.dds",
-      "IconSquare": "Gragas_Square.dds"
-    },
-    "Sounds": {
-      "Attack1": "Alstair_Attack1.wav",
-      "Attack2": "Alstair_Attack2.wav",
-      "Attack3": "Alstair_Attack3.wav",
-      "Attack4": "Alstair_Attack4.wav",
-      "Click1": "Alstair_Click1.wav",
-      "Click2": "Alstair_Click2.wav",
-      "Click3": "Alstair_Click3.wav",
-      "Click4": "Alstair_Click4.wav",
-      "Move1": "Alstair_Move1.wav",
-      "Move2": "Alstair_Move2.wav",
-      "Move3": "Alstair_Move3.wav",
-      "Move4": "Alstair_Move4.wav",
-      "Ready": "Alstair_Taunt.wav"
+    "R": {
+      "Name": "GragasR",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "129531010": 14,
-    "137792515": 7,
-    "113008000": 1,
-    "121269505": 0,
-    "510504319": 0,
-    "2500095475": "mage"
+  "ExtraSpells": {
+    "ExtraSpell1": "GragasQMissile",
+    "ExtraSpell2": "GragasRBoom",
+    "ExtraSpell3": "GragasWAttack",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "GragasBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "GragasBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "GragasBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "GragasBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "GragasBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "GragasBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "GragasBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "GragasBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "GragasBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "GragasCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "GragasCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "GragasCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "GragasCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "GragasCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "GragasCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "GragasCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "GragasCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "GragasCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.04,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

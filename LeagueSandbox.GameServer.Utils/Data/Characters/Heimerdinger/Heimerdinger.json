@@ -1,95 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Heimerdinger",
-      "PlatformEnabled": 1,
-      "AbilityPowerIncPerLevel": 0,
-      "AcquisitionRange": 550,
-      "Armor": 19.040000915527344,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3,
-      "AttackDelayCastOffsetPercent": -0.09921874850988388,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 550,
-      "AttackRank": 2,
-      "AttackSpeedPerLevel": 1.3600000143051147,
-      "BaseAbilityPower": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 55.5359992980957,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 476.0,
-      "BaseMP": 307.20001220703125,
-      "BaseStaticHPRegen": 2.2016000747680664,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "ChampionId": 74,
-      "ChasingAttackRangePercent": 0.8,
-      "Classification": "Arcane",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 2.7,
-      "DefenseRank": 6,
-      "DifficultyRank": 8,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "HeimerdingerBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "HeimerdingerCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.099921875,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "HeimerdingerESpell",
-      "ExtraSpell2": "HeimerdingerESpellSlow",
-      "ExtraSpell3": "HeimerdingerWAttack",
-      "ExtraSpell4": "HeimerdingerWAttack2",
-      "ExtraSpell5": "HeimerdingerESpellFast",
-      "ExtraSpell6": "HeimerdingerWAttack_Ult",
-      "ExtraSpell7": "HeimerdingerWAttack2Ult",
-      "ExtraSpell8": "HeimerdingerUltWDummySpell",
-      "ExtraSpell9": "HeimerdingerUltEDummySpell",
-      "ExtraSpell10": "HeimerdingerUltQDummySpell",
-      "GameplayCollisionRadius": 55,
-      "HPPerLevel": 75,
-      "HPRegenPerLevel": 0.3499999940395355,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_Heimerdinger",
-      "MagicRank": 8,
-      "MoveSpeed": 340,
-      "MPPerLevel": 40,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_Heimerdinger",
-      "Passive1Icon": "Heimerdinger_Passive.dds",
-      "Passive1LuaName": "HeimerdingerPassive",
-      "Passive1Name": "game_character_passiveName_Heimerdinger",
-      "Passive1Range": 1100,
-      "PathfindingCollisionRadius": 30.54439926147461,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "mage",
-      "SelectionHeight": 85,
-      "SelectionRadius": 100,
-      "Spell1": "HeimerdingerQ",
-      "Spell2": "HeimerdingerW",
-      "Spell3": "HeimerdingerE",
-      "Spell4": "HeimerdingerR",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "Tips1": "game_character_tips_Heimerdinger",
-      "Tips2": "game_character_opposing_tips_Heimerdinger",
-      "UnitTags": "Champion"
+  "Name": "Heimerdinger",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 74,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 476.0,
+  "BasePAR": 307.2,
+  "HPPerLevel": 75.0,
+  "PARPerLevel": 40.0,
+  "HPRegenPerLevel": 0.35,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 2.2016,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 55.536,
+  "PhysicalDamagePerLevel": 2.7,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 19.04,
+  "ArmorPerLevel": 3.0,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 340.0,
+  "AttackRange": 550.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 550.0,
+  "AttackSpeedPerLevel": 0.0136,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 85.0,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 30.5444,
+  "GameplayCollisionRadius": 55.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 1100.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "HeimerdingerQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "North_Adjust",
-      "Animation2": "Iris_default",
-      "NumberOfAnimations": 2
+    "W": {
+      "Name": "HeimerdingerW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Heimerdinger_Circle.dds",
-      "IconSquare": "Heimerdinger_Square.dds"
+    "E": {
+      "Name": "HeimerdingerE",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "HeimerdingerR",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "510504319": 1,
-    "2500095475": "support"
+  "ExtraSpells": {
+    "ExtraSpell1": "HeimerdingerESpell",
+    "ExtraSpell2": "HeimerdingerESpellSlow",
+    "ExtraSpell3": "HeimerdingerWAttack",
+    "ExtraSpell4": "HeimerdingerWAttack2",
+    "ExtraSpell5": "HeimerdingerESpellFast",
+    "ExtraSpell6": "HeimerdingerWAttack_Ult",
+    "ExtraSpell7": "HeimerdingerWAttack2Ult",
+    "ExtraSpell8": "HeimerdingerUltWDummySpell",
+    "ExtraSpell9": "HeimerdingerUltEDummySpell",
+    "ExtraSpell10": "HeimerdingerUltQDummySpell",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "HeimerdingerBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "HeimerdingerBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "HeimerdingerBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "HeimerdingerBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "HeimerdingerBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "HeimerdingerBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "HeimerdingerBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "HeimerdingerBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "HeimerdingerBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "HeimerdingerCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "HeimerdingerCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "HeimerdingerCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "HeimerdingerCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "HeimerdingerCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "HeimerdingerCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "HeimerdingerCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "HeimerdingerCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "HeimerdingerCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": -0.09921875,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

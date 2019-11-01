@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Numerics;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 
@@ -18,8 +19,7 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects
         AutoAttackState AutoAttackState { get; }
         float CurrentAutoAttackCooldown { get; }
         float CurrentAutoAttackDelay { get; }
-        bool IsMelee { get; }
-        float AutoAttackCastTime { get; }
+        ICharacterData CharacterData { get; }
         uint AutoAttackProjectileId { get; }
 
         void Move(IEnumerable<Vector2> waypoints, MovementType movementType);

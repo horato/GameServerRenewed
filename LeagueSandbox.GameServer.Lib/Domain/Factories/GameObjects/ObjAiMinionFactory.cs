@@ -47,14 +47,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 _networkIdCreationService.GetNewNetId(),
                 name,
                 0,
-                charData.PerceptionBubbleRadius,
                 spellBook,
-                charData.GameplayCollisionRadius,
                 MinionActionState.Spawned,
                 barrack.MinionWaypoints,
                 true,
-                charData.IsMelee,
-                charData.AttackCastTime
+                charData
             );
             
             return SetupDependencies(instance);

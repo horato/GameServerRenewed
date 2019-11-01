@@ -1,67 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_AzirSunDisc",
-      "AcquisitionRange": 750,
-      "Armor": 60,
-      "ArmorMaterial": "Stone",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": -0.25,
-      "AttackDelayOffsetPercent": -0.25,
-      "AttackRange": 750,
-      "AttackSpeedPerLevel": 2.125,
-      "BaseCritChance": 0,
-      "BaseDamage": 150.0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 1300,
-      "BaseMP": 120,
-      "BaseStaticHPRegen": 0,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "DisableContinuousTargetFacing": 1,
-      "ExpGivenOnDeath": 0,
-      "GameplayCollisionRadius": 0,
-      "GlobalExpGivenOnDeath": 0,
-      "GlobalGoldGivenOnDeath": 0,
-      "GoldGivenOnDeath": 0,
-      "HitFxScale": 0.5,
-      "HPPerLevel": 0,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "MoveSpeed": 0,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_AzirSunDisc",
-      "OccludedUnitSelectableDistance": 0,
-      "PathfindingCollisionRadius": 0,
-      "SelectionHeight": 400.0,
-      "SelectionRadius": 280.0,
-      "ShouldFaceTarget": 0,
-      "SpellBlock": 100,
-      "UnitTags": "Structure | Structure_Turret"
-    },
-    "HealthBar": {
-      "UnitBarKey": "Turret",
-      "WorldOffset": [
-        0.0,
-        0.07999999821186066,
-        0.0
+  "Name": "AzirSunDisc",
+  "Flags": 10494976,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 1300.0,
+  "BasePAR": 120.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 150.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 60.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 100.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 0.0,
+  "AttackRange": 750.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.02125,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 0.0,
+  "ExpGivenOnDeath": 0.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 0.5,
+  "OverrideCollisionHeight": 400.0,
+  "OverrideCollisionRadius": 280.0,
+  "PathfindingCollisionRadius": 0.0,
+  "GameplayCollisionRadius": 0.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
       ]
     },
-    "IdleParticles": {
-      "BeamParticle": "LaserSight_beam.troy Piece10",
-      "ChampTargetingParticle": "yikes-champ.troy Piece10",
-      "TowerTargetingParticle": "Yikes-Tower.troy Piece10"
+    "W": {
+      "Name": "",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "AzirSunDisc_Circle_0.dds",
-      "IconSquare": "AzirSunDisc_Square_0.dds"
+    "E": {
+      "Name": "",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Package": {
-      "FallbackPackage": "Azir"
+    "R": {
+      "Name": "",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {}
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "AzirSunDiscBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "AzirSunDiscBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "AzirSunDiscBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "AzirSunDiscBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "AzirSunDiscBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "AzirSunDiscBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "AzirSunDiscBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "AzirSunDiscBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "AzirSunDiscBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "AzirSunDiscCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "AzirSunDiscCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "AzirSunDiscCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "AzirSunDiscCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "AzirSunDiscCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "AzirSunDiscCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "AzirSunDiscCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "AzirSunDiscCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "AzirSunDiscCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.25,
+      "DelayCastOffsetPercent": -0.25,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
+  }
 }

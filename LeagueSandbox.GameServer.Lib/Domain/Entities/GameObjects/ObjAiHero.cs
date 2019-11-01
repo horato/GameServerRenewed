@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Stats;
@@ -18,8 +19,8 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         //    ShopEnabled
         //ShopEnabled
         //    MultiKillDisplayCount
-        public ObjAiHero(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, ISpellBook spellBook, float collisionRadius, ulong summonerId, int clientId, bool isBot, bool isPlayerControlled, bool isMelee, float autoAttackCastTime)
-            : base(team, position, stats, netId, 1200, collisionRadius, skinName, skinId, spellBook, isMelee, autoAttackCastTime)
+        public ObjAiHero(Team team, Vector3 position, IStats stats, uint netId, string skinName, int skinId, ISpellBook spellBook, ulong summonerId, int clientId, bool isBot, bool isPlayerControlled, ICharacterData characterData)
+            : base(team, position, stats, netId, characterData.PerceptionBubbleRadius, characterData.GameplayCollisionRadius, skinName, skinId, spellBook, characterData)
         {
             SummonerId = summonerId;
             ClientId = clientId;

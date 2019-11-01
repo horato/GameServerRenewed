@@ -1,61 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Poro",
-      "Armor": 6,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 0,
-      "AttackDelayCastOffsetPercent": 0.07199999690055847,
-      "AttackDelayOffsetPercent": -0.05000000074505806,
-      "AttackRange": 100,
-      "AttackSpeed": 1.5,
-      "AttackSpeedPerLevel": 0,
-      "BaseCritChance": 25,
-      "BaseDamage": 8.0,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 100000,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 100000,
-      "BaseStaticMPRegen": 0,
-      "CritDamageBonus": 1.5,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "EnemyTooltip": "game_character_enemyTooltip_Poro",
-      "ExperienceRadius": 400.0,
-      "ExpGivenOnDeath": 10.0,
-      "GameplayCollisionRadius": 0,
-      "GoldGivenOnDeath": 4.0,
-      "HPPerLevel": 0,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MoveSpeed": 150,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_Poro",
-      "NoHealthBar": 1,
-      "PathfindingCollisionRadius": 31.52079963684082,
-      "SelectionHeight": 100,
-      "SelectionRadius": 115,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "WeaponMaterial": "WolfBasicAttack"
+  "Name": "HA_AP_Poro",
+  "Flags": 8398216,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 100000.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 100000.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 8.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 6.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 25.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 1.5,
+  "BaseMoveSpeed": 150.0,
+  "AttackRange": 100.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 4.0,
+  "ExpGivenOnDeath": 10.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 400.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 100.0,
+  "OverrideCollisionRadius": 115.0,
+  "PathfindingCollisionRadius": 31.5208,
+  "GameplayCollisionRadius": 0.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "Buffbones",
-      "NumberOfAnimations": 1
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 0,
-      "Particle1": ""
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "2818610673": 50.0
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "HA_AP_PoroBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "HA_AP_PoroBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "HA_AP_PoroBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "HA_AP_PoroBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "HA_AP_PoroBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "HA_AP_PoroBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "HA_AP_PoroBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "HA_AP_PoroBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "HA_AP_PoroBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "HA_AP_PoroCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "HA_AP_PoroCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "HA_AP_PoroCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "HA_AP_PoroCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "HA_AP_PoroCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "HA_AP_PoroCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "HA_AP_PoroCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "HA_AP_PoroCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "HA_AP_PoroCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.072,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

@@ -1,116 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Tryndamere",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 400,
-      "Armor": 24.107999801635742,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.1,
-      "AttackDelayCastOffsetPercent": -0.10999999940395355,
-      "AttackDelayOffsetPercent": -0.06719999760389328,
-      "AttackRange": 125,
-      "AttackRank": 10,
-      "AttackSpeedPerLevel": 2.9000000000000004,
-      "BaseCritChance": 0,
-      "BaseDamage": 61.375999450683594,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 625.6400146484375,
-      "BaseMP": 100.0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.7023999691009521,
-      "BaseStaticMPRegen": 0,
-      "ChampionId": 23,
-      "ChasingAttackRangePercent": 0.5,
-      "Classification": "Strong",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.2,
-      "DefenseRank": 5,
-      "DifficultyRank": 5,
-      "BaseAttack_Probability": 0.7000000000000001,
-      "ExtraAttack1": "TryndamereBasicAttack2",
-      "ExtraAttack1_Probability": 0.30000000000000004,
-      "CritAttack": "TryndamereCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.07999999821186066,
-      "CritAttack_AttackDelayOffsetPercent": -0.06719999760389328,
-      "ExtraSpell1": "Slash",
-      "HPPerLevel": 98,
-      "HPRegenPerLevel": 0.18000000715255737,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 2,
-      "Lore1": "game_character_lore_Tryndamere",
-      "MagicRank": 2,
-      "MoveSpeed": 345,
-      "MPPerLevel": 0,
-      "MPRegenPerLevel": 0,
-      "Name": "game_character_displayname_Tryndamere",
-      "PARColor": [
-        255.0,
-        0.0,
-        0.0
-      ],
-      "PARFadeColor": [
-        175.0,
-        0.0,
-        0.0
-      ],
-      "PARHasRegenText": 0,
-      "PARIncrements": 20,
-      "PARMaxSegments": 0,
-      "PARNameString": "fury",
-      "PARType": "Battlefury",
-      "PassLev1Desc1": "game_character_passiveDescription_Tryndamere",
-      "Passive1Icon": "Tryndamere_Passive.dds",
-      "Passive1Level1": 1,
-      "Passive1Level2": 4,
-      "Passive1Level3": 7,
-      "Passive1LuaName": "Battle Fury",
-      "Passive1Name": "game_character_passiveName_Tryndamere",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter",
-      "SelectionHeight": 180,
-      "SelectionRadius": 135,
-      "Spell1": "Bloodlust",
-      "Spell1Desc": "Tryndamere thrives on the thrills of combat.  Whenever Tryndamere kills a unit or critically strikes, he temporarily gains increased damage and critical damage, and he can consume his Bloodlust to restore health.",
-      "Spell1DisplayName": "Bloodlust",
-      "Spell2": "MockingShout",
-      "Spell2Desc": "Tryndamere issues a brave call toward his cowardly enemies.  Enemies deal reduced damage for a few seconds, and enemies turned away from Tryndamere are mocked mercilessly and move slowly like the chicken they are.",
-      "Spell2DisplayName": "Mocking Shout",
-      "Spell3": "slashCast",
-      "Spell3Desc": "Tryndamere slices toward target location, dealing damage to enemies in his path.",
-      "Spell3DisplayName": "Slash",
-      "Spell4": "UndyingRage",
-      "Spell4Desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
-      "Spell4DisplayName": "Undying Rage",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Tryndamere",
-      "Tips2": "game_character_opposing_tips_Tryndamere",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "TryndamereBasicAttack"
+  "Name": "Tryndamere",
+  "Flags": 8398088,
+  "PARType": 5,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 23,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 625.64,
+  "BasePAR": 100.0,
+  "HPPerLevel": 98.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.18,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 1.7024,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 61.376,
+  "PhysicalDamagePerLevel": 3.2,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 24.108,
+  "ArmorPerLevel": 3.1,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 400.0,
+  "AttackSpeedPerLevel": 0.029000001,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 180.0,
+  "OverrideCollisionRadius": 135.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "Bloodlust",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.5
+    "W": {
+      "Name": "MockingShout",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Tryndamere_Circle.dds",
-      "IconSquare": "Tryndamere_Square.dds"
+    "E": {
+      "Name": "slashCast",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "UndyingRage",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1054,
-    "121269505": 14,
-    "510504319": 2,
-    "113008000": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "2500095475": "assassin"
+  "ExtraSpells": {
+    "ExtraSpell1": "Slash",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "TryndamereBasicAttack",
+      "Probability": 0.7,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "TryndamereBasicAttack2",
+      "Probability": 0.3,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "TryndamereBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "TryndamereBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "TryndamereBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "TryndamereBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "TryndamereBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "TryndamereBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "TryndamereBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "TryndamereCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.08,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "TryndamereCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "TryndamereCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "TryndamereCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "TryndamereCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "TryndamereCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "TryndamereCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "TryndamereCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "TryndamereCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.11,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

@@ -1,106 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Karthus",
-      "PlatformEnabled": 1,
-      "AbilityPowerIncPerLevel": 0,
-      "AcquisitionRange": 450,
-      "Armor": 20.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": 0.04374999925494194,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 450,
-      "AttackRank": 2,
-      "AttackSpeedPerLevel": 2.109999895095825,
-      "BaseAbilityPower": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 45.65999984741211,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 516.0,
-      "BaseMP": 372.4800109863281,
-      "BaseStaticHPRegen": 1.2848000526428223,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 30,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 1,
-      "CS_hard": 1,
-      "DamagePerLevel": 3.25,
-      "DefenseRank": 2,
-      "DifficultyRank": 7,
-      "BaseAttack_Probability": 0.75,
-      "ExtraAttack1": "KarthusBasicAttack2",
-      "ExtraAttack1_Probability": 0.25,
-      "CritAttack": "KarthusCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": 0.04374999925494194,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "KarthusLayWasteExtra",
-      "ExtraSpell2": "KarthusWallOfPainExtra",
-      "ExtraSpell3": "KarthusFallenOneExtra",
-      "ExtraSpell4": "KarthusDeathDefiedBuff",
-      "ExtraSpell5": "KarthusDefileSoundDummy2",
-      "HPPerLevel": 75,
-      "HPRegenPerLevel": 0.10999999940395355,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_Karthus",
-      "MagicRank": 10,
-      "MoveSpeed": 335,
-      "MPPerLevel": 61,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_Karthus",
-      "PassLev1Desc1": "game_character_passiveDescription_Karthus",
-      "Passive1Icon": "Karthus_Passive.dds",
-      "Passive1LuaName": "Death Defied",
-      "Passive1Name": "game_character_passiveName_Karthus",
-      "PathfindingCollisionRadius": 35,
-      "Roles": "MAGE,NIGHTMARE,NIGHTMARE_MID",
-      "SearchTags": "mage",
-      "SelectionHeight": 150,
-      "SelectionRadius": 100,
-      "Spell1": "KarthusLayWasteA1",
-      "Spell1Desc": "Lich unleashes a delayed waste over an area, dealing damage and damage over time.",
-      "Spell1DisplayName": "Lay Waste",
-      "Spell2": "KarthusWallOfPain",
-      "Spell2Desc": "While ready to cast, Lich gains mana when he kills a unit.  Can be released for a large area blast (more intense to near units)",
-      "Spell2DisplayName": "Defile",
-      "Spell3": "KarthusDefile",
-      "Spell3Desc": "Lich creates a walk-through wall that fears and deals damage to enemies that walk through.",
-      "Spell3DisplayName": "Wall of Pain",
-      "Spell4": "KarthusFallenOne",
-      "Spell4Desc": "After a 3 second channel, deals global damage to all enemy champions.",
-      "Spell4DisplayName": "Fallen One",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "SR_easy": 0,
-      "SR_medium": 1,
-      "SR_hard": 1,
-      "Tips1": "game_character_tips_Karthus",
-      "Tips2": "game_character_opposing_tips_Karthus",
-      "UnitTags": "Champion"
+  "Name": "Karthus",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 30,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 516.0,
+  "BasePAR": 372.48,
+  "HPPerLevel": 75.0,
+  "PARPerLevel": 61.0,
+  "HPRegenPerLevel": 0.11,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 1.2848,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 45.66,
+  "PhysicalDamagePerLevel": 3.25,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 20.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 450.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 450.0,
+  "AttackSpeedPerLevel": 0.0211,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 150.0,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "KarthusLayWasteA1",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 0
+    "W": {
+      "Name": "KarthusWallOfPain",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Karthus_Circle.dds",
-      "IconSquare": "Karthus_Square.dds"
+    "E": {
+      "Name": "KarthusDefile",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "KarthusFallenOne",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "121269505": 14,
-    "510504319": 1,
-    "113008000": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "3319269524": 1,
-    "4015135009": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "KarthusLayWasteExtra",
+    "ExtraSpell2": "KarthusWallOfPainExtra",
+    "ExtraSpell3": "KarthusFallenOneExtra",
+    "ExtraSpell4": "KarthusDeathDefiedBuff",
+    "ExtraSpell5": "KarthusDefileSoundDummy2",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "KarthusBasicAttack",
+      "Probability": 0.75,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "KarthusBasicAttack2",
+      "Probability": 0.25,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "KarthusBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "KarthusBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "KarthusBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "KarthusBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "KarthusBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "KarthusBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "KarthusBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "KarthusCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "KarthusCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "KarthusCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "KarthusCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "KarthusCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "KarthusCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "KarthusCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "KarthusCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "KarthusCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.04375,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

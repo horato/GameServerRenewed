@@ -1,75 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_SRURed",
-      "Armor": 20,
-      "ArmorMaterial": "Wood",
-      "ArmorPerLevel": 0,
-      "AttackCastTime": 0.5299999713897705,
-      "AttackRange": 200,
-      "AttackTotalTime": 1.6699999570846558,
-      "BaseCritChance": 0,
-      "BaseDamage": 80,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 1800,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0,
-      "BaseStaticMPRegen": 0,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 0,
-      "DisableContinuousTargetFacing": 1,
-      "EnemyTooltip": "game_character_enemyTooltip_S2015_SRURed",
-      "ExperienceRadius": 400.0,
-      "ExpGivenOnDeath": 100.0,
-      "GameplayCollisionRadius": 100.0,
-      "GoldGivenOnDeath": 42.0,
-      "HPPerLevel": 0,
-      "IsElite": "Yes",
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "MonsterDataTableId": 1,
-      "MoveSpeed": 330,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_SRURed",
-      "PathfindingCollisionRadius": 100,
-      "SelectionHeight": 100,
-      "SelectionRadius": 145,
-      "SequentialAutoAttacks": 1,
-      "Significance": 0.6000000000000001,
-      "SoulGivenOnDeath": 0,
-      "Spell1": "BaseSpell",
-      "Spell2": "BaseSpell",
-      "Spell3": "BaseSpell",
-      "Spell4": "BaseSpell",
-      "SpellBlock": 0,
-      "UnitTags": "Monster | Monster_Large",
-      "UseRingIconForKillCallout": 0
-    },
-    "HealthBar": {
-      "HPPerTick": 1000,
-      "UnitBarKey": "Dragon",
-      "WorldOffset": [
-        0.0,
-        -0.3,
-        0.0
+  "Name": "SRU_Red",
+  "Flags": 1058058,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 1,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 1800.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 0.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.0,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 0.0,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 80.0,
+  "PhysicalDamagePerLevel": 0.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 20.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 330.0,
+  "AttackRange": 200.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.0,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 42.0,
+  "ExpGivenOnDeath": 100.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 400.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.6,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 100.0,
+  "OverrideCollisionRadius": 145.0,
+  "PathfindingCollisionRadius": 100.0,
+  "GameplayCollisionRadius": 100.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
       ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "SRU_Red_idle.troy Orb"
+    "W": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Brambleback_Circle.dds",
-      "IconCircleScale": 1.2000000000000002,
-      "IconSquare": "Brambleback_Square.dds"
+    "E": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "BaseSpell",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "593637254": 1
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "SRU_RedBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "SRU_RedBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "SRU_RedBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "SRU_RedBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "SRU_RedBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "SRU_RedBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "SRU_RedBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "SRU_RedBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "SRU_RedBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "SRU_RedCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "SRU_RedCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "SRU_RedCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "SRU_RedCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "SRU_RedCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "SRU_RedCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "SRU_RedCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "SRU_RedCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "SRU_RedCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.04374993,
+      "DelayCastOffsetPercent": 0.017365247,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

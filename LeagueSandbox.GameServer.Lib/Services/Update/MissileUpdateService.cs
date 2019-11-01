@@ -74,7 +74,7 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
             }
 
             var to = missile.EndPoint.ToVector2();
-            var destinationReached = _movementService.MoveObject(missile, to, missile.Speed, millisecondsDiff);
+            var destinationReached = _movementService.MoveObject(missile, to, missile.GetMissileSpeed(), millisecondsDiff);
             if (destinationReached)
                 missile.DestinationReached();
         }

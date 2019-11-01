@@ -1,194 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Ezreal",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 550,
-      "Armor": 21.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.111613475,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 550,
-      "AttackRank": 7,
-      "AttackSpeedPerLevel": 2.8000000000000003,
-      "BaseCritChance": 0,
-      "BaseDamage": 50.2400016784668,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 484.3999938964844,
-      "BaseMP": 310.6000061035156,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.2848000526428223,
-      "BaseStaticMPRegen": 1.618399977684021,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 81,
-      "ChasingAttackRangePercent": 0.8,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 1,
-      "CS_hard": 1,
-      "DamagePerLevel": 3,
-      "DefenseRank": 2,
-      "DifficultyRank": 7,
-      "BaseAttack_Probability": 0.75,
-      "ExtraAttack1": "EzrealBasicAttack2",
-      "ExtraAttack1_Probability": 0.25,
-      "CritAttack": "EzrealCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.111613475,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "EzrealMysticShotMissile",
-      "ExtraSpell2": "EzrealArcaneShiftMissile",
-      "ExtraSpell3": "EzrealEssenceFluxMissile",
-      "ExtraSpell4": "EzrealMysticShotPulseMissile",
-      "HPPerLevel": 80,
-      "HPRegenPerLevel": 0.10999999940395355,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 3,
-      "Lore1": "game_character_lore_Ezreal",
-      "MagicRank": 6,
-      "MoveSpeed": 325,
-      "MPPerLevel": 45,
-      "MPRegenPerLevel": 0.12999999523162842,
-      "Name": "game_character_displayname_Ezreal",
-      "Passive1": 20,
-      "Passive1Desc": "While out of combat, Ashe's critical strike chance increases every 3 seconds, but lasts for only one attack.",
-      "PassLev1Desc1": "game_character_passiveDescription_Ezreal",
-      "Passive1Icon": "Ezreal_RisingSpellForce.dds",
-      "Passive1Level1": 1,
-      "Passive1LuaName": "EzrealRisingSpellForceBuff",
-      "Passive1Name": "game_character_passiveName_Ezreal",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "Roles": "ATTACKER",
-      "SearchTags": "marksman",
-      "SelectionHeight": 170,
-      "SelectionRadius": 115,
-      "Spell1": "EzrealMysticShot",
-      "Spell2": "EzrealEssenceFlux",
-      "Spell3": "EzrealArcaneShift",
-      "Spell4": "EzrealTrueshotBarrage",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "SR_easy": 0,
-      "SR_medium": 1,
-      "Tips1": "game_character_tips_Ezreal",
-      "Tips2": "game_character_opposing_tips_Ezreal",
-      "UnitTags": "Champion"
+  "Name": "Ezreal",
+  "Flags": 8398080,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 81,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 484.4,
+  "BasePAR": 310.6,
+  "HPPerLevel": 80.0,
+  "PARPerLevel": 45.0,
+  "HPRegenPerLevel": 0.11,
+  "PARRegenPerLevel": 0.13,
+  "BaseStaticHPRegen": 1.2848,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.6184,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 50.24,
+  "PhysicalDamagePerLevel": 3.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 21.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 325.0,
+  "AttackRange": 550.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 550.0,
+  "AttackSpeedPerLevel": 0.027999999,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 170.0,
+  "OverrideCollisionRadius": 115.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "EzrealMysticShot",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "Buffbones",
-      "Animation2": "Buffbone_Additive",
-      "NumberOfAnimations": 2
+    "W": {
+      "Name": "EzrealEssenceFlux",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 1,
-      "Particle1": "ezreal_glow0.troy l_hand"
+    "E": {
+      "Name": "EzrealArcaneShift",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Ezreal_Circle_0.dds",
-      "IconSquare": "Ezreal_Square_0.dds"
-    },
-    "MeshSkin": {
-      "Animations": "BaseEzreal.blnd",
-      "ChampionSkinID": 81000,
-      "ChampionSkinName": "BaseEzreal",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal.skn",
-      "Skeleton": "Ezreal.skl",
-      "SkinScale": 1.1,
-      "Texture": "Ezreal_ProdigalExplorer.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "BaseEzreal.blnd",
-      "ChampionSkinID": 81001,
-      "ChampionSkinName": "NottinghamEzreal",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal.skn",
-      "Skeleton": "Ezreal.skl",
-      "SkinScale": 1.1,
-      "Texture": "Ezreal_Nottingham.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "BaseEzreal.blnd",
-      "ChampionSkinID": 81002,
-      "ChampionSkinName": "SoccerEzreal",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal_Soccer.skn",
-      "Skeleton": "Ezreal_Soccer.skl",
-      "SkinScale": 1.1,
-      "Texture": "Ezreal_Soccer_TX_CM.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "BaseEzreal.blnd",
-      "ChampionSkinID": 81003,
-      "ChampionSkinName": "FrostedEzreal",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal.skn",
-      "Skeleton": "Ezreal.skl",
-      "SkinScale": 1.1,
-      "Texture": "ezreal_whitehair_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "BaseEzreal.blnd",
-      "ChampionSkinID": 81004,
-      "ChampionSkinName": "ExplorerEzreal",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal_explorer.skn",
-      "Skeleton": "Ezreal_explorer.skl",
-      "SkinScale": 1.1,
-      "Texture": "ezreal_explorer_TX_CM.dds"
-    },
-    "MeshSkin5": {
-      "Animations": "CyberEzreal.blnd",
-      "ChampionSkinID": 81005,
-      "ChampionSkinName": "CyberEzreal",
-      "ExtraCharacterPreloads": "Ezreal_cyber_1,Ezreal_cyber_2,Ezreal_cyber_3",
-      "IconAvatar": "Ezreal_Pulsefire_Square.dds",
-      "ParticleOverride_ChampionKillDeathParticle": "Ezreal_Pulsefire_Champion_Death.troy",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal_Cyber.skn",
-      "Skeleton": "Ezreal_Cyber.skl",
-      "SkinScale": 1.1,
-      "Texture": "ezreal_cyber_TX_CM.dds",
-      "UsesSkinVO": 1
-    },
-    "MeshSkin6": {
-      "Animations": "TPAEzreal.blnd",
-      "ChampionSkinID": 81006,
-      "ChampionSkinName": "TPAEzreal",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal_TPA.skn",
-      "Skeleton": "Ezreal_TPA.skl",
-      "SkinScale": 1.1,
-      "Texture": "ezreal_TPA_TX_CM.dds"
-    },
-    "MeshSkin7": {
-      "Animations": "BaseEzreal.blnd",
-      "ChampionSkinID": 81007,
-      "ChampionSkinName": "Ezreal_Skin07",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Ezreal_Skin07.skn",
-      "Skeleton": "Ezreal_Skin07.skl",
-      "SkinScale": 1.1,
-      "Texture": "Ezreal_Skin07_TX_CM.dds"
+    "R": {
+      "Name": "EzrealTrueshotBarrage",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "113008000": 0,
-    "121269505": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "468632652": 1,
-    "510504319": 0,
-    "2500095475": "mage",
-    "3107364671": "2013-07-31",
-    "3319269524": 1,
-    "4015135009": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "EzrealMysticShotMissile",
+    "ExtraSpell2": "EzrealArcaneShiftMissile",
+    "ExtraSpell3": "EzrealEssenceFluxMissile",
+    "ExtraSpell4": "EzrealMysticShotPulseMissile",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "EzrealBasicAttack",
+      "Probability": 0.75,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "EzrealBasicAttack2",
+      "Probability": 0.25,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "EzrealBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "EzrealBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "EzrealBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "EzrealBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "EzrealBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "EzrealBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "EzrealBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "EzrealCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "EzrealCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "EzrealCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "EzrealCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "EzrealCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "EzrealCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "EzrealCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "EzrealCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "EzrealCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

@@ -7,9 +7,9 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
     /// <summary> Do not change. Used in json. </summary>
     public enum SelectionPreference
     {
-        Invalid = 0,
-        Foe = 1,
-        Friend = 2,
-        None = 3
+        Invalid = 1,
+        Foe = 2,
+        Friend = 3,
+        None = 4
     }
 }

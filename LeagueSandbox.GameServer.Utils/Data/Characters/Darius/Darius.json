@@ -1,106 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Darius",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 600,
-      "Armor": 29.8799991607666,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.050905797,
-      "AttackDelayOffsetPercent": -0.07999999821186066,
-      "AttackRange": 125,
-      "AttackRank": 9,
-      "AttackSpeedPerLevel": 2.6500000953674316,
-      "BaseCritChance": 0,
-      "BaseDamage": 55.880001068115234,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 582.239990234375,
-      "BaseMP": 263.0,
-      "BaseStaticHPRegen": 1.9692000150680542,
-      "BaseStaticMPRegen": 1.3176000118255615,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 122,
-      "ChasingAttackRangePercent": 0.5,
-      "Classification": "Deadly",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 0,
-      "CS_medium": 1,
-      "DamagePerLevel": 3.5,
-      "DefenseRank": 5,
-      "DifficultyRank": 2,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "DariusBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "DariusCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.050905797,
-      "CritAttack_AttackDelayOffsetPercent": -0.07999999821186066,
-      "ExtraSpell1": "DariusNoxianTacticsONHAttack",
-      "FireworksEnabled": 1,
-      "GameplayCollisionRadius": 80,
-      "HPPerLevel": 93,
-      "HPRegenPerLevel": 0.1899999976158142,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 0,
-      "Lore1": "game_character_lore_Darius",
-      "MagicRank": 1,
-      "Metadata": "faction:Noxus,gender:male",
-      "MoveSpeed": 340,
-      "MPPerLevel": 37.5,
-      "MPRegenPerLevel": 0.07000000029802322,
-      "Name": "game_character_displayname_Darius",
-      "Passive1Desc": "Darius' attacks strike an artery, causing his opponents to bleed over 5 seconds. This effect stacks up to five times.",
-      "PassLev1Desc1": "game_character_passiveDescription_Darius",
-      "PassLev1Desc2": "+40% Mana Point regeneration.",
-      "PassLev1Desc3": "+60% Mana Point regeneration.",
-      "PassLev1Desc4": "+80% Mana Point regeneration.",
-      "Passive1Icon": "Darius_Icon_Hemorrhage.dds",
-      "Passive1LuaName": "DariusHemoMarker",
-      "Passive1Name": "game_character_passiveName_Darius",
-      "PathfindingCollisionRadius": 25.766599655151367,
-      "PostAttackMoveDelay": 0,
-      "Roles": "BRAWLER",
-      "SearchTags": "fighter",
-      "SelectionHeight": 155,
-      "SelectionRadius": 125,
-      "Spell1": "DariusCleave",
-      "Spell2": "DariusNoxianTacticsONH",
-      "Spell3": "DariusAxeGrabCone",
-      "Spell4": "DariusExecute",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "SR_easy": 0,
-      "SR_medium": 1,
-      "Tips1": "game_character_tips_Darius",
-      "Tips2": "game_character_opposing_tips_Darius",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "DariusBasicAttack"
+  "Name": "Darius",
+  "Flags": 8414472,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 122,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 582.24,
+  "BasePAR": 263.0,
+  "HPPerLevel": 93.0,
+  "PARPerLevel": 37.5,
+  "HPRegenPerLevel": 0.19,
+  "PARRegenPerLevel": 0.07,
+  "BaseStaticHPRegen": 1.9692,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.3176,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 55.88,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 29.88,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 340.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.026500002,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 155.0,
+  "OverrideCollisionRadius": 125.0,
+  "PathfindingCollisionRadius": 25.7666,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "DariusCleave",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": -0.05000000074505806,
-      "YOffset": -0.30000001192092896
+    "W": {
+      "Name": "DariusNoxianTacticsONH",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Darius_Circle_0.dds",
-      "IconSquare": "Darius_Square_0.dds"
+    "E": {
+      "Name": "DariusAxeGrabCone",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "DariusExecute",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "121269505": 14,
-    "129531010": 12,
-    "113008000": 0,
-    "137792515": 0,
-    "468632652": 0,
-    "510504319": 0,
-    "2500095475": "tank",
-    "3319269524": 1,
-    "4015135009": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "DariusNoxianTacticsONHAttack",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "DariusBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "DariusBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "DariusBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "DariusBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "DariusBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "DariusBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "DariusBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "DariusBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "DariusBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "DariusCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "DariusCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "DariusCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "DariusCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "DariusCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "DariusCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "DariusCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "DariusCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "DariusCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.08,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

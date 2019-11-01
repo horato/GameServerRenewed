@@ -1,9 +1,12 @@
-﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+﻿using LeagueSandbox.GameServer.Core.Data;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
 {
     public interface ISpell
     {
+        ISpellData SpellData { get; }
+        IBaseSpellData BaseSpellData { get; }
         SpellSlot Slot { get; }
         int Level { get; }
         float CastTime { get; }

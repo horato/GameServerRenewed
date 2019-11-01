@@ -237,8 +237,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 result |= SpellFlags.AffectFriends;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectNeutral))
                 result |= SpellFlags.AffectNeutral;
-            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectAllSides))
-                result |= SpellFlags.AffectAllSides;
+            //if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectAllSides))
+            //    result |= SpellFlags.AffectAllSides;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectBuildings))
                 result |= SpellFlags.AffectBuildings;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectMinions))
@@ -247,8 +247,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 result |= SpellFlags.AffectHeroes;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectTurrets))
                 result |= SpellFlags.AffectTurrets;
-            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectAllUnitTypes))
-                result |= SpellFlags.AffectAllUnitTypes;
+            //if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectAllUnitTypes))
+            //    result |= SpellFlags.AffectAllUnitTypes;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NotAffectSelf))
                 result |= SpellFlags.NotAffectSelf;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AlwaysSelf))
@@ -267,8 +267,8 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 result |= SpellFlags.NonTargetableEnemy;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.TargetableToAll))
                 result |= SpellFlags.TargetableToAll;
-            if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NonTargetableAll))
-                result |= SpellFlags.NonTargetableAll;
+            //if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.NonTargetableAll))
+            //    result |= SpellFlags.NonTargetableAll;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectWards))
                 result |= SpellFlags.AffectWards;
             if (flags.HasFlag(GameServer.Core.Domain.Enums.SpellFlags.AffectUseable))

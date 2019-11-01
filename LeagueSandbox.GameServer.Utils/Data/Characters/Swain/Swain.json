@@ -1,143 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Swain",
-      "PlatformEnabled": 1,
-      "AbilityPowerIncPerLevel": 0,
-      "AcquisitionRange": 500,
-      "Armor": 22.719999313354492,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 4,
-      "AttackDelayCastOffsetPercent": -0.173333333,
-      "AttackDelayOffsetPercent": 0,
-      "AttackRange": 500,
-      "AttackRank": 2,
-      "AttackSpeedPerLevel": 2.109999895095825,
-      "BaseAbilityPower": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 52.040000915527344,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 516.0399780273438,
-      "BaseMP": 324.0,
-      "BaseStaticHPRegen": 1.5684000253677368,
-      "BaseStaticMPRegen": 1.2000000000000002,
-      "BotEnabled": 1,
-      "BotEnabledMM": 1,
-      "ChampionId": 50,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "CS_easy": 1,
-      "CS_medium": 1,
-      "CS_hard": 1,
-      "DamagePerLevel": 3,
-      "DefenseRank": 6,
-      "DifficultyRank": 8,
-      "BaseAttack_Probability": 0.75,
-      "ExtraAttack1": "SwainBasicAttack2",
-      "ExtraAttack1_Probability": 0.25,
-      "CritAttack": "SwainBasicAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.173333333,
-      "CritAttack_AttackDelayOffsetPercent": 0,
-      "ExtraSpell1": "SwainMetaNuke",
-      "ExtraSpell2": "SwainMetaHeal",
-      "ExtraSpell3": "SwainMetaHealTorment",
-      "FireworksEnabled": 1,
-      "HPPerLevel": 78,
-      "HPRegenPerLevel": 0.12999999523162842,
-      "IsMelee": "No",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_Swain",
-      "MagicRank": 9,
-      "Metadata": "faction:Noxus,gender:male",
-      "MoveSpeed": 335,
-      "MPPerLevel": 50,
-      "MPRegenPerLevel": 0.1599999964237213,
-      "Name": "game_character_displayname_Swain",
-      "PassLev1Desc1": "game_character_passiveDescription_Swain",
-      "Passive1Icon": "SwainCarrionRenewal.dds",
-      "Passive1LuaName": "SwainDampeningFieldMana",
-      "Passive1Name": "game_character_passiveName_Swain",
-      "PathfindingCollisionRadius": 35,
-      "Roles": "MAGE",
-      "SearchTags": "mage",
-      "SelectionHeight": 148.88890075683594,
-      "SelectionRadius": 100,
-      "Spell1": "SwainDecrepify",
-      "Spell2": "SwainShadowGrasp",
-      "Spell3": "SwainTorment",
-      "Spell4": "SwainMetamorphism",
-      "SpellBlock": 30.0,
-      "SpellBlockPerLevel": 0,
-      "SR_easy": 0,
-      "SR_medium": 1,
-      "Tips1": "game_character_tips_Swain",
-      "Tips2": "game_character_opposing_tips_Swain",
-      "UnitTags": "Champion"
+  "Name": "Swain",
+  "Flags": 8414464,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 50,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 516.04,
+  "BasePAR": 324.0,
+  "HPPerLevel": 78.0,
+  "PARPerLevel": 50.0,
+  "HPRegenPerLevel": 0.13,
+  "PARRegenPerLevel": 0.16,
+  "BaseStaticHPRegen": 1.5684,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.2,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 52.04,
+  "PhysicalDamagePerLevel": 3.0,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 22.72,
+  "ArmorPerLevel": 4.0,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 335.0,
+  "AttackRange": 500.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 500.0,
+  "AttackSpeedPerLevel": 0.0211,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 148.8889,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "SwainDecrepify",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.4000000059604645
+    "W": {
+      "Name": "SwainShadowGrasp",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Swain_Circle_0.dds",
-      "IconSquare": "Swain_Square_0.dds"
+    "E": {
+      "Name": "SwainTorment",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "BaseSwain.blnd",
-      "ChampionSkinID": 50000,
-      "ChampionSkinName": "BaseSwain",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Swain.skn",
-      "Skeleton": "Swain.skl",
-      "SkinScale": 1.149999976158142,
-      "Texture": "swain_base_TX_CM.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "BaseSwain.blnd",
-      "ChampionSkinID": 50001,
-      "ChampionSkinName": "NorthernSwain",
-      "ExtraCharacterPreloads": "SwainBeam,SwainNoBird,SwainRaven",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Swain_north.skn",
-      "Skeleton": "Swain_north.skl",
-      "SkinScale": 1.149999976158142,
-      "Texture": "swain_north_TX_CM.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "BaseSwain.blnd",
-      "ChampionSkinID": 50002,
-      "ChampionSkinName": "BilgewaterSwain",
-      "ExtraCharacterPreloads": "SwainBeam,SwainNoBird,SwainRaven",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "Swain_bilgewater.skn",
-      "Skeleton": "Swain_bilgewater.skl",
-      "SkinScale": 1.149999976158142,
-      "Texture": "swain_bilgewater_TX_CM.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "GrandAdmiralSwain.blnd",
-      "ChampionSkinID": 50003,
-      "ChampionSkinName": "GrandAdmiralSwain",
-      "ExtraCharacterPreloads": "SwainBeam,SwainNoBird,SwainRaven",
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "swain_grandadmiral.skn",
-      "Skeleton": "swain_grandadmiral.skl",
-      "SkinScale": 1,
-      "Texture": "swain_grandadmiral_TX_CM.dds"
+    "R": {
+      "Name": "SwainMetamorphism",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1056,
-    "113008000": 14,
-    "121269505": 15,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "2500095475": "fighter",
-    "3319269524": 1,
-    "4015135009": 0
+  "ExtraSpells": {
+    "ExtraSpell1": "SwainMetaNuke",
+    "ExtraSpell2": "SwainMetaHeal",
+    "ExtraSpell3": "SwainMetaHealTorment",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "SwainBasicAttack",
+      "Probability": 0.75,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "SwainBasicAttack2",
+      "Probability": 0.25,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "SwainBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "SwainBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "SwainBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "SwainBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "SwainBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "SwainBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "SwainBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "SwainBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "SwainCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "SwainCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "SwainCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "SwainCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "SwainCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "SwainCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "SwainCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "SwainCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.0,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

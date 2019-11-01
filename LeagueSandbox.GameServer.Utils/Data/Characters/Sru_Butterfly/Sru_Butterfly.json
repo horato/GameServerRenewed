@@ -1,116 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_TemplateFighter",
-      "PlatformEnabled": 0,
-      "AbilityPowerIncPerLevel": 0,
-      "AcquisitionRange": 600,
-      "Armor": 15,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3.5,
-      "AttackDelayCastOffsetPercent": -0.091666667,
-      "AttackDelayOffsetPercent": -0.05000000074505806,
-      "AttackRange": 175,
-      "AttackRank": 8,
-      "AttackSpeedPerLevel": 3,
-      "BaseAbilityPower": 0,
-      "BaseCritChance": 0,
-      "BaseDamage": 54.5,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 435,
-      "BaseMP": 202,
-      "BaseStaticHPRegen": 1.0199999809265137,
-      "BaseStaticMPRegen": 1.3899999856948853,
-      "BotEnabled": 0,
-      "BotEnabledMM": 0,
-      "ChampionId": 997,
-      "ChasingAttackRangePercent": 0.8,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.2,
-      "DefenseRank": 5,
-      "DifficultyRank": 3,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "TemplateFighterBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "TemplateFighterCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.091666667,
-      "CritAttack_AttackDelayOffsetPercent": -0.05000000074505806,
-      "HPPerLevel": 85,
-      "HPRegenPerLevel": 0.12999999523162842,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "Lore1": "game_character_lore_TemplateFighter",
-      "MagicRank": 2,
-      "MaxLevels": [
-        5.0,
-        5.0,
-        5.0,
-        3.0
-      ],
-      "MoveSpeed": 345,
-      "MPPerLevel": 38,
-      "MPRegenPerLevel": 0.12999999523162842,
-      "Name": "game_character_displayname_TemplateFighter",
-      "PassLev1Desc1": "game_character_passiveDescription_TemplateFighter",
-      "Passive1Icon": "TemplateFighterPassive.dds",
-      "Passive1LuaName": "TemplateFighterPassive",
-      "Passive1Name": "game_character_passiveName_TemplateFighter",
-      "PathfindingCollisionRadius": 30.0,
-      "PostAttackMoveDelay": 0,
-      "Roles": "BRAWLER",
-      "SearchTags": "Fighter,melee",
-      "SelectionHeight": 122,
-      "SelectionRadius": 100,
-      "Spell1": "TemplateFighterQ",
-      "SpellsUpLevels1": [
+  "Name": "Sru_Butterfly",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.8,
+  "ChampionId": 997,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 435.0,
+  "BasePAR": 202.0,
+  "HPPerLevel": 85.0,
+  "PARPerLevel": 38.0,
+  "HPRegenPerLevel": 0.13,
+  "PARRegenPerLevel": 0.13,
+  "BaseStaticHPRegen": 1.02,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.39,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 54.5,
+  "PhysicalDamagePerLevel": 3.2,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 15.0,
+  "ArmorPerLevel": 3.5,
+  "BaseSpellBlock": 30.0,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 175.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 600.0,
+  "AttackSpeedPerLevel": 0.03,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 122.0,
+  "OverrideCollisionRadius": 100.0,
+  "PathfindingCollisionRadius": 30.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "TemplateFighterQ",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell2": "TemplateFighterW",
-      "SpellsUpLevels2": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell3": "TemplateFighterE",
-      "SpellsUpLevels3": [
         1,
-        3,
-        5,
-        7,
-        9,
-        11
-      ],
-      "Spell4": "TemplateFighterR",
-      "SpellsUpLevels4": [
-        6.0,
-        11.0,
-        16.0
-      ],
-      "SpellBlock": 30,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_TemplateFighter",
-      "Tips2": "game_character_opposing_tips_TemplateFighter"
+        1,
+        1,
+        1
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.4000000059604645
+    "W": {
+      "Name": "TemplateFighterW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
     },
-    "Info": {
-      "IconCircle": "TempChar_Circle.dds",
-      "IconSquare": "TempChar_Square.dds"
+    "E": {
+      "Name": "TemplateFighterE",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "R": {
+      "Name": "TemplateFighterR",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        6,
+        6,
+        6,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {}
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "Sru_ButterflyBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "TemplateFighterBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "Sru_ButterflyBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "Sru_ButterflyBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "Sru_ButterflyBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "Sru_ButterflyBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "Sru_ButterflyBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "Sru_ButterflyBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "Sru_ButterflyBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "TemplateFighterCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "Sru_ButterflyCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "Sru_ButterflyCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "Sru_ButterflyCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "Sru_ButterflyCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "Sru_ButterflyCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "Sru_ButterflyCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "Sru_ButterflyCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "Sru_ButterflyCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.05,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
+  }
 }

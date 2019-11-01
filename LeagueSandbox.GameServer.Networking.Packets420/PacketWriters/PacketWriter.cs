@@ -392,7 +392,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 missile.EndPoint,
                 missile.Caster.Position,
                 0,//(_game.Value.GameTimeElapsedMilliseconds - missile.CreatedAtGameTimeMilliseconds) / 1000, TODO: whats this
-                missile.Speed,
+                missile.GetMissileSpeed(),
                 missile.LifePercentage,
                 missile.TimedSpeedDelta,
                 missile.TimedSpeedDeltaTime,

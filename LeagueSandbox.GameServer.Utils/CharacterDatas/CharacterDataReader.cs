@@ -15,11 +15,7 @@ namespace LeagueSandbox.GameServer.Utils.CharacterDatas
         {
             var filePath = $"Data/Characters/{characterName}/{characterName}.json";
             var json = File.ReadAllText(filePath);
-            var token = (JToken)JsonConvert.DeserializeObject(json);
-            if (token?["Values"]?["Data"] == null)
-                return null;
-
-            return new JsonSerializer().Deserialize<CharacterData>(token["Values"]["Data"].CreateReader());
+            return JsonConvert.DeserializeObject<CharacterData>(json);
         }
 
         public static IDictionary<string, ICharacterData> ReadAll()

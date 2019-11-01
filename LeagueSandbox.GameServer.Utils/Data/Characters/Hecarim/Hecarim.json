@@ -1,220 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Hecarim",
-      "PlatformEnabled": 1,
-      "Armor": 26.719999313354492,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 4,
-      "AttackDelayCastOffsetPercent": -0.05000000074505806,
-      "AttackDelayOffsetPercent": -0.06719999760389328,
-      "AttackRange": 175,
-      "AttackRank": 8,
-      "AttackSpeedPerLevel": 2.5,
-      "BaseCritChance": 0,
-      "BaseDamage": 61.375999450683594,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 599.5999755859375,
-      "BaseMP": 277.20001220703125,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.8519999980926514,
-      "BaseStaticMPRegen": 1.5016000270843506,
-      "ChampionId": 120,
-      "ChasingAttackRangePercent": 0.5,
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.2,
-      "DefenseRank": 6,
-      "DifficultyRank": 6,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "HecarimBasicAttack2",
-      "ExtraAttack1_Probability": 0.5,
-      "CritAttack": "HecarimCritAttack",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.05000000074505806,
-      "CritAttack_AttackDelayOffsetPercent": -0.06719999760389328,
-      "ExtraSpell2": "HecarimRampAttack",
-      "ExtraSpell3": "HecarimUltCharge",
-      "ExtraSpell4": "HecarimUltMissileGrab",
-      "ExtraSpell5": "HecarimUltMissile",
-      "ExtraSpell6": "HecarimWVFX",
-      "GameplayCollisionRadius": 80,
-      "HPPerLevel": 95,
-      "HPRegenPerLevel": 0.15000000596046448,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 3,
-      "Lore1": "game_character_lore_Hecarim",
-      "MagicRank": 4,
-      "MoveSpeed": 345,
-      "MPPerLevel": 40,
-      "MPRegenPerLevel": 0.11999999731779099,
-      "Name": "game_character_displayname_Hecarim",
-      "Passive1Desc": "Increases all friendly Champions' critical strike chance",
-      "PassLev1Desc1": "game_character_passiveDescription_Hecarim",
-      "PassLev1Desc2": "Adds +10% Attack Rate.",
-      "PassLev1Desc3": "Adds +15% Attack Rate.",
-      "PassLev1Desc4": "Adds +20% Attack Rate.",
-      "Passive1Icon": "Hecarim_Passive.dds",
-      "Passive1LuaName": "HecarimPassive",
-      "Passive1Name": "game_character_passiveName_Hecarim",
-      "PathfindingCollisionRadius": 50,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter",
-      "SelectionHeight": 140,
-      "SelectionRadius": 140,
-      "Spell1": "HecarimRapidSlash",
-      "Spell1Desc": "Fires 3 cards in a cone pattern, dealing damage to enemies they hit.",
-      "Spell1DisplayName": "Wild Cards",
-      "Spell2": "HecarimW",
-      "Spell2Desc": "Twisted Fate's attacks can deal extra damage, extra AoE damage with slow, or lots of extra AoE damage with stun!",
-      "Spell2DisplayName": "Pick a Card",
-      "Spell3": "HecarimRamp",
-      "Spell3Desc": "Teleports Twisted Fate to target distant location.",
-      "Spell3DisplayName": "Gate",
-      "Spell4": "HecarimUlt",
-      "Spell4Desc": "Reveals all enemy Champions and slows their movement speed for a short duration.",
-      "Spell4DisplayName": "Destiny",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Hecarim",
-      "Tips2": "game_character_opposing_tips_Hecarim",
-      "UnitTags": "Champion",
-      "`WeaponMaterial": "HecarimBasicAttack"
+  "Name": "Hecarim",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 120,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 599.6,
+  "BasePAR": 277.2,
+  "HPPerLevel": 95.0,
+  "PARPerLevel": 40.0,
+  "HPRegenPerLevel": 0.15,
+  "PARRegenPerLevel": 0.12,
+  "BaseStaticHPRegen": 1.852,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.5016,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 61.376,
+  "PhysicalDamagePerLevel": 3.2,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 26.72,
+  "ArmorPerLevel": 4.0,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 345.0,
+  "AttackRange": 175.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 750.0,
+  "AttackSpeedPerLevel": 0.025,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 140.0,
+  "OverrideCollisionRadius": 140.0,
+  "PathfindingCollisionRadius": 50.0,
+  "GameplayCollisionRadius": 80.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "HecarimRapidSlash",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "DefaultAnimations": {
-      "Animation1": "UVtail",
-      "NumberOfAnimations": 1
+    "W": {
+      "Name": "HecarimW",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "IdleParticles": {
-      "NumberOfParticles": 21,
-      "Particle1": "Hecarim_HeadTrail.troy BUFFBONE_CSTM_HEAD",
-      "Particle2": "Hecarim_TailTrail.troy Tail",
-      "Particle3": "Hecarim_TailTrail.troy Tail_b",
-      "Particle4": "Hecarim_TailTrail.troy Tail_c",
-      "Particle5": "Hecarim_LegsIdle.troy BUFFBONE_CSTM_THIGH_LF",
-      "Particle6": "Hecarim_LegsIdle.troy BUFFBONE_CSTM_THIGH_RF",
-      "Particle7": "Hecarim_LegsIdle.troy BUFFBONE_CSTM_THIGH_RB",
-      "Particle8": "Hecarim_LegsIdle.troy BUFFBONE_CSTM_THIGH_LB",
-      "Particle9": "Hecarim_HoofIdle.troy BUFFBONE_CSTM_HOOF_FR",
-      "Particle10": "Hecarim_HoofIdle.troy BUFFBONE_CSTM_HOOF_FL",
-      "Particle11": "Hecarim_HoofIdle.troy BUFFBONE_CSTM_HOOF_BR",
-      "Particle12": "Hecarim_HoofIdle.troy BUFFBONE_CSTM_HOOF_BL",
-      "Particle13": "Hecarim_HandIdle.troy R_finger",
-      "Particle14": "Hecarim_HandIdle.troy L_finger",
-      "Particle15": "Hecarim_HeadTrail_Medieval.troy BUFFBONE_CSTM_HORN_L",
-      "Particle16": "Hecarim_HeadTrail_Medieval.troy BUFFBONE_CSTM_HORN_R",
-      "Particle17": "hecarim_idle_glow_headless.troy BUFFBONE_CSTM_HEAD",
-      "Particle18": "Hecarim_headless_idle_left_eye.troy BUFFBONE_CSTM_L_EYE",
-      "Particle19": "Hecarim_headless_idle_right_eye.troy BUFFBONE_CSTM_R_EYE",
-      "Particle20": "Hecarim_skin04_HeadTrail.troy BUFFBONE_CSTM_HEAD",
-      "Particle21": "Hecarim_skin04_TailTrail.troy Tail"
+    "E": {
+      "Name": "HecarimRamp",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Hecarim_Circle_0.dds",
-      "IconSquare": "Hecarim_Square_0.dds"
-    },
-    "MeshSkin": {
-      "Animations": "Hecarim.blnd",
-      "ChampionSkinID": 120000,
-      "ChampionSkinName": "Hecarim",
-      "OverrideBoundingBox": [
-        125.0,
-        230.0,
-        125.0
-      ],
-      "SelfIllumination": 0.550000011920929,
-      "SimpleSkin": "Hecarim.skn",
-      "Skeleton": "Hecarim.skl",
-      "SkinScale": 1.25,
-      "Texture": "hecarim_base_tx_cm.dds"
-    },
-    "MeshSkin1": {
-      "Animations": "MedievalHecarim.blnd",
-      "ChampionSkinID": 120001,
-      "ChampionSkinName": "MedievalHecarim",
-      "OverrideBoundingBox": [
-        125.0,
-        230.0,
-        125.0
-      ],
-      "SelfIllumination": 0.550000011920929,
-      "SimpleSkin": "Hecarim_medieval.skn",
-      "Skeleton": "Hecarim_medieval.skl",
-      "SkinScale": 1.25,
-      "Texture": "hecarim_medieval_knight_tx_cm.dds"
-    },
-    "MeshSkin2": {
-      "Animations": "WraithHecarim.blnd",
-      "ChampionSkinID": 120002,
-      "ChampionSkinName": "WraithHecarim",
-      "OverrideBoundingBox": [
-        125.0,
-        230.0,
-        125.0
-      ],
-      "SelfIllumination": 0.550000011920929,
-      "SimpleSkin": "Hecarim_shrouded_wraith.skn",
-      "Skeleton": "Hecarim_shrouded_wraith.skl",
-      "SkinScale": 1.25,
-      "Texture": "hecarim_shrouded_wraith_tx_cm.dds"
-    },
-    "MeshSkin3": {
-      "Animations": "HeadlessHecarim.blnd",
-      "ChampionSkinID": 120003,
-      "ChampionSkinName": "HeadlessHecarim",
-      "OverrideBoundingBox": [
-        125.0,
-        230.0,
-        125.0
-      ],
-      "SelfIllumination": 0.550000011920929,
-      "SimpleSkin": "Hecarim_headless.skn",
-      "Skeleton": "Hecarim_headless.skl",
-      "SkinScale": 1.25,
-      "Texture": "hecarim_headless_TX_CM.dds"
-    },
-    "MeshSkin4": {
-      "Animations": "HecarimArcade.blnd",
-      "ChampionSkinID": 120004,
-      "ChampionSkinName": "HecarimArcade",
-      "Fresnel": 0,
-      "FresnelBlue": 0,
-      "FresnelGreen": 0,
-      "FresnelRed": 0,
-      "GlossTexture": "hecarim_arcade_TX_GM.dds",
-      "MaterialOverride0GlossTexture": "hecarim_arcade_tail_TX_GM.dds",
-      "MaterialOverride0SubMesh": "hecarim_arcade_tail",
-      "MaterialOverride0Texture": "hecarim_arcade_tail_TX_CM.dds",
-      "OverrideBoundingBox": [
-        125.0,
-        230.0,
-        125.0
-      ],
-      "ReflectionFresnel": 1,
-      "ReflectionFresnelBlue": 1,
-      "ReflectionFresnelGreen": 0.7000000000000001,
-      "ReflectionFresnelRed": 0.7000000000000001,
-      "ReflectionMap": "hecarim_arcade_TX_RM.dds",
-      "ReflectionOpacityDirect": 1.7000000000000002,
-      "ReflectionOpacityGlancing": 0.7000000000000001,
-      "SelfIllumination": 0.7000000000000001,
-      "SimpleSkin": "ArcadeHecarim.skn",
-      "Skeleton": "ArcadeHecarim.skl",
-      "SkinScale": 1.25,
-      "SubmeshesToHide": "hecarim_arcade_bluetail",
-      "Texture": "hecarim_arcade_TX_CM.dds",
-      "UsesSkinVO": 1
+    "R": {
+      "Name": "HecarimUlt",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1054,
-    "129531010": 7,
-    "137792515": 5,
-    "113008000": 0,
-    "121269505": 0,
-    "510504319": 0,
-    "2500095475": "tank"
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "HecarimRampAttack",
+    "ExtraSpell3": "HecarimUltCharge",
+    "ExtraSpell4": "HecarimUltMissileGrab",
+    "ExtraSpell5": "HecarimUltMissile",
+    "ExtraSpell6": "HecarimWVFX",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "HecarimBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "HecarimBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "HecarimBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "HecarimBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "HecarimBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "HecarimBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "HecarimBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "HecarimBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "HecarimBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "HecarimCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "HecarimCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "HecarimCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "HecarimCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "HecarimCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "HecarimCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "HecarimCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "HecarimCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "HecarimCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.0672,
+      "DelayCastOffsetPercent": -0.05,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }

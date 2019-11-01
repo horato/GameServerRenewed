@@ -1,57 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_SummonerBeacon",
-      "AbilityPowerIncPerLevel": 0,
-      "AcquisitionRange": 1,
-      "Armor": 15,
-      "ArmorPerLevel": 0,
-      "AttackDelayOffsetPercent": 0.019999999552965164,
-      "AttackRange": 1,
-      "AttackSpeedPerLevel": 1.75,
-      "BaseAbilityPower": 0,
-      "BaseCritChance": 1.75,
-      "BaseDamage": 1,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0.001500000013038516,
-      "BaseFactorMPRegen": 0.001500000013038516,
-      "BaseHP": 200,
-      "BaseMP": 0,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 0.5,
-      "BaseStaticMPRegen": 0.5,
-      "Classification": "Arcane",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0.25,
-      "DamagePerLevel": 3.5,
-      "EnemyTooltip": "game_character_enemyTooltip_SummonerBeacon",
-      "FriendlyTooltip": "game_character_friendlyTooltip_SummonerBeacon",
-      "HPPerLevel": 53,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 6.0,
-      "MoveSpeed": 0,
-      "MPPerLevel": 0,
-      "Name": "game_character_displayname_SummonerBeacon",
-      "PathfindingCollisionRadius": 13.600000000000001,
-      "SelectionHeight": 250,
-      "SelectionRadius": 90,
-      "SpellBlock": 0,
-      "SpellBlockPerLevel": 0
+  "Name": "SummonerBeacon",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 0,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 200.0,
+  "BasePAR": 0.0,
+  "HPPerLevel": 53.0,
+  "PARPerLevel": 0.0,
+  "HPRegenPerLevel": 0.0,
+  "PARRegenPerLevel": 0.0,
+  "BaseStaticHPRegen": 0.5,
+  "BaseFactorHPRegen": 0.0015,
+  "BaseStaticPARRegen": 0.5,
+  "BaseFactorPARRegen": 0.0015,
+  "BasePhysicalDamage": 1.0,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 15.0,
+  "ArmorPerLevel": 0.0,
+  "BaseSpellBlock": 0.0,
+  "SpellBlockPerLevel": 0.0,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 1.75,
+  "CritChancePerLevel": 0.25,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 0.0,
+  "AttackRange": 1.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 1.0,
+  "AttackSpeedPerLevel": 0.0175,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 250.0,
+  "OverrideCollisionRadius": 90.0,
+  "PathfindingCollisionRadius": 13.6,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "",
-      "IconSquare": ""
+    "W": {
+      "Name": "",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "MeshSkin": {
-      "Animations": "SummonerBeaconBase.blnd",
-      "ChampionSkinName": "SummonerBeaconBase",
-      "SelfIllumination": 0.6000000000000001,
-      "SimpleSkin": "SummonerBeacon.skn",
-      "Skeleton": "SummonerBeacon.skl",
-      "SkinScale": 3.25,
-      "Texture": "SummonerBeacon.dds"
+    "E": {
+      "Name": "",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {}
+  "ExtraSpells": {
+    "ExtraSpell1": "",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "SummonerBeaconBasicAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "SummonerBeaconBasicAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "SummonerBeaconBasicAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "SummonerBeaconBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "SummonerBeaconBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "SummonerBeaconBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "SummonerBeaconBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "SummonerBeaconBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "SummonerBeaconBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "SummonerBeaconCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "SummonerBeaconCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "SummonerBeaconCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "SummonerBeaconCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "SummonerBeaconCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "SummonerBeaconCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "SummonerBeaconCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "SummonerBeaconCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "SummonerBeaconCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": 0.02,
+      "DelayCastOffsetPercent": 0.0,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
+  }
 }

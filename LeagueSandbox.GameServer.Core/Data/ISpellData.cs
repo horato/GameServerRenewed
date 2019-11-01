@@ -1,341 +1,119 @@
-﻿using LeagueSandbox.GameServer.Core.Domain.Enums;
+﻿using System.Collections.Generic;
+using LeagueSandbox.GameServer.Core.Domain.Enums;
 
 namespace LeagueSandbox.GameServer.Core.Data
 {
     public interface ISpellData
     {
-        string AfterEffectName { get; }
-        int AIBlockLevel { get; }
-        int AIEndOnly { get; }
-        float AILifetime { get; }
-        float AIRadius { get; }
-        float AIRange { get; }
-        int AISendEvent { get; }
-        float AISpeed { get; }
-        string AlternateName { get; }
-        object AlwaysSnapFacing { get; }
-        int AmmoCountHiddenInUI { get; }
-        float AmmoRechargeTime { get; }
-        float AmmoRechargeTime1 { get; }
-        float AmmoRechargeTime2 { get; }
-        float AmmoRechargeTime3 { get; }
-        float AmmoRechargeTime4 { get; }
-        float AmmoRechargeTime5 { get; }
-        float AmmoRechargeTime6 { get; }
-        int AmmoUsed { get; }
-        string AnimationLoopName { get; }
-        string AnimationName { get; }
-        string AnimationWinddownName { get; }
-        bool ApplyAttackDamage { get; }
-        bool ApplyAttackEffect { get; }
-        bool ApplyMaterialOnHitSound { get; }
-        float AttackDelayCastOffsetPercent { get; }
-        bool BelongsToAvatar { get; }
-        float BounceRadius { get; }
-        bool CanCastWhileDisabled { get; }
+        string Name { get; }
+        SpellFlags Flags { get; }
+        string TextFlags { get; }
+        IReadOnlyDictionary<int, float> CooldownTime { get; }
+        IReadOnlyDictionary<int, int> MaxAmmo { get; }
+        IReadOnlyDictionary<int, int> AmmoUsed { get; }
+        IReadOnlyDictionary<int, float> AmmoRechargeTime { get; }
+        IReadOnlyDictionary<int, float> ChannelDuration { get; }
+        IReadOnlyDictionary<int, float> CastRange { get; }
+        IReadOnlyDictionary<int, float> CastRangeGrowthMax { get; }
+        IReadOnlyDictionary<int, float> CastRangeGrowthDuration { get; }
+        IReadOnlyDictionary<int, float> CastRadius { get; }
+        IReadOnlyDictionary<int, float> CastRadiusSecondary { get; }
+        IReadOnlyDictionary<int, float> Mana { get; }
+        float SpellCastTime { get; }
+        float SpellTotalTime { get; }
+        float OverrideCastTime { get; }
+        float StartCooldown { get; }
+        float ChargeUpdateInterval { get; }
         float CancelChargeOnRecastTime { get; }
-        bool CanMoveWhileChanneling { get; }
-        bool CannotBeSuppressed { get; }
-        bool CanOnlyCastWhileDead { get; }
-        bool CantCancelWhileChanneling { get; }
-        bool CantCancelWhileWindingUp { get; }
-        bool CantCastWhileRooted { get; }
         float CastConeAngle { get; }
         float CastConeDistance { get; }
-        float CastFrame { get; }
-        float CastRadius { get; }
-        float CastRadius1 { get; }
-        float CastRadius2 { get; }
-        float CastRadius3 { get; }
-        float CastRadiusSecondary { get; }
-        string CastRadiusSecondaryTexture { get; }
-        string CastRadiusTexture { get; }
-        float CastRange { get; }
-        float CastRange1 { get; }
-        float CastRange2 { get; }
-        float CastRange3 { get; }
-        float CastRange4 { get; }
-        float CastRange5 { get; }
-        float CastRange6 { get; }
-        float CastRangeDisplayOverride { get; }
-        float CastRangeGrowthDuration { get; }
-        float CastRangeGrowthDuration1 { get; }
-        float CastRangeGrowthDuration2 { get; }
-        float CastRangeGrowthDuration3 { get; }
-        float CastRangeGrowthDuration4 { get; }
-        float CastRangeGrowthDuration5 { get; }
-        float CastRangeGrowthMax { get; }
-        float CastRangeGrowthMax1 { get; }
-        float CastRangeGrowthMax2 { get; }
-        float CastRangeGrowthMax3 { get; }
-        float CastRangeGrowthMax4 { get; }
-        float CastRangeGrowthMax5 { get; }
-        string CastRangeTextureOverrideName { get; }
-        bool CastRangeUseBoundingBoxes { get; }
         float CastTargetAdditionalUnitsRadius { get; }
         CastType CastType { get; }
-        float CircleMissileAngularVelocity { get; }
-        float CircleMissileRadialVelocity { get; }
-        string ClientOnlyMissileTargetBoneName { get; }
-        float Coefficient { get; }
-        float Coefficient2 { get; }
-        bool ConsideredAsAutoAttack { get; }
-        float Cooldown { get; }
-        float Cooldown0 { get; }
-        float Cooldown1 { get; }
-        float Cooldown2 { get; }
-        float Cooldown3 { get; }
-        float Cooldown4 { get; }
-        float Cooldown5 { get; }
-        float Cooldown6 { get; }
-        bool CursorChangesInGrass { get; }
-        bool CursorChangesInTerrain { get; }
-        int DeathRecapPriority { get; }
-        float DelayCastOffsetPercent { get; }
-        float DelayTotalTimePercent { get; }
-        string Description { get; }
-        bool DisableCastBar { get; }
-        string DisplayName { get; }
-        bool DoesntBreakChannels { get; }
-        bool DoNotNeedToFaceTarget { get; }
-        bool DrawSecondaryLineIndicator { get; }
-        string DynamicExtended { get; }
-        string DynamicTooltip { get; }
-        float Effect10Level1Amount { get; }
-        float Effect10Level2Amount { get; }
-        float Effect10Level3Amount { get; }
-        float Effect10Level4Amount { get; }
-        float Effect10Level5Amount { get; }
-        float Effect1Level0Amount { get; }
-        float Effect1Level1Amount { get; }
-        float Effect1Level2Amount { get; }
-        float Effect1Level3Amount { get; }
-        float Effect1Level4Amount { get; }
-        float Effect1Level5Amount { get; }
-        float Effect1Level6Amount { get; }
-        float Effect2Level0Amount { get; }
-        float Effect2Level1Amount { get; }
-        float Effect2Level2Amount { get; }
-        float Effect2Level3Amount { get; }
-        float Effect2Level4Amount { get; }
-        float Effect2Level5Amount { get; }
-        float Effect2Level6Amount { get; }
-        float Effect3Level0Amount { get; }
-        float Effect3Level1Amount { get; }
-        float Effect3Level2Amount { get; }
-        float Effect3Level3Amount { get; }
-        float Effect3Level4Amount { get; }
-        float Effect3Level5Amount { get; }
-        float Effect3Level6Amount { get; }
-        float Effect4Level0Amount { get; }
-        float Effect4Level1Amount { get; }
-        float Effect4Level2Amount { get; }
-        float Effect4Level3Amount { get; }
-        float Effect4Level4Amount { get; }
-        float Effect4Level5Amount { get; }
-        float Effect4Level6Amount { get; }
-        float Effect5Level0Amount { get; }
-        float Effect5Level1Amount { get; }
-        float Effect5Level2Amount { get; }
-        float Effect5Level3Amount { get; }
-        float Effect5Level4Amount { get; }
-        float Effect5Level5Amount { get; }
-        float Effect5Level6Amount { get; }
-        float Effect6Level0Amount { get; }
-        float Effect6Level1Amount { get; }
-        float Effect6Level2Amount { get; }
-        float Effect6Level3Amount { get; }
-        float Effect6Level4Amount { get; }
-        float Effect6Level5Amount { get; }
-        float Effect6Level6Amount { get; }
-        float Effect7Level0Amount { get; }
-        float Effect7Level1Amount { get; }
-        float Effect7Level2Amount { get; }
-        float Effect7Level3Amount { get; }
-        float Effect7Level4Amount { get; }
-        float Effect7Level5Amount { get; }
-        float Effect7Level6Amount { get; }
-        float Effect8Level0Amount { get; }
-        float Effect8Level1Amount { get; }
-        float Effect8Level2Amount { get; }
-        float Effect8Level3Amount { get; }
-        float Effect8Level4Amount { get; }
-        float Effect8Level5Amount { get; }
-        float Effect8Level6Amount { get; }
-        float Effect9Level0Amount { get; }
-        float Effect9Level1Amount { get; }
-        float Effect9Level2Amount { get; }
-        float Effect9Level3Amount { get; }
-        float Effect9Level4Amount { get; }
-        float Effect9Level5Amount { get; }
-        float Effect9Level6Amount { get; }
-        SpellFlags Flags { get; }
-        int FloatStaticsDecimals1 { get; }
-        int FloatStaticsDecimals2 { get; }
-        int FloatStaticsDecimals3 { get; }
-        int FloatStaticsDecimals4 { get; }
-        int FloatStaticsDecimals5 { get; }
-        int FloatStaticsDecimals6 { get; }
-        int FloatVarsDecimals1 { get; }
-        int FloatVarsDecimals2 { get; }
-        int FloatVarsDecimals3 { get; }
-        int FloatVarsDecimals4 { get; }
-        int FloatVarsDecimals5 { get; }
-        int FloatVarsDecimals6 { get; }
-        bool HaveAfterEffect { get; }
-        bool HaveHitBone { get; }
-        bool HaveHitEffect { get; }
-        bool HavePointEffect { get; }
-        bool HideRangeIndicatorWhenCasting { get; }
-        string HitBoneName { get; }
-        string HitEffectName { get; }
-
-        /// <summary> This is an enum, add if needed </summary>
-        int HitEffectOrientType { get; }
-
-        string HitEffectPlayerName { get; }
-        float ChannelDuration { get; }
-        float ChannelDuration1 { get; }
-        float ChannelDuration2 { get; }
-        float ChannelDuration3 { get; }
-        float ChannelDuration4 { get; }
-        float ChannelDuration5 { get; }
-        float ChannelDuration6 { get; }
-        float ChargeUpdateInterval { get; }
-        bool IgnoreAnimContinueUntilCastFrame { get; }
-        bool IgnoreRangeCheck { get; }
-        string InventoryIcon { get; }
-        string InventoryIcon1 { get; }
-        string InventoryIcon2 { get; }
-        string InventoryIcon3 { get; }
-        bool IsDisabledWhileDead { get; }
-        bool IsToggleSpell { get; }
-        string Level1Desc { get; }
-        string Level2Desc { get; }
-        string Level3Desc { get; }
-        string Level4Desc { get; }
-        string Level5Desc { get; }
-        string Level6Desc { get; }
-        float LineDragLength { get; }
-        bool LineMissileBounces { get; }
-        bool LineMissileCollisionFromStartPoint { get; }
-        float LineMissileDelayDestroyAtEndSeconds { get; }
-        bool LineMissileEndsAtTargetPoint { get; }
-        bool LineMissileFollowsTerrainHeight { get; }
-        float LineMissileTargetHeightAugment { get; }
-        float LineMissileTimePulseBetweenCollisionSpellHits { get; }
-        bool LineMissileTrackUnits { get; }
-        bool LineMissileUsesAccelerationForBounce { get; }
-        string LineTargetingBaseTextureOverrideName { get; }
-        string LineTargetingTargetTextureOverrideName { get; }
+        float CastFrame { get; }
         float LineWidth { get; }
-        float LocationTargettingLength1 { get; }
-        float LocationTargettingLength2 { get; }
-        float LocationTargettingLength3 { get; }
-        float LocationTargettingLength4 { get; }
-        float LocationTargettingLength5 { get; }
-        float LocationTargettingLength6 { get; }
-        float LocationTargettingWidth1 { get; }
-        float LocationTargettingWidth2 { get; }
-        float LocationTargettingWidth3 { get; }
-        float LocationTargettingWidth4 { get; }
-        float LocationTargettingWidth5 { get; }
-        float LocationTargettingWidth6 { get; }
-        bool LockConeToPlayer { get; }
-
-        /// <summary> This is an enum, add if needed </summary>
-        string LookAtPolicy { get; }
-
-        float LuaOnMissileUpdateDistanceInterval { get; }
-        float ManaCost { get; }
-        float ManaCost1 { get; }
-        float ManaCost2 { get; }
-        float ManaCost3 { get; }
-        float ManaCost4 { get; }
-        float ManaCost5 { get; }
-        float ManaCost6 { get; }
-        float Map10_Cooldown1 { get; }
-        float Map10_Cooldown2 { get; }
-        float Map10_Cooldown3 { get; }
-        float Map10_Cooldown4 { get; }
-        float Map10_Cooldown5 { get; }
-        float Map10_Effect1Level1Amount { get; }
-        float Map10_Effect1Level2Amount { get; }
-        float Map10_Effect1Level3Amount { get; }
-        float Map10_Effect2Level1Amount { get; }
-        float Map10_Effect2Level2Amount { get; }
-        float Map10_Effect2Level3Amount { get; }
-        float Map10_Effect2Level4Amount { get; }
-        float Map10_Effect2Level5Amount { get; }
-        float Map10_Effect4Level0Amount { get; }
-        float Map10_Effect4Level1Amount { get; }
-        float Map10_Effect4Level2Amount { get; }
-        float Map10_Effect4Level3Amount { get; }
-        float Map10_Effect4Level4Amount { get; }
-        float Map10_Effect4Level5Amount { get; }
-        float Map10_Effect4Level6Amount { get; }
-        float Map8_Cooldown1 { get; }
-        float Map8_Cooldown2 { get; }
-        float Map8_Cooldown3 { get; }
-        float Map8_Cooldown4 { get; }
-        float Map8_Cooldown5 { get; }
-        int MaxAmmo { get; }
-        string MaxGrowthRangeTextureName { get; }
-        string MinimapIcon { get; }
-        bool MinimapIconDisplayFlag { get; }
-        bool MinimapIconRotation { get; }
-        float MissileAccel { get; }
-        string MissileBoneName { get; }
-        string MissileEffect { get; }
-        string MissileEffectPlayer { get; }
-        float MissileFixedTravelTime { get; }
-        bool MissileFollowsTerrainHeight { get; }
-        float MissileGravity { get; }
-        float MissileLifetime { get; }
-        float MissileMaxSpeed { get; }
-        float MissileMinSpeed { get; }
-        float MissileMinTravelTime { get; }
-        float MissilePerceptionBubbleRadius { get; }
-        bool MissilePerceptionBubbleRevealsStealth { get; }
-        float MissileSpeed { get; }
-        float MissileTargetHeightAugment { get; }
-        bool MissileUnblockable { get; }
-        int NumSpellTargeters { get; }
-        bool OrientRadiusTextureFromPlayer { get; }
-        bool OrientRangeIndicatorToCursor { get; }
-        bool OrientRangeIndicatorToFacing { get; }
-        float OverrideCastTime { get; }
-        float[] ParticleStartOffset { get; }
-        bool PlatformEnabled { get; }
-        string PointEffectName { get; }
-        string RangeIndicatorTextureName { get; }
+        float LineDragLength { get; }
+        LookAtPolicy LookAtPolicy { get; }
         SelectionPreference SelectionPreference { get; }
-        string Sound_CastName { get; }
-        string Sound_HitName { get; }
-        string Sound_VOEventCategory { get; }
-        float SpellCastTime { get; }
-        bool SpellRevealsChampion { get; }
-        float SpellTotalTime { get; }
-        bool StartCooldown { get; }
-        bool SubjectToGlobalCooldown { get; }
-        bool TargeterConstrainedToRange { get; }
-        TargetingType TargettingType { get; }
-        string TextFlags { get; }
-        bool TriggersGlobalCooldown { get; }
-        bool UpdateRotationWhenCasting { get; }
-        bool UseAnimatorFramerate { get; }
+        TargetingType TargetingType { get; }
+        bool CastRangeUseBoundingBoxes { get; }
+        bool AmmoNotAffectedByCDR { get; }
         bool UseAutoattackCastTime { get; }
-        bool UseGlobalLineIndicator { get; }
+        bool IgnoreAnimContinueUntilCastFrame { get; }
+        bool IsToggleSpell { get; }
+        bool CanNotBeSuppressed { get; }
+        bool CanCastWhileDisabled { get; }
+        bool CanOnlyCastWhileDisabled { get; }
+        bool CantCancelWhileWindingUp { get; }
+        bool CantCancelWhileChanneling { get; }
+        bool CantCastWhileRooted { get; }
+        bool DoesntBreakChannels { get; }
+        bool IsDisabledWhileDead { get; }
+        bool CanOnlyCastWhileDead { get; }
+        bool SpellRevealsChampion { get; }
         bool UseChargeChanneling { get; }
         bool UseChargeTargeting { get; }
-        bool UseMinimapTargeting { get; }
-        int Version { get; }
-        float X1 { get; }
-        float X2 { get; }
-        float X3 { get; }
-        float X4 { get; }
-        float X5 { get; }
+        bool CanMoveWhileChanneling { get; }
+        bool DoNotNeedToFaceTarget { get; }
+        bool NoWinddownIfCancelled { get; }
+        bool IgnoreRangeCheck { get; }
+        bool ConsideredAsAutoAttack { get; }
+        bool ApplyAttackDamage { get; }
+        bool ApplyAttackEffect { get; }
+        bool AlwaysSnapFacing { get; }
+        bool BelongsToAvatar { get; }
+        ICastData CastData { get; }
 
-        float GetSpellCastTime();
+        //string AfterEffectName 
+        //int AIBlockLevel 
+        //int AIEndOnly 
+        //float AILifetime 
+        //float AIRadius 
+        //float AIRange 
+        //int AISendEvent 
+        //float AISpeed 
+        //string AlternateName 
+        //int AmmoCountHiddenInUI 
+        //bool ApplyMaterialOnHitSound 
+        //float AttackDelayCastOffsetPercent 
+        //string CastRadiusSecondaryTexture 
+        //float CastRangeDisplayOverride 
+        //string ClientOnlyMissileTargetBoneName 
+        //float Coefficient 
+        //float Coefficient2 
+        //float EffectXLevelYAmount 
+        //int DeathRecapPriority 
+        //string DisplayName 
+        //int FloatStaticsDecimalsX 
+        //int FloatVarsDecimalsX 
+        //bool HaveAfterEffect 
+        //bool HaveHitBone 
+        //bool HaveHitEffect 
+        //bool HavePointEffect 
+        //string HitBoneName 
+        //string HitEffectName 
+        //bool LineMissileCollisionFromStartPoint 
+        //float LineMissileTargetHeightAugment 
+        //float LocationTargettingLengthX 
+        //float LocationTargettingWidthX 
+        //float MapX_CooldownY 
+        //float MapX_EffectYLevelZAmount 
+        //string MissileBoneName 
+        //string MissileEffect 
+        //string MissileEffectPlayer 
+        //bool MissileFollowsTerrainHeight 
+        //int NumSpellTargeters 
+        //float[] ParticleStartOffset 
+        //bool PlatformEnabled 
+        //bool SubjectToGlobalCooldown 
+        //bool TriggersGlobalCooldown 
+        //bool UpdateRotationWhenCasting 
+        //bool UseMinimapTargeting 
+        //int Version 
+        ////float X1 
+        //float X2 
+        //float X3 
+        //float X4 
+        //float X5 
+
     }
 }

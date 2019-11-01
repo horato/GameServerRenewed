@@ -1,106 +1,262 @@
 {
-  "Values": {
-    "Data": {
-      "Description": "game_character_description_Olaf",
-      "PlatformEnabled": 1,
-      "AcquisitionRange": 400,
-      "Armor": 26.040000915527344,
-      "ArmorMaterial": "Flesh",
-      "ArmorPerLevel": 3,
-      "AttackDelayCastOffsetPercent": -0.06562499701976776,
-      "AttackDelayOffsetPercent": -0.10000000149011612,
-      "AttackRange": 125,
-      "AttackRank": 9,
-      "AttackSpeedPerLevel": 2.7,
-      "BaseCritChance": 0,
-      "BaseDamage": 59.97999954223633,
-      "BaseDodge": 0,
-      "BaseFactorHPRegen": 0,
-      "BaseFactorMPRegen": 0,
-      "BaseHP": 597.239990234375,
-      "BaseMP": 265.6000061035156,
-      "BaseSpellEffectiveness": 0,
-      "BaseStaticHPRegen": 1.7023999691009521,
-      "BaseStaticMPRegen": 1.4931999444961548,
-      "ChampionId": 2,
-      "ChasingAttackRangePercent": 0.5,
-      "Classification": "Strong",
-      "CritDamageBonus": 2,
-      "CritPerLevel": 0,
-      "DamagePerLevel": 3.5,
-      "DefenseRank": 5,
-      "DifficultyRank": 3,
-      "BaseAttack_Probability": 0.5,
-      "ExtraAttack1": "OlafBasicAttack2",
-      "ExtraAttack2": "OlafBasicAttack3",
-      "ExtraAttack1_Probability": 0.5,
-      "ExtraAttack2_Probability": 0,
-      "CritAttack": "OlafCritAttack",
-      "CritAttack1": "OlafCritAttack2",
-      "CritAttack_AttackDelayCastOffsetPercent": -0.06562499701976776,
-      "CritAttack_AttackDelayOffsetPercent": -0.10000000149011612,
-      "ExtraSpell1": "OlafAxeThrow",
-      "HPPerLevel": 93,
-      "HPRegenPerLevel": 0.18000000715255737,
-      "IsMelee": "Yes",
-      "LevelDodge": 0,
-      "LevelSpellEffectiveness": 2,
-      "Lore1": "game_character_lore_Olaf",
-      "MagicRank": 3,
-      "MoveSpeed": 350,
-      "MPPerLevel": 45,
-      "MPRegenPerLevel": 0.11500000208616257,
-      "Name": "game_character_displayname_Olaf",
-      "PassLev1Desc1": "game_character_passiveDescription_Olaf",
-      "Passive1Icon": "Olaf_Passive.dds",
-      "Passive1Level1": 1,
-      "Passive1Level2": 4,
-      "Passive1Level3": 7,
-      "Passive1LuaName": "OlafBerzerkerRage",
-      "Passive1Name": "game_character_passiveName_Olaf",
-      "PathfindingCollisionRadius": 35,
-      "PostAttackMoveDelay": 0,
-      "SearchTags": "fighter",
-      "SelectionHeight": 191.6667022705078,
-      "SelectionRadius": 111.11109924316406,
-      "Spell1": "OlafAxeThrowCast",
-      "Spell1Desc": "Tryndamere thrives on the thrills of combat.  Whenever Tryndamere kills a unit or critically strikes, he temporarily gains increased damage and critical damage, and he can consume his Bloodlust to restore health.",
-      "Spell1DisplayName": "Bloodlust",
-      "Spell2": "OlafFrenziedStrikes",
-      "Spell2Desc": "Tryndamere issues a brave call toward his cowardly enemies.  Enemies deal reduced damage for a few seconds, and enemies turned away from Tryndamere are mocked mercilessly and move slowly like the chicken they are.",
-      "Spell2DisplayName": "Mocking Shout",
-      "Spell3": "OlafRecklessStrike",
-      "Spell3Desc": "Tryndamere slices toward target location, dealing damage to enemies in his path.",
-      "Spell3DisplayName": "Slash",
-      "Spell4": "OlafRagnarok",
-      "Spell4Desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
-      "Spell4DisplayName": "Undying Rage",
-      "SpellBlock": 32.099998474121094,
-      "SpellBlockPerLevel": 1.25,
-      "Tips1": "game_character_tips_Olaf",
-      "Tips2": "game_character_opposing_tips_Olaf",
-      "UnitTags": "Champion",
-      "WeaponMaterial": "OlafBasicAttack"
+  "Name": "Olaf",
+  "Flags": 8398088,
+  "PARType": 1,
+  "AssetCategory": "character",
+  "MonsterDataTableID": 0,
+  "RecordAsWard": false,
+  "PostAttackMoveDelay": 0.0,
+  "ChasingAttackRangePercent": 0.5,
+  "ChampionId": 2,
+  "BaseSpellEffectiveness": 0.0,
+  "BaseHP": 597.24,
+  "BasePAR": 265.6,
+  "HPPerLevel": 93.0,
+  "PARPerLevel": 45.0,
+  "HPRegenPerLevel": 0.18,
+  "PARRegenPerLevel": 0.115,
+  "BaseStaticHPRegen": 1.7024,
+  "BaseFactorHPRegen": 0.0,
+  "BaseStaticPARRegen": 1.4932,
+  "BaseFactorPARRegen": 0.0,
+  "BasePhysicalDamage": 59.98,
+  "PhysicalDamagePerLevel": 3.5,
+  "BaseAbilityPower": 0.0,
+  "AbilityPowerIncPerLevel": 0.0,
+  "BaseArmor": 26.04,
+  "ArmorPerLevel": 3.0,
+  "BaseSpellBlock": 32.1,
+  "SpellBlockPerLevel": 1.25,
+  "BaseDodge": 0.0,
+  "DodgePerLevel": 0.0,
+  "BaseMissChance": 0.0,
+  "BaseCritChance": 0.0,
+  "CritChancePerLevel": 0.0,
+  "CritDamageMultiplier": 2.0,
+  "BaseMoveSpeed": 350.0,
+  "AttackRange": 125.0,
+  "AttackAutoInterruptPercent": 0.2,
+  "AcquisitionRange": 400.0,
+  "AttackSpeedPerLevel": 0.027,
+  "TowerTargetingPriority": 0.0,
+  "DeathTime": -1.0,
+  "GoldGivenOnDeath": 25.0,
+  "ExpGivenOnDeath": 48.0,
+  "GoldRadius": 0.0,
+  "ExperienceRadius": 0.0,
+  "DeathEventListeningRadius": 1000.0,
+  "LocalGoldGivenOnDeath": 0.0,
+  "LocalExpGivenOnDeath": 0.0,
+  "LocalGoldSplitWithLastHitter": false,
+  "GlobalGoldGivenOnDeath": 0.0,
+  "GlobalExpGivenOnDeath": 0.0,
+  "PerceptionBubbleRadius": 1350.0,
+  "Significance": 0.0,
+  "CriticalAttack": "",
+  "HitFxScale": 1.0,
+  "OverrideCollisionHeight": 191.6667,
+  "OverrideCollisionRadius": 111.1111,
+  "PathfindingCollisionRadius": 35.0,
+  "GameplayCollisionRadius": 65.0,
+  "OccludedUnitSelectableDistance": 0.0,
+  "PassiveData": {
+    "LuaName": "",
+    "Range": 0.0
+  },
+  "Spells": {
+    "Q": {
+      "Name": "OlafAxeThrowCast",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "HealthBar": {
-      "ParallaxOffset": 0,
-      "XOffset": 0,
-      "YOffset": -0.6000000238418579
+    "W": {
+      "Name": "OlafFrenziedStrikes",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
     },
-    "Info": {
-      "IconCircle": "Olaf_Circle.dds",
-      "IconSquare": "Olaf_Square.dds"
+    "E": {
+      "Name": "OlafRecklessStrike",
+      "MaxLevelOverride": 5,
+      "UpgradeLevels": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        99
+      ]
+    },
+    "R": {
+      "Name": "OlafRagnarok",
+      "MaxLevelOverride": 3,
+      "UpgradeLevels": [
+        6,
+        11,
+        16,
+        99,
+        99,
+        99
+      ]
     }
   },
-  "UNKNOWN_HASHES": {
-    "4094915649": 1055,
-    "113008000": 14,
-    "2749401147": 1,
-    "121269505": 0,
-    "129531010": 0,
-    "137792515": 0,
-    "510504319": 0,
-    "1692812302": 0,
-    "2500095475": "tank"
+  "ExtraSpells": {
+    "ExtraSpell1": "OlafAxeThrow",
+    "ExtraSpell2": "",
+    "ExtraSpell3": "",
+    "ExtraSpell4": "",
+    "ExtraSpell5": "",
+    "ExtraSpell6": "",
+    "ExtraSpell7": "",
+    "ExtraSpell8": "",
+    "ExtraSpell9": "",
+    "ExtraSpell10": "",
+    "ExtraSpell11": "",
+    "ExtraSpell12": "",
+    "ExtraSpell13": "",
+    "ExtraSpell14": "",
+    "ExtraSpell15": "",
+    "ExtraSpell16": ""
+  },
+  "AttacksData": {
+    "BaseAttack": {
+      "Name": "OlafBasicAttack",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack1": {
+      "Name": "OlafBasicAttack2",
+      "Probability": 0.5,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack2": {
+      "Name": "OlafBasicAttack3",
+      "Probability": 0.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack3": {
+      "Name": "OlafBasicAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack4": {
+      "Name": "OlafBasicAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack5": {
+      "Name": "OlafBasicAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack6": {
+      "Name": "OlafBasicAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack7": {
+      "Name": "OlafBasicAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraAttack8": {
+      "Name": "OlafBasicAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "CritAttack": {
+      "Name": "OlafCritAttack",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack1": {
+      "Name": "OlafCritAttack1",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack2": {
+      "Name": "OlafCritAttack2",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack3": {
+      "Name": "OlafCritAttack3",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack4": {
+      "Name": "OlafCritAttack4",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack5": {
+      "Name": "OlafCritAttack5",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack6": {
+      "Name": "OlafCritAttack6",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack7": {
+      "Name": "OlafCritAttack7",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    },
+    "ExtraCritAttack8": {
+      "Name": "OlafCritAttack8",
+      "Probability": 2.0,
+      "DelayOffsetPercent": -0.1,
+      "DelayCastOffsetPercent": -0.065625,
+      "DelayCastOffsetPercentAttackSpeedRatio": 1.0
+    }
   }
 }
