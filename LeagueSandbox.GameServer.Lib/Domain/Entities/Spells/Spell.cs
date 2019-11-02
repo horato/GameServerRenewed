@@ -13,7 +13,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 
         public SpellSlot Slot { get; }
         public int Level { get; private set; }
-        public float CastTime { get; }
         public float Cooldown { get; private set; }
         public float ManaCost { get; private set; }
         public float CastRange { get; private set; }
@@ -22,21 +21,14 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
         public int MaxLevel { get; }
         public int AmmoUsed { get; private set; }
         public float AmmoRechargeTime { get; private set; }
-        public TargetingType TargetingType { get; }
-        public CastType CastType { get; }
-        public SpellFlags Flags { get; }
         public SpellState State { get; private set; }
         public float CooldownRemaining { get; private set; }
 
         public Spell(SpellSlot slot, int level, float cooldownRemaining, SpellState state, IBaseSpellData baseSpellData, ISpellData data)
         {
             Slot = slot;
-            CastTime = data.SpellCastTime;
             SpellName = baseSpellData.Name;
             MaxLevel = baseSpellData.MaxLevelOverride;
-            TargetingType = data.TargetingType;
-            CastType = data.CastType;
-            Flags = data.Flags;
             State = state;
             CooldownRemaining = cooldownRemaining;
             SpellData = data;
@@ -73,7 +65,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
 
         public bool HasFlag(SpellFlags flag)
         {
-            return Flags.HasFlag(flag);
+            return SpellData.Flags.HasFlag(flag);
         }
 
         public void StartCooldown()

@@ -460,7 +460,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
             return new ChatResponse(clientId, netId, localized, packetChatType, @params, message).GetBytes();
         }
 
-        public byte[] WriteAutoAttackStart(IObjAiBase gameObject, uint projectileNetId)
+        public byte[] NotifyAutoAttackStart(IObjAiBase gameObject, uint projectileNetId)
         {
             var basicAttackData = _dtoTranslationService.TranslateBasicAttackData(gameObject, projectileNetId);
             return new AutoAttackPos

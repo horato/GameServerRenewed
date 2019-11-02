@@ -30,13 +30,13 @@ namespace LeagueSandbox.GameServer.Lib.Services
             _packetNotifier = packetNotifier;
         }
 
-        public void CastSpell(ISpell spell, IAttackableUnit targetUnit, IObjAiBase caster, Vector2 targetPosition, Vector2 targetPositionEnd)
+        public void CastSpell(ISpell spell, IAttackableUnit targetUnit, IObjAiBase caster, Vector2 targetPosition, Vector2 targetPositionEnd, uint? projectileId = null)
         {
             // Spell cooldown
             if (spell.State != SpellState.Ready)
                 return;
 
-            if (spell.TargetingType == TargetingType.Target)
+            if (spell.SpellData.TargetingType == TargetingType.Target)
             {
                 if (targetUnit == null)
                     throw new InvalidOperationException("Missing target for targeted spell");
@@ -58,7 +58,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
             caster.Stats.FlatManaPoints.ApplyStatModifier(modifier);
 
             // Cast
-            var spellInstance = _spellInstanceFactory.CreateNew(spell, targetPosition, targetPositionEnd, targetUnit, manaCost);
+            var spellInstance = _spellInstanceFactory.CreateNew(spell, targetPosition, targetPositionEnd, targetUnit, manaCost, projectileId);
             caster.SpellBook.BeginCasting(spellInstance);
 
             if (!ShouldNotifySpellCast(spellInstance.Definition.Slot))
@@ -79,6 +79,24 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 case SpellSlot.R:
                 case SpellSlot.D:
                 case SpellSlot.F:
+                case SpellSlot.BaseAttack:
+                case SpellSlot.ExtraAttack1:
+                case SpellSlot.ExtraAttack2:
+                case SpellSlot.ExtraAttack3:
+                case SpellSlot.ExtraAttack4:
+                case SpellSlot.ExtraAttack5:
+                case SpellSlot.ExtraAttack6:
+                case SpellSlot.ExtraAttack7:
+                case SpellSlot.ExtraAttack8:
+                case SpellSlot.CritAttack:
+                case SpellSlot.ExtraCritAttack1:
+                case SpellSlot.ExtraCritAttack2:
+                case SpellSlot.ExtraCritAttack3:
+                case SpellSlot.ExtraCritAttack4:
+                case SpellSlot.ExtraCritAttack5:
+                case SpellSlot.ExtraCritAttack6:
+                case SpellSlot.ExtraCritAttack7:
+                case SpellSlot.ExtraCritAttack8:
                     return true;
                 case SpellSlot.ExtraSpell1:
                 case SpellSlot.ExtraSpell2:
@@ -94,6 +112,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
                 case SpellSlot.ExtraSpell12:
                 case SpellSlot.ExtraSpell13:
                 case SpellSlot.ExtraSpell14:
+                case SpellSlot.ExtraSpell15:
+                case SpellSlot.ExtraSpell16:
                     return false;
                 default:
                     throw new ArgumentOutOfRangeException();

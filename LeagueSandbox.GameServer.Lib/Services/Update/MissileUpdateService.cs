@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
+using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Lib.Caches;
 using LeagueSandbox.GameServer.Utils.Providers;
@@ -52,6 +53,8 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void LaunchMissile(IMissile missile)
         {
+            LoggerProvider.GetLogger().Debug($"Missile {missile.SpellData.Name} launched");
+
             missile.Launched();
 
             var targetSummonerIds = _playerCache.GetAllPlayers().Select(x => x.SummonerId); // TODO: vision
@@ -60,9 +63,11 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void MissileTraveling(IMissile missile, float millisecondsDiff)
         {
+            LoggerProvider.GetLogger().Debug($"Missile {missile.SpellData.Name} traveling");
+
             var colliders = _collisionService.FindAttackableObjectsCollidingWith(missile).ToList();
             colliders.RemoveAll(x => !IsValidTarget(x, missile));
-
+           
             if (colliders.Any())
             {
                 MissileCollided(missile, colliders);
@@ -76,7 +81,11 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
             var to = missile.EndPoint.ToVector2();
             var destinationReached = _movementService.MoveObject(missile, to, missile.GetMissileSpeed(), millisecondsDiff);
             if (destinationReached)
+            {
+                LoggerProvider.GetLogger().Debug($"Missile {missile.SpellData.Name} reached its destination.");
+
                 missile.DestinationReached();
+            }
         }
 
         private bool IsValidTarget(IGameObject unit, IMissile missile)
@@ -89,8 +98,22 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
                 return false;
             if (unit.Team != caster.Team && unit.Team != Team.Neutral && !spellDefinition.HasFlag(SpellFlags.AffectEnemies))
                 return false;
+            if (unit != caster && spellDefinition.HasFlag(SpellFlags.AlwaysSelf))
+                return false;
             //if (unit.IsDead && !spellDefinition.HasFlag(SpellFlags.AffectDead)) TODO: is dead
             //    return false;
+            if (spellDefinition.SpellData.TargetingType == TargetingType.Target && spellDefinition.SpellData.CastData.CastType == CastType.Missile)
+                return unit == missile.Target; // Targeted missile
+
+            if (unit == caster)
+            {
+                if (spellDefinition.HasFlag(SpellFlags.NotAffectSelf))
+                    return false;
+                if (spellDefinition.HasFlag(SpellFlags.AlwaysSelf))
+                    return true;
+
+                return missile.Spell.Definition.SpellData.TargetingType == TargetingType.Self;
+            }
 
             switch (unit)
             {
@@ -112,6 +135,8 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void MissileCollided(IMissile missile, IEnumerable<IGameObject> colliders)
         {
+            LoggerProvider.GetLogger().Debug($"Missile {missile.SpellData.Name} collided.");
+
             if (!_spellScriptProvider.SpellScriptExists(missile.Caster.SkinName, missile.Spell.Definition.SpellName))
                 return;
 
@@ -122,6 +147,8 @@ namespace LeagueSandbox.GameServer.Lib.Services.Update
 
         private void MissileFinished(IMissile missile)
         {
+            LoggerProvider.GetLogger().Debug($"Missile {missile.SpellData.Name} finished: {missile.MissileState}");
+
             if (missile.MissileState == MissileState.Arrived && _spellScriptProvider.SpellScriptExists(missile.Caster.SkinName, missile.Spell.Definition.SpellName))
             {
                 var script = _spellScriptProvider.ProvideSpellScript(missile.Caster.SkinName, missile.Spell.Definition.SpellName);

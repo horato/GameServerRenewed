@@ -21,19 +21,19 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.Spells
             _networkIdCreationService = networkIdCreationService;
         }
 
-        public ISpellInstance CreateNew(ISpell spell, Vector2 targetPosition, Vector2 targetEndPosition, IAttackableUnit targetUnit, float actualManaCost)
+        public ISpellInstance CreateNew(ISpell spell, Vector2 targetPosition, Vector2 targetEndPosition, IAttackableUnit targetUnit, float actualManaCost, uint? projectileId = null)
         {
             var instance = new SpellInstance
             (
                 spell,
                 SpellInstanceState.PreparingToCast,
-                spell.CastTime,
+                spell.SpellData.SpellCastTime,
                 0,
                 targetPosition,
                 targetEndPosition,
                 targetUnit,
-                spell.CastType == CastType.Instant ? 0 : _networkIdCreationService.GetNewNetId(),
-                _networkIdCreationService.GetNewNetId(),
+                spell.SpellData.CastType == CastType.Instant ? 0 : _networkIdCreationService.GetNewNetId(),
+                projectileId ?? _networkIdCreationService.GetNewNetId(),
                 actualManaCost
             );
 

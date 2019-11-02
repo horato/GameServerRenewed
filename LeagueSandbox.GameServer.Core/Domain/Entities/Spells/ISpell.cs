@@ -9,7 +9,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         IBaseSpellData BaseSpellData { get; }
         SpellSlot Slot { get; }
         int Level { get; }
-        float CastTime { get; }
         float Cooldown { get; }
         float ManaCost { get; }
         float CastRange { get; }
@@ -18,9 +17,6 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Spells
         int AmmoUsed { get; }
         float AmmoRechargeTime { get; }
         int MaxLevel { get; }
-        TargetingType TargetingType { get; }
-        CastType CastType { get; }
-        SpellFlags Flags { get; }
         SpellState State { get; }
         float CooldownRemaining { get; }
 

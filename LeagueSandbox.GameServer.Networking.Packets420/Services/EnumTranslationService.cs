@@ -389,7 +389,45 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell12:
                 case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell13:
                 case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell14:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell15:
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraSpell16:
                     return SpellSlot.Slotless;
+                case GameServer.Core.Domain.Enums.SpellSlot.BaseAttack:
+                    return SpellSlot.BaseAttack;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack1:
+                    return SpellSlot.ExtraAttack1;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack2:
+                    return SpellSlot.ExtraAttack2;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack3:
+                    return SpellSlot.ExtraAttack3;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack4:
+                    return SpellSlot.ExtraAttack4;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack5:
+                    return SpellSlot.ExtraAttack5;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack6:
+                    return SpellSlot.ExtraAttack6;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack7:
+                    return SpellSlot.ExtraAttack7;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraAttack8:
+                    return SpellSlot.ExtraAttack8;
+                case GameServer.Core.Domain.Enums.SpellSlot.CritAttack:
+                    return SpellSlot.CritAttack;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack1:
+                    return SpellSlot.ExtraCritAttack1;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack2:
+                    return SpellSlot.ExtraCritAttack2;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack3:
+                    return SpellSlot.ExtraCritAttack3;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack4:
+                    return SpellSlot.ExtraCritAttack4;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack5:
+                    return SpellSlot.ExtraCritAttack5;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack6:
+                    return SpellSlot.ExtraCritAttack6;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack7:
+                    return SpellSlot.ExtraCritAttack7;
+                case GameServer.Core.Domain.Enums.SpellSlot.ExtraCritAttack8:
+                    return SpellSlot.ExtraCritAttack8;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(spellSlot), spellSlot, null);
             }

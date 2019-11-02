@@ -316,7 +316,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
             SendPacket(targetUser, data, Channel.SynchClock);
         }
 
-        public void WriteChatMessage(IEnumerable<ulong> targetSummonerIds, int clientId, uint netId, bool localized, ChatType chatType, string @params, string message)
+        public void NotifyChatMessage(IEnumerable<ulong> targetSummonerIds, int clientId, uint netId, bool localized, ChatType chatType, string @params, string message)
         {
             var data = _packetWriter.WriteChatMessage(clientId, netId, localized, chatType, @params, message);
             foreach (var targetSummonerId in targetSummonerIds)
@@ -328,7 +328,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
 
         public void NotifyAutoAttackStart(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId)
         {
-            var data = _packetWriter.WriteAutoAttackStart(gameObject, projectileNetId);
+            var data = _packetWriter.NotifyAutoAttackStart(gameObject, projectileNetId);
             foreach (var targetSummonerId in targetSummonerIds)
             {
                 var targetUser = _usersCache.GetUser(targetSummonerId);

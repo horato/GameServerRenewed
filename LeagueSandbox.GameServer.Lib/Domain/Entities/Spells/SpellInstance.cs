@@ -40,7 +40,7 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.Spells
             if (State != SpellInstanceState.PreparingToCast)
                 throw new InvalidOperationException("Spell cannot start. Invalid state.");
 
-            CastTimeRemaining = Definition.CastTime;
+            CastTimeRemaining = Definition.SpellData.SpellCastTime;
             State = SpellInstanceState.Casting;
         }
 

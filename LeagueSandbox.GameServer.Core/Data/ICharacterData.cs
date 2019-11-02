@@ -68,7 +68,7 @@ namespace LeagueSandbox.GameServer.Core.Data
         IPassiveData PassiveData { get; }
         IReadOnlyDictionary<SpellSlot, IBaseSpellData> Spells { get; }
         IReadOnlyDictionary<SpellSlot, string> ExtraSpells { get; }
-        IReadOnlyDictionary<AttackSlot, IAttackData> AttacksData { get; }
+        IReadOnlyDictionary<SpellSlot, IAttackData> AttacksData { get; }
 
 
         //float AttackSpeed { get; }

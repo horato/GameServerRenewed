@@ -5,6 +5,7 @@ using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
+using LeagueSandbox.GameServer.Core.Logging;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Lib.Caches;
@@ -95,6 +96,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
             if (obj.IsMoving)
                 obj.StopMovement();
 
+            LoggerProvider.GetLogger().Debug($"{spell.Definition.SpellName} casting start");
             spell.CastingStart();
         }
 
@@ -102,6 +104,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
         {
             var secondsDiff = millisecondsDiff / 1000.0f;
             spell.CastingProgress(secondsDiff);
+
+            LoggerProvider.GetLogger().Debug($"{spell.Definition.SpellName} progress. Remaining cast time: {spell.CastTimeRemaining}");
             if (spell.CastTimeRemaining > 0 && !spell.Definition.HasFlag(SpellFlags.InstantCast))
                 return;
 
@@ -127,6 +131,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
         private void FinishCasting(IObjAiBase obj, ISpellInstance spell)
         {
+            LoggerProvider.GetLogger().Debug($"{spell.Definition.SpellName} casting finished");
+
             spell.CastingFinished();
             obj.SpellBook.CastingFinished();
             spell.Definition.StartCooldown();
@@ -137,7 +143,7 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
             var spellData = _spellDataProvider.ProvideCharacterSpellData(obj.SkinName, spell.Definition.SpellName);
             var script = _spellScriptProvider.ProvideSpellScript(obj.SkinName, spell.Definition.SpellName);
-            switch (spell.Definition.CastType)
+            switch (spell.Definition.SpellData.CastType)
             {
                 case CastType.Instant:
                     // wrapper or an actual no missile spell
@@ -159,6 +165,8 @@ namespace LeagueSandbox.GameServer.Lib.Services
 
         private void CreateMissile(IObjAiBase obj, ISpellInstance spell, ISpellData spellData, bool isMissileDestroyedOnHit)
         {
+            LoggerProvider.GetLogger().Debug($"{spell.Definition.SpellName} is creating a missile");
+
             var missile = _missileFactory.CreateNew(obj, spell, spellData, isMissileDestroyedOnHit);
             _gameObjectsCache.Add(missile.NetId, missile);
         }

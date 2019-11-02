@@ -41,7 +41,7 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] WriteMinionSpawn(IObjAiMinion minion);
         byte[] WriteSynchSimTimeFinal(uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds);
         byte[] WriteChatMessage(int clientId, uint netId, bool localized, ChatType chatType, string @params, string message);
-        byte[] WriteAutoAttackStart(IObjAiBase gameObject, uint projectileNetId);
+        byte[] NotifyAutoAttackStart(IObjAiBase gameObject, uint projectileNetId);
         byte[] WriteAutoAttack(IObjAiBase gameObject, uint projectileNetId);
         byte[] WriteUnitSetLookAt(IObjAiBase unit, IAttackableUnit target);
     }

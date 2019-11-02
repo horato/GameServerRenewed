@@ -68,8 +68,6 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         {
             if (movementType != MovementType.Attack)
                 throw new InvalidOperationException("Invalid order type. Attack expected.");
-            if (AttackTarget != null && AttackTarget == target && AutoAttackState != AutoAttackState.Finished)
-                return;
 
             AttackTarget = target ?? throw new ArgumentNullException(nameof(target));
             AutoAttackState = AutoAttackState.Preparing;
@@ -108,11 +106,11 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         {
             if (AutoAttackState != AutoAttackState.Preparing)
                 throw new InvalidOperationException("Invalid attack state.");
-            if(!CharacterData.AttacksData.ContainsKey(AttackSlot.BaseAttack))
+            if(!CharacterData.AttacksData.ContainsKey(SpellSlot.BaseAttack))
                 throw new InvalidOperationException("Data for BaseAttack slot are missing"); //TODO: validate this on data load?
 
             AutoAttackState = AutoAttackState.Attacking;
-            CurrentAutoAttackDelay = CharacterData.AttacksData[AttackSlot.BaseAttack].CastDelay(Stats.AttackSpeedMultiplier.Total);
+            CurrentAutoAttackDelay = CharacterData.AttacksData[SpellSlot.BaseAttack].CastDelay(Stats.AttackSpeedMultiplier.Total);
             CurrentAutoAttackCooldown = 0;
             AutoAttackProjectileId = autoAttackProjectileId;
         }
@@ -121,12 +119,12 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects
         {
             if (AutoAttackState != AutoAttackState.Attacking)
                 throw new InvalidOperationException("Invalid attack state.");
-            if (!CharacterData.AttacksData.ContainsKey(AttackSlot.BaseAttack))
+            if (!CharacterData.AttacksData.ContainsKey(SpellSlot.BaseAttack))
                 throw new InvalidOperationException("Data for BaseAttack slot are missing"); //TODO: validate this on data load?
 
             AutoAttackState = AutoAttackState.Windup;
             CurrentAutoAttackDelay = 0;
-            CurrentAutoAttackCooldown = CharacterData.AttacksData[AttackSlot.BaseAttack].Delay(Stats.AttackSpeedMultiplier.Total);
+            CurrentAutoAttackCooldown = CharacterData.AttacksData[SpellSlot.BaseAttack].Delay(Stats.AttackSpeedMultiplier.Total);
             AutoAttackProjectileId = 0;
         }
 

@@ -41,7 +41,7 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyLevelUp(IEnumerable<ulong> targetSummonerIds, IObjAiHero hero);
         void NotifyMinionSpawn(IEnumerable<ulong> targetSummonerIds, IObjAiMinion minion);
         void NotifySynchSimTimeFinal(ulong targetSummonerId, uint netId, float timeLastClientMilliseconds, float timeRttLastOverheadMilliseconds, float timeConvergenceMilliseconds);
-        void WriteChatMessage(IEnumerable<ulong> targetSummonerIds, int clientId, uint netId, bool localized, ChatType chatType, string @params, string message);
+        void NotifyChatMessage(IEnumerable<ulong> targetSummonerIds, int clientId, uint netId, bool localized, ChatType chatType, string @params, string message);
         void NotifyAutoAttackStart(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId);
         void NotifyAutoAttack(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId);
         void NotifyUnitSetLookAt(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, IAttackableUnit target);

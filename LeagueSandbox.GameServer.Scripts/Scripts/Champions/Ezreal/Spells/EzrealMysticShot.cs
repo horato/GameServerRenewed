@@ -15,7 +15,7 @@ namespace LeagueSandbox.GameServer.Scripts.Scripts.Champions.Ezreal.Spells
         public EzrealMysticShot(ISpellCastHelperService spellCastHelperService) : base(spellCastHelperService)
         {
         }
-
+        
         public override void OnCastFinished(IObjAiBase obj, ISpellInstance spell, ISpellData spellData)
         {
             var extraSpell = obj.SpellBook.GetSpell(SpellSlot.ExtraSpell1);

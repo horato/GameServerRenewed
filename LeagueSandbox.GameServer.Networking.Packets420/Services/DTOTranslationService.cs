@@ -717,16 +717,16 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                 spell.TargetPosition.ToVector3(0), // TODO: take these from navgrid?
                 spell.TargetEndPosition.ToVector3(0), // TODO: take these from navgrid?
                 spell.Target != null ? new List<Target> { new Target(spell.Target.NetId, HitResult.Normal) } : new List<Target>(), //TODO: hit result
-                spell.Definition.CastTime,
+                spell.Definition.SpellData.SpellCastTime,
                 0,
-                spell.Definition.CastTime,
+                spell.Definition.SpellData.SpellCastTime,
                 spell.Definition.Cooldown,
                 0, //TODO: game time?
-                false, // TODO: auto attack
-                false, // TODO: auto attack
+                spell.Definition.Slot.IsAutoAttack(), // TODO: is this ok?
+                false, // TODO: second auto attack
                 spell.Definition.ChannelDuration > 0, //TODO: force cast?
                 false,
-                spell.Definition.TargetingType == TargetingType.Target,
+                spell.Definition.SpellData.TargetingType == TargetingType.Target,
                 slot,
                 spell.ActualManaCost,
                 caster.Position,
