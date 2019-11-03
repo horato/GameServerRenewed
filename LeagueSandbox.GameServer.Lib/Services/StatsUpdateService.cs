@@ -65,6 +65,11 @@ namespace LeagueSandbox.GameServer.Lib.Services
             baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.AttackDamage.BaseValue, stats.FlatAttackDamage.BonusPerLevel, levelDifference);
             baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
             stats.AttackDamage.ApplyStatModifier(baseModifier);
+            
+            // Change base AP
+            baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.AbilityPower.BaseValue, stats.FlatSpellDamage.BonusPerLevel, levelDifference);
+            baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
+            stats.AbilityPower.ApplyStatModifier(baseModifier);
 
             // Change base armor
             baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.Armor.BaseValue, stats.FlatArmor.BonusPerLevel, levelDifference);
@@ -76,6 +81,16 @@ namespace LeagueSandbox.GameServer.Lib.Services
             baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
             stats.MagicResist.ApplyStatModifier(baseModifier);
 
+            // Change base AS
+            baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.AttackSpeedMultiplier.BaseValue, stats.FlatAttackSpeed.BonusPerLevel, levelDifference);
+            baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
+            stats.AttackSpeedMultiplier.ApplyStatModifier(baseModifier);
+            
+            // Change base crit chance
+            baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.CriticalChance.BaseValue, stats.FlatCritChance.BonusPerLevel, levelDifference);
+            baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
+            stats.CriticalChance.ApplyStatModifier(baseModifier);
+
             // Change base HP regen
             baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.HealthRegeneration.BaseValue, stats.FlatHealthPoints.RegenerationBonusPerLevel, levelDifference);
             baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
@@ -86,10 +101,6 @@ namespace LeagueSandbox.GameServer.Lib.Services
             baseModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
             stats.ManaRegeneration.ApplyStatModifier(baseModifier);
 
-            // Change base AS
-            baseDifference = _calculationService.CalculateStatDifferenceForLevelUp(stats.AttackSpeedMultiplier.BaseValue, stats.FlatAttackSpeed.BonusPerLevel, levelDifference);
-            var asModifier = _statModifierFactory.CreateNew(baseDifference, 0, 0, 0, 0);
-            stats.AttackSpeedMultiplier.ApplyStatModifier(asModifier);
 
             // TODO: current hp/mp
             //    CurrentHealth = HealthPoints.Total / (HealthPoints.Total - HealthPerLevel) * CurrentHealth;

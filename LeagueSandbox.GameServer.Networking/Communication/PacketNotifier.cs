@@ -335,7 +335,7 @@ namespace LeagueSandbox.GameServer.Networking.Communication
                 SendPacket(targetUser, data, Channel.Broadcast);
             }
         }
-        
+
         public void NotifyAutoAttack(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId)
         {
             var data = _packetWriter.WriteAutoAttack(gameObject, projectileNetId);
@@ -349,6 +349,26 @@ namespace LeagueSandbox.GameServer.Networking.Communication
         public void NotifyUnitSetLookAt(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, IAttackableUnit target)
         {
             var data = _packetWriter.WriteUnitSetLookAt(unit, target);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
+        public void NotifyUnitApplyDamage(IEnumerable<ulong> targetSummonerIds, DamageResultType damageResultType, DamageType damageType, uint targetNetId, uint sourceNetId, float damage)
+        {
+            var data = _packetWriter.WriteUnitApplyDamage(damageResultType, damageType, targetNetId, sourceNetId, damage);
+            foreach (var targetSummonerId in targetSummonerIds)
+            {
+                var targetUser = _usersCache.GetUser(targetSummonerId);
+                SendPacket(targetUser, data, Channel.Broadcast);
+            }
+        }
+
+        public void NotifyShowHealthBar(IEnumerable<ulong> targetSummonerIds, IGameObject obj, bool show)
+        {
+            var data = _packetWriter.WriteShowHealthBar(obj, show);
             foreach (var targetSummonerId in targetSummonerIds)
             {
                 var targetUser = _usersCache.GetUser(targetSummonerId);

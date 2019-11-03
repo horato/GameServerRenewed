@@ -3,6 +3,8 @@ using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Networking.Packets420.Enums;
 using ActionState = LeagueSandbox.GameServer.Networking.Packets420.Enums.ActionState;
 using ChatType = LeagueSandbox.GameServer.Core.Domain.Enums.ChatType;
+using DamageResultType = LeagueSandbox.GameServer.Networking.Packets420.Enums.DamageResultType;
+using DamageType = LeagueSandbox.GameServer.Networking.Packets420.Enums.DamageType;
 using MovementType = LeagueSandbox.GameServer.Core.Domain.Enums.MovementType;
 using PrimaryAbilityResourceType = LeagueSandbox.GameServer.Networking.Packets420.Enums.PrimaryAbilityResourceType;
 using SpellFlags = LeagueSandbox.GameServer.Networking.Packets420.Enums.SpellFlags;
@@ -485,6 +487,44 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
                     return Enums.ChatType.Team;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(chatType), chatType, null);
+            }
+        }
+
+        public DamageResultType TranslateDamageResultType(GameServer.Core.Domain.Enums.DamageResultType damageResultType)
+        {
+            switch (damageResultType)
+            {
+                case GameServer.Core.Domain.Enums.DamageResultType.Invulnerable:
+                    return DamageResultType.Invulnerable;
+                case GameServer.Core.Domain.Enums.DamageResultType.InvulnerableNoMessage:
+                    return DamageResultType.InvulnerableNoMessage;
+                case GameServer.Core.Domain.Enums.DamageResultType.Dodge:
+                    return DamageResultType.Dodge;
+                case GameServer.Core.Domain.Enums.DamageResultType.Critical:
+                    return DamageResultType.Critical;
+                case GameServer.Core.Domain.Enums.DamageResultType.Normal:
+                    return DamageResultType.Normal;
+                case GameServer.Core.Domain.Enums.DamageResultType.Miss:
+                    return DamageResultType.Miss;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(damageResultType), damageResultType, null);
+            }
+        }
+
+        public DamageType TranslateDamageType(GameServer.Core.Domain.Enums.DamageType damageType)
+        {
+            switch (damageType)
+            {
+                case GameServer.Core.Domain.Enums.DamageType.Physical:
+                    return DamageType.Physical;
+                case GameServer.Core.Domain.Enums.DamageType.Magic:
+                    return DamageType.Magic;
+                case GameServer.Core.Domain.Enums.DamageType.True:
+                    return DamageType.True;
+                case GameServer.Core.Domain.Enums.DamageType.Mixed:
+                    return DamageType.Mixed;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(damageType), damageType, null);
             }
         }
     }

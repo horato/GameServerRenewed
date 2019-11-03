@@ -46,6 +46,8 @@
         S2CAutoAttackPos = 0x1A,
         S2CAutoAttack = 0x0C,
         S2CUnitSetLookAt = 0x10F,
+        S2CUnitApplyDamage = 0x65,
+        ShowHealthBar = 0xCE,
 
         // --------------- NOT DONE
         S2CRestrictCameraMovement = 0x06,
@@ -91,7 +93,6 @@
         S2CHighlightUnit = 0x59,
         S2CChampionDie = 0x5E,
         S2CDash = 0x64,
-        S2CDamageDone = 0x65,
         S2CModifyShield = 0x66,
         S2CSetTarget = 0x6A,
         S2CSetAnimation = 0x6B,
@@ -140,7 +141,6 @@
         S2CGameEnd = 0xC6,
         S2CSurrender = 0xC9,
         C2SQuestClicked = 0xCD,
-        S2CShowHpAndName = 0xCE,
         S2CLevelPropAnimation = 0xD1,
         S2CSetCapturePoint = 0xD3,
         S2CChangeCrystalScarNexusHp = 0xD4,

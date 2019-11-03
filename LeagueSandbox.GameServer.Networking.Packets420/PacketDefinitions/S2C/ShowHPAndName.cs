@@ -1,12 +1,21 @@
+using LeagueSandbox.GameServer.Networking.Packets420.Enums;
+
 namespace LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C
 {
-    //internal class ShowHpAndName : BasePacket
-    //{
-    //    public ShowHpAndName(IAttackableUnit unit, bool show)
-    //        : base(PacketCmd.PKT_S2C_SHOW_HP_AND_NAME, unit.NetId)
-    //    {
-    //        Write(show);
-    //        Write((byte)0x00);
-    //    }
-    //}
+    internal class ShowHealthBar : BasePacket
+    {
+        public ShowHealthBar(uint targetNetId, bool show, bool changeHealthBarType, HealthBarType healthBarType, TeamId observerTeam) : base(PacketCmd.ShowHealthBar, targetNetId)
+        {
+            byte bitfield = 0;
+            if (show)
+                bitfield |= 1;
+            if (changeHealthBarType)
+                bitfield |= 2;
+
+            WriteByte(bitfield);
+            WriteByte((byte)healthBarType);
+            if (changeHealthBarType)
+                WriteUInt((uint)observerTeam);
+        }
+    }
 }

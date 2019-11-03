@@ -17,6 +17,8 @@ using LeagueSandbox.GameServer.Networking.Packets420.PacketDefinitions.S2C;
 using LeagueSandbox.GameServer.Networking.Packets420.Services;
 using Unity;
 using ChatType = LeagueSandbox.GameServer.Core.Domain.Enums.ChatType;
+using DamageResultType = LeagueSandbox.GameServer.Core.Domain.Enums.DamageResultType;
+using DamageType = LeagueSandbox.GameServer.Core.Domain.Enums.DamageType;
 using SpellSlot = LeagueSandbox.GameServer.Core.Domain.Enums.SpellSlot;
 using TipCommand = LeagueSandbox.GameServer.Core.Domain.Enums.TipCommand;
 
@@ -489,6 +491,36 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.PacketWriters
                 LookAtType.Unit,
                 target.Position,
                 target.NetId
+            ).GetBytes();
+        }
+
+        public byte[] WriteUnitApplyDamage(DamageResultType damageResultType, DamageType damageType, uint targetNetId, uint sourceNetId, float damage)
+        {
+            return new UnitApplyDamage
+            (
+                _enumTranslationService.TranslateDamageResultType(damageResultType),
+                _enumTranslationService.TranslateDamageType(damageType),
+                targetNetId,
+                sourceNetId,
+                damage
+            ).GetBytes();
+        }
+
+        public byte[] WriteShowHealthBar(IGameObject obj, bool show)
+        {
+            var type = HealthBarType.Invalid;
+            if (obj is IObjAiHero)
+                type = HealthBarType.Hero;
+            if (obj is IObjAiMinion)
+                type = HealthBarType.Minion;
+
+            return new ShowHealthBar
+            (
+                obj.NetId,
+                show,
+                false,
+                type,
+               _enumTranslationService.TranslateTeam(obj.Team)
             ).GetBytes();
         }
     }

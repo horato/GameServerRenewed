@@ -45,5 +45,7 @@ namespace LeagueSandbox.GameServer.Core.RequestProcessing
         void NotifyAutoAttackStart(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId);
         void NotifyAutoAttack(IEnumerable<ulong> targetSummonerIds, IObjAiBase gameObject, uint projectileNetId);
         void NotifyUnitSetLookAt(IEnumerable<ulong> targetSummonerIds, IObjAiBase unit, IAttackableUnit target);
+        void NotifyUnitApplyDamage(IEnumerable<ulong> targetSummonerIds, DamageResultType damageResultType, DamageType damageType, uint targetNetId, uint sourceNetId, float damage);
+        void NotifyShowHealthBar(IEnumerable<ulong> targetSummonerIds, IGameObject obj, bool show);
     }
 }

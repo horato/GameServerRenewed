@@ -577,7 +577,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
             var mm5 = new Dictionary<Enum, object>();
             var mm6 = new Dictionary<Enum, object>();
 
-            if (stats.HealthPoints.IsUpdated)
+            if (stats.FlatHealthPoints.IsUpdated)
             {
                 mm2.Add(ObjAiMinionFieldMask.FM2_HealthCurrent, stats.FlatHealthPoints.CurrentValue);
             }

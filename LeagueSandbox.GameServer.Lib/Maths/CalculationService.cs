@@ -92,6 +92,17 @@ namespace LeagueSandbox.GameServer.Lib.Maths
             return CalculateStatDifference(baseValue, newValue, float.MaxValue, float.MinValue);
         }
 
+        public float CalculateStatDifferenceSubstract(float currentValue, float delta, float max, float min = 0)
+        {
+            var newValue = currentValue - delta;
+            return CalculateStatDifference(currentValue, newValue, max, 0);
+        }
+
+        public float CalculateStatDifferenceAdd(float currentValue, float delta, float max, float min = 0)
+        {
+            return CalculateStatDifferenceSubstract(currentValue, -delta, max, min);
+        }
+
         private float GetDistance(Vector2 from, Vector2 to)
         {
             return (float)Math.Sqrt(GetDistanceSqr(from, to));

@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Scripting;
 using LeagueSandbox.GameServer.Core.Services;
 using LeagueSandbox.GameServer.Scripts.Base;
+using Unity;
 
 namespace LeagueSandbox.GameServer.Scripts.Scripts.Champions.Ezreal.Spells
 {
@@ -13,13 +14,8 @@ namespace LeagueSandbox.GameServer.Scripts.Scripts.Champions.Ezreal.Spells
     {
         public override bool IsMissileDestroyedOnHit => true;
 
-        public EzrealBasicAttack(ISpellCastHelperService spellCastHelperService) : base(spellCastHelperService)
+        public EzrealBasicAttack(IUnityContainer container) : base(container)
         {
-        }
-
-        public override void OnMissileCollision(IMissile missile, IEnumerable<IGameObject> colliders)
-        {
-            Console.WriteLine("Hit");
         }
     }
 }

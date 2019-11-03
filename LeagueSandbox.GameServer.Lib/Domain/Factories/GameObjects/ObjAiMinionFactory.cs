@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Data;
 using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Domain.Factories;
@@ -53,8 +55,30 @@ namespace LeagueSandbox.GameServer.Lib.Domain.Factories.GameObjects
                 true,
                 charData
             );
-            
+
             return SetupDependencies(instance);
+        }
+
+        public IObjAiMinion CreateFromCharacterData(ICharacterData data, Team team, Vector3 position, IDictionary<int, Vector2> waypoints, bool isLaneMinion)
+        {
+            var stats = _statsFactory.CreateFromCharacterData(data);
+            var spellbook = _spellBookFactory.CreateFromCharacterData(data.Name, data);
+            var minion = new ObjAiMinion
+            (
+                team,
+                position,
+                stats,
+                _networkIdCreationService.GetNewNetId(),
+                data.Name,
+                0,
+                spellbook,
+                MinionActionState.Spawned,
+                waypoints,
+                isLaneMinion,
+                data
+            );
+
+            return minion;
         }
     }
 }

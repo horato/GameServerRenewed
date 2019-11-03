@@ -44,5 +44,7 @@ namespace LeagueSandbox.GameServer.Networking.Core
         byte[] NotifyAutoAttackStart(IObjAiBase gameObject, uint projectileNetId);
         byte[] WriteAutoAttack(IObjAiBase gameObject, uint projectileNetId);
         byte[] WriteUnitSetLookAt(IObjAiBase unit, IAttackableUnit target);
+        byte[] WriteUnitApplyDamage(DamageResultType damageResultType, DamageType damageType, uint targetNetId, uint sourceNetId, float damage);
+        byte[] WriteShowHealthBar(IGameObject obj, bool show);
     }
 }

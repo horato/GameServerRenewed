@@ -28,5 +28,7 @@ namespace LeagueSandbox.GameServer.Networking.Packets420.Services
         GameServer.Core.Domain.Enums.SpellSlot TranslateSpellSlot(SpellSlot requestSlot);
         ChatType TranslateChatType(Enums.ChatType chatType);
         Enums.ChatType TranslateChatType(ChatType chatType);
+        Enums.DamageResultType TranslateDamageResultType(GameServer.Core.Domain.Enums.DamageResultType damageResultType);
+        Enums.DamageType TranslateDamageType(GameServer.Core.Domain.Enums.DamageType damageType);
     }
 }

@@ -7,12 +7,13 @@ using LeagueSandbox.GameServer.Core.Domain.Entities.Spells;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Services;
 using LeagueSandbox.GameServer.Scripts.Base;
+using Unity;
 
 namespace LeagueSandbox.GameServer.Scripts.Scripts.Champions.Ezreal.Spells
 {
     public class EzrealMysticShot : SpellScriptBase
     {
-        public EzrealMysticShot(ISpellCastHelperService spellCastHelperService) : base(spellCastHelperService)
+        public EzrealMysticShot(IUnityContainer container) : base(container)
         {
         }
         

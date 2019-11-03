@@ -21,5 +21,7 @@ namespace LeagueSandbox.GameServer.Lib.Maths
         Vector2 CalculateDestination(Vector2 from, Vector2 to, float distance);
         float CalculateStatDifference(float currentValue, float newValue, float maxValue, float minValue);
         float CalculateStatDifferenceForLevelUp(float baseValue, float bonusPerLevel, float levelDifference);
+        float CalculateStatDifferenceSubstract(float currentValue, float delta, float healthPointsTotal, float min = 0);
+        float CalculateStatDifferenceAdd(float currentValue, float delta, float max, float min = 0);
     }
 }

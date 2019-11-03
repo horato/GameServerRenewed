@@ -151,5 +151,111 @@ namespace LeagueSandbox.GameServer.Core.Domain.Enums
                     throw new ArgumentOutOfRangeException(nameof(slot), slot, null);
             }
         }
+
+        public static bool IsCritical(this SpellSlot slot)
+        {
+            switch (slot)
+            {
+                case SpellSlot.Q:
+                case SpellSlot.W:
+                case SpellSlot.E:
+                case SpellSlot.R:
+                case SpellSlot.D:
+                case SpellSlot.F:
+                case SpellSlot.ExtraSpell1:
+                case SpellSlot.ExtraSpell2:
+                case SpellSlot.ExtraSpell3:
+                case SpellSlot.ExtraSpell4:
+                case SpellSlot.ExtraSpell5:
+                case SpellSlot.ExtraSpell6:
+                case SpellSlot.ExtraSpell7:
+                case SpellSlot.ExtraSpell8:
+                case SpellSlot.ExtraSpell9:
+                case SpellSlot.ExtraSpell10:
+                case SpellSlot.ExtraSpell11:
+                case SpellSlot.ExtraSpell12:
+                case SpellSlot.ExtraSpell13:
+                case SpellSlot.ExtraSpell14:
+                case SpellSlot.ExtraSpell15:                    
+                case SpellSlot.ExtraSpell16:
+                    throw new InvalidOperationException("Only basic attack can be critical");
+                case SpellSlot.BaseAttack:
+                case SpellSlot.ExtraAttack1:
+                case SpellSlot.ExtraAttack2:
+                case SpellSlot.ExtraAttack3:
+                case SpellSlot.ExtraAttack4:
+                case SpellSlot.ExtraAttack5:
+                case SpellSlot.ExtraAttack6:
+                case SpellSlot.ExtraAttack7:
+                case SpellSlot.ExtraAttack8:
+                    return false;
+                case SpellSlot.CritAttack:
+                case SpellSlot.ExtraCritAttack1:
+                case SpellSlot.ExtraCritAttack2:
+                case SpellSlot.ExtraCritAttack3:
+                case SpellSlot.ExtraCritAttack4:
+                case SpellSlot.ExtraCritAttack5:
+                case SpellSlot.ExtraCritAttack6:
+                case SpellSlot.ExtraCritAttack7:
+                case SpellSlot.ExtraCritAttack8:
+                    return true;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(slot), slot, null);
+            }
+
+        }
+
+        public static DamageSource ToDamageSource(this SpellSlot spellSlot)
+        {
+            switch (spellSlot)
+            {
+                case SpellSlot.Q:
+                case SpellSlot.W:
+                case SpellSlot.E:
+                case SpellSlot.R:
+                case SpellSlot.ExtraSpell1:
+                case SpellSlot.ExtraSpell2:
+                case SpellSlot.ExtraSpell3:
+                case SpellSlot.ExtraSpell4:
+                case SpellSlot.ExtraSpell5:
+                case SpellSlot.ExtraSpell6:
+                case SpellSlot.ExtraSpell7:
+                case SpellSlot.ExtraSpell8:
+                case SpellSlot.ExtraSpell9:
+                case SpellSlot.ExtraSpell10:
+                case SpellSlot.ExtraSpell11:
+                case SpellSlot.ExtraSpell12:
+                case SpellSlot.ExtraSpell13:
+                case SpellSlot.ExtraSpell14:
+                case SpellSlot.ExtraSpell15:
+                case SpellSlot.ExtraSpell16:
+                    return DamageSource.Spell;
+                case SpellSlot.D:
+                case SpellSlot.F:
+                    return DamageSource.SummonerSpell;
+                case SpellSlot.BaseAttack:
+                case SpellSlot.ExtraAttack1:
+                case SpellSlot.ExtraAttack2:
+                case SpellSlot.ExtraAttack3:
+                case SpellSlot.ExtraAttack4:
+                case SpellSlot.ExtraAttack5:
+                case SpellSlot.ExtraAttack6:
+                case SpellSlot.ExtraAttack7:
+                case SpellSlot.ExtraAttack8:
+                case SpellSlot.CritAttack:
+                case SpellSlot.ExtraCritAttack1:
+                case SpellSlot.ExtraCritAttack2:
+                case SpellSlot.ExtraCritAttack3:
+                case SpellSlot.ExtraCritAttack4:
+                case SpellSlot.ExtraCritAttack5:
+                case SpellSlot.ExtraCritAttack6:
+                case SpellSlot.ExtraCritAttack7:
+                case SpellSlot.ExtraCritAttack8:
+                    return DamageSource.Attack;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(spellSlot), spellSlot, null);
+            }
+        }
+
     }
 }

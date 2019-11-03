@@ -24,6 +24,7 @@ namespace LeagueSandbox.GameServer.Lib
             container.RegisterType<ICalculationService, CalculationService>();
             container.RegisterType<ISpellCastHelperService, SpellCastHelperService>();
             container.RegisterType<ICollisionService, CollisionService>();
+            container.RegisterType<IDamageHelperService, DamageHelperService>();
             
             RegisterGameObjectUpdateServices(container);
             RegisterUpdateServices(container);

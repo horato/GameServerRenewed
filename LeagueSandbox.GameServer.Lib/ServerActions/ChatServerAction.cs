@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
+using LeagueSandbox.GameServer.Core.Caches;
 using LeagueSandbox.GameServer.Core.Domain.Entities;
+using LeagueSandbox.GameServer.Core.Domain.Entities.GameObjects;
 using LeagueSandbox.GameServer.Core.Domain.Enums;
 using LeagueSandbox.GameServer.Core.Extensions;
 using LeagueSandbox.GameServer.Core.RequestProcessing;
 using LeagueSandbox.GameServer.Core.RequestProcessing.Definitions;
 using LeagueSandbox.GameServer.Core.RequestProcessing.ServerActions;
 using LeagueSandbox.GameServer.Lib.Caches;
+using LeagueSandbox.GameServer.Lib.Domain.Entities.GameObjects;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Spells;
+using LeagueSandbox.GameServer.Lib.Domain.Factories.Stats;
+using LeagueSandbox.GameServer.Lib.Services;
+using LeagueSandbox.GameServer.Utils.Providers;
 
 namespace LeagueSandbox.GameServer.Lib.ServerActions
 {
@@ -17,12 +25,18 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
         private readonly IPacketNotifier _packetNotifier;
         private readonly IPlayerCache _playerCache;
         private readonly IGame _game;
+        private readonly ICharacterDataProvider _characterDataProvider;
+        private readonly IObjAiMinionFactory _minionFactory;
+        private readonly IGameObjectsCache _gameObjectsCache;
 
-        public ChatServerAction(IPacketNotifier packetNotifier, IPlayerCache playerCache, IGame game)
+        public ChatServerAction(IPacketNotifier packetNotifier, IPlayerCache playerCache, IGame game, ICharacterDataProvider characterDataProvider, IGameObjectsCache gameObjectsCache, IObjAiMinionFactory minionFactory)
         {
             _packetNotifier = packetNotifier;
             _playerCache = playerCache;
             _game = game;
+            _characterDataProvider = characterDataProvider;
+            _gameObjectsCache = gameObjectsCache;
+            _minionFactory = minionFactory;
         }
 
         protected override void ProcessRequestInternal(ulong senderSummonerId, ChatRequest request)
@@ -60,6 +74,14 @@ namespace LeagueSandbox.GameServer.Lib.ServerActions
                 case "pos":
                     _packetNotifier.NotifyChatMessage(targetSummonerIds, sender.Champion.ClientId, sender.Champion.NetId, false, ChatType.All, string.Empty, $"{sender.Champion.SkinName}: {sender.Champion.Position}");
                     _packetNotifier.NotifyMapPing(targetSummonerIds, sender.Champion.Position.ToVector2(), 0, sender.Champion.NetId, PingCategory.Default, true, true, false, true);
+                    break;
+                case "spawn":
+                    var data = _characterDataProvider.ProvideCharacterData("Red_Minion_Basic");
+                    var waypoints = new Dictionary<int, Vector2> { { 0, sender.Champion.Position.ToVector2() } };
+                    var minion = _minionFactory.CreateFromCharacterData(data, Team.Red, sender.Champion.Position, waypoints, true);
+                    _gameObjectsCache.Add(minion.NetId, minion);
+                    _packetNotifier.NotifyMinionSpawn(targetSummonerIds, minion);
+                    _packetNotifier.NotifyEnterVisibilityClient(targetSummonerIds, minion);
                     break;
                 default:
                     throw new InvalidOperationException($"Invalid command {command}");

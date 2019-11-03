@@ -29,16 +29,37 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
         float SpellCostReduction { get; }
         float GoldTotal { get; }
 
+        /// <summary> AS/level </summary>
         IFlatStat FlatAttackSpeed { get; }
+
+        /// <summary> Current HP, HP/level, HP5/level, HP5 static </summary>
         IFlatStat FlatHealthPoints { get; }
+
+        /// <summary> current MP, MP/level, MP5/level, MP5 static </summary>
         IFlatStat FlatManaPoints { get; }
+        
+        /// <summary> AD/level </summary>
         IFlatStat FlatAttackDamage { get; }
+
+        /// <summary> AP/level </summary>
         IFlatStat FlatSpellDamage { get; }
+
+        /// <summary> Armor/level </summary>
         IFlatStat FlatArmor { get; }
+
+        /// <summary> MR/level </summary>
         IFlatStat FlatMagicResist { get; }
+
+        /// <summary> Crit chance/level </summary>
         IFlatStat FlatCritChance { get; }
+
+        /// <summary> Current gold </summary>
         IFlatStat Gold { get; }
+
+        /// <summary> Current level </summary>
         IFlatStat Level { get; }
+
+        /// <summary> Current Exp </summary>
         IFlatStat Experience { get; }
 
         IStat AbilityPower { get; }
@@ -49,11 +70,15 @@ namespace LeagueSandbox.GameServer.Core.Domain.Entities.Stats
         IStat CooldownReduction { get; }
         IStat CriticalChance { get; }
         IStat CriticalDamage { get; }
+
+        /// <summary> Max HP </summary>
         IStat HealthPoints { get; }
         IStat HealthRegeneration { get; }
         IStat LifeSteal { get; }
         IStat MagicResist { get; }
         IStat MagicPenetration { get; }
+
+        /// <summary> Max MP </summary>
         IStat ManaPoints { get; }
         IStat ManaRegeneration { get; }
         IStat MoveSpeed { get; }
